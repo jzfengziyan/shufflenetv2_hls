@@ -582,11 +582,11 @@ void avgpool(float input[1][512][4][4],
 }
 
 void fc(float input[512],
-	float weight[1000][512],
-	float bias[1000],
-	float output[1000]){
+	float weight[10][512],
+	float bias[10],
+	float output[10]){
 	
-	for(int co = 0;co<1000;co++){
+	for(int co = 0;co<10;co++){
 		float sum = 0;
 		for(int ci = 0;ci<512;ci++){
 			sum += weight[co][ci] * input[ci];
@@ -760,6 +760,7 @@ int main(){
     ifstream ifs_param(weights_path, ios::in | ios::binary);
     ifs_param.read((char*)(***conv1_weight), 24*3*3*3*sizeof(float));
     ifs_param.read((char*)conv1_bias, 24*sizeof(float));
+
     ifs_param.read((char*)(***ShuffleConvs_0_DownsampleUnit_conv1r_weight), 24*24*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_0_DownsampleUnit_conv1r_bias, 24*sizeof(float));
     ifs_param.read((char*)(***ShuffleConvs_0_DownsampleUnit_conv2r_weight), 24*1*3*3*sizeof(float));
@@ -770,6 +771,7 @@ int main(){
     ifs_param.read((char*)ShuffleConvs_0_DownsampleUnit_conv1l_bias, 24*sizeof(float));
 	ifs_param.read((char*)(***ShuffleConvs_0_DownsampleUnit_conv2l_weight), 24*24*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_0_DownsampleUnit_conv2l_bias, 24*sizeof(float));//verified
+
     ifs_param.read((char*)(***ShuffleConvs_0_ShuffleUnit0_0_conv1_weight), 24*24*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_0_ShuffleUnit0_0_conv1_bias, 24*sizeof(float));
     ifs_param.read((char*)(***ShuffleConvs_0_ShuffleUnit0_0_conv2_weight), 24*1*3*3*sizeof(float));
@@ -788,6 +790,7 @@ int main(){
     ifs_param.read((char*)ShuffleConvs_0_ShuffleUnit0_2_conv2_bias, 24*sizeof(float));
 	ifs_param.read((char*)(***ShuffleConvs_0_ShuffleUnit0_2_conv3_weight), 24*24*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_0_ShuffleUnit0_2_conv3_bias, 24*sizeof(float));//verified
+
     ifs_param.read((char*)(***ShuffleConvs_1_DownsampleUnit_conv1r_weight), 48*48*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_1_DownsampleUnit_conv1r_bias, 48*sizeof(float));
     ifs_param.read((char*)(***ShuffleConvs_1_DownsampleUnit_conv2r_weight), 48*1*3*3*sizeof(float));
@@ -798,6 +801,7 @@ int main(){
     ifs_param.read((char*)ShuffleConvs_1_DownsampleUnit_conv1l_bias, 48*sizeof(float));
 	ifs_param.read((char*)(***ShuffleConvs_1_DownsampleUnit_conv2l_weight), 48*48*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_1_DownsampleUnit_conv2l_bias, 48*sizeof(float));//verified
+	
     ifs_param.read((char*)(***ShuffleConvs_1_ShuffleUnit1_0_conv1_weight), 48*48*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_1_ShuffleUnit1_0_conv1_bias, 48*sizeof(float));
     ifs_param.read((char*)(***ShuffleConvs_1_ShuffleUnit1_0_conv2_weight), 48*1*3*3*sizeof(float));
@@ -846,6 +850,7 @@ int main(){
     ifs_param.read((char*)ShuffleConvs_1_ShuffleUnit1_7_conv2_bias, 48*sizeof(float));
 	ifs_param.read((char*)(***ShuffleConvs_1_ShuffleUnit1_7_conv3_weight), 48*48*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_1_ShuffleUnit1_7_conv3_bias, 48*sizeof(float));//verified
+	
     ifs_param.read((char*)(***ShuffleConvs_2_DownsampleUnit_conv1r_weight), 96*96*1*1*sizeof(float));
     ifs_param.read((char*)ShuffleConvs_2_DownsampleUnit_conv1r_bias, 96*sizeof(float));
     ifs_param.read((char*)(***ShuffleConvs_2_DownsampleUnit_conv2r_weight), 96*1*3*3*sizeof(float));
