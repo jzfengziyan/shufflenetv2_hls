@@ -4,7 +4,7 @@
 <stringAttribute key="com.xilinx.sdk.gdb.launch.DataFiles" value=""/>
 <stringAttribute key="com.xilinx.sdk.gdb.launch.DebugType" value="STANDALONE_DEBUG"/>
 <booleanAttribute key="com.xilinx.sdk.gdb.launch.ElfNoDownload" value="false"/>
-<stringAttribute key="com.xilinx.sdk.gdb.launch.HwPlatformName" value="accelerator_bd_wrapper_hw_platform_0"/>
+<stringAttribute key="com.xilinx.sdk.gdb.launch.HwPlatformName" value="accelerator_bd_wrapper_hw_platform_2"/>
 <stringAttribute key="com.xilinx.sdk.gdb.launch.InitTclFile" value="ps7_init.tcl"/>
 <stringAttribute key="com.xilinx.sdk.gdb.launch.ProcessorName" value="ps7_cortexa9_0"/>
 <booleanAttribute key="com.xilinx.sdk.gdb.launch.ProgramFpga" value="false"/>

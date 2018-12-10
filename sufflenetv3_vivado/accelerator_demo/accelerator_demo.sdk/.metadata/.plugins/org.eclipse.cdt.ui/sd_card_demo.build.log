@@ -1,8 +1,8 @@
-21:37:45 **** Incremental Build of configuration Debug for project sd_card_demo ****
+21:47:39 **** Incremental Build of configuration Debug for project sd_card_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: 对“main-build”无需做任何事。
 
-21:37:45 Build Finished (took 316ms)
+21:47:40 Build Finished (took 263ms)
 

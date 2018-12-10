@@ -1,4 +1,4 @@
-21:22:24 **** Build of project standalone_bsp_0 ****
+21:44:47 **** Build of project standalone_bsp_0 ****
 make -k all 
 Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src
 make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
@@ -117,5 +117,5 @@ make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPIL
 Compiling scutimer
 Finished building libraries
 
-21:22:32 Build Finished (took 7s.281ms)
+21:44:55 Build Finished (took 7s.229ms)
 
