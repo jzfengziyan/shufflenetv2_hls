@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="accelerator.cpp" path="/home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_hls/accelerator.cpp"/>
+    <originFiles name="accelerator.cpp" path="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls/accelerator.cpp"/>
+    <originFiles name="components.cpp" path="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls/components.cpp"/>
+    <originFiles name="shufflenet.cpp" path="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls/shufflenet.cpp"/>
+    <originFiles name="shufflenet.h" path="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls/shufflenet.h"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="test.cpp" path="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls/test.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
