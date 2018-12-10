@@ -1,0 +1,452 @@
+
+
+================================================================
+== Vivado HLS Report for 'vector_multiplier'
+================================================================
+* Date:           Mon Oct 16 23:33:30 2017
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        accelerator_hls
+* Solution:       vector_multiplier
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   80|   80|   81|   81|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   67|   67|         5|          1|          1|    64|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 2
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 18
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 5, States = { 9 10 11 12 13 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	14  / (exitcond)
+	10  / (!exitcond)
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	9  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+* FSM state operations: 
+
+ <State 1>: 1.00ns
+ST_1: c_read (7)  [1/1] 1.00ns
+:0  %c_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %c)
+
+ST_1: b_read (8)  [1/1] 1.00ns
+:1  %b_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %b)
+
+ST_1: a_read (9)  [1/1] 1.00ns
+:2  %a_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %a)
+
+ST_1: c5 (10)  [1/1] 0.00ns
+:3  %c5 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %c_read, i32 2, i32 31)
+
+ST_1: b3 (13)  [1/1] 0.00ns
+:6  %b3 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %b_read, i32 2, i32 31)
+
+ST_1: a1 (16)  [1/1] 0.00ns
+:9  %a1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %a_read, i32 2, i32 31)
+
+
+ <State 2>: 8.75ns
+ST_2: tmp_3 (14)  [1/1] 0.00ns
+:7  %tmp_3 = zext i30 %b3 to i32
+
+ST_2: DATA_B_addr (15)  [1/1] 0.00ns
+:8  %DATA_B_addr = getelementptr i32* %DATA_B, i32 %tmp_3
+
+ST_2: tmp_4 (17)  [1/1] 0.00ns
+:10  %tmp_4 = zext i30 %a1 to i32
+
+ST_2: DATA_A_addr (18)  [1/1] 0.00ns
+:11  %DATA_A_addr = getelementptr i32* %DATA_A, i32 %tmp_4
+
+ST_2: DATA_A_addr_rd_req (31)  [7/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_2: DATA_B_addr_rd_req (32)  [7/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+
+ <State 3>: 8.75ns
+ST_3: DATA_A_addr_rd_req (31)  [6/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_3: DATA_B_addr_rd_req (32)  [6/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+
+ <State 4>: 8.75ns
+ST_4: DATA_A_addr_rd_req (31)  [5/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_4: DATA_B_addr_rd_req (32)  [5/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+
+ <State 5>: 8.75ns
+ST_5: DATA_A_addr_rd_req (31)  [4/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_5: DATA_B_addr_rd_req (32)  [4/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+
+ <State 6>: 8.75ns
+ST_6: DATA_A_addr_rd_req (31)  [3/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_6: DATA_B_addr_rd_req (32)  [3/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+
+ <State 7>: 8.75ns
+ST_7: DATA_A_addr_rd_req (31)  [2/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_7: DATA_B_addr_rd_req (32)  [2/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+
+ <State 8>: 8.75ns
+ST_8: tmp_2 (11)  [1/1] 0.00ns
+:4  %tmp_2 = zext i30 %c5 to i32
+
+ST_8: DATA_C_addr (12)  [1/1] 0.00ns
+:5  %DATA_C_addr = getelementptr i32* %DATA_C, i32 %tmp_2
+
+ST_8: StgValue_43 (19)  [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(i32* %DATA_C), !map !13
+
+ST_8: StgValue_44 (20)  [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap(i32* %DATA_B), !map !19
+
+ST_8: StgValue_45 (21)  [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap(i32* %DATA_A), !map !23
+
+ST_8: StgValue_46 (22)  [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !27
+
+ST_8: StgValue_47 (23)  [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecTopModule([18 x i8]* @vector_multiplier_st) nounwind
+
+ST_8: StgValue_48 (24)  [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecInterface(i32* %DATA_A, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 64, [7 x i8]* @p_str2, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_8: StgValue_49 (25)  [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecInterface(i32 %a, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 64, [1 x i8]* @bundle, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_8: StgValue_50 (26)  [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecInterface(i32* %DATA_B, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 64, [7 x i8]* @p_str4, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_8: StgValue_51 (27)  [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecInterface(i32 %b, [10 x i8]* @mode3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 64, [1 x i8]* @bundle4, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_8: StgValue_52 (28)  [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecInterface(i32* %DATA_C, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 64, [7 x i8]* @p_str5, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_8: StgValue_53 (29)  [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecInterface(i32 %c, [10 x i8]* @mode5, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 64, [1 x i8]* @bundle6, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_8: StgValue_54 (30)  [1/1] 0.00ns  loc: accelerator_hls/accelerator.cpp:6
+:23  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str6, i32 1, i32 1, [1 x i8]* @p_str1, i32 0, i32 0, [4 x i8]* @p_str7, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_8: DATA_A_addr_rd_req (31)  [1/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:24  %DATA_A_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_A_addr, i32 64)
+
+ST_8: DATA_B_addr_rd_req (32)  [1/7] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:25  %DATA_B_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %DATA_B_addr, i32 64)
+
+ST_8: DATA_C_addr_wr_req (33)  [1/1] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:26  %DATA_C_addr_wr_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %DATA_C_addr, i32 64)
+
+ST_8: StgValue_58 (34)  [1/1] 1.59ns  loc: accelerator_hls/accelerator.cpp:7
+:27  br label %1
+
+
+ <State 9>: 2.91ns
+ST_9: i (36)  [1/1] 0.00ns
+:0  %i = phi i7 [ 0, %0 ], [ %i_1, %2 ]
+
+ST_9: exitcond (37)  [1/1] 2.91ns  loc: accelerator_hls/accelerator.cpp:7
+:1  %exitcond = icmp eq i7 %i, -64
+
+ST_9: i_1 (38)  [1/1] 2.32ns  loc: accelerator_hls/accelerator.cpp:7
+:2  %i_1 = add i7 %i, 1
+
+ST_9: StgValue_62 (39)  [1/1] 0.00ns  loc: accelerator_hls/accelerator.cpp:7
+:3  br i1 %exitcond, label %3, label %2
+
+
+ <State 10>: 8.75ns
+ST_10: DATA_A_addr_read (44)  [1/1] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:3  %DATA_A_addr_read = call i32 @_ssdm_op_Read.m_axi.i32P(i32* %DATA_A_addr)
+
+ST_10: DATA_B_addr_read (45)  [1/1] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:4  %DATA_B_addr_read = call i32 @_ssdm_op_Read.m_axi.i32P(i32* %DATA_B_addr)
+
+
+ <State 11>: 6.91ns
+ST_11: tmp (46)  [2/2] 6.91ns  loc: accelerator_hls/accelerator.cpp:9
+:5  %tmp = mul nsw i32 %DATA_B_addr_read, %DATA_A_addr_read
+
+
+ <State 12>: 6.91ns
+ST_12: tmp (46)  [1/2] 6.91ns  loc: accelerator_hls/accelerator.cpp:9
+:5  %tmp = mul nsw i32 %DATA_B_addr_read, %DATA_A_addr_read
+
+
+ <State 13>: 8.75ns
+ST_13: empty (41)  [1/1] 0.00ns
+:0  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64) nounwind
+
+ST_13: tmp_1 (42)  [1/1] 0.00ns  loc: accelerator_hls/accelerator.cpp:9
+:1  %tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str8) nounwind
+
+ST_13: StgValue_69 (43)  [1/1] 0.00ns  loc: accelerator_hls/accelerator.cpp:8
+:2  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_13: StgValue_70 (47)  [1/1] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:6  call void @_ssdm_op_Write.m_axi.i32P(i32* %DATA_C_addr, i32 %tmp, i4 -1)
+
+ST_13: empty_4 (48)  [1/1] 0.00ns  loc: accelerator_hls/accelerator.cpp:9
+:7  %empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str8, i32 %tmp_1) nounwind
+
+ST_13: StgValue_72 (49)  [1/1] 0.00ns  loc: accelerator_hls/accelerator.cpp:7
+:8  br label %1
+
+
+ <State 14>: 8.75ns
+ST_14: DATA_C_addr_wr_resp (51)  [5/5] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:0  %DATA_C_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %DATA_C_addr)
+
+
+ <State 15>: 8.75ns
+ST_15: DATA_C_addr_wr_resp (51)  [4/5] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:0  %DATA_C_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %DATA_C_addr)
+
+
+ <State 16>: 8.75ns
+ST_16: DATA_C_addr_wr_resp (51)  [3/5] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:0  %DATA_C_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %DATA_C_addr)
+
+
+ <State 17>: 8.75ns
+ST_17: DATA_C_addr_wr_resp (51)  [2/5] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:0  %DATA_C_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %DATA_C_addr)
+
+ST_17: StgValue_77 (52)  [2/2] 0.00ns  loc: accelerator_hls/accelerator.cpp:11
+:1  ret i32 0
+
+
+ <State 18>: 8.75ns
+ST_18: DATA_C_addr_wr_resp (51)  [1/5] 8.75ns  loc: accelerator_hls/accelerator.cpp:9
+:0  %DATA_C_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %DATA_C_addr)
+
+ST_18: StgValue_79 (52)  [1/2] 0.00ns  loc: accelerator_hls/accelerator.cpp:11
+:1  ret i32 0
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'c' [7]  (1 ns)
+
+ <State 2>: 8.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('DATA_B_addr') [15]  (0 ns)
+	bus request on port 'DATA_B' (accelerator_hls/accelerator.cpp:9) [32]  (8.75 ns)
+
+ <State 3>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'DATA_A' (accelerator_hls/accelerator.cpp:9) [31]  (8.75 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'DATA_A' (accelerator_hls/accelerator.cpp:9) [31]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'DATA_A' (accelerator_hls/accelerator.cpp:9) [31]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'DATA_A' (accelerator_hls/accelerator.cpp:9) [31]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'DATA_A' (accelerator_hls/accelerator.cpp:9) [31]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('DATA_C_addr') [12]  (0 ns)
+	bus request on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [33]  (8.75 ns)
+
+ <State 9>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', accelerator_hls/accelerator.cpp:7) [36]  (0 ns)
+	'icmp' operation ('exitcond', accelerator_hls/accelerator.cpp:7) [37]  (2.91 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'DATA_A' (accelerator_hls/accelerator.cpp:9) [44]  (8.75 ns)
+
+ <State 11>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp', accelerator_hls/accelerator.cpp:9) [46]  (6.91 ns)
+
+ <State 12>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('tmp', accelerator_hls/accelerator.cpp:9) [46]  (6.91 ns)
+
+ <State 13>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [47]  (8.75 ns)
+
+ <State 14>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [51]  (8.75 ns)
+
+ <State 15>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [51]  (8.75 ns)
+
+ <State 16>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [51]  (8.75 ns)
+
+ <State 17>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [51]  (8.75 ns)
+
+ <State 18>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'DATA_C' (accelerator_hls/accelerator.cpp:9) [51]  (8.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

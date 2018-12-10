@@ -1,0 +1,1915 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Oct 17 00:07:57 2017
+# Process ID: 9736
+# Current directory: F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1
+# Command line: vivado.exe -log accelerator_bd_vector_multiplier_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator_bd_vector_multiplier_0_0.tcl
+# Log file: F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/accelerator_bd_vector_multiplier_0_0.vds
+# Journal file: F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source accelerator_bd_vector_multiplier_0_0.tcl -notrace
+Command: synth_design -top accelerator_bd_vector_multiplier_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 339.672 ; gain = 83.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'accelerator_bd_vector_multiplier_0_0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/synth/accelerator_bd_vector_multiplier_0_0.v:59]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 14'b00000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 14'b00000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 14'b00000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 14'b00000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 14'b00000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 14'b00000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 14'b00000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 14'b00000010000000 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 14'b00000100000000 
+	Parameter ap_ST_fsm_state14 bound to: 14'b00001000000000 
+	Parameter ap_ST_fsm_state15 bound to: 14'b00010000000000 
+	Parameter ap_ST_fsm_state16 bound to: 14'b00100000000000 
+	Parameter ap_ST_fsm_state17 bound to: 14'b01000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 14'b10000000000000 
+	Parameter C_S_AXI_CTL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTL_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_A_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_A_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_A_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_A_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_A_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_A_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_A_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_A_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_A_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_A_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_A_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_B_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_B_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_B_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_B_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_B_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_B_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_B_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_B_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_B_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_B_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_B_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter C_M_AXI_DATA_C_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_C_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_C_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_C_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_C_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_C_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter C_S_AXI_CTL_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_DATA_A_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_DATA_B_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_DATA_C_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:389]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_CTL_s_axi' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 6'b000000 
+	Parameter ADDR_GIE bound to: 6'b000100 
+	Parameter ADDR_IER bound to: 6'b001000 
+	Parameter ADDR_ISR bound to: 6'b001100 
+	Parameter ADDR_AP_RETURN_0 bound to: 6'b010000 
+	Parameter ADDR_A_DATA_0 bound to: 6'b011000 
+	Parameter ADDR_A_CTRL bound to: 6'b011100 
+	Parameter ADDR_B_DATA_0 bound to: 6'b100000 
+	Parameter ADDR_B_CTRL bound to: 6'b100100 
+	Parameter ADDR_C_DATA_0 bound to: 6'b101000 
+	Parameter ADDR_C_CTRL bound to: 6'b101100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v:215]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v:251]
+WARNING: [Synth 8-6014] Unused sequential element int_isr_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v:327]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_CTL_s_axi' (1#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:10]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_throttl' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:687]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter threshold bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_throttl' (2#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:687]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_write' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1500]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo' (3#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_reg_slice' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:293]
+	Parameter N bound to: 64 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_reg_slice' (4#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:293]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo__parameterized0' (4#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_buffer' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:506]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_buffer' (5#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo__parameterized1' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo__parameterized1' (5#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo__parameterized2' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_fifo__parameterized2' (5#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:397]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1864]
+WARNING: [Synth 8-3848] Net AWREGION in module/entity vector_multiplier_DATA_A_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1532]
+WARNING: [Synth 8-3848] Net WID in module/entity vector_multiplier_DATA_A_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1537]
+WARNING: [Synth 8-3848] Net WUSER in module/entity vector_multiplier_DATA_A_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1541]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_write' (6#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1500]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_read' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:739]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_buffer__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:506]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 35 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_buffer__parameterized0' (6#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_A_m_axi_reg_slice__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:293]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_reg_slice__parameterized0' (6#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:293]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1070]
+WARNING: [Synth 8-3848] Net ARREGION in module/entity vector_multiplier_DATA_A_m_axi_read does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:770]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi_read' (7#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:739]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_A_m_axi' (8#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:10]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_throttl' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:687]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter threshold bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_throttl' (9#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:687]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_write' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1500]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo' (10#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_reg_slice' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:293]
+	Parameter N bound to: 64 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_reg_slice' (11#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:293]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo__parameterized0' (11#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_buffer' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:506]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_buffer' (12#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo__parameterized1' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo__parameterized1' (12#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo__parameterized2' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_fifo__parameterized2' (12#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:397]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1864]
+WARNING: [Synth 8-3848] Net AWREGION in module/entity vector_multiplier_DATA_B_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1532]
+WARNING: [Synth 8-3848] Net WID in module/entity vector_multiplier_DATA_B_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1537]
+WARNING: [Synth 8-3848] Net WUSER in module/entity vector_multiplier_DATA_B_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1541]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_write' (13#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1500]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_read' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:739]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_buffer__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:506]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 35 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_buffer__parameterized0' (13#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_B_m_axi_reg_slice__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:293]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_reg_slice__parameterized0' (13#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:293]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:1070]
+WARNING: [Synth 8-3848] Net ARREGION in module/entity vector_multiplier_DATA_B_m_axi_read does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:770]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi_read' (14#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:739]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_B_m_axi' (15#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:10]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_throttl' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:687]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter threshold bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_throttl' (16#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:687]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_write' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1500]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo' (17#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_reg_slice' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:293]
+	Parameter N bound to: 64 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_reg_slice' (18#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:293]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+	Parameter DATA_BITS bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo__parameterized0' (18#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_buffer' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:506]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_buffer' (19#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo__parameterized1' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo__parameterized1' (19#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo__parameterized2' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:495]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_fifo__parameterized2' (19#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:397]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1864]
+WARNING: [Synth 8-3848] Net AWREGION in module/entity vector_multiplier_DATA_C_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1532]
+WARNING: [Synth 8-3848] Net WID in module/entity vector_multiplier_DATA_C_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1537]
+WARNING: [Synth 8-3848] Net WUSER in module/entity vector_multiplier_DATA_C_m_axi_write does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1541]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_write' (20#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1500]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_read' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:739]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_buffer__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:506]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 35 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_buffer__parameterized0' (20#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:506]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplier_DATA_C_m_axi_reg_slice__parameterized0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:293]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_reg_slice__parameterized0' (20#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:293]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:1070]
+WARNING: [Synth 8-3848] Net ARREGION in module/entity vector_multiplier_DATA_C_m_axi_read does not have driver. [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:770]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi_read' (21#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:739]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier_DATA_C_m_axi' (22#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:10]
+INFO: [Synth 8-638] synthesizing module 'vector_multiplierbkb' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplierbkb.v:29]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'vector_multiplierbkb_MulnS_0' [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplierbkb.v:11]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplierbkb_MulnS_0' (23#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplierbkb.v:11]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplierbkb' (24#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplierbkb.v:29]
+WARNING: [Synth 8-6014] Unused sequential element DATA_A_blk_n_AR_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1093]
+WARNING: [Synth 8-6014] Unused sequential element DATA_A_blk_n_R_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1101]
+WARNING: [Synth 8-6014] Unused sequential element DATA_B_blk_n_AR_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1125]
+WARNING: [Synth 8-6014] Unused sequential element DATA_B_blk_n_R_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1133]
+WARNING: [Synth 8-6014] Unused sequential element DATA_C_blk_n_AW_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1165]
+WARNING: [Synth 8-6014] Unused sequential element DATA_C_blk_n_B_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1173]
+WARNING: [Synth 8-6014] Unused sequential element DATA_C_blk_n_W_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1181]
+WARNING: [Synth 8-6014] Unused sequential element ap_idle_pp0_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1213]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_state10_pp0_stage0_iter1_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1366]
+WARNING: [Synth 8-6014] Unused sequential element DATA_B_RREADY_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:747]
+WARNING: [Synth 8-6014] Unused sequential element ap_done_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:542]
+WARNING: [Synth 8-6014] Unused sequential element ap_ready_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:541]
+WARNING: [Synth 8-6014] Unused sequential element ap_block_pp0_stage0_flag00011011_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:1362]
+INFO: [Synth 8-256] done synthesizing module 'vector_multiplier' (25#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v:12]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_bd_vector_multiplier_0_0' (26#1) [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/synth/accelerator_bd_vector_multiplier_0_0.v:59]
+WARNING: [Synth 8-3331] design vector_multiplierbkb has unconnected port reset
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port ARREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port ARREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port ARREGION[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port ARREGION[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port RID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port RUSER[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_cache[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_cache[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_cache[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_cache[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_prot[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_prot[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_prot[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_read has unconnected port rreq_user[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port AWREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port AWREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port AWREGION[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port AWREGION[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port WID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port WUSER[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port BID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port BUSER[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_cache[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_cache[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_cache[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_cache[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_prot[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_prot[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_prot[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wreq_user[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi_write has unconnected port wdata_user[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWSIZE[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWSIZE[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWSIZE[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWBURST[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWBURST[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWLOCK[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWLOCK[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWREGION[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_AWREGION[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_WID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_WLAST
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARSIZE[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARSIZE[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARSIZE[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARBURST[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARBURST[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARLOCK[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARLOCK[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARREGION[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_C_m_axi has unconnected port I_ARREGION[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port ARREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port ARREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port ARREGION[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port ARREGION[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port RID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port RUSER[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_cache[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_cache[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_cache[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_cache[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_prot[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_prot[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_prot[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_read has unconnected port rreq_user[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port AWREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port AWREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port AWREGION[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port AWREGION[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port WID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port WUSER[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port BID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port BUSER[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_cache[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_cache[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_cache[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_cache[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_prot[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_prot[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_prot[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wreq_user[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi_write has unconnected port wdata_user[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWID[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWSIZE[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWSIZE[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWSIZE[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWBURST[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWBURST[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWLOCK[1]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWLOCK[0]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWREGION[3]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWREGION[2]
+WARNING: [Synth 8-3331] design vector_multiplier_DATA_B_m_axi has unconnected port I_AWREGION[1]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 405.801 ; gain = 149.285
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 405.801 ; gain = 149.285
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/constraints/vector_multiplier_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/constraints/vector_multiplier_ooc.xdc] for cell 'inst'
+Parsing XDC File [F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 738.367 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 738.367 ; gain = 481.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 738.367 ; gain = 481.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:47 . Memory (MB): peak = 738.367 ; gain = 481.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'vector_multiplier_CTL_s_axi'
+WARNING: [Synth 8-6014] Unused sequential element wstate_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v:129]
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element throttl_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:721]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:589]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:587]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:485]
+WARNING: [Synth 8-6014] Unused sequential element pout_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:483]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[5] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[6] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[7] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[8] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[9] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[10] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[11] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[12] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[13] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[14] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element could_multi_bursts.loop_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1934]
+WARNING: [Synth 8-6014] Unused sequential element bus_equal_gen.len_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:2074]
+WARNING: [Synth 8-6014] Unused sequential element sect_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1809]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:589]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:587]
+WARNING: [Synth 8-6014] Unused sequential element could_multi_bursts.loop_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1127]
+WARNING: [Synth 8-6014] Unused sequential element sect_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v:1026]
+WARNING: [Synth 8-6014] Unused sequential element throttl_cnt_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:721]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:589]
+WARNING: [Synth 8-6014] Unused sequential element usedw_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:587]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:485]
+WARNING: [Synth 8-6014] Unused sequential element pout_reg was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:483]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[5] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[6] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[7] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[8] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[9] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[10] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[11] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[12] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[13] was removed.  [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:498]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:589]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:485]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v:589]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_220_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'vector_multiplier_CTL_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:50 . Memory (MB): peak = 738.367 ; gain = 481.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 18    
+	   2 Input     12 Bit       Adders := 6     
+	   2 Input      9 Bit       Adders := 6     
+	   2 Input      8 Bit       Adders := 24    
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 24    
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 18    
+	               36 Bit    Registers := 9     
+	               35 Bit    Registers := 9     
+	               34 Bit    Registers := 6     
+	               32 Bit    Registers := 51    
+	               30 Bit    Registers := 3     
+	               14 Bit    Registers := 1     
+	               10 Bit    Registers := 12    
+	                8 Bit    Registers := 27    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 7     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 12    
+	                2 Bit    Registers := 26    
+	                1 Bit    Registers := 157   
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---RAMs : 
+	               9K Bit         RAMs := 3     
+	               8K Bit         RAMs := 3     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 6     
+	   2 Input     36 Bit        Muxes := 3     
+	   2 Input     35 Bit        Muxes := 3     
+	   2 Input     34 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 21    
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	  15 Input     14 Bit        Muxes := 1     
+	   4 Input     12 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 12    
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 33    
+	   4 Input      8 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 3     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 13    
+	   2 Input      2 Bit        Muxes := 79    
+	   5 Input      2 Bit        Muxes := 27    
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 172   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vector_multiplier_CTL_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   9 Input     32 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module vector_multiplier_DATA_A_m_axi_throttl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module vector_multiplier_DATA_A_m_axi_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_buffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               36 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               9K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+Module vector_multiplier_DATA_A_m_axi_buffer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               35 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_reg_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               34 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_A_m_axi_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+Module vector_multiplier_DATA_B_m_axi_throttl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module vector_multiplier_DATA_B_m_axi_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_buffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               36 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               9K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+Module vector_multiplier_DATA_B_m_axi_buffer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               35 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_reg_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               34 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_B_m_axi_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+Module vector_multiplier_DATA_C_m_axi_throttl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module vector_multiplier_DATA_C_m_axi_fifo 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_fifo__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_buffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               36 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               9K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_fifo__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_fifo__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_write 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 13    
+Module vector_multiplier_DATA_C_m_axi_buffer__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               35 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               8K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_reg_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               34 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module vector_multiplier_DATA_C_m_axi_read 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+Module vector_multiplierbkb_MulnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module vector_multiplier 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               30 Bit    Registers := 3     
+	               14 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	  15 Input     14 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exitcond_fu_220_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplierbkb.v:20]
+DSP Report: Generating DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product, operation Mode is: A*B.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg.
+DSP Report: Generating DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product, operation Mode is: A*B.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg.
+DSP Report: operator vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/tmp_product is absorbed into DSP vector_multiplierbkb_U0/vector_multiplierbkb_MulnS_0_U/p_reg.
+warning: Removed RAM bus_write/buff_wdata/mem_reg due to inactive write enable
+WARNING: [Synth 8-5730] RAM bus_write/buff_wdata/mem_reg got removed due to cross hierarchy optimization. 
+warning: Removed RAM bus_write/buff_wdata/mem_reg due to inactive write enable
+WARNING: [Synth 8-5730] RAM bus_write/buff_wdata/mem_reg got removed due to cross hierarchy optimization. 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_read/rs_rreq/data_p2_reg[32] )
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[63]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[61]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[62]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[60]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[59]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[58]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[57]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[56]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[55]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[54]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[53]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[52]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[51]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[50]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[49]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[48]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[47]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[46]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[45]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[44]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[43]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[42]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[41]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[40]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[39]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_write/rs_wreq/data_p2_reg[38] )
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[37]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[36]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[35]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[34]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[33]' (FDE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/rs_wreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_C_m_axi_U/\bus_write/rs_wreq/data_p2_reg[32] )
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[63]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[61]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[62]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[60]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[59]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[58]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[57]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[56]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[55]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[54]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[53]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[52]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[51]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[50]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[49]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[48]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[47]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[46]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[45]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[44]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[43]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[42]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[41]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[40]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[39]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_read/rs_rreq/data_p2_reg[38] )
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[37]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[36]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[35]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[34]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[33]' (FDE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_read/rs_rreq/data_p2_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/vector_multiplier_DATA_B_m_axi_U/\bus_write/rs_wreq/data_p2_reg[60] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[63]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[61]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[62]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[60]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[59]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[58]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[57]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[56]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[55]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[54]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[53]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[52]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[51]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[50]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[49]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[48]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[47]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[46]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[45]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[44]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[43]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[42]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[41]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[40]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[39]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[37]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[36]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[35]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[34]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[33]' (FDE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/rs_rreq/data_p2_reg[32]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_read/start_addr_reg[0]' (FDRE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_read/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/start_addr_reg[0]' (FDRE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/start_addr_reg[0]' (FDRE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_read/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_write/start_addr_reg[0]' (FDRE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_write/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/start_addr_reg[0]' (FDRE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_read/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_A_m_axi_U/bus_write/start_addr_reg[0]' (FDRE) to 'inst/vector_multiplier_DATA_A_m_axi_U/bus_write/start_addr_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/q_tmp_reg[32]' (FDRE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/q_tmp_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/q_tmp_reg[33]' (FDRE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/q_tmp_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/q_tmp_reg[34]' (FDRE) to 'inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/q_tmp_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/vector_multiplier_DATA_B_m_axi_U/bus_write/buff_wdata/q_tmp_reg[32]' (FDRE) to 'inst/vector_multiplier_DATA_B_m_axi_U/bus_write/buff_wdata/q_tmp_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[7]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[6]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[5]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[4]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[3]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[2]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[1]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (wreq_throttl/throttl_cnt_reg[0]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/q_buf_reg[31]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[7]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[6]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[5]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[4]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[3]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[2]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[1]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/buff_wdata/waddr_reg[0]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/pout_reg[2]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/pout_reg[1]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/pout_reg[0]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/full_n_reg) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/data_vld_reg) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bus_equal_gen.fifo_burst/empty_n_reg) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/full_n_reg) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/state_reg[1]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/state_reg[0]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/s_ready_t_reg) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[63]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[62]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[61]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[60]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[59]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[58]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[57]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[56]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[55]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[54]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[53]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[52]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[51]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[50]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[49]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[48]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[47]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[46]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[45]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[44]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[43]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[42]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[41]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[40]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[39]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[38]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[37]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[36]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[35]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[34]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[33]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[32]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[31]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[30]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[29]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[28]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[27]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[26]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[25]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[24]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[23]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[22]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[21]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[20]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[19]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[18]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[17]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[16]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[15]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[14]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[13]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[12]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[11]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[10]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[9]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[8]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[7]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[6]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[5]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[4]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[3]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[2]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[1]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[0]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[63]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[62]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[61]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[60]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[59]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[58]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[57]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[56]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[55]) is unused and will be removed from module vector_multiplier_DATA_A_m_axi.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:59 . Memory (MB): peak = 738.367 ; gain = 481.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                            | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|vector_multiplier_DATA_A_m_axi_buffer__parameterized0: | mem_reg    | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vector_multiplier_DATA_B_m_axi_buffer__parameterized0: | mem_reg    | 256 x 35(READ_FIRST)   | W |   | 256 x 35(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|vector_multiplier_DATA_C_m_axi_buffer:                 | mem_reg    | 256 x 36(READ_FIRST)   | W |   | 256 x 36(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++-------------------------------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vector_multiplier | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiplier | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|vector_multiplier | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiplier | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:14 . Memory (MB): peak = 739.918 ; gain = 483.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:14 . Memory (MB): peak = 747.902 ; gain = 491.387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/vector_multiplier_DATA_A_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/vector_multiplier_DATA_B_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/vector_multiplier_DATA_C_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:16 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[4]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[4]  | 8      | 64         | 64     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[14] | 16     | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[4]  | 8      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | mem_reg[4]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__5     | mem_reg[4]  | 8      | 64         | 64     | 0       | 0      | 0      | 0      | 
+|dsrl__6     | mem_reg[14] | 16     | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | mem_reg[4]  | 8      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__8     | mem_reg[4]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | mem_reg[4]  | 8      | 64         | 64     | 0       | 0      | 0      | 0      | 
+|dsrl__10    | mem_reg[14] | 16     | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__11    | mem_reg[4]  | 8      | 2          | 2      | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    90|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     2|
+|4     |LUT1      |   101|
+|5     |LUT2      |   220|
+|6     |LUT3      |   457|
+|7     |LUT4      |   259|
+|8     |LUT5      |   111|
+|9     |LUT6      |   218|
+|10    |RAMB18E1  |     3|
+|11    |SRL16E    |    99|
+|12    |FDRE      |  1875|
+|13    |FDSE      |     9|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+---------------------------------------------------------+------+
+|      |Instance                             |Module                                                   |Cells |
++------+-------------------------------------+---------------------------------------------------------+------+
+|1     |top                                  |                                                         |  3445|
+|2     |  inst                               |vector_multiplier                                        |  3445|
+|3     |    vector_multiplier_CTL_s_axi_U    |vector_multiplier_CTL_s_axi                              |   317|
+|4     |    vector_multiplier_DATA_A_m_axi_U |vector_multiplier_DATA_A_m_axi                           |   947|
+|5     |      bus_read                       |vector_multiplier_DATA_A_m_axi_read                      |   947|
+|6     |        buff_rdata                   |vector_multiplier_DATA_A_m_axi_buffer__parameterized0    |   172|
+|7     |        fifo_rctl                    |vector_multiplier_DATA_A_m_axi_fifo__parameterized1      |    42|
+|8     |        fifo_rreq                    |vector_multiplier_DATA_A_m_axi_fifo__parameterized0      |   119|
+|9     |        rs_rdata                     |vector_multiplier_DATA_A_m_axi_reg_slice__parameterized0 |   122|
+|10    |        rs_rreq                      |vector_multiplier_DATA_A_m_axi_reg_slice                 |   100|
+|11    |    vector_multiplier_DATA_B_m_axi_U |vector_multiplier_DATA_B_m_axi                           |   932|
+|12    |      bus_read                       |vector_multiplier_DATA_B_m_axi_read                      |   932|
+|13    |        buff_rdata                   |vector_multiplier_DATA_B_m_axi_buffer__parameterized0    |   172|
+|14    |        fifo_rctl                    |vector_multiplier_DATA_B_m_axi_fifo__parameterized1      |    42|
+|15    |        fifo_rreq                    |vector_multiplier_DATA_B_m_axi_fifo__parameterized0      |   119|
+|16    |        rs_rdata                     |vector_multiplier_DATA_B_m_axi_reg_slice__parameterized0 |   105|
+|17    |        rs_rreq                      |vector_multiplier_DATA_B_m_axi_reg_slice                 |   102|
+|18    |    vector_multiplier_DATA_C_m_axi_U |vector_multiplier_DATA_C_m_axi                           |   977|
+|19    |      bus_read                       |vector_multiplier_DATA_C_m_axi_read                      |    39|
+|20    |        buff_rdata                   |vector_multiplier_DATA_C_m_axi_buffer__parameterized0    |    30|
+|21    |        rs_rdata                     |vector_multiplier_DATA_C_m_axi_reg_slice__parameterized0 |     6|
+|22    |      bus_write                      |vector_multiplier_DATA_C_m_axi_write                     |   919|
+|23    |        buff_wdata                   |vector_multiplier_DATA_C_m_axi_buffer                    |   179|
+|24    |        \bus_equal_gen.fifo_burst    |vector_multiplier_DATA_C_m_axi_fifo                      |    83|
+|25    |        fifo_resp                    |vector_multiplier_DATA_C_m_axi_fifo__parameterized1      |    26|
+|26    |        fifo_resp_to_user            |vector_multiplier_DATA_C_m_axi_fifo__parameterized2      |    20|
+|27    |        fifo_wreq                    |vector_multiplier_DATA_C_m_axi_fifo__parameterized0      |    87|
+|28    |        rs_wreq                      |vector_multiplier_DATA_C_m_axi_reg_slice                 |   103|
+|29    |      wreq_throttl                   |vector_multiplier_DATA_C_m_axi_throttl                   |    19|
+|30    |    vector_multiplierbkb_U0          |vector_multiplierbkb                                     |    40|
+|31    |      vector_multiplierbkb_MulnS_0_U |vector_multiplierbkb_MulnS_0                             |    40|
++------+-------------------------------------+---------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2229 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 771.766 ; gain = 182.684
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:17 . Memory (MB): peak = 771.766 ; gain = 515.250
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+319 Infos, 314 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 771.766 ; gain = 517.879
+INFO: [Common 17-1381] The checkpoint 'F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/accelerator_bd_vector_multiplier_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/accelerator_bd_vector_multiplier_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 30 cell refs.
+INFO: [Common 17-1381] The checkpoint 'F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/accelerator_bd_vector_multiplier_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 771.766 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 17 00:09:24 2017...

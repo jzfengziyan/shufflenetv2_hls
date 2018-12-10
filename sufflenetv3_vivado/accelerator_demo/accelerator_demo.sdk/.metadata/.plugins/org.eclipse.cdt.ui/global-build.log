@@ -1,0 +1,332 @@
+21:33:00 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+
+21:33:00 Build Finished (took 262ms)
+
+21:33:01 **** Incremental Build of configuration Release for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main(int, char**)':
+../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:1701:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_pic_parameters("plane.bin");
+                                  ^
+../src/main.cc:1706:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_1x1_parameters("shuffle1.bin");
+                                                  ^
+../src/main.cc:1709:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_3x3_parameters("shuffle3.bin");
+                                                  ^
+../src/main.cc:1712:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv1_weight_parameters("conv1.bin");
+                                           ^
+../src/main.cc:1715:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_bias_parameters("bias.bin");
+                                  ^
+../src/main.cc:1718:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_last_weight_parameters("convlast.bin");
+                                                  ^
+../src/main.cc:1721:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_fc_weight_parameters("fc.bin");
+                                          ^
+Finished building: ../src/main.cc
+ 
+Building target: lenet_cnn_demo.elf
+Invoking: ARM v7 g++ linker
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "lenet_cnn_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: lenet_cnn_demo.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 816871	   2892	67125600	67945363	40cc393	lenet_cnn_demo.elf
+Finished building: lenet_cnn_demo.elf.size
+ 
+21:33:11 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:12 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:13 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:14 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:33 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:34 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:35 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:36 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:44 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:45 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:45 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:33:46 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:34:07 **** Clean-only build of configuration Debug for project lenet_cnn_demo ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  lenet_cnn_demo.elf.size  lenet_cnn_demo.elf
+ 
+21:34:07 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main(int, char**)':
+../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:1701:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_pic_parameters("plane.bin");
+                                  ^
+../src/main.cc:1706:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_1x1_parameters("shuffle1.bin");
+                                                  ^
+../src/main.cc:1709:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_3x3_parameters("shuffle3.bin");
+                                                  ^
+../src/main.cc:1712:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv1_weight_parameters("conv1.bin");
+                                           ^
+../src/main.cc:1715:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_bias_parameters("bias.bin");
+                                  ^
+../src/main.cc:1718:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_last_weight_parameters("convlast.bin");
+                                                  ^
+../src/main.cc:1721:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_fc_weight_parameters("fc.bin");
+                                          ^
+Finished building: ../src/main.cc
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: lenet_cnn_demo.elf
+Invoking: ARM v7 g++ linker
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "lenet_cnn_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: lenet_cnn_demo.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 840891	   2892	67125632	67969415	40d2187	lenet_cnn_demo.elf
+Finished building: lenet_cnn_demo.elf.size
+ 
+21:34:33 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:34:33 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:34:34 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:34:35 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:03 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:04 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:05 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:06 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:35 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:36 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:37 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:38 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:45 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:46 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:47 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:35:48 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:36:52 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:36:53 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:36:54 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:36:55 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:37:45 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:37:46 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:37:47 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:37:48 **** Incremental Build of configuration Debug for project accelerator_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+21:39:47 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main(int, char**)':
+../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:1702:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_pic_parameters("plane.bin");
+                                  ^
+../src/main.cc:1707:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_1x1_parameters("shuffle1.bin");
+                                                  ^
+../src/main.cc:1710:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_3x3_parameters("shuffle3.bin");
+                                                  ^
+../src/main.cc:1713:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv1_weight_parameters("conv1.bin");
+                                           ^
+../src/main.cc:1716:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_bias_parameters("bias.bin");
+                                  ^
+../src/main.cc:1719:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_last_weight_parameters("convlast.bin");
+                                                  ^
+../src/main.cc:1722:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_fc_weight_parameters("fc.bin");
+                                          ^
+Finished building: ../src/main.cc
+ 
+Building target: lenet_cnn_demo.elf
+Invoking: ARM v7 g++ linker
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "lenet_cnn_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: lenet_cnn_demo.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 840891	   2892	67125632	67969415	40d2187	lenet_cnn_demo.elf
+Finished building: lenet_cnn_demo.elf.size
+ 

@@ -1,0 +1,926 @@
+!SESSION 2018-12-09 21:19:37.105 -----------------------------------------------
+eclipse.buildId=2017.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk
+
+This is a continuation of log file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/.metadata/.bak_0.log
+Created Time: 2018-12-09 21:22:30.909
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:30.909
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:30.909
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.348
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.350
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.350
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.382
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.384
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.385
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.678
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.680
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.680
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.861
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.863
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.863
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:31.992
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2018-12-09 21:22:32.042
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:22:55.737
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:22:55.740
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:22:55.741
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:22:55.742
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:22:55.742
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:22:55.743
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:23:04.954
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:23:04.957
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:23:04.957
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:23:04.958
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:23:04.958
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:23:04.959
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:04.131
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:04.134
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:04.134
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:04.136
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:04.136
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:04.137
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:17.311
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:17.313
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:17.314
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:17.315
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:17.315
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:17.316
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:41.512
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:41.514
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:41.514
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:41.515
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:41.516
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:41.516
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:57.280
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:57.282
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:57.283
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:57.284
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:57.284
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:24:57.284
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:16.372
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:16.375
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:16.375
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:16.376
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:16.376
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:16.377
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:30.765
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:30.767
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.375
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.376
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.378
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.383
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.386
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.427
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248470535]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.429
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.434
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248470535]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.434
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.448
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.449
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.469
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:32.469
+!MESSAGE XSCT Command: [fpga -file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/accelerator_bd_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:34.816
+!MESSAGE XSCT command with result: [fpga -file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/accelerator_bd_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:35.617
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:35.622
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:41.432
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:41.434
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:41.434
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:41.436
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:41.436
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:25:41.437
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:22.177
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:22.180
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.436
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.438
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.438
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.439
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.439
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.445
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248470535]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.446
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.451
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248470535]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.451
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.465
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.465
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.499
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:23.499
+!MESSAGE XSCT Command: [fpga -file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/accelerator_bd_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:27.129
+!MESSAGE XSCT command with result: [fpga -file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/accelerator_bd_wrapper.bit], Result: [{Format=fpga configuration failed. DONE PIN is not HIGH, Time=1544412387128, Code=1}, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:31.825
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:31.827
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.896
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.897
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.897
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.898
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.898
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.906
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248470535]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.906
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.912
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248470535]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.912
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.926
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 03727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.926
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.941
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248470535" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:32.942
+!MESSAGE XSCT Command: [fpga -file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/accelerator_bd_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:35.306
+!MESSAGE XSCT command with result: [fpga -file /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/accelerator_bd_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:36.115
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:36.119
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:40.555
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:40.557
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:40.558
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:40.559
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:40.560
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:40.560
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:43.300
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:43.302
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:43.302
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:43.303
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:43.303
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:43.303
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:57.050
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:57.053
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:57.053
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:57.054
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:57.054
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:57.055
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:58.073
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:58.075
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:58.076
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:58.077
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:58.077
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:26:58.077
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:11.717
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:11.719
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:11.719
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:11.721
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:11.721
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:11.722
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:40.348
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:40.350
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:40.350
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:40.352
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:40.352
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:27:40.353
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:32:54.860
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:32:54.862
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:32:54.862
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:32:54.864
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:32:54.864
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:32:54.865
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:07.097
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:07.099
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:07.099
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:07.101
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:07.101
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:07.102
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:38.575
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:38.577
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:38.577
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:38.579
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:38.579
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:33:38.579
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:17.749
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:17.751
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:17.751
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:17.752
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:17.753
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:17.753
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:53.610
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:53.612
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:53.612
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:53.614
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:53.614
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:34:53.614
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:17.236
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:17.238
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:17.239
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:17.240
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:17.240
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:17.240
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:40.161
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:40.163
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:40.163
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:40.164
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:40.164
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:35:40.165
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:22.223
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:22.225
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:22.225
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:22.226
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:22.227
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:22.227
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:47.423
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:47.425
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:47.425
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:47.427
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:47.427
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:36:47.427
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:37:01.711
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:37:01.713
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:37:01.713
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:37:01.714
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:37:01.715
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-09 21:37:01.715
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ziyan/ziyan/ece527/ECE527_MP4_Tutorial_Files/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.debug.core 4 0 2018-12-09 21:39:57.594
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.debug.core.DebugPlugin.stop() of bundle org.eclipse.debug.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:850)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:946)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1580)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(TM.java:762)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.stopRun(AppRunner.java:192)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.terminate(RemoteProcess.java:132)
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:248)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2379)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:660)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:830)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:823)
+	... 13 more
+Root exception:
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(TM.java:762)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.stopRun(AppRunner.java:192)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.terminate(RemoteProcess.java:132)
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:248)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2379)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:660)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:830)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:823)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:946)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:314)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1580)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:270)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:147)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:636)
+	at org.eclipse.osgi.container.Module.stop(Module.java:498)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:202)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:165)
+	at java.lang.Thread.run(Thread.java:745)

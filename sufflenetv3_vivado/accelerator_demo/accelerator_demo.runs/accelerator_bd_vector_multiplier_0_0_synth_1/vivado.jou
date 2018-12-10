@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Oct 17 00:07:57 2017
+# Process ID: 9736
+# Current directory: F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1
+# Command line: vivado.exe -log accelerator_bd_vector_multiplier_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator_bd_vector_multiplier_0_0.tcl
+# Log file: F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1/accelerator_bd_vector_multiplier_0_0.vds
+# Journal file: F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_vector_multiplier_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source accelerator_bd_vector_multiplier_0_0.tcl -notrace

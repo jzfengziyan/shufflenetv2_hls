@@ -1,0 +1,736 @@
+INFO: [HLS 200-0] Workspace F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier opened at Mon Oct 16 23:33:36 -0500 2017
+INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.lib 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.lib 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_old.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_vivado.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -speed medium 
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.025 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.009 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.077 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.11 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.112 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.113 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.012 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.016 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.016 sec.
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.03 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     set_part xc7z020clg484-1 
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         license_isbetapart xc7z020 
+INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0.01 sec.
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.023 sec.
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.008 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command     set_part returned 0; 0.066 sec.
+INFO: [HLS 200-100] Execute     get_default_platform 
+INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command   open_solution returned 0; 0.283 sec.
+INFO: [HLS 200-100] Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.009 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.069 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.098 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.101 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.101 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [IMPL 213-8] Exporting RTL as an IP in IP-XACT.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.009 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.068 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.097 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.compgen.tcl 
+INFO: [HLS 200-100] Execute       source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-100] Execute       source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.179 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.023 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.rtl_wrap.cfg.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.tbgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.009 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.068 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.097 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.067 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.097 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.068 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.097 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.101 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.016 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.07 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.101 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.102 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.071 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.101 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.083 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.113 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.115 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.115 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.compgen.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/vector_multiplier.constraint.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/common.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/APCoreGen.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/op_simcore.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/generic/autopilot/interface.gen 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.016 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute             source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.006 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.068 sec.
+INFO: [HLS 200-100] Execute           source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.098 sec.
+INFO: [HLS 200-100] Execute         source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.099 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.1 sec.
+INFO: [HLS 200-100] Execute     source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source F:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute     source F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/.autopilot/db/global.setting.tcl 
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command   export_design returned 0; 15.516 sec.
+INFO: [HLS 200-100] Command ap_source returned 0; 15.81 sec.
+INFO: [HLS 200-100] Execute cleanup_all 
+INFO: [HLS 200-100] Command cleanup_all returned 0; 0 sec.

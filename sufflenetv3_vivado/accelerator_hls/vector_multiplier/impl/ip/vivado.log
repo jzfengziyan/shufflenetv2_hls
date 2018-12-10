@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon Oct 16 23:33:38 2017
+# Process ID: 13036
+# Current directory: F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/impl/ip/vivado.log
+# Journal file: F:/ECE527/MP4/Tutorial_Files/accelerator_hls/vector_multiplier/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2017.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 16 23:33:43 2017...
