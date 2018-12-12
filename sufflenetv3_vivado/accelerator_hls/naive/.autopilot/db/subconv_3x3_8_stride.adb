@@ -99,7 +99,7 @@
             <Obj>
               <type>1</type>
               <id>4</id>
-              <name>output_0</name>
+              <name>output_r</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -108,7 +108,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>output[0]</originalName>
+              <originalName>output</originalName>
               <rtlName/>
               <coreName>RAM</coreName>
             </Obj>
@@ -134,7 +134,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -149,7 +149,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -207,7 +207,7 @@
               <name>exitcond4</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -222,7 +222,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -250,7 +250,7 @@
               <name>co_1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -265,7 +265,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -293,7 +293,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -308,7 +308,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -337,7 +337,7 @@
               <name>tmp</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -352,7 +352,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -379,7 +379,7 @@
               <name>tmp_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -394,7 +394,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -421,7 +421,7 @@
               <name>tmp_s</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -436,7 +436,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -465,7 +465,7 @@
               <name>tmp_15_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -480,7 +480,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -507,7 +507,7 @@
               <name>tmp_2</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>423</lineNumber>
+              <lineNumber>467</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -522,7 +522,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>423</second>
+                      <second>467</second>
                     </item>
                   </second>
                 </item>
@@ -551,7 +551,7 @@
               <name>p_shl_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -566,7 +566,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -593,7 +593,7 @@
               <name>tmp_3</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -608,7 +608,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -636,7 +636,7 @@
               <name>tmp_17_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -651,7 +651,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -678,7 +678,7 @@
               <name>bias_addr</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>432</lineNumber>
+              <lineNumber>476</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -693,7 +693,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>432</second>
+                      <second>476</second>
                     </item>
                   </second>
                 </item>
@@ -722,7 +722,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>424</lineNumber>
+              <lineNumber>468</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -737,7 +737,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>424</second>
+                      <second>468</second>
                     </item>
                   </second>
                 </item>
@@ -795,7 +795,7 @@
               <name>exitcond3</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>424</lineNumber>
+              <lineNumber>468</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -810,7 +810,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>424</second>
+                      <second>468</second>
                     </item>
                   </second>
                 </item>
@@ -838,7 +838,7 @@
               <name>h_1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>424</lineNumber>
+              <lineNumber>468</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -853,7 +853,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>424</second>
+                      <second>468</second>
                     </item>
                   </second>
                 </item>
@@ -881,7 +881,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>424</lineNumber>
+              <lineNumber>468</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -896,7 +896,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>424</second>
+                      <second>468</second>
                     </item>
                   </second>
                 </item>
@@ -925,7 +925,7 @@
               <name>tmp_5</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -940,7 +940,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -968,7 +968,7 @@
               <name>tmp_2_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -983,7 +983,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1010,7 +1010,7 @@
               <name>tmp_3_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1025,7 +1025,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -1052,7 +1052,7 @@
               <name>tmp_6</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1067,7 +1067,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -1095,7 +1095,7 @@
               <name>tmp_23_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>425</lineNumber>
+              <lineNumber>469</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1110,7 +1110,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>425</second>
+                      <second>469</second>
                     </item>
                   </second>
                 </item>
@@ -1139,7 +1139,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>425</lineNumber>
+              <lineNumber>469</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1154,7 +1154,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>425</second>
+                      <second>469</second>
                     </item>
                   </second>
                 </item>
@@ -1212,7 +1212,7 @@
               <name>exitcond2</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>425</lineNumber>
+              <lineNumber>469</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1227,7 +1227,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>425</second>
+                      <second>469</second>
                     </item>
                   </second>
                 </item>
@@ -1255,7 +1255,7 @@
               <name>w_1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>425</lineNumber>
+              <lineNumber>469</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1270,7 +1270,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>425</second>
+                      <second>469</second>
                     </item>
                   </second>
                 </item>
@@ -1298,7 +1298,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>425</lineNumber>
+              <lineNumber>469</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1313,7 +1313,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>425</second>
+                      <second>469</second>
                     </item>
                   </second>
                 </item>
@@ -1342,7 +1342,7 @@
               <name>tmp_7</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1357,7 +1357,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1385,7 +1385,7 @@
               <name>tmp_5_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1400,7 +1400,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1427,7 +1427,7 @@
               <name>tmp_1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1442,7 +1442,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1470,7 +1470,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>427</lineNumber>
+              <lineNumber>471</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1485,7 +1485,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>427</second>
+                      <second>471</second>
                     </item>
                   </second>
                 </item>
@@ -1512,7 +1512,7 @@
               <name>sum</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1527,7 +1527,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1588,7 +1588,7 @@
               <name>m_cast8_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>427</lineNumber>
+              <lineNumber>471</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1603,7 +1603,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>427</second>
+                      <second>471</second>
                     </item>
                   </second>
                 </item>
@@ -1630,7 +1630,7 @@
               <name>exitcond1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>427</lineNumber>
+              <lineNumber>471</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1645,7 +1645,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>427</second>
+                      <second>471</second>
                     </item>
                   </second>
                 </item>
@@ -1673,7 +1673,7 @@
               <name>m_1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>427</lineNumber>
+              <lineNumber>471</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1688,7 +1688,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>427</second>
+                      <second>471</second>
                     </item>
                   </second>
                 </item>
@@ -1716,7 +1716,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>427</lineNumber>
+              <lineNumber>471</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1731,7 +1731,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>427</second>
+                      <second>471</second>
                     </item>
                   </second>
                 </item>
@@ -1760,7 +1760,7 @@
               <name>tmp_8_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1775,7 +1775,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1802,7 +1802,7 @@
               <name>tmp_11</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1817,7 +1817,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1845,7 +1845,7 @@
               <name>tmp_14</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1860,7 +1860,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1888,7 +1888,7 @@
               <name>tmp_15</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1903,7 +1903,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1931,7 +1931,7 @@
               <name>tmp3</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1946,7 +1946,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -1974,7 +1974,7 @@
               <name>tmp3_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -1989,7 +1989,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2016,7 +2016,7 @@
               <name>tmp_4</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2031,7 +2031,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2059,7 +2059,7 @@
               <name>tmp_7_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2074,7 +2074,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2101,7 +2101,7 @@
               <name>tmp_16</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2116,7 +2116,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2144,7 +2144,7 @@
               <name>tmp_31_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2159,7 +2159,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2188,7 +2188,7 @@
               <name>tmp_9</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2203,7 +2203,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2231,7 +2231,7 @@
               <name>tmp_9_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2246,7 +2246,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2273,7 +2273,7 @@
               <name>sel_tmp</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2288,7 +2288,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2316,7 +2316,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>428</lineNumber>
+              <lineNumber>472</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2331,7 +2331,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>428</second>
+                      <second>472</second>
                     </item>
                   </second>
                 </item>
@@ -2420,7 +2420,7 @@
               <name>n_cast6</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>428</lineNumber>
+              <lineNumber>472</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2435,7 +2435,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>428</second>
+                      <second>472</second>
                     </item>
                   </second>
                 </item>
@@ -2462,7 +2462,7 @@
               <name>exitcond</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>428</lineNumber>
+              <lineNumber>472</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2477,7 +2477,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>428</second>
+                      <second>472</second>
                     </item>
                   </second>
                 </item>
@@ -2505,7 +2505,7 @@
               <name>n_1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>428</lineNumber>
+              <lineNumber>472</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2520,7 +2520,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>428</second>
+                      <second>472</second>
                     </item>
                   </second>
                 </item>
@@ -2548,7 +2548,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>428</lineNumber>
+              <lineNumber>472</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2563,7 +2563,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>428</second>
+                      <second>472</second>
                     </item>
                   </second>
                 </item>
@@ -2589,10 +2589,10 @@
             <Obj>
               <type>0</type>
               <id>79</id>
-              <name>tmp_cast_19</name>
+              <name>tmp_cast_18</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2607,13 +2607,13 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_cast_19_fu_418_p1</rtlName>
+              <rtlName>tmp_cast_18_fu_418_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>11</bitwidth>
@@ -2634,7 +2634,7 @@
               <name>tmp_17</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2649,7 +2649,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2677,7 +2677,7 @@
               <name>tmp_32_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2692,7 +2692,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2719,7 +2719,7 @@
               <name>weight_addr</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2734,7 +2734,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2763,7 +2763,7 @@
               <name>weight_load</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2778,7 +2778,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2805,7 +2805,7 @@
               <name>p_not</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2820,7 +2820,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2848,7 +2848,7 @@
               <name>tmp4</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2863,7 +2863,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2891,7 +2891,7 @@
               <name>tmp4_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2906,7 +2906,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2933,7 +2933,7 @@
               <name>tmp_10</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2948,7 +2948,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -2976,7 +2976,7 @@
               <name>tmp_11_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -2991,7 +2991,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3018,7 +3018,7 @@
               <name>tmp_18</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3033,7 +3033,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3061,7 +3061,7 @@
               <name>tmp_33_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3076,7 +3076,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3103,7 +3103,7 @@
               <name>input_addr</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3118,7 +3118,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3147,7 +3147,7 @@
               <name>input_load</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3162,7 +3162,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3189,7 +3189,7 @@
               <name>sel_tmp1</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3204,7 +3204,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3232,7 +3232,7 @@
               <name>tmp_12</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3247,7 +3247,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
@@ -3276,7 +3276,7 @@
               <name>tmp_13</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3291,13 +3291,13 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>ShuffleNetV2_fmulcud_x_U118</rtlName>
+              <rtlName>ShuffleNetV2_fmulcud_x_U82</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3319,7 +3319,7 @@
               <name>sum_2</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>429</lineNumber>
+              <lineNumber>473</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3334,13 +3334,13 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>429</second>
+                      <second>473</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>sum</originalName>
-              <rtlName>ShuffleNetV2_faddbkb_x_U117</rtlName>
+              <rtlName>ShuffleNetV2_faddbkb_x_U81</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3362,7 +3362,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>428</lineNumber>
+              <lineNumber>472</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3377,7 +3377,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>428</second>
+                      <second>472</second>
                     </item>
                   </second>
                 </item>
@@ -3432,7 +3432,7 @@
               <name>bias_load</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>432</lineNumber>
+              <lineNumber>476</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3447,7 +3447,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>432</second>
+                      <second>476</second>
                     </item>
                   </second>
                 </item>
@@ -3474,7 +3474,7 @@
               <name>result</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>432</lineNumber>
+              <lineNumber>476</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3489,13 +3489,13 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>432</second>
+                      <second>476</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName>result</originalName>
-              <rtlName>ShuffleNetV2_faddbkb_x_U117</rtlName>
+              <rtlName>ShuffleNetV2_faddbkb_x_U81</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3517,7 +3517,7 @@
               <name>tmp_6_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3532,7 +3532,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -3559,7 +3559,7 @@
               <name>tmp_8</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3574,7 +3574,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -3602,7 +3602,7 @@
               <name>tmp_25_cast</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3617,7 +3617,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -3641,10 +3641,10 @@
             <Obj>
               <type>0</type>
               <id>106</id>
-              <name>output_0_addr</name>
+              <name>output_addr</name>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3659,7 +3659,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -3688,7 +3688,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>433</lineNumber>
+              <lineNumber>477</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3703,7 +3703,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>433</second>
+                      <second>477</second>
                     </item>
                   </second>
                 </item>
@@ -3731,7 +3731,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>425</lineNumber>
+              <lineNumber>469</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3746,7 +3746,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>425</second>
+                      <second>469</second>
                     </item>
                   </second>
                 </item>
@@ -3829,7 +3829,7 @@
               <name/>
               <fileName>accelerator_hls/components.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>438</lineNumber>
+              <lineNumber>482</lineNumber>
               <contextFuncName>subconv_3x3_8_stride_no_relu</contextFuncName>
               <inlineStackInfo>
                 <count>1</count>
@@ -3844,7 +3844,7 @@
                         <first>accelerator_hls/components.cpp</first>
                         <second>subconv_3x3_8_stride_no_relu</second>
                       </first>
-                      <second>438</second>
+                      <second>482</second>
                     </item>
                   </second>
                 </item>
@@ -7327,7 +7327,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>ShuffleNetV2_faddbkb_x_U117 (ShuffleNetV2_faddbkb)</first>
+          <first>ShuffleNetV2_faddbkb_x_U81 (ShuffleNetV2_faddbkb)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -7346,7 +7346,7 @@
           </second>
         </item>
         <item>
-          <first>ShuffleNetV2_fmulcud_x_U118 (ShuffleNetV2_fmulcud)</first>
+          <first>ShuffleNetV2_fmulcud_x_U82 (ShuffleNetV2_fmulcud)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -8894,7 +8894,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>ShuffleNetV2_faddbkb_x_U117 (ShuffleNetV2_faddbkb)</first>
+          <first>ShuffleNetV2_faddbkb_x_U81 (ShuffleNetV2_faddbkb)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -8903,7 +8903,7 @@
           </second>
         </item>
         <item>
-          <first>ShuffleNetV2_fmulcud_x_U118 (ShuffleNetV2_fmulcud)</first>
+          <first>ShuffleNetV2_fmulcud_x_U82 (ShuffleNetV2_fmulcud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -10645,7 +10645,7 @@
         </second>
       </item>
       <item>
-        <first>output_0_addr_gep_fu_85</first>
+        <first>output_addr_gep_fu_85</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -10989,7 +10989,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_cast_19_fu_418</first>
+        <first>tmp_cast_18_fu_418</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -11114,7 +11114,7 @@
       </item>
       <item>
         <first>
-          <first>output_0</first>
+          <first>output_r</first>
           <second>0</second>
         </first>
         <second>
@@ -11860,7 +11860,7 @@
         </second>
       </item>
       <item>
-        <first>output_0(p0)</first>
+        <first>output_r(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

@@ -15,7 +15,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>input_0</name>
+						<name>input_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -24,7 +24,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>input[0]</originalName>
+						<originalName>input</originalName>
 						<rtlName></rtlName>
 						<coreName>RAM</coreName>
 					</Obj>
@@ -99,7 +99,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>output_0</name>
+						<name>output_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -108,7 +108,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output[0]</originalName>
+						<originalName>output</originalName>
 						<rtlName></rtlName>
 						<coreName>RAM</coreName>
 					</Obj>
@@ -134,7 +134,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -149,7 +149,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -207,7 +207,7 @@
 						<name>exitcond4</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -222,7 +222,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -250,7 +250,7 @@
 						<name>co_2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -265,7 +265,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -293,7 +293,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -308,7 +308,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -337,7 +337,7 @@
 						<name>tmp</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -352,7 +352,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -379,7 +379,7 @@
 						<name>tmp_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -394,7 +394,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -421,7 +421,7 @@
 						<name>tmp_s</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -436,7 +436,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -465,7 +465,7 @@
 						<name>tmp_35_cast2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -480,7 +480,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -507,7 +507,7 @@
 						<name>tmp_35_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -522,7 +522,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -549,7 +549,7 @@
 						<name>tmp_19</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>276</lineNumber>
+						<lineNumber>298</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -564,7 +564,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>276</second>
+										<second>298</second>
 									</item>
 								</second>
 							</item>
@@ -593,7 +593,7 @@
 						<name>p_shl_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -608,7 +608,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -635,7 +635,7 @@
 						<name>tmp_20</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -650,7 +650,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -678,7 +678,7 @@
 						<name>tmp_37_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -693,7 +693,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -720,7 +720,7 @@
 						<name>bias_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>285</lineNumber>
+						<lineNumber>307</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -735,7 +735,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>285</second>
+										<second>307</second>
 									</item>
 								</second>
 							</item>
@@ -764,7 +764,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>277</lineNumber>
+						<lineNumber>299</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -779,7 +779,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>277</second>
+										<second>299</second>
 									</item>
 								</second>
 							</item>
@@ -837,7 +837,7 @@
 						<name>h_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>277</lineNumber>
+						<lineNumber>299</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -852,7 +852,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>277</second>
+										<second>299</second>
 									</item>
 								</second>
 							</item>
@@ -879,7 +879,7 @@
 						<name>exitcond3</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>277</lineNumber>
+						<lineNumber>299</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -894,7 +894,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>277</second>
+										<second>299</second>
 									</item>
 								</second>
 							</item>
@@ -922,7 +922,7 @@
 						<name>h_2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>277</lineNumber>
+						<lineNumber>299</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -937,7 +937,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>277</second>
+										<second>299</second>
 									</item>
 								</second>
 							</item>
@@ -965,7 +965,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>277</lineNumber>
+						<lineNumber>299</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -980,7 +980,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>277</second>
+										<second>299</second>
 									</item>
 								</second>
 							</item>
@@ -1006,10 +1006,10 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_cast_21</name>
+						<name>tmp_cast_20</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1024,7 +1024,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -1051,7 +1051,7 @@
 						<name>tmp_22</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1066,7 +1066,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -1094,7 +1094,7 @@
 						<name>tmp_40_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1109,7 +1109,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -1138,7 +1138,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1153,7 +1153,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -1211,7 +1211,7 @@
 						<name>w_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1226,7 +1226,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -1253,7 +1253,7 @@
 						<name>exitcond2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1268,7 +1268,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -1296,7 +1296,7 @@
 						<name>w_2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1311,7 +1311,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -1339,7 +1339,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1354,7 +1354,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -1383,7 +1383,7 @@
 						<name>tmp_23</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1398,7 +1398,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1426,7 +1426,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>280</lineNumber>
+						<lineNumber>302</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1441,7 +1441,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>280</second>
+										<second>302</second>
 									</item>
 								</second>
 							</item>
@@ -1468,7 +1468,7 @@
 						<name>sum</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1483,7 +1483,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1544,7 +1544,7 @@
 						<name>m_cast_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>280</lineNumber>
+						<lineNumber>302</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1559,7 +1559,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>280</second>
+										<second>302</second>
 									</item>
 								</second>
 							</item>
@@ -1586,7 +1586,7 @@
 						<name>exitcond1</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>280</lineNumber>
+						<lineNumber>302</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1601,7 +1601,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>280</second>
+										<second>302</second>
 									</item>
 								</second>
 							</item>
@@ -1629,7 +1629,7 @@
 						<name>m_2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>280</lineNumber>
+						<lineNumber>302</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1644,7 +1644,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>280</second>
+										<second>302</second>
 									</item>
 								</second>
 							</item>
@@ -1672,7 +1672,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>280</lineNumber>
+						<lineNumber>302</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1687,7 +1687,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>280</second>
+										<second>302</second>
 									</item>
 								</second>
 							</item>
@@ -1716,7 +1716,7 @@
 						<name>tmp_15_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1731,7 +1731,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1758,7 +1758,7 @@
 						<name>tmp_27</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1773,7 +1773,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1801,7 +1801,7 @@
 						<name>tmp_15</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1816,7 +1816,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1844,7 +1844,7 @@
 						<name>tmp_28</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1859,7 +1859,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1887,7 +1887,7 @@
 						<name>tmp_16</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1902,7 +1902,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1930,7 +1930,7 @@
 						<name>tmp_16_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1945,7 +1945,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -1972,7 +1972,7 @@
 						<name>tmp_17</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1987,7 +1987,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2015,7 +2015,7 @@
 						<name>tmp4</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2030,7 +2030,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2058,7 +2058,7 @@
 						<name>tmp4_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2073,7 +2073,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2100,7 +2100,7 @@
 						<name>tmp_18</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2115,7 +2115,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2143,7 +2143,7 @@
 						<name>tmp_19_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2158,7 +2158,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2185,7 +2185,7 @@
 						<name>tmp_29</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2200,7 +2200,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2228,7 +2228,7 @@
 						<name>tmp_47_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2243,7 +2243,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2272,7 +2272,7 @@
 						<name>tmp_30</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2287,7 +2287,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2317,7 +2317,7 @@
 						<name>icmp</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2332,7 +2332,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2360,7 +2360,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>281</lineNumber>
+						<lineNumber>303</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2375,7 +2375,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>281</second>
+										<second>303</second>
 									</item>
 								</second>
 							</item>
@@ -2464,7 +2464,7 @@
 						<name>n_cast9</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>281</lineNumber>
+						<lineNumber>303</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2479,7 +2479,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>281</second>
+										<second>303</second>
 									</item>
 								</second>
 							</item>
@@ -2506,7 +2506,7 @@
 						<name>exitcond</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>281</lineNumber>
+						<lineNumber>303</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2521,7 +2521,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>281</second>
+										<second>303</second>
 									</item>
 								</second>
 							</item>
@@ -2549,7 +2549,7 @@
 						<name>n_2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>281</lineNumber>
+						<lineNumber>303</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2564,7 +2564,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>281</second>
+										<second>303</second>
 									</item>
 								</second>
 							</item>
@@ -2592,7 +2592,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>281</lineNumber>
+						<lineNumber>303</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2607,7 +2607,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>281</second>
+										<second>303</second>
 									</item>
 								</second>
 							</item>
@@ -2636,7 +2636,7 @@
 						<name>tmp_20_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2651,7 +2651,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2678,7 +2678,7 @@
 						<name>tmp_31</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2693,7 +2693,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2721,7 +2721,7 @@
 						<name>tmp_48_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2736,7 +2736,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2763,7 +2763,7 @@
 						<name>weight_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2778,7 +2778,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2807,7 +2807,7 @@
 						<name>weight_load</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2822,7 +2822,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2849,7 +2849,7 @@
 						<name>tmp5</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2864,7 +2864,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2892,7 +2892,7 @@
 						<name>tmp5_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2907,7 +2907,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2934,7 +2934,7 @@
 						<name>tmp_21</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2949,7 +2949,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -2977,7 +2977,7 @@
 						<name>tmp_32</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2992,7 +2992,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3022,7 +3022,7 @@
 						<name>icmp5</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3037,7 +3037,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3065,7 +3065,7 @@
 						<name>tmp_23_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3080,7 +3080,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3107,7 +3107,7 @@
 						<name>tmp_33</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3122,7 +3122,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3150,7 +3150,7 @@
 						<name>tmp_49_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3165,7 +3165,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3189,10 +3189,10 @@
 					<Obj>
 						<type>0</type>
 						<id>93</id>
-						<name>input_0_addr</name>
+						<name>input_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3207,7 +3207,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3233,10 +3233,10 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>input_0_load</name>
+						<name>input_load</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3251,7 +3251,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3278,7 +3278,7 @@
 						<name>notlhs</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3293,7 +3293,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3321,7 +3321,7 @@
 						<name>tmp6</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3336,7 +3336,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3364,7 +3364,7 @@
 						<name>tmp7</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3379,7 +3379,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3407,7 +3407,7 @@
 						<name>sel_tmp2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3422,7 +3422,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3450,7 +3450,7 @@
 						<name>tmp_25</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3465,7 +3465,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3494,7 +3494,7 @@
 						<name>tmp_26</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3509,7 +3509,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3537,7 +3537,7 @@
 						<name>sum_3</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>282</lineNumber>
+						<lineNumber>304</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3552,7 +3552,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>282</second>
+										<second>304</second>
 									</item>
 								</second>
 							</item>
@@ -3580,7 +3580,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>281</lineNumber>
+						<lineNumber>303</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3595,7 +3595,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>281</second>
+										<second>303</second>
 									</item>
 								</second>
 							</item>
@@ -3650,7 +3650,7 @@
 						<name>bias_load</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>285</lineNumber>
+						<lineNumber>307</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3665,7 +3665,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>285</second>
+										<second>307</second>
 									</item>
 								</second>
 							</item>
@@ -3692,7 +3692,7 @@
 						<name>result</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>285</lineNumber>
+						<lineNumber>307</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3707,7 +3707,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>285</second>
+										<second>307</second>
 									</item>
 								</second>
 							</item>
@@ -3735,7 +3735,7 @@
 						<name>tmp_14_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3750,7 +3750,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -3777,7 +3777,7 @@
 						<name>tmp_24</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3792,7 +3792,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -3820,7 +3820,7 @@
 						<name>tmp_41_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3835,7 +3835,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -3859,10 +3859,10 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>output_0_addr</name>
+						<name>output_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3877,7 +3877,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -3906,7 +3906,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>286</lineNumber>
+						<lineNumber>308</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3921,7 +3921,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>286</second>
+										<second>308</second>
 									</item>
 								</second>
 							</item>
@@ -3949,7 +3949,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>278</lineNumber>
+						<lineNumber>300</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3964,7 +3964,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>278</second>
+										<second>300</second>
 									</item>
 								</second>
 							</item>
@@ -4047,7 +4047,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>290</lineNumber>
+						<lineNumber>312</lineNumber>
 						<contextFuncName>subconv_3x3_8_no_relu</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4062,7 +4062,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>subconv_3x3_8_no_relu</second>
 										</first>
-										<second>290</second>
+										<second>312</second>
 									</item>
 								</second>
 							</item>
@@ -9223,7 +9223,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_0_addr_gep_fu_77</first>
+			<first>input_addr_gep_fu_77</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -9287,7 +9287,7 @@
 			</second>
 		</item>
 		<item>
-			<first>output_0_addr_gep_fu_89</first>
+			<first>output_addr_gep_fu_89</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -9631,7 +9631,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_cast_21_fu_267</first>
+			<first>tmp_cast_20_fu_267</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -9752,7 +9752,7 @@
 		</item>
 		<item>
 			<first>
-				<first>input_0</first>
+				<first>input_r</first>
 				<second>0</second>
 			</first>
 			<second>
@@ -9764,7 +9764,7 @@
 		</item>
 		<item>
 			<first>
-				<first>output_0</first>
+				<first>output_r</first>
 				<second>0</second>
 			</first>
 			<second>
@@ -10162,7 +10162,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_0_addr_reg_650</first>
+			<first>input_addr_reg_650</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10526,7 +10526,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_0(p0)</first>
+			<first>input_r(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10542,7 +10542,7 @@
 			</second>
 		</item>
 		<item>
-			<first>output_0(p0)</first>
+			<first>output_r(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

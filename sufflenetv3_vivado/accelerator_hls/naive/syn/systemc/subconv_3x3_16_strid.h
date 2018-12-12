@@ -33,10 +33,10 @@ struct subconv_3x3_16_strid : public sc_module {
     sc_out< sc_lv<6> > bias_address0;
     sc_out< sc_logic > bias_ce0;
     sc_in< sc_lv<32> > bias_q0;
-    sc_out< sc_lv<12> > output_0_address0;
-    sc_out< sc_logic > output_0_ce0;
-    sc_out< sc_logic > output_0_we0;
-    sc_out< sc_lv<32> > output_0_d0;
+    sc_out< sc_lv<12> > output_r_address0;
+    sc_out< sc_logic > output_r_ce0;
+    sc_out< sc_logic > output_r_we0;
+    sc_out< sc_lv<32> > output_r_d0;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -48,8 +48,8 @@ struct subconv_3x3_16_strid : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    ShuffleNetV2_faddbkb<1,5,32,32,32>* ShuffleNetV2_faddbkb_x_U66;
-    ShuffleNetV2_fmulcud<1,4,32,32,32>* ShuffleNetV2_fmulcud_x_U67;
+    ShuffleNetV2_faddbkb<1,5,32,32,32>* ShuffleNetV2_faddbkb_x_U48;
+    ShuffleNetV2_fmulcud<1,4,32,32,32>* ShuffleNetV2_fmulcud_x_U49;
     sc_signal< sc_lv<24> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<6> > co_5_fu_197_p2;
@@ -66,8 +66,8 @@ struct subconv_3x3_16_strid : public sc_module {
     sc_signal< sc_lv<4> > h_5_fu_264_p2;
     sc_signal< sc_lv<4> > h_5_reg_527;
     sc_signal< sc_logic > ap_CS_fsm_state3;
-    sc_signal< sc_lv<5> > tmp_cast_36_fu_276_p1;
-    sc_signal< sc_lv<5> > tmp_cast_36_reg_532;
+    sc_signal< sc_lv<5> > tmp_cast_35_fu_276_p1;
+    sc_signal< sc_lv<5> > tmp_cast_35_reg_532;
     sc_signal< sc_lv<1> > exitcond3_fu_258_p2;
     sc_signal< sc_lv<13> > tmp_95_cast_fu_289_p3;
     sc_signal< sc_lv<13> > tmp_95_cast_reg_538;
@@ -258,10 +258,10 @@ struct subconv_3x3_16_strid : public sc_module {
     void thread_m_cast8_cast_fu_325_p1();
     void thread_n_5_fu_428_p2();
     void thread_n_cast6_fu_418_p1();
-    void thread_output_0_address0();
-    void thread_output_0_ce0();
-    void thread_output_0_d0();
-    void thread_output_0_we0();
+    void thread_output_r_address0();
+    void thread_output_r_ce0();
+    void thread_output_r_d0();
+    void thread_output_r_we0();
     void thread_p_not_fu_443_p2();
     void thread_p_shl_cast_fu_232_p1();
     void thread_sel_tmp1_fu_480_p2();
@@ -304,7 +304,7 @@ struct subconv_3x3_16_strid : public sc_module {
     void thread_tmp_91_cast_fu_254_p1();
     void thread_tmp_95_cast_fu_289_p3();
     void thread_tmp_97_cast_fu_492_p1();
-    void thread_tmp_cast_36_fu_276_p1();
+    void thread_tmp_cast_35_fu_276_p1();
     void thread_tmp_cast_fu_208_p1();
     void thread_tmp_fu_203_p1();
     void thread_tmp_s_fu_212_p3();

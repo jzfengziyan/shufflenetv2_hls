@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'subconv_3x3_4_no_rel'
 ================================================================
-* Date:           Mon Dec 10 14:57:24 2018
+* Date:           Tue Dec 11 23:30:59 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -74,14 +74,14 @@
 
 + Detail: 
     * Instance: 
-    +-----------------------------+----------------------+---------+-------+-----+-----+
-    |           Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
-    +-----------------------------+----------------------+---------+-------+-----+-----+
-    |ShuffleNetV2_faddbkb_x_U146  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
-    |ShuffleNetV2_fmulcud_x_U147  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
-    +-----------------------------+----------------------+---------+-------+-----+-----+
-    |Total                        |                      |        0|      5|  348|  711|
-    +-----------------------------+----------------------+---------+-------+-----+-----+
+    +----------------------------+----------------------+---------+-------+-----+-----+
+    |          Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +----------------------------+----------------------+---------+-------+-----+-----+
+    |ShuffleNetV2_faddbkb_x_U98  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
+    |ShuffleNetV2_fmulcud_x_U99  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
+    +----------------------------+----------------------+---------+-------+-----+-----+
+    |Total                       |                      |        0|      5|  348|  711|
+    +----------------------------+----------------------+---------+-------+-----+-----+
 
     * DSP48: 
     N/A
@@ -208,18 +208,18 @@
 |ap_done            | out |    1| ap_ctrl_hs | subconv_3x3_4_no_rel | return value |
 |ap_idle            | out |    1| ap_ctrl_hs | subconv_3x3_4_no_rel | return value |
 |ap_ready           | out |    1| ap_ctrl_hs | subconv_3x3_4_no_rel | return value |
-|input_0_address0   | out |   11|  ap_memory |        input_0       |     array    |
-|input_0_ce0        | out |    1|  ap_memory |        input_0       |     array    |
-|input_0_q0         |  in |   32|  ap_memory |        input_0       |     array    |
+|input_r_address0   | out |   11|  ap_memory |        input_r       |     array    |
+|input_r_ce0        | out |    1|  ap_memory |        input_r       |     array    |
+|input_r_q0         |  in |   32|  ap_memory |        input_r       |     array    |
 |weight_address0    | out |   10|  ap_memory |        weight        |     array    |
 |weight_ce0         | out |    1|  ap_memory |        weight        |     array    |
 |weight_q0          |  in |   32|  ap_memory |        weight        |     array    |
 |bias_address0      | out |    7|  ap_memory |         bias         |     array    |
 |bias_ce0           | out |    1|  ap_memory |         bias         |     array    |
 |bias_q0            |  in |   32|  ap_memory |         bias         |     array    |
-|output_0_address0  | out |   11|  ap_memory |       output_0       |     array    |
-|output_0_ce0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_we0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_d0        | out |   32|  ap_memory |       output_0       |     array    |
+|output_r_address0  | out |   11|  ap_memory |       output_r       |     array    |
+|output_r_ce0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_we0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_d0        | out |   32|  ap_memory |       output_r       |     array    |
 +-------------------+-----+-----+------------+----------------------+--------------+
 

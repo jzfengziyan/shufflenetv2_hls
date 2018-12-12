@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'conv_last'
 ================================================================
-* Date:           Mon Dec 10 14:57:14 2018
+* Date:           Tue Dec 11 23:30:32 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -130,86 +130,86 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
  <State 1>: 1.59ns
-ST_1: StgValue_24 (5)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:553
+ST_1: StgValue_24 (5)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:619
 :0  br label %.loopexit
 
 
  <State 2>: 3.02ns
 ST_2: co (7)  [1/1] 0.00ns
-.loopexit:0  %co = phi i10 [ 0, %0 ], [ %co_16, %.loopexit.loopexit ]
+.loopexit:0  %co = phi i10 [ 0, %0 ], [ %co_22, %.loopexit.loopexit ]
 
-ST_2: exitcond3 (8)  [1/1] 3.02ns  loc: accelerator_hls/components.cpp:553
+ST_2: exitcond3 (8)  [1/1] 3.02ns  loc: accelerator_hls/components.cpp:619
 .loopexit:1  %exitcond3 = icmp eq i10 %co, -512
 
 ST_2: empty (9)  [1/1] 0.00ns
 .loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)
 
-ST_2: co_16 (10)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:553
-.loopexit:3  %co_16 = add i10 %co, 1
+ST_2: co_22 (10)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:619
+.loopexit:3  %co_22 = add i10 %co, 1
 
-ST_2: StgValue_29 (11)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:553
+ST_2: StgValue_29 (11)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:619
 .loopexit:4  br i1 %exitcond3, label %3, label %.preheader5.preheader
 
-ST_2: tmp (13)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
+ST_2: tmp (13)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
 .preheader5.preheader:0  %tmp = zext i10 %co to i64
 
-ST_2: tmp_s (14)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:553
+ST_2: tmp_s (14)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:619
 .preheader5.preheader:1  %tmp_s = call i18 @_ssdm_op_BitConcatenate.i18.i10.i8(i10 %co, i8 0)
 
-ST_2: tmp_156 (15)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:553
-.preheader5.preheader:2  %tmp_156 = call i16 @_ssdm_op_BitConcatenate.i16.i10.i6(i10 %co, i6 0)
+ST_2: tmp_186 (15)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:619
+.preheader5.preheader:2  %tmp_186 = call i16 @_ssdm_op_BitConcatenate.i16.i10.i6(i10 %co, i6 0)
 
-ST_2: p_shl1_cast (16)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-.preheader5.preheader:3  %p_shl1_cast = zext i16 %tmp_156 to i18
+ST_2: p_shl1_cast (16)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+.preheader5.preheader:3  %p_shl1_cast = zext i16 %tmp_186 to i18
 
-ST_2: tmp_157 (17)  [1/1] 2.47ns  loc: accelerator_hls/components.cpp:558
-.preheader5.preheader:4  %tmp_157 = sub i18 %tmp_s, %p_shl1_cast
+ST_2: tmp_187 (17)  [1/1] 2.47ns  loc: accelerator_hls/components.cpp:624
+.preheader5.preheader:4  %tmp_187 = sub i18 %tmp_s, %p_shl1_cast
 
-ST_2: tmp_158 (18)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:553
-.preheader5.preheader:5  %tmp_158 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %co, i2 0)
+ST_2: tmp_188 (18)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:619
+.preheader5.preheader:5  %tmp_188 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %co, i2 0)
 
-ST_2: tmp_258_cast (19)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:560
-.preheader5.preheader:6  %tmp_258_cast = zext i12 %tmp_158 to i13
+ST_2: tmp_330_cast (19)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:626
+.preheader5.preheader:6  %tmp_330_cast = zext i12 %tmp_188 to i13
 
-ST_2: bias_addr (20)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:560
+ST_2: bias_addr (20)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:626
 .preheader5.preheader:7  %bias_addr = getelementptr [512 x float]* %bias, i64 0, i64 %tmp
 
-ST_2: StgValue_38 (21)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:554
+ST_2: StgValue_38 (21)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:620
 .preheader5.preheader:8  br label %.preheader5
 
-ST_2: StgValue_39 (90)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:565
+ST_2: StgValue_39 (90)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:631
 :0  ret void
 
 
  <State 3>: 2.33ns
 ST_3: h (23)  [1/1] 0.00ns
-.preheader5:0  %h = phi i3 [ 0, %.preheader5.preheader ], [ %h_16, %.preheader5.loopexit ]
+.preheader5:0  %h = phi i3 [ 0, %.preheader5.preheader ], [ %h_22, %.preheader5.loopexit ]
 
-ST_3: exitcond2 (24)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:554
+ST_3: exitcond2 (24)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:620
 .preheader5:1  %exitcond2 = icmp eq i3 %h, -4
 
-ST_3: empty_69 (25)  [1/1] 0.00ns
-.preheader5:2  %empty_69 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+ST_3: empty_80 (25)  [1/1] 0.00ns
+.preheader5:2  %empty_80 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
-ST_3: h_16 (26)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:554
-.preheader5:3  %h_16 = add i3 %h, 1
+ST_3: h_22 (26)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:620
+.preheader5:3  %h_22 = add i3 %h, 1
 
-ST_3: StgValue_44 (27)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:554
+ST_3: StgValue_44 (27)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:620
 .preheader5:4  br i1 %exitcond2, label %.loopexit.loopexit, label %.preheader4.preheader
 
-ST_3: tmp_cast3 (29)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561
+ST_3: tmp_cast3 (29)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627
 .preheader4.preheader:0  %tmp_cast3 = zext i3 %h to i11
 
-ST_3: tmp_cast (30)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561
+ST_3: tmp_cast (30)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627
 .preheader4.preheader:1  %tmp_cast = zext i3 %h to i13
 
-ST_3: tmp_159 (31)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:561
-.preheader4.preheader:2  %tmp_159 = add i13 %tmp_cast, %tmp_258_cast
+ST_3: tmp_189 (31)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:627
+.preheader4.preheader:2  %tmp_189 = add i13 %tmp_cast, %tmp_330_cast
 
-ST_3: tmp_261_cast (32)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:555
-.preheader4.preheader:3  %tmp_261_cast = call i15 @_ssdm_op_BitConcatenate.i15.i13.i2(i13 %tmp_159, i2 0)
+ST_3: tmp_333_cast (32)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:621
+.preheader4.preheader:3  %tmp_333_cast = call i15 @_ssdm_op_BitConcatenate.i15.i13.i2(i13 %tmp_189, i2 0)
 
-ST_3: StgValue_49 (33)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:555
+ST_3: StgValue_49 (33)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:621
 .preheader4.preheader:4  br label %.preheader4
 
 ST_3: StgValue_50 (88)  [1/1] 0.00ns
@@ -218,36 +218,36 @@ ST_3: StgValue_50 (88)  [1/1] 0.00ns
 
  <State 4>: 2.35ns
 ST_4: w (35)  [1/1] 0.00ns
-.preheader4:0  %w = phi i3 [ %w_16, %2 ], [ 0, %.preheader4.preheader ]
+.preheader4:0  %w = phi i3 [ %w_22, %2 ], [ 0, %.preheader4.preheader ]
 
-ST_4: exitcond1 (36)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:555
+ST_4: exitcond1 (36)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:621
 .preheader4:1  %exitcond1 = icmp eq i3 %w, -4
 
-ST_4: empty_70 (37)  [1/1] 0.00ns
-.preheader4:2  %empty_70 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+ST_4: empty_81 (37)  [1/1] 0.00ns
+.preheader4:2  %empty_81 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
-ST_4: w_16 (38)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:555
-.preheader4:3  %w_16 = add i3 %w, 1
+ST_4: w_22 (38)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:621
+.preheader4:3  %w_22 = add i3 %w, 1
 
-ST_4: StgValue_55 (39)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:555
+ST_4: StgValue_55 (39)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:621
 .preheader4:4  br i1 %exitcond1, label %.preheader5.loopexit, label %.preheader.preheader
 
-ST_4: tmp_100_cast2 (41)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561
-.preheader.preheader:0  %tmp_100_cast2 = zext i3 %w to i13
+ST_4: tmp_106_cast2 (41)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627
+.preheader.preheader:0  %tmp_106_cast2 = zext i3 %w to i13
 
-ST_4: tmp_100_cast (42)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561
-.preheader.preheader:1  %tmp_100_cast = zext i3 %w to i15
+ST_4: tmp_106_cast (42)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627
+.preheader.preheader:1  %tmp_106_cast = zext i3 %w to i15
 
-ST_4: tmp_160 (43)  [1/1] 2.35ns  loc: accelerator_hls/components.cpp:561
-.preheader.preheader:2  %tmp_160 = add i15 %tmp_261_cast, %tmp_100_cast
+ST_4: tmp_190 (43)  [1/1] 2.35ns  loc: accelerator_hls/components.cpp:627
+.preheader.preheader:2  %tmp_190 = add i15 %tmp_333_cast, %tmp_106_cast
 
-ST_4: tmp_262_cast (44)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561
-.preheader.preheader:3  %tmp_262_cast = zext i15 %tmp_160 to i64
+ST_4: tmp_334_cast (44)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627
+.preheader.preheader:3  %tmp_334_cast = zext i15 %tmp_190 to i64
 
-ST_4: output_addr (45)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561
-.preheader.preheader:4  %output_addr = getelementptr [8192 x float]* %output_r, i64 0, i64 %tmp_262_cast
+ST_4: output_addr (45)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627
+.preheader.preheader:4  %output_addr = getelementptr [8192 x float]* %output_r, i64 0, i64 %tmp_334_cast
 
-ST_4: StgValue_61 (46)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:557
+ST_4: StgValue_61 (46)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:623
 .preheader.preheader:5  br label %.preheader
 
 ST_4: StgValue_62 (86)  [1/1] 0.00ns
@@ -261,181 +261,181 @@ ST_5: sum (48)  [1/1] 0.00ns
 ST_5: ci (49)  [1/1] 0.00ns
 .preheader:1  %ci = phi i8 [ %ci_7, %1 ], [ 0, %.preheader.preheader ]
 
-ST_5: exitcond (50)  [1/1] 2.91ns  loc: accelerator_hls/components.cpp:557
+ST_5: exitcond (50)  [1/1] 2.91ns  loc: accelerator_hls/components.cpp:623
 .preheader:2  %exitcond = icmp eq i8 %ci, -64
 
-ST_5: empty_71 (51)  [1/1] 0.00ns
-.preheader:3  %empty_71 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 192, i64 192, i64 192)
+ST_5: empty_82 (51)  [1/1] 0.00ns
+.preheader:3  %empty_82 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 192, i64 192, i64 192)
 
-ST_5: ci_7 (52)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:557
+ST_5: ci_7 (52)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:623
 .preheader:4  %ci_7 = add i8 %ci, 1
 
-ST_5: StgValue_68 (53)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:557
+ST_5: StgValue_68 (53)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:623
 .preheader:5  br i1 %exitcond, label %2, label %1
 
-ST_5: tmp_101_cast (55)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:0  %tmp_101_cast = zext i8 %ci to i18
+ST_5: tmp_107_cast (55)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:0  %tmp_107_cast = zext i8 %ci to i18
 
-ST_5: tmp_161 (56)  [1/1] 2.47ns  loc: accelerator_hls/components.cpp:558
-:1  %tmp_161 = add i18 %tmp_101_cast, %tmp_157
+ST_5: tmp_191 (56)  [1/1] 2.47ns  loc: accelerator_hls/components.cpp:624
+:1  %tmp_191 = add i18 %tmp_107_cast, %tmp_187
 
-ST_5: tmp_263_cast (57)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:2  %tmp_263_cast = sext i18 %tmp_161 to i64
+ST_5: tmp_335_cast (57)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:2  %tmp_335_cast = sext i18 %tmp_191 to i64
 
-ST_5: weight_addr (58)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:3  %weight_addr = getelementptr [98304 x float]* %weight, i64 0, i64 %tmp_263_cast
+ST_5: weight_addr (58)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:3  %weight_addr = getelementptr [98304 x float]* %weight, i64 0, i64 %tmp_335_cast
 
-ST_5: tmp_162 (59)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:557
-:4  %tmp_162 = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %ci, i2 0)
+ST_5: tmp_192 (59)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:623
+:4  %tmp_192 = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %ci, i2 0)
 
-ST_5: tmp_265_cast (60)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:5  %tmp_265_cast = zext i10 %tmp_162 to i11
+ST_5: tmp_337_cast (60)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:5  %tmp_337_cast = zext i10 %tmp_192 to i11
 
-ST_5: tmp_163 (61)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:558
-:6  %tmp_163 = add i11 %tmp_cast3, %tmp_265_cast
+ST_5: tmp_193 (61)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:624
+:6  %tmp_193 = add i11 %tmp_cast3, %tmp_337_cast
 
-ST_5: tmp_268_cast (62)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:7  %tmp_268_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_163, i2 0)
+ST_5: tmp_340_cast (62)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:7  %tmp_340_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_193, i2 0)
 
-ST_5: tmp_164 (63)  [1/1] 2.34ns  loc: accelerator_hls/components.cpp:558
-:8  %tmp_164 = add i13 %tmp_100_cast2, %tmp_268_cast
+ST_5: tmp_194 (63)  [1/1] 2.34ns  loc: accelerator_hls/components.cpp:624
+:8  %tmp_194 = add i13 %tmp_106_cast2, %tmp_340_cast
 
-ST_5: tmp_269_cast (64)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:9  %tmp_269_cast = zext i13 %tmp_164 to i64
+ST_5: tmp_341_cast (64)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:9  %tmp_341_cast = zext i13 %tmp_194 to i64
 
-ST_5: shuffleunit2_2_outpu (65)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:558
-:10  %shuffleunit2_2_outpu = getelementptr [3072 x float]* @shuffleunit2_2_outpu, i64 0, i64 %tmp_269_cast
+ST_5: shuffleunit2_2_outpu (65)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:624
+:10  %shuffleunit2_2_outpu = getelementptr [3072 x float]* @shuffleunit2_2_outpu, i64 0, i64 %tmp_341_cast
 
-ST_5: weight_load (66)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:558
+ST_5: weight_load (66)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:624
 :11  %weight_load = load float* %weight_addr, align 4
 
-ST_5: shuffleunit2_2_outpu_1 (67)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:558
+ST_5: shuffleunit2_2_outpu_1 (67)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:624
 :12  %shuffleunit2_2_outpu_1 = load float* %shuffleunit2_2_outpu, align 4
 
-ST_5: bias_load (72)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:560
+ST_5: bias_load (72)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:626
 :0  %bias_load = load float* %bias_addr, align 4
 
 
  <State 6>: 3.25ns
-ST_6: weight_load (66)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:558
+ST_6: weight_load (66)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:624
 :11  %weight_load = load float* %weight_addr, align 4
 
-ST_6: shuffleunit2_2_outpu_1 (67)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:558
+ST_6: shuffleunit2_2_outpu_1 (67)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:624
 :12  %shuffleunit2_2_outpu_1 = load float* %shuffleunit2_2_outpu, align 4
 
 
  <State 7>: 5.70ns
-ST_7: tmp_102 (68)  [4/4] 5.70ns  loc: accelerator_hls/components.cpp:558
-:13  %tmp_102 = fmul float %weight_load, %shuffleunit2_2_outpu_1
+ST_7: tmp_108 (68)  [4/4] 5.70ns  loc: accelerator_hls/components.cpp:624
+:13  %tmp_108 = fmul float %weight_load, %shuffleunit2_2_outpu_1
 
 
  <State 8>: 5.70ns
-ST_8: tmp_102 (68)  [3/4] 5.70ns  loc: accelerator_hls/components.cpp:558
-:13  %tmp_102 = fmul float %weight_load, %shuffleunit2_2_outpu_1
+ST_8: tmp_108 (68)  [3/4] 5.70ns  loc: accelerator_hls/components.cpp:624
+:13  %tmp_108 = fmul float %weight_load, %shuffleunit2_2_outpu_1
 
 
  <State 9>: 5.70ns
-ST_9: tmp_102 (68)  [2/4] 5.70ns  loc: accelerator_hls/components.cpp:558
-:13  %tmp_102 = fmul float %weight_load, %shuffleunit2_2_outpu_1
+ST_9: tmp_108 (68)  [2/4] 5.70ns  loc: accelerator_hls/components.cpp:624
+:13  %tmp_108 = fmul float %weight_load, %shuffleunit2_2_outpu_1
 
 
  <State 10>: 5.70ns
-ST_10: tmp_102 (68)  [1/4] 5.70ns  loc: accelerator_hls/components.cpp:558
-:13  %tmp_102 = fmul float %weight_load, %shuffleunit2_2_outpu_1
+ST_10: tmp_108 (68)  [1/4] 5.70ns  loc: accelerator_hls/components.cpp:624
+:13  %tmp_108 = fmul float %weight_load, %shuffleunit2_2_outpu_1
 
 
  <State 11>: 7.26ns
-ST_11: sum_14 (69)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:558
-:14  %sum_14 = fadd float %sum, %tmp_102
+ST_11: sum_14 (69)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:624
+:14  %sum_14 = fadd float %sum, %tmp_108
 
 
  <State 12>: 7.26ns
-ST_12: sum_14 (69)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:558
-:14  %sum_14 = fadd float %sum, %tmp_102
+ST_12: sum_14 (69)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:624
+:14  %sum_14 = fadd float %sum, %tmp_108
 
 
  <State 13>: 7.26ns
-ST_13: sum_14 (69)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:558
-:14  %sum_14 = fadd float %sum, %tmp_102
+ST_13: sum_14 (69)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:624
+:14  %sum_14 = fadd float %sum, %tmp_108
 
 
  <State 14>: 7.26ns
-ST_14: sum_14 (69)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:558
-:14  %sum_14 = fadd float %sum, %tmp_102
+ST_14: sum_14 (69)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:624
+:14  %sum_14 = fadd float %sum, %tmp_108
 
 
  <State 15>: 7.26ns
-ST_15: sum_14 (69)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:558
-:14  %sum_14 = fadd float %sum, %tmp_102
+ST_15: sum_14 (69)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:624
+:14  %sum_14 = fadd float %sum, %tmp_108
 
-ST_15: StgValue_94 (70)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:557
+ST_15: StgValue_94 (70)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:623
 :15  br label %.preheader
 
 
  <State 16>: 3.25ns
-ST_16: bias_load (72)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:560
+ST_16: bias_load (72)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:626
 :0  %bias_load = load float* %bias_addr, align 4
 
 
  <State 17>: 7.26ns
-ST_17: result (73)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:560
+ST_17: result (73)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:626
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 18>: 7.26ns
-ST_18: result (73)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:560
+ST_18: result (73)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:626
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 19>: 7.26ns
-ST_19: result (73)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:560
+ST_19: result (73)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:626
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 20>: 7.26ns
-ST_20: result (73)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:560
+ST_20: result (73)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:626
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 21>: 7.26ns
-ST_21: result (73)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:560
+ST_21: result (73)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:626
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 22>: 6.79ns
-ST_22: tmp_34 (80)  [1/1] 6.79ns  loc: accelerator_hls/components.cpp:561
+ST_22: tmp_34 (80)  [1/1] 6.79ns  loc: accelerator_hls/components.cpp:627
 :8  %tmp_34 = fcmp ogt float %result, 0.000000e+00
 
 
  <State 23>: 8.53ns
-ST_23: result_to_int (74)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:560
+ST_23: result_to_int (74)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:626
 :2  %result_to_int = bitcast float %result to i32
 
-ST_23: tmp_31 (75)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:560
+ST_23: tmp_31 (75)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:626
 :3  %tmp_31 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %result_to_int, i32 23, i32 30)
 
-ST_23: tmp_97 (76)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:560
-:4  %tmp_97 = trunc i32 %result_to_int to i23
+ST_23: tmp_103 (76)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:626
+:4  %tmp_103 = trunc i32 %result_to_int to i23
 
-ST_23: notlhs (77)  [1/1] 2.91ns  loc: accelerator_hls/components.cpp:560
+ST_23: notlhs (77)  [1/1] 2.91ns  loc: accelerator_hls/components.cpp:626
 :5  %notlhs = icmp ne i8 %tmp_31, -1
 
-ST_23: notrhs (78)  [1/1] 3.20ns  loc: accelerator_hls/components.cpp:560
-:6  %notrhs = icmp eq i23 %tmp_97, 0
+ST_23: notrhs (78)  [1/1] 3.20ns  loc: accelerator_hls/components.cpp:626
+:6  %notrhs = icmp eq i23 %tmp_103, 0
 
-ST_23: tmp_33 (79)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:560 (grouped into LUT with out node result_7)
+ST_23: tmp_33 (79)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:626 (grouped into LUT with out node result_7)
 :7  %tmp_33 = or i1 %notrhs, %notlhs
 
-ST_23: tmp_35 (81)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:561 (grouped into LUT with out node result_7)
+ST_23: tmp_35 (81)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:627 (grouped into LUT with out node result_7)
 :9  %tmp_35 = and i1 %tmp_33, %tmp_34
 
-ST_23: result_7 (82)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:561 (out node of the LUT)
+ST_23: result_7 (82)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:627 (out node of the LUT)
 :10  %result_7 = select i1 %tmp_35, float %result, float 0.000000e+00
 
-ST_23: StgValue_110 (83)  [1/1] 3.25ns  loc: accelerator_hls/components.cpp:561
+ST_23: StgValue_110 (83)  [1/1] 3.25ns  loc: accelerator_hls/components.cpp:627
 :11  store float %result_7, float* %output_addr, align 4
 
-ST_23: StgValue_111 (84)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:555
+ST_23: StgValue_111 (84)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:621
 :12  br label %.preheader4
 
 
@@ -447,106 +447,106 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 
  <State 1>: 1.59ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('co') with incoming values : ('co', accelerator_hls/components.cpp:553) [7]  (1.59 ns)
+	multiplexor before 'phi' operation ('co') with incoming values : ('co', accelerator_hls/components.cpp:619) [7]  (1.59 ns)
 
  <State 2>: 3.02ns
 The critical path consists of the following:
-	'phi' operation ('co') with incoming values : ('co', accelerator_hls/components.cpp:553) [7]  (0 ns)
-	'icmp' operation ('exitcond3', accelerator_hls/components.cpp:553) [8]  (3.02 ns)
+	'phi' operation ('co') with incoming values : ('co', accelerator_hls/components.cpp:619) [7]  (0 ns)
+	'icmp' operation ('exitcond3', accelerator_hls/components.cpp:619) [8]  (3.02 ns)
 
  <State 3>: 2.33ns
 The critical path consists of the following:
-	'phi' operation ('h') with incoming values : ('h', accelerator_hls/components.cpp:554) [23]  (0 ns)
-	'add' operation ('tmp_159', accelerator_hls/components.cpp:561) [31]  (2.33 ns)
+	'phi' operation ('h') with incoming values : ('h', accelerator_hls/components.cpp:620) [23]  (0 ns)
+	'add' operation ('tmp_189', accelerator_hls/components.cpp:627) [31]  (2.33 ns)
 
  <State 4>: 2.35ns
 The critical path consists of the following:
-	'phi' operation ('w') with incoming values : ('w', accelerator_hls/components.cpp:555) [35]  (0 ns)
-	'add' operation ('tmp_160', accelerator_hls/components.cpp:561) [43]  (2.35 ns)
+	'phi' operation ('w') with incoming values : ('w', accelerator_hls/components.cpp:621) [35]  (0 ns)
+	'add' operation ('tmp_190', accelerator_hls/components.cpp:627) [43]  (2.35 ns)
 
  <State 5>: 7.91ns
 The critical path consists of the following:
-	'phi' operation ('ci') with incoming values : ('ci', accelerator_hls/components.cpp:557) [49]  (0 ns)
-	'add' operation ('tmp_163', accelerator_hls/components.cpp:558) [61]  (2.32 ns)
-	'add' operation ('tmp_164', accelerator_hls/components.cpp:558) [63]  (2.34 ns)
-	'getelementptr' operation ('shuffleunit2_2_outpu', accelerator_hls/components.cpp:558) [65]  (0 ns)
-	'load' operation ('shuffleunit2_2_outpu_1', accelerator_hls/components.cpp:558) on array 'shuffleunit2_2_outpu' [67]  (3.25 ns)
+	'phi' operation ('ci') with incoming values : ('ci', accelerator_hls/components.cpp:623) [49]  (0 ns)
+	'add' operation ('tmp_193', accelerator_hls/components.cpp:624) [61]  (2.32 ns)
+	'add' operation ('tmp_194', accelerator_hls/components.cpp:624) [63]  (2.34 ns)
+	'getelementptr' operation ('shuffleunit2_2_outpu', accelerator_hls/components.cpp:624) [65]  (0 ns)
+	'load' operation ('shuffleunit2_2_outpu_1', accelerator_hls/components.cpp:624) on array 'shuffleunit2_2_outpu' [67]  (3.25 ns)
 
  <State 6>: 3.25ns
 The critical path consists of the following:
-	'load' operation ('weight_load', accelerator_hls/components.cpp:558) on array 'weight' [66]  (3.25 ns)
+	'load' operation ('weight_load', accelerator_hls/components.cpp:624) on array 'weight' [66]  (3.25 ns)
 
  <State 7>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_102', accelerator_hls/components.cpp:558) [68]  (5.7 ns)
+	'fmul' operation ('tmp_108', accelerator_hls/components.cpp:624) [68]  (5.7 ns)
 
  <State 8>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_102', accelerator_hls/components.cpp:558) [68]  (5.7 ns)
+	'fmul' operation ('tmp_108', accelerator_hls/components.cpp:624) [68]  (5.7 ns)
 
  <State 9>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_102', accelerator_hls/components.cpp:558) [68]  (5.7 ns)
+	'fmul' operation ('tmp_108', accelerator_hls/components.cpp:624) [68]  (5.7 ns)
 
  <State 10>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp_102', accelerator_hls/components.cpp:558) [68]  (5.7 ns)
+	'fmul' operation ('tmp_108', accelerator_hls/components.cpp:624) [68]  (5.7 ns)
 
  <State 11>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', accelerator_hls/components.cpp:558) [69]  (7.26 ns)
+	'fadd' operation ('sum', accelerator_hls/components.cpp:624) [69]  (7.26 ns)
 
  <State 12>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', accelerator_hls/components.cpp:558) [69]  (7.26 ns)
+	'fadd' operation ('sum', accelerator_hls/components.cpp:624) [69]  (7.26 ns)
 
  <State 13>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', accelerator_hls/components.cpp:558) [69]  (7.26 ns)
+	'fadd' operation ('sum', accelerator_hls/components.cpp:624) [69]  (7.26 ns)
 
  <State 14>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', accelerator_hls/components.cpp:558) [69]  (7.26 ns)
+	'fadd' operation ('sum', accelerator_hls/components.cpp:624) [69]  (7.26 ns)
 
  <State 15>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', accelerator_hls/components.cpp:558) [69]  (7.26 ns)
+	'fadd' operation ('sum', accelerator_hls/components.cpp:624) [69]  (7.26 ns)
 
  <State 16>: 3.25ns
 The critical path consists of the following:
-	'load' operation ('bias_load', accelerator_hls/components.cpp:560) on array 'bias' [72]  (3.25 ns)
+	'load' operation ('bias_load', accelerator_hls/components.cpp:626) on array 'bias' [72]  (3.25 ns)
 
  <State 17>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('result', accelerator_hls/components.cpp:560) [73]  (7.26 ns)
+	'fadd' operation ('result', accelerator_hls/components.cpp:626) [73]  (7.26 ns)
 
  <State 18>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('result', accelerator_hls/components.cpp:560) [73]  (7.26 ns)
+	'fadd' operation ('result', accelerator_hls/components.cpp:626) [73]  (7.26 ns)
 
  <State 19>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('result', accelerator_hls/components.cpp:560) [73]  (7.26 ns)
+	'fadd' operation ('result', accelerator_hls/components.cpp:626) [73]  (7.26 ns)
 
  <State 20>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('result', accelerator_hls/components.cpp:560) [73]  (7.26 ns)
+	'fadd' operation ('result', accelerator_hls/components.cpp:626) [73]  (7.26 ns)
 
  <State 21>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('result', accelerator_hls/components.cpp:560) [73]  (7.26 ns)
+	'fadd' operation ('result', accelerator_hls/components.cpp:626) [73]  (7.26 ns)
 
  <State 22>: 6.79ns
 The critical path consists of the following:
-	'fcmp' operation ('tmp_34', accelerator_hls/components.cpp:561) [80]  (6.79 ns)
+	'fcmp' operation ('tmp_34', accelerator_hls/components.cpp:627) [80]  (6.79 ns)
 
  <State 23>: 8.53ns
 The critical path consists of the following:
-	'icmp' operation ('notrhs', accelerator_hls/components.cpp:560) [78]  (3.2 ns)
-	'or' operation ('tmp_33', accelerator_hls/components.cpp:560) [79]  (0 ns)
-	'and' operation ('tmp_35', accelerator_hls/components.cpp:561) [81]  (0 ns)
-	'select' operation ('result', accelerator_hls/components.cpp:561) [82]  (2.07 ns)
-	'store' operation (accelerator_hls/components.cpp:561) of variable 'result', accelerator_hls/components.cpp:561 on array 'output_r' [83]  (3.25 ns)
+	'icmp' operation ('notrhs', accelerator_hls/components.cpp:626) [78]  (3.2 ns)
+	'or' operation ('tmp_33', accelerator_hls/components.cpp:626) [79]  (0 ns)
+	'and' operation ('tmp_35', accelerator_hls/components.cpp:627) [81]  (0 ns)
+	'select' operation ('result', accelerator_hls/components.cpp:627) [82]  (2.07 ns)
+	'store' operation (accelerator_hls/components.cpp:627) of variable 'result', accelerator_hls/components.cpp:627 on array 'output_r' [83]  (3.25 ns)
 
 
 ============================================================

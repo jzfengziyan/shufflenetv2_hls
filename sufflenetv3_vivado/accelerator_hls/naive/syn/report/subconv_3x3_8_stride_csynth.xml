@@ -238,8 +238,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>output_0_address0</name>
-<Object>output_0</Object>
+<name>output_r_address0</name>
+<Object>output_r</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -249,8 +249,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>output_0_ce0</name>
-<Object>output_0</Object>
+<name>output_r_ce0</name>
+<Object>output_r</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -260,8 +260,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>output_0_we0</name>
-<Object>output_0</Object>
+<name>output_r_we0</name>
+<Object>output_r</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -271,8 +271,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>output_0_d0</name>
-<Object>output_0</Object>
+<name>output_r_d0</name>
+<Object>output_r</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

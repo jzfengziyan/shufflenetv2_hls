@@ -43,6 +43,9 @@ void subconv_3x3_16_no_relu(float input[1][24][16][16],
 
 void shuffle_24(float left[1][24][16][16],float right[1][24][16][16],float output[1][48][16][16]);
 
+void shuffle_24_r(float right[1][24][16][16],float output[1][48][16][16]);
+
+void shuffle_24_l(float left[1][24][16][16],float output[1][48][16][16]);
 
 void DownsampleUnit0(float input[1][24][32][32],
 	float conv1r_weight[24][24][1][1],
@@ -95,6 +98,9 @@ void subconv_3x3_8_no_relu(float input[1][48][8][8],
 
 void shuffle_48(float left[1][48][8][8],float right[1][48][8][8],float output[1][96][8][8]);
 
+void shuffle_48_l(float left[1][48][8][8], float output[1][96][8][8]);
+
+void shuffle_48_r(float right[1][48][8][8], float output[1][96][8][8]);
 
 void DownsampleUnit1(float input[1][48][16][16],
 	float conv1r_weight[48][48][1][1],
@@ -145,6 +151,10 @@ void subconv_3x3_4_no_relu(float input[1][96][4][4],
 
 
 void shuffle_96(float left[1][96][4][4],float right[1][96][4][4],float output[1][192][4][4]);
+
+void shuffle_96_l(float left[1][96][4][4], float output[1][192][4][4]);
+
+void shuffle_96_r(float right[1][96][4][4], float output[1][192][4][4]);
 
 void DownsampleUnit2(float input[1][96][8][8],
 	float conv1r_weight[96][96][1][1],

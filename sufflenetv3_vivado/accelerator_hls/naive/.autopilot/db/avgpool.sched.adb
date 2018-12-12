@@ -78,7 +78,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>570</lineNumber>
+						<lineNumber>636</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -93,7 +93,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>570</second>
+										<second>636</second>
 									</item>
 								</second>
 							</item>
@@ -151,7 +151,7 @@
 						<name>exitcond2</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>570</lineNumber>
+						<lineNumber>636</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -166,7 +166,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>570</second>
+										<second>636</second>
 									</item>
 								</second>
 							</item>
@@ -191,10 +191,10 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>co_18</name>
+						<name>co_24</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>570</lineNumber>
+						<lineNumber>636</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -209,7 +209,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>570</second>
+										<second>636</second>
 									</item>
 								</second>
 							</item>
@@ -237,7 +237,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>570</lineNumber>
+						<lineNumber>636</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -252,7 +252,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>570</second>
+										<second>636</second>
 									</item>
 								</second>
 							</item>
@@ -281,7 +281,7 @@
 						<name>tmp</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -296,7 +296,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -320,10 +320,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>tmp_177</name>
+						<name>tmp_207</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>570</lineNumber>
+						<lineNumber>636</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -338,7 +338,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>570</second>
+										<second>636</second>
 									</item>
 								</second>
 							</item>
@@ -364,10 +364,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>tmp_292_cast</name>
+						<name>tmp_364_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>572</lineNumber>
+						<lineNumber>638</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -382,7 +382,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>572</second>
+										<second>638</second>
 									</item>
 								</second>
 							</item>
@@ -409,7 +409,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>572</lineNumber>
+						<lineNumber>638</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -424,7 +424,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>572</second>
+										<second>638</second>
 									</item>
 								</second>
 							</item>
@@ -451,7 +451,7 @@
 						<name>sum</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -466,7 +466,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -527,7 +527,7 @@
 						<name>exitcond1</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>572</lineNumber>
+						<lineNumber>638</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -542,7 +542,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>572</second>
+										<second>638</second>
 									</item>
 								</second>
 							</item>
@@ -567,10 +567,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>h_18</name>
+						<name>h_24</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>572</lineNumber>
+						<lineNumber>638</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -585,7 +585,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>572</second>
+										<second>638</second>
 									</item>
 								</second>
 							</item>
@@ -613,7 +613,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>572</lineNumber>
+						<lineNumber>638</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -628,7 +628,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>572</second>
+										<second>638</second>
 									</item>
 								</second>
 							</item>
@@ -654,10 +654,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>tmp_117_cast</name>
+						<name>tmp_123_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -672,7 +672,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -696,10 +696,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_178</name>
+						<name>tmp_208</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -714,7 +714,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -739,10 +739,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>tmp_295_cast</name>
+						<name>tmp_367_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>573</lineNumber>
+						<lineNumber>639</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -757,7 +757,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>573</second>
+										<second>639</second>
 									</item>
 								</second>
 							</item>
@@ -786,7 +786,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>573</lineNumber>
+						<lineNumber>639</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -801,7 +801,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>573</second>
+										<second>639</second>
 									</item>
 								</second>
 							</item>
@@ -890,7 +890,7 @@
 						<name>exitcond</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>573</lineNumber>
+						<lineNumber>639</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -905,7 +905,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>573</second>
+										<second>639</second>
 									</item>
 								</second>
 							</item>
@@ -930,10 +930,10 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>w_18</name>
+						<name>w_24</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>573</lineNumber>
+						<lineNumber>639</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -948,7 +948,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>573</second>
+										<second>639</second>
 									</item>
 								</second>
 							</item>
@@ -976,7 +976,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>573</lineNumber>
+						<lineNumber>639</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -991,7 +991,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>573</second>
+										<second>639</second>
 									</item>
 								</second>
 							</item>
@@ -1017,10 +1017,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>tmp_118_cast</name>
+						<name>tmp_124_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1035,7 +1035,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -1059,10 +1059,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>tmp_179</name>
+						<name>tmp_209</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1077,7 +1077,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -1102,10 +1102,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_296_cast</name>
+						<name>tmp_368_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1120,7 +1120,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -1147,7 +1147,7 @@
 						<name>conv_last_output_add</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1162,7 +1162,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -1191,7 +1191,7 @@
 						<name>conv_last_output_loa</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1206,7 +1206,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -1233,7 +1233,7 @@
 						<name>sum_16</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>574</lineNumber>
+						<lineNumber>640</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1248,7 +1248,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>574</second>
+										<second>640</second>
 									</item>
 								</second>
 							</item>
@@ -1276,7 +1276,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>573</lineNumber>
+						<lineNumber>639</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1291,7 +1291,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>573</second>
+										<second>639</second>
 									</item>
 								</second>
 							</item>
@@ -1346,7 +1346,7 @@
 						<name>tmp_s</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>577</lineNumber>
+						<lineNumber>643</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1361,7 +1361,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>577</second>
+										<second>643</second>
 									</item>
 								</second>
 							</item>
@@ -1389,7 +1389,7 @@
 						<name>output_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>577</lineNumber>
+						<lineNumber>643</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1404,7 +1404,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>577</second>
+										<second>643</second>
 									</item>
 								</second>
 							</item>
@@ -1433,7 +1433,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>577</lineNumber>
+						<lineNumber>643</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1448,7 +1448,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>577</second>
+										<second>643</second>
 									</item>
 								</second>
 							</item>
@@ -1476,7 +1476,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>570</lineNumber>
+						<lineNumber>636</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1491,7 +1491,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>570</second>
+										<second>636</second>
 									</item>
 								</second>
 							</item>
@@ -1518,7 +1518,7 @@
 						<name></name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
-						<lineNumber>579</lineNumber>
+						<lineNumber>645</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1533,7 +1533,7 @@
 											<first>accelerator_hls/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>579</second>
+										<second>645</second>
 									</item>
 								</second>
 							</item>

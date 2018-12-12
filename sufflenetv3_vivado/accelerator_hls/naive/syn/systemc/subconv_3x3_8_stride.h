@@ -33,10 +33,10 @@ struct subconv_3x3_8_stride : public sc_module {
     sc_out< sc_lv<7> > bias_address0;
     sc_out< sc_logic > bias_ce0;
     sc_in< sc_lv<32> > bias_q0;
-    sc_out< sc_lv<11> > output_0_address0;
-    sc_out< sc_logic > output_0_ce0;
-    sc_out< sc_logic > output_0_we0;
-    sc_out< sc_lv<32> > output_0_d0;
+    sc_out< sc_lv<11> > output_r_address0;
+    sc_out< sc_logic > output_r_ce0;
+    sc_out< sc_logic > output_r_we0;
+    sc_out< sc_lv<32> > output_r_d0;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -48,8 +48,8 @@ struct subconv_3x3_8_stride : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    ShuffleNetV2_faddbkb<1,5,32,32,32>* ShuffleNetV2_faddbkb_x_U117;
-    ShuffleNetV2_fmulcud<1,4,32,32,32>* ShuffleNetV2_fmulcud_x_U118;
+    ShuffleNetV2_faddbkb<1,5,32,32,32>* ShuffleNetV2_faddbkb_x_U81;
+    ShuffleNetV2_fmulcud<1,4,32,32,32>* ShuffleNetV2_fmulcud_x_U82;
     sc_signal< sc_lv<24> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<7> > co_1_fu_193_p2;
@@ -152,7 +152,7 @@ struct subconv_3x3_8_stride : public sc_module {
     sc_signal< sc_lv<3> > tmp_9_fu_378_p2;
     sc_signal< sc_lv<4> > tmp_9_cast_fu_384_p1;
     sc_signal< sc_lv<12> > tmp_6_cast_fu_393_p1;
-    sc_signal< sc_lv<11> > tmp_cast_19_fu_418_p1;
+    sc_signal< sc_lv<11> > tmp_cast_18_fu_418_p1;
     sc_signal< sc_lv<4> > n_cast6_fu_402_p1;
     sc_signal< sc_lv<2> > tmp4_fu_432_p2;
     sc_signal< sc_lv<4> > tmp4_cast_fu_438_p1;
@@ -255,10 +255,10 @@ struct subconv_3x3_8_stride : public sc_module {
     void thread_m_cast8_cast_fu_309_p1();
     void thread_n_1_fu_412_p2();
     void thread_n_cast6_fu_402_p1();
-    void thread_output_0_address0();
-    void thread_output_0_ce0();
-    void thread_output_0_d0();
-    void thread_output_0_we0();
+    void thread_output_r_address0();
+    void thread_output_r_ce0();
+    void thread_output_r_d0();
+    void thread_output_r_we0();
     void thread_p_not_fu_427_p2();
     void thread_p_shl_cast_fu_228_p1();
     void thread_sel_tmp1_fu_464_p2();
@@ -299,7 +299,7 @@ struct subconv_3x3_8_stride : public sc_module {
     void thread_tmp_8_fu_397_p2();
     void thread_tmp_9_cast_fu_384_p1();
     void thread_tmp_9_fu_378_p2();
-    void thread_tmp_cast_19_fu_418_p1();
+    void thread_tmp_cast_18_fu_418_p1();
     void thread_tmp_cast_fu_204_p1();
     void thread_tmp_fu_199_p1();
     void thread_tmp_s_fu_208_p3();

@@ -1,0 +1,23 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+make: “csim.exe”已是最新。
+initialize pic
+initialize bias
+initialize shuffle_conv_1x1
+initialize shuffle_conv_3x3
+initialize conv1_weight
+initialize conv_last_weight
+initialize fc_weight
+4.62101
+1.44114
+0.836944
+1.65405
+-4.62547
+-0.812027
+-3.36338
+-2.77793
+0.266659
+2.75905
+result above
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

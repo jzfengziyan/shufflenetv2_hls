@@ -498,10 +498,10 @@
 
 <Node id="26" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader7:2  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+.preheader7:2  %empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
 ]]></Node>
-<StgValue><ssdm name="empty_15"/></StgValue>
+<StgValue><ssdm name="empty_14"/></StgValue>
 </operation>
 
 <operation id="45" st_id="3" stage="1" lat="1">
@@ -688,10 +688,10 @@
 
 <Node id="39" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader6:2  %empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+.preheader6:2  %empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
 ]]></Node>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_15"/></StgValue>
 </operation>
 
 <operation id="57" st_id="4" stage="1" lat="1">
@@ -876,10 +876,10 @@
 
 <Node id="52" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader5:4  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+.preheader5:4  %empty_16 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
 
 ]]></Node>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_16"/></StgValue>
 </operation>
 
 <operation id="69" st_id="5" stage="1" lat="1">
@@ -1256,10 +1256,10 @@
 
 <Node id="75" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader:4  %empty_18 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+.preheader:4  %empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
 
 ]]></Node>
-<StgValue><ssdm name="empty_18"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </operation>
 
 <operation id="93" st_id="6" stage="1" lat="1">
@@ -1302,10 +1302,10 @@
 
 <Node id="79" bw="11" op_0_bw="2">
 <![CDATA[
-_ifconv:0  %tmp_cast_19 = zext i2 %n to i11
+_ifconv:0  %tmp_cast_18 = zext i2 %n to i11
 
 ]]></Node>
-<StgValue><ssdm name="tmp_cast_19"/></StgValue>
+<StgValue><ssdm name="tmp_cast_18"/></StgValue>
 </operation>
 
 <operation id="96" st_id="6" stage="1" lat="1">
@@ -1318,7 +1318,7 @@ _ifconv:0  %tmp_cast_19 = zext i2 %n to i11
 
 <Node id="80" bw="11" op_0_bw="11" op_1_bw="11">
 <![CDATA[
-_ifconv:1  %tmp_17 = add i11 %tmp_15, %tmp_cast_19
+_ifconv:1  %tmp_17 = add i11 %tmp_15, %tmp_cast_18
 
 ]]></Node>
 <StgValue><ssdm name="tmp_17"/></StgValue>
@@ -1904,10 +1904,10 @@ _ifconv:18  br label %.preheader
 
 <Node id="106" bw="11" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-:5  %output_0_addr = getelementptr [1536 x float]* %output_0, i64 0, i64 %tmp_25_cast
+:5  %output_addr = getelementptr [1536 x float]* %output_r, i64 0, i64 %tmp_25_cast
 
 ]]></Node>
-<StgValue><ssdm name="output_0_addr"/></StgValue>
+<StgValue><ssdm name="output_addr"/></StgValue>
 </operation>
 
 <operation id="132" st_id="24" stage="1" lat="1">
@@ -1919,7 +1919,7 @@ _ifconv:18  br label %.preheader
 
 <Node id="107" bw="0" op_0_bw="32" op_1_bw="11">
 <![CDATA[
-:6  store float %result, float* %output_0_addr, align 4
+:6  store float %result, float* %output_addr, align 4
 
 ]]></Node>
 <StgValue><ssdm name=""/></StgValue>
@@ -1956,8 +1956,8 @@ _ifconv:18  br label %.preheader
 <core>RAM</core><StgValue><ssdm name="bias"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="167" name="output_0" dir="1" iftype="1">
-<core>RAM</core><StgValue><ssdm name="output_0"/><MemPortTyVec>0 3 </MemPortTyVec>
+<port id="167" name="output_r" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="output_r"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
@@ -2053,13 +2053,13 @@ _ifconv:18  br label %.preheader
 </dataflow>
 <dataflow id="213" from="StgValue_212" to="exitcond3" fromId="212" toId="43">
 </dataflow>
-<dataflow id="214" from="_ssdm_op_SpecLoopTripCount" to="empty_15" fromId="176" toId="44">
+<dataflow id="214" from="_ssdm_op_SpecLoopTripCount" to="empty_14" fromId="176" toId="44">
 </dataflow>
-<dataflow id="216" from="StgValue_215" to="empty_15" fromId="215" toId="44">
+<dataflow id="216" from="StgValue_215" to="empty_14" fromId="215" toId="44">
 </dataflow>
-<dataflow id="217" from="StgValue_215" to="empty_15" fromId="215" toId="44">
+<dataflow id="217" from="StgValue_215" to="empty_14" fromId="215" toId="44">
 </dataflow>
-<dataflow id="218" from="StgValue_215" to="empty_15" fromId="215" toId="44">
+<dataflow id="218" from="StgValue_215" to="empty_14" fromId="215" toId="44">
 </dataflow>
 <dataflow id="219" from="h" to="h_1" fromId="42" toId="45">
 </dataflow>
@@ -2106,13 +2106,13 @@ _ifconv:18  br label %.preheader
 </dataflow>
 <dataflow id="238" from="StgValue_212" to="exitcond2" fromId="212" toId="55">
 </dataflow>
-<dataflow id="239" from="_ssdm_op_SpecLoopTripCount" to="empty_16" fromId="176" toId="56">
+<dataflow id="239" from="_ssdm_op_SpecLoopTripCount" to="empty_15" fromId="176" toId="56">
 </dataflow>
-<dataflow id="240" from="StgValue_215" to="empty_16" fromId="215" toId="56">
+<dataflow id="240" from="StgValue_215" to="empty_15" fromId="215" toId="56">
 </dataflow>
-<dataflow id="241" from="StgValue_215" to="empty_16" fromId="215" toId="56">
+<dataflow id="241" from="StgValue_215" to="empty_15" fromId="215" toId="56">
 </dataflow>
-<dataflow id="242" from="StgValue_215" to="empty_16" fromId="215" toId="56">
+<dataflow id="242" from="StgValue_215" to="empty_15" fromId="215" toId="56">
 </dataflow>
 <dataflow id="243" from="w" to="w_1" fromId="54" toId="57">
 </dataflow>
@@ -2172,13 +2172,13 @@ _ifconv:18  br label %.preheader
 </dataflow>
 <dataflow id="264" from="StgValue_263" to="exitcond1" fromId="263" toId="67">
 </dataflow>
-<dataflow id="265" from="_ssdm_op_SpecLoopTripCount" to="empty_17" fromId="176" toId="68">
+<dataflow id="265" from="_ssdm_op_SpecLoopTripCount" to="empty_16" fromId="176" toId="68">
 </dataflow>
-<dataflow id="267" from="StgValue_266" to="empty_17" fromId="266" toId="68">
+<dataflow id="267" from="StgValue_266" to="empty_16" fromId="266" toId="68">
 </dataflow>
-<dataflow id="268" from="StgValue_266" to="empty_17" fromId="266" toId="68">
+<dataflow id="268" from="StgValue_266" to="empty_16" fromId="266" toId="68">
 </dataflow>
-<dataflow id="269" from="StgValue_266" to="empty_17" fromId="266" toId="68">
+<dataflow id="269" from="StgValue_266" to="empty_16" fromId="266" toId="68">
 </dataflow>
 <dataflow id="270" from="m" to="m_1" fromId="65" toId="69">
 </dataflow>
@@ -2280,13 +2280,13 @@ _ifconv:18  br label %.preheader
 </dataflow>
 <dataflow id="313" from="StgValue_263" to="exitcond" fromId="263" toId="91">
 </dataflow>
-<dataflow id="314" from="_ssdm_op_SpecLoopTripCount" to="empty_18" fromId="176" toId="92">
+<dataflow id="314" from="_ssdm_op_SpecLoopTripCount" to="empty_17" fromId="176" toId="92">
 </dataflow>
-<dataflow id="315" from="StgValue_266" to="empty_18" fromId="266" toId="92">
+<dataflow id="315" from="StgValue_266" to="empty_17" fromId="266" toId="92">
 </dataflow>
-<dataflow id="316" from="StgValue_266" to="empty_18" fromId="266" toId="92">
+<dataflow id="316" from="StgValue_266" to="empty_17" fromId="266" toId="92">
 </dataflow>
-<dataflow id="317" from="StgValue_266" to="empty_18" fromId="266" toId="92">
+<dataflow id="317" from="StgValue_266" to="empty_17" fromId="266" toId="92">
 </dataflow>
 <dataflow id="318" from="n" to="n_1" fromId="89" toId="93">
 </dataflow>
@@ -2294,11 +2294,11 @@ _ifconv:18  br label %.preheader
 </dataflow>
 <dataflow id="320" from="exitcond" to="StgValue_94" fromId="91" toId="94">
 </dataflow>
-<dataflow id="321" from="n" to="tmp_cast_19" fromId="89" toId="95">
+<dataflow id="321" from="n" to="tmp_cast_18" fromId="89" toId="95">
 </dataflow>
 <dataflow id="322" from="tmp_15" to="tmp_17" fromId="74" toId="96">
 </dataflow>
-<dataflow id="323" from="tmp_cast_19" to="tmp_17" fromId="95" toId="96">
+<dataflow id="323" from="tmp_cast_18" to="tmp_17" fromId="95" toId="96">
 </dataflow>
 <dataflow id="324" from="n_cast6" to="p_not" fromId="90" toId="97">
 </dataflow>
@@ -2414,15 +2414,15 @@ _ifconv:18  br label %.preheader
 </dataflow>
 <dataflow id="380" from="tmp_8" to="tmp_25_cast" fromId="87" toId="130">
 </dataflow>
-<dataflow id="381" from="output_0" to="output_0_addr" fromId="167" toId="131">
+<dataflow id="381" from="output_r" to="output_addr" fromId="167" toId="131">
 </dataflow>
-<dataflow id="382" from="StgValue_204" to="output_0_addr" fromId="204" toId="131">
+<dataflow id="382" from="StgValue_204" to="output_addr" fromId="204" toId="131">
 </dataflow>
-<dataflow id="383" from="tmp_25_cast" to="output_0_addr" fromId="130" toId="131">
+<dataflow id="383" from="tmp_25_cast" to="output_addr" fromId="130" toId="131">
 </dataflow>
 <dataflow id="384" from="result" to="StgValue_132" fromId="129" toId="132">
 </dataflow>
-<dataflow id="385" from="output_0_addr" to="StgValue_132" fromId="131" toId="132">
+<dataflow id="385" from="output_addr" to="StgValue_132" fromId="131" toId="132">
 </dataflow>
 <dataflow id="386" from="exitcond4" to="StgValue_2" fromId="27" toId="2">
 </dataflow>

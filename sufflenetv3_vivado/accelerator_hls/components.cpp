@@ -128,7 +128,29 @@ void shuffle_24(float left[1][24][16][16],float right[1][24][16][16],float outpu
 	}
 }
 
+void shuffle_24_l(float left[1][24][16][16], float output[1][48][16][16]){
+	for(int co = 0;co <48;co ++){
+		for(int h=0;h<16;h++){
+			for(int w = 0;w<16;w++){
+				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
+				//else output[0][co][h][w] = right[0][co/2][h][w];
+			}
+		}
+	}
+}
 
+void shuffle_24_r(float right[1][24][16][16], float output[1][48][16][16]){
+	for(int co = 0;co <48;co ++){
+		for(int h=0;h<16;h++){
+			for(int w = 0;w<16;w++){
+				//if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
+				if(co%2 != 0) output[0][co][h][w] = right[0][co/2][h][w];
+			}
+		}
+	}
+}
+
+/*-----------Original DownsampleUnit0---------------------------
 void DownsampleUnit0(float input[1][24][32][32],
 	float conv1r_weight[24][24][1][1],
 	float conv1r_bias[24],
@@ -162,10 +184,10 @@ void DownsampleUnit0(float input[1][24][32][32],
 
 	//shuffle
 	shuffle_24(conv3r_ourput,conv2l_output,output);
-}
+}-------------------------------------*/
 
 
-
+/*-----------Original ShuffleUnit0------------------------
 void ShuffleUnit0(float input[1][48][16][16],
 	float conv1_weight[24][24][1][1],
 	float conv1_bias[24],
@@ -197,7 +219,7 @@ void ShuffleUnit0(float input[1][48][16][16],
 	subconv_1x1_16(conv2_output,conv3_weight,conv3_bias,conv3_output);
 
 	shuffle_24(left_part,conv3_output,output);
-}
+}*/
 
 /**unit1**/
 
@@ -299,7 +321,29 @@ void shuffle_48(float left[1][48][8][8],float right[1][48][8][8],float output[1]
 	}
 }
 
+void shuffle_48_l(float left[1][48][8][8], float output[1][96][8][8]){
+	for(int co = 0;co <96;co ++){
+		for(int h=0;h<8;h++){
+			for(int w = 0;w<8;w++){
+				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
+				//else output[0][co][h][w] = right[0][co/2][h][w];
+			}
+		}
+	}
+}
 
+void shuffle_48_r(float right[1][48][8][8], float output[1][96][8][8]){
+	for(int co = 0;co <96;co ++){
+		for(int h=0;h<8;h++){
+			for(int w = 0;w<8;w++){
+				//if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
+				if(co%2 != 0) output[0][co][h][w] = right[0][co/2][h][w];
+			}
+		}
+	}
+}
+
+/*-----Original DownsampleUnit1--------------------
 void DownsampleUnit1(float input[1][48][16][16],
 	float conv1r_weight[48][48][1][1],
 	float conv1r_bias[48],
@@ -335,9 +379,9 @@ void DownsampleUnit1(float input[1][48][16][16],
 	shuffle_48(conv3r_ourput,conv2l_output,output);
 
 
-}
+}*/
 
-
+/*------------Original ShuffleUnit1-------------
 void ShuffleUnit1(float input[1][96][8][8],
 	float conv1_weight[48][48][1][1],
 	float conv1_bias[48],
@@ -372,7 +416,7 @@ void ShuffleUnit1(float input[1][96][8][8],
 	subconv_1x1_8(conv2_output,conv3_weight,conv3_bias,conv3_output);
 
 	shuffle_48(left_part,conv3_output,output);
-}
+}*/
 
 
 /**unit2**/
@@ -469,7 +513,29 @@ void shuffle_96(float left[1][96][4][4],float right[1][96][4][4],float output[1]
 	}
 }
 
+void shuffle_96_l(float left[1][96][4][4], float output[1][192][4][4]){
+	for(int co = 0;co <192;co ++){
+		for(int h=0;h<4;h++){
+			for(int w = 0;w<4;w++){
+				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
+				//else output[0][co][h][w] = right[0][co/2][h][w];
+			}
+		}
+	}
+}
 
+void shuffle_96_r(float right[1][96][4][4], float output[1][192][4][4]){
+	for(int co = 0;co <192;co ++){
+		for(int h=0;h<4;h++){
+			for(int w = 0;w<4;w++){
+				//if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
+				if(co%2 != 0) output[0][co][h][w] = right[0][co/2][h][w];
+			}
+		}
+	}
+}
+
+/*---------------Original DownsampleUnit2------------------
 void DownsampleUnit2(float input[1][96][8][8],
 	float conv1r_weight[96][96][1][1],
 	float conv1r_bias[96],
@@ -505,8 +571,8 @@ void DownsampleUnit2(float input[1][96][8][8],
 	shuffle_96(conv3r_ourput,conv2l_output,output);
 
 
-}
-
+}*/
+/*------------Original ShuffleUnit2-----------------
 void ShuffleUnit2(float input[1][192][4][4],
 	float conv1_weight[96][96][1][1],
 	float conv1_bias[96],
@@ -541,7 +607,7 @@ void ShuffleUnit2(float input[1][192][4][4],
 	subconv_1x1_4(conv2_output,conv3_weight,conv3_bias,conv3_output);
 
 	shuffle_96(left_part,conv3_output,output);
-}
+}*/
 
 
 void conv_last(float input[1][192][4][4],

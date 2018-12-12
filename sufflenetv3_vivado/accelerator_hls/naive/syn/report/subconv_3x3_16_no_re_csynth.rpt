@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'subconv_3x3_16_no_re'
 ================================================================
-* Date:           Mon Dec 10 14:57:21 2018
+* Date:           Tue Dec 11 23:30:57 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -77,8 +77,8 @@
     +----------------------------+----------------------+---------+-------+-----+-----+
     |          Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
     +----------------------------+----------------------+---------+-------+-----+-----+
-    |ShuffleNetV2_faddbkb_x_U45  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
-    |ShuffleNetV2_fmulcud_x_U46  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
+    |ShuffleNetV2_faddbkb_x_U32  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
+    |ShuffleNetV2_fmulcud_x_U33  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
     +----------------------------+----------------------+---------+-------+-----+-----+
     |Total                       |                      |        0|      5|  348|  711|
     +----------------------------+----------------------+---------+-------+-----+-----+
@@ -208,18 +208,18 @@
 |ap_done            | out |    1| ap_ctrl_hs | subconv_3x3_16_no_re | return value |
 |ap_idle            | out |    1| ap_ctrl_hs | subconv_3x3_16_no_re | return value |
 |ap_ready           | out |    1| ap_ctrl_hs | subconv_3x3_16_no_re | return value |
-|input_0_address0   | out |   13|  ap_memory |        input_0       |     array    |
-|input_0_ce0        | out |    1|  ap_memory |        input_0       |     array    |
-|input_0_q0         |  in |   32|  ap_memory |        input_0       |     array    |
+|input_r_address0   | out |   13|  ap_memory |        input_r       |     array    |
+|input_r_ce0        | out |    1|  ap_memory |        input_r       |     array    |
+|input_r_q0         |  in |   32|  ap_memory |        input_r       |     array    |
 |weight_address0    | out |    8|  ap_memory |        weight        |     array    |
 |weight_ce0         | out |    1|  ap_memory |        weight        |     array    |
 |weight_q0          |  in |   32|  ap_memory |        weight        |     array    |
 |bias_address0      | out |    5|  ap_memory |         bias         |     array    |
 |bias_ce0           | out |    1|  ap_memory |         bias         |     array    |
 |bias_q0            |  in |   32|  ap_memory |         bias         |     array    |
-|output_0_address0  | out |   13|  ap_memory |       output_0       |     array    |
-|output_0_ce0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_we0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_d0        | out |   32|  ap_memory |       output_0       |     array    |
+|output_r_address0  | out |   13|  ap_memory |       output_r       |     array    |
+|output_r_ce0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_we0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_d0        | out |   32|  ap_memory |       output_r       |     array    |
 +-------------------+-----+-----+------------+----------------------+--------------+
 

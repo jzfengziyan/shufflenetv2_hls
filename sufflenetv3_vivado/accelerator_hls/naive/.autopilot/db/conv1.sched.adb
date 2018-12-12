@@ -99,7 +99,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>conv1_output</name>
+						<name>output_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -108,7 +108,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName></originalName>
+						<originalName>output</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -247,7 +247,7 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>co_17</name>
+						<name>co_23</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>11</lineNumber>
@@ -504,7 +504,7 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>tmp_165</name>
+						<name>tmp_195</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -547,7 +547,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>tmp_271_cast</name>
+						<name>tmp_343_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -589,7 +589,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>tmp_166</name>
+						<name>tmp_196</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>11</lineNumber>
@@ -633,7 +633,7 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>tmp_273_cast</name>
+						<name>tmp_345_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -877,7 +877,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>h_17</name>
+						<name>h_23</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -964,7 +964,7 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>tmp_cast_73</name>
+						<name>tmp_cast_84</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>23</lineNumber>
@@ -1006,7 +1006,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_167</name>
+						<name>tmp_197</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>23</lineNumber>
@@ -1049,7 +1049,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_276_cast</name>
+						<name>tmp_348_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1251,7 +1251,7 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>w_17</name>
+						<name>w_23</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1338,7 +1338,7 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>tmp_103</name>
+						<name>tmp_109</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -1629,7 +1629,7 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>tmp_105_cast</name>
+						<name>tmp_111_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -1671,7 +1671,7 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>tmp_169</name>
+						<name>tmp_199</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -1715,7 +1715,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>tmp_279_cast</name>
+						<name>tmp_351_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -1757,7 +1757,7 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>tmp_170</name>
+						<name>tmp_200</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -1800,7 +1800,7 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>tmp_280_cast</name>
+						<name>tmp_352_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -1842,7 +1842,7 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>tmp_99</name>
+						<name>tmp_105</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -1928,7 +1928,7 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>tmp_171</name>
+						<name>tmp_201</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2089,7 +2089,7 @@
 					<Obj>
 						<type>0</type>
 						<id>65</id>
-						<name>m_cast8_cast</name>
+						<name>m_cast_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -2261,7 +2261,7 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>tmp_106</name>
+						<name>tmp_112</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2303,7 +2303,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>tmp_172</name>
+						<name>tmp_202</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2346,7 +2346,7 @@
 					<Obj>
 						<type>0</type>
 						<id>73</id>
-						<name>tmp_100</name>
+						<name>tmp_106</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2388,7 +2388,7 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>tmp_101</name>
+						<name>tmp_107</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2474,7 +2474,7 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>tmp_173</name>
+						<name>tmp_203</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2517,7 +2517,7 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>tmp_107</name>
+						<name>tmp_113</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2560,7 +2560,7 @@
 					<Obj>
 						<type>0</type>
 						<id>78</id>
-						<name>tmp_107_cast</name>
+						<name>tmp_113_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2602,7 +2602,7 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>tmp_108</name>
+						<name>tmp_114</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2645,7 +2645,7 @@
 					<Obj>
 						<type>0</type>
 						<id>80</id>
-						<name>tmp1</name>
+						<name>tmp4</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2688,7 +2688,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>tmp1_cast</name>
+						<name>tmp4_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2730,7 +2730,7 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>tmp_109</name>
+						<name>tmp_115</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2773,7 +2773,7 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>tmp_110_cast</name>
+						<name>tmp_116_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2815,7 +2815,7 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>tmp_174</name>
+						<name>tmp_204</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2858,7 +2858,7 @@
 					<Obj>
 						<type>0</type>
 						<id>85</id>
-						<name>tmp_288_cast</name>
+						<name>tmp_360_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -2902,7 +2902,7 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>tmp_102</name>
+						<name>tmp_108</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3094,7 +3094,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>n_cast6</name>
+						<name>n_cast9</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>17</lineNumber>
@@ -3266,7 +3266,7 @@
 					<Obj>
 						<type>0</type>
 						<id>98</id>
-						<name>tmp_111_cast</name>
+						<name>tmp_117_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3308,7 +3308,7 @@
 					<Obj>
 						<type>0</type>
 						<id>99</id>
-						<name>tmp_175</name>
+						<name>tmp_205</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3351,7 +3351,7 @@
 					<Obj>
 						<type>0</type>
 						<id>100</id>
-						<name>tmp_289_cast</name>
+						<name>tmp_361_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3479,7 +3479,7 @@
 					<Obj>
 						<type>0</type>
 						<id>103</id>
-						<name>tmp2</name>
+						<name>tmp5</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3522,7 +3522,7 @@
 					<Obj>
 						<type>0</type>
 						<id>104</id>
-						<name>tmp2_cast</name>
+						<name>tmp5_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3564,7 +3564,7 @@
 					<Obj>
 						<type>0</type>
 						<id>105</id>
-						<name>tmp_112</name>
+						<name>tmp_118</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3607,7 +3607,7 @@
 					<Obj>
 						<type>0</type>
 						<id>106</id>
-						<name>tmp_104</name>
+						<name>tmp_110</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3695,7 +3695,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>tmp_114_cast</name>
+						<name>tmp_120_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3737,7 +3737,7 @@
 					<Obj>
 						<type>0</type>
 						<id>109</id>
-						<name>tmp_176</name>
+						<name>tmp_206</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3780,7 +3780,7 @@
 					<Obj>
 						<type>0</type>
 						<id>110</id>
-						<name>tmp_290_cast</name>
+						<name>tmp_362_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3951,7 +3951,7 @@
 					<Obj>
 						<type>0</type>
 						<id>114</id>
-						<name>tmp3</name>
+						<name>tmp6</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -3994,7 +3994,7 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>tmp4</name>
+						<name>tmp7</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -4080,7 +4080,7 @@
 					<Obj>
 						<type>0</type>
 						<id>117</id>
-						<name>tmp_115</name>
+						<name>tmp_121</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -4124,7 +4124,7 @@
 					<Obj>
 						<type>0</type>
 						<id>118</id>
-						<name>tmp_116</name>
+						<name>tmp_122</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -4480,7 +4480,7 @@
 					<Obj>
 						<type>0</type>
 						<id>130</id>
-						<name>tmp_98</name>
+						<name>tmp_104</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>22</lineNumber>
@@ -4781,7 +4781,7 @@
 					<Obj>
 						<type>0</type>
 						<id>137</id>
-						<name>tmp_104_cast</name>
+						<name>tmp_110_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>23</lineNumber>
@@ -4823,7 +4823,7 @@
 					<Obj>
 						<type>0</type>
 						<id>138</id>
-						<name>tmp_168</name>
+						<name>tmp_198</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>23</lineNumber>
@@ -4866,7 +4866,7 @@
 					<Obj>
 						<type>0</type>
 						<id>139</id>
-						<name>tmp_277_cast</name>
+						<name>tmp_349_cast</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>23</lineNumber>
@@ -4908,7 +4908,7 @@
 					<Obj>
 						<type>0</type>
 						<id>140</id>
-						<name>conv1_output_addr</name>
+						<name>output_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>23</lineNumber>

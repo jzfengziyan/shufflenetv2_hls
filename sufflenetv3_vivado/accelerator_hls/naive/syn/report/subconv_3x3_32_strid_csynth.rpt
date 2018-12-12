@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'subconv_3x3_32_strid'
 ================================================================
-* Date:           Mon Dec 10 14:57:21 2018
+* Date:           Tue Dec 11 23:30:57 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -179,7 +179,7 @@
     |tmp_71_cast_reg_512  |   5|   0|   10|          5|
     |tmp_75_cast_reg_536  |  10|   0|   14|          4|
     |tmp_83_cast_reg_572  |  11|   0|   16|          5|
-    |tmp_cast_31_reg_530  |   4|   0|    6|          2|
+    |tmp_cast_30_reg_530  |   4|   0|    6|          2|
     |w_4_reg_544          |   5|   0|    5|          0|
     |w_reg_121            |   5|   0|    5|          0|
     |weight_load_reg_620  |  32|   0|   32|          0|
@@ -211,9 +211,9 @@
 |bias_address0      | out |    5|  ap_memory |         bias         |     array    |
 |bias_ce0           | out |    1|  ap_memory |         bias         |     array    |
 |bias_q0            |  in |   32|  ap_memory |         bias         |     array    |
-|output_0_address0  | out |   13|  ap_memory |       output_0       |     array    |
-|output_0_ce0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_we0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_d0        | out |   32|  ap_memory |       output_0       |     array    |
+|output_r_address0  | out |   13|  ap_memory |       output_r       |     array    |
+|output_r_ce0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_we0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_d0        | out |   32|  ap_memory |       output_r       |     array    |
 +-------------------+-----+-----+------------+----------------------+--------------+
 

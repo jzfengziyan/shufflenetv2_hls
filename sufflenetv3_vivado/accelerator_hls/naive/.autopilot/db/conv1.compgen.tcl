@@ -276,16 +276,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 7 \
-    name conv1_output \
+    name output_r \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename conv1_output \
+    corename output_r \
     op interface \
-    ports { conv1_output_address0 { O 15 vector } conv1_output_ce0 { O 1 bit } conv1_output_we0 { O 1 bit } conv1_output_d0 { O 32 vector } } \
+    ports { output_r_address0 { O 15 vector } output_r_ce0 { O 1 bit } output_r_we0 { O 1 bit } output_r_d0 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_output'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_r'"
 }
 }
 

@@ -70,20 +70,20 @@ const sc_lv<11> subconv_3x3_8_stride::ap_const_lv11_2 = "10";
 const bool subconv_3x3_8_stride::ap_const_boolean_1 = true;
 
 subconv_3x3_8_stride::subconv_3x3_8_stride(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    ShuffleNetV2_faddbkb_x_U117 = new ShuffleNetV2_faddbkb<1,5,32,32,32>("ShuffleNetV2_faddbkb_x_U117");
-    ShuffleNetV2_faddbkb_x_U117->clk(ap_clk);
-    ShuffleNetV2_faddbkb_x_U117->reset(ap_rst);
-    ShuffleNetV2_faddbkb_x_U117->din0(grp_fu_177_p0);
-    ShuffleNetV2_faddbkb_x_U117->din1(grp_fu_177_p1);
-    ShuffleNetV2_faddbkb_x_U117->ce(ap_var_for_const0);
-    ShuffleNetV2_faddbkb_x_U117->dout(grp_fu_177_p2);
-    ShuffleNetV2_fmulcud_x_U118 = new ShuffleNetV2_fmulcud<1,4,32,32,32>("ShuffleNetV2_fmulcud_x_U118");
-    ShuffleNetV2_fmulcud_x_U118->clk(ap_clk);
-    ShuffleNetV2_fmulcud_x_U118->reset(ap_rst);
-    ShuffleNetV2_fmulcud_x_U118->din0(weight_load_reg_606);
-    ShuffleNetV2_fmulcud_x_U118->din1(tmp_12_reg_611);
-    ShuffleNetV2_fmulcud_x_U118->ce(ap_var_for_const0);
-    ShuffleNetV2_fmulcud_x_U118->dout(grp_fu_183_p2);
+    ShuffleNetV2_faddbkb_x_U81 = new ShuffleNetV2_faddbkb<1,5,32,32,32>("ShuffleNetV2_faddbkb_x_U81");
+    ShuffleNetV2_faddbkb_x_U81->clk(ap_clk);
+    ShuffleNetV2_faddbkb_x_U81->reset(ap_rst);
+    ShuffleNetV2_faddbkb_x_U81->din0(grp_fu_177_p0);
+    ShuffleNetV2_faddbkb_x_U81->din1(grp_fu_177_p1);
+    ShuffleNetV2_faddbkb_x_U81->ce(ap_var_for_const0);
+    ShuffleNetV2_faddbkb_x_U81->dout(grp_fu_177_p2);
+    ShuffleNetV2_fmulcud_x_U82 = new ShuffleNetV2_fmulcud<1,4,32,32,32>("ShuffleNetV2_fmulcud_x_U82");
+    ShuffleNetV2_fmulcud_x_U82->clk(ap_clk);
+    ShuffleNetV2_fmulcud_x_U82->reset(ap_rst);
+    ShuffleNetV2_fmulcud_x_U82->din0(weight_load_reg_606);
+    ShuffleNetV2_fmulcud_x_U82->din1(tmp_12_reg_611);
+    ShuffleNetV2_fmulcud_x_U82->ce(ap_var_for_const0);
+    ShuffleNetV2_fmulcud_x_U82->dout(grp_fu_183_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -215,18 +215,18 @@ subconv_3x3_8_stride::subconv_3x3_8_stride(sc_module_name name) : sc_module(name
     SC_METHOD(thread_n_cast6_fu_402_p1);
     sensitive << ( n_reg_166 );
 
-    SC_METHOD(thread_output_0_address0);
+    SC_METHOD(thread_output_r_address0);
     sensitive << ( ap_CS_fsm_state24 );
     sensitive << ( tmp_25_cast_fu_476_p1 );
 
-    SC_METHOD(thread_output_0_ce0);
+    SC_METHOD(thread_output_r_ce0);
     sensitive << ( ap_CS_fsm_state24 );
 
-    SC_METHOD(thread_output_0_d0);
+    SC_METHOD(thread_output_r_d0);
     sensitive << ( result_reg_631 );
     sensitive << ( ap_CS_fsm_state24 );
 
-    SC_METHOD(thread_output_0_we0);
+    SC_METHOD(thread_output_r_we0);
     sensitive << ( ap_CS_fsm_state24 );
 
     SC_METHOD(thread_p_not_fu_427_p2);
@@ -294,7 +294,7 @@ subconv_3x3_8_stride::subconv_3x3_8_stride(sc_module_name name) : sc_module(name
 
     SC_METHOD(thread_tmp_17_fu_422_p2);
     sensitive << ( tmp_15_reg_553 );
-    sensitive << ( tmp_cast_19_fu_418_p1 );
+    sensitive << ( tmp_cast_18_fu_418_p1 );
 
     SC_METHOD(thread_tmp_18_fu_451_p2);
     sensitive << ( tmp_31_cast_reg_558 );
@@ -367,7 +367,7 @@ subconv_3x3_8_stride::subconv_3x3_8_stride(sc_module_name name) : sc_module(name
     SC_METHOD(thread_tmp_9_fu_378_p2);
     sensitive << ( m_cast8_cast_fu_309_p1 );
 
-    SC_METHOD(thread_tmp_cast_19_fu_418_p1);
+    SC_METHOD(thread_tmp_cast_18_fu_418_p1);
     sensitive << ( n_reg_166 );
 
     SC_METHOD(thread_tmp_cast_fu_204_p1);
@@ -430,10 +430,10 @@ subconv_3x3_8_stride::subconv_3x3_8_stride(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, bias_address0, "(port)bias_address0");
     sc_trace(mVcdFile, bias_ce0, "(port)bias_ce0");
     sc_trace(mVcdFile, bias_q0, "(port)bias_q0");
-    sc_trace(mVcdFile, output_0_address0, "(port)output_0_address0");
-    sc_trace(mVcdFile, output_0_ce0, "(port)output_0_ce0");
-    sc_trace(mVcdFile, output_0_we0, "(port)output_0_we0");
-    sc_trace(mVcdFile, output_0_d0, "(port)output_0_d0");
+    sc_trace(mVcdFile, output_r_address0, "(port)output_r_address0");
+    sc_trace(mVcdFile, output_r_ce0, "(port)output_r_ce0");
+    sc_trace(mVcdFile, output_r_we0, "(port)output_r_we0");
+    sc_trace(mVcdFile, output_r_d0, "(port)output_r_d0");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
@@ -538,7 +538,7 @@ subconv_3x3_8_stride::subconv_3x3_8_stride(sc_module_name name) : sc_module(name
     sc_trace(mVcdFile, tmp_9_fu_378_p2, "tmp_9_fu_378_p2");
     sc_trace(mVcdFile, tmp_9_cast_fu_384_p1, "tmp_9_cast_fu_384_p1");
     sc_trace(mVcdFile, tmp_6_cast_fu_393_p1, "tmp_6_cast_fu_393_p1");
-    sc_trace(mVcdFile, tmp_cast_19_fu_418_p1, "tmp_cast_19_fu_418_p1");
+    sc_trace(mVcdFile, tmp_cast_18_fu_418_p1, "tmp_cast_18_fu_418_p1");
     sc_trace(mVcdFile, n_cast6_fu_402_p1, "n_cast6_fu_402_p1");
     sc_trace(mVcdFile, tmp4_fu_432_p2, "tmp4_fu_432_p2");
     sc_trace(mVcdFile, tmp4_cast_fu_438_p1, "tmp4_cast_fu_438_p1");
@@ -555,8 +555,8 @@ subconv_3x3_8_stride::~subconv_3x3_8_stride() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete ShuffleNetV2_faddbkb_x_U117;
-    delete ShuffleNetV2_fmulcud_x_U118;
+    delete ShuffleNetV2_faddbkb_x_U81;
+    delete ShuffleNetV2_fmulcud_x_U82;
 }
 
 void subconv_3x3_8_stride::thread_ap_var_for_const0() {
@@ -853,27 +853,27 @@ void subconv_3x3_8_stride::thread_n_cast6_fu_402_p1() {
     n_cast6_fu_402_p1 = esl_zext<4,2>(n_reg_166.read());
 }
 
-void subconv_3x3_8_stride::thread_output_0_address0() {
-    output_0_address0 =  (sc_lv<11>) (tmp_25_cast_fu_476_p1.read());
+void subconv_3x3_8_stride::thread_output_r_address0() {
+    output_r_address0 =  (sc_lv<11>) (tmp_25_cast_fu_476_p1.read());
 }
 
-void subconv_3x3_8_stride::thread_output_0_ce0() {
+void subconv_3x3_8_stride::thread_output_r_ce0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read())) {
-        output_0_ce0 = ap_const_logic_1;
+        output_r_ce0 = ap_const_logic_1;
     } else {
-        output_0_ce0 = ap_const_logic_0;
+        output_r_ce0 = ap_const_logic_0;
     }
 }
 
-void subconv_3x3_8_stride::thread_output_0_d0() {
-    output_0_d0 = result_reg_631.read();
+void subconv_3x3_8_stride::thread_output_r_d0() {
+    output_r_d0 = result_reg_631.read();
 }
 
-void subconv_3x3_8_stride::thread_output_0_we0() {
+void subconv_3x3_8_stride::thread_output_r_we0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read())) {
-        output_0_we0 = ap_const_logic_1;
+        output_r_we0 = ap_const_logic_1;
     } else {
-        output_0_we0 = ap_const_logic_0;
+        output_r_we0 = ap_const_logic_0;
     }
 }
 
@@ -946,7 +946,7 @@ void subconv_3x3_8_stride::thread_tmp_17_cast_fu_238_p1() {
 }
 
 void subconv_3x3_8_stride::thread_tmp_17_fu_422_p2() {
-    tmp_17_fu_422_p2 = (!tmp_15_reg_553.read().is_01() || !tmp_cast_19_fu_418_p1.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_15_reg_553.read()) + sc_biguint<11>(tmp_cast_19_fu_418_p1.read()));
+    tmp_17_fu_422_p2 = (!tmp_15_reg_553.read().is_01() || !tmp_cast_18_fu_418_p1.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_15_reg_553.read()) + sc_biguint<11>(tmp_cast_18_fu_418_p1.read()));
 }
 
 void subconv_3x3_8_stride::thread_tmp_18_fu_451_p2() {
@@ -1037,8 +1037,8 @@ void subconv_3x3_8_stride::thread_tmp_9_fu_378_p2() {
     tmp_9_fu_378_p2 = (!ap_const_lv3_0.is_01() || !m_cast8_cast_fu_309_p1.read().is_01())? sc_lv<3>(): (sc_biguint<3>(ap_const_lv3_0) - sc_biguint<3>(m_cast8_cast_fu_309_p1.read()));
 }
 
-void subconv_3x3_8_stride::thread_tmp_cast_19_fu_418_p1() {
-    tmp_cast_19_fu_418_p1 = esl_zext<11,2>(n_reg_166.read());
+void subconv_3x3_8_stride::thread_tmp_cast_18_fu_418_p1() {
+    tmp_cast_18_fu_418_p1 = esl_zext<11,2>(n_reg_166.read());
 }
 
 void subconv_3x3_8_stride::thread_tmp_cast_fu_204_p1() {

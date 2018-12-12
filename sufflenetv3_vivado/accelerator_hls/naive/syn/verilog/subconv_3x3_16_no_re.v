@@ -14,19 +14,19 @@ module subconv_3x3_16_no_re (
         ap_done,
         ap_idle,
         ap_ready,
-        input_0_address0,
-        input_0_ce0,
-        input_0_q0,
+        input_r_address0,
+        input_r_ce0,
+        input_r_q0,
         weight_address0,
         weight_ce0,
         weight_q0,
         bias_address0,
         bias_ce0,
         bias_q0,
-        output_0_address0,
-        output_0_ce0,
-        output_0_we0,
-        output_0_d0
+        output_r_address0,
+        output_r_ce0,
+        output_r_we0,
+        output_r_d0
 );
 
 parameter    ap_ST_fsm_state1 = 24'd1;
@@ -60,28 +60,28 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [12:0] input_0_address0;
-output   input_0_ce0;
-input  [31:0] input_0_q0;
+output  [12:0] input_r_address0;
+output   input_r_ce0;
+input  [31:0] input_r_q0;
 output  [7:0] weight_address0;
 output   weight_ce0;
 input  [31:0] weight_q0;
 output  [4:0] bias_address0;
 output   bias_ce0;
 input  [31:0] bias_q0;
-output  [12:0] output_0_address0;
-output   output_0_ce0;
-output   output_0_we0;
-output  [31:0] output_0_d0;
+output  [12:0] output_r_address0;
+output   output_r_ce0;
+output   output_r_we0;
+output  [31:0] output_r_d0;
 
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg input_0_ce0;
+reg input_r_ce0;
 reg weight_ce0;
 reg bias_ce0;
-reg output_0_ce0;
-reg output_0_we0;
+reg output_r_ce0;
+reg output_r_we0;
 
 (* fsm_encoding = "none" *) reg   [23:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
@@ -174,7 +174,7 @@ wire   [6:0] tmp_79_fu_227_p3;
 wire   [7:0] p_shl_cast_fu_235_p1;
 wire   [7:0] tmp_cast_fu_207_p1;
 wire   [7:0] tmp_80_fu_239_p2;
-wire   [9:0] tmp_cast_41_fu_265_p1;
+wire   [9:0] tmp_cast_40_fu_265_p1;
 wire   [9:0] tmp_81_fu_269_p2;
 wire   [8:0] tmp_67_cast_fu_320_p1;
 wire   [8:0] tmp_83_fu_324_p2;
@@ -212,7 +212,7 @@ ShuffleNetV2_faddbkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-ShuffleNetV2_faddbkb_x_U45(
+ShuffleNetV2_faddbkb_x_U32(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_180_p0),
@@ -227,7 +227,7 @@ ShuffleNetV2_fmulcud #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-ShuffleNetV2_fmulcud_x_U46(
+ShuffleNetV2_fmulcud_x_U33(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(weight_load_reg_653),
@@ -456,25 +456,25 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        input_0_ce0 = 1'b1;
+        input_r_ce0 = 1'b1;
     end else begin
-        input_0_ce0 = 1'b0;
+        input_r_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state24)) begin
-        output_0_ce0 = 1'b1;
+        output_r_ce0 = 1'b1;
     end else begin
-        output_0_ce0 = 1'b0;
+        output_r_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state24)) begin
-        output_0_we0 = 1'b1;
+        output_r_we0 = 1'b1;
     end else begin
-        output_0_we0 = 1'b0;
+        output_r_we0 = 1'b0;
     end
 end
 
@@ -644,7 +644,7 @@ assign icmp5_fu_464_p2 = ((tmp_87_fu_454_p4 != 2'd1) ? 1'b1 : 1'b0);
 
 assign icmp_fu_399_p2 = ((tmp_75_fu_389_p4 != 2'd1) ? 1'b1 : 1'b0);
 
-assign input_0_address0 = tmp_121_cast_fu_488_p1;
+assign input_r_address0 = tmp_121_cast_fu_488_p1;
 
 assign m_6_fu_314_p2 = (m_reg_146 + 2'd1);
 
@@ -656,9 +656,9 @@ assign n_cast9_fu_414_p1 = n_reg_169;
 
 assign notlhs_fu_479_p2 = ((n_cast9_fu_414_p1 != tmp_76_reg_577) ? 1'b1 : 1'b0);
 
-assign output_0_address0 = tmp_113_cast_fu_514_p1;
+assign output_r_address0 = tmp_113_cast_fu_514_p1;
 
-assign output_0_d0 = result_reg_678;
+assign output_r_d0 = result_reg_678;
 
 assign p_shl_cast_fu_235_p1 = tmp_79_fu_227_p3;
 
@@ -718,13 +718,13 @@ assign tmp_75_fu_389_p4 = {{tmp_70_fu_367_p2[5:4]}};
 
 assign tmp_76_fu_298_p2 = (5'd0 - w_reg_122);
 
-assign tmp_77_fu_506_p3 = ((sel_tmp2_fu_500_p2[0:0] === 1'b1) ? input_0_q0 : 32'd0);
+assign tmp_77_fu_506_p3 = ((sel_tmp2_fu_500_p2[0:0] === 1'b1) ? input_r_q0 : 32'd0);
 
 assign tmp_79_fu_227_p3 = {{co_reg_99}, {2'd0}};
 
 assign tmp_80_fu_239_p2 = (p_shl_cast_fu_235_p1 - tmp_cast_fu_207_p1);
 
-assign tmp_81_fu_269_p2 = (tmp_cast_41_fu_265_p1 + tmp_107_cast_reg_531);
+assign tmp_81_fu_269_p2 = (tmp_cast_40_fu_265_p1 + tmp_107_cast_reg_531);
 
 assign tmp_82_fu_409_p2 = (tmp_112_cast_reg_559 + tmp_66_cast_fu_405_p1);
 
@@ -740,7 +740,7 @@ assign tmp_87_fu_454_p4 = {{tmp_73_fu_449_p2[5:4]}};
 
 assign tmp_88_fu_474_p2 = ($signed(tmp_119_cast_reg_600) + $signed(tmp_75_cast_fu_470_p1));
 
-assign tmp_cast_41_fu_265_p1 = h_reg_110;
+assign tmp_cast_40_fu_265_p1 = h_reg_110;
 
 assign tmp_cast_fu_207_p1 = co_reg_99;
 

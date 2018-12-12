@@ -1,0 +1,313 @@
+
+
+================================================================
+== Vivado HLS Report for 'shuffle_24'
+================================================================
+* Date:           Tue Dec 11 23:30:29 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        accelerator_hls
+* Solution:       naive
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.10|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  26209|  26209|  26209|  26209|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                 |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |  26208|  26208|       546|          -|          -|    48|    no    |
+        | + Loop 1.1      |    544|    544|        34|          -|          -|    16|    no    |
+        |  ++ Loop 1.1.1  |     32|     32|         2|          -|          -|    16|    no    |
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond2)
+3 --> 
+	4  / (!exitcond1)
+	2  / (exitcond1)
+4 --> 
+	5  / (!exitcond)
+	3  / (exitcond)
+5 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_6 (4)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:122
+:0  br label %.loopexit
+
+
+ <State 2>: 3.88ns
+ST_2: co (6)  [1/1] 0.00ns
+.loopexit:0  %co = phi i6 [ 0, %0 ], [ %co_21, %.loopexit.loopexit ]
+
+ST_2: tmp_102 (7)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:122
+.loopexit:1  %tmp_102 = trunc i6 %co to i1
+
+ST_2: exitcond2 (8)  [1/1] 3.88ns  loc: accelerator_hls/components.cpp:122
+.loopexit:2  %exitcond2 = icmp eq i6 %co, -16
+
+ST_2: empty (9)  [1/1] 0.00ns
+.loopexit:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 48, i64 48, i64 48)
+
+ST_2: co_21 (10)  [1/1] 2.31ns  loc: accelerator_hls/components.cpp:122
+.loopexit:4  %co_21 = add i6 1, %co
+
+ST_2: StgValue_12 (11)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:122
+.loopexit:5  br i1 %exitcond2, label %5, label %.preheader3.preheader
+
+ST_2: tmp (13)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:122
+.preheader3.preheader:0  %tmp = call i5 @_ssdm_op_PartSelect.i5.i6.i32.i32(i6 %co, i32 1, i32 5)
+
+ST_2: tmp_s (14)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:122
+.preheader3.preheader:1  %tmp_s = call i9 @_ssdm_op_BitConcatenate.i9.i5.i4(i5 %tmp, i4 0)
+
+ST_2: tmp_315_cast (15)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:122
+.preheader3.preheader:2  %tmp_315_cast = zext i9 %tmp_s to i10
+
+ST_2: tmp_181 (16)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:122
+.preheader3.preheader:3  %tmp_181 = call i10 @_ssdm_op_BitConcatenate.i10.i6.i4(i6 %co, i4 0)
+
+ST_2: tmp_317_cast (17)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:123
+.preheader3.preheader:4  %tmp_317_cast = zext i10 %tmp_181 to i11
+
+ST_2: StgValue_18 (18)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:123
+.preheader3.preheader:5  br label %.preheader3
+
+ST_2: StgValue_19 (65)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:130
+:0  ret void
+
+
+ <State 3>: 3.31ns
+ST_3: h (20)  [1/1] 0.00ns
+.preheader3:0  %h = phi i5 [ 0, %.preheader3.preheader ], [ %h_21, %.preheader3.loopexit ]
+
+ST_3: exitcond1 (21)  [1/1] 3.31ns  loc: accelerator_hls/components.cpp:123
+.preheader3:1  %exitcond1 = icmp eq i5 %h, -16
+
+ST_3: empty_78 (22)  [1/1] 0.00ns
+.preheader3:2  %empty_78 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)
+
+ST_3: h_21 (23)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:123
+.preheader3:3  %h_21 = add i5 %h, 1
+
+ST_3: StgValue_24 (24)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:123
+.preheader3:4  br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader.preheader
+
+ST_3: tmp_cast2 (26)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+.preheader.preheader:0  %tmp_cast2 = zext i5 %h to i11
+
+ST_3: tmp_cast (27)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+.preheader.preheader:1  %tmp_cast = zext i5 %h to i10
+
+ST_3: tmp_182 (28)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:125
+.preheader.preheader:2  %tmp_182 = add i10 %tmp_cast, %tmp_315_cast
+
+ST_3: tmp_320_cast (29)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+.preheader.preheader:3  %tmp_320_cast = call i14 @_ssdm_op_BitConcatenate.i14.i10.i4(i10 %tmp_182, i4 0)
+
+ST_3: tmp_183 (30)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:125
+.preheader.preheader:4  %tmp_183 = add i11 %tmp_cast2, %tmp_317_cast
+
+ST_3: tmp_323_cast (31)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:124
+.preheader.preheader:5  %tmp_323_cast = call i15 @_ssdm_op_BitConcatenate.i15.i11.i4(i11 %tmp_183, i4 0)
+
+ST_3: StgValue_31 (32)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:124
+.preheader.preheader:6  br label %.preheader
+
+ST_3: StgValue_32 (63)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 4>: 5.60ns
+ST_4: w (34)  [1/1] 0.00ns
+.preheader:0  %w = phi i5 [ %w_21, %4 ], [ 0, %.preheader.preheader ]
+
+ST_4: exitcond (35)  [1/1] 3.31ns  loc: accelerator_hls/components.cpp:124
+.preheader:1  %exitcond = icmp eq i5 %w, -16
+
+ST_4: empty_79 (36)  [1/1] 0.00ns
+.preheader:2  %empty_79 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)
+
+ST_4: w_21 (37)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:124
+.preheader:3  %w_21 = add i5 %w, 1
+
+ST_4: StgValue_37 (38)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:124
+.preheader:4  br i1 %exitcond, label %.preheader3.loopexit, label %1
+
+ST_4: tmp_105_cast1 (40)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:0  %tmp_105_cast1 = zext i5 %w to i15
+
+ST_4: tmp_105_cast (41)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:1  %tmp_105_cast = zext i5 %w to i14
+
+ST_4: tmp_184 (42)  [1/1] 2.34ns  loc: accelerator_hls/components.cpp:125
+:2  %tmp_184 = add i14 %tmp_320_cast, %tmp_105_cast
+
+ST_4: tmp_324_cast (43)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:3  %tmp_324_cast = zext i14 %tmp_184 to i64
+
+ST_4: left_addr (44)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:4  %left_addr = getelementptr [6144 x float]* %left_r, i64 0, i64 %tmp_324_cast
+
+ST_4: tmp_185 (45)  [1/1] 2.35ns  loc: accelerator_hls/components.cpp:125
+:5  %tmp_185 = add i15 %tmp_323_cast, %tmp_105_cast1
+
+ST_4: tmp_325_cast (46)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:6  %tmp_325_cast = zext i15 %tmp_185 to i64
+
+ST_4: output_addr (47)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:7  %output_addr = getelementptr [12288 x float]* %output_r, i64 0, i64 %tmp_325_cast
+
+ST_4: buffer1_1_24_16x16_a (48)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:126
+:8  %buffer1_1_24_16x16_a = getelementptr [6144 x float]* @buffer1_1_24_16x16, i64 0, i64 %tmp_324_cast
+
+ST_4: StgValue_47 (49)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:9  br i1 %tmp_102, label %3, label %2
+
+ST_4: left_load (51)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:125
+:0  %left_load = load float* %left_addr, align 4
+
+ST_4: buffer1_1_24_16x16_l (54)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:126
+:0  %buffer1_1_24_16x16_l = load float* %buffer1_1_24_16x16_a, align 4
+
+ST_4: StgValue_50 (61)  [1/1] 0.00ns
+.preheader3.loopexit:0  br label %.preheader3
+
+
+ <State 5>: 8.10ns
+ST_5: left_load (51)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:125
+:0  %left_load = load float* %left_addr, align 4
+
+ST_5: StgValue_52 (52)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:125
+:1  br label %4
+
+ST_5: buffer1_1_24_16x16_l (54)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:126
+:0  %buffer1_1_24_16x16_l = load float* %buffer1_1_24_16x16_a, align 4
+
+ST_5: StgValue_54 (55)  [1/1] 1.59ns
+:1  br label %4
+
+ST_5: storemerge (57)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:125
+:0  %storemerge = phi float [ %left_load, %2 ], [ %buffer1_1_24_16x16_l, %3 ]
+
+ST_5: StgValue_56 (58)  [1/1] 3.25ns  loc: accelerator_hls/components.cpp:126
+:1  store float %storemerge, float* %output_addr, align 4
+
+ST_5: StgValue_57 (59)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:124
+:2  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('co') with incoming values : ('co', accelerator_hls/components.cpp:122) [6]  (1.59 ns)
+
+ <State 2>: 3.88ns
+The critical path consists of the following:
+	'phi' operation ('co') with incoming values : ('co', accelerator_hls/components.cpp:122) [6]  (0 ns)
+	'icmp' operation ('exitcond2', accelerator_hls/components.cpp:122) [8]  (3.88 ns)
+
+ <State 3>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', accelerator_hls/components.cpp:123) [20]  (0 ns)
+	'icmp' operation ('exitcond1', accelerator_hls/components.cpp:123) [21]  (3.31 ns)
+
+ <State 4>: 5.6ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', accelerator_hls/components.cpp:124) [34]  (0 ns)
+	'add' operation ('tmp_184', accelerator_hls/components.cpp:125) [42]  (2.34 ns)
+	'getelementptr' operation ('buffer1_1_24_16x16_a', accelerator_hls/components.cpp:126) [48]  (0 ns)
+	'load' operation ('buffer1_1_24_16x16_l', accelerator_hls/components.cpp:126) on array 'buffer1_1_24_16x16' [54]  (3.25 ns)
+
+ <State 5>: 8.1ns
+The critical path consists of the following:
+	'load' operation ('left_load', accelerator_hls/components.cpp:125) on array 'left_r' [51]  (3.25 ns)
+	multiplexor before 'phi' operation ('storemerge', accelerator_hls/components.cpp:125) with incoming values : ('left_load', accelerator_hls/components.cpp:125) ('buffer1_1_24_16x16_l', accelerator_hls/components.cpp:126) [57]  (1.59 ns)
+	'phi' operation ('storemerge', accelerator_hls/components.cpp:125) with incoming values : ('left_load', accelerator_hls/components.cpp:125) ('buffer1_1_24_16x16_l', accelerator_hls/components.cpp:126) [57]  (0 ns)
+	'store' operation (accelerator_hls/components.cpp:126) of variable 'storemerge', accelerator_hls/components.cpp:125 on array 'output_r' [58]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

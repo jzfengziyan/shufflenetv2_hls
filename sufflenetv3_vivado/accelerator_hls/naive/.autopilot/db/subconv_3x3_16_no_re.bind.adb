@@ -15,7 +15,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>input_0</name>
+						<name>input_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -24,7 +24,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>input[0]</originalName>
+						<originalName>input</originalName>
 						<rtlName></rtlName>
 						<coreName>RAM</coreName>
 					</Obj>
@@ -99,7 +99,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>output_0</name>
+						<name>output_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -108,7 +108,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output[0]</originalName>
+						<originalName>output</originalName>
 						<rtlName></rtlName>
 						<coreName>RAM</coreName>
 					</Obj>
@@ -1006,7 +1006,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>tmp_cast_41</name>
+						<name>tmp_cast_40</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>114</lineNumber>
@@ -3189,7 +3189,7 @@
 					<Obj>
 						<type>0</type>
 						<id>93</id>
-						<name>input_0_addr</name>
+						<name>input_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>110</lineNumber>
@@ -3233,7 +3233,7 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>input_0_load</name>
+						<name>input_load</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>110</lineNumber>
@@ -3859,7 +3859,7 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>output_0_addr</name>
+						<name>output_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>114</lineNumber>
@@ -9200,7 +9200,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_0_addr_gep_fu_75</first>
+			<first>input_addr_gep_fu_75</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -9264,7 +9264,7 @@
 			</second>
 		</item>
 		<item>
-			<first>output_0_addr_gep_fu_87</first>
+			<first>output_addr_gep_fu_87</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -9608,7 +9608,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_cast_41_fu_265</first>
+			<first>tmp_cast_40_fu_265</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -9729,7 +9729,7 @@
 		</item>
 		<item>
 			<first>
-				<first>input_0</first>
+				<first>input_r</first>
 				<second>0</second>
 			</first>
 			<second>
@@ -9741,7 +9741,7 @@
 		</item>
 		<item>
 			<first>
-				<first>output_0</first>
+				<first>output_r</first>
 				<second>0</second>
 			</first>
 			<second>
@@ -10139,7 +10139,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_0_addr_reg_648</first>
+			<first>input_addr_reg_648</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10503,7 +10503,7 @@
 			</second>
 		</item>
 		<item>
-			<first>input_0(p0)</first>
+			<first>input_r(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -10519,7 +10519,7 @@
 			</second>
 		</item>
 		<item>
-			<first>output_0(p0)</first>
+			<first>output_r(p0)</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

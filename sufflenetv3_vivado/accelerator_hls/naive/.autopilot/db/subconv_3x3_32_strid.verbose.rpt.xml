@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'subconv_3x3_32_strid'" level="0">
-<item name = "Date">Mon Dec 10 14:57:21 2018
+<item name = "Date">Tue Dec 11 23:30:57 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">accelerator_hls</item>
@@ -159,7 +159,7 @@
 <column name="tmp_71_cast_reg_512">5, 0, 10, 5</column>
 <column name="tmp_75_cast_reg_536">10, 0, 14, 4</column>
 <column name="tmp_83_cast_reg_572">11, 0, 16, 5</column>
-<column name="tmp_cast_31_reg_530">4, 0, 6, 2</column>
+<column name="tmp_cast_30_reg_530">4, 0, 6, 2</column>
 <column name="w_4_reg_544">5, 0, 5, 0</column>
 <column name="w_reg_121">5, 0, 5, 0</column>
 <column name="weight_load_reg_620">32, 0, 32, 0</column>
@@ -187,10 +187,10 @@
 <column name="bias_address0">out, 5, ap_memory, bias, array</column>
 <column name="bias_ce0">out, 1, ap_memory, bias, array</column>
 <column name="bias_q0">in, 32, ap_memory, bias, array</column>
-<column name="output_0_address0">out, 13, ap_memory, output_0, array</column>
-<column name="output_0_ce0">out, 1, ap_memory, output_0, array</column>
-<column name="output_0_we0">out, 1, ap_memory, output_0, array</column>
-<column name="output_0_d0">out, 32, ap_memory, output_0, array</column>
+<column name="output_r_address0">out, 13, ap_memory, output_r, array</column>
+<column name="output_r_ce0">out, 1, ap_memory, output_r, array</column>
+<column name="output_r_we0">out, 1, ap_memory, output_r, array</column>
+<column name="output_r_d0">out, 32, ap_memory, output_r, array</column>
 </table>
 </item>
 </section>

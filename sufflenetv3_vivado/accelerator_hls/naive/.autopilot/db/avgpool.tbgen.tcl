@@ -60,8 +60,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "conv_last_output", "Type" : "Memory", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ShuffleNetV2_faddbkb_x_U167", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ShuffleNetV2_fmulcud_x_U168", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ShuffleNetV2_faddbkb_x_U114", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.ShuffleNetV2_fmulcud_x_U115", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

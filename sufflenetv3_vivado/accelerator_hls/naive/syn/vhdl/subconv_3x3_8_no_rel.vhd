@@ -17,19 +17,19 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    input_0_address0 : OUT STD_LOGIC_VECTOR (11 downto 0);
-    input_0_ce0 : OUT STD_LOGIC;
-    input_0_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    input_r_address0 : OUT STD_LOGIC_VECTOR (11 downto 0);
+    input_r_ce0 : OUT STD_LOGIC;
+    input_r_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     weight_address0 : OUT STD_LOGIC_VECTOR (8 downto 0);
     weight_ce0 : OUT STD_LOGIC;
     weight_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     bias_address0 : OUT STD_LOGIC_VECTOR (5 downto 0);
     bias_ce0 : OUT STD_LOGIC;
     bias_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    output_0_address0 : OUT STD_LOGIC_VECTOR (11 downto 0);
-    output_0_ce0 : OUT STD_LOGIC;
-    output_0_we0 : OUT STD_LOGIC;
-    output_0_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
+    output_r_address0 : OUT STD_LOGIC_VECTOR (11 downto 0);
+    output_r_ce0 : OUT STD_LOGIC;
+    output_r_we0 : OUT STD_LOGIC;
+    output_r_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
 end;
 
 
@@ -200,7 +200,7 @@ architecture behav of subconv_3x3_8_no_rel is
     signal p_shl_cast_fu_237_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal tmp_cast_fu_209_p1 : STD_LOGIC_VECTOR (8 downto 0);
     signal tmp_20_fu_241_p2 : STD_LOGIC_VECTOR (8 downto 0);
-    signal tmp_cast_21_fu_267_p1 : STD_LOGIC_VECTOR (9 downto 0);
+    signal tmp_cast_20_fu_267_p1 : STD_LOGIC_VECTOR (9 downto 0);
     signal tmp_22_fu_271_p2 : STD_LOGIC_VECTOR (9 downto 0);
     signal tmp_15_cast_fu_322_p1 : STD_LOGIC_VECTOR (9 downto 0);
     signal tmp_27_fu_326_p2 : STD_LOGIC_VECTOR (9 downto 0);
@@ -263,7 +263,7 @@ architecture behav of subconv_3x3_8_no_rel is
 
 
 begin
-    ShuffleNetV2_faddbkb_x_U96 : component ShuffleNetV2_faddbkb
+    ShuffleNetV2_faddbkb_x_U65 : component ShuffleNetV2_faddbkb
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -278,7 +278,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_182_p2);
 
-    ShuffleNetV2_fmulcud_x_U97 : component ShuffleNetV2_fmulcud
+    ShuffleNetV2_fmulcud_x_U66 : component ShuffleNetV2_fmulcud
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -696,14 +696,14 @@ begin
     h_cast_fu_251_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(h_reg_112),5));
     icmp5_fu_466_p2 <= "0" when (tmp_32_fu_456_p4 = ap_const_lv2_1) else "1";
     icmp_fu_401_p2 <= "0" when (tmp_30_fu_391_p4 = ap_const_lv2_1) else "1";
-    input_0_address0 <= tmp_49_cast_fu_490_p1(12 - 1 downto 0);
+    input_r_address0 <= tmp_49_cast_fu_490_p1(12 - 1 downto 0);
 
-    input_0_ce0_assign_proc : process(ap_CS_fsm_state7)
+    input_r_ce0_assign_proc : process(ap_CS_fsm_state7)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
-            input_0_ce0 <= ap_const_logic_1;
+            input_r_ce0 <= ap_const_logic_1;
         else 
-            input_0_ce0 <= ap_const_logic_0;
+            input_r_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -712,25 +712,25 @@ begin
     n_2_fu_426_p2 <= std_logic_vector(unsigned(n_reg_171) + unsigned(ap_const_lv2_1));
     n_cast9_fu_416_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(n_reg_171),4));
     notlhs_fu_481_p2 <= "0" when (n_cast9_fu_416_p1 = tmp_23_reg_579) else "1";
-    output_0_address0 <= tmp_41_cast_fu_516_p1(12 - 1 downto 0);
+    output_r_address0 <= tmp_41_cast_fu_516_p1(12 - 1 downto 0);
 
-    output_0_ce0_assign_proc : process(ap_CS_fsm_state24)
+    output_r_ce0_assign_proc : process(ap_CS_fsm_state24)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state24)) then 
-            output_0_ce0 <= ap_const_logic_1;
+            output_r_ce0 <= ap_const_logic_1;
         else 
-            output_0_ce0 <= ap_const_logic_0;
+            output_r_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
-    output_0_d0 <= result_reg_680;
+    output_r_d0 <= result_reg_680;
 
-    output_0_we0_assign_proc : process(ap_CS_fsm_state24)
+    output_r_we0_assign_proc : process(ap_CS_fsm_state24)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state24)) then 
-            output_0_we0 <= ap_const_logic_1;
+            output_r_we0 <= ap_const_logic_1;
         else 
-            output_0_we0 <= ap_const_logic_0;
+            output_r_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -758,13 +758,13 @@ begin
     tmp_20_cast_fu_432_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(n_reg_171),10));
     tmp_20_fu_241_p2 <= std_logic_vector(unsigned(p_shl_cast_fu_237_p1) - unsigned(tmp_cast_fu_209_p1));
     tmp_21_fu_451_p2 <= std_logic_vector(unsigned(w_cast_reg_566) + unsigned(tmp5_cast_fu_447_p1));
-    tmp_22_fu_271_p2 <= std_logic_vector(unsigned(tmp_cast_21_fu_267_p1) + unsigned(tmp_35_cast_reg_533));
+    tmp_22_fu_271_p2 <= std_logic_vector(unsigned(tmp_cast_20_fu_267_p1) + unsigned(tmp_35_cast_reg_533));
         tmp_23_cast_fu_472_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(tmp_21_fu_451_p2),13));
 
     tmp_23_fu_300_p2 <= std_logic_vector(unsigned(ap_const_lv4_0) - unsigned(w_reg_124));
     tmp_24_fu_411_p2 <= std_logic_vector(unsigned(tmp_40_cast_reg_561) + unsigned(tmp_14_cast_fu_407_p1));
     tmp_25_fu_508_p3 <= 
-        input_0_q0 when (sel_tmp2_fu_502_p2(0) = '1') else 
+        input_r_q0 when (sel_tmp2_fu_502_p2(0) = '1') else 
         ap_const_lv32_0;
     tmp_27_fu_326_p2 <= std_logic_vector(unsigned(tmp_15_cast_fu_322_p1) + unsigned(tmp_37_cast_reg_538));
     tmp_28_fu_337_p2 <= std_logic_vector(unsigned(tmp_15_fu_331_p2) - unsigned(tmp_27_fu_326_p2));
@@ -782,7 +782,7 @@ begin
     tmp_47_cast_fu_383_p3 <= (tmp_29_fu_378_p2 & ap_const_lv3_0);
     tmp_48_cast_fu_486_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_31_reg_625),64));
     tmp_49_cast_fu_490_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_33_reg_635),64));
-    tmp_cast_21_fu_267_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(h_reg_112),10));
+    tmp_cast_20_fu_267_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(h_reg_112),10));
     tmp_cast_fu_209_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(co_reg_101),9));
     tmp_fu_204_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(co_reg_101),64));
     tmp_s_fu_213_p3 <= (co_reg_101 & ap_const_lv3_0);

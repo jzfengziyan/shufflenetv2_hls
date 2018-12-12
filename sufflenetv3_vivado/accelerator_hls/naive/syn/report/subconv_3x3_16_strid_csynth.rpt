@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'subconv_3x3_16_strid'
 ================================================================
-* Date:           Mon Dec 10 14:57:22 2018
+* Date:           Tue Dec 11 23:30:58 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -77,8 +77,8 @@
     +----------------------------+----------------------+---------+-------+-----+-----+
     |          Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
     +----------------------------+----------------------+---------+-------+-----+-----+
-    |ShuffleNetV2_faddbkb_x_U66  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
-    |ShuffleNetV2_fmulcud_x_U67  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
+    |ShuffleNetV2_faddbkb_x_U48  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
+    |ShuffleNetV2_fmulcud_x_U49  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
     +----------------------------+----------------------+---------+-------+-----+-----+
     |Total                       |                      |        0|      5|  348|  711|
     +----------------------------+----------------------+---------+-------+-----+-----+
@@ -179,7 +179,7 @@
     |tmp_89_cast_reg_509   |  10|   0|   10|          0|
     |tmp_91_cast_reg_514   |   6|   0|   10|          4|
     |tmp_95_cast_reg_538   |  10|   0|   13|          3|
-    |tmp_cast_36_reg_532   |   3|   0|    5|          2|
+    |tmp_cast_35_reg_532   |   3|   0|    5|          2|
     |w_5_reg_546           |   4|   0|    4|          0|
     |w_reg_123             |   4|   0|    4|          0|
     |weight_load_reg_622   |  32|   0|   32|          0|
@@ -211,9 +211,9 @@
 |bias_address0      | out |    6|  ap_memory |         bias         |     array    |
 |bias_ce0           | out |    1|  ap_memory |         bias         |     array    |
 |bias_q0            |  in |   32|  ap_memory |         bias         |     array    |
-|output_0_address0  | out |   12|  ap_memory |       output_0       |     array    |
-|output_0_ce0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_we0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_d0        | out |   32|  ap_memory |       output_0       |     array    |
+|output_r_address0  | out |   12|  ap_memory |       output_r       |     array    |
+|output_r_ce0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_we0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_d0        | out |   32|  ap_memory |       output_r       |     array    |
 +-------------------+-----+-----+------------+----------------------+--------------+
 

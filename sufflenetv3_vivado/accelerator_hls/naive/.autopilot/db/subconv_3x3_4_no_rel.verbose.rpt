@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'subconv_3x3_4_no_rel'
 ================================================================
-* Date:           Mon Dec 10 14:57:24 2018
+* Date:           Tue Dec 11 23:30:59 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -74,14 +74,14 @@
 
 + Detail: 
     * Instance: 
-    +-----------------------------+----------------------+---------+-------+-----+-----+
-    |           Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
-    +-----------------------------+----------------------+---------+-------+-----+-----+
-    |ShuffleNetV2_faddbkb_x_U146  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
-    |ShuffleNetV2_fmulcud_x_U147  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
-    +-----------------------------+----------------------+---------+-------+-----+-----+
-    |Total                        |                      |        0|      5|  348|  711|
-    +-----------------------------+----------------------+---------+-------+-----+-----+
+    +----------------------------+----------------------+---------+-------+-----+-----+
+    |          Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +----------------------------+----------------------+---------+-------+-----+-----+
+    |ShuffleNetV2_faddbkb_x_U98  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
+    |ShuffleNetV2_fmulcud_x_U99  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
+    +----------------------------+----------------------+---------+-------+-----+-----+
+    |Total                       |                      |        0|      5|  348|  711|
+    +----------------------------+----------------------+---------+-------+-----+-----+
 
     * DSP48: 
     N/A
@@ -208,19 +208,19 @@
 |ap_done            | out |    1| ap_ctrl_hs | subconv_3x3_4_no_rel | return value |
 |ap_idle            | out |    1| ap_ctrl_hs | subconv_3x3_4_no_rel | return value |
 |ap_ready           | out |    1| ap_ctrl_hs | subconv_3x3_4_no_rel | return value |
-|input_0_address0   | out |   11|  ap_memory |        input_0       |     array    |
-|input_0_ce0        | out |    1|  ap_memory |        input_0       |     array    |
-|input_0_q0         |  in |   32|  ap_memory |        input_0       |     array    |
+|input_r_address0   | out |   11|  ap_memory |        input_r       |     array    |
+|input_r_ce0        | out |    1|  ap_memory |        input_r       |     array    |
+|input_r_q0         |  in |   32|  ap_memory |        input_r       |     array    |
 |weight_address0    | out |   10|  ap_memory |        weight        |     array    |
 |weight_ce0         | out |    1|  ap_memory |        weight        |     array    |
 |weight_q0          |  in |   32|  ap_memory |        weight        |     array    |
 |bias_address0      | out |    7|  ap_memory |         bias         |     array    |
 |bias_ce0           | out |    1|  ap_memory |         bias         |     array    |
 |bias_q0            |  in |   32|  ap_memory |         bias         |     array    |
-|output_0_address0  | out |   11|  ap_memory |       output_0       |     array    |
-|output_0_ce0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_we0       | out |    1|  ap_memory |       output_0       |     array    |
-|output_0_d0        | out |   32|  ap_memory |       output_0       |     array    |
+|output_r_address0  | out |   11|  ap_memory |       output_r       |     array    |
+|output_r_ce0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_we0       | out |    1|  ap_memory |       output_r       |     array    |
+|output_r_d0        | out |   32|  ap_memory |       output_r       |     array    |
 +-------------------+-----+-----+------------+----------------------+--------------+
 
 ============================================================
@@ -309,7 +309,7 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
  <State 1>: 1.59ns
-ST_1: StgValue_25 (5)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:445
+ST_1: StgValue_25 (5)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:489
 :0  br label %.loopexit
 
 
@@ -317,46 +317,46 @@ ST_1: StgValue_25 (5)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:445
 ST_2: co (7)  [1/1] 0.00ns
 .loopexit:0  %co = phi i7 [ 0, %0 ], [ %co_3, %.loopexit.loopexit ]
 
-ST_2: exitcond4 (8)  [1/1] 2.91ns  loc: accelerator_hls/components.cpp:445
+ST_2: exitcond4 (8)  [1/1] 2.91ns  loc: accelerator_hls/components.cpp:489
 .loopexit:1  %exitcond4 = icmp eq i7 %co, -32
 
 ST_2: empty (9)  [1/1] 0.00ns
 .loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 96, i64 96, i64 96)
 
-ST_2: co_3 (10)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:445
+ST_2: co_3 (10)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:489
 .loopexit:3  %co_3 = add i7 %co, 1
 
-ST_2: StgValue_30 (11)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:445
+ST_2: StgValue_30 (11)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:489
 .loopexit:4  br i1 %exitcond4, label %2, label %.preheader7.preheader
 
-ST_2: tmp (13)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_2: tmp (13)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader7.preheader:0  %tmp = zext i7 %co to i64
 
-ST_2: tmp_cast (14)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:445
+ST_2: tmp_cast (14)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:489
 .preheader7.preheader:1  %tmp_cast = zext i7 %co to i10
 
-ST_2: tmp_s (15)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:445
+ST_2: tmp_s (15)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:489
 .preheader7.preheader:2  %tmp_s = call i9 @_ssdm_op_BitConcatenate.i9.i7.i2(i7 %co, i2 0)
 
-ST_2: tmp_51_cast2 (16)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:445
+ST_2: tmp_51_cast2 (16)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:489
 .preheader7.preheader:3  %tmp_51_cast2 = zext i9 %tmp_s to i10
 
-ST_2: tmp_51_cast (17)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_2: tmp_51_cast (17)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader7.preheader:4  %tmp_51_cast = zext i9 %tmp_s to i10
 
-ST_2: tmp_35 (18)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:451
+ST_2: tmp_35 (18)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:495
 .preheader7.preheader:5  %tmp_35 = sub i10 %tmp_51_cast, %tmp_cast
 
-ST_2: tmp_53_cast (19)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_2: tmp_53_cast (19)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader7.preheader:6  %tmp_53_cast = sext i10 %tmp_35 to i11
 
-ST_2: bias_addr (20)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:454
+ST_2: bias_addr (20)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:498
 .preheader7.preheader:7  %bias_addr = getelementptr [96 x float]* %bias, i64 0, i64 %tmp
 
-ST_2: StgValue_39 (21)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:446
+ST_2: StgValue_39 (21)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:490
 .preheader7.preheader:8  br label %.preheader7
 
-ST_2: StgValue_40 (116)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:459
+ST_2: StgValue_40 (116)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:503
 :0  ret void
 
 
@@ -364,31 +364,31 @@ ST_2: StgValue_40 (116)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:459
 ST_3: h (23)  [1/1] 0.00ns
 .preheader7:0  %h = phi i3 [ 0, %.preheader7.preheader ], [ %h_3, %.preheader7.loopexit ]
 
-ST_3: h_cast (24)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:446
+ST_3: h_cast (24)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:490
 .preheader7:1  %h_cast = zext i3 %h to i4
 
-ST_3: exitcond3 (25)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:446
+ST_3: exitcond3 (25)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:490
 .preheader7:2  %exitcond3 = icmp eq i3 %h, -4
 
-ST_3: empty_25 (26)  [1/1] 0.00ns
-.preheader7:3  %empty_25 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+ST_3: empty_24 (26)  [1/1] 0.00ns
+.preheader7:3  %empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
-ST_3: h_3 (27)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:446
+ST_3: h_3 (27)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:490
 .preheader7:4  %h_3 = add i3 %h, 1
 
-ST_3: StgValue_46 (28)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:446
+ST_3: StgValue_46 (28)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:490
 .preheader7:5  br i1 %exitcond3, label %.loopexit.loopexit, label %.preheader6.preheader
 
-ST_3: tmp_cast_26 (30)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:455
-.preheader6.preheader:0  %tmp_cast_26 = zext i3 %h to i10
+ST_3: tmp_cast_25 (30)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:499
+.preheader6.preheader:0  %tmp_cast_25 = zext i3 %h to i10
 
-ST_3: tmp_36 (31)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:455
-.preheader6.preheader:1  %tmp_36 = add i10 %tmp_cast_26, %tmp_51_cast
+ST_3: tmp_36 (31)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:499
+.preheader6.preheader:1  %tmp_36 = add i10 %tmp_cast_25, %tmp_51_cast
 
-ST_3: tmp_56_cast (32)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:447
+ST_3: tmp_56_cast (32)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:491
 .preheader6.preheader:2  %tmp_56_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_36, i2 0)
 
-ST_3: StgValue_50 (33)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:447
+ST_3: StgValue_50 (33)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:491
 .preheader6.preheader:3  br label %.preheader6
 
 ST_3: StgValue_51 (114)  [1/1] 0.00ns
@@ -399,25 +399,25 @@ ST_3: StgValue_51 (114)  [1/1] 0.00ns
 ST_4: w (35)  [1/1] 0.00ns
 .preheader6:0  %w = phi i3 [ %w_3, %1 ], [ 0, %.preheader6.preheader ]
 
-ST_4: w_cast (36)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:447
+ST_4: w_cast (36)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:491
 .preheader6:1  %w_cast = zext i3 %w to i4
 
-ST_4: exitcond2 (37)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:447
+ST_4: exitcond2 (37)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:491
 .preheader6:2  %exitcond2 = icmp eq i3 %w, -4
 
-ST_4: empty_27 (38)  [1/1] 0.00ns
-.preheader6:3  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
+ST_4: empty_26 (38)  [1/1] 0.00ns
+.preheader6:3  %empty_26 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)
 
-ST_4: w_3 (39)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:447
+ST_4: w_3 (39)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:491
 .preheader6:4  %w_3 = add i3 %w, 1
 
-ST_4: StgValue_57 (40)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:447
+ST_4: StgValue_57 (40)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:491
 .preheader6:5  br i1 %exitcond2, label %.preheader7.loopexit, label %.preheader5.preheader
 
-ST_4: tmp_37 (42)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:451
+ST_4: tmp_37 (42)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:495
 .preheader5.preheader:0  %tmp_37 = sub i3 0, %w
 
-ST_4: StgValue_59 (43)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:449
+ST_4: StgValue_59 (43)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:493
 .preheader5.preheader:1  br label %.preheader5
 
 ST_4: StgValue_60 (112)  [1/1] 0.00ns
@@ -425,79 +425,79 @@ ST_4: StgValue_60 (112)  [1/1] 0.00ns
 
 
  <State 5>: 6.76ns
-ST_5: sum (45)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_5: sum (45)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader5:0  %sum = phi float [ 0.000000e+00, %.preheader5.preheader ], [ %sum_1, %.preheader5.loopexit ]
 
 ST_5: m (46)  [1/1] 0.00ns
 .preheader5:1  %m = phi i2 [ 0, %.preheader5.preheader ], [ %m_3, %.preheader5.loopexit ]
 
-ST_5: m_cast (47)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:449
+ST_5: m_cast (47)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:493
 .preheader5:2  %m_cast = zext i2 %m to i3
 
-ST_5: exitcond1 (48)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:449
+ST_5: exitcond1 (48)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:493
 .preheader5:3  %exitcond1 = icmp eq i2 %m, -1
 
-ST_5: empty_28 (49)  [1/1] 0.00ns
-.preheader5:4  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+ST_5: empty_27 (49)  [1/1] 0.00ns
+.preheader5:4  %empty_27 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
 
-ST_5: m_3 (50)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:449
+ST_5: m_3 (50)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:493
 .preheader5:5  %m_3 = add i2 %m, 1
 
-ST_5: StgValue_67 (51)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:449
+ST_5: StgValue_67 (51)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:493
 .preheader5:6  br i1 %exitcond1, label %1, label %.preheader.preheader
 
-ST_5: tmp_28_cast (53)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_28_cast (53)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:0  %tmp_28_cast = zext i2 %m to i11
 
-ST_5: tmp_41 (54)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_41 (54)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:1  %tmp_41 = add i11 %tmp_28_cast, %tmp_53_cast
 
-ST_5: tmp_33 (55)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451 (grouped into LUT with out node tmp_42)
+ST_5: tmp_33 (55)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495 (grouped into LUT with out node tmp_42)
 .preheader.preheader:2  %tmp_33 = shl i11 %tmp_41, 2
 
-ST_5: tmp_42 (56)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:451 (out node of the LUT)
+ST_5: tmp_42 (56)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:495 (out node of the LUT)
 .preheader.preheader:3  %tmp_42 = sub i11 %tmp_33, %tmp_41
 
-ST_5: tmp_29 (57)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_29 (57)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:4  %tmp_29 = sub i3 0, %m_cast
 
-ST_5: tmp_30 (58)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_30 (58)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:5  %tmp_30 = icmp ne i3 %h, %tmp_29
 
-ST_5: tmp4 (59)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp4 (59)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:6  %tmp4 = add i2 -1, %m
 
-ST_5: tmp4_cast (60)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp4_cast (60)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:7  %tmp4_cast = sext i2 %tmp4 to i4
 
-ST_5: tmp_31 (61)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_31 (61)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:8  %tmp_31 = add i4 %tmp4_cast, %h_cast
 
-ST_5: tmp_32_cast (62)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_32_cast (62)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:9  %tmp_32_cast = sext i4 %tmp_31 to i10
 
-ST_5: tmp_43 (63)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_43 (63)  [1/1] 2.32ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:10  %tmp_43 = add i10 %tmp_32_cast, %tmp_51_cast2
 
-ST_5: tmp_63_cast (64)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_63_cast (64)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:11  %tmp_63_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_43, i2 0)
 
-ST_5: tmp_44 (65)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_5: tmp_44 (65)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:12  %tmp_44 = call i2 @_ssdm_op_PartSelect.i2.i4.i32.i32(i4 %tmp_31, i32 2, i32 3)
 
-ST_5: icmp (66)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:451
+ST_5: icmp (66)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:495
 .preheader.preheader:13  %icmp = icmp ne i2 %tmp_44, 1
 
-ST_5: StgValue_82 (67)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:450
+ST_5: StgValue_82 (67)  [1/1] 1.59ns  loc: accelerator_hls/components.cpp:494
 .preheader.preheader:14  br label %.preheader
 
-ST_5: bias_load (103)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:454
+ST_5: bias_load (103)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:498
 :0  %bias_load = load float* %bias_addr, align 4
 
-ST_5: tmp_27_cast (105)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:455
+ST_5: tmp_27_cast (105)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:499
 :2  %tmp_27_cast = zext i3 %w to i12
 
-ST_5: tmp_40 (106)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:455
+ST_5: tmp_40 (106)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:499
 :3  %tmp_40 = add i12 %tmp_56_cast, %tmp_27_cast
 
 
@@ -508,49 +508,49 @@ ST_6: sum_1 (69)  [1/1] 0.00ns
 ST_6: n (70)  [1/1] 0.00ns
 .preheader:1  %n = phi i2 [ %n_3, %_ifconv ], [ 0, %.preheader.preheader ]
 
-ST_6: n_cast (71)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:450
+ST_6: n_cast (71)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:494
 .preheader:2  %n_cast = zext i2 %n to i3
 
-ST_6: exitcond (72)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:450
+ST_6: exitcond (72)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:494
 .preheader:3  %exitcond = icmp eq i2 %n, -1
 
-ST_6: empty_29 (73)  [1/1] 0.00ns
-.preheader:4  %empty_29 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+ST_6: empty_28 (73)  [1/1] 0.00ns
+.preheader:4  %empty_28 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
 
-ST_6: n_3 (74)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:450
+ST_6: n_3 (74)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:494
 .preheader:5  %n_3 = add i2 %n, 1
 
-ST_6: StgValue_92 (75)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:450
+ST_6: StgValue_92 (75)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:494
 .preheader:6  br i1 %exitcond, label %.preheader5.loopexit, label %_ifconv
 
-ST_6: tmp_33_cast (77)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp_33_cast (77)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:0  %tmp_33_cast = zext i2 %n to i11
 
-ST_6: tmp_45 (78)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp_45 (78)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:495
 _ifconv:1  %tmp_45 = add i11 %tmp_42, %tmp_33_cast
 
-ST_6: tmp5 (82)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp5 (82)  [1/1] 2.17ns  loc: accelerator_hls/components.cpp:495
 _ifconv:5  %tmp5 = add i2 %n, -1
 
-ST_6: tmp5_cast (83)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp5_cast (83)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:6  %tmp5_cast = sext i2 %tmp5 to i4
 
-ST_6: tmp_34 (84)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp_34 (84)  [1/1] 2.26ns  loc: accelerator_hls/components.cpp:495
 _ifconv:7  %tmp_34 = add i4 %w_cast, %tmp5_cast
 
-ST_6: tmp_46 (85)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp_46 (85)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:8  %tmp_46 = call i2 @_ssdm_op_PartSelect.i2.i4.i32.i32(i4 %tmp_34, i32 2, i32 3)
 
-ST_6: icmp5 (86)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:451
+ST_6: icmp5 (86)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:495
 _ifconv:9  %icmp5 = icmp ne i2 %tmp_46, 1
 
-ST_6: tmp_36_cast (87)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp_36_cast (87)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:10  %tmp_36_cast = sext i4 %tmp_34 to i12
 
-ST_6: tmp_47 (88)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:451
+ST_6: tmp_47 (88)  [1/1] 2.33ns  loc: accelerator_hls/components.cpp:495
 _ifconv:11  %tmp_47 = add i12 %tmp_63_cast, %tmp_36_cast
 
-ST_6: notlhs (92)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:451
+ST_6: notlhs (92)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:495
 _ifconv:15  %notlhs = icmp ne i3 %n_cast, %tmp_37
 
 ST_6: StgValue_103 (101)  [1/1] 0.00ns
@@ -558,134 +558,134 @@ ST_6: StgValue_103 (101)  [1/1] 0.00ns
 
 
  <State 7>: 3.25ns
-ST_7: tmp_64_cast (79)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_7: tmp_64_cast (79)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:2  %tmp_64_cast = zext i11 %tmp_45 to i64
 
-ST_7: weight_addr (80)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_7: weight_addr (80)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:3  %weight_addr = getelementptr [864 x float]* %weight, i64 0, i64 %tmp_64_cast
 
-ST_7: weight_load (81)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:451
+ST_7: weight_load (81)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:495
 _ifconv:4  %weight_load = load float* %weight_addr, align 4
 
-ST_7: tmp_65_cast (89)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
+ST_7: tmp_65_cast (89)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
 _ifconv:12  %tmp_65_cast = zext i12 %tmp_47 to i64
 
-ST_7: input_0_addr (90)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451
-_ifconv:13  %input_0_addr = getelementptr [1536 x float]* %input_0, i64 0, i64 %tmp_65_cast
+ST_7: input_addr (90)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495
+_ifconv:13  %input_addr = getelementptr [1536 x float]* %input_r, i64 0, i64 %tmp_65_cast
 
-ST_7: input_0_load (91)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:451
-_ifconv:14  %input_0_load = load float* %input_0_addr, align 4
+ST_7: input_load (91)  [2/2] 3.25ns  loc: accelerator_hls/components.cpp:495
+_ifconv:14  %input_load = load float* %input_addr, align 4
 
 
  <State 8>: 5.32ns
-ST_8: weight_load (81)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:451
+ST_8: weight_load (81)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:495
 _ifconv:4  %weight_load = load float* %weight_addr, align 4
 
-ST_8: input_0_load (91)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:451
-_ifconv:14  %input_0_load = load float* %input_0_addr, align 4
+ST_8: input_load (91)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:495
+_ifconv:14  %input_load = load float* %input_addr, align 4
 
-ST_8: tmp6 (93)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451 (grouped into LUT with out node tmp_38)
+ST_8: tmp6 (93)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495 (grouped into LUT with out node tmp_38)
 _ifconv:16  %tmp6 = and i1 %icmp, %notlhs
 
-ST_8: tmp7 (94)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451 (grouped into LUT with out node tmp_38)
+ST_8: tmp7 (94)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495 (grouped into LUT with out node tmp_38)
 _ifconv:17  %tmp7 = and i1 %tmp_30, %icmp5
 
-ST_8: sel_tmp2 (95)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:451 (grouped into LUT with out node tmp_38)
+ST_8: sel_tmp2 (95)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:495 (grouped into LUT with out node tmp_38)
 _ifconv:18  %sel_tmp2 = and i1 %tmp7, %tmp6
 
-ST_8: tmp_38 (96)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:451 (out node of the LUT)
-_ifconv:19  %tmp_38 = select i1 %sel_tmp2, float %input_0_load, float 0.000000e+00
+ST_8: tmp_38 (96)  [1/1] 2.07ns  loc: accelerator_hls/components.cpp:495 (out node of the LUT)
+_ifconv:19  %tmp_38 = select i1 %sel_tmp2, float %input_load, float 0.000000e+00
 
 
  <State 9>: 5.70ns
-ST_9: tmp_39 (97)  [4/4] 5.70ns  loc: accelerator_hls/components.cpp:451
+ST_9: tmp_39 (97)  [4/4] 5.70ns  loc: accelerator_hls/components.cpp:495
 _ifconv:20  %tmp_39 = fmul float %weight_load, %tmp_38
 
 
  <State 10>: 5.70ns
-ST_10: tmp_39 (97)  [3/4] 5.70ns  loc: accelerator_hls/components.cpp:451
+ST_10: tmp_39 (97)  [3/4] 5.70ns  loc: accelerator_hls/components.cpp:495
 _ifconv:20  %tmp_39 = fmul float %weight_load, %tmp_38
 
 
  <State 11>: 5.70ns
-ST_11: tmp_39 (97)  [2/4] 5.70ns  loc: accelerator_hls/components.cpp:451
+ST_11: tmp_39 (97)  [2/4] 5.70ns  loc: accelerator_hls/components.cpp:495
 _ifconv:20  %tmp_39 = fmul float %weight_load, %tmp_38
 
 
  <State 12>: 5.70ns
-ST_12: tmp_39 (97)  [1/4] 5.70ns  loc: accelerator_hls/components.cpp:451
+ST_12: tmp_39 (97)  [1/4] 5.70ns  loc: accelerator_hls/components.cpp:495
 _ifconv:20  %tmp_39 = fmul float %weight_load, %tmp_38
 
 
  <State 13>: 7.26ns
-ST_13: sum_4 (98)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:451
+ST_13: sum_4 (98)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:495
 _ifconv:21  %sum_4 = fadd float %sum_1, %tmp_39
 
 
  <State 14>: 7.26ns
-ST_14: sum_4 (98)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:451
+ST_14: sum_4 (98)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:495
 _ifconv:21  %sum_4 = fadd float %sum_1, %tmp_39
 
 
  <State 15>: 7.26ns
-ST_15: sum_4 (98)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:451
+ST_15: sum_4 (98)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:495
 _ifconv:21  %sum_4 = fadd float %sum_1, %tmp_39
 
 
  <State 16>: 7.26ns
-ST_16: sum_4 (98)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:451
+ST_16: sum_4 (98)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:495
 _ifconv:21  %sum_4 = fadd float %sum_1, %tmp_39
 
 
  <State 17>: 7.26ns
-ST_17: sum_4 (98)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:451
+ST_17: sum_4 (98)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:495
 _ifconv:21  %sum_4 = fadd float %sum_1, %tmp_39
 
-ST_17: StgValue_125 (99)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:450
+ST_17: StgValue_125 (99)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:494
 _ifconv:22  br label %.preheader
 
 
  <State 18>: 3.25ns
-ST_18: bias_load (103)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:454
+ST_18: bias_load (103)  [1/2] 3.25ns  loc: accelerator_hls/components.cpp:498
 :0  %bias_load = load float* %bias_addr, align 4
 
 
  <State 19>: 7.26ns
-ST_19: result (104)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:454
+ST_19: result (104)  [5/5] 7.26ns  loc: accelerator_hls/components.cpp:498
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 20>: 7.26ns
-ST_20: result (104)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:454
+ST_20: result (104)  [4/5] 7.26ns  loc: accelerator_hls/components.cpp:498
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 21>: 7.26ns
-ST_21: result (104)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:454
+ST_21: result (104)  [3/5] 7.26ns  loc: accelerator_hls/components.cpp:498
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 22>: 7.26ns
-ST_22: result (104)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:454
+ST_22: result (104)  [2/5] 7.26ns  loc: accelerator_hls/components.cpp:498
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 23>: 7.26ns
-ST_23: result (104)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:454
+ST_23: result (104)  [1/5] 7.26ns  loc: accelerator_hls/components.cpp:498
 :1  %result = fadd float %sum, %bias_load
 
 
  <State 24>: 3.25ns
-ST_24: tmp_57_cast (107)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:455
+ST_24: tmp_57_cast (107)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:499
 :4  %tmp_57_cast = zext i12 %tmp_40 to i64
 
-ST_24: output_0_addr (108)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:455
-:5  %output_0_addr = getelementptr [1536 x float]* %output_0, i64 0, i64 %tmp_57_cast
+ST_24: output_addr (108)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:499
+:5  %output_addr = getelementptr [1536 x float]* %output_r, i64 0, i64 %tmp_57_cast
 
-ST_24: StgValue_134 (109)  [1/1] 3.25ns  loc: accelerator_hls/components.cpp:455
-:6  store float %result, float* %output_0_addr, align 4
+ST_24: StgValue_134 (109)  [1/1] 3.25ns  loc: accelerator_hls/components.cpp:499
+:6  store float %result, float* %output_addr, align 4
 
-ST_24: StgValue_135 (110)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:447
+ST_24: StgValue_135 (110)  [1/1] 0.00ns  loc: accelerator_hls/components.cpp:491
 :7  br label %.preheader6
 
 
@@ -701,124 +701,124 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ input_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ input_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 Port [ weight]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
 Port [ bias]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ output_0]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ output_r]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
 
 <LifeTime>
 <method=bitvector/>
-StgValue_25   (br               ) [ 0111111111111111111111111]
-co            (phi              ) [ 0010000000000000000000000]
-exitcond4     (icmp             ) [ 0011111111111111111111111]
-empty         (speclooptripcount) [ 0000000000000000000000000]
-co_3          (add              ) [ 0111111111111111111111111]
-StgValue_30   (br               ) [ 0000000000000000000000000]
-tmp           (zext             ) [ 0000000000000000000000000]
-tmp_cast      (zext             ) [ 0000000000000000000000000]
-tmp_s         (bitconcatenate   ) [ 0000000000000000000000000]
-tmp_51_cast2  (zext             ) [ 0001111111111111111111111]
-tmp_51_cast   (zext             ) [ 0001111111111111111111111]
-tmp_35        (sub              ) [ 0000000000000000000000000]
-tmp_53_cast   (sext             ) [ 0001111111111111111111111]
-bias_addr     (getelementptr    ) [ 0001111111111111111111111]
-StgValue_39   (br               ) [ 0011111111111111111111111]
-StgValue_40   (ret              ) [ 0000000000000000000000000]
-h             (phi              ) [ 0001011111111111110000000]
-h_cast        (zext             ) [ 0000111111111111111111111]
-exitcond3     (icmp             ) [ 0011111111111111111111111]
-empty_25      (speclooptripcount) [ 0000000000000000000000000]
-h_3           (add              ) [ 0011111111111111111111111]
-StgValue_46   (br               ) [ 0000000000000000000000000]
-tmp_cast_26   (zext             ) [ 0000000000000000000000000]
-tmp_36        (add              ) [ 0000000000000000000000000]
-tmp_56_cast   (bitconcatenate   ) [ 0000111111111111111111111]
-StgValue_50   (br               ) [ 0011111111111111111111111]
-StgValue_51   (br               ) [ 0111111111111111111111111]
-w             (phi              ) [ 0000111111111111110000000]
-w_cast        (zext             ) [ 0000011111111111110000000]
-exitcond2     (icmp             ) [ 0011111111111111111111111]
-empty_27      (speclooptripcount) [ 0000000000000000000000000]
-w_3           (add              ) [ 0011111111111111111111111]
-StgValue_57   (br               ) [ 0000000000000000000000000]
-tmp_37        (sub              ) [ 0000011111111111110000000]
-StgValue_59   (br               ) [ 0011111111111111111111111]
-StgValue_60   (br               ) [ 0011111111111111111111111]
-sum           (phi              ) [ 0000011111111111111111110]
-m             (phi              ) [ 0000010000000000000000000]
-m_cast        (zext             ) [ 0000000000000000000000000]
-exitcond1     (icmp             ) [ 0011111111111111111111111]
-empty_28      (speclooptripcount) [ 0000000000000000000000000]
-m_3           (add              ) [ 0011111111111111111111111]
-StgValue_67   (br               ) [ 0000000000000000000000000]
-tmp_28_cast   (zext             ) [ 0000000000000000000000000]
-tmp_41        (add              ) [ 0000000000000000000000000]
-tmp_33        (shl              ) [ 0000000000000000000000000]
-tmp_42        (sub              ) [ 0000001111111111110000000]
-tmp_29        (sub              ) [ 0000000000000000000000000]
-tmp_30        (icmp             ) [ 0000001111111111110000000]
-tmp4          (add              ) [ 0000000000000000000000000]
-tmp4_cast     (sext             ) [ 0000000000000000000000000]
-tmp_31        (add              ) [ 0000000000000000000000000]
-tmp_32_cast   (sext             ) [ 0000000000000000000000000]
-tmp_43        (add              ) [ 0000000000000000000000000]
-tmp_63_cast   (bitconcatenate   ) [ 0000001111111111110000000]
-tmp_44        (partselect       ) [ 0000000000000000000000000]
-icmp          (icmp             ) [ 0000001111111111110000000]
-StgValue_82   (br               ) [ 0011111111111111111111111]
-tmp_27_cast   (zext             ) [ 0000000000000000000000000]
-tmp_40        (add              ) [ 0000000000000000001111111]
-sum_1         (phi              ) [ 0011111111111111111111111]
-n             (phi              ) [ 0000001000000000000000000]
-n_cast        (zext             ) [ 0000000000000000000000000]
-exitcond      (icmp             ) [ 0011111111111111111111111]
-empty_29      (speclooptripcount) [ 0000000000000000000000000]
-n_3           (add              ) [ 0011111111111111111111111]
-StgValue_92   (br               ) [ 0000000000000000000000000]
-tmp_33_cast   (zext             ) [ 0000000000000000000000000]
-tmp_45        (add              ) [ 0000000100000000000000000]
-tmp5          (add              ) [ 0000000000000000000000000]
-tmp5_cast     (sext             ) [ 0000000000000000000000000]
-tmp_34        (add              ) [ 0000000000000000000000000]
-tmp_46        (partselect       ) [ 0000000000000000000000000]
-icmp5         (icmp             ) [ 0000000110000000000000000]
-tmp_36_cast   (sext             ) [ 0000000000000000000000000]
-tmp_47        (add              ) [ 0000000100000000000000000]
-notlhs        (icmp             ) [ 0000000110000000000000000]
-StgValue_103  (br               ) [ 0011111111111111111111111]
-tmp_64_cast   (zext             ) [ 0000000000000000000000000]
-weight_addr   (getelementptr    ) [ 0000000010000000000000000]
-tmp_65_cast   (zext             ) [ 0000000000000000000000000]
-input_0_addr  (getelementptr    ) [ 0000000010000000000000000]
-weight_load   (load             ) [ 0000000001111000000000000]
-input_0_load  (load             ) [ 0000000000000000000000000]
-tmp6          (and              ) [ 0000000000000000000000000]
-tmp7          (and              ) [ 0000000000000000000000000]
-sel_tmp2      (and              ) [ 0000000000000000000000000]
-tmp_38        (select           ) [ 0000000001111000000000000]
-tmp_39        (fmul             ) [ 0000000000000111110000000]
-sum_4         (fadd             ) [ 0011111111111111111111111]
-StgValue_125  (br               ) [ 0011111111111111111111111]
-bias_load     (load             ) [ 0000000000000000000111110]
-result        (fadd             ) [ 0000000000000000000000001]
-tmp_57_cast   (zext             ) [ 0000000000000000000000000]
-output_0_addr (getelementptr    ) [ 0000000000000000000000000]
-StgValue_134  (store            ) [ 0000000000000000000000000]
-StgValue_135  (br               ) [ 0011111111111111111111111]
+StgValue_25  (br               ) [ 0111111111111111111111111]
+co           (phi              ) [ 0010000000000000000000000]
+exitcond4    (icmp             ) [ 0011111111111111111111111]
+empty        (speclooptripcount) [ 0000000000000000000000000]
+co_3         (add              ) [ 0111111111111111111111111]
+StgValue_30  (br               ) [ 0000000000000000000000000]
+tmp          (zext             ) [ 0000000000000000000000000]
+tmp_cast     (zext             ) [ 0000000000000000000000000]
+tmp_s        (bitconcatenate   ) [ 0000000000000000000000000]
+tmp_51_cast2 (zext             ) [ 0001111111111111111111111]
+tmp_51_cast  (zext             ) [ 0001111111111111111111111]
+tmp_35       (sub              ) [ 0000000000000000000000000]
+tmp_53_cast  (sext             ) [ 0001111111111111111111111]
+bias_addr    (getelementptr    ) [ 0001111111111111111111111]
+StgValue_39  (br               ) [ 0011111111111111111111111]
+StgValue_40  (ret              ) [ 0000000000000000000000000]
+h            (phi              ) [ 0001011111111111110000000]
+h_cast       (zext             ) [ 0000111111111111111111111]
+exitcond3    (icmp             ) [ 0011111111111111111111111]
+empty_24     (speclooptripcount) [ 0000000000000000000000000]
+h_3          (add              ) [ 0011111111111111111111111]
+StgValue_46  (br               ) [ 0000000000000000000000000]
+tmp_cast_25  (zext             ) [ 0000000000000000000000000]
+tmp_36       (add              ) [ 0000000000000000000000000]
+tmp_56_cast  (bitconcatenate   ) [ 0000111111111111111111111]
+StgValue_50  (br               ) [ 0011111111111111111111111]
+StgValue_51  (br               ) [ 0111111111111111111111111]
+w            (phi              ) [ 0000111111111111110000000]
+w_cast       (zext             ) [ 0000011111111111110000000]
+exitcond2    (icmp             ) [ 0011111111111111111111111]
+empty_26     (speclooptripcount) [ 0000000000000000000000000]
+w_3          (add              ) [ 0011111111111111111111111]
+StgValue_57  (br               ) [ 0000000000000000000000000]
+tmp_37       (sub              ) [ 0000011111111111110000000]
+StgValue_59  (br               ) [ 0011111111111111111111111]
+StgValue_60  (br               ) [ 0011111111111111111111111]
+sum          (phi              ) [ 0000011111111111111111110]
+m            (phi              ) [ 0000010000000000000000000]
+m_cast       (zext             ) [ 0000000000000000000000000]
+exitcond1    (icmp             ) [ 0011111111111111111111111]
+empty_27     (speclooptripcount) [ 0000000000000000000000000]
+m_3          (add              ) [ 0011111111111111111111111]
+StgValue_67  (br               ) [ 0000000000000000000000000]
+tmp_28_cast  (zext             ) [ 0000000000000000000000000]
+tmp_41       (add              ) [ 0000000000000000000000000]
+tmp_33       (shl              ) [ 0000000000000000000000000]
+tmp_42       (sub              ) [ 0000001111111111110000000]
+tmp_29       (sub              ) [ 0000000000000000000000000]
+tmp_30       (icmp             ) [ 0000001111111111110000000]
+tmp4         (add              ) [ 0000000000000000000000000]
+tmp4_cast    (sext             ) [ 0000000000000000000000000]
+tmp_31       (add              ) [ 0000000000000000000000000]
+tmp_32_cast  (sext             ) [ 0000000000000000000000000]
+tmp_43       (add              ) [ 0000000000000000000000000]
+tmp_63_cast  (bitconcatenate   ) [ 0000001111111111110000000]
+tmp_44       (partselect       ) [ 0000000000000000000000000]
+icmp         (icmp             ) [ 0000001111111111110000000]
+StgValue_82  (br               ) [ 0011111111111111111111111]
+tmp_27_cast  (zext             ) [ 0000000000000000000000000]
+tmp_40       (add              ) [ 0000000000000000001111111]
+sum_1        (phi              ) [ 0011111111111111111111111]
+n            (phi              ) [ 0000001000000000000000000]
+n_cast       (zext             ) [ 0000000000000000000000000]
+exitcond     (icmp             ) [ 0011111111111111111111111]
+empty_28     (speclooptripcount) [ 0000000000000000000000000]
+n_3          (add              ) [ 0011111111111111111111111]
+StgValue_92  (br               ) [ 0000000000000000000000000]
+tmp_33_cast  (zext             ) [ 0000000000000000000000000]
+tmp_45       (add              ) [ 0000000100000000000000000]
+tmp5         (add              ) [ 0000000000000000000000000]
+tmp5_cast    (sext             ) [ 0000000000000000000000000]
+tmp_34       (add              ) [ 0000000000000000000000000]
+tmp_46       (partselect       ) [ 0000000000000000000000000]
+icmp5        (icmp             ) [ 0000000110000000000000000]
+tmp_36_cast  (sext             ) [ 0000000000000000000000000]
+tmp_47       (add              ) [ 0000000100000000000000000]
+notlhs       (icmp             ) [ 0000000110000000000000000]
+StgValue_103 (br               ) [ 0011111111111111111111111]
+tmp_64_cast  (zext             ) [ 0000000000000000000000000]
+weight_addr  (getelementptr    ) [ 0000000010000000000000000]
+tmp_65_cast  (zext             ) [ 0000000000000000000000000]
+input_addr   (getelementptr    ) [ 0000000010000000000000000]
+weight_load  (load             ) [ 0000000001111000000000000]
+input_load   (load             ) [ 0000000000000000000000000]
+tmp6         (and              ) [ 0000000000000000000000000]
+tmp7         (and              ) [ 0000000000000000000000000]
+sel_tmp2     (and              ) [ 0000000000000000000000000]
+tmp_38       (select           ) [ 0000000001111000000000000]
+tmp_39       (fmul             ) [ 0000000000000111110000000]
+sum_4        (fadd             ) [ 0011111111111111111111111]
+StgValue_125 (br               ) [ 0011111111111111111111111]
+bias_load    (load             ) [ 0000000000000000000111110]
+result       (fadd             ) [ 0000000000000000000000001]
+tmp_57_cast  (zext             ) [ 0000000000000000000000000]
+output_addr  (getelementptr    ) [ 0000000000000000000000000]
+StgValue_134 (store            ) [ 0000000000000000000000000]
+StgValue_135 (br               ) [ 0011111111111111111111111]
 </LifeTime>
 
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="input_0">
+<comp id="0" class="1000" name="input_r">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="input_0"/><MemPortTyVec>1 3 </MemPortTyVec>
+<StgValue><ssdm name="input_r"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -843,12 +843,12 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </bind>
 </comp>
 
-<comp id="6" class="1000" name="output_0">
+<comp id="6" class="1000" name="output_r">
 <pin_list>
 <pin id="7" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="output_0"/><MemPortTyVec>0 3 </MemPortTyVec>
+<StgValue><ssdm name="output_r"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -1092,7 +1092,7 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </bind>
 </comp>
 
-<comp id="73" class="1004" name="input_0_addr_gep_fu_73">
+<comp id="73" class="1004" name="input_addr_gep_fu_73">
 <pin_list>
 <pin id="74" dir="0" index="0" bw="32" slack="0"/>
 <pin id="75" dir="0" index="1" bw="1" slack="0"/>
@@ -1101,7 +1101,7 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="input_0_addr/7 "/>
+<opset="input_addr/7 "/>
 </bind>
 </comp>
 
@@ -1113,11 +1113,11 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="input_0_load/7 "/>
+<opset="input_load/7 "/>
 </bind>
 </comp>
 
-<comp id="85" class="1004" name="output_0_addr_gep_fu_85">
+<comp id="85" class="1004" name="output_addr_gep_fu_85">
 <pin_list>
 <pin id="86" dir="0" index="0" bw="32" slack="0"/>
 <pin id="87" dir="0" index="1" bw="1" slack="0"/>
@@ -1126,7 +1126,7 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="output_0_addr/24 "/>
+<opset="output_addr/24 "/>
 </bind>
 </comp>
 
@@ -1473,14 +1473,14 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </bind>
 </comp>
 
-<comp id="251" class="1004" name="tmp_cast_26_fu_251">
+<comp id="251" class="1004" name="tmp_cast_25_fu_251">
 <pin_list>
 <pin id="252" dir="0" index="0" bw="3" slack="0"/>
 <pin id="253" dir="1" index="1" bw="10" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_cast_26/3 "/>
+<opset="tmp_cast_25/3 "/>
 </bind>
 </comp>
 
@@ -2248,13 +2248,13 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 </bind>
 </comp>
 
-<comp id="630" class="1005" name="input_0_addr_reg_630">
+<comp id="630" class="1005" name="input_addr_reg_630">
 <pin_list>
 <pin id="631" dir="0" index="0" bw="11" slack="1"/>
 <pin id="632" dir="1" index="1" bw="11" slack="1"/>
 </pin_list>
 <bind>
-<opset="input_0_addr "/>
+<opset="input_addr "/>
 </bind>
 </comp>
 
@@ -2694,13 +2694,15 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 
 * FSMD analyzer results:
   - Output states:
+	Port: input_r | {}
 	Port: weight | {}
 	Port: bias | {}
-	Port: output_0 | {24 }
+	Port: output_r | {24 }
  - Input state : 
-	Port: subconv_3x3_4_no_rel : input_0 | {7 8 }
+	Port: subconv_3x3_4_no_rel : input_r | {7 8 }
 	Port: subconv_3x3_4_no_rel : weight | {7 8 }
 	Port: subconv_3x3_4_no_rel : bias | {5 18 }
+	Port: subconv_3x3_4_no_rel : output_r | {}
   - Chain level:
 	State 1
 	State 2
@@ -2720,7 +2722,7 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 		exitcond3 : 1
 		h_3 : 1
 		StgValue_46 : 2
-		tmp_cast_26 : 1
+		tmp_cast_25 : 1
 		tmp_36 : 2
 		tmp_56_cast : 3
 	State 4
@@ -2767,8 +2769,8 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 	State 7
 		weight_addr : 1
 		weight_load : 2
-		input_0_addr : 1
-		input_0_load : 2
+		input_addr : 1
+		input_load : 2
 	State 8
 	State 9
 	State 10
@@ -2786,7 +2788,7 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 	State 22
 	State 23
 	State 24
-		output_0_addr : 1
+		output_addr : 1
 		StgValue_134 : 2
 
 
@@ -2844,7 +2846,7 @@ StgValue_135  (br               ) [ 0011111111111111111111111]
 |          | tmp_51_cast2_fu_217 |    0    |    0    |    0    |
 |          |  tmp_51_cast_fu_221 |    0    |    0    |    0    |
 |          |    h_cast_fu_235    |    0    |    0    |    0    |
-|          |  tmp_cast_26_fu_251 |    0    |    0    |    0    |
+|          |  tmp_cast_25_fu_251 |    0    |    0    |    0    |
 |          |    w_cast_fu_268    |    0    |    0    |    0    |
 |   zext   |    m_cast_fu_290    |    0    |    0    |    0    |
 |          |  tmp_28_cast_fu_306 |    0    |    0    |    0    |
@@ -2889,7 +2891,7 @@ N/A
 |      h_reg_108     |    3   |
 |    icmp5_reg_610   |    1   |
 |    icmp_reg_587    |    1   |
-|input_0_addr_reg_630|   11   |
+| input_addr_reg_630 |   11   |
 |     m_3_reg_567    |    2   |
 |      m_reg_144     |    2   |
 |     n_3_reg_600    |    2   |

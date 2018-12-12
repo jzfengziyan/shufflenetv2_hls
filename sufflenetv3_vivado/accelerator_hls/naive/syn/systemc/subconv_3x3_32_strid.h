@@ -33,10 +33,10 @@ struct subconv_3x3_32_strid : public sc_module {
     sc_out< sc_lv<5> > bias_address0;
     sc_out< sc_logic > bias_ce0;
     sc_in< sc_lv<32> > bias_q0;
-    sc_out< sc_lv<13> > output_0_address0;
-    sc_out< sc_logic > output_0_ce0;
-    sc_out< sc_logic > output_0_we0;
-    sc_out< sc_lv<32> > output_0_d0;
+    sc_out< sc_lv<13> > output_r_address0;
+    sc_out< sc_logic > output_r_ce0;
+    sc_out< sc_logic > output_r_we0;
+    sc_out< sc_lv<32> > output_r_d0;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -66,8 +66,8 @@ struct subconv_3x3_32_strid : public sc_module {
     sc_signal< sc_lv<5> > h_4_fu_262_p2;
     sc_signal< sc_lv<5> > h_4_reg_525;
     sc_signal< sc_logic > ap_CS_fsm_state3;
-    sc_signal< sc_lv<6> > tmp_cast_31_fu_274_p1;
-    sc_signal< sc_lv<6> > tmp_cast_31_reg_530;
+    sc_signal< sc_lv<6> > tmp_cast_30_fu_274_p1;
+    sc_signal< sc_lv<6> > tmp_cast_30_reg_530;
     sc_signal< sc_lv<1> > exitcond3_fu_256_p2;
     sc_signal< sc_lv<14> > tmp_75_cast_fu_287_p3;
     sc_signal< sc_lv<14> > tmp_75_cast_reg_536;
@@ -257,10 +257,10 @@ struct subconv_3x3_32_strid : public sc_module {
     void thread_m_cast8_cast_fu_323_p1();
     void thread_n_4_fu_426_p2();
     void thread_n_cast6_fu_416_p1();
-    void thread_output_0_address0();
-    void thread_output_0_ce0();
-    void thread_output_0_d0();
-    void thread_output_0_we0();
+    void thread_output_r_address0();
+    void thread_output_r_ce0();
+    void thread_output_r_d0();
+    void thread_output_r_we0();
     void thread_p_not_fu_441_p2();
     void thread_p_shl_cast_fu_230_p1();
     void thread_sel_tmp1_fu_478_p2();
@@ -303,7 +303,7 @@ struct subconv_3x3_32_strid : public sc_module {
     void thread_tmp_83_cast_fu_384_p3();
     void thread_tmp_84_cast_fu_470_p1();
     void thread_tmp_85_cast_fu_474_p1();
-    void thread_tmp_cast_31_fu_274_p1();
+    void thread_tmp_cast_30_fu_274_p1();
     void thread_tmp_cast_fu_206_p1();
     void thread_tmp_fu_201_p1();
     void thread_tmp_s_fu_210_p3();

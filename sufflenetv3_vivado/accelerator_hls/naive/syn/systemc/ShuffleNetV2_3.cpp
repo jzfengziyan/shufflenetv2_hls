@@ -31,15 +31,9 @@ void ShuffleNetV2::thread_hdltv_gen() {
         mHdltvoutHandle << " , " <<  " \"shuffle_conv_3x3_address0\" :  \"" << shuffle_conv_3x3_address0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"shuffle_conv_3x3_ce0\" :  \"" << shuffle_conv_3x3_ce0.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"shuffle_conv_3x3_q0\" :  \"" << shuffle_conv_3x3_q0.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"shuffle_conv_3x3_address1\" :  \"" << shuffle_conv_3x3_address1.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"shuffle_conv_3x3_ce1\" :  \"" << shuffle_conv_3x3_ce1.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"shuffle_conv_3x3_q1\" :  \"" << shuffle_conv_3x3_q1.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"shuffle_conv_1x1_address0\" :  \"" << shuffle_conv_1x1_address0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"shuffle_conv_1x1_ce0\" :  \"" << shuffle_conv_1x1_ce0.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"shuffle_conv_1x1_q0\" :  \"" << shuffle_conv_1x1_q0.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"shuffle_conv_1x1_address1\" :  \"" << shuffle_conv_1x1_address1.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"shuffle_conv_1x1_ce1\" :  \"" << shuffle_conv_1x1_ce1.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"shuffle_conv_1x1_q1\" :  \"" << shuffle_conv_1x1_q1.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"conv_last_weight_address0\" :  \"" << conv_last_weight_address0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"conv_last_weight_ce0\" :  \"" << conv_last_weight_ce0.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"conv_last_weight_q0\" :  \"" << conv_last_weight_q0.read() << "\" ";
@@ -49,9 +43,6 @@ void ShuffleNetV2::thread_hdltv_gen() {
         mHdltvoutHandle << " , " <<  " \"bias_address0\" :  \"" << bias_address0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"bias_ce0\" :  \"" << bias_ce0.read() << "\" ";
         mHdltvinHandle << " , " <<  " \"bias_q0\" :  \"" << bias_q0.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"bias_address1\" :  \"" << bias_address1.read() << "\" ";
-        mHdltvoutHandle << " , " <<  " \"bias_ce1\" :  \"" << bias_ce1.read() << "\" ";
-        mHdltvinHandle << " , " <<  " \"bias_q1\" :  \"" << bias_q1.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"fc_output_address0\" :  \"" << fc_output_address0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"fc_output_ce0\" :  \"" << fc_output_ce0.read() << "\" ";
         mHdltvoutHandle << " , " <<  " \"fc_output_we0\" :  \"" << fc_output_we0.read() << "\" ";

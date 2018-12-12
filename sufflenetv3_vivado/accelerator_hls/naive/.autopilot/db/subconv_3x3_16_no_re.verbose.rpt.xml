@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'subconv_3x3_16_no_re'" level="0">
-<item name = "Date">Mon Dec 10 14:57:21 2018
+<item name = "Date">Tue Dec 11 23:30:57 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">accelerator_hls</item>
@@ -66,8 +66,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="ShuffleNetV2_faddbkb_x_U45">ShuffleNetV2_faddbkb, 0, 2, 205, 390</column>
-<column name="ShuffleNetV2_fmulcud_x_U46">ShuffleNetV2_fmulcud, 0, 3, 143, 321</column>
+<column name="ShuffleNetV2_faddbkb_x_U32">ShuffleNetV2_faddbkb, 0, 2, 205, 390</column>
+<column name="ShuffleNetV2_fmulcud_x_U33">ShuffleNetV2_fmulcud, 0, 3, 143, 321</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -184,19 +184,19 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, subconv_3x3_16_no_re, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, subconv_3x3_16_no_re, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, subconv_3x3_16_no_re, return value</column>
-<column name="input_0_address0">out, 13, ap_memory, input_0, array</column>
-<column name="input_0_ce0">out, 1, ap_memory, input_0, array</column>
-<column name="input_0_q0">in, 32, ap_memory, input_0, array</column>
+<column name="input_r_address0">out, 13, ap_memory, input_r, array</column>
+<column name="input_r_ce0">out, 1, ap_memory, input_r, array</column>
+<column name="input_r_q0">in, 32, ap_memory, input_r, array</column>
 <column name="weight_address0">out, 8, ap_memory, weight, array</column>
 <column name="weight_ce0">out, 1, ap_memory, weight, array</column>
 <column name="weight_q0">in, 32, ap_memory, weight, array</column>
 <column name="bias_address0">out, 5, ap_memory, bias, array</column>
 <column name="bias_ce0">out, 1, ap_memory, bias, array</column>
 <column name="bias_q0">in, 32, ap_memory, bias, array</column>
-<column name="output_0_address0">out, 13, ap_memory, output_0, array</column>
-<column name="output_0_ce0">out, 1, ap_memory, output_0, array</column>
-<column name="output_0_we0">out, 1, ap_memory, output_0, array</column>
-<column name="output_0_d0">out, 32, ap_memory, output_0, array</column>
+<column name="output_r_address0">out, 13, ap_memory, output_r, array</column>
+<column name="output_r_ce0">out, 1, ap_memory, output_r, array</column>
+<column name="output_r_we0">out, 1, ap_memory, output_r, array</column>
+<column name="output_r_d0">out, 32, ap_memory, output_r, array</column>
 </table>
 </item>
 </section>

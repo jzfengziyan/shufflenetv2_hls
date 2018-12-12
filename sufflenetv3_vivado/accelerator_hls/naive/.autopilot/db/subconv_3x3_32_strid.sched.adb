@@ -99,7 +99,7 @@
 					<Obj>
 						<type>1</type>
 						<id>4</id>
-						<name>output_0</name>
+						<name>output_r</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -108,7 +108,7 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output[0]</originalName>
+						<originalName>output</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
@@ -1051,7 +1051,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_cast_31</name>
+						<name>tmp_cast_30</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -3727,7 +3727,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>output_0_addr</name>
+						<name>output_addr</name>
 						<fileName>accelerator_hls/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado</fileDirectory>
 						<lineNumber>91</lineNumber>

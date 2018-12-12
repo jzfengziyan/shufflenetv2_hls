@@ -24,19 +24,19 @@ struct subconv_3x3_8_no_rel : public sc_module {
     sc_out< sc_logic > ap_done;
     sc_out< sc_logic > ap_idle;
     sc_out< sc_logic > ap_ready;
-    sc_out< sc_lv<12> > input_0_address0;
-    sc_out< sc_logic > input_0_ce0;
-    sc_in< sc_lv<32> > input_0_q0;
+    sc_out< sc_lv<12> > input_r_address0;
+    sc_out< sc_logic > input_r_ce0;
+    sc_in< sc_lv<32> > input_r_q0;
     sc_out< sc_lv<9> > weight_address0;
     sc_out< sc_logic > weight_ce0;
     sc_in< sc_lv<32> > weight_q0;
     sc_out< sc_lv<6> > bias_address0;
     sc_out< sc_logic > bias_ce0;
     sc_in< sc_lv<32> > bias_q0;
-    sc_out< sc_lv<12> > output_0_address0;
-    sc_out< sc_logic > output_0_ce0;
-    sc_out< sc_logic > output_0_we0;
-    sc_out< sc_lv<32> > output_0_d0;
+    sc_out< sc_lv<12> > output_r_address0;
+    sc_out< sc_logic > output_r_ce0;
+    sc_out< sc_logic > output_r_we0;
+    sc_out< sc_lv<32> > output_r_d0;
     sc_signal< sc_logic > ap_var_for_const0;
 
 
@@ -48,8 +48,8 @@ struct subconv_3x3_8_no_rel : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    ShuffleNetV2_faddbkb<1,5,32,32,32>* ShuffleNetV2_faddbkb_x_U96;
-    ShuffleNetV2_fmulcud<1,4,32,32,32>* ShuffleNetV2_fmulcud_x_U97;
+    ShuffleNetV2_faddbkb<1,5,32,32,32>* ShuffleNetV2_faddbkb_x_U65;
+    ShuffleNetV2_fmulcud<1,4,32,32,32>* ShuffleNetV2_fmulcud_x_U66;
     sc_signal< sc_lv<24> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<6> > co_2_fu_198_p2;
@@ -141,7 +141,7 @@ struct subconv_3x3_8_no_rel : public sc_module {
     sc_signal< sc_lv<9> > p_shl_cast_fu_237_p1;
     sc_signal< sc_lv<9> > tmp_cast_fu_209_p1;
     sc_signal< sc_lv<9> > tmp_20_fu_241_p2;
-    sc_signal< sc_lv<10> > tmp_cast_21_fu_267_p1;
+    sc_signal< sc_lv<10> > tmp_cast_20_fu_267_p1;
     sc_signal< sc_lv<10> > tmp_22_fu_271_p2;
     sc_signal< sc_lv<10> > tmp_15_cast_fu_322_p1;
     sc_signal< sc_lv<10> > tmp_27_fu_326_p2;
@@ -259,17 +259,17 @@ struct subconv_3x3_8_no_rel : public sc_module {
     void thread_h_cast_fu_251_p1();
     void thread_icmp5_fu_466_p2();
     void thread_icmp_fu_401_p2();
-    void thread_input_0_address0();
-    void thread_input_0_ce0();
+    void thread_input_r_address0();
+    void thread_input_r_ce0();
     void thread_m_2_fu_316_p2();
     void thread_m_cast_cast_fu_306_p1();
     void thread_n_2_fu_426_p2();
     void thread_n_cast9_fu_416_p1();
     void thread_notlhs_fu_481_p2();
-    void thread_output_0_address0();
-    void thread_output_0_ce0();
-    void thread_output_0_d0();
-    void thread_output_0_we0();
+    void thread_output_r_address0();
+    void thread_output_r_ce0();
+    void thread_output_r_d0();
+    void thread_output_r_we0();
     void thread_p_shl_cast_fu_237_p1();
     void thread_sel_tmp2_fu_502_p2();
     void thread_tmp4_cast_fu_365_p1();
@@ -310,7 +310,7 @@ struct subconv_3x3_8_no_rel : public sc_module {
     void thread_tmp_47_cast_fu_383_p3();
     void thread_tmp_48_cast_fu_486_p1();
     void thread_tmp_49_cast_fu_490_p1();
-    void thread_tmp_cast_21_fu_267_p1();
+    void thread_tmp_cast_20_fu_267_p1();
     void thread_tmp_cast_fu_209_p1();
     void thread_tmp_fu_204_p1();
     void thread_tmp_s_fu_213_p3();

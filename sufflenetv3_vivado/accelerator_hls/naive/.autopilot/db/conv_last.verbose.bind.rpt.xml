@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'conv_last'" level="0">
-<item name = "Date">Mon Dec 10 14:57:14 2018
+<item name = "Date">Tue Dec 11 23:30:32 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">accelerator_hls</item>

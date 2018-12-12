@@ -23,10 +23,10 @@ module subconv_3x3_8_stride (
         bias_address0,
         bias_ce0,
         bias_q0,
-        output_0_address0,
-        output_0_ce0,
-        output_0_we0,
-        output_0_d0
+        output_r_address0,
+        output_r_ce0,
+        output_r_we0,
+        output_r_d0
 );
 
 parameter    ap_ST_fsm_state1 = 24'd1;
@@ -69,10 +69,10 @@ input  [31:0] weight_q0;
 output  [6:0] bias_address0;
 output   bias_ce0;
 input  [31:0] bias_q0;
-output  [10:0] output_0_address0;
-output   output_0_ce0;
-output   output_0_we0;
-output  [31:0] output_0_d0;
+output  [10:0] output_r_address0;
+output   output_r_ce0;
+output   output_r_we0;
+output  [31:0] output_r_d0;
 
 reg ap_done;
 reg ap_idle;
@@ -80,8 +80,8 @@ reg ap_ready;
 reg input_r_ce0;
 reg weight_ce0;
 reg bias_ce0;
-reg output_0_ce0;
-reg output_0_we0;
+reg output_r_ce0;
+reg output_r_we0;
 
 (* fsm_encoding = "none" *) reg   [23:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
@@ -185,7 +185,7 @@ wire   [2:0] m_cast8_cast_fu_309_p1;
 wire   [2:0] tmp_9_fu_378_p2;
 wire  signed [3:0] tmp_9_cast_fu_384_p1;
 wire   [11:0] tmp_6_cast_fu_393_p1;
-wire   [10:0] tmp_cast_19_fu_418_p1;
+wire   [10:0] tmp_cast_18_fu_418_p1;
 wire   [3:0] n_cast6_fu_402_p1;
 wire   [1:0] tmp4_fu_432_p2;
 wire  signed [3:0] tmp4_cast_fu_438_p1;
@@ -205,7 +205,7 @@ ShuffleNetV2_faddbkb #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-ShuffleNetV2_faddbkb_x_U117(
+ShuffleNetV2_faddbkb_x_U81(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_177_p0),
@@ -220,7 +220,7 @@ ShuffleNetV2_fmulcud #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-ShuffleNetV2_fmulcud_x_U118(
+ShuffleNetV2_fmulcud_x_U82(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(weight_load_reg_606),
@@ -455,17 +455,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state24)) begin
-        output_0_ce0 = 1'b1;
+        output_r_ce0 = 1'b1;
     end else begin
-        output_0_ce0 = 1'b0;
+        output_r_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state24)) begin
-        output_0_we0 = 1'b1;
+        output_r_we0 = 1'b1;
     end else begin
-        output_0_we0 = 1'b0;
+        output_r_we0 = 1'b0;
     end
 end
 
@@ -639,9 +639,9 @@ assign n_1_fu_412_p2 = (n_reg_166 + 2'd1);
 
 assign n_cast6_fu_402_p1 = n_reg_166;
 
-assign output_0_address0 = tmp_25_cast_fu_476_p1;
+assign output_r_address0 = tmp_25_cast_fu_476_p1;
 
-assign output_0_d0 = result_reg_631;
+assign output_r_d0 = result_reg_631;
 
 assign p_not_fu_427_p2 = ((n_cast6_fu_402_p1 == tmp_1_reg_540) ? 1'b1 : 1'b0);
 
@@ -677,7 +677,7 @@ assign tmp_16_fu_365_p2 = ($signed(tmp_7_cast_fu_361_p1) + $signed(tmp_15_cast_r
 
 assign tmp_17_cast_fu_238_p1 = $signed(tmp_3_fu_232_p2);
 
-assign tmp_17_fu_422_p2 = (tmp_15_reg_553 + tmp_cast_19_fu_418_p1);
+assign tmp_17_fu_422_p2 = (tmp_15_reg_553 + tmp_cast_18_fu_418_p1);
 
 assign tmp_18_fu_451_p2 = ($signed(tmp_31_cast_reg_558) + $signed(tmp_11_cast_fu_447_p1));
 
@@ -723,7 +723,7 @@ assign tmp_9_cast_fu_384_p1 = $signed(tmp_9_fu_378_p2);
 
 assign tmp_9_fu_378_p2 = (3'd0 - m_cast8_cast_fu_309_p1);
 
-assign tmp_cast_19_fu_418_p1 = n_reg_166;
+assign tmp_cast_18_fu_418_p1 = n_reg_166;
 
 assign tmp_cast_fu_204_p1 = co_reg_97;
 

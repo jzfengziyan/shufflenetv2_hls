@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'avgpool'" level="0">
-<item name = "Date">Mon Dec 10 14:57:25 2018
+<item name = "Date">Tue Dec 11 23:31:00 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">accelerator_hls</item>
@@ -64,8 +64,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
-<column name="ShuffleNetV2_faddbkb_x_U167">ShuffleNetV2_faddbkb, 0, 2, 205, 390</column>
-<column name="ShuffleNetV2_fmulcud_x_U168">ShuffleNetV2_fmulcud, 0, 3, 143, 321</column>
+<column name="ShuffleNetV2_faddbkb_x_U114">ShuffleNetV2_faddbkb, 0, 2, 205, 390</column>
+<column name="ShuffleNetV2_fmulcud_x_U115">ShuffleNetV2_fmulcud, 0, 3, 143, 321</column>
 </table>
 </item>
 <item name = "DSP48"><table name="" hasTotal="0">
@@ -82,11 +82,11 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="co_18_fu_132_p2">+, 0, 35, 15, 10, 1</column>
-<column name="h_18_fu_160_p2">+, 0, 14, 9, 3, 1</column>
-<column name="tmp_178_fu_170_p2">+, 0, 44, 18, 13, 13</column>
-<column name="tmp_179_fu_199_p2">+, 0, 50, 20, 15, 15</column>
-<column name="w_18_fu_189_p2">+, 0, 14, 9, 3, 1</column>
+<column name="co_24_fu_132_p2">+, 0, 35, 15, 10, 1</column>
+<column name="h_24_fu_160_p2">+, 0, 14, 9, 3, 1</column>
+<column name="tmp_208_fu_170_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_209_fu_199_p2">+, 0, 50, 20, 15, 15</column>
+<column name="w_24_fu_189_p2">+, 0, 14, 9, 3, 1</column>
 <column name="exitcond1_fu_154_p2">icmp, 0, 0, 2, 3, 4</column>
 <column name="exitcond2_fu_126_p2">icmp, 0, 0, 6, 10, 11</column>
 <column name="exitcond_fu_183_p2">icmp, 0, 0, 2, 3, 4</column>
@@ -105,18 +105,18 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">14, 0, 14, 0</column>
-<column name="co_18_reg_212">10, 0, 10, 0</column>
+<column name="co_24_reg_212">10, 0, 10, 0</column>
 <column name="co_reg_58">10, 0, 10, 0</column>
 <column name="conv_last_output_loa_reg_253">32, 0, 32, 0</column>
-<column name="h_18_reg_230">3, 0, 3, 0</column>
+<column name="h_24_reg_230">3, 0, 3, 0</column>
 <column name="h_reg_81">3, 0, 3, 0</column>
 <column name="sum_1_reg_92">32, 0, 32, 0</column>
 <column name="sum_reg_69">32, 0, 32, 0</column>
-<column name="tmp_292_cast_reg_222">10, 0, 13, 3</column>
-<column name="tmp_295_cast_reg_235">13, 0, 15, 2</column>
+<column name="tmp_364_cast_reg_222">10, 0, 13, 3</column>
+<column name="tmp_367_cast_reg_235">13, 0, 15, 2</column>
 <column name="tmp_reg_217">10, 0, 64, 54</column>
 <column name="tmp_s_reg_263">32, 0, 32, 0</column>
-<column name="w_18_reg_243">3, 0, 3, 0</column>
+<column name="w_24_reg_243">3, 0, 3, 0</column>
 <column name="w_reg_104">3, 0, 3, 0</column>
 </table>
 </item>
