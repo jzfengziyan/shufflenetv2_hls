@@ -1,6 +1,5 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch CLANG as the compiler.
-   Compiling ../../../components.cpp in debug mode
    Compiling ../../../shufflenet.cpp in debug mode
    Generating csim.exe
 initialize pic

@@ -254,9 +254,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "fc_bias", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "conv1_output", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "input_r"},
 					{"ID" : "58", "SubInstance" : "grp_subconv_1x1_32_fu_7090", "Port" : "conv1_output"},
-					{"ID" : "42", "SubInstance" : "grp_conv1_fu_7042", "Port" : "output_r"}]},
+					{"ID" : "42", "SubInstance" : "grp_conv1_fu_7042", "Port" : "output_r"},
+					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "input_r"}]},
 			{"Name" : "weights_24_24_1x1", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "88", "SubInstance" : "grp_subconv_1x1_16_fu_7201", "Port" : "weight"},
@@ -264,13 +264,13 @@ set RtlHierarchyInfo {[
 			{"Name" : "bias_24", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "65", "SubInstance" : "grp_subconv_3x3_16_no_re_fu_7115", "Port" : "bias"},
-					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "bias"},
 					{"ID" : "88", "SubInstance" : "grp_subconv_1x1_16_fu_7201", "Port" : "bias"},
-					{"ID" : "58", "SubInstance" : "grp_subconv_1x1_32_fu_7090", "Port" : "bias"}]},
+					{"ID" : "58", "SubInstance" : "grp_subconv_1x1_32_fu_7090", "Port" : "bias"},
+					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "bias"}]},
 			{"Name" : "ShuffleConvs_0_Downs", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "input_r"},
-					{"ID" : "58", "SubInstance" : "grp_subconv_1x1_32_fu_7090", "Port" : "ShuffleConvs_0_Downs"}]},
+					{"ID" : "58", "SubInstance" : "grp_subconv_1x1_32_fu_7090", "Port" : "ShuffleConvs_0_Downs"},
+					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "input_r"}]},
 			{"Name" : "weights_24_1_3x3", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "65", "SubInstance" : "grp_subconv_3x3_16_no_re_fu_7115", "Port" : "weight"},
@@ -278,16 +278,16 @@ set RtlHierarchyInfo {[
 			{"Name" : "buffer0_1_24_16x16", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "65", "SubInstance" : "grp_subconv_3x3_16_no_re_fu_7115", "Port" : "output_r"},
-					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "output_r"},
+					{"ID" : "88", "SubInstance" : "grp_subconv_1x1_16_fu_7201", "Port" : "input_r"},
 					{"ID" : "95", "SubInstance" : "grp_shuffle_24_fu_7221", "Port" : "left_r"},
-					{"ID" : "88", "SubInstance" : "grp_subconv_1x1_16_fu_7201", "Port" : "input_r"}]},
+					{"ID" : "62", "SubInstance" : "grp_subconv_3x3_32_strid_fu_7102", "Port" : "output_r"}]},
 			{"Name" : "buffer1_1_24_16x16", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "65", "SubInstance" : "grp_subconv_3x3_16_no_re_fu_7115", "Port" : "input_r"},
-					{"ID" : "95", "SubInstance" : "grp_shuffle_24_fu_7221", "Port" : "buffer1_1_24_16x16"},
-					{"ID" : "88", "SubInstance" : "grp_subconv_1x1_16_fu_7201", "Port" : "output_r"},
 					{"ID" : "98", "SubInstance" : "grp_shuffle_24_l_fu_7262", "Port" : "left_r"},
-					{"ID" : "99", "SubInstance" : "grp_shuffle_24_r_fu_7270", "Port" : "right_r"}]},
+					{"ID" : "99", "SubInstance" : "grp_shuffle_24_r_fu_7270", "Port" : "right_r"},
+					{"ID" : "65", "SubInstance" : "grp_subconv_3x3_16_no_re_fu_7115", "Port" : "input_r"},
+					{"ID" : "88", "SubInstance" : "grp_subconv_1x1_16_fu_7201", "Port" : "output_r"},
+					{"ID" : "95", "SubInstance" : "grp_shuffle_24_fu_7221", "Port" : "buffer1_1_24_16x16"}]},
 			{"Name" : "downsampleunit0_outp", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "98", "SubInstance" : "grp_shuffle_24_l_fu_7262", "Port" : "output_r"},
@@ -300,39 +300,39 @@ set RtlHierarchyInfo {[
 					{"ID" : "95", "SubInstance" : "grp_shuffle_24_fu_7221", "Port" : "output_r"}]},
 			{"Name" : "shuffleunit0_2_outpu", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "95", "SubInstance" : "grp_shuffle_24_fu_7221", "Port" : "output_r"},
 					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "input_r"},
-					{"ID" : "54", "SubInstance" : "grp_subconv_1x1_16p_fu_7078", "Port" : "shuffleunit0_2_outpu"}]},
+					{"ID" : "54", "SubInstance" : "grp_subconv_1x1_16p_fu_7078", "Port" : "shuffleunit0_2_outpu"},
+					{"ID" : "95", "SubInstance" : "grp_shuffle_24_fu_7221", "Port" : "output_r"}]},
 			{"Name" : "weights_48_48_1x1", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "54", "SubInstance" : "grp_subconv_1x1_16p_fu_7078", "Port" : "weight"},
-					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "weight"}]},
+					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "weight"},
+					{"ID" : "54", "SubInstance" : "grp_subconv_1x1_16p_fu_7078", "Port" : "weight"}]},
 			{"Name" : "bias_48", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "bias"},
+					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "bias"},
 					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "bias"},
 					{"ID" : "54", "SubInstance" : "grp_subconv_1x1_16p_fu_7078", "Port" : "bias"},
-					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "bias"}]},
+					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "bias"}]},
 			{"Name" : "ShuffleConvs_1_Downs", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "input_r"},
 					{"ID" : "54", "SubInstance" : "grp_subconv_1x1_16p_fu_7078", "Port" : "ShuffleConvs_1_Downs"}]},
 			{"Name" : "weights_48_1_3x3", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "weight"},
-					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "weight"}]},
+					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "weight"},
+					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "weight"}]},
 			{"Name" : "buffer0_1_48_8x8", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "output_r"},
-					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "output_r"},
 					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "input_r"},
+					{"ID" : "72", "SubInstance" : "grp_subconv_3x3_16_strid_fu_7139", "Port" : "output_r"},
+					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "output_r"},
 					{"ID" : "96", "SubInstance" : "grp_shuffle_48_fu_7233", "Port" : "left_r"}]},
 			{"Name" : "buffer1_1_48_8x8", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "input_r"},
+					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "output_r"},
 					{"ID" : "100", "SubInstance" : "grp_shuffle_48_l_fu_7278", "Port" : "left_r"},
 					{"ID" : "101", "SubInstance" : "grp_shuffle_48_r_fu_7286", "Port" : "right_r"},
-					{"ID" : "78", "SubInstance" : "grp_subconv_1x1_8_fu_7164", "Port" : "output_r"},
+					{"ID" : "75", "SubInstance" : "grp_subconv_3x3_8_no_rel_fu_7152", "Port" : "input_r"},
 					{"ID" : "96", "SubInstance" : "grp_shuffle_48_fu_7233", "Port" : "buffer1_1_48_8x8"}]},
 			{"Name" : "downsampleunit1_outp", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
@@ -362,18 +362,18 @@ set RtlHierarchyInfo {[
 			{"Name" : "shuffleunit1_7_outpu", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "50", "SubInstance" : "grp_subconv_1x1_8p_fu_7066", "Port" : "shuffleunit1_7_outpu"},
-					{"ID" : "96", "SubInstance" : "grp_shuffle_48_fu_7233", "Port" : "output_r"},
-					{"ID" : "82", "SubInstance" : "grp_subconv_3x3_8_stride_fu_7176", "Port" : "input_r"}]},
+					{"ID" : "82", "SubInstance" : "grp_subconv_3x3_8_stride_fu_7176", "Port" : "input_r"},
+					{"ID" : "96", "SubInstance" : "grp_shuffle_48_fu_7233", "Port" : "output_r"}]},
 			{"Name" : "weights_96_96_1x1", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "weight"},
-					{"ID" : "50", "SubInstance" : "grp_subconv_1x1_8p_fu_7066", "Port" : "weight"}]},
+					{"ID" : "50", "SubInstance" : "grp_subconv_1x1_8p_fu_7066", "Port" : "weight"},
+					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "weight"}]},
 			{"Name" : "bias_96", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "bias"},
 					{"ID" : "50", "SubInstance" : "grp_subconv_1x1_8p_fu_7066", "Port" : "bias"},
 					{"ID" : "82", "SubInstance" : "grp_subconv_3x3_8_stride_fu_7176", "Port" : "bias"},
-					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "bias"}]},
+					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "bias"},
+					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "bias"}]},
 			{"Name" : "ShuffleConvs_2_Downs", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "50", "SubInstance" : "grp_subconv_1x1_8p_fu_7066", "Port" : "ShuffleConvs_2_Downs"},
@@ -384,17 +384,17 @@ set RtlHierarchyInfo {[
 					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "weight"}]},
 			{"Name" : "buffer0_1_96_4x4", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "input_r"},
 					{"ID" : "97", "SubInstance" : "grp_shuffle_96_fu_7250", "Port" : "left_r"},
 					{"ID" : "82", "SubInstance" : "grp_subconv_3x3_8_stride_fu_7176", "Port" : "output_r"},
-					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "output_r"}]},
+					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "output_r"},
+					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "input_r"}]},
 			{"Name" : "buffer1_1_96_4x4", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "output_r"},
+					{"ID" : "97", "SubInstance" : "grp_shuffle_96_fu_7250", "Port" : "buffer1_1_96_4x4"},
 					{"ID" : "102", "SubInstance" : "grp_shuffle_96_l_fu_7294", "Port" : "left_r"},
 					{"ID" : "103", "SubInstance" : "grp_shuffle_96_r_fu_7302", "Port" : "right_r"},
-					{"ID" : "97", "SubInstance" : "grp_shuffle_96_fu_7250", "Port" : "buffer1_1_96_4x4"},
-					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "input_r"}]},
+					{"ID" : "85", "SubInstance" : "grp_subconv_3x3_4_no_rel_fu_7189", "Port" : "input_r"},
+					{"ID" : "68", "SubInstance" : "grp_subconv_1x1_4_fu_7127", "Port" : "output_r"}]},
 			{"Name" : "downsampleunit2_outp", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "102", "SubInstance" : "grp_shuffle_96_l_fu_7294", "Port" : "output_r"},
@@ -407,8 +407,8 @@ set RtlHierarchyInfo {[
 					{"ID" : "97", "SubInstance" : "grp_shuffle_96_fu_7250", "Port" : "output_r"}]},
 			{"Name" : "shuffleunit2_2_outpu", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_conv_last_fu_7054", "Port" : "shuffleunit2_2_outpu"},
-					{"ID" : "97", "SubInstance" : "grp_shuffle_96_fu_7250", "Port" : "output_r"}]},
+					{"ID" : "97", "SubInstance" : "grp_shuffle_96_fu_7250", "Port" : "output_r"},
+					{"ID" : "46", "SubInstance" : "grp_conv_last_fu_7054", "Port" : "shuffleunit2_2_outpu"}]},
 			{"Name" : "conv_last_output", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "46", "SubInstance" : "grp_conv_last_fu_7054", "Port" : "output_r"},

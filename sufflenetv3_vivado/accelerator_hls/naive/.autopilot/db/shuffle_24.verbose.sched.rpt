@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'shuffle_24'
 ================================================================
-* Date:           Tue Dec 11 23:30:29 2018
+* Date:           Tue Dec 11 23:52:39 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -281,8 +281,8 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/components.cpp:124) [34]  (0 ns)
 	'add' operation ('tmp_184', accelerator_hls/components.cpp:125) [42]  (2.34 ns)
-	'getelementptr' operation ('buffer1_1_24_16x16_a', accelerator_hls/components.cpp:126) [48]  (0 ns)
-	'load' operation ('buffer1_1_24_16x16_l', accelerator_hls/components.cpp:126) on array 'buffer1_1_24_16x16' [54]  (3.25 ns)
+	'getelementptr' operation ('left_addr', accelerator_hls/components.cpp:125) [44]  (0 ns)
+	'load' operation ('left_load', accelerator_hls/components.cpp:125) on array 'left_r' [51]  (3.25 ns)
 
  <State 5>: 8.1ns
 The critical path consists of the following:

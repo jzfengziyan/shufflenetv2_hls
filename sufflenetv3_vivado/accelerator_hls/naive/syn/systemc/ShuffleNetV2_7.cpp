@@ -182,23 +182,23 @@ void ShuffleNetV2::thread_tmp_1294_fu_24506_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_1295_fu_24409_p2() {
-    tmp_1295_fu_24409_p2 = (!tmp_749_cast_fu_24405_p1.read().is_01() || !tmp_1800_cast_reg_34096.read().is_01())? sc_lv<10>(): (sc_biguint<10>(tmp_749_cast_fu_24405_p1.read()) + sc_biguint<10>(tmp_1800_cast_reg_34096.read()));
+    tmp_1295_fu_24409_p2 = (!tmp_749_cast_fu_24405_p1.read().is_01() || !tmp_1798_cast_reg_34091.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_749_cast_fu_24405_p1.read()) + sc_biguint<11>(tmp_1798_cast_reg_34091.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1296_fu_24422_p2() {
-    tmp_1296_fu_24422_p2 = (!tmp_749_cast1_fu_24401_p1.read().is_01() || !tmp_1798_cast_reg_34091.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_749_cast1_fu_24401_p1.read()) + sc_biguint<11>(tmp_1798_cast_reg_34091.read()));
+    tmp_1296_fu_24422_p2 = (!tmp_749_cast1_fu_24401_p1.read().is_01() || !tmp_1800_cast_reg_34096.read().is_01())? sc_lv<10>(): (sc_biguint<10>(tmp_749_cast1_fu_24401_p1.read()) + sc_biguint<10>(tmp_1800_cast_reg_34096.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1297_fu_24455_p2() {
-    tmp_1297_fu_24455_p2 = (!tmp_1820_cast_reg_34109.read().is_01() || !tmp_755_cast_fu_24451_p1.read().is_01())? sc_lv<12>(): (sc_biguint<12>(tmp_1820_cast_reg_34109.read()) + sc_biguint<12>(tmp_755_cast_fu_24451_p1.read()));
+    tmp_1297_fu_24455_p2 = (!tmp_1820_cast_reg_34109.read().is_01() || !tmp_755_cast_fu_24451_p1.read().is_01())? sc_lv<13>(): (sc_biguint<13>(tmp_1820_cast_reg_34109.read()) + sc_biguint<13>(tmp_755_cast_fu_24451_p1.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1298_cast_fu_14846_p3() {
     tmp_1298_cast_fu_14846_p3 = esl_concat<11,3>(tmp_928_fu_14841_p2.read(), ap_const_lv3_0);
 }
 
-void ShuffleNetV2::thread_tmp_1298_fu_24460_p2() {
-    tmp_1298_fu_24460_p2 = (!tmp_1823_cast_reg_34114.read().is_01() || !tmp_755_cast1_fu_24447_p1.read().is_01())? sc_lv<13>(): (sc_biguint<13>(tmp_1823_cast_reg_34114.read()) + sc_biguint<13>(tmp_755_cast1_fu_24447_p1.read()));
+void ShuffleNetV2::thread_tmp_1298_fu_24465_p2() {
+    tmp_1298_fu_24465_p2 = (!tmp_1823_cast_reg_34114.read().is_01() || !tmp_755_cast1_fu_24447_p1.read().is_01())? sc_lv<12>(): (sc_biguint<12>(tmp_1823_cast_reg_34114.read()) + sc_biguint<12>(tmp_755_cast1_fu_24447_p1.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1299_fu_24760_p1() {
@@ -766,11 +766,11 @@ void ShuffleNetV2::thread_tmp_139_fu_7667_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_1400_fu_26945_p2() {
-    tmp_1400_fu_26945_p2 = (!tmp_844_cast2_fu_26941_p1.read().is_01() || !tmp_1952_cast_reg_34996.read().is_01())? sc_lv<10>(): (sc_biguint<10>(tmp_844_cast2_fu_26941_p1.read()) + sc_biguint<10>(tmp_1952_cast_reg_34996.read()));
+    tmp_1400_fu_26945_p2 = (!tmp_844_cast2_fu_26941_p1.read().is_01() || !tmp_1950_cast_reg_34991.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_844_cast2_fu_26941_p1.read()) + sc_biguint<11>(tmp_1950_cast_reg_34991.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1401_fu_26958_p2() {
-    tmp_1401_fu_26958_p2 = (!tmp_844_cast1_fu_26937_p1.read().is_01() || !tmp_1950_cast_reg_34991.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_844_cast1_fu_26937_p1.read()) + sc_biguint<11>(tmp_1950_cast_reg_34991.read()));
+    tmp_1401_fu_26958_p2 = (!tmp_844_cast1_fu_26937_p1.read().is_01() || !tmp_1952_cast_reg_34996.read().is_01())? sc_lv<10>(): (sc_biguint<10>(tmp_844_cast1_fu_26937_p1.read()) + sc_biguint<10>(tmp_1952_cast_reg_34996.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1402_cast_fu_16729_p1() {
@@ -782,11 +782,11 @@ void ShuffleNetV2::thread_tmp_1402_fu_26869_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_1403_fu_26991_p2() {
-    tmp_1403_fu_26991_p2 = (!tmp_1960_cast_reg_35009.read().is_01() || !tmp_850_cast2_fu_26987_p1.read().is_01())? sc_lv<12>(): (sc_biguint<12>(tmp_1960_cast_reg_35009.read()) + sc_biguint<12>(tmp_850_cast2_fu_26987_p1.read()));
+    tmp_1403_fu_26991_p2 = (!tmp_1960_cast_reg_35009.read().is_01() || !tmp_850_cast2_fu_26987_p1.read().is_01())? sc_lv<13>(): (sc_biguint<13>(tmp_1960_cast_reg_35009.read()) + sc_biguint<13>(tmp_850_cast2_fu_26987_p1.read()));
 }
 
-void ShuffleNetV2::thread_tmp_1404_fu_26996_p2() {
-    tmp_1404_fu_26996_p2 = (!tmp_1963_cast_reg_35014.read().is_01() || !tmp_850_cast1_fu_26983_p1.read().is_01())? sc_lv<13>(): (sc_biguint<13>(tmp_1963_cast_reg_35014.read()) + sc_biguint<13>(tmp_850_cast1_fu_26983_p1.read()));
+void ShuffleNetV2::thread_tmp_1404_fu_27001_p2() {
+    tmp_1404_fu_27001_p2 = (!tmp_1963_cast_reg_35014.read().is_01() || !tmp_850_cast1_fu_26983_p1.read().is_01())? sc_lv<12>(): (sc_biguint<12>(tmp_1963_cast_reg_35014.read()) + sc_biguint<12>(tmp_850_cast1_fu_26983_p1.read()));
 }
 
 void ShuffleNetV2::thread_tmp_1405_cast_fu_16801_p1() {
@@ -1678,19 +1678,19 @@ void ShuffleNetV2::thread_tmp_181_fu_12423_p1() {
 }
 
 void ShuffleNetV2::thread_tmp_1820_cast_fu_24414_p3() {
-    tmp_1820_cast_fu_24414_p3 = esl_concat<10,2>(tmp_1295_fu_24409_p2.read(), ap_const_lv2_0);
+    tmp_1820_cast_fu_24414_p3 = esl_concat<11,2>(tmp_1295_fu_24409_p2.read(), ap_const_lv2_0);
 }
 
 void ShuffleNetV2::thread_tmp_1823_cast_fu_24427_p3() {
-    tmp_1823_cast_fu_24427_p3 = esl_concat<11,2>(tmp_1296_fu_24422_p2.read(), ap_const_lv2_0);
+    tmp_1823_cast_fu_24427_p3 = esl_concat<10,2>(tmp_1296_fu_24422_p2.read(), ap_const_lv2_0);
 }
 
-void ShuffleNetV2::thread_tmp_1824_cast_fu_24470_p1() {
-    tmp_1824_cast_fu_24470_p1 = esl_zext<64,12>(tmp_1297_reg_34127.read());
+void ShuffleNetV2::thread_tmp_1824_cast_fu_24460_p1() {
+    tmp_1824_cast_fu_24460_p1 = esl_zext<64,13>(tmp_1297_fu_24455_p2.read());
 }
 
-void ShuffleNetV2::thread_tmp_1825_cast_fu_24465_p1() {
-    tmp_1825_cast_fu_24465_p1 = esl_zext<64,13>(tmp_1298_fu_24460_p2.read());
+void ShuffleNetV2::thread_tmp_1825_cast_fu_24470_p1() {
+    tmp_1825_cast_fu_24470_p1 = esl_zext<64,12>(tmp_1298_reg_34132.read());
 }
 
 void ShuffleNetV2::thread_tmp_182_cast_fu_8891_p1() {
@@ -1914,23 +1914,23 @@ void ShuffleNetV2::thread_tmp_195_fu_9418_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_1960_cast_fu_26950_p3() {
-    tmp_1960_cast_fu_26950_p3 = esl_concat<10,2>(tmp_1400_fu_26945_p2.read(), ap_const_lv2_0);
+    tmp_1960_cast_fu_26950_p3 = esl_concat<11,2>(tmp_1400_fu_26945_p2.read(), ap_const_lv2_0);
 }
 
 void ShuffleNetV2::thread_tmp_1963_cast_fu_26963_p3() {
-    tmp_1963_cast_fu_26963_p3 = esl_concat<11,2>(tmp_1401_fu_26958_p2.read(), ap_const_lv2_0);
+    tmp_1963_cast_fu_26963_p3 = esl_concat<10,2>(tmp_1401_fu_26958_p2.read(), ap_const_lv2_0);
 }
 
 void ShuffleNetV2::thread_tmp_1964_cast_fu_26874_p1() {
     tmp_1964_cast_fu_26874_p1 = esl_zext<64,13>(tmp_1402_fu_26869_p2.read());
 }
 
-void ShuffleNetV2::thread_tmp_1965_cast_fu_27006_p1() {
-    tmp_1965_cast_fu_27006_p1 = esl_zext<64,12>(tmp_1403_reg_35027.read());
+void ShuffleNetV2::thread_tmp_1965_cast_fu_26996_p1() {
+    tmp_1965_cast_fu_26996_p1 = esl_zext<64,13>(tmp_1403_fu_26991_p2.read());
 }
 
-void ShuffleNetV2::thread_tmp_1966_cast_fu_27001_p1() {
-    tmp_1966_cast_fu_27001_p1 = esl_zext<64,13>(tmp_1404_fu_26996_p2.read());
+void ShuffleNetV2::thread_tmp_1966_cast_fu_27006_p1() {
+    tmp_1966_cast_fu_27006_p1 = esl_zext<64,12>(tmp_1404_reg_35032.read());
 }
 
 void ShuffleNetV2::thread_tmp_196_cast1_fu_9343_p1() {
@@ -2794,11 +2794,11 @@ void ShuffleNetV2::thread_tmp_331_fu_13654_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_332_cast1_fu_13537_p1() {
-    tmp_332_cast1_fu_13537_p1 = esl_zext<10,4>(h53_reg_4302.read());
+    tmp_332_cast1_fu_13537_p1 = esl_zext<11,4>(h53_reg_4302.read());
 }
 
 void ShuffleNetV2::thread_tmp_332_cast_fu_13541_p1() {
-    tmp_332_cast_fu_13541_p1 = esl_zext<11,4>(h53_reg_4302.read());
+    tmp_332_cast_fu_13541_p1 = esl_zext<10,4>(h53_reg_4302.read());
 }
 
 void ShuffleNetV2::thread_tmp_332_fu_8117_p2() {
@@ -2842,11 +2842,11 @@ void ShuffleNetV2::thread_tmp_336_fu_8202_p3() {
 }
 
 void ShuffleNetV2::thread_tmp_337_cast1_fu_13583_p1() {
-    tmp_337_cast1_fu_13583_p1 = esl_zext<13,4>(w53_reg_4313.read());
+    tmp_337_cast1_fu_13583_p1 = esl_zext<14,4>(w53_reg_4313.read());
 }
 
 void ShuffleNetV2::thread_tmp_337_cast_fu_13587_p1() {
-    tmp_337_cast_fu_13587_p1 = esl_zext<14,4>(w53_reg_4313.read());
+    tmp_337_cast_fu_13587_p1 = esl_zext<13,4>(w53_reg_4313.read());
 }
 
 void ShuffleNetV2::thread_tmp_337_fu_8321_p3() {

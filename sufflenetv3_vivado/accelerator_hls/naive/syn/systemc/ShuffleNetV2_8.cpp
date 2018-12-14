@@ -1426,11 +1426,11 @@ void ShuffleNetV2::thread_tmp_748_fu_24516_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_749_cast1_fu_24401_p1() {
-    tmp_749_cast1_fu_24401_p1 = esl_zext<11,3>(h99_reg_6293.read());
+    tmp_749_cast1_fu_24401_p1 = esl_zext<10,3>(h99_reg_6293.read());
 }
 
 void ShuffleNetV2::thread_tmp_749_cast_fu_24405_p1() {
-    tmp_749_cast_fu_24405_p1 = esl_zext<10,3>(h99_reg_6293.read());
+    tmp_749_cast_fu_24405_p1 = esl_zext<11,3>(h99_reg_6293.read());
 }
 
 void ShuffleNetV2::thread_tmp_749_fu_12221_p3() {
@@ -1474,11 +1474,11 @@ void ShuffleNetV2::thread_tmp_754_fu_12075_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_755_cast1_fu_24447_p1() {
-    tmp_755_cast1_fu_24447_p1 = esl_zext<13,3>(w99_reg_6304.read());
+    tmp_755_cast1_fu_24447_p1 = esl_zext<12,3>(w99_reg_6304.read());
 }
 
 void ShuffleNetV2::thread_tmp_755_cast_fu_24451_p1() {
-    tmp_755_cast_fu_24451_p1 = esl_zext<12,3>(w99_reg_6304.read());
+    tmp_755_cast_fu_24451_p1 = esl_zext<13,3>(w99_reg_6304.read());
 }
 
 void ShuffleNetV2::thread_tmp_755_fu_12012_p3() {
@@ -2038,11 +2038,11 @@ void ShuffleNetV2::thread_tmp_843_fu_27052_p2() {
 }
 
 void ShuffleNetV2::thread_tmp_844_cast1_fu_26937_p1() {
-    tmp_844_cast1_fu_26937_p1 = esl_zext<11,3>(h111_reg_6777.read());
+    tmp_844_cast1_fu_26937_p1 = esl_zext<10,3>(h111_reg_6777.read());
 }
 
 void ShuffleNetV2::thread_tmp_844_cast2_fu_26941_p1() {
-    tmp_844_cast2_fu_26941_p1 = esl_zext<10,3>(h111_reg_6777.read());
+    tmp_844_cast2_fu_26941_p1 = esl_zext<11,3>(h111_reg_6777.read());
 }
 
 void ShuffleNetV2::thread_tmp_844_cast_fu_22188_p1() {
@@ -2098,11 +2098,11 @@ void ShuffleNetV2::thread_tmp_849_fu_13221_p3() {
 }
 
 void ShuffleNetV2::thread_tmp_850_cast1_fu_26983_p1() {
-    tmp_850_cast1_fu_26983_p1 = esl_zext<13,3>(w111_reg_6788.read());
+    tmp_850_cast1_fu_26983_p1 = esl_zext<12,3>(w111_reg_6788.read());
 }
 
 void ShuffleNetV2::thread_tmp_850_cast2_fu_26987_p1() {
-    tmp_850_cast2_fu_26987_p1 = esl_zext<12,3>(w111_reg_6788.read());
+    tmp_850_cast2_fu_26987_p1 = esl_zext<13,3>(w111_reg_6788.read());
 }
 
 void ShuffleNetV2::thread_tmp_850_cast_fu_22496_p1() {
@@ -2226,7 +2226,7 @@ void ShuffleNetV2::thread_tmp_871_cast_fu_27414_p1() {
 }
 
 void ShuffleNetV2::thread_tmp_871_fu_13545_p2() {
-    tmp_871_fu_13545_p2 = (!tmp_332_cast_fu_13541_p1.read().is_01() || !tmp_1217_cast_reg_30343.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_332_cast_fu_13541_p1.read()) + sc_biguint<11>(tmp_1217_cast_reg_30343.read()));
+    tmp_871_fu_13545_p2 = (!tmp_332_cast_fu_13541_p1.read().is_01() || !tmp_1219_cast_reg_30348.read().is_01())? sc_lv<10>(): (sc_biguint<10>(tmp_332_cast_fu_13541_p1.read()) + sc_biguint<10>(tmp_1219_cast_reg_30348.read()));
 }
 
 void ShuffleNetV2::thread_tmp_872_cast_fu_27776_p1() {
@@ -2234,7 +2234,7 @@ void ShuffleNetV2::thread_tmp_872_cast_fu_27776_p1() {
 }
 
 void ShuffleNetV2::thread_tmp_872_fu_13558_p2() {
-    tmp_872_fu_13558_p2 = (!tmp_332_cast1_fu_13537_p1.read().is_01() || !tmp_1219_cast_reg_30348.read().is_01())? sc_lv<10>(): (sc_biguint<10>(tmp_332_cast1_fu_13537_p1.read()) + sc_biguint<10>(tmp_1219_cast_reg_30348.read()));
+    tmp_872_fu_13558_p2 = (!tmp_332_cast1_fu_13537_p1.read().is_01() || !tmp_1217_cast_reg_30343.read().is_01())? sc_lv<11>(): (sc_biguint<11>(tmp_332_cast1_fu_13537_p1.read()) + sc_biguint<11>(tmp_1217_cast_reg_30343.read()));
 }
 
 void ShuffleNetV2::thread_tmp_873_cast_cast_fu_22907_p1() {
@@ -2258,7 +2258,7 @@ void ShuffleNetV2::thread_tmp_875_cast_fu_22927_p1() {
 }
 
 void ShuffleNetV2::thread_tmp_875_fu_13591_p2() {
-    tmp_875_fu_13591_p2 = (!tmp_1227_cast_reg_30361.read().is_01() || !tmp_337_cast_fu_13587_p1.read().is_01())? sc_lv<14>(): (sc_biguint<14>(tmp_1227_cast_reg_30361.read()) + sc_biguint<14>(tmp_337_cast_fu_13587_p1.read()));
+    tmp_875_fu_13591_p2 = (!tmp_1227_cast_reg_30361.read().is_01() || !tmp_337_cast_fu_13587_p1.read().is_01())? sc_lv<13>(): (sc_biguint<13>(tmp_1227_cast_reg_30361.read()) + sc_biguint<13>(tmp_337_cast_fu_13587_p1.read()));
 }
 
 void ShuffleNetV2::thread_tmp_876_fu_27458_p2() {
@@ -2273,8 +2273,8 @@ void ShuffleNetV2::thread_tmp_877_fu_27474_p2() {
     tmp_877_fu_27474_p2 = (!co181_cast1_reg_35148.read().is_01() || !tmp83_fu_27468_p2.read().is_01())? sc_lv<11>(): (sc_biguint<11>(co181_cast1_reg_35148.read()) + sc_biguint<11>(tmp83_fu_27468_p2.read()));
 }
 
-void ShuffleNetV2::thread_tmp_878_fu_13601_p2() {
-    tmp_878_fu_13601_p2 = (!tmp_1230_cast_reg_30366.read().is_01() || !tmp_337_cast1_fu_13583_p1.read().is_01())? sc_lv<13>(): (sc_biguint<13>(tmp_1230_cast_reg_30366.read()) + sc_biguint<13>(tmp_337_cast1_fu_13583_p1.read()));
+void ShuffleNetV2::thread_tmp_878_fu_13596_p2() {
+    tmp_878_fu_13596_p2 = (!tmp_1230_cast_reg_30366.read().is_01() || !tmp_337_cast1_fu_13583_p1.read().is_01())? sc_lv<14>(): (sc_biguint<14>(tmp_1230_cast_reg_30366.read()) + sc_biguint<14>(tmp_337_cast1_fu_13583_p1.read()));
 }
 
 void ShuffleNetV2::thread_tmp_879_cast_fu_27484_p1() {

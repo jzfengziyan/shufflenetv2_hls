@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:52.739-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.360-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'avgpool_output' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.077-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv_last_output' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.070-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_2_outpu_1' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.056-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_2_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.042-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_1_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.036-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_0_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.030-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'downsampleunit2_outp' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.024-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer1_1_96_4x4_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:51.010-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer0_1_96_4x4_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.994-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_96_1_3x3' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.982-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'ShuffleConvs_2_Downs' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.970-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'bias_96' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.965-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_96_96_1x1' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.955-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_7_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.939-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_6_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.933-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_5_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.926-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_4_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.920-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_3_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.916-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_2_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.912-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_1_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.908-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_0_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.903-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'downsampleunit1_outp' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.899-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer1_1_48_8x8_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.888-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer0_1_48_8x8_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.884-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_48_1_3x3' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.874-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'ShuffleConvs_1_Downs' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.861-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'bias_48' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.854-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_48_48_1x1' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.845-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit0_2_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.836-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit0_1_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.829-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit0_0_outpu' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.824-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'downsampleunit0_outp' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.819-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer1_1_24_16x16_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.809-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer0_1_24_16x16_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.804-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_24_1_3x3' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.798-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'ShuffleConvs_0_Downs' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.795-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'bias_24' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.792-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_24_24_1x1' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.788-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv1_output_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.785-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'image_p' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.780-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'fc_bias' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.776-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv_last_bias' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.773-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv1_bias' will not be exposed as RTL port." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.769-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.668-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.664-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.406-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.403-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.399-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.039-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:50.032-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:49.470-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:49.462-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:49.460-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:49.226-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:49.219-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.978-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.974-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.971-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.583-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.576-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.098-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.094-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:48.090-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.865-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.858-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.621-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.616-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.613-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.268-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:47.233-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.723-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.719-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.717-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.495-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.489-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.259-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.256-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:46.254-0600" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'ShuffleNetV2/image' to 'ShuffleNetV2/image_r' to avoid the conflict with HDL keywords or other object names." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:18.973-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_16_no_relu_p' (acceleartor_hls_padding/components.cpp:206:25) into subconv_3x3_16_no_re." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:18.775-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_32_stride_no_relu_p' (acceleartor_hls_padding/components.cpp:164:25) into subconv_3x3_32_strid." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:11.166-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_4_no_relu_p' (acceleartor_hls_padding/components.cpp:806:25) into subconv_3x3_4_no_rel." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:11.164-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_8_no_relu_p' (acceleartor_hls_padding/components.cpp:507:25) into subconv_3x3_8_no_rel." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:11.162-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_8_stride_no_relu_p' (acceleartor_hls_padding/components.cpp:765:25) into subconv_3x3_8_stride." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:11.160-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_16_stride_no_relu_p' (acceleartor_hls_padding/components.cpp:466:25) into subconv_3x3_16_strid." projectName="acceleartor_hls_padding" solutionName="naive" date="2018-12-13T17:50:11.152-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

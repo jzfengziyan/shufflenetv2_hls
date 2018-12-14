@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'ShuffleNetV2'
 ================================================================
-* Date:           Tue Dec 11 23:30:36 2018
+* Date:           Tue Dec 11 23:52:46 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        accelerator_hls
@@ -9004,22 +9004,22 @@ ST_229: StgValue_2819 (2417)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:
 .preheader576:4  br i1 %exitcond246, label %.loopexit713.loopexit, label %.preheader575.preheader
 
 ST_229: tmp_332_cast1 (2419)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-.preheader575.preheader:0  %tmp_332_cast1 = zext i4 %h53 to i10
+.preheader575.preheader:0  %tmp_332_cast1 = zext i4 %h53 to i11
 
 ST_229: tmp_332_cast (2420)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-.preheader575.preheader:1  %tmp_332_cast = zext i4 %h53 to i11
+.preheader575.preheader:1  %tmp_332_cast = zext i4 %h53 to i10
 
 ST_229: tmp_871 (2421)  [1/1] 2.32ns  loc: accelerator_hls/shufflenet.cpp:954
-.preheader575.preheader:2  %tmp_871 = add i11 %tmp_332_cast, %tmp_1217_cast
+.preheader575.preheader:2  %tmp_871 = add i10 %tmp_332_cast, %tmp_1219_cast
 
 ST_229: tmp_1227_cast (2422)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-.preheader575.preheader:3  %tmp_1227_cast = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_871, i3 0)
+.preheader575.preheader:3  %tmp_1227_cast = call i13 @_ssdm_op_BitConcatenate.i13.i10.i3(i10 %tmp_871, i3 0)
 
 ST_229: tmp_872 (2423)  [1/1] 2.32ns  loc: accelerator_hls/shufflenet.cpp:954
-.preheader575.preheader:4  %tmp_872 = add i10 %tmp_332_cast1, %tmp_1219_cast
+.preheader575.preheader:4  %tmp_872 = add i11 %tmp_332_cast1, %tmp_1217_cast
 
 ST_229: tmp_1230_cast (2424)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:953
-.preheader575.preheader:5  %tmp_1230_cast = call i13 @_ssdm_op_BitConcatenate.i13.i10.i3(i10 %tmp_872, i3 0)
+.preheader575.preheader:5  %tmp_1230_cast = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_872, i3 0)
 
 ST_229: StgValue_2826 (2425)  [1/1] 1.59ns  loc: accelerator_hls/shufflenet.cpp:953
 .preheader575.preheader:6  br label %.preheader575
@@ -9045,22 +9045,22 @@ ST_230: StgValue_2832 (2431)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:
 .preheader575:4  br i1 %exitcond245, label %.preheader576.loopexit, label %81
 
 ST_230: tmp_337_cast1 (2433)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-:0  %tmp_337_cast1 = zext i4 %w53 to i13
+:0  %tmp_337_cast1 = zext i4 %w53 to i14
 
 ST_230: tmp_337_cast (2434)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-:1  %tmp_337_cast = zext i4 %w53 to i14
+:1  %tmp_337_cast = zext i4 %w53 to i13
 
 ST_230: tmp_875 (2435)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:954
-:2  %tmp_875 = add i14 %tmp_1227_cast, %tmp_337_cast
-
-ST_230: tmp_1232_cast (2436)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-:3  %tmp_1232_cast = zext i14 %tmp_875 to i64
-
-ST_230: shuffleunit1_0_outpu (2437)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-:4  %shuffleunit1_0_outpu = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1232_cast
+:2  %tmp_875 = add i13 %tmp_1227_cast, %tmp_337_cast
 
 ST_230: tmp_878 (2438)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:954
-:5  %tmp_878 = add i13 %tmp_1230_cast, %tmp_337_cast1
+:5  %tmp_878 = add i14 %tmp_1230_cast, %tmp_337_cast1
+
+ST_230: tmp_1233_cast (2439)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
+:6  %tmp_1233_cast = zext i14 %tmp_878 to i64
+
+ST_230: shuffleunit1_0_outpu (2440)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
+:7  %shuffleunit1_0_outpu = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1233_cast
 
 ST_230: shuffleunit1_0_outpu_1 (2441)  [2/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:954
 :8  %shuffleunit1_0_outpu_1 = load float* %shuffleunit1_0_outpu, align 4
@@ -9070,11 +9070,11 @@ ST_230: StgValue_2840 (2445)  [1/1] 0.00ns
 
 
  <State 231>: 6.51ns
-ST_231: tmp_1233_cast (2439)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-:6  %tmp_1233_cast = zext i13 %tmp_878 to i64
+ST_231: tmp_1232_cast (2436)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
+:3  %tmp_1232_cast = zext i13 %tmp_875 to i64
 
-ST_231: buffer0_1_48_8x8_add_2 (2440)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
-:7  %buffer0_1_48_8x8_add_2 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1233_cast
+ST_231: buffer0_1_48_8x8_add_2 (2437)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:954
+:4  %buffer0_1_48_8x8_add_2 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1232_cast
 
 ST_231: shuffleunit1_0_outpu_1 (2441)  [1/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:954
 :8  %shuffleunit1_0_outpu_1 = load float* %shuffleunit1_0_outpu, align 4
@@ -10199,8 +10199,8 @@ ST_266: tmp_930 (2839)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:994
 ST_266: tmp_1302_cast (2840)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:994
 :2  %tmp_1302_cast = zext i14 %tmp_930 to i64
 
-ST_266: shuffleunit1_0_outpu_2 (2841)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:994
-:3  %shuffleunit1_0_outpu_2 = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1302_cast
+ST_266: shuffleunit1_0_outpu_2 (2842)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:994
+:4  %shuffleunit1_0_outpu_2 = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1302_cast
 
 ST_266: shuffleunit1_0_outpu_3 (2843)  [2/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:994
 :5  %shuffleunit1_0_outpu_3 = load float* %shuffleunit1_0_outpu_2, align 4
@@ -10210,8 +10210,8 @@ ST_266: StgValue_3196 (2847)  [1/1] 0.00ns
 
 
  <State 267>: 6.51ns
-ST_267: buffer0_1_48_8x8_add_3 (2842)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:994
-:4  %buffer0_1_48_8x8_add_3 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1302_cast
+ST_267: buffer0_1_48_8x8_add_3 (2841)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:994
+:3  %buffer0_1_48_8x8_add_3 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1302_cast
 
 ST_267: shuffleunit1_0_outpu_3 (2843)  [1/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:994
 :5  %shuffleunit1_0_outpu_3 = load float* %shuffleunit1_0_outpu_2, align 4
@@ -19747,22 +19747,22 @@ ST_574: StgValue_6170 (6210)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:
 .preheader428:4  br i1 %exitcond65, label %.loopexit680.loopexit, label %.preheader427.preheader
 
 ST_574: tmp_749_cast1 (6212)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-.preheader427.preheader:0  %tmp_749_cast1 = zext i3 %h99 to i11
+.preheader427.preheader:0  %tmp_749_cast1 = zext i3 %h99 to i10
 
 ST_574: tmp_749_cast (6213)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-.preheader427.preheader:1  %tmp_749_cast = zext i3 %h99 to i10
+.preheader427.preheader:1  %tmp_749_cast = zext i3 %h99 to i11
 
 ST_574: tmp_1295 (6214)  [1/1] 2.32ns  loc: accelerator_hls/shufflenet.cpp:1455
-.preheader427.preheader:2  %tmp_1295 = add i10 %tmp_749_cast, %tmp_1800_cast
+.preheader427.preheader:2  %tmp_1295 = add i11 %tmp_749_cast, %tmp_1798_cast
 
 ST_574: tmp_1820_cast (6215)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-.preheader427.preheader:3  %tmp_1820_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1295, i2 0)
+.preheader427.preheader:3  %tmp_1820_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1295, i2 0)
 
 ST_574: tmp_1296 (6216)  [1/1] 2.32ns  loc: accelerator_hls/shufflenet.cpp:1455
-.preheader427.preheader:4  %tmp_1296 = add i11 %tmp_749_cast1, %tmp_1798_cast
+.preheader427.preheader:4  %tmp_1296 = add i10 %tmp_749_cast1, %tmp_1800_cast
 
 ST_574: tmp_1823_cast (6217)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1454
-.preheader427.preheader:5  %tmp_1823_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1296, i2 0)
+.preheader427.preheader:5  %tmp_1823_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1296, i2 0)
 
 ST_574: StgValue_6177 (6218)  [1/1] 1.59ns  loc: accelerator_hls/shufflenet.cpp:1454
 .preheader427.preheader:6  br label %.preheader427
@@ -19788,22 +19788,22 @@ ST_575: StgValue_6183 (6224)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:
 .preheader427:4  br i1 %exitcond64, label %.preheader428.loopexit, label %180
 
 ST_575: tmp_755_cast1 (6226)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-:0  %tmp_755_cast1 = zext i3 %w99 to i13
+:0  %tmp_755_cast1 = zext i3 %w99 to i12
 
 ST_575: tmp_755_cast (6227)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-:1  %tmp_755_cast = zext i3 %w99 to i12
+:1  %tmp_755_cast = zext i3 %w99 to i13
 
-ST_575: tmp_1297 (6228)  [1/1] 2.33ns  loc: accelerator_hls/shufflenet.cpp:1455
-:2  %tmp_1297 = add i12 %tmp_1820_cast, %tmp_755_cast
+ST_575: tmp_1297 (6228)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:1455
+:2  %tmp_1297 = add i13 %tmp_1820_cast, %tmp_755_cast
 
-ST_575: tmp_1298 (6231)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:1455
-:5  %tmp_1298 = add i13 %tmp_1823_cast, %tmp_755_cast1
+ST_575: tmp_1824_cast (6229)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
+:3  %tmp_1824_cast = zext i13 %tmp_1297 to i64
 
-ST_575: tmp_1825_cast (6232)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-:6  %tmp_1825_cast = zext i13 %tmp_1298 to i64
+ST_575: downsampleunit2_outp (6230)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
+:4  %downsampleunit2_outp = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1824_cast
 
-ST_575: downsampleunit2_outp (6233)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-:7  %downsampleunit2_outp = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1825_cast
+ST_575: tmp_1298 (6231)  [1/1] 2.33ns  loc: accelerator_hls/shufflenet.cpp:1455
+:5  %tmp_1298 = add i12 %tmp_1823_cast, %tmp_755_cast1
 
 ST_575: downsampleunit2_outp_1 (6234)  [2/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1455
 :8  %downsampleunit2_outp_1 = load float* %downsampleunit2_outp, align 4
@@ -19813,11 +19813,11 @@ ST_575: StgValue_6191 (6238)  [1/1] 0.00ns
 
 
  <State 576>: 6.51ns
-ST_576: tmp_1824_cast (6229)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-:3  %tmp_1824_cast = zext i12 %tmp_1297 to i64
+ST_576: tmp_1825_cast (6232)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
+:6  %tmp_1825_cast = zext i12 %tmp_1298 to i64
 
-ST_576: buffer0_1_96_4x4_add (6230)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
-:4  %buffer0_1_96_4x4_add = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1824_cast
+ST_576: buffer0_1_96_4x4_add (6233)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1455
+:7  %buffer0_1_96_4x4_add = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1825_cast
 
 ST_576: downsampleunit2_outp_1 (6234)  [1/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1455
 :8  %downsampleunit2_outp_1 = load float* %downsampleunit2_outp, align 4
@@ -20933,8 +20933,8 @@ ST_611: tmp_1349 (6629)  [1/1] 2.33ns  loc: accelerator_hls/shufflenet.cpp:1492
 ST_611: tmp_1894_cast (6630)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1492
 :2  %tmp_1894_cast = zext i13 %tmp_1349 to i64
 
-ST_611: downsampleunit2_outp_2 (6632)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1492
-:4  %downsampleunit2_outp_2 = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1894_cast
+ST_611: downsampleunit2_outp_2 (6631)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1492
+:3  %downsampleunit2_outp_2 = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1894_cast
 
 ST_611: downsampleunit2_outp_3 (6633)  [2/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1492
 :5  %downsampleunit2_outp_3 = load float* %downsampleunit2_outp_2, align 4
@@ -20944,8 +20944,8 @@ ST_611: StgValue_6544 (6637)  [1/1] 0.00ns
 
 
  <State 612>: 6.51ns
-ST_612: buffer0_1_96_4x4_add_1 (6631)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1492
-:3  %buffer0_1_96_4x4_add_1 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1894_cast
+ST_612: buffer0_1_96_4x4_add_1 (6632)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1492
+:4  %buffer0_1_96_4x4_add_1 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1894_cast
 
 ST_612: downsampleunit2_outp_3 (6633)  [1/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1492
 :5  %downsampleunit2_outp_3 = load float* %downsampleunit2_outp_2, align 4
@@ -22299,22 +22299,22 @@ ST_656: StgValue_6966 (7114)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:
 .preheader392:4  br i1 %exitcond21, label %.loopexit672.loopexit, label %.preheader391.preheader
 
 ST_656: tmp_844_cast1 (7116)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-.preheader391.preheader:0  %tmp_844_cast1 = zext i3 %h111 to i11
+.preheader391.preheader:0  %tmp_844_cast1 = zext i3 %h111 to i10
 
 ST_656: tmp_844_cast2 (7117)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-.preheader391.preheader:1  %tmp_844_cast2 = zext i3 %h111 to i10
+.preheader391.preheader:1  %tmp_844_cast2 = zext i3 %h111 to i11
 
 ST_656: tmp_1400 (7118)  [1/1] 2.32ns  loc: accelerator_hls/shufflenet.cpp:1551
-.preheader391.preheader:2  %tmp_1400 = add i10 %tmp_844_cast2, %tmp_1952_cast
+.preheader391.preheader:2  %tmp_1400 = add i11 %tmp_844_cast2, %tmp_1950_cast
 
 ST_656: tmp_1960_cast (7119)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-.preheader391.preheader:3  %tmp_1960_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1400, i2 0)
+.preheader391.preheader:3  %tmp_1960_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1400, i2 0)
 
 ST_656: tmp_1401 (7120)  [1/1] 2.32ns  loc: accelerator_hls/shufflenet.cpp:1551
-.preheader391.preheader:4  %tmp_1401 = add i11 %tmp_844_cast1, %tmp_1950_cast
+.preheader391.preheader:4  %tmp_1401 = add i10 %tmp_844_cast1, %tmp_1952_cast
 
 ST_656: tmp_1963_cast (7121)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1550
-.preheader391.preheader:5  %tmp_1963_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1401, i2 0)
+.preheader391.preheader:5  %tmp_1963_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1401, i2 0)
 
 ST_656: StgValue_6973 (7122)  [1/1] 1.59ns  loc: accelerator_hls/shufflenet.cpp:1550
 .preheader391.preheader:6  br label %.preheader391
@@ -22340,22 +22340,22 @@ ST_657: StgValue_6979 (7128)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:
 .preheader391:4  br i1 %exitcond20, label %.preheader392.loopexit, label %204
 
 ST_657: tmp_850_cast1 (7130)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-:0  %tmp_850_cast1 = zext i3 %w111 to i13
+:0  %tmp_850_cast1 = zext i3 %w111 to i12
 
 ST_657: tmp_850_cast2 (7131)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-:1  %tmp_850_cast2 = zext i3 %w111 to i12
+:1  %tmp_850_cast2 = zext i3 %w111 to i13
 
-ST_657: tmp_1403 (7132)  [1/1] 2.33ns  loc: accelerator_hls/shufflenet.cpp:1551
-:2  %tmp_1403 = add i12 %tmp_1960_cast, %tmp_850_cast2
+ST_657: tmp_1403 (7132)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:1551
+:2  %tmp_1403 = add i13 %tmp_1960_cast, %tmp_850_cast2
 
-ST_657: tmp_1404 (7135)  [1/1] 2.34ns  loc: accelerator_hls/shufflenet.cpp:1551
-:5  %tmp_1404 = add i13 %tmp_1963_cast, %tmp_850_cast1
+ST_657: tmp_1965_cast (7133)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
+:3  %tmp_1965_cast = zext i13 %tmp_1403 to i64
 
-ST_657: tmp_1966_cast (7136)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-:6  %tmp_1966_cast = zext i13 %tmp_1404 to i64
+ST_657: shuffleunit2_1_outpu (7134)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
+:4  %shuffleunit2_1_outpu = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_1965_cast
 
-ST_657: shuffleunit2_1_outpu (7137)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-:7  %shuffleunit2_1_outpu = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_1966_cast
+ST_657: tmp_1404 (7135)  [1/1] 2.33ns  loc: accelerator_hls/shufflenet.cpp:1551
+:5  %tmp_1404 = add i12 %tmp_1963_cast, %tmp_850_cast1
 
 ST_657: shuffleunit2_1_outpu_1 (7138)  [2/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1551
 :8  %shuffleunit2_1_outpu_1 = load float* %shuffleunit2_1_outpu, align 4
@@ -22365,11 +22365,11 @@ ST_657: StgValue_6987 (7142)  [1/1] 0.00ns
 
 
  <State 658>: 6.51ns
-ST_658: tmp_1965_cast (7133)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-:3  %tmp_1965_cast = zext i12 %tmp_1403 to i64
+ST_658: tmp_1966_cast (7136)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
+:6  %tmp_1966_cast = zext i12 %tmp_1404 to i64
 
-ST_658: buffer0_1_96_4x4_add_4 (7134)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
-:4  %buffer0_1_96_4x4_add_4 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1965_cast
+ST_658: buffer0_1_96_4x4_add_4 (7137)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1551
+:7  %buffer0_1_96_4x4_add_4 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1966_cast
 
 ST_658: shuffleunit2_1_outpu_1 (7138)  [1/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1551
 :8  %shuffleunit2_1_outpu_1 = load float* %shuffleunit2_1_outpu, align 4
@@ -23473,8 +23473,8 @@ ST_693: tmp_1450 (7529)  [1/1] 2.33ns  loc: accelerator_hls/shufflenet.cpp:1588
 ST_693: tmp_2024_cast (7530)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1588
 :2  %tmp_2024_cast = zext i13 %tmp_1450 to i64
 
-ST_693: shuffleunit2_1_outpu_2 (7532)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1588
-:4  %shuffleunit2_1_outpu_2 = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_2024_cast
+ST_693: shuffleunit2_1_outpu_2 (7531)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1588
+:3  %shuffleunit2_1_outpu_2 = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_2024_cast
 
 ST_693: shuffleunit2_1_outpu_3 (7533)  [2/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1588
 :5  %shuffleunit2_1_outpu_3 = load float* %shuffleunit2_1_outpu_2, align 4
@@ -23484,8 +23484,8 @@ ST_693: StgValue_7336 (7537)  [1/1] 0.00ns
 
 
  <State 694>: 6.51ns
-ST_694: buffer0_1_96_4x4_add_5 (7531)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1588
-:3  %buffer0_1_96_4x4_add_5 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_2024_cast
+ST_694: buffer0_1_96_4x4_add_5 (7532)  [1/1] 0.00ns  loc: accelerator_hls/shufflenet.cpp:1588
+:4  %buffer0_1_96_4x4_add_5 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_2024_cast
 
 ST_694: shuffleunit2_1_outpu_3 (7533)  [1/2] 3.25ns  loc: accelerator_hls/shufflenet.cpp:1588
 :5  %shuffleunit2_1_outpu_3 = load float* %shuffleunit2_1_outpu_2, align 4
@@ -24951,8 +24951,8 @@ The critical path consists of the following:
  <State 230>: 5.6ns
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/shufflenet.cpp:953) [2427]  (0 ns)
-	'add' operation ('tmp_875', accelerator_hls/shufflenet.cpp:954) [2435]  (2.34 ns)
-	'getelementptr' operation ('shuffleunit1_0_outpu', accelerator_hls/shufflenet.cpp:954) [2437]  (0 ns)
+	'add' operation ('tmp_878', accelerator_hls/shufflenet.cpp:954) [2438]  (2.34 ns)
+	'getelementptr' operation ('shuffleunit1_0_outpu', accelerator_hls/shufflenet.cpp:954) [2440]  (0 ns)
 	'load' operation ('shuffleunit1_0_outpu_1', accelerator_hls/shufflenet.cpp:954) on array 'shuffleunit1_0_outpu' [2441]  (3.25 ns)
 
  <State 231>: 6.51ns
@@ -25151,7 +25151,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/shufflenet.cpp:992) [2832]  (0 ns)
 	'add' operation ('tmp_930', accelerator_hls/shufflenet.cpp:994) [2839]  (2.34 ns)
-	'getelementptr' operation ('shuffleunit1_0_outpu_2', accelerator_hls/shufflenet.cpp:994) [2841]  (0 ns)
+	'getelementptr' operation ('shuffleunit1_0_outpu_2', accelerator_hls/shufflenet.cpp:994) [2842]  (0 ns)
 	'load' operation ('shuffleunit1_0_outpu_3', accelerator_hls/shufflenet.cpp:994) on array 'shuffleunit1_0_outpu' [2843]  (3.25 ns)
 
  <State 267>: 6.51ns
@@ -26831,13 +26831,13 @@ The critical path consists of the following:
  <State 574>: 2.32ns
 The critical path consists of the following:
 	'phi' operation ('h') with incoming values : ('h', accelerator_hls/shufflenet.cpp:1453) [6206]  (0 ns)
-	'add' operation ('tmp_1296', accelerator_hls/shufflenet.cpp:1455) [6216]  (2.32 ns)
+	'add' operation ('tmp_1295', accelerator_hls/shufflenet.cpp:1455) [6214]  (2.32 ns)
 
  <State 575>: 5.59ns
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/shufflenet.cpp:1454) [6220]  (0 ns)
-	'add' operation ('tmp_1298', accelerator_hls/shufflenet.cpp:1455) [6231]  (2.34 ns)
-	'getelementptr' operation ('downsampleunit2_outp', accelerator_hls/shufflenet.cpp:1455) [6233]  (0 ns)
+	'add' operation ('tmp_1297', accelerator_hls/shufflenet.cpp:1455) [6228]  (2.34 ns)
+	'getelementptr' operation ('downsampleunit2_outp', accelerator_hls/shufflenet.cpp:1455) [6230]  (0 ns)
 	'load' operation ('downsampleunit2_outp_1', accelerator_hls/shufflenet.cpp:1455) on array 'downsampleunit2_outp' [6234]  (3.25 ns)
 
  <State 576>: 6.51ns
@@ -27036,7 +27036,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/shufflenet.cpp:1490) [6622]  (0 ns)
 	'add' operation ('tmp_1349', accelerator_hls/shufflenet.cpp:1492) [6629]  (2.33 ns)
-	'getelementptr' operation ('downsampleunit2_outp_2', accelerator_hls/shufflenet.cpp:1492) [6632]  (0 ns)
+	'getelementptr' operation ('downsampleunit2_outp_2', accelerator_hls/shufflenet.cpp:1492) [6631]  (0 ns)
 	'load' operation ('downsampleunit2_outp_3', accelerator_hls/shufflenet.cpp:1492) on array 'downsampleunit2_outp' [6633]  (3.25 ns)
 
  <State 612>: 6.51ns
@@ -27204,6 +27204,7 @@ The critical path consists of the following:
  <State 642>: 7.54ns
 The critical path consists of the following:
 	'phi' operation ('i') with incoming values : ('i', accelerator_hls/shufflenet.cpp:1530) [6967]  (0 ns)
+	'shl' operation ('tmp_1389', accelerator_hls/shufflenet.cpp:1531) [6992]  (0 ns)
 	'sub' operation ('tmp_839', accelerator_hls/shufflenet.cpp:1531) [6994]  (1.83 ns)
 	'add' operation ('tmp_840', accelerator_hls/shufflenet.cpp:1531) [6995]  (1.83 ns)
 	'sub' operation ('tmp_1392', accelerator_hls/shufflenet.cpp:1531) [6999]  (1.94 ns)
@@ -27281,13 +27282,13 @@ The critical path consists of the following:
  <State 656>: 2.32ns
 The critical path consists of the following:
 	'phi' operation ('h') with incoming values : ('h', accelerator_hls/shufflenet.cpp:1549) [7110]  (0 ns)
-	'add' operation ('tmp_1401', accelerator_hls/shufflenet.cpp:1551) [7120]  (2.32 ns)
+	'add' operation ('tmp_1400', accelerator_hls/shufflenet.cpp:1551) [7118]  (2.32 ns)
 
  <State 657>: 5.59ns
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/shufflenet.cpp:1550) [7124]  (0 ns)
-	'add' operation ('tmp_1404', accelerator_hls/shufflenet.cpp:1551) [7135]  (2.34 ns)
-	'getelementptr' operation ('shuffleunit2_1_outpu', accelerator_hls/shufflenet.cpp:1551) [7137]  (0 ns)
+	'add' operation ('tmp_1403', accelerator_hls/shufflenet.cpp:1551) [7132]  (2.34 ns)
+	'getelementptr' operation ('shuffleunit2_1_outpu', accelerator_hls/shufflenet.cpp:1551) [7134]  (0 ns)
 	'load' operation ('shuffleunit2_1_outpu_1', accelerator_hls/shufflenet.cpp:1551) on array 'shuffleunit2_1_outpu' [7138]  (3.25 ns)
 
  <State 658>: 6.51ns
@@ -27488,7 +27489,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'phi' operation ('w') with incoming values : ('w', accelerator_hls/shufflenet.cpp:1586) [7522]  (0 ns)
 	'add' operation ('tmp_1450', accelerator_hls/shufflenet.cpp:1588) [7529]  (2.33 ns)
-	'getelementptr' operation ('shuffleunit2_1_outpu_2', accelerator_hls/shufflenet.cpp:1588) [7532]  (0 ns)
+	'getelementptr' operation ('shuffleunit2_1_outpu_2', accelerator_hls/shufflenet.cpp:1588) [7531]  (0 ns)
 	'load' operation ('shuffleunit2_1_outpu_3', accelerator_hls/shufflenet.cpp:1588) on array 'shuffleunit2_1_outpu' [7533]  (3.25 ns)
 
  <State 694>: 6.51ns

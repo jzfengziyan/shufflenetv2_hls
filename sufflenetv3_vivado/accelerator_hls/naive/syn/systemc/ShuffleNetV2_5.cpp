@@ -147,7 +147,7 @@ void ShuffleNetV2::thread_downsampleunit2_outp_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state611.read())) {
         downsampleunit2_outp_address0 =  (sc_lv<12>) (tmp_1894_cast_fu_25606_p1.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state575.read())) {
-        downsampleunit2_outp_address0 =  (sc_lv<12>) (tmp_1825_cast_fu_24465_p1.read());
+        downsampleunit2_outp_address0 =  (sc_lv<12>) (tmp_1824_cast_fu_24460_p1.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state572.read())) {
         downsampleunit2_outp_address0 = grp_shuffle_96_r_fu_7302_output_r_address0.read();
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state548.read())) {

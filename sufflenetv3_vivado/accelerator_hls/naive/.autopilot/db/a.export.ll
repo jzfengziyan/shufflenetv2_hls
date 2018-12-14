@@ -5781,12 +5781,12 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   br i1 %exitcond246, label %.loopexit713.loopexit, label %.preheader575.preheader
 
 .preheader575.preheader:                          ; preds = %.preheader576
-  %tmp_332_cast1 = zext i4 %h53 to i10
-  %tmp_332_cast = zext i4 %h53 to i11
-  %tmp_871 = add i11 %tmp_332_cast, %tmp_1217_cast
-  %tmp_1227_cast = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_871, i3 0)
-  %tmp_872 = add i10 %tmp_332_cast1, %tmp_1219_cast
-  %tmp_1230_cast = call i13 @_ssdm_op_BitConcatenate.i13.i10.i3(i10 %tmp_872, i3 0)
+  %tmp_332_cast1 = zext i4 %h53 to i11
+  %tmp_332_cast = zext i4 %h53 to i10
+  %tmp_871 = add i10 %tmp_332_cast, %tmp_1219_cast
+  %tmp_1227_cast = call i13 @_ssdm_op_BitConcatenate.i13.i10.i3(i10 %tmp_871, i3 0)
+  %tmp_872 = add i11 %tmp_332_cast1, %tmp_1217_cast
+  %tmp_1230_cast = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_872, i3 0)
   br label %.preheader575
 
 .preheader575:                                    ; preds = %81, %.preheader575.preheader
@@ -5797,14 +5797,14 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   br i1 %exitcond245, label %.preheader576.loopexit, label %81
 
 ; <label>:81                                      ; preds = %.preheader575
-  %tmp_337_cast1 = zext i4 %w53 to i13
-  %tmp_337_cast = zext i4 %w53 to i14
-  %tmp_875 = add i14 %tmp_1227_cast, %tmp_337_cast
-  %tmp_1232_cast = zext i14 %tmp_875 to i64
-  %shuffleunit1_0_outpu = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1232_cast
-  %tmp_878 = add i13 %tmp_1230_cast, %tmp_337_cast1
-  %tmp_1233_cast = zext i13 %tmp_878 to i64
-  %buffer0_1_48_8x8_add_2 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1233_cast
+  %tmp_337_cast1 = zext i4 %w53 to i14
+  %tmp_337_cast = zext i4 %w53 to i13
+  %tmp_875 = add i13 %tmp_1227_cast, %tmp_337_cast
+  %tmp_1232_cast = zext i13 %tmp_875 to i64
+  %buffer0_1_48_8x8_add_2 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1232_cast
+  %tmp_878 = add i14 %tmp_1230_cast, %tmp_337_cast1
+  %tmp_1233_cast = zext i14 %tmp_878 to i64
+  %shuffleunit1_0_outpu = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1233_cast
   %shuffleunit1_0_outpu_1 = load float* %shuffleunit1_0_outpu, align 4
   store float %shuffleunit1_0_outpu_1, float* %buffer0_1_48_8x8_add_2, align 4
   br label %.preheader575
@@ -6259,8 +6259,8 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   %tmp_377_cast = zext i4 %w57 to i14
   %tmp_930 = add i14 %tmp_1293_cast, %tmp_377_cast
   %tmp_1302_cast = zext i14 %tmp_930 to i64
-  %shuffleunit1_0_outpu_2 = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1302_cast
   %buffer0_1_48_8x8_add_3 = getelementptr [3072 x float]* @buffer0_1_48_8x8, i64 0, i64 %tmp_1302_cast
+  %shuffleunit1_0_outpu_2 = getelementptr [6144 x float]* @shuffleunit1_0_outpu, i64 0, i64 %tmp_1302_cast
   %shuffleunit1_0_outpu_3 = load float* %shuffleunit1_0_outpu_2, align 4
   store float %shuffleunit1_0_outpu_3, float* %buffer0_1_48_8x8_add_3, align 4
   br label %.preheader559
@@ -10117,12 +10117,12 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   br i1 %exitcond65, label %.loopexit680.loopexit, label %.preheader427.preheader
 
 .preheader427.preheader:                          ; preds = %.preheader428
-  %tmp_749_cast1 = zext i3 %h99 to i11
-  %tmp_749_cast = zext i3 %h99 to i10
-  %tmp_1295 = add i10 %tmp_749_cast, %tmp_1800_cast
-  %tmp_1820_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1295, i2 0)
-  %tmp_1296 = add i11 %tmp_749_cast1, %tmp_1798_cast
-  %tmp_1823_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1296, i2 0)
+  %tmp_749_cast1 = zext i3 %h99 to i10
+  %tmp_749_cast = zext i3 %h99 to i11
+  %tmp_1295 = add i11 %tmp_749_cast, %tmp_1798_cast
+  %tmp_1820_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1295, i2 0)
+  %tmp_1296 = add i10 %tmp_749_cast1, %tmp_1800_cast
+  %tmp_1823_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1296, i2 0)
   br label %.preheader427
 
 .preheader427:                                    ; preds = %180, %.preheader427.preheader
@@ -10133,14 +10133,14 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   br i1 %exitcond64, label %.preheader428.loopexit, label %180
 
 ; <label>:180                                     ; preds = %.preheader427
-  %tmp_755_cast1 = zext i3 %w99 to i13
-  %tmp_755_cast = zext i3 %w99 to i12
-  %tmp_1297 = add i12 %tmp_1820_cast, %tmp_755_cast
-  %tmp_1824_cast = zext i12 %tmp_1297 to i64
-  %buffer0_1_96_4x4_add = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1824_cast
-  %tmp_1298 = add i13 %tmp_1823_cast, %tmp_755_cast1
-  %tmp_1825_cast = zext i13 %tmp_1298 to i64
-  %downsampleunit2_outp = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1825_cast
+  %tmp_755_cast1 = zext i3 %w99 to i12
+  %tmp_755_cast = zext i3 %w99 to i13
+  %tmp_1297 = add i13 %tmp_1820_cast, %tmp_755_cast
+  %tmp_1824_cast = zext i13 %tmp_1297 to i64
+  %downsampleunit2_outp = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1824_cast
+  %tmp_1298 = add i12 %tmp_1823_cast, %tmp_755_cast1
+  %tmp_1825_cast = zext i12 %tmp_1298 to i64
+  %buffer0_1_96_4x4_add = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1825_cast
   %downsampleunit2_outp_1 = load float* %downsampleunit2_outp, align 4
   store float %downsampleunit2_outp_1, float* %buffer0_1_96_4x4_add, align 4
   br label %.preheader427
@@ -10592,8 +10592,8 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   %tmp_796_cast = zext i3 %w103 to i13
   %tmp_1349 = add i13 %tmp_1885_cast, %tmp_796_cast
   %tmp_1894_cast = zext i13 %tmp_1349 to i64
-  %buffer0_1_96_4x4_add_1 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1894_cast
   %downsampleunit2_outp_2 = getelementptr [3072 x float]* @downsampleunit2_outp, i64 0, i64 %tmp_1894_cast
+  %buffer0_1_96_4x4_add_1 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1894_cast
   %downsampleunit2_outp_3 = load float* %downsampleunit2_outp_2, align 4
   store float %downsampleunit2_outp_3, float* %buffer0_1_96_4x4_add_1, align 4
   br label %.preheader411
@@ -11153,12 +11153,12 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   br i1 %exitcond21, label %.loopexit672.loopexit, label %.preheader391.preheader
 
 .preheader391.preheader:                          ; preds = %.preheader392
-  %tmp_844_cast1 = zext i3 %h111 to i11
-  %tmp_844_cast2 = zext i3 %h111 to i10
-  %tmp_1400 = add i10 %tmp_844_cast2, %tmp_1952_cast
-  %tmp_1960_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1400, i2 0)
-  %tmp_1401 = add i11 %tmp_844_cast1, %tmp_1950_cast
-  %tmp_1963_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1401, i2 0)
+  %tmp_844_cast1 = zext i3 %h111 to i10
+  %tmp_844_cast2 = zext i3 %h111 to i11
+  %tmp_1400 = add i11 %tmp_844_cast2, %tmp_1950_cast
+  %tmp_1960_cast = call i13 @_ssdm_op_BitConcatenate.i13.i11.i2(i11 %tmp_1400, i2 0)
+  %tmp_1401 = add i10 %tmp_844_cast1, %tmp_1952_cast
+  %tmp_1963_cast = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_1401, i2 0)
   br label %.preheader391
 
 .preheader391:                                    ; preds = %204, %.preheader391.preheader
@@ -11169,14 +11169,14 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   br i1 %exitcond20, label %.preheader392.loopexit, label %204
 
 ; <label>:204                                     ; preds = %.preheader391
-  %tmp_850_cast1 = zext i3 %w111 to i13
-  %tmp_850_cast2 = zext i3 %w111 to i12
-  %tmp_1403 = add i12 %tmp_1960_cast, %tmp_850_cast2
-  %tmp_1965_cast = zext i12 %tmp_1403 to i64
-  %buffer0_1_96_4x4_add_4 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1965_cast
-  %tmp_1404 = add i13 %tmp_1963_cast, %tmp_850_cast1
-  %tmp_1966_cast = zext i13 %tmp_1404 to i64
-  %shuffleunit2_1_outpu = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_1966_cast
+  %tmp_850_cast1 = zext i3 %w111 to i12
+  %tmp_850_cast2 = zext i3 %w111 to i13
+  %tmp_1403 = add i13 %tmp_1960_cast, %tmp_850_cast2
+  %tmp_1965_cast = zext i13 %tmp_1403 to i64
+  %shuffleunit2_1_outpu = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_1965_cast
+  %tmp_1404 = add i12 %tmp_1963_cast, %tmp_850_cast1
+  %tmp_1966_cast = zext i12 %tmp_1404 to i64
+  %buffer0_1_96_4x4_add_4 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_1966_cast
   %shuffleunit2_1_outpu_1 = load float* %shuffleunit2_1_outpu, align 4
   store float %shuffleunit2_1_outpu_1, float* %buffer0_1_96_4x4_add_4, align 4
   br label %.preheader391
@@ -11624,8 +11624,8 @@ define void @ShuffleNetV2([3072 x float]* %image_r, [648 x float]* %conv1_weight
   %tmp_892_cast = zext i3 %w115 to i13
   %tmp_1450 = add i13 %tmp_2022_cast, %tmp_892_cast
   %tmp_2024_cast = zext i13 %tmp_1450 to i64
-  %buffer0_1_96_4x4_add_5 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_2024_cast
   %shuffleunit2_1_outpu_2 = getelementptr [3072 x float]* @shuffleunit2_1_outpu, i64 0, i64 %tmp_2024_cast
+  %buffer0_1_96_4x4_add_5 = getelementptr [1536 x float]* @buffer0_1_96_4x4, i64 0, i64 %tmp_2024_cast
   %shuffleunit2_1_outpu_3 = load float* %shuffleunit2_1_outpu_2, align 4
   store float %shuffleunit2_1_outpu_3, float* %buffer0_1_96_4x4_add_5, align 4
   br label %.preheader

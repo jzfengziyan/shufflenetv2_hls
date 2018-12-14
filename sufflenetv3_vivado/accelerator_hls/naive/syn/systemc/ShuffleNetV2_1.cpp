@@ -5242,7 +5242,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_CS_fsm_state160 );
     sensitive << ( ap_CS_fsm_state184 );
     sensitive << ( tmp_1162_cast_fu_12314_p1 );
-    sensitive << ( tmp_1233_cast_fu_13606_p1 );
+    sensitive << ( tmp_1232_cast_fu_13606_p1 );
     sensitive << ( tmp_1304_cast_fu_14902_p1 );
     sensitive << ( tmp_1377_cast_fu_16210_p1 );
     sensitive << ( tmp_1448_cast_fu_17498_p1 );
@@ -5406,9 +5406,9 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( ap_CS_fsm_state546 );
     sensitive << ( ap_CS_fsm_state570 );
     sensitive << ( ap_CS_fsm_state695 );
-    sensitive << ( tmp_1824_cast_fu_24470_p1 );
+    sensitive << ( tmp_1825_cast_fu_24470_p1 );
     sensitive << ( tmp_1895_cast_fu_25738_p1 );
-    sensitive << ( tmp_1965_cast_fu_27006_p1 );
+    sensitive << ( tmp_1966_cast_fu_27006_p1 );
 
     SC_METHOD(thread_buffer0_1_96_4x4_ce0);
     sensitive << ( grp_subconv_1x1_4_fu_7127_input_r_ce0 );
@@ -6539,7 +6539,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( grp_shuffle_96_r_fu_7302_output_r_address0 );
     sensitive << ( ap_CS_fsm_state548 );
     sensitive << ( ap_CS_fsm_state572 );
-    sensitive << ( tmp_1825_cast_fu_24465_p1 );
+    sensitive << ( tmp_1824_cast_fu_24460_p1 );
 
     SC_METHOD(thread_downsampleunit2_outp_ce0);
     sensitive << ( ap_CS_fsm_state575 );
@@ -11563,7 +11563,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( tmp_1302_cast_fu_14770_p1 );
     sensitive << ( grp_shuffle_48_fu_7233_output_r_address0 );
     sensitive << ( ap_CS_fsm_state227 );
-    sensitive << ( tmp_1232_cast_fu_13596_p1 );
+    sensitive << ( tmp_1233_cast_fu_13601_p1 );
 
     SC_METHOD(thread_shuffleunit1_0_outpu_ce0);
     sensitive << ( ap_CS_fsm_state230 );
@@ -11727,7 +11727,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( tmp_2024_cast_fu_28124_p1 );
     sensitive << ( grp_shuffle_96_fu_7250_output_r_address0 );
     sensitive << ( ap_CS_fsm_state654 );
-    sensitive << ( tmp_1966_cast_fu_27001_p1 );
+    sensitive << ( tmp_1965_cast_fu_26996_p1 );
 
     SC_METHOD(thread_shuffleunit2_1_outpu_ce0);
     sensitive << ( ap_CS_fsm_state657 );
@@ -13165,14 +13165,14 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_1231_fu_22764_p3);
     sensitive << ( tmp_691_fu_22759_p2 );
 
-    SC_METHOD(thread_tmp_1232_cast_fu_13596_p1);
-    sensitive << ( tmp_875_fu_13591_p2 );
+    SC_METHOD(thread_tmp_1232_cast_fu_13606_p1);
+    sensitive << ( tmp_875_reg_30379 );
 
     SC_METHOD(thread_tmp_1232_fu_22772_p3);
     sensitive << ( tmp_691_fu_22759_p2 );
 
-    SC_METHOD(thread_tmp_1233_cast_fu_13606_p1);
-    sensitive << ( tmp_878_reg_30384 );
+    SC_METHOD(thread_tmp_1233_cast_fu_13601_p1);
+    sensitive << ( tmp_878_fu_13596_p2 );
 
     SC_METHOD(thread_tmp_1233_fu_22784_p2);
     sensitive << ( tmp_1231_fu_22764_p3 );
@@ -13450,11 +13450,11 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( co158_reg_6315 );
 
     SC_METHOD(thread_tmp_1295_fu_24409_p2);
-    sensitive << ( tmp_1800_cast_reg_34096 );
+    sensitive << ( tmp_1798_cast_reg_34091 );
     sensitive << ( tmp_749_cast_fu_24405_p1 );
 
     SC_METHOD(thread_tmp_1296_fu_24422_p2);
-    sensitive << ( tmp_1798_cast_reg_34091 );
+    sensitive << ( tmp_1800_cast_reg_34096 );
     sensitive << ( tmp_749_cast1_fu_24401_p1 );
 
     SC_METHOD(thread_tmp_1297_fu_24455_p2);
@@ -13464,7 +13464,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_1298_cast_fu_14846_p3);
     sensitive << ( tmp_928_fu_14841_p2 );
 
-    SC_METHOD(thread_tmp_1298_fu_24460_p2);
+    SC_METHOD(thread_tmp_1298_fu_24465_p2);
     sensitive << ( tmp_1823_cast_reg_34114 );
     sensitive << ( tmp_755_cast1_fu_24447_p1 );
 
@@ -13931,11 +13931,11 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( co16_cast_fu_7651_p1 );
 
     SC_METHOD(thread_tmp_1400_fu_26945_p2);
-    sensitive << ( tmp_1952_cast_reg_34996 );
+    sensitive << ( tmp_1950_cast_reg_34991 );
     sensitive << ( tmp_844_cast2_fu_26941_p1 );
 
     SC_METHOD(thread_tmp_1401_fu_26958_p2);
-    sensitive << ( tmp_1950_cast_reg_34991 );
+    sensitive << ( tmp_1952_cast_reg_34996 );
     sensitive << ( tmp_844_cast1_fu_26937_p1 );
 
     SC_METHOD(thread_tmp_1402_cast_fu_16729_p1);
@@ -13949,7 +13949,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( tmp_1960_cast_reg_35009 );
     sensitive << ( tmp_850_cast2_fu_26987_p1 );
 
-    SC_METHOD(thread_tmp_1404_fu_26996_p2);
+    SC_METHOD(thread_tmp_1404_fu_27001_p2);
     sensitive << ( tmp_1963_cast_reg_35014 );
     sensitive << ( tmp_850_cast1_fu_26983_p1 );
 
@@ -14644,11 +14644,11 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_1823_cast_fu_24427_p3);
     sensitive << ( tmp_1296_fu_24422_p2 );
 
-    SC_METHOD(thread_tmp_1824_cast_fu_24470_p1);
-    sensitive << ( tmp_1297_reg_34127 );
+    SC_METHOD(thread_tmp_1824_cast_fu_24460_p1);
+    sensitive << ( tmp_1297_fu_24455_p2 );
 
-    SC_METHOD(thread_tmp_1825_cast_fu_24465_p1);
-    sensitive << ( tmp_1298_fu_24460_p2 );
+    SC_METHOD(thread_tmp_1825_cast_fu_24470_p1);
+    sensitive << ( tmp_1298_reg_34132 );
 
     SC_METHOD(thread_tmp_182_cast_fu_8891_p1);
     sensitive << ( w30_reg_3383 );
@@ -14824,11 +14824,11 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_tmp_1964_cast_fu_26874_p1);
     sensitive << ( tmp_1402_fu_26869_p2 );
 
-    SC_METHOD(thread_tmp_1965_cast_fu_27006_p1);
-    sensitive << ( tmp_1403_reg_35027 );
+    SC_METHOD(thread_tmp_1965_cast_fu_26996_p1);
+    sensitive << ( tmp_1403_fu_26991_p2 );
 
-    SC_METHOD(thread_tmp_1966_cast_fu_27001_p1);
-    sensitive << ( tmp_1404_fu_26996_p2 );
+    SC_METHOD(thread_tmp_1966_cast_fu_27006_p1);
+    sensitive << ( tmp_1404_reg_35032 );
 
     SC_METHOD(thread_tmp_196_cast1_fu_9343_p1);
     sensitive << ( h33_reg_3483 );
@@ -18518,14 +18518,14 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( h113_reg_6876 );
 
     SC_METHOD(thread_tmp_871_fu_13545_p2);
-    sensitive << ( tmp_1217_cast_reg_30343 );
+    sensitive << ( tmp_1219_cast_reg_30348 );
     sensitive << ( tmp_332_cast_fu_13541_p1 );
 
     SC_METHOD(thread_tmp_872_cast_fu_27776_p1);
     sensitive << ( ci80_reg_6931 );
 
     SC_METHOD(thread_tmp_872_fu_13558_p2);
-    sensitive << ( tmp_1219_cast_reg_30348 );
+    sensitive << ( tmp_1217_cast_reg_30343 );
     sensitive << ( tmp_332_cast1_fu_13537_p1 );
 
     SC_METHOD(thread_tmp_873_cast_cast_fu_22907_p1);
@@ -18560,7 +18560,7 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sensitive << ( co181_cast1_reg_35148 );
     sensitive << ( tmp83_fu_27468_p2 );
 
-    SC_METHOD(thread_tmp_878_fu_13601_p2);
+    SC_METHOD(thread_tmp_878_fu_13596_p2);
     sensitive << ( tmp_1230_cast_reg_30366 );
     sensitive << ( tmp_337_cast1_fu_13583_p1 );
 
@@ -21651,9 +21651,9 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, w_54_fu_13577_p2, "w_54_fu_13577_p2");
     sc_trace(mVcdFile, w_54_reg_30374, "w_54_reg_30374");
     sc_trace(mVcdFile, ap_CS_fsm_state230, "ap_CS_fsm_state230");
+    sc_trace(mVcdFile, tmp_875_fu_13591_p2, "tmp_875_fu_13591_p2");
+    sc_trace(mVcdFile, tmp_875_reg_30379, "tmp_875_reg_30379");
     sc_trace(mVcdFile, exitcond245_fu_13571_p2, "exitcond245_fu_13571_p2");
-    sc_trace(mVcdFile, tmp_878_fu_13601_p2, "tmp_878_fu_13601_p2");
-    sc_trace(mVcdFile, tmp_878_reg_30384, "tmp_878_reg_30384");
     sc_trace(mVcdFile, co78_cast_fu_13610_p1, "co78_cast_fu_13610_p1");
     sc_trace(mVcdFile, co78_cast_reg_30389, "co78_cast_reg_30389");
     sc_trace(mVcdFile, ap_CS_fsm_state232, "ap_CS_fsm_state232");
@@ -23175,9 +23175,9 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, w_100_fu_24441_p2, "w_100_fu_24441_p2");
     sc_trace(mVcdFile, w_100_reg_34122, "w_100_reg_34122");
     sc_trace(mVcdFile, ap_CS_fsm_state575, "ap_CS_fsm_state575");
-    sc_trace(mVcdFile, tmp_1297_fu_24455_p2, "tmp_1297_fu_24455_p2");
-    sc_trace(mVcdFile, tmp_1297_reg_34127, "tmp_1297_reg_34127");
     sc_trace(mVcdFile, exitcond64_fu_24435_p2, "exitcond64_fu_24435_p2");
+    sc_trace(mVcdFile, tmp_1298_fu_24465_p2, "tmp_1298_fu_24465_p2");
+    sc_trace(mVcdFile, tmp_1298_reg_34132, "tmp_1298_reg_34132");
     sc_trace(mVcdFile, co158_cast_fu_24474_p1, "co158_cast_fu_24474_p1");
     sc_trace(mVcdFile, co158_cast_reg_34137, "co158_cast_reg_34137");
     sc_trace(mVcdFile, ap_CS_fsm_state577, "ap_CS_fsm_state577");
@@ -23541,9 +23541,9 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, w_112_fu_26977_p2, "w_112_fu_26977_p2");
     sc_trace(mVcdFile, w_112_reg_35022, "w_112_reg_35022");
     sc_trace(mVcdFile, ap_CS_fsm_state657, "ap_CS_fsm_state657");
-    sc_trace(mVcdFile, tmp_1403_fu_26991_p2, "tmp_1403_fu_26991_p2");
-    sc_trace(mVcdFile, tmp_1403_reg_35027, "tmp_1403_reg_35027");
     sc_trace(mVcdFile, exitcond20_fu_26971_p2, "exitcond20_fu_26971_p2");
+    sc_trace(mVcdFile, tmp_1404_fu_27001_p2, "tmp_1404_fu_27001_p2");
+    sc_trace(mVcdFile, tmp_1404_reg_35032, "tmp_1404_reg_35032");
     sc_trace(mVcdFile, co178_cast_fu_27010_p1, "co178_cast_fu_27010_p1");
     sc_trace(mVcdFile, co178_cast_reg_35037, "co178_cast_reg_35037");
     sc_trace(mVcdFile, ap_CS_fsm_state659, "ap_CS_fsm_state659");
@@ -24813,8 +24813,8 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_1215_cast_fu_13294_p1, "tmp_1215_cast_fu_13294_p1");
     sc_trace(mVcdFile, tmp_322_fu_13384_p1, "tmp_322_fu_13384_p1");
     sc_trace(mVcdFile, tmp_324_fu_13391_p1, "tmp_324_fu_13391_p1");
-    sc_trace(mVcdFile, tmp_1232_cast_fu_13596_p1, "tmp_1232_cast_fu_13596_p1");
-    sc_trace(mVcdFile, tmp_1233_cast_fu_13606_p1, "tmp_1233_cast_fu_13606_p1");
+    sc_trace(mVcdFile, tmp_1233_cast_fu_13601_p1, "tmp_1233_cast_fu_13601_p1");
+    sc_trace(mVcdFile, tmp_1232_cast_fu_13606_p1, "tmp_1232_cast_fu_13606_p1");
     sc_trace(mVcdFile, tmp_1241_cast_fu_13867_p1, "tmp_1241_cast_fu_13867_p1");
     sc_trace(mVcdFile, tmp_1249_cast_fu_13872_p1, "tmp_1249_cast_fu_13872_p1");
     sc_trace(mVcdFile, tmp_340_fu_13962_p1, "tmp_340_fu_13962_p1");
@@ -24931,8 +24931,8 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_1815_cast_fu_24241_p1, "tmp_1815_cast_fu_24241_p1");
     sc_trace(mVcdFile, tmp_741_fu_24331_p1, "tmp_741_fu_24331_p1");
     sc_trace(mVcdFile, tmp_743_fu_24338_p1, "tmp_743_fu_24338_p1");
-    sc_trace(mVcdFile, tmp_1825_cast_fu_24465_p1, "tmp_1825_cast_fu_24465_p1");
-    sc_trace(mVcdFile, tmp_1824_cast_fu_24470_p1, "tmp_1824_cast_fu_24470_p1");
+    sc_trace(mVcdFile, tmp_1824_cast_fu_24460_p1, "tmp_1824_cast_fu_24460_p1");
+    sc_trace(mVcdFile, tmp_1825_cast_fu_24470_p1, "tmp_1825_cast_fu_24470_p1");
     sc_trace(mVcdFile, tmp_1833_cast_fu_24719_p1, "tmp_1833_cast_fu_24719_p1");
     sc_trace(mVcdFile, tmp_1840_cast_fu_24724_p1, "tmp_1840_cast_fu_24724_p1");
     sc_trace(mVcdFile, tmp_758_fu_24814_p1, "tmp_758_fu_24814_p1");
@@ -24959,8 +24959,8 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_1948_cast_fu_26694_p1, "tmp_1948_cast_fu_26694_p1");
     sc_trace(mVcdFile, tmp_834_fu_26784_p1, "tmp_834_fu_26784_p1");
     sc_trace(mVcdFile, tmp_836_fu_26791_p1, "tmp_836_fu_26791_p1");
-    sc_trace(mVcdFile, tmp_1966_cast_fu_27001_p1, "tmp_1966_cast_fu_27001_p1");
-    sc_trace(mVcdFile, tmp_1965_cast_fu_27006_p1, "tmp_1965_cast_fu_27006_p1");
+    sc_trace(mVcdFile, tmp_1965_cast_fu_26996_p1, "tmp_1965_cast_fu_26996_p1");
+    sc_trace(mVcdFile, tmp_1966_cast_fu_27006_p1, "tmp_1966_cast_fu_27006_p1");
     sc_trace(mVcdFile, tmp_1974_cast_fu_27251_p1, "tmp_1974_cast_fu_27251_p1");
     sc_trace(mVcdFile, tmp_1981_cast_fu_27256_p1, "tmp_1981_cast_fu_27256_p1");
     sc_trace(mVcdFile, tmp_854_fu_27346_p1, "tmp_854_fu_27346_p1");
@@ -25624,8 +25624,8 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_332_cast1_fu_13537_p1, "tmp_332_cast1_fu_13537_p1");
     sc_trace(mVcdFile, tmp_872_fu_13558_p2, "tmp_872_fu_13558_p2");
     sc_trace(mVcdFile, tmp_337_cast_fu_13587_p1, "tmp_337_cast_fu_13587_p1");
-    sc_trace(mVcdFile, tmp_875_fu_13591_p2, "tmp_875_fu_13591_p2");
     sc_trace(mVcdFile, tmp_337_cast1_fu_13583_p1, "tmp_337_cast1_fu_13583_p1");
+    sc_trace(mVcdFile, tmp_878_fu_13596_p2, "tmp_878_fu_13596_p2");
     sc_trace(mVcdFile, tmp_202_fu_13626_p1, "tmp_202_fu_13626_p1");
     sc_trace(mVcdFile, p_shl52_fu_13630_p3, "p_shl52_fu_13630_p3");
     sc_trace(mVcdFile, p_shl53_fu_13642_p3, "p_shl53_fu_13642_p3");
@@ -26803,8 +26803,8 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_749_cast1_fu_24401_p1, "tmp_749_cast1_fu_24401_p1");
     sc_trace(mVcdFile, tmp_1296_fu_24422_p2, "tmp_1296_fu_24422_p2");
     sc_trace(mVcdFile, tmp_755_cast_fu_24451_p1, "tmp_755_cast_fu_24451_p1");
+    sc_trace(mVcdFile, tmp_1297_fu_24455_p2, "tmp_1297_fu_24455_p2");
     sc_trace(mVcdFile, tmp_755_cast1_fu_24447_p1, "tmp_755_cast1_fu_24447_p1");
-    sc_trace(mVcdFile, tmp_1298_fu_24460_p2, "tmp_1298_fu_24460_p2");
     sc_trace(mVcdFile, tmp_1293_fu_24490_p1, "tmp_1293_fu_24490_p1");
     sc_trace(mVcdFile, p_shl215_fu_24494_p3, "p_shl215_fu_24494_p3");
     sc_trace(mVcdFile, tmp_1294_fu_24506_p2, "tmp_1294_fu_24506_p2");
@@ -27075,8 +27075,8 @@ ShuffleNetV2::ShuffleNetV2(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, tmp_844_cast1_fu_26937_p1, "tmp_844_cast1_fu_26937_p1");
     sc_trace(mVcdFile, tmp_1401_fu_26958_p2, "tmp_1401_fu_26958_p2");
     sc_trace(mVcdFile, tmp_850_cast2_fu_26987_p1, "tmp_850_cast2_fu_26987_p1");
+    sc_trace(mVcdFile, tmp_1403_fu_26991_p2, "tmp_1403_fu_26991_p2");
     sc_trace(mVcdFile, tmp_850_cast1_fu_26983_p1, "tmp_850_cast1_fu_26983_p1");
-    sc_trace(mVcdFile, tmp_1404_fu_26996_p2, "tmp_1404_fu_26996_p2");
     sc_trace(mVcdFile, tmp_1398_fu_27026_p1, "tmp_1398_fu_27026_p1");
     sc_trace(mVcdFile, p_shl243_fu_27030_p3, "p_shl243_fu_27030_p3");
     sc_trace(mVcdFile, tmp_1399_fu_27042_p2, "tmp_1399_fu_27042_p2");

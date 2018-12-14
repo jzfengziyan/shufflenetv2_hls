@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'ShuffleNetV2'" level="0">
-<item name = "Date">Tue Dec 11 23:31:06 2018
+<item name = "Date">Tue Dec 11 23:53:12 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">accelerator_hls</item>
@@ -1014,10 +1014,10 @@
 <column name="tmp_127_fu_7388_p2">+, 0, 35, 15, 10, 10</column>
 <column name="tmp_1287_fu_24231_p2">+, 0, 62, 24, 19, 19</column>
 <column name="tmp_1292_fu_24194_p2">+, 0, 0, 12, 15, 15</column>
-<column name="tmp_1295_fu_24409_p2">+, 0, 35, 15, 10, 10</column>
-<column name="tmp_1296_fu_24422_p2">+, 0, 38, 16, 11, 11</column>
-<column name="tmp_1297_fu_24455_p2">+, 0, 41, 17, 12, 12</column>
-<column name="tmp_1298_fu_24460_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_1295_fu_24409_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_1296_fu_24422_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_1297_fu_24455_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_1298_fu_24465_p2">+, 0, 41, 17, 12, 12</column>
 <column name="tmp_1304_fu_24714_p2">+, 0, 62, 24, 19, 19</column>
 <column name="tmp_1309_fu_24677_p2">+, 0, 0, 12, 15, 15</column>
 <column name="tmp_130_fu_7496_p2">+, 0, 23, 11, 6, 5</column>
@@ -1044,11 +1044,11 @@
 <column name="tmp_1393_fu_26651_p2">+, 0, 0, 12, 15, 15</column>
 <column name="tmp_1396_fu_26836_p2">+, 0, 35, 15, 10, 10</column>
 <column name="tmp_139_fu_7667_p2">+, 0, 23, 11, 6, 5</column>
-<column name="tmp_1400_fu_26945_p2">+, 0, 35, 15, 10, 10</column>
-<column name="tmp_1401_fu_26958_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_1400_fu_26945_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_1401_fu_26958_p2">+, 0, 35, 15, 10, 10</column>
 <column name="tmp_1402_fu_26869_p2">+, 0, 44, 18, 13, 13</column>
-<column name="tmp_1403_fu_26991_p2">+, 0, 41, 17, 12, 12</column>
-<column name="tmp_1404_fu_26996_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_1403_fu_26991_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_1404_fu_27001_p2">+, 0, 41, 17, 12, 12</column>
 <column name="tmp_1410_fu_27246_p2">+, 0, 0, 12, 19, 19</column>
 <column name="tmp_1415_fu_27213_p2">+, 0, 0, 12, 15, 15</column>
 <column name="tmp_141_fu_7792_p2">+, 0, 26, 12, 7, 7</column>
@@ -1364,13 +1364,13 @@
 <column name="tmp_864_fu_13436_p2">+, 0, 35, 15, 10, 10</column>
 <column name="tmp_867_fu_27676_p2">+, 0, 0, 12, 12, 12</column>
 <column name="tmp_869_fu_27681_p2">+, 0, 29, 13, 8, 8</column>
-<column name="tmp_871_fu_13545_p2">+, 0, 38, 16, 11, 11</column>
-<column name="tmp_872_fu_13558_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_871_fu_13545_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_872_fu_13558_p2">+, 0, 38, 16, 11, 11</column>
 <column name="tmp_873_fu_27780_p2">+, 0, 29, 13, 8, 8</column>
 <column name="tmp_874_fu_13469_p2">+, 0, 47, 19, 14, 14</column>
-<column name="tmp_875_fu_13591_p2">+, 0, 47, 19, 14, 14</column>
+<column name="tmp_875_fu_13591_p2">+, 0, 44, 18, 13, 13</column>
 <column name="tmp_877_fu_27474_p2">+, 0, 0, 12, 11, 11</column>
-<column name="tmp_878_fu_13601_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_878_fu_13596_p2">+, 0, 47, 19, 14, 14</column>
 <column name="tmp_880_fu_27479_p2">+, 0, 29, 13, 8, 8</column>
 <column name="tmp_883_fu_28024_p2">+, 0, 0, 12, 12, 12</column>
 <column name="tmp_885_fu_28029_p2">+, 0, 29, 13, 8, 8</column>
@@ -3483,8 +3483,8 @@
 <column name="tmp_1218_reg_33390">13, 0, 13, 0</column>
 <column name="tmp_1219_cast_reg_30348">6, 0, 10, 4</column>
 <column name="tmp_1222_cast_reg_30312">10, 0, 14, 4</column>
-<column name="tmp_1227_cast_reg_30361">11, 0, 14, 3</column>
-<column name="tmp_1230_cast_reg_30366">10, 0, 13, 3</column>
+<column name="tmp_1227_cast_reg_30361">10, 0, 13, 3</column>
+<column name="tmp_1230_cast_reg_30366">11, 0, 14, 3</column>
 <column name="tmp_1231_cast_reg_30325">14, 0, 64, 50</column>
 <column name="tmp_1234_reg_33540">15, 0, 15, 0</column>
 <column name="tmp_1243_reg_33665">15, 0, 15, 0</column>
@@ -3501,8 +3501,8 @@
 <column name="tmp_1290_cast_reg_30798">6, 0, 10, 4</column>
 <column name="tmp_1292_reg_34032">15, 0, 15, 0</column>
 <column name="tmp_1293_cast_reg_30762">10, 0, 14, 4</column>
-<column name="tmp_1297_reg_34127">12, 0, 12, 0</column>
 <column name="tmp_1298_cast_reg_30811">11, 0, 14, 3</column>
+<column name="tmp_1298_reg_34132">12, 0, 12, 0</column>
 <column name="tmp_1301_cast_reg_30816">10, 0, 13, 3</column>
 <column name="tmp_1302_cast_reg_30775">14, 0, 64, 50</column>
 <column name="tmp_1309_reg_34192">15, 0, 15, 0</column>
@@ -3525,7 +3525,7 @@
 <column name="tmp_1379_reg_34777">9, 0, 9, 0</column>
 <column name="tmp_1381_reg_34787">11, 0, 11, 0</column>
 <column name="tmp_1393_reg_34888">15, 0, 15, 0</column>
-<column name="tmp_1403_reg_35027">12, 0, 12, 0</column>
+<column name="tmp_1404_reg_35032">12, 0, 12, 0</column>
 <column name="tmp_1414_cast_reg_31649">6, 0, 10, 4</column>
 <column name="tmp_1415_reg_35092">15, 0, 15, 0</column>
 <column name="tmp_1425_reg_35217">15, 0, 15, 0</column>
@@ -3570,8 +3570,8 @@
 <column name="tmp_1728_cast_reg_33475">14, 0, 64, 50</column>
 <column name="tmp_1798_cast_reg_34091">8, 0, 11, 3</column>
 <column name="tmp_1800_cast_reg_34096">7, 0, 10, 3</column>
-<column name="tmp_1820_cast_reg_34109">10, 0, 12, 2</column>
-<column name="tmp_1823_cast_reg_34114">11, 0, 13, 2</column>
+<column name="tmp_1820_cast_reg_34109">11, 0, 13, 2</column>
+<column name="tmp_1823_cast_reg_34114">10, 0, 12, 2</column>
 <column name="tmp_1861_cast_reg_34497">7, 0, 10, 3</column>
 <column name="tmp_1880_cast_reg_34541">8, 0, 11, 3</column>
 <column name="tmp_1882_cast_reg_34546">7, 0, 10, 3</column>
@@ -3585,8 +3585,8 @@
 <column name="tmp_1950_cast_reg_34991">8, 0, 11, 3</column>
 <column name="tmp_1952_cast_reg_34996">7, 0, 10, 3</column>
 <column name="tmp_1955_cast_reg_34960">10, 0, 13, 3</column>
-<column name="tmp_1960_cast_reg_35009">10, 0, 12, 2</column>
-<column name="tmp_1963_cast_reg_35014">11, 0, 13, 2</column>
+<column name="tmp_1960_cast_reg_35009">11, 0, 13, 2</column>
+<column name="tmp_1963_cast_reg_35014">10, 0, 12, 2</column>
 <column name="tmp_1964_cast_reg_34973">13, 0, 64, 51</column>
 <column name="tmp_2002_cast_reg_35397">7, 0, 10, 3</column>
 <column name="tmp_2019_cast_reg_35447">4, 0, 14, 10</column>
@@ -3955,8 +3955,8 @@
 <column name="tmp_871_cast_reg_35192">2, 0, 15, 13</column>
 <column name="tmp_872_cast_reg_35314">5, 0, 19, 14</column>
 <column name="tmp_874_cast_reg_35319">15, 0, 15, 0</column>
+<column name="tmp_875_reg_30379">13, 0, 13, 0</column>
 <column name="tmp_877_reg_35205">11, 0, 11, 0</column>
-<column name="tmp_878_reg_30384">13, 0, 13, 0</column>
 <column name="tmp_880_reg_35211">8, 0, 8, 0</column>
 <column name="tmp_883_reg_35374">12, 0, 12, 0</column>
 <column name="tmp_885_reg_35379">8, 0, 8, 0</column>

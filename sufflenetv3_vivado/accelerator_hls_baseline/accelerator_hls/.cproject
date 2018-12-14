@@ -30,7 +30,6 @@
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include"/>
-									<listOptionValue builtIn="false" value="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls_baseline"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1732199318" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -48,7 +47,6 @@
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include"/>
-									<listOptionValue builtIn="false" value="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls_baseline"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1645251169" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="AESL_TB"/>
@@ -116,7 +114,6 @@
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include"/>
-									<listOptionValue builtIn="false" value="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls_baseline"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1984764772" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -129,7 +126,6 @@
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/etc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include/ap_sysc"/>
 									<listOptionValue builtIn="false" value="/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/include"/>
-									<listOptionValue builtIn="false" value="/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_hls_baseline"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.66647592" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>

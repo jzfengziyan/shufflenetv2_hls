@@ -38128,7 +38128,7 @@ void fc(float input[512],
 # 2 "accelerator_hls/shufflenet.cpp" 2
 
 float conv1_output[1][24][32][32] = {0};
-
+/*FIXME:If bram is still not enough, could use double buffer to buffer the following !!*/
 float downsampleunit0_output[1][48][16][16] = {0};
 float shuffleunit0_0_output[1][48][16][16] = {0};
 float shuffleunit0_1_output[1][48][16][16] = {0};

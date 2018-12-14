@@ -3744,7 +3744,7 @@ void ShuffleNetV2::thread_buffer0_1_48_8x8_address0() {
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state267.read())) {
         buffer0_1_48_8x8_address0 =  (sc_lv<12>) (tmp_1302_cast_reg_30775.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state231.read())) {
-        buffer0_1_48_8x8_address0 =  (sc_lv<12>) (tmp_1233_cast_fu_13606_p1.read());
+        buffer0_1_48_8x8_address0 =  (sc_lv<12>) (tmp_1232_cast_fu_13606_p1.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state226.read())) {
         buffer0_1_48_8x8_address0 =  (sc_lv<12>) (tmp_1231_cast_reg_30325.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state190.read())) {
@@ -3938,7 +3938,7 @@ void ShuffleNetV2::thread_buffer0_1_96_4x4_address0() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state694.read())) {
         buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_2024_cast_reg_35423.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state658.read())) {
-        buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_1965_cast_fu_27006_p1.read());
+        buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_1966_cast_fu_27006_p1.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state653.read())) {
         buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_1964_cast_reg_34973.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state617.read())) {
@@ -3946,7 +3946,7 @@ void ShuffleNetV2::thread_buffer0_1_96_4x4_address0() {
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state612.read())) {
         buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_1894_cast_reg_34523.read());
     } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state576.read())) {
-        buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_1824_cast_fu_24470_p1.read());
+        buffer0_1_96_4x4_address0 =  (sc_lv<11>) (tmp_1825_cast_fu_24470_p1.read());
     } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state613.read()) || 
                 esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state654.read()) || 
                 esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state695.read()))) {
