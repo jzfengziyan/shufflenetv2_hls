@@ -1,3 +1,84 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-<sourceFile name=""/>
+<sourceFile name="">
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="3072"/>
+<option name="port" positionalBoolean="4" value="image"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_INPUT_OUTPUT"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="648"/>
+<option name="port" positionalBoolean="4" value="conv1_weight"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_OTHER_WEIGHTS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="3618"/>
+<option name="port" positionalBoolean="4" value="bias"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_BIAS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="9720"/>
+<option name="port" positionalBoolean="4" value="shuffle_conv_3x3"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="3X3_1X1_WEIGHTS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="131904"/>
+<option name="port" positionalBoolean="4" value="shuffle_conv_1x1"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="3X3_1X1_WEIGHTS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="5120"/>
+<option name="port" positionalBoolean="4" value="fc_weight"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_OTHER_WEIGHTS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="1000"/>
+<option name="port" positionalBoolean="4" value="fc_output"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_INPUT_OUTPUT"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="98304"/>
+<option name="port" positionalBoolean="4" value="conv_last_weight"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_OTHER_WEIGHTS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ShuffleNetV2" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="register" positionalBoolean="register" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+<option name="bundle" value="CTL"/>
+</pragma>
+</directive>
+</sourceFile>
 </AutoPilot:ProjectResources>

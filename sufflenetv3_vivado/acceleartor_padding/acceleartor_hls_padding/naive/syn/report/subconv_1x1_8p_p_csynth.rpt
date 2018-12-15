@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'subconv_1x1_8p_p'
 ================================================================
-* Date:           Thu Dec 13 17:50:48 2018
+* Date:           Sat Dec 15 03:40:53 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        acceleartor_hls_padding
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|      8.53|        1.25|
+    |ap_clk  |  10.00|      8.28|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |      Latency      |      Interval     | Pipeline|
     |   min   |   max   |   min   |   max   |   Type  |
     +---------+---------+---------+---------+---------+
-    |  7141057|  7141057|  7141057|  7141057|   none  |
+    |  4161217|  4161217|  4161217|  4161217|   none  |
     +---------+---------+---------+---------+---------+
 
     + Detail: 
@@ -41,10 +41,10 @@
         |                     |      Latency      | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Loop 1             |  7141056|  7141056|     74386|          -|          -|    96|    no    |
-        | + Loop 1.1          |    74384|    74384|      9298|          -|          -|     8|    no    |
-        |  ++ Loop 1.1.1      |     9296|     9296|      1162|          -|          -|     8|    no    |
-        |   +++ Loop 1.1.1.1  |     1152|     1152|        12|          -|          -|    96|    no    |
+        |- Loop 1             |  4161216|  4161216|     43346|          -|          -|    96|    no    |
+        | + Loop 1.1          |    43344|    43344|      5418|          -|          -|     8|    no    |
+        |  ++ Loop 1.1.1      |     5416|     5416|       677|          -|          -|     8|    no    |
+        |   +++ Loop 1.1.1.1  |      672|      672|         7|          -|          -|    96|    no    |
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -57,31 +57,23 @@
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
 +-----------------+---------+-------+--------+-------+
 |DSP              |        -|      -|       -|      -|
-|Expression       |        -|      -|     362|    267|
+|Expression       |        -|      0|     505|    446|
 |FIFO             |        -|      -|       -|      -|
-|Instance         |        -|      5|     414|    950|
+|Instance         |        -|      -|       -|      -|
 |Memory           |        -|      -|       -|      -|
-|Multiplexer      |        -|      -|       -|    173|
-|Register         |        -|      -|     350|      -|
+|Multiplexer      |        -|      -|       -|    110|
+|Register         |        -|      -|     225|      -|
 +-----------------+---------+-------+--------+-------+
-|Total            |        0|      5|    1126|   1390|
+|Total            |        0|      0|     730|    556|
 +-----------------+---------+-------+--------+-------+
 |Available        |      280|    220|  106400|  53200|
 +-----------------+---------+-------+--------+-------+
-|Utilization (%)  |        0|      2|       1|      2|
+|Utilization (%)  |        0|      0|   ~0   |      1|
 +-----------------+---------+-------+--------+-------+
 
 + Detail: 
     * Instance: 
-    +----------------------------+----------------------+---------+-------+-----+-----+
-    |          Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT |
-    +----------------------------+----------------------+---------+-------+-----+-----+
-    |ShuffleNetV2_faddbkb_x_U74  |ShuffleNetV2_faddbkb  |        0|      2|  205|  390|
-    |ShuffleNetV2_fcmpdEe_x_U76  |ShuffleNetV2_fcmpdEe  |        0|      0|   66|  239|
-    |ShuffleNetV2_fmulcud_x_U75  |ShuffleNetV2_fmulcud  |        0|      3|  143|  321|
-    +----------------------------+----------------------+---------+-------+-----+-----+
-    |Total                       |                      |        0|      5|  414|  950|
-    +----------------------------+----------------------+---------+-------+-----+-----+
+    N/A
 
     * DSP48: 
     N/A
@@ -93,81 +85,126 @@
     N/A
 
     * Expression: 
-    +-------------------------+----------+-------+----+----+------------+------------+
-    |      Variable Name      | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
-    +-------------------------+----------+-------+----+----+------------+------------+
-    |ci_1_fu_328_p2           |     +    |      0|  26|  12|           7|           1|
-    |co_7_fu_180_p2           |     +    |      0|  26|  12|           7|           1|
-    |h_7_fu_316_p2            |     +    |      0|  17|   9|           4|           1|
-    |tmp_101_fu_245_p2        |     +    |      0|  38|  16|          11|          11|
-    |tmp_102_fu_261_p2        |     +    |      0|  38|  16|          11|          11|
-    |tmp_103_fu_290_p2        |     +    |      0|  50|  20|          15|          15|
-    |tmp_104_fu_306_p2        |     +    |      0|  50|  20|          15|          15|
-    |tmp_105_fu_338_p2        |     +    |      0|  50|  20|          15|          15|
-    |tmp_108_fu_367_p2        |     +    |      0|   0|  12|          11|          11|
-    |tmp_109_fu_373_p2        |     +    |      0|   0|  12|          11|          11|
-    |tmp_110_fu_402_p2        |     +    |      0|   0|  12|          15|          15|
-    |tmp_111_fu_408_p2        |     +    |      0|   0|  12|          15|          15|
-    |w_7_fu_413_p2            |     +    |      0|  17|   9|           1|           4|
-    |tmp_98_fu_215_p2         |     -    |      0|  50|  20|          15|          15|
-    |tmp_5_fu_462_p2          |    and   |      0|   0|   2|           1|           1|
-    |exitcond1_fu_296_p2      |   icmp   |      0|   0|   2|           4|           4|
-    |exitcond2_fu_251_p2      |   icmp   |      0|   0|   2|           4|           4|
-    |exitcond3_fu_174_p2      |   icmp   |      0|   0|   4|           7|           7|
-    |exitcond_fu_322_p2       |   icmp   |      0|   0|   4|           7|           7|
-    |notlhs_fu_444_p2         |   icmp   |      0|   0|   4|           8|           2|
-    |notrhs_fu_450_p2         |   icmp   |      0|   0|  13|          23|           1|
-    |tmp_3_fu_456_p2          |    or    |      0|   0|   2|           1|           1|
-    |ShuffleConvs_2_Downs_d0  |  select  |      0|   0|  32|           1|          32|
-    +-------------------------+----------+-------+----+----+------------+------------+
-    |Total                    |          |      0| 362| 267|         209|         200|
-    +-------------------------+----------+-------+----+----+------------+------------+
+    +--------------------------------+----------+-------+----+----+------------+------------+
+    |          Variable Name         | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+----+----+------------+------------+
+    |p_Val2_47_fu_448_p2             |     *    |      0|   0|  62|           8|           8|
+    |ci_1_fu_342_p2                  |     +    |      0|  26|  12|           7|           1|
+    |co_7_fu_194_p2                  |     +    |      0|  26|  12|           7|           1|
+    |h_7_fu_330_p2                   |     +    |      0|  17|   9|           4|           1|
+    |p_Val2_45_fu_678_p2             |     +    |      0|  32|  14|           9|           9|
+    |p_Val2_48_fu_474_p2             |     +    |      0|  53|  21|          16|          16|
+    |p_Val2_50_fu_508_p2             |     +    |      0|  29|  13|           8|           8|
+    |result_V_fu_692_p2              |     +    |      0|  29|  13|           8|           8|
+    |tmp_129_fu_259_p2               |     +    |      0|  38|  16|          11|          11|
+    |tmp_130_fu_275_p2               |     +    |      0|  38|  16|          11|          11|
+    |tmp_133_fu_304_p2               |     +    |      0|  50|  20|          15|          15|
+    |tmp_134_fu_320_p2               |     +    |      0|  50|  20|          15|          15|
+    |tmp_135_fu_352_p2               |     +    |      0|  50|  20|          15|          15|
+    |tmp_139_fu_386_p2               |     +    |      0|   0|  12|          11|          11|
+    |tmp_140_fu_392_p2               |     +    |      0|   0|  12|          11|          11|
+    |tmp_143_fu_421_p2               |     +    |      0|   0|  12|          15|          15|
+    |tmp_144_fu_427_p2               |     +    |      0|   0|  12|          15|          15|
+    |w_7_fu_432_p2                   |     +    |      0|  17|   9|           1|           4|
+    |tmp_126_fu_229_p2               |     -    |      0|  50|  20|          15|          15|
+    |brmerge40_demorgan_i_fu_613_p2  |    and   |      0|   0|   2|           1|           1|
+    |carry_fu_528_p2                 |    and   |      0|   0|   2|           1|           1|
+    |overflow_fu_607_p2              |    and   |      0|   0|   2|           1|           1|
+    |p_38_i_i_fu_586_p2              |    and   |      0|   0|   2|           1|           1|
+    |p_41_i_i_fu_574_p2              |    and   |      0|   0|   2|           1|           1|
+    |underflow_7_fu_711_p2           |    and   |      0|   0|   2|           1|           1|
+    |underflow_fu_630_p2             |    and   |      0|   0|   2|           1|           1|
+    |Range1_all_ones_fu_551_p2       |   icmp   |      0|   0|   1|           2|           2|
+    |Range1_all_zeros_fu_556_p2      |   icmp   |      0|   0|   1|           2|           1|
+    |exitcond7_fu_188_p2             |   icmp   |      0|   0|   4|           7|           7|
+    |exitcond8_fu_265_p2             |   icmp   |      0|   0|   2|           4|           4|
+    |exitcond9_fu_310_p2             |   icmp   |      0|   0|   2|           4|           4|
+    |exitcond_fu_336_p2              |   icmp   |      0|   0|   4|           7|           7|
+    |tmp_108_fu_756_p2               |   icmp   |      0|   0|   4|           8|           1|
+    |brmerge9_fu_725_p2              |    or    |      0|   0|   2|           1|           1|
+    |brmerge_i_i7_fu_597_p2          |    or    |      0|   0|   2|           1|           1|
+    |brmerge_i_i_i_fu_635_p2         |    or    |      0|   0|   2|           1|           1|
+    |tmp2_demorgan_fu_618_p2         |    or    |      0|   0|   2|           1|           1|
+    |tmp3_fu_641_p2                  |    or    |      0|   0|   2|           1|           1|
+    |underflow_not_fu_645_p2         |    or    |      0|   0|   2|           1|           1|
+    |deleted_ones_fu_579_p3          |  select  |      0|   0|   2|           1|           1|
+    |deleted_zeros_fu_561_p3         |  select  |      0|   0|   2|           1|           1|
+    |p_Val2_55_mux_fu_650_p3         |  select  |      0|   0|   8|           1|           7|
+    |p_Val2_s_51_fu_656_p3           |  select  |      0|   0|   9|           1|           9|
+    |p_result_V_fu_737_p3            |  select  |      0|   0|   9|           1|           9|
+    |p_s_fu_762_p3                   |  select  |      0|   0|   7|           1|           7|
+    |result_1_fu_744_p3              |  select  |      0|   0|   8|           1|           8|
+    |result_V_mux_fu_730_p3          |  select  |      0|   0|   8|           1|           7|
+    |sum_V_fu_662_p3                 |  select  |      0|   0|   8|           1|           8|
+    |brmerge_i_i_fu_716_p2           |    xor   |      0|   0|   2|           1|           1|
+    |isneg_not_fu_720_p2             |    xor   |      0|   0|   2|           1|           2|
+    |p_not_i_i_fu_591_p2             |    xor   |      0|   0|   2|           1|           2|
+    |tmp2_fu_624_p2                  |    xor   |      0|   0|   2|           1|           2|
+    |tmp_107_fu_706_p2               |    xor   |      0|   0|   2|           1|           2|
+    |tmp_112_fu_522_p2               |    xor   |      0|   0|   2|           1|           2|
+    |tmp_113_fu_568_p2               |    xor   |      0|   0|   2|           1|           2|
+    |tmp_115_fu_602_p2               |    xor   |      0|   0|   2|           1|           2|
+    +--------------------------------+----------+-------+----+----+------------+------------+
+    |Total                           |          |      0| 505| 446|         266|         301|
+    +--------------------------------+----------+-------+----+----+------------+------------+
 
     * Multiplexer: 
-    +---------------+-----+-----------+-----+-----------+
-    |      Name     | LUT | Input Size| Bits| Total Bits|
-    +---------------+-----+-----------+-----+-----------+
-    |ap_NS_fsm      |  113|         25|    1|         25|
-    |ci_reg_149     |    9|          2|    7|         14|
-    |co_reg_102     |    9|          2|    7|         14|
-    |grp_fu_160_p1  |   15|          3|   32|         96|
-    |h_reg_113      |    9|          2|    4|          8|
-    |sum_reg_137    |    9|          2|   32|         64|
-    |w_reg_125      |    9|          2|    4|          8|
-    +---------------+-----+-----------+-----+-----------+
-    |Total          |  173|         38|   87|        229|
-    +---------------+-----+-----------+-----+-----------+
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  65|         15|    1|         15|
+    |ci_reg_177        |   9|          2|    7|         14|
+    |co_reg_130        |   9|          2|    7|         14|
+    |h_reg_141         |   9|          2|    4|          8|
+    |p_Val2_s_reg_165  |   9|          2|    8|         16|
+    |w_reg_153         |   9|          2|    4|          8|
+    +------------------+----+-----------+-----+-----------+
+    |Total             | 110|         25|   31|         75|
+    +------------------+----+-----------+-----+-----------+
 
     * Register: 
     +--------------------------------+----+----+-----+-----------+
     |              Name              | FF | LUT| Bits| Const Bits|
     +--------------------------------+----+----+-----+-----------+
-    |ShuffleConvs_2_Downs_reg_519    |  14|   0|   14|          0|
-    |ap_CS_fsm                       |  24|   0|   24|          0|
-    |bias_addr_reg_493               |   7|   0|    7|          0|
-    |bias_load_reg_582               |  32|   0|   32|          0|
-    |ci_1_reg_532                    |   7|   0|    7|          0|
-    |ci_reg_149                      |   7|   0|    7|          0|
-    |co_7_reg_478                    |   7|   0|    7|          0|
-    |co_reg_102                      |   7|   0|    7|          0|
-    |h_reg_113                       |   4|   0|    4|          0|
-    |result_reg_587                  |  32|   0|   32|          0|
-    |shuffleunit1_7_outpu_1_reg_567  |  32|   0|   32|          0|
-    |sum_reg_137                     |  32|   0|   32|          0|
-    |tmp_101_reg_488                 |  10|   0|   11|          1|
-    |tmp_103_reg_506                 |  14|   0|   15|          1|
-    |tmp_105_reg_537                 |  15|   0|   15|          0|
-    |tmp_111_reg_542                 |  15|   0|   15|          0|
-    |tmp_4_reg_594                   |   1|   0|    1|          0|
-    |tmp_55_cast_reg_514             |   4|   0|   15|         11|
-    |tmp_57_reg_572                  |  32|   0|   32|          0|
-    |tmp_98_reg_483                  |  10|   0|   15|          5|
-    |tmp_cast_reg_501                |   4|   0|   11|          7|
-    |w_7_reg_547                     |   4|   0|    4|          0|
-    |w_reg_125                       |   4|   0|    4|          0|
-    |weight_load_reg_562             |  32|   0|   32|          0|
+    |ShuffleConvs_2_Downs_reg_817    |  14|   0|   14|          0|
+    |ap_CS_fsm                       |  14|   0|   14|          0|
+    |bias_V_addr_reg_791             |   7|   0|    7|          0|
+    |brmerge40_demorgan_i_reg_922    |   1|   0|    1|          0|
+    |brmerge_i_i_i_reg_932           |   1|   0|    1|          0|
+    |carry_reg_899                   |   1|   0|    1|          0|
+    |ci_1_reg_830                    |   7|   0|    7|          0|
+    |ci_reg_177                      |   7|   0|    7|          0|
+    |co_7_reg_776                    |   7|   0|    7|          0|
+    |co_reg_130                      |   7|   0|    7|          0|
+    |h_reg_141                       |   4|   0|    4|          0|
+    |isneg_reg_942                   |   1|   0|    1|          0|
+    |newsignbit_7_reg_955            |   1|   0|    1|          0|
+    |newsignbit_reg_893              |   1|   0|    1|          0|
+    |p_38_i_i_reg_912                |   1|   0|    1|          0|
+    |p_Val2_47_reg_865               |  16|   0|   16|          0|
+    |p_Val2_48_reg_875               |  16|   0|   16|          0|
+    |p_Val2_50_reg_887               |   8|   0|    8|          0|
+    |p_Val2_s_reg_165                |   8|   0|    8|          0|
+    |result_V_reg_949                |   8|   0|    8|          0|
+    |shuffleunit1_7_outpu_1_reg_860  |   8|   0|    8|          0|
+    |signbit_reg_880                 |   1|   0|    1|          0|
+    |tmp_104_cast_reg_812            |   4|   0|   15|         11|
+    |tmp_108_reg_967                 |   1|   0|    1|          0|
+    |tmp_114_reg_906                 |   2|   0|    2|          0|
+    |tmp_115_reg_917                 |   1|   0|    1|          0|
+    |tmp_126_reg_781                 |  10|   0|   15|          5|
+    |tmp_129_reg_786                 |  10|   0|   11|          1|
+    |tmp_133_reg_804                 |  14|   0|   15|          1|
+    |tmp_137_reg_962                 |   7|   0|    7|          0|
+    |tmp_144_reg_840                 |  15|   0|   15|          0|
+    |tmp_146_reg_870                 |   1|   0|    1|          0|
+    |tmp_cast_reg_799                |   4|   0|   11|          7|
+    |underflow_reg_927               |   1|   0|    1|          0|
+    |w_7_reg_845                     |   4|   0|    4|          0|
+    |w_reg_153                       |   4|   0|    4|          0|
+    |weight_V_load_reg_855           |   8|   0|    8|          0|
     +--------------------------------+----+----+-----+-----------+
-    |Total                           | 350|   0|  375|         25|
+    |Total                           | 225|   0|  250|         25|
     +--------------------------------+----+----+-----+-----------+
 
 
@@ -185,18 +222,18 @@
 |ap_done                        | out |    1| ap_ctrl_hs |   subconv_1x1_8p_p   | return value |
 |ap_idle                        | out |    1| ap_ctrl_hs |   subconv_1x1_8p_p   | return value |
 |ap_ready                       | out |    1| ap_ctrl_hs |   subconv_1x1_8p_p   | return value |
-|weight_address0                | out |   14|  ap_memory |        weight        |     array    |
-|weight_ce0                     | out |    1|  ap_memory |        weight        |     array    |
-|weight_q0                      |  in |   32|  ap_memory |        weight        |     array    |
-|bias_address0                  | out |    7|  ap_memory |         bias         |     array    |
-|bias_ce0                       | out |    1|  ap_memory |         bias         |     array    |
-|bias_q0                        |  in |   32|  ap_memory |         bias         |     array    |
+|weight_V_address0              | out |   14|  ap_memory |       weight_V       |     array    |
+|weight_V_ce0                   | out |    1|  ap_memory |       weight_V       |     array    |
+|weight_V_q0                    |  in |    8|  ap_memory |       weight_V       |     array    |
+|bias_V_address0                | out |    7|  ap_memory |        bias_V        |     array    |
+|bias_V_ce0                     | out |    1|  ap_memory |        bias_V        |     array    |
+|bias_V_q0                      |  in |    8|  ap_memory |        bias_V        |     array    |
 |shuffleunit1_7_outpu_address0  | out |   14|  ap_memory | shuffleunit1_7_outpu |     array    |
 |shuffleunit1_7_outpu_ce0       | out |    1|  ap_memory | shuffleunit1_7_outpu |     array    |
-|shuffleunit1_7_outpu_q0        |  in |   32|  ap_memory | shuffleunit1_7_outpu |     array    |
+|shuffleunit1_7_outpu_q0        |  in |    8|  ap_memory | shuffleunit1_7_outpu |     array    |
 |ShuffleConvs_2_Downs_address0  | out |   14|  ap_memory | ShuffleConvs_2_Downs |     array    |
 |ShuffleConvs_2_Downs_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs |     array    |
 |ShuffleConvs_2_Downs_we0       | out |    1|  ap_memory | ShuffleConvs_2_Downs |     array    |
-|ShuffleConvs_2_Downs_d0        | out |   32|  ap_memory | ShuffleConvs_2_Downs |     array    |
+|ShuffleConvs_2_Downs_d0        | out |    8|  ap_memory | ShuffleConvs_2_Downs |     array    |
 +-------------------------------+-----+-----+------------+----------------------+--------------+
 

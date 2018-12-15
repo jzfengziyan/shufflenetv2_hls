@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'subconv_1x1_4_p'" level="0">
-<item name = "Date">Thu Dec 13 17:50:22 2018
+<item name = "Date">Sat Dec 15 03:40:14 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">acceleartor_hls_padding</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.53, 1.25</column>
+<column name="ap_clk">10.00, 8.46, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1785793, 1785793, 1785793, 1785793, none</column>
+<column name="">1040833, 1040833, 1040833, 1040833, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,10 +35,10 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">1785792, 1785792, 18602, -, -, 96, no</column>
-<column name=" + Loop 1.1">18600, 18600, 4650, -, -, 4, no</column>
-<column name="  ++ Loop 1.1.1">4648, 4648, 1162, -, -, 4, no</column>
-<column name="   +++ Loop 1.1.1.1">1152, 1152, 12, -, -, 96, no</column>
+<column name="- Loop 1">1040832, 1040832, 10842, -, -, 96, no</column>
+<column name=" + Loop 1.1">10840, 10840, 2710, -, -, 4, no</column>
+<column name="  ++ Loop 1.1.1">2708, 2708, 677, -, -, 4, no</column>
+<column name="   +++ Loop 1.1.1.1">672, 672, 7, -, -, 96, no</column>
 </table>
 </item>
 </section>

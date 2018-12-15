@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -83,7 +83,7 @@ input wire [0 : 0] s_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC RECV" *)
 output wire [0 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC PAYLD" *)
-input wire [139 : 0] s_sc_payld;
+input wire [141 : 0] s_sc_payld;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_sc_aclk CLK" *)
 input wire m_sc_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m_sc_aresetn RST" *)
@@ -97,7 +97,7 @@ output wire [0 : 0] m_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC INFO" *)
 output wire [0 : 0] m_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC PAYLD" *)
-output wire [139 : 0] m_sc_payld;
+output wire [141 : 0] m_sc_payld;
 
   sc_node_v1_0_5_top #(
     .C_FAMILY("zynq"),
@@ -110,13 +110,13 @@ output wire [139 : 0] m_sc_payld;
     .C_NUM_SI(1),
     .C_NUM_MI(1),
     .C_CHANNEL(3),
-    .C_PAYLD_WIDTH(140),
+    .C_PAYLD_WIDTH(142),
     .C_S_NUM_BYTES_ARRAY(32'H00000004),
     .C_M_NUM_BYTES_ARRAY(32'H00000008),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
     .C_SC_ROUTE_WIDTH(1),
-    .C_ID_WIDTH(2),
+    .C_ID_WIDTH(3),
     .C_ADDR_WIDTH(32),
     .C_USER_WIDTH(0),
     .C_MAX_PAYLD_BYTES(8),

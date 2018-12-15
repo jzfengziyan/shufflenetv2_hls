@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:56.371-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.762-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'avgpool_output' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.452-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv_last_output' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.425-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_2_outpu_1' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.401-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_2_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.378-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_1_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.360-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit2_0_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.340-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'downsampleunit2_outp' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.325-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer1_1_96_4x4_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.309-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer0_1_96_4x4_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.297-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_96_1_3x3' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.281-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'ShuffleConvs_2_Downs' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.263-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'bias_96' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.249-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_96_96_1x1' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.234-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_7_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.220-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_6_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.208-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_5_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.195-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_4_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.183-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_3_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.174-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_2_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.162-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_1_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.149-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit1_0_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.137-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'downsampleunit1_outp' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.125-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer1_1_48_8x8_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.107-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer0_1_48_8x8_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.096-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_48_1_3x3' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.080-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'ShuffleConvs_1_Downs' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.065-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'bias_48' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.056-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_48_48_1x1' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.044-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit0_2_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.032-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit0_1_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.025-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'shuffleunit0_0_outpu' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.015-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'downsampleunit0_outp' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:54.006-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer1_1_24_16x16_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.996-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'buffer0_1_24_16x16_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.989-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_24_1_3x3' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.980-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'ShuffleConvs_0_Downs' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.972-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'bias_24' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.968-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'weights_24_24_1x1' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.965-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv1_output_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.962-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'image_p' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.959-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'fc_bias' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.956-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv_last_bias' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.953-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'conv1_bias' will not be exposed as RTL port." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.950-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.679-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.674-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.670-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.237-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:53.231-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.679-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.674-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.669-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.374-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.365-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.064-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.058-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:52.055-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:51.688-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:51.681-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:51.149-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:51.141-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:51.137-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.877-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.872-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.562-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.553-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.549-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.162-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:50.154-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:49.613-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:49.609-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:49.604-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:49.333-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:49.327-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fcmpdEe' is changed to 'ShuffleNetV2_fcmpdEe_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:49.003-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_fmulcud' is changed to 'ShuffleNetV2_fmulcud_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:48.997-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'ShuffleNetV2_faddbkb' is changed to 'ShuffleNetV2_faddbkb_x' due to conflict." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:48.993-0600" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'ShuffleNetV2/image' to 'ShuffleNetV2/image_r' to avoid the conflict with HDL keywords or other object names." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:12.315-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_16_no_relu_p' (accelerator_newone/components.cpp:158:25) into subconv_3x3_16_no_re." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:12.110-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_4_no_relu_p' (accelerator_newone/components.cpp:643:25) into subconv_3x3_4_no_rel." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:03.550-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_8_stride_no_relu_p' (accelerator_newone/components.cpp:612:25) into subconv_3x3_8_stride." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:03.546-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_16_stride_no_relu_p' (accelerator_newone/components.cpp:368:25) into subconv_3x3_16_strid." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:03.541-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_32_stride_no_relu_p' (accelerator_newone/components.cpp:129:25) into subconv_3x3_32_strid." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:03.536-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'subconv_3x3_8_no_relu_p' (accelerator_newone/components.cpp:398:25) into subconv_3x3_8_no_rel." projectName="accelerator_newone" solutionName="solution1" date="2018-12-14T14:26:03.523-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

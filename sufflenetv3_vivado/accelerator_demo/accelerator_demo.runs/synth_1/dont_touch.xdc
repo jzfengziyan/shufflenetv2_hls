@@ -7,9 +7,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd 
 # IP: bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_processing_system7_0_1 || ORIG_REF_NAME==accelerator_bd_processing_system7_0_1}]
 
-# IP: bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/accelerator_bd_vector_multiplier_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_vector_multiplier_0_0 || ORIG_REF_NAME==accelerator_bd_vector_multiplier_0_0}]
-
 # IP: bd/accelerator_bd/ip/accelerator_bd_ps7_0_axi_periph_1/accelerator_bd_ps7_0_axi_periph_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_ps7_0_axi_periph_1 || ORIG_REF_NAME==accelerator_bd_ps7_0_axi_periph_1}]
 
@@ -31,7 +28,13 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_
 # IP: bd/accelerator_bd/ip/accelerator_bd_xbar_0/accelerator_bd_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_xbar_0 || ORIG_REF_NAME==accelerator_bd_xbar_0}]
 
-# IP: bd/accelerator_bd/ip/accelerator_bd_auto_pc_1/accelerator_bd_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_auto_pc_1 || ORIG_REF_NAME==accelerator_bd_auto_pc_1}]
+# IP: bd/accelerator_bd/ip/accelerator_bd_ShuffleNetV2_0_1/accelerator_bd_ShuffleNetV2_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_ShuffleNetV2_0_1 || ORIG_REF_NAME==accelerator_bd_ShuffleNetV2_0_1}]
+
+# IP: bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/accelerator_bd_axi_smc_2_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_axi_smc_2_1 || ORIG_REF_NAME==accelerator_bd_axi_smc_2_1}]
+
+# IP: bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==accelerator_bd_auto_pc_0 || ORIG_REF_NAME==accelerator_bd_auto_pc_0}]
 
 # XDC: bd/accelerator_bd/accelerator_bd_ooc.xdc

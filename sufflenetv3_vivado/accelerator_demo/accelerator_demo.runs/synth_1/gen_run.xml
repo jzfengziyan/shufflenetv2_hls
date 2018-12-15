@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1508217905">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1544862935">
   <File Type="VDS-TIMING-PB" Name="accelerator_bd_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="accelerator_bd_wrapper_timing_summary_synth.rpt"/>
-  <File Type="PA-TCL" Name="accelerator_bd_wrapper.tcl"/>
+  <File Type="RDS-DCP" Name="accelerator_bd_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="accelerator_bd_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="accelerator_bd_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="accelerator_bd_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="accelerator_bd_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="accelerator_bd_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="accelerator_bd_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="accelerator_bd_wrapper.dcp"/>
+  <File Type="PA-TCL" Name="accelerator_bd_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/accelerator_bd/accelerator_bd.bd">
@@ -20,7 +20,7 @@
     <File Path="$PSRCDIR/sources_1/imports/hdl/accelerator_bd_wrapper.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v"/>
-        <Attr Name="ImportTime" Val="1508216845"/>
+        <Attr Name="ImportTime" Val="1544862844"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -42,11 +42,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_ShuffleNetV2_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_axi_smc_2_1"/>
   <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_axi_smc_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_vector_multiplier_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_axi_smc_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_axi_smc_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_processing_system7_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_axi_timer_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="accelerator_bd_processing_system7_0_1"/>
 </GenRun>

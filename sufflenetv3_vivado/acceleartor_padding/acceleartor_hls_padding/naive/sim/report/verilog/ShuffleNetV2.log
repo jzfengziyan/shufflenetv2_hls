@@ -1,0 +1,33 @@
+@I [SIM-47] Using XSIM for RTL simulation.
+@I [SIM-14] Instrumenting C test bench ...
+@E [SIM-24] TB preprocess failed : In file included from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h:339:0,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/os_defines.h:40,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/x86_64-unknown-linux-gnu/bits/c++config.h:393,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream:39,
+                 from /home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/shufflenet.h:1,
+                 from /home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/test.cpp:1:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:467:49: 错误： missing binary operator before token "("
+In file included from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h:46:0,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar:46,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h:42,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd:42,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios:39,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream:40,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream:40,
+                 from /home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/shufflenet.h:1,
+                 from /home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/test.cpp:1:
+/usr/include/stdio.h:276:43: 错误： missing binary operator before token "("
+/usr/include/stdio.h:349:17: 错误： missing binary operator before token "("
+/usr/include/stdio.h:567:17: 错误： missing binary operator before token "("
+/usr/include/stdio.h:592:43: 错误： missing binary operator before token "("
+In file included from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar:46:0,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h:42,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd:42,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios:39,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream:40,
+                 from /home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream:40,
+                 from /home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/shufflenet.h:1,
+                 from /home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/test.cpp:1:
+/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h:175:22: 致命错误： xlocale.h：没有那个文件或目录
+编译中断。
+@E [SIM-4] *** C/RTL co-simulation finished: FAIL ***

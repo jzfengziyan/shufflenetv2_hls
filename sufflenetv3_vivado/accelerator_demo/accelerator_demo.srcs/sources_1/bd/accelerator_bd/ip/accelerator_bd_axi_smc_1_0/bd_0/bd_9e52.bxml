@@ -2,11 +2,18 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="bd_9e52" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1508216868"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1508216868"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1508216868"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1544862856"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1544862856"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1544862856"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="ip\ip_5\bd_9e52_s00a2s_0.xci" Type="IP">
+      <File Name="hdl/bd_9e52.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/ip_5/bd_9e52_s00a2s_0.xci" Type="IP">
         <Instance HierarchyPath="s00_axi2sc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -14,7 +21,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_11\bd_9e52_m00s2a_0.xci" Type="IP">
+      <File Name="ip/ip_11/bd_9e52_m00s2a_0.xci" Type="IP">
         <Instance HierarchyPath="m00_sc2axi"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -22,7 +29,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_12\bd_9e52_m00e_0.xci" Type="IP">
+      <File Name="ip/ip_12/bd_9e52_m00e_0.xci" Type="IP">
         <Instance HierarchyPath="m00_exit_pipeline/m00_exit"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -30,7 +37,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_6\bd_9e52_sarn_0.xci" Type="IP">
+      <File Name="ip/ip_6/bd_9e52_sarn_0.xci" Type="IP">
         <Instance HierarchyPath="s00_nodes/s00_ar_node"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -38,7 +45,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_7\bd_9e52_srn_0.xci" Type="IP">
+      <File Name="ip/ip_7/bd_9e52_srn_0.xci" Type="IP">
         <Instance HierarchyPath="s00_nodes/s00_r_node"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -46,7 +53,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_8\bd_9e52_sawn_0.xci" Type="IP">
+      <File Name="ip/ip_8/bd_9e52_sawn_0.xci" Type="IP">
         <Instance HierarchyPath="s00_nodes/s00_aw_node"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -54,7 +61,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_9\bd_9e52_swn_0.xci" Type="IP">
+      <File Name="ip/ip_9/bd_9e52_swn_0.xci" Type="IP">
         <Instance HierarchyPath="s00_nodes/s00_w_node"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -62,7 +69,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_10\bd_9e52_sbn_0.xci" Type="IP">
+      <File Name="ip/ip_10/bd_9e52_sbn_0.xci" Type="IP">
         <Instance HierarchyPath="s00_nodes/s00_b_node"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -70,7 +77,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_2\bd_9e52_s00mmu_0.xci" Type="IP">
+      <File Name="ip/ip_2/bd_9e52_s00mmu_0.xci" Type="IP">
         <Instance HierarchyPath="s00_entry_pipeline/s00_mmu"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -78,7 +85,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_3\bd_9e52_s00tr_0.xci" Type="IP">
+      <File Name="ip/ip_3/bd_9e52_s00tr_0.xci" Type="IP">
         <Instance HierarchyPath="s00_entry_pipeline/s00_transaction_regulator"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -86,7 +93,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_4\bd_9e52_s00sic_0.xci" Type="IP">
+      <File Name="ip/ip_4/bd_9e52_s00sic_0.xci" Type="IP">
         <Instance HierarchyPath="s00_entry_pipeline/s00_si_converter"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -94,7 +101,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_0\bd_9e52_one_0.xci" Type="IP">
+      <File Name="ip/ip_0/bd_9e52_one_0.xci" Type="IP">
         <Instance HierarchyPath="clk_map/one"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -102,7 +109,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\ip_1\bd_9e52_psr_aclk_0.xci" Type="IP">
+      <File Name="ip/ip_1/bd_9e52_psr_aclk_0.xci" Type="IP">
         <Instance HierarchyPath="clk_map/psr_aclk"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -110,24 +117,17 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="hdl\bd_9e52.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="hw_handoff\accelerator_bd_axi_smc_1_0.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/accelerator_bd_axi_smc_1_0.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="hw_handoff\accelerator_bd_axi_smc_1_0_bd.tcl">
+      <File Name="hw_handoff/accelerator_bd_axi_smc_1_0_bd.tcl">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
       </File>
-      <File Name="hdl\accelerator_bd_axi_smc_1_0.hwdef">
+      <File Name="hdl/accelerator_bd_axi_smc_1_0.hwdef">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>

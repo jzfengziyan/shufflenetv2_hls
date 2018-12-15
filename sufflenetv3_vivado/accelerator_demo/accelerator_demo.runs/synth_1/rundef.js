@@ -4,13 +4,17 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH variable below, before executing this script"
+exit
+
 var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "F:/Xilinx/SDK/2017.2/bin;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;F:/Xilinx/Vivado/2017.2/bin;";
+  PathVal = "/home/ziyan/opt/Xilinx/SDK/2017.2/bin:/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/lin64;/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/lin64;/home/ziyan/opt/Xilinx/Vivado/2017.2/bin;";
 } else {
-  PathVal = "F:/Xilinx/SDK/2017.2/bin;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;F:/Xilinx/Vivado/2017.2/bin;" + PathVal;
+  PathVal = "/home/ziyan/opt/Xilinx/SDK/2017.2/bin:/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/lin64;/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/lin64;/home/ziyan/opt/Xilinx/Vivado/2017.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;

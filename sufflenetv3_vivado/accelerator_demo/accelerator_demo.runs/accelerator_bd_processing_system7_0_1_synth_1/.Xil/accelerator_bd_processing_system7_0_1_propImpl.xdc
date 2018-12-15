@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:f:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc rfile:../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_demo/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc rfile:../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3
 set_property src_info {type:SCOPED_XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
- 816871	   2892	67125600	67945363	40cc393	lenet_cnn_demo.elf
+ 807707	   2900	68134624	68945231	41c054f	lenet_cnn_demo.elf

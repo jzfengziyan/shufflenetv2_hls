@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -54,7 +54,7 @@
 (* CHECK_LICENSE_TYPE = "accelerator_bd_processing_system7_0_1,processing_system7_v5_5_processing_system7,{}" *)
 (* CORE_GENERATION_INFO = "accelerator_bd_processing_system7_0_1,processing_system7_v5_5_processing_system7,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=processing_system7,x_ipVersion=5.5,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_EN_EMIO_PJTAG=0,C_EN_EMIO_ENET0=0,C_EN_EMIO_ENET1=0,C_EN_EMIO_TRACE=0,C_INCLUDE_TRACE_BUFFER=0,C_TRACE_BUFFER_FIFO_SIZE=128,USE_TRACE_DATA_EDGE_DETECTOR=0,C_TRACE_PIPELINE_WIDTH=8,C_TRACE_BUFFER_CLOCK_DELAY=12,C_EMIO_GPIO_WIDTH=64,C_INCLUDE_ACP_TR\
 ANS_CHECK=0,C_USE_DEFAULT_ACP_USER_VAL=0,C_S_AXI_ACP_ARUSER_VAL=31,C_S_AXI_ACP_AWUSER_VAL=31,C_M_AXI_GP0_ID_WIDTH=12,C_M_AXI_GP0_ENABLE_STATIC_REMAP=0,C_M_AXI_GP1_ID_WIDTH=12,C_M_AXI_GP1_ENABLE_STATIC_REMAP=0,C_S_AXI_GP0_ID_WIDTH=6,C_S_AXI_GP1_ID_WIDTH=6,C_S_AXI_ACP_ID_WIDTH=3,C_S_AXI_HP0_ID_WIDTH=6,C_S_AXI_HP0_DATA_WIDTH=64,C_S_AXI_HP1_ID_WIDTH=6,C_S_AXI_HP1_DATA_WIDTH=64,C_S_AXI_HP2_ID_WIDTH=6,C_S_AXI_HP2_DATA_WIDTH=64,C_S_AXI_HP3_ID_WIDTH=6,C_S_AXI_HP3_DATA_WIDTH=64,C_M_AXI_GP0_THREAD_ID_WIDT\
-H=12,C_M_AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ_WIDTH=32,C_DQS_WIDTH=4,C_DM_WIDTH=4,C_MIO_PRIMITIVE=54,C_TRACE_INTERNAL_WIDTH=2,C_USE_AXI_NONSECURE=0,C_USE_M_AXI_GP0=1,C_USE_M_AXI_GP1=0,C_USE_S_AXI_GP0=0,C_USE_S_AXI_HP0=1,C_USE_S_AXI_HP1=1,C_USE_S_AXI_HP2=1,C_USE_S_AXI_HP3=0,C_USE_S_AXI_ACP=0,C_PS7_SI_REV=PRODUCTION,C_FCLK_CLK0_BUF=TRUE,C_FCLK_CLK1_BUF=FALSE,C_FCLK_CLK2_BUF=FALSE,C_FCLK_CLK3_BUF=FALSE,C_PACKAGE_NAME=clg484,C_GP0_EN_MODIFIABLE_TXN=1,C_GP1_EN\
+H=12,C_M_AXI_GP1_THREAD_ID_WIDTH=12,C_NUM_F2P_INTR_INPUTS=1,C_IRQ_F2P_MODE=DIRECT,C_DQ_WIDTH=32,C_DQS_WIDTH=4,C_DM_WIDTH=4,C_MIO_PRIMITIVE=54,C_TRACE_INTERNAL_WIDTH=2,C_USE_AXI_NONSECURE=0,C_USE_M_AXI_GP0=1,C_USE_M_AXI_GP1=0,C_USE_S_AXI_GP0=0,C_USE_S_AXI_HP0=1,C_USE_S_AXI_HP1=1,C_USE_S_AXI_HP2=1,C_USE_S_AXI_HP3=1,C_USE_S_AXI_ACP=0,C_PS7_SI_REV=PRODUCTION,C_FCLK_CLK0_BUF=TRUE,C_FCLK_CLK1_BUF=FALSE,C_FCLK_CLK2_BUF=FALSE,C_FCLK_CLK3_BUF=FALSE,C_PACKAGE_NAME=clg484,C_GP0_EN_MODIFIABLE_TXN=1,C_GP1_EN\
 _MODIFIABLE_TXN=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module accelerator_bd_processing_system7_0_1 (
@@ -238,6 +238,51 @@ module accelerator_bd_processing_system7_0_1 (
   S_AXI_HP2_WID,
   S_AXI_HP2_WDATA,
   S_AXI_HP2_WSTRB,
+  S_AXI_HP3_ARREADY,
+  S_AXI_HP3_AWREADY,
+  S_AXI_HP3_BVALID,
+  S_AXI_HP3_RLAST,
+  S_AXI_HP3_RVALID,
+  S_AXI_HP3_WREADY,
+  S_AXI_HP3_BRESP,
+  S_AXI_HP3_RRESP,
+  S_AXI_HP3_BID,
+  S_AXI_HP3_RID,
+  S_AXI_HP3_RDATA,
+  S_AXI_HP3_RCOUNT,
+  S_AXI_HP3_WCOUNT,
+  S_AXI_HP3_RACOUNT,
+  S_AXI_HP3_WACOUNT,
+  S_AXI_HP3_ACLK,
+  S_AXI_HP3_ARVALID,
+  S_AXI_HP3_AWVALID,
+  S_AXI_HP3_BREADY,
+  S_AXI_HP3_RDISSUECAP1_EN,
+  S_AXI_HP3_RREADY,
+  S_AXI_HP3_WLAST,
+  S_AXI_HP3_WRISSUECAP1_EN,
+  S_AXI_HP3_WVALID,
+  S_AXI_HP3_ARBURST,
+  S_AXI_HP3_ARLOCK,
+  S_AXI_HP3_ARSIZE,
+  S_AXI_HP3_AWBURST,
+  S_AXI_HP3_AWLOCK,
+  S_AXI_HP3_AWSIZE,
+  S_AXI_HP3_ARPROT,
+  S_AXI_HP3_AWPROT,
+  S_AXI_HP3_ARADDR,
+  S_AXI_HP3_AWADDR,
+  S_AXI_HP3_ARCACHE,
+  S_AXI_HP3_ARLEN,
+  S_AXI_HP3_ARQOS,
+  S_AXI_HP3_AWCACHE,
+  S_AXI_HP3_AWLEN,
+  S_AXI_HP3_AWQOS,
+  S_AXI_HP3_ARID,
+  S_AXI_HP3_AWID,
+  S_AXI_HP3_WID,
+  S_AXI_HP3_WDATA,
+  S_AXI_HP3_WSTRB,
   FCLK_CLK0,
   FCLK_RESET0_N,
   MIO,
@@ -620,6 +665,96 @@ input wire [5 : 0] S_AXI_HP2_WID;
 input wire [63 : 0] S_AXI_HP2_WDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP2 WSTRB" *)
 input wire [7 : 0] S_AXI_HP2_WSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARREADY" *)
+output wire S_AXI_HP3_ARREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWREADY" *)
+output wire S_AXI_HP3_AWREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 BVALID" *)
+output wire S_AXI_HP3_BVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 RLAST" *)
+output wire S_AXI_HP3_RLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 RVALID" *)
+output wire S_AXI_HP3_RVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 WREADY" *)
+output wire S_AXI_HP3_WREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 BRESP" *)
+output wire [1 : 0] S_AXI_HP3_BRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 RRESP" *)
+output wire [1 : 0] S_AXI_HP3_RRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 BID" *)
+output wire [5 : 0] S_AXI_HP3_BID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 RID" *)
+output wire [5 : 0] S_AXI_HP3_RID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 RDATA" *)
+output wire [63 : 0] S_AXI_HP3_RDATA;
+(* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP3_FIFO_CTRL RCOUNT" *)
+output wire [7 : 0] S_AXI_HP3_RCOUNT;
+(* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP3_FIFO_CTRL WCOUNT" *)
+output wire [7 : 0] S_AXI_HP3_WCOUNT;
+(* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP3_FIFO_CTRL RACOUNT" *)
+output wire [2 : 0] S_AXI_HP3_RACOUNT;
+(* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP3_FIFO_CTRL WACOUNT" *)
+output wire [5 : 0] S_AXI_HP3_WACOUNT;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_HP3_ACLK CLK" *)
+input wire S_AXI_HP3_ACLK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARVALID" *)
+input wire S_AXI_HP3_ARVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWVALID" *)
+input wire S_AXI_HP3_AWVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 BREADY" *)
+input wire S_AXI_HP3_BREADY;
+(* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP3_FIFO_CTRL RDISSUECAPEN" *)
+input wire S_AXI_HP3_RDISSUECAP1_EN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 RREADY" *)
+input wire S_AXI_HP3_RREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 WLAST" *)
+input wire S_AXI_HP3_WLAST;
+(* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:hpstatusctrl:1.0 S_AXI_HP3_FIFO_CTRL WRISSUECAPEN" *)
+input wire S_AXI_HP3_WRISSUECAP1_EN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 WVALID" *)
+input wire S_AXI_HP3_WVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARBURST" *)
+input wire [1 : 0] S_AXI_HP3_ARBURST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARLOCK" *)
+input wire [1 : 0] S_AXI_HP3_ARLOCK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARSIZE" *)
+input wire [2 : 0] S_AXI_HP3_ARSIZE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWBURST" *)
+input wire [1 : 0] S_AXI_HP3_AWBURST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWLOCK" *)
+input wire [1 : 0] S_AXI_HP3_AWLOCK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWSIZE" *)
+input wire [2 : 0] S_AXI_HP3_AWSIZE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARPROT" *)
+input wire [2 : 0] S_AXI_HP3_ARPROT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWPROT" *)
+input wire [2 : 0] S_AXI_HP3_AWPROT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARADDR" *)
+input wire [31 : 0] S_AXI_HP3_ARADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWADDR" *)
+input wire [31 : 0] S_AXI_HP3_AWADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARCACHE" *)
+input wire [3 : 0] S_AXI_HP3_ARCACHE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARLEN" *)
+input wire [3 : 0] S_AXI_HP3_ARLEN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARQOS" *)
+input wire [3 : 0] S_AXI_HP3_ARQOS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWCACHE" *)
+input wire [3 : 0] S_AXI_HP3_AWCACHE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWLEN" *)
+input wire [3 : 0] S_AXI_HP3_AWLEN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWQOS" *)
+input wire [3 : 0] S_AXI_HP3_AWQOS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 ARID" *)
+input wire [5 : 0] S_AXI_HP3_ARID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 AWID" *)
+input wire [5 : 0] S_AXI_HP3_AWID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 WID" *)
+input wire [5 : 0] S_AXI_HP3_WID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 WDATA" *)
+input wire [63 : 0] S_AXI_HP3_WDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI_HP3 WSTRB" *)
+input wire [7 : 0] S_AXI_HP3_WSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *)
 output wire FCLK_CLK0;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST" *)
@@ -713,7 +848,7 @@ inout wire PS_PORB;
     .C_USE_S_AXI_HP0(1),
     .C_USE_S_AXI_HP1(1),
     .C_USE_S_AXI_HP2(1),
-    .C_USE_S_AXI_HP3(0),
+    .C_USE_S_AXI_HP3(1),
     .C_USE_S_AXI_ACP(0),
     .C_PS7_SI_REV("PRODUCTION"),
     .C_FCLK_CLK0_BUF("TRUE"),
@@ -1224,51 +1359,51 @@ inout wire PS_PORB;
     .S_AXI_HP2_WID(S_AXI_HP2_WID),
     .S_AXI_HP2_WDATA(S_AXI_HP2_WDATA),
     .S_AXI_HP2_WSTRB(S_AXI_HP2_WSTRB),
-    .S_AXI_HP3_ARREADY(),
-    .S_AXI_HP3_AWREADY(),
-    .S_AXI_HP3_BVALID(),
-    .S_AXI_HP3_RLAST(),
-    .S_AXI_HP3_RVALID(),
-    .S_AXI_HP3_WREADY(),
-    .S_AXI_HP3_BRESP(),
-    .S_AXI_HP3_RRESP(),
-    .S_AXI_HP3_BID(),
-    .S_AXI_HP3_RID(),
-    .S_AXI_HP3_RDATA(),
-    .S_AXI_HP3_RCOUNT(),
-    .S_AXI_HP3_WCOUNT(),
-    .S_AXI_HP3_RACOUNT(),
-    .S_AXI_HP3_WACOUNT(),
-    .S_AXI_HP3_ACLK(1'B0),
-    .S_AXI_HP3_ARVALID(1'B0),
-    .S_AXI_HP3_AWVALID(1'B0),
-    .S_AXI_HP3_BREADY(1'B0),
-    .S_AXI_HP3_RDISSUECAP1_EN(1'B0),
-    .S_AXI_HP3_RREADY(1'B0),
-    .S_AXI_HP3_WLAST(1'B0),
-    .S_AXI_HP3_WRISSUECAP1_EN(1'B0),
-    .S_AXI_HP3_WVALID(1'B0),
-    .S_AXI_HP3_ARBURST(2'B0),
-    .S_AXI_HP3_ARLOCK(2'B0),
-    .S_AXI_HP3_ARSIZE(3'B0),
-    .S_AXI_HP3_AWBURST(2'B0),
-    .S_AXI_HP3_AWLOCK(2'B0),
-    .S_AXI_HP3_AWSIZE(3'B0),
-    .S_AXI_HP3_ARPROT(3'B0),
-    .S_AXI_HP3_AWPROT(3'B0),
-    .S_AXI_HP3_ARADDR(32'B0),
-    .S_AXI_HP3_AWADDR(32'B0),
-    .S_AXI_HP3_ARCACHE(4'B0),
-    .S_AXI_HP3_ARLEN(4'B0),
-    .S_AXI_HP3_ARQOS(4'B0),
-    .S_AXI_HP3_AWCACHE(4'B0),
-    .S_AXI_HP3_AWLEN(4'B0),
-    .S_AXI_HP3_AWQOS(4'B0),
-    .S_AXI_HP3_ARID(6'B0),
-    .S_AXI_HP3_AWID(6'B0),
-    .S_AXI_HP3_WID(6'B0),
-    .S_AXI_HP3_WDATA(64'B0),
-    .S_AXI_HP3_WSTRB(8'B0),
+    .S_AXI_HP3_ARREADY(S_AXI_HP3_ARREADY),
+    .S_AXI_HP3_AWREADY(S_AXI_HP3_AWREADY),
+    .S_AXI_HP3_BVALID(S_AXI_HP3_BVALID),
+    .S_AXI_HP3_RLAST(S_AXI_HP3_RLAST),
+    .S_AXI_HP3_RVALID(S_AXI_HP3_RVALID),
+    .S_AXI_HP3_WREADY(S_AXI_HP3_WREADY),
+    .S_AXI_HP3_BRESP(S_AXI_HP3_BRESP),
+    .S_AXI_HP3_RRESP(S_AXI_HP3_RRESP),
+    .S_AXI_HP3_BID(S_AXI_HP3_BID),
+    .S_AXI_HP3_RID(S_AXI_HP3_RID),
+    .S_AXI_HP3_RDATA(S_AXI_HP3_RDATA),
+    .S_AXI_HP3_RCOUNT(S_AXI_HP3_RCOUNT),
+    .S_AXI_HP3_WCOUNT(S_AXI_HP3_WCOUNT),
+    .S_AXI_HP3_RACOUNT(S_AXI_HP3_RACOUNT),
+    .S_AXI_HP3_WACOUNT(S_AXI_HP3_WACOUNT),
+    .S_AXI_HP3_ACLK(S_AXI_HP3_ACLK),
+    .S_AXI_HP3_ARVALID(S_AXI_HP3_ARVALID),
+    .S_AXI_HP3_AWVALID(S_AXI_HP3_AWVALID),
+    .S_AXI_HP3_BREADY(S_AXI_HP3_BREADY),
+    .S_AXI_HP3_RDISSUECAP1_EN(S_AXI_HP3_RDISSUECAP1_EN),
+    .S_AXI_HP3_RREADY(S_AXI_HP3_RREADY),
+    .S_AXI_HP3_WLAST(S_AXI_HP3_WLAST),
+    .S_AXI_HP3_WRISSUECAP1_EN(S_AXI_HP3_WRISSUECAP1_EN),
+    .S_AXI_HP3_WVALID(S_AXI_HP3_WVALID),
+    .S_AXI_HP3_ARBURST(S_AXI_HP3_ARBURST),
+    .S_AXI_HP3_ARLOCK(S_AXI_HP3_ARLOCK),
+    .S_AXI_HP3_ARSIZE(S_AXI_HP3_ARSIZE),
+    .S_AXI_HP3_AWBURST(S_AXI_HP3_AWBURST),
+    .S_AXI_HP3_AWLOCK(S_AXI_HP3_AWLOCK),
+    .S_AXI_HP3_AWSIZE(S_AXI_HP3_AWSIZE),
+    .S_AXI_HP3_ARPROT(S_AXI_HP3_ARPROT),
+    .S_AXI_HP3_AWPROT(S_AXI_HP3_AWPROT),
+    .S_AXI_HP3_ARADDR(S_AXI_HP3_ARADDR),
+    .S_AXI_HP3_AWADDR(S_AXI_HP3_AWADDR),
+    .S_AXI_HP3_ARCACHE(S_AXI_HP3_ARCACHE),
+    .S_AXI_HP3_ARLEN(S_AXI_HP3_ARLEN),
+    .S_AXI_HP3_ARQOS(S_AXI_HP3_ARQOS),
+    .S_AXI_HP3_AWCACHE(S_AXI_HP3_AWCACHE),
+    .S_AXI_HP3_AWLEN(S_AXI_HP3_AWLEN),
+    .S_AXI_HP3_AWQOS(S_AXI_HP3_AWQOS),
+    .S_AXI_HP3_ARID(S_AXI_HP3_ARID),
+    .S_AXI_HP3_AWID(S_AXI_HP3_AWID),
+    .S_AXI_HP3_WID(S_AXI_HP3_WID),
+    .S_AXI_HP3_WDATA(S_AXI_HP3_WDATA),
+    .S_AXI_HP3_WSTRB(S_AXI_HP3_WSTRB),
     .IRQ_P2F_DMAC_ABORT(),
     .IRQ_P2F_DMAC0(),
     .IRQ_P2F_DMAC1(),

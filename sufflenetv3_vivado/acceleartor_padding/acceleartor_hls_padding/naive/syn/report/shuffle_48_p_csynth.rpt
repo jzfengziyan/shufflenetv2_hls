@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'shuffle_48_p'
 ================================================================
-* Date:           Thu Dec 13 17:50:48 2018
+* Date:           Sat Dec 15 03:40:52 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        acceleartor_hls_padding
@@ -89,17 +89,17 @@
     +---------------------+----------+-------+----+----+------------+------------+
     |co_17_fu_142_p2      |     +    |      0|  26|  12|           1|           7|
     |h_17_fu_224_p2       |     +    |      0|  17|   9|           4|           1|
-    |tmp_230_fu_182_p2    |     +    |      0|  35|  15|          10|          10|
-    |tmp_233_fu_212_p2    |     +    |      0|  38|  16|          11|          11|
-    |tmp_234_fu_238_p2    |     +    |      0|  35|  15|          10|          10|
-    |tmp_235_fu_267_p2    |     +    |      0|  47|  19|          14|          14|
-    |tmp_236_fu_273_p2    |     +    |      0|  38|  16|          11|          11|
-    |tmp_237_fu_302_p2    |     +    |      0|  50|  20|          15|          15|
-    |tmp_238_fu_328_p2    |     +    |      0|  47|  19|          14|          14|
-    |tmp_239_fu_339_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_282_fu_172_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_286_fu_212_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_287_fu_238_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_288_fu_267_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_289_fu_273_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_290_fu_302_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_291_fu_328_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_292_fu_339_p2    |     +    |      0|  50|  20|          15|          15|
     |w_17_fu_314_p2       |     +    |      0|  17|   9|           4|           1|
-    |exitcond1_fu_218_p2  |   icmp   |      0|   0|   2|           4|           4|
-    |exitcond2_fu_136_p2  |   icmp   |      0|   0|   4|           7|           7|
+    |exitcond4_fu_218_p2  |   icmp   |      0|   0|   2|           4|           4|
+    |exitcond5_fu_136_p2  |   icmp   |      0|   0|   4|           7|           7|
     |exitcond_fu_308_p2   |   icmp   |      0|   0|   2|           4|           4|
     +---------------------+----------+-------+----+----+------------+------------+
     |Total                |          |      0| 400| 178|         124|         124|
@@ -112,32 +112,32 @@
     |ap_NS_fsm                 |  33|          6|    1|          6|
     |co_reg_87                 |   9|          2|    7|         14|
     |h_reg_98                  |   9|          2|    4|          8|
-    |storemerge_phi_fu_123_p4  |  15|          3|   32|         96|
+    |storemerge_phi_fu_123_p4  |  15|          3|    8|         24|
     |w_reg_109                 |   9|          2|    4|          8|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     |  75|         15|   48|        132|
+    |Total                     |  75|         15|   24|         60|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------+----+----+-----+-----------+
-    |         Name        | FF | LUT| Bits| Const Bits|
-    +---------------------+----+----+-----+-----------+
-    |ap_CS_fsm            |   5|   0|    5|          0|
-    |co_17_reg_356        |   7|   0|    7|          0|
-    |co_reg_87            |   7|   0|    7|          0|
-    |h_17_reg_374         |   4|   0|    4|          0|
-    |h_reg_98             |   4|   0|    4|          0|
-    |output_addr_reg_402  |  14|   0|   14|          0|
-    |tmp_230_reg_361      |   9|   0|   10|          1|
-    |tmp_233_reg_366      |  10|   0|   11|          1|
-    |tmp_235_reg_379      |  13|   0|   14|          1|
-    |tmp_237_reg_384      |  14|   0|   15|          1|
-    |tmp_90_reg_349       |   1|   0|    1|          0|
-    |w_17_reg_392         |   4|   0|    4|          0|
-    |w_reg_109            |   4|   0|    4|          0|
-    +---------------------+----+----+-----+-----------+
-    |Total                |  96|   0|  100|          4|
-    +---------------------+----+----+-----+-----------+
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |   5|   0|    5|          0|
+    |co_17_reg_356          |   7|   0|    7|          0|
+    |co_reg_87              |   7|   0|    7|          0|
+    |h_17_reg_374           |   4|   0|    4|          0|
+    |h_reg_98               |   4|   0|    4|          0|
+    |output_V_addr_reg_402  |  14|   0|   14|          0|
+    |tmp_257_reg_349        |   1|   0|    1|          0|
+    |tmp_282_reg_361        |  10|   0|   11|          1|
+    |tmp_286_reg_366        |   9|   0|   10|          1|
+    |tmp_288_reg_379        |  13|   0|   14|          1|
+    |tmp_290_reg_384        |  14|   0|   15|          1|
+    |w_17_reg_392           |   4|   0|    4|          0|
+    |w_reg_109              |   4|   0|    4|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  |  96|   0|  100|          4|
+    +-----------------------+----+----+-----+-----------+
 
 
 
@@ -145,24 +145,24 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------------------+-----+-----+------------+--------------------+--------------+
-|          RTL Ports          | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
-+-----------------------------+-----+-----+------------+--------------------+--------------+
-|ap_clk                       |  in |    1| ap_ctrl_hs |    shuffle_48_p    | return value |
-|ap_rst                       |  in |    1| ap_ctrl_hs |    shuffle_48_p    | return value |
-|ap_start                     |  in |    1| ap_ctrl_hs |    shuffle_48_p    | return value |
-|ap_done                      | out |    1| ap_ctrl_hs |    shuffle_48_p    | return value |
-|ap_idle                      | out |    1| ap_ctrl_hs |    shuffle_48_p    | return value |
-|ap_ready                     | out |    1| ap_ctrl_hs |    shuffle_48_p    | return value |
-|left_r_address0              | out |   13|  ap_memory |       left_r       |     array    |
-|left_r_ce0                   | out |    1|  ap_memory |       left_r       |     array    |
-|left_r_q0                    |  in |   32|  ap_memory |       left_r       |     array    |
-|output_r_address0            | out |   14|  ap_memory |      output_r      |     array    |
-|output_r_ce0                 | out |    1|  ap_memory |      output_r      |     array    |
-|output_r_we0                 | out |    1|  ap_memory |      output_r      |     array    |
-|output_r_d0                  | out |   32|  ap_memory |      output_r      |     array    |
-|buffer1_1_48_8x8_p_address0  | out |   13|  ap_memory | buffer1_1_48_8x8_p |     array    |
-|buffer1_1_48_8x8_p_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p |     array    |
-|buffer1_1_48_8x8_p_q0        |  in |   32|  ap_memory | buffer1_1_48_8x8_p |     array    |
-+-----------------------------+-----+-----+------------+--------------------+--------------+
++-------------------------------+-----+-----+------------+----------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs |     shuffle_48_p     | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs |     shuffle_48_p     | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs |     shuffle_48_p     | return value |
+|ap_done                        | out |    1| ap_ctrl_hs |     shuffle_48_p     | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs |     shuffle_48_p     | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs |     shuffle_48_p     | return value |
+|left_V_address0                | out |   13|  ap_memory |        left_V        |     array    |
+|left_V_ce0                     | out |    1|  ap_memory |        left_V        |     array    |
+|left_V_q0                      |  in |    8|  ap_memory |        left_V        |     array    |
+|output_V_address0              | out |   14|  ap_memory |       output_V       |     array    |
+|output_V_ce0                   | out |    1|  ap_memory |       output_V       |     array    |
+|output_V_we0                   | out |    1|  ap_memory |       output_V       |     array    |
+|output_V_d0                    | out |    8|  ap_memory |       output_V       |     array    |
+|buffer1_1_48_8x8_p_V_address0  | out |   13|  ap_memory | buffer1_1_48_8x8_p_V |     array    |
+|buffer1_1_48_8x8_p_V_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V |     array    |
+|buffer1_1_48_8x8_p_V_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V |     array    |
++-------------------------------+-----+-----+------------+----------------------+--------------+
 

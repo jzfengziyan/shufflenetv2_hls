@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue Oct 17 00:26:08 2017
-| Host         : RhoG_Squadron running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+| Date         : Sat Dec 15 02:41:53 2018
+| Host         : ziyan-ThinkPad-X1-Carbon-6th running 64-bit Ubuntu 18.04.1 LTS
 | Command      : report_utilization -file accelerator_bd_wrapper_utilization_synth.rpt -pb accelerator_bd_wrapper_utilization_synth.pb
 | Design       : accelerator_bd_wrapper
 | Device       : 7z020clg484-1
@@ -174,14 +174,15 @@ Table of Contents
 |                Ref Name               | Used |
 +---------------------------------------+------+
 | accelerator_bd_xbar_0                 |    1 |
-| accelerator_bd_vector_multiplier_0_0  |    1 |
 | accelerator_bd_rst_ps7_0_100M_1       |    1 |
 | accelerator_bd_processing_system7_0_1 |    1 |
 | accelerator_bd_axi_timer_0_1          |    1 |
+| accelerator_bd_axi_smc_2_1            |    1 |
 | accelerator_bd_axi_smc_2_0            |    1 |
 | accelerator_bd_axi_smc_1_0            |    1 |
 | accelerator_bd_axi_smc_0              |    1 |
-| accelerator_bd_auto_pc_1              |    1 |
+| accelerator_bd_auto_pc_0              |    1 |
+| accelerator_bd_ShuffleNetV2_0_1       |    1 |
 +---------------------------------------+------+
 
 

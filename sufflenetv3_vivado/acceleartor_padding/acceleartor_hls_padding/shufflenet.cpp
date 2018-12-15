@@ -1,96 +1,92 @@
 #include "shufflenet.h"
 
-float image_p[1][3][34][34] = {0};
+FIX_8 image_p[1][3][34][34] = {0};
 
-float conv1_output[1][24][32][32] = {0};
+FIX_8 conv1_output[1][24][32][32] = {0};
 
-float conv1_output_p[1][24][34][34] = {0};
+FIX_8 conv1_output_p[1][24][34][34] = {0};
 
 /*FIXME:If bram is still not enough, could use double buffer to buffer the following !!*/
 
+FIX_8 conv1_bias [24];
 
+FIX_8 downsampleunit0_output_p[1][48][18][18] = {0};
+FIX_8 shuffleunit0_0_output_p[1][48][18][18] = {0};
+FIX_8 shuffleunit0_1_output_p[1][48][18][18] = {0};
+FIX_8 shuffleunit0_2_output_p[1][48][18][18] = {0};
+FIX_8 downsampleunit1_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_0_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_1_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_2_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_3_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_4_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_5_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_6_output_p[1][96][10][10] = {0};
+FIX_8 shuffleunit1_7_output_p[1][96][10][10] = {0};
+FIX_8 downsampleunit2_output_p[1][192][6][6] = {0};
+FIX_8 shuffleunit2_0_output_p[1][192][6][6] = {0};
+FIX_8 shuffleunit2_1_output_p[1][192][6][6] = {0};
+FIX_8 shuffleunit2_2_output_p[1][192][6][6] = {0};
 
-float conv1_bias [24];
-
-float downsampleunit0_output_p[1][48][18][18] = {0};
-float shuffleunit0_0_output_p[1][48][18][18] = {0};
-float shuffleunit0_1_output_p[1][48][18][18] = {0};
-float shuffleunit0_2_output_p[1][48][18][18] = {0};
-float downsampleunit1_output_p[1][96][10][10] = {0};
-float shuffleunit1_0_output_p[1][96][10][10] = {0};
-float shuffleunit1_1_output_p[1][96][10][10] = {0};
-float shuffleunit1_2_output_p[1][96][10][10] = {0};
-float shuffleunit1_3_output_p[1][96][10][10] = {0};
-float shuffleunit1_4_output_p[1][96][10][10] = {0};
-float shuffleunit1_5_output_p[1][96][10][10] = {0};
-float shuffleunit1_6_output_p[1][96][10][10] = {0};
-float shuffleunit1_7_output_p[1][96][10][10] = {0};
-float downsampleunit2_output_p[1][192][6][6] = {0};
-float shuffleunit2_0_output_p[1][192][6][6] = {0};
-float shuffleunit2_1_output_p[1][192][6][6] = {0};
-float shuffleunit2_2_output_p[1][192][6][6] = {0};
-
-float shuffleunit2_2_output[1][192][4][4] = {0};
-float conv_last_output[1][512][4][4] = {0};
-float avgpool_output[512] = {0};
+FIX_8 shuffleunit2_2_output[1][192][4][4] = {0};
+FIX_8 conv_last_output[1][512][4][4] = {0};
+FIX_8 avgpool_output[512] = {0};
 
 
 
 //---------------New variables of DownsampleUnit0 and ShuffleUnit0-------------------------*/
-float weights_24_24_1x1 [24][24][1][1];
-float weights_24_1_3x3 [24][1][3][3];
-float bias_24 [24];
-//float ShuffleConvs_0_DownsampleUnit__conv1r_output[1][24][32][32]={0};
-//float buffer0_1_24_16x16[1][24][16][16]={0};
-//float buffer1_1_24_16x16[1][24][16][16]={0};
+FIX_8 weights_24_24_1x1 [24][24][1][1];
+FIX_8 weights_24_1_3x3 [24][1][3][3];
+FIX_8 bias_24 [24];
 
-float ShuffleConvs_0_DownsampleUnit__conv1r_output_p[1][24][34][34]={0};
-float buffer0_1_24_16x16_p[1][24][18][18]={0};
-float buffer1_1_24_16x16_p[1][24][18][18]={0};
+FIX_8 ShuffleConvs_0_DownsampleUnit__conv1r_output_p[1][24][34][34]={0};
+FIX_8 buffer0_1_24_16x16_p[1][24][18][18]={0};
+FIX_8 buffer1_1_24_16x16_p[1][24][18][18]={0};
 
 
 
 //------------New variables of DownsampleUnit1 and ShuffleUnit1---
-float weights_48_48_1x1 [48][48][1][1];
-float weights_48_1_3x3 [48][1][3][3];
-float bias_48 [48];
-//float ShuffleConvs_1_DownsampleUnit__conv1r_output[1][48][16][16]={0};
-//float buffer0_1_48_8x8[1][48][8][8]={0};
-//float buffer1_1_48_8x8[1][48][8][8]={0};
+FIX_8 weights_48_48_1x1 [48][48][1][1];
+FIX_8 weights_48_1_3x3 [48][1][3][3];
+FIX_8 bias_48 [48];
 
-float ShuffleConvs_1_DownsampleUnit__conv1r_output_p[1][48][18][18]={0};
-float buffer0_1_48_8x8_p[1][48][10][10]={0};
-float buffer1_1_48_8x8_p[1][48][10][10]={0};
+FIX_8 ShuffleConvs_1_DownsampleUnit__conv1r_output_p[1][48][18][18]={0};
+FIX_8 buffer0_1_48_8x8_p[1][48][10][10]={0};
+FIX_8 buffer1_1_48_8x8_p[1][48][10][10]={0};
 
 
 
 //------------New variables of DownsampleUnit2 and ShuffleUnit2---
-float weights_96_96_1x1 [96][96][1][1];
-float weights_96_1_3x3 [96][1][3][3];
-float bias_96 [96];
-//float ShuffleConvs_2_DownsampleUnit__conv1r_output[1][96][8][8]={0};
-//float buffer0_1_96_4x4[1][96][4][4]={0};
-//float buffer1_1_96_4x4[1][96][4][4]={0};
+FIX_8 weights_96_96_1x1 [96][96][1][1];
+FIX_8 weights_96_1_3x3 [96][1][3][3];
+FIX_8 bias_96 [96];
 
-float ShuffleConvs_2_DownsampleUnit__conv1r_output_p[1][96][10][10]={0};
-float buffer0_1_96_4x4_p[1][96][6][6]={0};
-float buffer1_1_96_4x4_p[1][96][6][6]={0};
+FIX_8 ShuffleConvs_2_DownsampleUnit__conv1r_output_p[1][96][10][10]={0};
+FIX_8 buffer0_1_96_4x4_p[1][96][6][6]={0};
+FIX_8 buffer1_1_96_4x4_p[1][96][6][6]={0};
 
+FIX_8 conv_last_bias [512];
+FIX_8 fc_bias [10];
 
-
-float conv_last_bias [512];
-float fc_bias [10];
-
-void ShuffleNetV2(float image[1][3][32][32],
-		float conv1_weight[24][3][3][3],
-		float shuffle_conv_3x3[1080][1][3][3],
-		float shuffle_conv_1x1[5496][24][1][1],
-		float conv_last_weight[512][192][1][1],
-		float fc_weight[10][512],
-		float bias[3618],
-		float fc_output[1000]
+int ShuffleNetV2(FIX_8 image[1][3][32][32],
+		FIX_8 conv1_weight[24][3][3][3],
+		FIX_8 shuffle_conv_3x3[1080][1][3][3],
+		FIX_8 shuffle_conv_1x1[5496][24][1][1],
+		FIX_8 conv_last_weight[512][192][1][1],
+		FIX_8 fc_weight[10][512],
+		FIX_8 bias[3618],
+		FIX_8 fc_output[1000]
 		)
 {
+#pragma HLS INTERFACE m_axi depth=3072 port=image offset=slave bundle=DATA_INPUT_OUTPUT
+#pragma HLS INTERFACE m_axi depth=648 port=conv1_weight offset=slave bundle=DATA_OTHER_WEIGHTS
+#pragma HLS INTERFACE m_axi depth=3618 port=bias offset=slave bundle=DATA_BIAS
+#pragma HLS INTERFACE m_axi depth=9720 port=shuffle_conv_3x3 offset=slave bundle=3X3_1X1_WEIGHTS
+#pragma HLS INTERFACE m_axi depth=131904 port=shuffle_conv_1x1 offset=slave bundle=3X3_1X1_WEIGHTS
+#pragma HLS INTERFACE m_axi depth=5120 port=fc_weight offset=slave bundle=DATA_OTHER_WEIGHTS
+#pragma HLS INTERFACE m_axi depth=1000 port=fc_output offset=slave bundle=DATA_INPUT_OUTPUT
+#pragma HLS INTERFACE m_axi depth=98304 port=conv_last_weight offset=slave bundle=DATA_OTHER_WEIGHTS
+#pragma HLS INTERFACE s_axilite register port=return bundle=CTL
 
 	//bias
 
@@ -1147,5 +1143,5 @@ void ShuffleNetV2(float image[1][3][32][32],
     for(int i =0;i<10;i++){
     	cout<<fc_output[i]<<endl;
     }cout<<"result above"<<endl;
-
+    return 0;
 }

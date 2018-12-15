@@ -15,7 +15,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>output_r</name>
+						<name>output_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -24,11 +24,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output</originalName>
+						<originalName>output.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
@@ -43,7 +43,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>conv_last_output</name>
+						<name>conv_last_output_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -56,7 +56,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
@@ -68,7 +68,7 @@
 			</item>
 		</ports>
 		<nodes class_id="8" tracking_level="0" version="0">
-			<count>36</count>
+			<count>59</count>
 			<item_version>0</item_version>
 			<item class_id="9" tracking_level="1" version="0" object_id="_3">
 				<Value>
@@ -78,7 +78,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>985</lineNumber>
+						<lineNumber>662</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -93,7 +93,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>985</second>
+										<second>662</second>
 									</item>
 								</second>
 							</item>
@@ -107,7 +107,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>52</item>
+					<item>75</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -135,10 +135,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>54</item>
-					<item>55</item>
-					<item>56</item>
-					<item>57</item>
+					<item>77</item>
+					<item>78</item>
+					<item>79</item>
+					<item>80</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -148,10 +148,10 @@
 					<Obj>
 						<type>0</type>
 						<id>6</id>
-						<name>exitcond2</name>
+						<name>exitcond7</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>985</lineNumber>
+						<lineNumber>662</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -166,7 +166,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>985</second>
+										<second>662</second>
 									</item>
 								</second>
 							</item>
@@ -180,8 +180,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>58</item>
-					<item>60</item>
+					<item>81</item>
+					<item>83</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -191,10 +191,10 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>co_24</name>
+						<name>co_25</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>985</lineNumber>
+						<lineNumber>662</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -209,7 +209,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>985</second>
+										<second>662</second>
 									</item>
 								</second>
 							</item>
@@ -223,8 +223,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>61</item>
-					<item>63</item>
+					<item>84</item>
+					<item>86</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -237,7 +237,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>985</lineNumber>
+						<lineNumber>662</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -252,7 +252,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>985</second>
+										<second>662</second>
 									</item>
 								</second>
 							</item>
@@ -266,9 +266,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>64</item>
-					<item>65</item>
-					<item>66</item>
+					<item>87</item>
+					<item>88</item>
+					<item>89</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -281,7 +281,7 @@
 						<name>tmp</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -296,7 +296,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -310,7 +310,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>67</item>
+					<item>90</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -320,10 +320,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>tmp_311</name>
+						<name>tmp_s</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>985</lineNumber>
+						<lineNumber>662</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -338,7 +338,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>985</second>
+										<second>662</second>
 									</item>
 								</second>
 							</item>
@@ -352,9 +352,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>69</item>
-					<item>70</item>
-					<item>72</item>
+					<item>92</item>
+					<item>93</item>
+					<item>95</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
@@ -364,10 +364,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>tmp_449_cast</name>
+						<name>tmp_460_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>987</lineNumber>
+						<lineNumber>664</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -382,7 +382,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>987</second>
+										<second>664</second>
 									</item>
 								</second>
 							</item>
@@ -396,7 +396,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>73</item>
+					<item>96</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -409,7 +409,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>987</lineNumber>
+						<lineNumber>664</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -424,7 +424,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>987</second>
+										<second>664</second>
 									</item>
 								</second>
 							</item>
@@ -438,7 +438,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>74</item>
+					<item>97</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -448,42 +448,28 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>sum</name>
-						<fileName>acceleartor_hls_padding/components.cpp</fileName>
-						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
-						<contextFuncName>avgpool</contextFuncName>
+						<name>p_Val2_s</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
 						<inlineStackInfo>
-							<count>1</count>
+							<count>0</count>
 							<item_version>0</item_version>
-							<item>
-								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>acceleartor_hls_padding/components.cpp</first>
-											<second>avgpool</second>
-										</first>
-										<second>989</second>
-									</item>
-								</second>
-							</item>
 						</inlineStackInfo>
-						<originalName></originalName>
+						<originalName>__Val2__</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>77</item>
-					<item>78</item>
-					<item>79</item>
-					<item>80</item>
+					<item>100</item>
+					<item>101</item>
+					<item>102</item>
+					<item>103</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -511,10 +497,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>82</item>
-					<item>83</item>
-					<item>84</item>
-					<item>85</item>
+					<item>105</item>
+					<item>106</item>
+					<item>107</item>
+					<item>108</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -524,10 +510,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>exitcond1</name>
+						<name>exitcond8</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>987</lineNumber>
+						<lineNumber>664</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -542,7 +528,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>987</second>
+										<second>664</second>
 									</item>
 								</second>
 							</item>
@@ -556,8 +542,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>86</item>
-					<item>88</item>
+					<item>109</item>
+					<item>111</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -570,7 +556,7 @@
 						<name>h_24</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>987</lineNumber>
+						<lineNumber>664</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -585,7 +571,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>987</second>
+										<second>664</second>
 									</item>
 								</second>
 							</item>
@@ -599,8 +585,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>89</item>
-					<item>91</item>
+					<item>112</item>
+					<item>114</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -613,7 +599,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>987</lineNumber>
+						<lineNumber>664</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -628,7 +614,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>987</second>
+										<second>664</second>
 									</item>
 								</second>
 							</item>
@@ -642,9 +628,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>92</item>
-					<item>93</item>
-					<item>94</item>
+					<item>115</item>
+					<item>116</item>
+					<item>117</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -654,10 +640,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>tmp_94_cast</name>
+						<name>tmp_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -672,7 +658,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -686,7 +672,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>95</item>
+					<item>118</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -696,10 +682,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>tmp_312</name>
+						<name>tmp_364</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -714,7 +700,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -728,8 +714,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>96</item>
-					<item>97</item>
+					<item>119</item>
+					<item>120</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -739,10 +725,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>tmp_452_cast</name>
+						<name>tmp_464_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>988</lineNumber>
+						<lineNumber>665</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -757,7 +743,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>988</second>
+										<second>665</second>
 									</item>
 								</second>
 							</item>
@@ -771,9 +757,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>99</item>
-					<item>100</item>
-					<item>101</item>
+					<item>122</item>
+					<item>123</item>
+					<item>124</item>
 				</oprand_edges>
 				<opcode>bitconcatenate</opcode>
 				<m_Display>0</m_Display>
@@ -786,7 +772,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>988</lineNumber>
+						<lineNumber>665</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -801,7 +787,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>988</second>
+										<second>665</second>
 									</item>
 								</second>
 							</item>
@@ -815,7 +801,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>102</item>
+					<item>125</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -825,7 +811,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>sum_1</name>
+						<name>p_Val2_108</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -834,19 +820,19 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>sum</originalName>
+						<originalName>sum.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>103</item>
-					<item>104</item>
-					<item>105</item>
-					<item>106</item>
+					<item>126</item>
+					<item>127</item>
+					<item>128</item>
+					<item>129</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -874,10 +860,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>107</item>
-					<item>108</item>
-					<item>109</item>
-					<item>110</item>
+					<item>130</item>
+					<item>131</item>
+					<item>132</item>
+					<item>133</item>
 				</oprand_edges>
 				<opcode>phi</opcode>
 				<m_Display>0</m_Display>
@@ -890,7 +876,7 @@
 						<name>exitcond</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>988</lineNumber>
+						<lineNumber>665</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -905,7 +891,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>988</second>
+										<second>665</second>
 									</item>
 								</second>
 							</item>
@@ -919,8 +905,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>111</item>
-					<item>112</item>
+					<item>134</item>
+					<item>135</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -933,7 +919,7 @@
 						<name>w_24</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>988</lineNumber>
+						<lineNumber>665</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -948,7 +934,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>988</second>
+										<second>665</second>
 									</item>
 								</second>
 							</item>
@@ -962,8 +948,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>113</item>
-					<item>114</item>
+					<item>136</item>
+					<item>137</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -976,7 +962,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>988</lineNumber>
+						<lineNumber>665</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -991,7 +977,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>988</second>
+										<second>665</second>
 									</item>
 								</second>
 							</item>
@@ -1005,9 +991,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>115</item>
-					<item>116</item>
-					<item>117</item>
+					<item>138</item>
+					<item>139</item>
+					<item>140</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -1017,10 +1003,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>tmp_95_cast</name>
+						<name>tmp_221_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1035,7 +1021,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -1049,7 +1035,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>118</item>
+					<item>141</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1059,10 +1045,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>tmp_313</name>
+						<name>tmp_365</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1077,7 +1063,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -1091,8 +1077,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>119</item>
-					<item>120</item>
+					<item>142</item>
+					<item>143</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -1102,10 +1088,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_453_cast</name>
+						<name>tmp_465_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1120,7 +1106,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -1134,7 +1120,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>121</item>
+					<item>144</item>
 				</oprand_edges>
 				<opcode>zext</opcode>
 				<m_Display>0</m_Display>
@@ -1144,10 +1130,10 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>conv_last_output_add</name>
+						<name>conv_last_output_V_a</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1162,7 +1148,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -1176,9 +1162,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>122</item>
-					<item>124</item>
-					<item>125</item>
+					<item>145</item>
+					<item>147</item>
+					<item>148</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -1188,10 +1174,10 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>conv_last_output_loa</name>
+						<name>tmp_222</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1206,7 +1192,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
@@ -1215,14 +1201,14 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>126</item>
+					<item>149</item>
 				</oprand_edges>
-				<opcode>load</opcode>
+				<opcode>sext</opcode>
 				<m_Display>0</m_Display>
 			</item>
 			<item class_id_reference="9" object_id="_31">
@@ -1230,10 +1216,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>sum_16</name>
+						<name>p_Val2_109</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>989</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1248,24 +1234,23 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>989</second>
+										<second>666</second>
 									</item>
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>sum</originalName>
+						<originalName>__Val2__</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>2</count>
+					<count>1</count>
 					<item_version>0</item_version>
-					<item>127</item>
-					<item>128</item>
+					<item>150</item>
 				</oprand_edges>
-				<opcode>fadd</opcode>
+				<opcode>load</opcode>
 				<m_Display>0</m_Display>
 			</item>
 			<item class_id_reference="9" object_id="_32">
@@ -1273,10 +1258,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name></name>
+						<name>tmp_223</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>988</lineNumber>
+						<lineNumber>666</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1291,7 +1276,570 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>988</second>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>9</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>151</item>
+				</oprand_edges>
+				<opcode>sext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_33">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>42</id>
+						<name>p_Val2_110</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>9</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>152</item>
+					<item>153</item>
+				</oprand_edges>
+				<opcode>add</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_34">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>43</id>
+						<name>isneg</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>isneg</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>155</item>
+					<item>156</item>
+					<item>158</item>
+				</oprand_edges>
+				<opcode>bitselect</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_35">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>44</id>
+						<name>p_Val2_111</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>159</item>
+					<item>160</item>
+				</oprand_edges>
+				<opcode>add</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_36">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>45</id>
+						<name>newsignbit</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>newsignbit</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>162</item>
+					<item>163</item>
+					<item>165</item>
+				</oprand_edges>
+				<opcode>bitselect</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_37">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>46</id>
+						<name>tmp_224</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>166</item>
+					<item>168</item>
+				</oprand_edges>
+				<opcode>xor</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_38">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>47</id>
+						<name>underflow</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>underflow</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>169</item>
+					<item>170</item>
+				</oprand_edges>
+				<opcode>and</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_39">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>48</id>
+						<name>brmerge_i_i_i</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>171</item>
+					<item>172</item>
+				</oprand_edges>
+				<opcode>xor</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_40">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>49</id>
+						<name>isneg_not</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>173</item>
+					<item>174</item>
+				</oprand_edges>
+				<opcode>xor</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_41">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>50</id>
+						<name>brmerge</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>175</item>
+					<item>176</item>
+				</oprand_edges>
+				<opcode>or</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_42">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>51</id>
+						<name>p_Val2_118_mux</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>177</item>
+					<item>179</item>
+					<item>180</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_43">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>52</id>
+						<name>p_Val2_1</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>181</item>
+					<item>183</item>
+					<item>184</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_44">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>53</id>
+						<name>sum_V</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>666</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>666</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>sum.V</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>185</item>
+					<item>186</item>
+					<item>187</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_45">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>54</id>
+						<name></name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>665</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>665</second>
 									</item>
 								</second>
 							</item>
@@ -1305,16 +1853,16 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>129</item>
+					<item>188</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_33">
+			<item class_id_reference="9" object_id="_46">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>43</id>
+						<id>56</id>
 						<name></name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1333,20 +1881,20 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>75</item>
+					<item>98</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_34">
+			<item class_id_reference="9" object_id="_47">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>45</id>
-						<name>tmp_s</name>
+						<id>58</id>
+						<name>tmp_tr</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>992</lineNumber>
+						<lineNumber>669</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1361,7 +1909,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>992</second>
+										<second>669</second>
 									</item>
 								</second>
 							</item>
@@ -1370,26 +1918,25 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<oprand_edges>
-					<count>2</count>
+					<count>1</count>
 					<item_version>0</item_version>
-					<item>130</item>
-					<item>132</item>
+					<item>189</item>
 				</oprand_edges>
-				<opcode>fmul</opcode>
+				<opcode>sext</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_35">
+			<item class_id_reference="9" object_id="_48">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>46</id>
-						<name>output_addr</name>
+						<id>59</id>
+						<name>tmp_310</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>992</lineNumber>
+						<lineNumber>669</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1404,7 +1951,439 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>992</second>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>190</item>
+					<item>191</item>
+					<item>192</item>
+				</oprand_edges>
+				<opcode>bitselect</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_49">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>60</id>
+						<name>p_neg</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>9</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>194</item>
+					<item>195</item>
+				</oprand_edges>
+				<opcode>sub</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_50">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>61</id>
+						<name>tmp_363</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>197</item>
+					<item>198</item>
+					<item>200</item>
+					<item>201</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_51">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>62</id>
+						<name>p_lshr_cast</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>6</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>202</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_52">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>63</id>
+						<name>p_neg_t</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>6</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>204</item>
+					<item>205</item>
+				</oprand_edges>
+				<opcode>sub</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_53">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>64</id>
+						<name>tmp_13</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>4</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>4</count>
+					<item_version>0</item_version>
+					<item>207</item>
+					<item>208</item>
+					<item>209</item>
+					<item>210</item>
+				</oprand_edges>
+				<opcode>partselect</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_54">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>65</id>
+						<name>tmp_14</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>5</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>211</item>
+				</oprand_edges>
+				<opcode>sext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_55">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>66</id>
+						<name>p_lshr_f_cast</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>6</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>212</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_56">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>67</id>
+						<name>tmp_15</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>6</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>213</item>
+					<item>214</item>
+					<item>215</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_57">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>68</id>
+						<name>p_Val2_107</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>216</item>
+				</oprand_edges>
+				<opcode>sext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_58">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>69</id>
+						<name>output_V_addr</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>669</lineNumber>
+						<contextFuncName>avgpool</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>avgpool</second>
+										</first>
+										<second>669</second>
 									</item>
 								</second>
 							</item>
@@ -1418,22 +2397,22 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>133</item>
-					<item>134</item>
-					<item>135</item>
+					<item>217</item>
+					<item>218</item>
+					<item>219</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_36">
+			<item class_id_reference="9" object_id="_59">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>47</id>
+						<id>70</id>
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>992</lineNumber>
+						<lineNumber>669</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1448,7 +2427,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>992</second>
+										<second>669</second>
 									</item>
 								</second>
 							</item>
@@ -1462,21 +2441,21 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>136</item>
-					<item>137</item>
+					<item>220</item>
+					<item>221</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_37">
+			<item class_id_reference="9" object_id="_60">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>48</id>
+						<id>71</id>
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>985</lineNumber>
+						<lineNumber>662</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1491,7 +2470,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>985</second>
+										<second>662</second>
 									</item>
 								</second>
 							</item>
@@ -1505,20 +2484,20 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>138</item>
+					<item>222</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_38">
+			<item class_id_reference="9" object_id="_61">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>50</id>
+						<id>73</id>
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>994</lineNumber>
+						<lineNumber>671</lineNumber>
 						<contextFuncName>avgpool</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1533,7 +2512,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>avgpool</second>
 										</first>
-										<second>994</second>
+										<second>671</second>
 									</item>
 								</second>
 							</item>
@@ -1553,13 +2532,13 @@
 			</item>
 		</nodes>
 		<consts class_id="15" tracking_level="0" version="0">
-			<count>10</count>
+			<count>17</count>
 			<item_version>0</item_version>
-			<item class_id="16" tracking_level="1" version="0" object_id="_39">
+			<item class_id="16" tracking_level="1" version="0" object_id="_62">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>53</id>
+						<id>76</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1578,11 +2557,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_40">
+			<item class_id_reference="16" object_id="_63">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>59</id>
+						<id>82</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1601,11 +2580,11 @@
 				<const_type>0</const_type>
 				<content>512</content>
 			</item>
-			<item class_id_reference="16" object_id="_41">
+			<item class_id_reference="16" object_id="_64">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>62</id>
+						<id>85</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1624,11 +2603,11 @@
 				<const_type>0</const_type>
 				<content>1</content>
 			</item>
-			<item class_id_reference="16" object_id="_42">
+			<item class_id_reference="16" object_id="_65">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>71</id>
+						<id>94</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1647,11 +2626,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_43">
+			<item class_id_reference="16" object_id="_66">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>76</id>
+						<id>99</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1665,16 +2644,16 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
-				<const_type>1</const_type>
+				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_44">
+			<item class_id_reference="16" object_id="_67">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>81</id>
+						<id>104</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1693,11 +2672,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_45">
+			<item class_id_reference="16" object_id="_68">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>87</id>
+						<id>110</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1716,11 +2695,11 @@
 				<const_type>0</const_type>
 				<content>4</content>
 			</item>
-			<item class_id_reference="16" object_id="_46">
+			<item class_id_reference="16" object_id="_69">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>90</id>
+						<id>113</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1739,11 +2718,11 @@
 				<const_type>0</const_type>
 				<content>1</content>
 			</item>
-			<item class_id_reference="16" object_id="_47">
+			<item class_id_reference="16" object_id="_70">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>123</id>
+						<id>146</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1762,11 +2741,11 @@
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_48">
+			<item class_id_reference="16" object_id="_71">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>131</id>
+						<id>157</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -1782,14 +2761,175 @@
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
-				<const_type>1</const_type>
-				<content>0.0625</content>
+				<const_type>0</const_type>
+				<content>8</content>
+			</item>
+			<item class_id_reference="16" object_id="_72">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>164</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>7</content>
+			</item>
+			<item class_id_reference="16" object_id="_73">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>167</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>1</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>1</content>
+			</item>
+			<item class_id_reference="16" object_id="_74">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>178</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>127</content>
+			</item>
+			<item class_id_reference="16" object_id="_75">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>182</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>8</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>128</content>
+			</item>
+			<item class_id_reference="16" object_id="_76">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>193</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>9</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>0</content>
+			</item>
+			<item class_id_reference="16" object_id="_77">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>199</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>4</content>
+			</item>
+			<item class_id_reference="16" object_id="_78">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>203</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>6</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>0</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
 			<count>10</count>
 			<item_version>0</item_version>
-			<item class_id="18" tracking_level="1" version="0" object_id="_49">
+			<item class_id="18" tracking_level="1" version="0" object_id="_79">
 				<Obj>
 					<type>3</type>
 					<id>4</id>
@@ -1812,7 +2952,7 @@
 					<item>3</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_50">
+			<item class_id_reference="18" object_id="_80">
 				<Obj>
 					<type>3</type>
 					<id>10</id>
@@ -1838,11 +2978,11 @@
 					<item>9</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_51">
+			<item class_id_reference="18" object_id="_81">
 				<Obj>
 					<type>3</type>
 					<id>15</id>
-					<name>.preheader3.preheader</name>
+					<name>_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1864,11 +3004,11 @@
 					<item>14</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_52">
+			<item class_id_reference="18" object_id="_82">
 				<Obj>
 					<type>3</type>
 					<id>22</id>
-					<name>.preheader3</name>
+					<name>.loopexit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1891,7 +3031,7 @@
 					<item>21</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_53">
+			<item class_id_reference="18" object_id="_83">
 				<Obj>
 					<type>3</type>
 					<id>27</id>
@@ -1917,7 +3057,7 @@
 					<item>26</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_54">
+			<item class_id_reference="18" object_id="_84">
 				<Obj>
 					<type>3</type>
 					<id>34</id>
@@ -1944,11 +3084,11 @@
 					<item>33</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_55">
+			<item class_id_reference="18" object_id="_85">
 				<Obj>
 					<type>3</type>
-					<id>42</id>
-					<name></name>
+					<id>55</id>
+					<name>_ifconv</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -1962,7 +3102,7 @@
 					<coreName></coreName>
 				</Obj>
 				<node_objs>
-					<count>7</count>
+					<count>20</count>
 					<item_version>0</item_version>
 					<item>35</item>
 					<item>36</item>
@@ -1971,61 +3111,84 @@
 					<item>39</item>
 					<item>40</item>
 					<item>41</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_56">
-				<Obj>
-					<type>3</type>
-					<id>44</id>
-					<name>.preheader3.loopexit</name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>1</count>
-					<item_version>0</item_version>
+					<item>42</item>
 					<item>43</item>
-				</node_objs>
-			</item>
-			<item class_id_reference="18" object_id="_57">
-				<Obj>
-					<type>3</type>
-					<id>49</id>
-					<name></name>
-					<fileName></fileName>
-					<fileDirectory></fileDirectory>
-					<lineNumber>0</lineNumber>
-					<contextFuncName></contextFuncName>
-					<inlineStackInfo>
-						<count>0</count>
-						<item_version>0</item_version>
-					</inlineStackInfo>
-					<originalName></originalName>
-					<rtlName></rtlName>
-					<coreName></coreName>
-				</Obj>
-				<node_objs>
-					<count>4</count>
-					<item_version>0</item_version>
+					<item>44</item>
 					<item>45</item>
 					<item>46</item>
 					<item>47</item>
 					<item>48</item>
+					<item>49</item>
+					<item>50</item>
+					<item>51</item>
+					<item>52</item>
+					<item>53</item>
+					<item>54</item>
 				</node_objs>
 			</item>
-			<item class_id_reference="18" object_id="_58">
+			<item class_id_reference="18" object_id="_86">
 				<Obj>
 					<type>3</type>
-					<id>51</id>
+					<id>57</id>
+					<name>.loopexit.loopexit</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<coreName></coreName>
+				</Obj>
+				<node_objs>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>56</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_87">
+				<Obj>
+					<type>3</type>
+					<id>72</id>
+					<name>_ifconv1</name>
+					<fileName></fileName>
+					<fileDirectory></fileDirectory>
+					<lineNumber>0</lineNumber>
+					<contextFuncName></contextFuncName>
+					<inlineStackInfo>
+						<count>0</count>
+						<item_version>0</item_version>
+					</inlineStackInfo>
+					<originalName></originalName>
+					<rtlName></rtlName>
+					<coreName></coreName>
+				</Obj>
+				<node_objs>
+					<count>14</count>
+					<item_version>0</item_version>
+					<item>58</item>
+					<item>59</item>
+					<item>60</item>
+					<item>61</item>
+					<item>62</item>
+					<item>63</item>
+					<item>64</item>
+					<item>65</item>
+					<item>66</item>
+					<item>67</item>
+					<item>68</item>
+					<item>69</item>
+					<item>70</item>
+					<item>71</item>
+				</node_objs>
+			</item>
+			<item class_id_reference="18" object_id="_88">
+				<Obj>
+					<type>3</type>
+					<id>74</id>
 					<name></name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -2042,521 +3205,791 @@
 				<node_objs>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>50</item>
+					<item>73</item>
 				</node_objs>
 			</item>
 		</blocks>
 		<edges class_id="19" tracking_level="0" version="0">
-			<count>85</count>
+			<count>130</count>
 			<item_version>0</item_version>
-			<item class_id="20" tracking_level="1" version="0" object_id="_59">
-				<id>52</id>
+			<item class_id="20" tracking_level="1" version="0" object_id="_89">
+				<id>75</id>
 				<edge_type>2</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>3</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_60">
-				<id>54</id>
+			<item class_id_reference="20" object_id="_90">
+				<id>77</id>
 				<edge_type>1</edge_type>
-				<source_obj>53</source_obj>
+				<source_obj>76</source_obj>
 				<sink_obj>5</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_61">
-				<id>55</id>
+			<item class_id_reference="20" object_id="_91">
+				<id>78</id>
 				<edge_type>2</edge_type>
 				<source_obj>4</source_obj>
 				<sink_obj>5</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_62">
-				<id>56</id>
+			<item class_id_reference="20" object_id="_92">
+				<id>79</id>
 				<edge_type>1</edge_type>
 				<source_obj>8</source_obj>
 				<sink_obj>5</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_63">
-				<id>57</id>
+			<item class_id_reference="20" object_id="_93">
+				<id>80</id>
 				<edge_type>2</edge_type>
-				<source_obj>49</source_obj>
+				<source_obj>72</source_obj>
 				<sink_obj>5</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_64">
-				<id>58</id>
+			<item class_id_reference="20" object_id="_94">
+				<id>81</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>6</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_65">
-				<id>60</id>
+			<item class_id_reference="20" object_id="_95">
+				<id>83</id>
 				<edge_type>1</edge_type>
-				<source_obj>59</source_obj>
+				<source_obj>82</source_obj>
 				<sink_obj>6</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_66">
-				<id>61</id>
+			<item class_id_reference="20" object_id="_96">
+				<id>84</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>8</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_67">
-				<id>63</id>
+			<item class_id_reference="20" object_id="_97">
+				<id>86</id>
 				<edge_type>1</edge_type>
-				<source_obj>62</source_obj>
+				<source_obj>85</source_obj>
 				<sink_obj>8</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_68">
-				<id>64</id>
+			<item class_id_reference="20" object_id="_98">
+				<id>87</id>
 				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
 				<sink_obj>9</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_69">
-				<id>65</id>
+			<item class_id_reference="20" object_id="_99">
+				<id>88</id>
 				<edge_type>2</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>9</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_70">
-				<id>66</id>
+			<item class_id_reference="20" object_id="_100">
+				<id>89</id>
 				<edge_type>2</edge_type>
-				<source_obj>51</source_obj>
+				<source_obj>74</source_obj>
 				<sink_obj>9</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_71">
-				<id>67</id>
+			<item class_id_reference="20" object_id="_101">
+				<id>90</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>11</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_72">
-				<id>70</id>
+			<item class_id_reference="20" object_id="_102">
+				<id>93</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>12</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_73">
-				<id>72</id>
+			<item class_id_reference="20" object_id="_103">
+				<id>95</id>
 				<edge_type>1</edge_type>
-				<source_obj>71</source_obj>
+				<source_obj>94</source_obj>
 				<sink_obj>12</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_74">
-				<id>73</id>
+			<item class_id_reference="20" object_id="_104">
+				<id>96</id>
 				<edge_type>1</edge_type>
 				<source_obj>12</source_obj>
 				<sink_obj>13</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_75">
-				<id>74</id>
+			<item class_id_reference="20" object_id="_105">
+				<id>97</id>
 				<edge_type>2</edge_type>
 				<source_obj>22</source_obj>
 				<sink_obj>14</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_76">
-				<id>75</id>
+			<item class_id_reference="20" object_id="_106">
+				<id>98</id>
 				<edge_type>2</edge_type>
 				<source_obj>22</source_obj>
-				<sink_obj>43</sink_obj>
+				<sink_obj>56</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_77">
-				<id>77</id>
+			<item class_id_reference="20" object_id="_107">
+				<id>100</id>
 				<edge_type>1</edge_type>
-				<source_obj>76</source_obj>
+				<source_obj>99</source_obj>
 				<sink_obj>16</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_78">
-				<id>78</id>
+			<item class_id_reference="20" object_id="_108">
+				<id>101</id>
 				<edge_type>2</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>16</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_79">
-				<id>79</id>
+			<item class_id_reference="20" object_id="_109">
+				<id>102</id>
 				<edge_type>1</edge_type>
 				<source_obj>28</source_obj>
 				<sink_obj>16</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_80">
-				<id>80</id>
+			<item class_id_reference="20" object_id="_110">
+				<id>103</id>
 				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
+				<source_obj>57</source_obj>
 				<sink_obj>16</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_81">
-				<id>82</id>
+			<item class_id_reference="20" object_id="_111">
+				<id>105</id>
 				<edge_type>1</edge_type>
-				<source_obj>81</source_obj>
+				<source_obj>104</source_obj>
 				<sink_obj>17</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_82">
-				<id>83</id>
+			<item class_id_reference="20" object_id="_112">
+				<id>106</id>
 				<edge_type>2</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>17</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_83">
-				<id>84</id>
+			<item class_id_reference="20" object_id="_113">
+				<id>107</id>
 				<edge_type>1</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>17</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_84">
-				<id>85</id>
+			<item class_id_reference="20" object_id="_114">
+				<id>108</id>
 				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
+				<source_obj>57</source_obj>
 				<sink_obj>17</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_85">
-				<id>86</id>
+			<item class_id_reference="20" object_id="_115">
+				<id>109</id>
 				<edge_type>1</edge_type>
 				<source_obj>17</source_obj>
 				<sink_obj>18</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_86">
-				<id>88</id>
+			<item class_id_reference="20" object_id="_116">
+				<id>111</id>
 				<edge_type>1</edge_type>
-				<source_obj>87</source_obj>
+				<source_obj>110</source_obj>
 				<sink_obj>18</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_87">
-				<id>89</id>
+			<item class_id_reference="20" object_id="_117">
+				<id>112</id>
 				<edge_type>1</edge_type>
 				<source_obj>17</source_obj>
 				<sink_obj>20</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_88">
-				<id>91</id>
+			<item class_id_reference="20" object_id="_118">
+				<id>114</id>
 				<edge_type>1</edge_type>
-				<source_obj>90</source_obj>
+				<source_obj>113</source_obj>
 				<sink_obj>20</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_89">
-				<id>92</id>
+			<item class_id_reference="20" object_id="_119">
+				<id>115</id>
 				<edge_type>1</edge_type>
 				<source_obj>18</source_obj>
 				<sink_obj>21</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_90">
-				<id>93</id>
+			<item class_id_reference="20" object_id="_120">
+				<id>116</id>
 				<edge_type>2</edge_type>
 				<source_obj>27</source_obj>
 				<sink_obj>21</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_91">
-				<id>94</id>
+			<item class_id_reference="20" object_id="_121">
+				<id>117</id>
 				<edge_type>2</edge_type>
-				<source_obj>49</source_obj>
+				<source_obj>72</source_obj>
 				<sink_obj>21</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_92">
-				<id>95</id>
+			<item class_id_reference="20" object_id="_122">
+				<id>118</id>
 				<edge_type>1</edge_type>
 				<source_obj>17</source_obj>
 				<sink_obj>23</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_93">
-				<id>96</id>
+			<item class_id_reference="20" object_id="_123">
+				<id>119</id>
 				<edge_type>1</edge_type>
 				<source_obj>23</source_obj>
 				<sink_obj>24</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_94">
-				<id>97</id>
+			<item class_id_reference="20" object_id="_124">
+				<id>120</id>
 				<edge_type>1</edge_type>
 				<source_obj>13</source_obj>
 				<sink_obj>24</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_95">
-				<id>100</id>
+			<item class_id_reference="20" object_id="_125">
+				<id>123</id>
 				<edge_type>1</edge_type>
 				<source_obj>24</source_obj>
 				<sink_obj>25</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_96">
-				<id>101</id>
+			<item class_id_reference="20" object_id="_126">
+				<id>124</id>
 				<edge_type>1</edge_type>
-				<source_obj>71</source_obj>
+				<source_obj>94</source_obj>
 				<sink_obj>25</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_97">
-				<id>102</id>
+			<item class_id_reference="20" object_id="_127">
+				<id>125</id>
 				<edge_type>2</edge_type>
 				<source_obj>34</source_obj>
 				<sink_obj>26</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_98">
-				<id>103</id>
-				<edge_type>1</edge_type>
-				<source_obj>40</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_99">
-				<id>104</id>
-				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
-				<sink_obj>28</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_100">
-				<id>105</id>
+			<item class_id_reference="20" object_id="_128">
+				<id>126</id>
 				<edge_type>1</edge_type>
 				<source_obj>16</source_obj>
 				<sink_obj>28</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_101">
-				<id>106</id>
+			<item class_id_reference="20" object_id="_129">
+				<id>127</id>
 				<edge_type>2</edge_type>
 				<source_obj>27</source_obj>
 				<sink_obj>28</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_102">
-				<id>107</id>
+			<item class_id_reference="20" object_id="_130">
+				<id>128</id>
+				<edge_type>1</edge_type>
+				<source_obj>53</source_obj>
+				<sink_obj>28</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_131">
+				<id>129</id>
+				<edge_type>2</edge_type>
+				<source_obj>55</source_obj>
+				<sink_obj>28</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_132">
+				<id>130</id>
+				<edge_type>1</edge_type>
+				<source_obj>104</source_obj>
+				<sink_obj>29</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_133">
+				<id>131</id>
+				<edge_type>2</edge_type>
+				<source_obj>27</source_obj>
+				<sink_obj>29</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_134">
+				<id>132</id>
 				<edge_type>1</edge_type>
 				<source_obj>32</source_obj>
 				<sink_obj>29</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_103">
-				<id>108</id>
+			<item class_id_reference="20" object_id="_135">
+				<id>133</id>
 				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
+				<source_obj>55</source_obj>
 				<sink_obj>29</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_104">
-				<id>109</id>
-				<edge_type>1</edge_type>
-				<source_obj>81</source_obj>
-				<sink_obj>29</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_105">
-				<id>110</id>
-				<edge_type>2</edge_type>
-				<source_obj>27</source_obj>
-				<sink_obj>29</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_106">
-				<id>111</id>
+			<item class_id_reference="20" object_id="_136">
+				<id>134</id>
 				<edge_type>1</edge_type>
 				<source_obj>29</source_obj>
 				<sink_obj>30</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_107">
-				<id>112</id>
+			<item class_id_reference="20" object_id="_137">
+				<id>135</id>
 				<edge_type>1</edge_type>
-				<source_obj>87</source_obj>
+				<source_obj>110</source_obj>
 				<sink_obj>30</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_108">
-				<id>113</id>
+			<item class_id_reference="20" object_id="_138">
+				<id>136</id>
 				<edge_type>1</edge_type>
 				<source_obj>29</source_obj>
 				<sink_obj>32</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_109">
-				<id>114</id>
+			<item class_id_reference="20" object_id="_139">
+				<id>137</id>
 				<edge_type>1</edge_type>
-				<source_obj>90</source_obj>
+				<source_obj>113</source_obj>
 				<sink_obj>32</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_110">
-				<id>115</id>
+			<item class_id_reference="20" object_id="_140">
+				<id>138</id>
 				<edge_type>1</edge_type>
 				<source_obj>30</source_obj>
 				<sink_obj>33</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_111">
-				<id>116</id>
+			<item class_id_reference="20" object_id="_141">
+				<id>139</id>
 				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
+				<source_obj>55</source_obj>
 				<sink_obj>33</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_112">
-				<id>117</id>
+			<item class_id_reference="20" object_id="_142">
+				<id>140</id>
 				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
+				<source_obj>57</source_obj>
 				<sink_obj>33</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_113">
-				<id>118</id>
+			<item class_id_reference="20" object_id="_143">
+				<id>141</id>
 				<edge_type>1</edge_type>
 				<source_obj>29</source_obj>
 				<sink_obj>35</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_114">
-				<id>119</id>
+			<item class_id_reference="20" object_id="_144">
+				<id>142</id>
 				<edge_type>1</edge_type>
 				<source_obj>25</source_obj>
 				<sink_obj>36</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_115">
-				<id>120</id>
+			<item class_id_reference="20" object_id="_145">
+				<id>143</id>
 				<edge_type>1</edge_type>
 				<source_obj>35</source_obj>
 				<sink_obj>36</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_116">
-				<id>121</id>
+			<item class_id_reference="20" object_id="_146">
+				<id>144</id>
 				<edge_type>1</edge_type>
 				<source_obj>36</source_obj>
 				<sink_obj>37</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_117">
-				<id>122</id>
+			<item class_id_reference="20" object_id="_147">
+				<id>145</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
 				<sink_obj>38</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_118">
-				<id>124</id>
+			<item class_id_reference="20" object_id="_148">
+				<id>147</id>
 				<edge_type>1</edge_type>
-				<source_obj>123</source_obj>
+				<source_obj>146</source_obj>
 				<sink_obj>38</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_119">
-				<id>125</id>
+			<item class_id_reference="20" object_id="_149">
+				<id>148</id>
 				<edge_type>1</edge_type>
 				<source_obj>37</source_obj>
 				<sink_obj>38</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_120">
-				<id>126</id>
-				<edge_type>1</edge_type>
-				<source_obj>38</source_obj>
-				<sink_obj>39</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_121">
-				<id>127</id>
+			<item class_id_reference="20" object_id="_150">
+				<id>149</id>
 				<edge_type>1</edge_type>
 				<source_obj>28</source_obj>
-				<sink_obj>40</sink_obj>
+				<sink_obj>39</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_122">
-				<id>128</id>
+			<item class_id_reference="20" object_id="_151">
+				<id>150</id>
 				<edge_type>1</edge_type>
-				<source_obj>39</source_obj>
+				<source_obj>38</source_obj>
 				<sink_obj>40</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_123">
-				<id>129</id>
-				<edge_type>2</edge_type>
-				<source_obj>34</source_obj>
+			<item class_id_reference="20" object_id="_152">
+				<id>151</id>
+				<edge_type>1</edge_type>
+				<source_obj>40</source_obj>
 				<sink_obj>41</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_124">
-				<id>130</id>
+			<item class_id_reference="20" object_id="_153">
+				<id>152</id>
 				<edge_type>1</edge_type>
-				<source_obj>16</source_obj>
+				<source_obj>39</source_obj>
+				<sink_obj>42</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_154">
+				<id>153</id>
+				<edge_type>1</edge_type>
+				<source_obj>41</source_obj>
+				<sink_obj>42</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_155">
+				<id>156</id>
+				<edge_type>1</edge_type>
+				<source_obj>42</source_obj>
+				<sink_obj>43</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_156">
+				<id>158</id>
+				<edge_type>1</edge_type>
+				<source_obj>157</source_obj>
+				<sink_obj>43</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_157">
+				<id>159</id>
+				<edge_type>1</edge_type>
+				<source_obj>28</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_158">
+				<id>160</id>
+				<edge_type>1</edge_type>
+				<source_obj>40</source_obj>
+				<sink_obj>44</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_159">
+				<id>163</id>
+				<edge_type>1</edge_type>
+				<source_obj>44</source_obj>
 				<sink_obj>45</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_125">
-				<id>132</id>
+			<item class_id_reference="20" object_id="_160">
+				<id>165</id>
 				<edge_type>1</edge_type>
-				<source_obj>131</source_obj>
+				<source_obj>164</source_obj>
 				<sink_obj>45</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_126">
-				<id>133</id>
-				<edge_type>1</edge_type>
-				<source_obj>1</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_127">
-				<id>134</id>
-				<edge_type>1</edge_type>
-				<source_obj>123</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_128">
-				<id>135</id>
-				<edge_type>1</edge_type>
-				<source_obj>11</source_obj>
-				<sink_obj>46</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_129">
-				<id>136</id>
+			<item class_id_reference="20" object_id="_161">
+				<id>166</id>
 				<edge_type>1</edge_type>
 				<source_obj>45</source_obj>
+				<sink_obj>46</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_162">
+				<id>168</id>
+				<edge_type>1</edge_type>
+				<source_obj>167</source_obj>
+				<sink_obj>46</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_163">
+				<id>169</id>
+				<edge_type>1</edge_type>
+				<source_obj>43</source_obj>
 				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_130">
-				<id>137</id>
+			<item class_id_reference="20" object_id="_164">
+				<id>170</id>
 				<edge_type>1</edge_type>
 				<source_obj>46</source_obj>
 				<sink_obj>47</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_131">
-				<id>138</id>
-				<edge_type>2</edge_type>
-				<source_obj>10</source_obj>
+			<item class_id_reference="20" object_id="_165">
+				<id>171</id>
+				<edge_type>1</edge_type>
+				<source_obj>43</source_obj>
 				<sink_obj>48</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_132">
-				<id>154</id>
+			<item class_id_reference="20" object_id="_166">
+				<id>172</id>
+				<edge_type>1</edge_type>
+				<source_obj>45</source_obj>
+				<sink_obj>48</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_167">
+				<id>173</id>
+				<edge_type>1</edge_type>
+				<source_obj>43</source_obj>
+				<sink_obj>49</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_168">
+				<id>174</id>
+				<edge_type>1</edge_type>
+				<source_obj>167</source_obj>
+				<sink_obj>49</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_169">
+				<id>175</id>
+				<edge_type>1</edge_type>
+				<source_obj>45</source_obj>
+				<sink_obj>50</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_170">
+				<id>176</id>
+				<edge_type>1</edge_type>
+				<source_obj>49</source_obj>
+				<sink_obj>50</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_171">
+				<id>177</id>
+				<edge_type>1</edge_type>
+				<source_obj>48</source_obj>
+				<sink_obj>51</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_172">
+				<id>179</id>
+				<edge_type>1</edge_type>
+				<source_obj>178</source_obj>
+				<sink_obj>51</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_173">
+				<id>180</id>
+				<edge_type>1</edge_type>
+				<source_obj>44</source_obj>
+				<sink_obj>51</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_174">
+				<id>181</id>
+				<edge_type>1</edge_type>
+				<source_obj>47</source_obj>
+				<sink_obj>52</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_175">
+				<id>183</id>
+				<edge_type>1</edge_type>
+				<source_obj>182</source_obj>
+				<sink_obj>52</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_176">
+				<id>184</id>
+				<edge_type>1</edge_type>
+				<source_obj>44</source_obj>
+				<sink_obj>52</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_177">
+				<id>185</id>
+				<edge_type>1</edge_type>
+				<source_obj>50</source_obj>
+				<sink_obj>53</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_178">
+				<id>186</id>
+				<edge_type>1</edge_type>
+				<source_obj>51</source_obj>
+				<sink_obj>53</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_179">
+				<id>187</id>
+				<edge_type>1</edge_type>
+				<source_obj>52</source_obj>
+				<sink_obj>53</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_180">
+				<id>188</id>
+				<edge_type>2</edge_type>
+				<source_obj>34</source_obj>
+				<sink_obj>54</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_181">
+				<id>189</id>
+				<edge_type>1</edge_type>
+				<source_obj>16</source_obj>
+				<sink_obj>58</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_182">
+				<id>191</id>
+				<edge_type>1</edge_type>
+				<source_obj>16</source_obj>
+				<sink_obj>59</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_183">
+				<id>192</id>
+				<edge_type>1</edge_type>
+				<source_obj>164</source_obj>
+				<sink_obj>59</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_184">
+				<id>194</id>
+				<edge_type>1</edge_type>
+				<source_obj>193</source_obj>
+				<sink_obj>60</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_185">
+				<id>195</id>
+				<edge_type>1</edge_type>
+				<source_obj>58</source_obj>
+				<sink_obj>60</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_186">
+				<id>198</id>
+				<edge_type>1</edge_type>
+				<source_obj>60</source_obj>
+				<sink_obj>61</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_187">
+				<id>200</id>
+				<edge_type>1</edge_type>
+				<source_obj>199</source_obj>
+				<sink_obj>61</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_188">
+				<id>201</id>
+				<edge_type>1</edge_type>
+				<source_obj>157</source_obj>
+				<sink_obj>61</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_189">
+				<id>202</id>
+				<edge_type>1</edge_type>
+				<source_obj>61</source_obj>
+				<sink_obj>62</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_190">
+				<id>204</id>
+				<edge_type>1</edge_type>
+				<source_obj>203</source_obj>
+				<sink_obj>63</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_191">
+				<id>205</id>
+				<edge_type>1</edge_type>
+				<source_obj>62</source_obj>
+				<sink_obj>63</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_192">
+				<id>208</id>
+				<edge_type>1</edge_type>
+				<source_obj>16</source_obj>
+				<sink_obj>64</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_193">
+				<id>209</id>
+				<edge_type>1</edge_type>
+				<source_obj>199</source_obj>
+				<sink_obj>64</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_194">
+				<id>210</id>
+				<edge_type>1</edge_type>
+				<source_obj>164</source_obj>
+				<sink_obj>64</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_195">
+				<id>211</id>
+				<edge_type>1</edge_type>
+				<source_obj>64</source_obj>
+				<sink_obj>65</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_196">
+				<id>212</id>
+				<edge_type>1</edge_type>
+				<source_obj>65</source_obj>
+				<sink_obj>66</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_197">
+				<id>213</id>
+				<edge_type>1</edge_type>
+				<source_obj>59</source_obj>
+				<sink_obj>67</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_198">
+				<id>214</id>
+				<edge_type>1</edge_type>
+				<source_obj>63</source_obj>
+				<sink_obj>67</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_199">
+				<id>215</id>
+				<edge_type>1</edge_type>
+				<source_obj>66</source_obj>
+				<sink_obj>67</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_200">
+				<id>216</id>
+				<edge_type>1</edge_type>
+				<source_obj>67</source_obj>
+				<sink_obj>68</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_201">
+				<id>217</id>
+				<edge_type>1</edge_type>
+				<source_obj>1</source_obj>
+				<sink_obj>69</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_202">
+				<id>218</id>
+				<edge_type>1</edge_type>
+				<source_obj>146</source_obj>
+				<sink_obj>69</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_203">
+				<id>219</id>
+				<edge_type>1</edge_type>
+				<source_obj>11</source_obj>
+				<sink_obj>69</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_204">
+				<id>220</id>
+				<edge_type>1</edge_type>
+				<source_obj>68</source_obj>
+				<sink_obj>70</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_205">
+				<id>221</id>
+				<edge_type>1</edge_type>
+				<source_obj>69</source_obj>
+				<sink_obj>70</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_206">
+				<id>222</id>
+				<edge_type>2</edge_type>
+				<source_obj>10</source_obj>
+				<sink_obj>71</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_207">
+				<id>238</id>
 				<edge_type>2</edge_type>
 				<source_obj>4</source_obj>
 				<sink_obj>10</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_133">
-				<id>155</id>
+			<item class_id_reference="20" object_id="_208">
+				<id>239</id>
 				<edge_type>2</edge_type>
 				<source_obj>10</source_obj>
-				<sink_obj>51</sink_obj>
+				<sink_obj>74</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_134">
-				<id>156</id>
+			<item class_id_reference="20" object_id="_209">
+				<id>240</id>
 				<edge_type>2</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>15</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_135">
-				<id>157</id>
+			<item class_id_reference="20" object_id="_210">
+				<id>241</id>
 				<edge_type>2</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>22</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_136">
-				<id>158</id>
+			<item class_id_reference="20" object_id="_211">
+				<id>242</id>
 				<edge_type>2</edge_type>
 				<source_obj>22</source_obj>
-				<sink_obj>49</sink_obj>
+				<sink_obj>72</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_137">
-				<id>159</id>
+			<item class_id_reference="20" object_id="_212">
+				<id>243</id>
 				<edge_type>2</edge_type>
 				<source_obj>22</source_obj>
 				<sink_obj>27</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_138">
-				<id>160</id>
+			<item class_id_reference="20" object_id="_213">
+				<id>244</id>
 				<edge_type>2</edge_type>
 				<source_obj>27</source_obj>
 				<sink_obj>34</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_139">
-				<id>161</id>
+			<item class_id_reference="20" object_id="_214">
+				<id>245</id>
 				<edge_type>2</edge_type>
 				<source_obj>34</source_obj>
-				<sink_obj>44</sink_obj>
+				<sink_obj>57</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_140">
-				<id>162</id>
+			<item class_id_reference="20" object_id="_215">
+				<id>246</id>
 				<edge_type>2</edge_type>
 				<source_obj>34</source_obj>
-				<sink_obj>42</sink_obj>
+				<sink_obj>55</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_141">
-				<id>163</id>
+			<item class_id_reference="20" object_id="_216">
+				<id>247</id>
 				<edge_type>2</edge_type>
-				<source_obj>42</source_obj>
+				<source_obj>55</source_obj>
 				<sink_obj>34</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_142">
-				<id>164</id>
+			<item class_id_reference="20" object_id="_217">
+				<id>248</id>
 				<edge_type>2</edge_type>
-				<source_obj>44</source_obj>
+				<source_obj>57</source_obj>
 				<sink_obj>22</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_143">
-				<id>165</id>
+			<item class_id_reference="20" object_id="_218">
+				<id>249</id>
 				<edge_type>2</edge_type>
-				<source_obj>49</source_obj>
+				<source_obj>72</source_obj>
 				<sink_obj>10</sink_obj>
 			</item>
 		</edges>
@@ -2564,7 +3997,7 @@
 	<cdfg_regions class_id="21" tracking_level="0" version="0">
 		<count>10</count>
 		<item_version>0</item_version>
-		<item class_id="22" tracking_level="1" version="0" object_id="_144">
+		<item class_id="22" tracking_level="1" version="0" object_id="_219">
 			<mId>1</mId>
 			<mTag>avgpool</mTag>
 			<mType>0</mType>
@@ -2583,12 +4016,12 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>64513</mMinLatency>
+			<mMinLatency>30209</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_145">
+		<item class_id_reference="22" object_id="_220">
 			<mId>2</mId>
 			<mTag>Entry</mTag>
 			<mType>0</mType>
@@ -2610,7 +4043,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_146">
+		<item class_id_reference="22" object_id="_221">
 			<mId>3</mId>
 			<mTag>Loop 1</mTag>
 			<mType>1</mType>
@@ -2629,12 +4062,12 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>512</mMinTripCount>
 			<mMaxTripCount>512</mMaxTripCount>
-			<mMinLatency>64512</mMinLatency>
+			<mMinLatency>30208</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_147">
+		<item class_id_reference="22" object_id="_222">
 			<mId>4</mId>
 			<mTag>Region 1</mTag>
 			<mType>0</mType>
@@ -2657,7 +4090,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_148">
+		<item class_id_reference="22" object_id="_223">
 			<mId>5</mId>
 			<mTag>Loop 1.1</mTag>
 			<mType>1</mType>
@@ -2676,12 +4109,12 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>4</mMinTripCount>
 			<mMaxTripCount>4</mMaxTripCount>
-			<mMinLatency>120</mMinLatency>
+			<mMinLatency>56</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_149">
+		<item class_id_reference="22" object_id="_224">
 			<mId>6</mId>
 			<mTag>Region 2</mTag>
 			<mType>0</mType>
@@ -2704,7 +4137,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_150">
+		<item class_id_reference="22" object_id="_225">
 			<mId>7</mId>
 			<mTag>Loop 1.1.1</mTag>
 			<mType>1</mType>
@@ -2716,18 +4149,18 @@
 				<count>2</count>
 				<item_version>0</item_version>
 				<item>34</item>
-				<item>42</item>
+				<item>55</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>4</mMinTripCount>
 			<mMaxTripCount>4</mMaxTripCount>
-			<mMinLatency>28</mMinLatency>
+			<mMinLatency>12</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_151">
+		<item class_id_reference="22" object_id="_226">
 			<mId>8</mId>
 			<mTag>Region 3</mTag>
 			<mType>0</mType>
@@ -2738,7 +4171,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>44</item>
+				<item>57</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -2749,7 +4182,7 @@
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_152">
+		<item class_id_reference="22" object_id="_227">
 			<mId>9</mId>
 			<mTag>Region 4</mTag>
 			<mType>0</mType>
@@ -2760,18 +4193,18 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>49</item>
+				<item>72</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>4</mMinLatency>
+			<mMinLatency>1</mMinLatency>
 			<mMaxLatency>-1</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
-		<item class_id_reference="22" object_id="_153">
+		<item class_id_reference="22" object_id="_228">
 			<mId>10</mId>
 			<mTag>Return</mTag>
 			<mType>0</mType>
@@ -2782,7 +4215,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>51</item>
+				<item>74</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -2797,7 +4230,7 @@
 	<fsm class_id="-1"></fsm>
 	<res class_id="-1"></res>
 	<node_label_latency class_id="26" tracking_level="0" version="0">
-		<count>36</count>
+		<count>59</count>
 		<item_version>0</item_version>
 		<item class_id="27" tracking_level="0" version="0">
 			<first>3</first>
@@ -2991,61 +4424,222 @@
 		<item>
 			<first>39</first>
 			<second>
-				<first>3</first>
-				<second>1</second>
+				<first>4</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>40</first>
 			<second>
-				<first>5</first>
-				<second>4</second>
+				<first>3</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>9</first>
+				<first>4</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>42</first>
+			<second>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
-				<first>3</first>
+				<first>4</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>44</first>
+			<second>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>2</first>
-				<second>3</second>
+				<first>4</first>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>46</first>
 			<second>
-				<first>6</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
-				<first>6</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>6</first>
+				<first>5</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>49</first>
+			<second>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
+			<second>
+				<first>5</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>51</first>
+			<second>
+				<first>5</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>52</first>
+			<second>
+				<first>5</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>53</first>
+			<second>
+				<first>5</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>54</first>
+			<second>
+				<first>5</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>56</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>58</first>
+			<second>
+				<first>2</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>59</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>60</first>
+			<second>
+				<first>2</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>61</first>
+			<second>
+				<first>2</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>62</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>63</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>64</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>65</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>66</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>67</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>68</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>69</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>70</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>71</first>
+			<second>
+				<first>3</first>
+				<second>0</second>
+			</second>
+		</item>
+		<item>
+			<first>73</first>
 			<second>
 				<first>1</first>
 				<second>0</second>
@@ -3098,28 +4692,28 @@
 			</second>
 		</item>
 		<item>
-			<first>42</first>
+			<first>55</first>
 			<second>
 				<first>3</first>
-				<second>9</second>
+				<second>5</second>
 			</second>
 		</item>
 		<item>
-			<first>44</first>
+			<first>57</first>
 			<second>
 				<first>3</first>
 				<second>3</second>
 			</second>
 		</item>
 		<item>
-			<first>49</first>
+			<first>72</first>
 			<second>
 				<first>2</first>
-				<second>6</second>
+				<second>3</second>
 			</second>
 		</item>
 		<item>
-			<first>51</first>
+			<first>74</first>
 			<second>
 				<first>1</first>
 				<second>1</second>

@@ -1,11 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 120
-set MemName ShuffleNetV2_conveOg
+set ID 88
+set MemName ShuffleNetV2_convbkb
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 24
 set AddrWd 5
 set impl_style block
@@ -84,11 +84,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 121
-set MemName ShuffleNetV2_convfYi
+set ID 89
+set MemName ShuffleNetV2_convcud
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 512
 set AddrWd 9
 set impl_style block
@@ -167,11 +167,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 122
-set MemName ShuffleNetV2_fc_bg8j
+set ID 90
+set MemName ShuffleNetV2_fc_bdEe
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 10
 set AddrWd 4
 set impl_style block
@@ -250,11 +250,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 123
-set MemName ShuffleNetV2_imaghbi
+set ID 91
+set MemName ShuffleNetV2_imageOg
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 3468
 set AddrWd 12
 set impl_style block
@@ -333,11 +333,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 124
-set MemName ShuffleNetV2_convibs
+set ID 92
+set MemName ShuffleNetV2_convfYi
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 27744
 set AddrWd 15
 set impl_style block
@@ -416,11 +416,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 125
-set MemName ShuffleNetV2_weigjbC
+set ID 93
+set MemName ShuffleNetV2_weigg8j
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 576
 set AddrWd 10
 set impl_style block
@@ -499,11 +499,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 126
-set MemName ShuffleNetV2_weigmb6
+set ID 94
+set MemName ShuffleNetV2_weigjbC
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 216
 set AddrWd 8
 set impl_style block
@@ -582,11 +582,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 127
-set MemName ShuffleNetV2_buffncg
+set ID 95
+set MemName ShuffleNetV2_buffkbM
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 7776
 set AddrWd 13
 set impl_style block
@@ -665,11 +665,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 128
-set MemName ShuffleNetV2_downpcA
+set ID 96
+set MemName ShuffleNetV2_downmb6
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 15552
 set AddrWd 14
 set impl_style block
@@ -748,11 +748,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 129
-set MemName ShuffleNetV2_weigtde
+set ID 97
+set MemName ShuffleNetV2_weigqcK
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 2304
 set AddrWd 12
 set impl_style block
@@ -831,11 +831,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 130
-set MemName ShuffleNetV2_biasudo
+set ID 98
+set MemName ShuffleNetV2_biasrcU
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 48
 set AddrWd 6
 set impl_style block
@@ -846,7 +846,7 @@ set HasInitializer 1
 set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 3.254
+set DelayBudget 2.322
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -914,11 +914,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 131
-set MemName ShuffleNetV2_weigwdI
+set ID 99
+set MemName ShuffleNetV2_weigtde
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 432
 set AddrWd 9
 set impl_style block
@@ -997,11 +997,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 132
-set MemName ShuffleNetV2_buffxdS
+set ID 100
+set MemName ShuffleNetV2_buffudo
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 4800
 set AddrWd 13
 set impl_style block
@@ -1080,11 +1080,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 133
-set MemName ShuffleNetV2_downzec
+set ID 101
+set MemName ShuffleNetV2_downwdI
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 9600
 set AddrWd 14
 set impl_style block
@@ -1163,11 +1163,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 134
-set MemName ShuffleNetV2_weigIfE
+set ID 102
+set MemName ShuffleNetV2_weigFfa
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 9216
 set AddrWd 14
 set impl_style block
@@ -1246,11 +1246,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 135
-set MemName ShuffleNetV2_biasJfO
+set ID 103
+set MemName ShuffleNetV2_biasGfk
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 96
 set AddrWd 7
 set impl_style block
@@ -1261,7 +1261,7 @@ set HasInitializer 1
 set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 3.254
+set DelayBudget 2.305
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -1329,11 +1329,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 136
-set MemName ShuffleNetV2_weigLf8
+set ID 104
+set MemName ShuffleNetV2_weigIfE
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 864
 set AddrWd 10
 set impl_style block
@@ -1412,11 +1412,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 137
-set MemName ShuffleNetV2_buffMgi
+set ID 105
+set MemName ShuffleNetV2_buffJfO
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 3456
 set AddrWd 12
 set impl_style block
@@ -1495,11 +1495,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 138
-set MemName ShuffleNetV2_downOgC
+set ID 106
+set MemName ShuffleNetV2_downLf8
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 6912
 set AddrWd 13
 set impl_style block
@@ -1578,11 +1578,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 139
-set MemName ShuffleNetV2_shufShg
+set ID 107
+set MemName ShuffleNetV2_shufPgM
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 3072
 set AddrWd 12
 set impl_style block
@@ -1661,11 +1661,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 140
-set MemName ShuffleNetV2_convThq
+set ID 108
+set MemName ShuffleNetV2_convQgW
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
-set DataWd 32
+set DataWd 8
 set AddrRange 8192
 set AddrWd 13
 set impl_style block
@@ -1750,169 +1750,196 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 141 \
-    name image_r \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename image_r \
+set port_CTL {
+ap_start { }
+ap_done { }
+ap_ready { }
+ap_idle { }
+ap_return { 
+	dir o
+	width 32
+	depth 1
+	mode ap_ctrl_hs
+	offset 16
+	offset_end 0
+}
+image_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 24
+	offset_end 31
+}
+conv1_weight_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 32
+	offset_end 39
+}
+shuffle_conv_3x3_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 40
+	offset_end 47
+}
+shuffle_conv_1x1_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 48
+	offset_end 55
+}
+conv_last_weight_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 56
+	offset_end 63
+}
+fc_weight_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 64
+	offset_end 71
+}
+bias_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 72
+	offset_end 79
+}
+fc_output_V { 
+	dir I
+	width 32
+	depth 1
+	mode ap_none
+	offset 80
+	offset_end 87
+}
+}
+
+
+# Native S_AXILite:
+if {${::AESL::PGuard_simmodel_gen}} {
+	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
+		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
+			id 109 \
+			corename ShuffleNetV2_CTL_axilite \
+			name ShuffleNetV2_CTL_s_axi \
+			ports {$port_CTL} \
+			op interface \
+		} "
+	} else {
+		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'CTL'"
+	}
+}
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ShuffleNetV2_CTL_s_axi
+}
+
+# Native M_AXI:
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
+eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
+    id 110 \
+    corename {m_axi} \
     op interface \
-    ports { image_r_address0 { O 12 vector } image_r_ce0 { O 1 bit } image_r_q0 { I 32 vector } } \
+    max_latency -1 \ 
+    delay_budget 8.75 \ 
+    name {ShuffleNetV2_DATA_INPUT_OUTPUT_m_axi} \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'image_r'"
+puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'DATA_INPUT_OUTPUT'"
 }
 }
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ShuffleNetV2_DATA_INPUT_OUTPUT_m_axi
+}
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 142 \
-    name conv1_weight \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv1_weight \
+# Native M_AXI:
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
+eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
+    id 111 \
+    corename {m_axi} \
     op interface \
-    ports { conv1_weight_address0 { O 10 vector } conv1_weight_ce0 { O 1 bit } conv1_weight_q0 { I 32 vector } } \
+    max_latency -1 \ 
+    delay_budget 8.75 \ 
+    name {ShuffleNetV2_DATA_OTHER_WEIGHTS_m_axi} \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_weight'"
+puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'DATA_OTHER_WEIGHTS'"
 }
 }
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ShuffleNetV2_DATA_OTHER_WEIGHTS_m_axi
+}
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 143 \
-    name shuffle_conv_3x3 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename shuffle_conv_3x3 \
+# Native M_AXI:
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
+eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
+    id 112 \
+    corename {m_axi} \
     op interface \
-    ports { shuffle_conv_3x3_address0 { O 14 vector } shuffle_conv_3x3_ce0 { O 1 bit } shuffle_conv_3x3_q0 { I 32 vector } } \
+    max_latency -1 \ 
+    delay_budget 8.75 \ 
+    name {ShuffleNetV2_p3X3_1X1_WEIGHTS_m_axi} \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'shuffle_conv_3x3'"
+puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'p3X3_1X1_WEIGHTS'"
 }
 }
 
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ShuffleNetV2_p3X3_1X1_WEIGHTS_m_axi
+}
 
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 144 \
-    name shuffle_conv_1x1 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename shuffle_conv_1x1 \
+# Native M_AXI:
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
+eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
+    id 113 \
+    corename {m_axi} \
     op interface \
-    ports { shuffle_conv_1x1_address0 { O 18 vector } shuffle_conv_1x1_ce0 { O 1 bit } shuffle_conv_1x1_q0 { I 32 vector } } \
+    max_latency -1 \ 
+    delay_budget 8.75 \ 
+    name {ShuffleNetV2_DATA_BIAS_m_axi} \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'shuffle_conv_1x1'"
+puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'DATA_BIAS'"
 }
 }
 
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 145 \
-    name conv_last_weight \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv_last_weight \
-    op interface \
-    ports { conv_last_weight_address0 { O 17 vector } conv_last_weight_ce0 { O 1 bit } conv_last_weight_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv_last_weight'"
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler ShuffleNetV2_DATA_BIAS_m_axi
 }
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 146 \
-    name fc_weight \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename fc_weight \
-    op interface \
-    ports { fc_weight_address0 { O 13 vector } fc_weight_ce0 { O 1 bit } fc_weight_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'fc_weight'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 147 \
-    name bias \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename bias \
-    op interface \
-    ports { bias_address0 { O 12 vector } bias_ce0 { O 1 bit } bias_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'bias'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 148 \
-    name fc_output \
-    reset_level 1 \
-    sync_rst true \
-    dir O \
-    corename fc_output \
-    op interface \
-    ports { fc_output_address0 { O 10 vector } fc_output_ce0 { O 1 bit } fc_output_we0 { O 1 bit } fc_output_d0 { O 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'fc_output'"
-}
-}
-
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id -1 \
-    name ap_ctrl \
-    type ap_ctrl \
-    reset_level 1 \
+    name ap_return \
+    type ap_return \
+    reset_level 0 \
     sync_rst true \
-    corename ap_ctrl \
+    corename ap_return \
     op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
+    ports { ap_return { O 32 vector } } \
 } "
 }
 
@@ -1925,7 +1952,7 @@ if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_cloc
 eval "cg_default_interface_gen_clock { \
     id -2 \
     name ${PortName} \
-    reset_level 1 \
+    reset_level 0 \
     sync_rst true \
     corename apif_ap_clk \
     data_wd ${DataWd} \
@@ -1938,16 +1965,16 @@ puts "@W \[IMPL-113\] Cannot find bus interface model in the library. Ignored ge
 
 
 # Adapter definition:
-set PortName ap_rst
+set PortName ap_rst_n
 set DataWd 1 
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
     id -3 \
     name ${PortName} \
-    reset_level 1 \
+    reset_level 0 \
     sync_rst true \
-    corename apif_ap_rst \
+    corename apif_ap_rst_n \
     data_wd ${DataWd} \
     op interface \
 }"

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'shuffle_24_p'
 ================================================================
-* Date:           Thu Dec 13 17:50:47 2018
+* Date:           Sat Dec 15 03:40:51 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        acceleartor_hls_padding
@@ -89,17 +89,17 @@
     +---------------------+----------+-------+----+----+------------+------------+
     |co_20_fu_142_p2      |     +    |      0|  23|  11|           1|           6|
     |h_20_fu_224_p2       |     +    |      0|  20|  10|           5|           1|
-    |tmp_263_fu_182_p2    |     +    |      0|  35|  15|          10|          10|
-    |tmp_266_fu_212_p2    |     +    |      0|  38|  16|          11|          11|
-    |tmp_267_fu_238_p2    |     +    |      0|  35|  15|          10|          10|
-    |tmp_268_fu_263_p2    |     +    |      0|  47|  19|          14|          14|
-    |tmp_269_fu_269_p2    |     +    |      0|  38|  16|          11|          11|
-    |tmp_270_fu_294_p2    |     +    |      0|  50|  20|          15|          15|
-    |tmp_271_fu_320_p2    |     +    |      0|  47|  19|          14|          14|
-    |tmp_272_fu_331_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_315_fu_172_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_319_fu_212_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_320_fu_238_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_321_fu_263_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_322_fu_269_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_323_fu_294_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_324_fu_320_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_325_fu_331_p2    |     +    |      0|  50|  20|          15|          15|
     |w_20_fu_306_p2       |     +    |      0|  20|  10|           5|           1|
-    |exitcond1_fu_218_p2  |   icmp   |      0|   0|   2|           5|           5|
-    |exitcond2_fu_136_p2  |   icmp   |      0|   0|   3|           6|           6|
+    |exitcond4_fu_218_p2  |   icmp   |      0|   0|   2|           5|           5|
+    |exitcond5_fu_136_p2  |   icmp   |      0|   0|   3|           6|           6|
     |exitcond_fu_300_p2   |   icmp   |      0|   0|   2|           5|           5|
     +---------------------+----------+-------+----+----+------------+------------+
     |Total                |          |      0| 403| 178|         127|         124|
@@ -112,32 +112,32 @@
     |ap_NS_fsm                 |  33|          6|    1|          6|
     |co_reg_87                 |   9|          2|    6|         12|
     |h_reg_98                  |   9|          2|    5|         10|
-    |storemerge_phi_fu_123_p4  |  15|          3|   32|         96|
+    |storemerge_phi_fu_123_p4  |  15|          3|    8|         24|
     |w_reg_109                 |   9|          2|    5|         10|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     |  75|         15|   49|        134|
+    |Total                     |  75|         15|   25|         62|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +---------------------+----+----+-----+-----------+
-    |         Name        | FF | LUT| Bits| Const Bits|
-    +---------------------+----+----+-----+-----------+
-    |ap_CS_fsm            |   5|   0|    5|          0|
-    |co_20_reg_348        |   6|   0|    6|          0|
-    |co_reg_87            |   6|   0|    6|          0|
-    |h_20_reg_366         |   5|   0|    5|          0|
-    |h_reg_98             |   5|   0|    5|          0|
-    |output_addr_reg_394  |  14|   0|   14|          0|
-    |tmp_103_reg_341      |   1|   0|    1|          0|
-    |tmp_263_reg_353      |   9|   0|   10|          1|
-    |tmp_266_reg_358      |  10|   0|   11|          1|
-    |tmp_268_reg_371      |  13|   0|   14|          1|
-    |tmp_270_reg_376      |  14|   0|   15|          1|
-    |w_20_reg_384         |   5|   0|    5|          0|
-    |w_reg_109            |   5|   0|    5|          0|
-    +---------------------+----+----+-----+-----------+
-    |Total                |  98|   0|  102|          4|
-    +---------------------+----+----+-----+-----------+
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |   5|   0|    5|          0|
+    |co_20_reg_348          |   6|   0|    6|          0|
+    |co_reg_87              |   6|   0|    6|          0|
+    |h_20_reg_366           |   5|   0|    5|          0|
+    |h_reg_98               |   5|   0|    5|          0|
+    |output_V_addr_reg_394  |  14|   0|   14|          0|
+    |tmp_270_reg_341        |   1|   0|    1|          0|
+    |tmp_315_reg_353        |  10|   0|   11|          1|
+    |tmp_319_reg_358        |   9|   0|   10|          1|
+    |tmp_321_reg_371        |  13|   0|   14|          1|
+    |tmp_323_reg_376        |  14|   0|   15|          1|
+    |w_20_reg_384           |   5|   0|    5|          0|
+    |w_reg_109              |   5|   0|    5|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  |  98|   0|  102|          4|
+    +-----------------------+----+----+-----+-----------+
 
 
 
@@ -154,15 +154,15 @@
 |ap_done                        | out |    1| ap_ctrl_hs |     shuffle_24_p     | return value |
 |ap_idle                        | out |    1| ap_ctrl_hs |     shuffle_24_p     | return value |
 |ap_ready                       | out |    1| ap_ctrl_hs |     shuffle_24_p     | return value |
-|left_r_address0                | out |   13|  ap_memory |        left_r        |     array    |
-|left_r_ce0                     | out |    1|  ap_memory |        left_r        |     array    |
-|left_r_q0                      |  in |   32|  ap_memory |        left_r        |     array    |
-|output_r_address0              | out |   14|  ap_memory |       output_r       |     array    |
-|output_r_ce0                   | out |    1|  ap_memory |       output_r       |     array    |
-|output_r_we0                   | out |    1|  ap_memory |       output_r       |     array    |
-|output_r_d0                    | out |   32|  ap_memory |       output_r       |     array    |
+|left_V_address0                | out |   13|  ap_memory |        left_V        |     array    |
+|left_V_ce0                     | out |    1|  ap_memory |        left_V        |     array    |
+|left_V_q0                      |  in |    8|  ap_memory |        left_V        |     array    |
+|output_V_address0              | out |   14|  ap_memory |       output_V       |     array    |
+|output_V_ce0                   | out |    1|  ap_memory |       output_V       |     array    |
+|output_V_we0                   | out |    1|  ap_memory |       output_V       |     array    |
+|output_V_d0                    | out |    8|  ap_memory |       output_V       |     array    |
 |buffer1_1_24_16x16_p_address0  | out |   13|  ap_memory | buffer1_1_24_16x16_p |     array    |
 |buffer1_1_24_16x16_p_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p |     array    |
-|buffer1_1_24_16x16_p_q0        |  in |   32|  ap_memory | buffer1_1_24_16x16_p |     array    |
+|buffer1_1_24_16x16_p_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p |     array    |
 +-------------------------------+-----+-----+------------+----------------------+--------------+
 

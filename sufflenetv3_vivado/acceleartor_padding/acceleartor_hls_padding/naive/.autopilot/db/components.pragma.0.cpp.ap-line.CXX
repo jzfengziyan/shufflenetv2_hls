@@ -662,3 +662,123 @@
 #pragma line 1246 "/usr/include/math.h" 3 4 ::: 37922
 #pragma line 4 "acceleartor_hls_padding/components.cpp" 2 ::: 37941
 #pragma line 4 "acceleartor_hls_padding/components.cpp" ::: 37943
+#pragma line 1 "acceleartor_hls_padding/shufflenet.h" 1 ::: 37947
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed.h" 1 ::: 37951
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int.h" 1 ::: 37952
+#pragma line 60 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int.h" ::: 38004
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/hls_half.h" 1 ::: 38005
+#pragma line 32 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/hls_half.h" ::: 38026
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 1 3 ::: 38027
+#pragma line 41 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 38069
+#pragma line 50 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 38070
+#pragma line 76 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 38072
+#pragma line 480 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 38464
+#pragma line 730 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath" 3 ::: 38467
+#pragma line 33 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/hls_half.h" 2 ::: 38581
+#pragma line 3272 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/hls_half.h" ::: 38604
+#pragma line 61 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int.h" 2 ::: 38680
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" 1 ::: 38681
+#pragma line 73 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 38733
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 1 3 ::: 38734
+#pragma line 1 "/usr/include/limits.h" 1 3 4 ::: 38773
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4 ::: 38800
+#pragma line 35 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 3 4 ::: 38826
+#pragma line 45 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 3 4 ::: 38829
+#pragma line 27 "/usr/include/limits.h" 2 3 4 ::: 38850
+#pragma line 117 "/usr/include/limits.h" 3 4 ::: 38861
+#pragma line 142 "/usr/include/limits.h" 3 4 ::: 38875
+#pragma line 182 "/usr/include/limits.h" 3 4 ::: 38879
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 1 3 4 ::: 38882
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 1 3 4 ::: 39043
+#pragma line 37 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 3 4 ::: 39067
+#pragma line 1 "/usr/include/linux/limits.h" 1 3 4 ::: 39070
+#pragma line 39 "/usr/include/x86_64-linux-gnu/bits/local_lim.h" 2 3 4 ::: 39072
+#pragma line 161 "/usr/include/x86_64-linux-gnu/bits/posix1_lim.h" 2 3 4 ::: 39133
+#pragma line 184 "/usr/include/limits.h" 2 3 4 ::: 39143
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/posix2_lim.h" 1 3 4 ::: 39147
+#pragma line 87 "/usr/include/x86_64-linux-gnu/bits/posix2_lim.h" 3 4 ::: 39208
+#pragma line 188 "/usr/include/limits.h" 2 3 4 ::: 39210
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 1 3 4 ::: 39214
+#pragma line 1 "/usr/include/x86_64-linux-gnu/bits/uio_lim.h" 1 3 4 ::: 39279
+#pragma line 65 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4 ::: 39309
+#pragma line 124 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 3 4 ::: 39343
+#pragma line 136 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 3 4 ::: 39345
+#pragma line 192 "/usr/include/limits.h" 2 3 4 ::: 39347
+#pragma line 39 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 2 3 ::: 39348
+#pragma line 60 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 3 ::: 39353
+#pragma line 90 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 3 ::: 39355
+#pragma line 102 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/lnx64/tools/clang/bin/../lib/clang/3.1/include/limits.h" 3 ::: 39357
+#pragma line 74 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" 2 ::: 39362
+#pragma line 111 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 39380
+#pragma line 129 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 39383
+#pragma line 147 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 39385
+#pragma line 184 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 39398
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_dt.def" 1 ::: 39399
+#pragma line 185 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" 2 ::: 40438
+#pragma line 603 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 40439
+#pragma line 646 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 40441
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" 1 ::: 40442
+#pragma line 98 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40495
+#pragma line 108 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40497
+#pragma line 129 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40499
+#pragma line 143 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40504
+#pragma line 156 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40507
+#pragma line 192 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40509
+#pragma line 358 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/etc/autopilot_ssdm_bits.h" ::: 40511
+#pragma line 647 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" 2 ::: 40513
+#pragma line 881 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 40739
+#pragma line 920 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 40768
+#pragma line 1567 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 41408
+#pragma line 1686 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 41515
+#pragma line 1820 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 41641
+#pragma line 2044 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 41850
+#pragma line 2107 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 41905
+#pragma line 2509 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 42300
+#pragma line 2628 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 42408
+#pragma line 2762 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 42534
+#pragma line 2991 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 42747
+#pragma line 3054 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 42802
+#pragma line 3368 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43091
+#pragma line 3403 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43113
+#pragma line 3428 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43119
+#pragma line 3462 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43132
+#pragma line 3498 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43150
+#pragma line 3534 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43168
+#pragma line 3574 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43186
+#pragma line 3628 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43204
+#pragma line 3684 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43233
+#pragma line 3731 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43262
+#pragma line 3798 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43310
+#pragma line 3823 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43328
+#pragma line 3848 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43346
+#pragma line 3893 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43378
+#pragma line 4048 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43392
+#pragma line 4074 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int_syn.h" ::: 43410
+#pragma line 62 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int.h" 2 ::: 43427
+#pragma line 1 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" 1 ::: 43428
+#pragma line 62 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 43481
+#pragma line 81 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 43485
+#pragma line 1322 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44717
+#pragma line 1406 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44788
+#pragma line 1424 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44798
+#pragma line 1555 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44892
+#pragma line 1600 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44911
+#pragma line 1658 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44932
+#pragma line 1690 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44950
+#pragma line 1759 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44989
+#pragma line 1773 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 44992
+#pragma line 1808 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45007
+#pragma line 1820 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45009
+#pragma line 1868 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45028
+#pragma line 1882 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45031
+#pragma line 1912 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45046
+#pragma line 1959 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45080
+#pragma line 2232 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45344
+#pragma line 2350 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45394
+#pragma line 2400 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45412
+#pragma line 2485 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45467
+#pragma line 2525 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed_syn.h" ::: 45485
+#pragma line 63 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_int.h" 2 ::: 45500
+#pragma line 2 "/home/ziyan/opt/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_fixed.h" 2 ::: 45974
+#pragma line 5 "acceleartor_hls_padding/shufflenet.h" 2 ::: 45978
+#pragma line 6 "acceleartor_hls_padding/components.cpp" 2 ::: 46242

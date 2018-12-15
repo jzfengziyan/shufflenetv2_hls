@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -52,8 +52,8 @@
 
 (* X_CORE_INFO = "sc_axi2sc_v1_0_5_top,Vivado 2017.2" *)
 (* CHECK_LICENSE_TYPE = "bd_9ea2_s00a2s_0,sc_axi2sc_v1_0_5_top,{}" *)
-(* CORE_GENERATION_INFO = "bd_9ea2_s00a2s_0,sc_axi2sc_v1_0_5_top,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=sc_axi2sc,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_AXI_ADDR_WIDTH=32,C_AXI_ID_WIDTH=2,C_AXI_RDATA_WIDTH=32,C_AXI_WDATA_WIDTH=32,C_SC_ADDR_WIDTH=32,C_SC_ID_WIDTH=2,C_SC_RDATA_WIDTH=64,C_SC_WDATA_WIDTH=64,C_SC_RUSER_BITS_PER_BYTE=0,C_SC_WUSER_BITS_PER_BYTE=0,C_SC_ARUSER_WIDTH=0,C_SC_AWUSER_WIDTH=0,C_SC_BUSER_WIDTH=0,C_MSC_ROUTE_WIDTH=1,C_SSC_ROUTE_WI\
-DTH=1,C_AWPAYLD_WIDTH=140,C_ARPAYLD_WIDTH=140,C_WPAYLD_WIDTH=88,C_RPAYLD_WIDTH=84,C_BPAYLD_WIDTH=6}" *)
+(* CORE_GENERATION_INFO = "bd_9ea2_s00a2s_0,sc_axi2sc_v1_0_5_top,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=sc_axi2sc,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_AXI_ADDR_WIDTH=32,C_AXI_ID_WIDTH=3,C_AXI_RDATA_WIDTH=32,C_AXI_WDATA_WIDTH=32,C_SC_ADDR_WIDTH=32,C_SC_ID_WIDTH=3,C_SC_RDATA_WIDTH=64,C_SC_WDATA_WIDTH=64,C_SC_RUSER_BITS_PER_BYTE=0,C_SC_WUSER_BITS_PER_BYTE=0,C_SC_ARUSER_WIDTH=0,C_SC_AWUSER_WIDTH=0,C_SC_BUSER_WIDTH=0,C_MSC_ROUTE_WIDTH=1,C_SSC_ROUTE_WI\
+DTH=1,C_AWPAYLD_WIDTH=142,C_ARPAYLD_WIDTH=142,C_WPAYLD_WIDTH=88,C_RPAYLD_WIDTH=85,C_BPAYLD_WIDTH=7}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_9ea2_s00a2s_0 (
   aclk,
@@ -133,7 +133,7 @@ input wire s_sc_r_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_R RECV" *)
 output wire s_sc_r_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_R PAYLD" *)
-input wire [83 : 0] s_sc_r_payld;
+input wire [84 : 0] s_sc_r_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_B REQ" *)
 input wire s_sc_b_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_B INFO" *)
@@ -143,7 +143,7 @@ input wire s_sc_b_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_B RECV" *)
 output wire s_sc_b_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_B PAYLD" *)
-input wire [5 : 0] s_sc_b_payld;
+input wire [6 : 0] s_sc_b_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR REQ" *)
 output wire m_sc_ar_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR INFO" *)
@@ -153,7 +153,7 @@ output wire m_sc_ar_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR RECV" *)
 input wire m_sc_ar_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AR PAYLD" *)
-output wire [139 : 0] m_sc_ar_payld;
+output wire [141 : 0] m_sc_ar_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AW REQ" *)
 output wire m_sc_aw_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AW INFO" *)
@@ -163,7 +163,7 @@ output wire m_sc_aw_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AW RECV" *)
 input wire m_sc_aw_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AW PAYLD" *)
-output wire [139 : 0] m_sc_aw_payld;
+output wire [141 : 0] m_sc_aw_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_W REQ" *)
 output wire m_sc_w_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_W INFO" *)
@@ -175,7 +175,7 @@ input wire m_sc_w_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_W PAYLD" *)
 output wire [87 : 0] m_sc_w_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWID" *)
-input wire [1 : 0] s_axi_awid;
+input wire [2 : 0] s_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *)
 input wire [31 : 0] s_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWLEN" *)
@@ -207,7 +207,7 @@ input wire s_axi_wvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *)
 output wire s_axi_wready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BID" *)
-output wire [1 : 0] s_axi_bid;
+output wire [2 : 0] s_axi_bid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *)
 output wire [1 : 0] s_axi_bresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BUSER" *)
@@ -217,7 +217,7 @@ output wire s_axi_bvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *)
 input wire s_axi_bready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARID" *)
-input wire [1 : 0] s_axi_arid;
+input wire [2 : 0] s_axi_arid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *)
 input wire [31 : 0] s_axi_araddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARLEN" *)
@@ -237,7 +237,7 @@ input wire s_axi_arvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *)
 output wire s_axi_arready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RID" *)
-output wire [1 : 0] s_axi_rid;
+output wire [2 : 0] s_axi_rid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *)
 output wire [31 : 0] s_axi_rdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *)
@@ -253,11 +253,11 @@ input wire s_axi_rready;
 
   sc_axi2sc_v1_0_5_top #(
     .C_AXI_ADDR_WIDTH(32),
-    .C_AXI_ID_WIDTH(2),
+    .C_AXI_ID_WIDTH(3),
     .C_AXI_RDATA_WIDTH(32),
     .C_AXI_WDATA_WIDTH(32),
     .C_SC_ADDR_WIDTH(32),
-    .C_SC_ID_WIDTH(2),
+    .C_SC_ID_WIDTH(3),
     .C_SC_RDATA_WIDTH(64),
     .C_SC_WDATA_WIDTH(64),
     .C_SC_RUSER_BITS_PER_BYTE(0),
@@ -267,11 +267,11 @@ input wire s_axi_rready;
     .C_SC_BUSER_WIDTH(0),
     .C_MSC_ROUTE_WIDTH(1),
     .C_SSC_ROUTE_WIDTH(1),
-    .C_AWPAYLD_WIDTH(140),
-    .C_ARPAYLD_WIDTH(140),
+    .C_AWPAYLD_WIDTH(142),
+    .C_ARPAYLD_WIDTH(142),
     .C_WPAYLD_WIDTH(88),
-    .C_RPAYLD_WIDTH(84),
-    .C_BPAYLD_WIDTH(6)
+    .C_RPAYLD_WIDTH(85),
+    .C_BPAYLD_WIDTH(7)
   ) inst (
     .aclk(aclk),
     .s_sc_r_req(s_sc_r_req),

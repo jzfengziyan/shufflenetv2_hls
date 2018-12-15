@@ -1,0 +1,980 @@
+
+
+================================================================
+== Vivado HLS Report for 'subconv_1x1_8p_p'
+================================================================
+* Date:           Fri Dec 14 14:26:17 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        accelerator_newone
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.63|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+---------+---------+---------+---------+
+    |      Latency      |      Interval     | Pipeline|
+    |   min   |   max   |   min   |   max   |   Type  |
+    +---------+---------+---------+---------+---------+
+    |  7175235|  7175235|  7175235|  7175235|   none  |
+    +---------+---------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                     |      Latency      | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1             |    14016|    14016|       146|          -|          -|    96|    no    |
+        | + Loop 1.1          |      144|      144|        18|          -|          -|     8|    no    |
+        |  ++ Loop 1.1.1      |       16|       16|         2|          -|          -|     8|    no    |
+        |- Loop 2             |  7134912|  7134912|     74322|          -|          -|    96|    no    |
+        | + Loop 2.1          |    74320|    74320|      9290|          -|          -|     8|    no    |
+        |  ++ Loop 2.1.1      |     9288|     9288|      1161|          -|          -|     8|    no    |
+        |   +++ Loop 2.1.1.1  |     1152|     1152|        12|          -|          -|    96|    no    |
+        |- Loop 3             |    26304|    26304|       274|          -|          -|    96|    no    |
+        | + Loop 3.1          |      272|      272|        34|          -|          -|     8|    no    |
+        |  ++ Loop 3.1.1      |       32|       32|         4|          -|          -|     8|    no    |
+        +---------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 33
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond9)
+	6  / (exitcond9)
+3 --> 
+	4  / (!exitcond8)
+	2  / (exitcond8)
+4 --> 
+	5  / (!exitcond7)
+	3  / (exitcond7)
+5 --> 
+	4  / true
+6 --> 
+	7  / (!exitcond6)
+	28  / (exitcond6)
+7 --> 
+	8  / (!exitcond5)
+	6  / (exitcond5)
+8 --> 
+	9  / (!exitcond4)
+	7  / (exitcond4)
+9 --> 
+	10  / (!exitcond3)
+	21  / (exitcond3)
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	9  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	8  / true
+28 --> 
+	29  / (!exitcond2)
+29 --> 
+	30  / (!exitcond1)
+	28  / (exitcond1)
+30 --> 
+	31  / (!exitcond)
+	29  / (exitcond)
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	30  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_34 (5)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:538
+:0  br label %.loopexit
+
+
+ <State 2>: 2.91ns
+ST_2: co (7)  [1/1] 0.00ns
+.loopexit:0  %co = phi i7 [ 0, %0 ], [ %co_13, %.loopexit.loopexit ]
+
+ST_2: exitcond9 (8)  [1/1] 2.91ns  loc: accelerator_newone/components.cpp:538
+.loopexit:1  %exitcond9 = icmp eq i7 %co, -32
+
+ST_2: empty (9)  [1/1] 0.00ns
+.loopexit:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 96, i64 96, i64 96)
+
+ST_2: co_13 (10)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:538
+.loopexit:3  %co_13 = add i7 %co, 1
+
+ST_2: StgValue_39 (11)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:538
+.loopexit:4  br i1 %exitcond9, label %.preheader15.preheader, label %.preheader17.preheader
+
+ST_2: tmp (13)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader17.preheader:0  %tmp = zext i7 %co to i64
+
+ST_2: tmp_s (14)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:538
+.preheader17.preheader:1  %tmp_s = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %co, i3 0)
+
+ST_2: p_shl_cast (15)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:538
+.preheader17.preheader:2  %p_shl_cast = zext i10 %tmp_s to i11
+
+ST_2: tmp_141 (16)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:538
+.preheader17.preheader:3  %tmp_141 = call i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7 %co, i1 false)
+
+ST_2: p_shl1_cast (17)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader17.preheader:4  %p_shl1_cast = zext i8 %tmp_141 to i11
+
+ST_2: tmp_142 (18)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:541
+.preheader17.preheader:5  %tmp_142 = add i11 %p_shl1_cast, %p_shl_cast
+
+ST_2: bias_addr (19)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader17.preheader:6  %bias_addr = getelementptr [96 x float]* %bias, i64 0, i64 %tmp
+
+ST_2: StgValue_47 (20)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:539
+.preheader17.preheader:7  br label %.preheader17
+
+ST_2: StgValue_48 (55)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:546
+.preheader15.preheader:0  br label %.preheader15
+
+
+ <State 3>: 4.67ns
+ST_3: h (22)  [1/1] 0.00ns
+.preheader17:0  %h = phi i4 [ %h_13, %2 ], [ 1, %.preheader17.preheader ]
+
+ST_3: exitcond8 (23)  [1/1] 3.10ns  loc: accelerator_newone/components.cpp:539
+.preheader17:1  %exitcond8 = icmp eq i4 %h, -7
+
+ST_3: empty_54 (24)  [1/1] 0.00ns
+.preheader17:2  %empty_54 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_3: StgValue_52 (25)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:539
+.preheader17:3  br i1 %exitcond8, label %.loopexit.loopexit, label %.preheader16.preheader
+
+ST_3: tmp_cast (27)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:0  %tmp_cast = zext i4 %h to i11
+
+ST_3: tmp_149 (28)  [1/1] 2.33ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:1  %tmp_149 = add i11 %tmp_cast, %tmp_142
+
+ST_3: tmp_138 (29)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:2  %tmp_138 = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_149, i3 0)
+
+ST_3: p_shl2_cast (30)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:3  %p_shl2_cast = zext i14 %tmp_138 to i15
+
+ST_3: tmp_139 (31)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:4  %tmp_139 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %tmp_149, i1 false)
+
+ST_3: p_shl3_cast (32)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:5  %p_shl3_cast = zext i12 %tmp_139 to i15
+
+ST_3: tmp_150 (33)  [1/1] 2.34ns  loc: accelerator_newone/components.cpp:541
+.preheader16.preheader:6  %tmp_150 = add i15 %p_shl2_cast, %p_shl3_cast
+
+ST_3: StgValue_60 (34)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:540
+.preheader16.preheader:7  br label %.preheader16
+
+ST_3: StgValue_61 (53)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 4>: 3.25ns
+ST_4: w (36)  [1/1] 0.00ns
+.preheader16:0  %w = phi i4 [ %w_13, %1 ], [ 1, %.preheader16.preheader ]
+
+ST_4: exitcond7 (37)  [1/1] 3.10ns  loc: accelerator_newone/components.cpp:540
+.preheader16:1  %exitcond7 = icmp eq i4 %w, -7
+
+ST_4: empty_55 (38)  [1/1] 0.00ns
+.preheader16:2  %empty_55 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_4: StgValue_65 (39)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:540
+.preheader16:3  br i1 %exitcond7, label %2, label %1
+
+ST_4: bias_load (41)  [2/2] 3.25ns  loc: accelerator_newone/components.cpp:541
+:0  %bias_load = load float* %bias_addr, align 4
+
+ST_4: tmp_80_cast (42)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+:1  %tmp_80_cast = zext i4 %w to i15
+
+ST_4: tmp_157 (43)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:541
+:2  %tmp_157 = add i15 %tmp_150, %tmp_80_cast
+
+ST_4: w_13 (47)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:540
+:6  %w_13 = add i4 %w, 1
+
+ST_4: h_13 (50)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:539
+:0  %h_13 = add i4 %h, 1
+
+ST_4: StgValue_71 (51)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:539
+:1  br label %.preheader17
+
+
+ <State 5>: 6.51ns
+ST_5: bias_load (41)  [1/2] 3.25ns  loc: accelerator_newone/components.cpp:541
+:0  %bias_load = load float* %bias_addr, align 4
+
+ST_5: tmp_206_cast (44)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+:3  %tmp_206_cast = zext i15 %tmp_157 to i64
+
+ST_5: ShuffleConvs_2_Downs (45)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:541
+:4  %ShuffleConvs_2_Downs = getelementptr [9600 x float]* @ShuffleConvs_2_Downs, i64 0, i64 %tmp_206_cast
+
+ST_5: StgValue_75 (46)  [1/1] 3.25ns  loc: accelerator_newone/components.cpp:541
+:5  store float %bias_load, float* %ShuffleConvs_2_Downs, align 4
+
+ST_5: StgValue_76 (48)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:540
+:7  br label %.preheader16
+
+
+ <State 6>: 2.91ns
+ST_6: co1 (57)  [1/1] 0.00ns
+.preheader15:0  %co1 = phi i7 [ %co_14, %.preheader15.loopexit ], [ 0, %.preheader15.preheader ]
+
+ST_6: exitcond6 (58)  [1/1] 2.91ns  loc: accelerator_newone/components.cpp:546
+.preheader15:1  %exitcond6 = icmp eq i7 %co1, -32
+
+ST_6: empty_56 (59)  [1/1] 0.00ns
+.preheader15:2  %empty_56 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 96, i64 96, i64 96)
+
+ST_6: co_14 (60)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:546
+.preheader15:3  %co_14 = add i7 %co1, 1
+
+ST_6: StgValue_81 (61)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader15:4  br i1 %exitcond6, label %.preheader11.preheader, label %.preheader14.preheader
+
+ST_6: tmp_143 (63)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader14.preheader:0  %tmp_143 = call i14 @_ssdm_op_BitConcatenate.i14.i7.i7(i7 %co1, i7 0)
+
+ST_6: p_shl6_cast (64)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader14.preheader:1  %p_shl6_cast = zext i14 %tmp_143 to i15
+
+ST_6: tmp_144 (65)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader14.preheader:2  %tmp_144 = call i12 @_ssdm_op_BitConcatenate.i12.i7.i5(i7 %co1, i5 0)
+
+ST_6: p_shl7_cast (66)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+.preheader14.preheader:3  %p_shl7_cast = zext i12 %tmp_144 to i15
+
+ST_6: tmp_145 (67)  [1/1] 2.34ns  loc: accelerator_newone/components.cpp:551
+.preheader14.preheader:4  %tmp_145 = sub i15 %p_shl6_cast, %p_shl7_cast
+
+ST_6: tmp_146 (68)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader14.preheader:5  %tmp_146 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %co1, i3 0)
+
+ST_6: p_shl4_cast (69)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader14.preheader:6  %p_shl4_cast = zext i10 %tmp_146 to i11
+
+ST_6: tmp_147 (70)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:546
+.preheader14.preheader:7  %tmp_147 = call i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7 %co1, i1 false)
+
+ST_6: p_shl5_cast (71)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader14.preheader:8  %p_shl5_cast = zext i8 %tmp_147 to i11
+
+ST_6: tmp_148 (72)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:553
+.preheader14.preheader:9  %tmp_148 = add i11 %p_shl5_cast, %p_shl4_cast
+
+ST_6: StgValue_92 (73)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:547
+.preheader14.preheader:10  br label %.preheader14
+
+ST_6: StgValue_93 (142)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:558
+.preheader11.preheader:0  br label %.preheader11
+
+
+ <State 7>: 4.67ns
+ST_7: h2 (75)  [1/1] 0.00ns
+.preheader14:0  %h2 = phi i4 [ %h_14, %5 ], [ 1, %.preheader14.preheader ]
+
+ST_7: exitcond5 (76)  [1/1] 3.10ns  loc: accelerator_newone/components.cpp:547
+.preheader14:1  %exitcond5 = icmp eq i4 %h2, -7
+
+ST_7: empty_57 (77)  [1/1] 0.00ns
+.preheader14:2  %empty_57 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_7: StgValue_97 (78)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:547
+.preheader14:3  br i1 %exitcond5, label %.preheader15.loopexit, label %.preheader13.preheader
+
+ST_7: tmp_79_cast (80)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:0  %tmp_79_cast = zext i4 %h2 to i11
+
+ST_7: tmp_154 (81)  [1/1] 2.33ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:1  %tmp_154 = add i11 %tmp_79_cast, %tmp_148
+
+ST_7: tmp_140 (82)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:2  %tmp_140 = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_154, i3 0)
+
+ST_7: p_shl8_cast (83)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:3  %p_shl8_cast = zext i14 %tmp_140 to i15
+
+ST_7: tmp_155 (84)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:4  %tmp_155 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %tmp_154, i1 false)
+
+ST_7: p_shl9_cast (85)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:5  %p_shl9_cast = zext i12 %tmp_155 to i15
+
+ST_7: tmp_156 (86)  [1/1] 2.34ns  loc: accelerator_newone/components.cpp:553
+.preheader13.preheader:6  %tmp_156 = add i15 %p_shl8_cast, %p_shl9_cast
+
+ST_7: StgValue_105 (87)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:548
+.preheader13.preheader:7  br label %.preheader13
+
+ST_7: StgValue_106 (140)  [1/1] 0.00ns
+.preheader15.loopexit:0  br label %.preheader15
+
+
+ <State 8>: 3.10ns
+ST_8: w3 (89)  [1/1] 0.00ns
+.preheader13:0  %w3 = phi i4 [ %w_14, %4 ], [ 1, %.preheader13.preheader ]
+
+ST_8: exitcond4 (90)  [1/1] 3.10ns  loc: accelerator_newone/components.cpp:548
+.preheader13:1  %exitcond4 = icmp eq i4 %w3, -7
+
+ST_8: empty_58 (91)  [1/1] 0.00ns
+.preheader13:2  %empty_58 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_8: StgValue_110 (92)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:548
+.preheader13:3  br i1 %exitcond4, label %5, label %.preheader12.preheader
+
+ST_8: tmp_82_cast (94)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader12.preheader:0  %tmp_82_cast = zext i4 %w3 to i15
+
+ST_8: tmp_162 (95)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:553
+.preheader12.preheader:1  %tmp_162 = add i15 %tmp_156, %tmp_82_cast
+
+ST_8: tmp_211_cast (96)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader12.preheader:2  %tmp_211_cast = zext i15 %tmp_162 to i64
+
+ST_8: ShuffleConvs_2_Downs_2 (97)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:553
+.preheader12.preheader:3  %ShuffleConvs_2_Downs_2 = getelementptr [9600 x float]* @ShuffleConvs_2_Downs, i64 0, i64 %tmp_211_cast
+
+ST_8: StgValue_115 (98)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:550
+.preheader12.preheader:4  br label %.preheader12
+
+ST_8: h_14 (137)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:547
+:0  %h_14 = add i4 %h2, 1
+
+ST_8: StgValue_117 (138)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:547
+:1  br label %.preheader14
+
+
+ <State 9>: 7.63ns
+ST_9: sum (100)  [1/1] 0.00ns
+.preheader12:0  %sum = phi float [ %sum_8, %3 ], [ 0.000000e+00, %.preheader12.preheader ]
+
+ST_9: ci (101)  [1/1] 0.00ns
+.preheader12:1  %ci = phi i7 [ %ci_1, %3 ], [ 0, %.preheader12.preheader ]
+
+ST_9: exitcond3 (102)  [1/1] 2.91ns  loc: accelerator_newone/components.cpp:550
+.preheader12:2  %exitcond3 = icmp eq i7 %ci, -32
+
+ST_9: empty_59 (103)  [1/1] 0.00ns
+.preheader12:3  %empty_59 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 96, i64 96, i64 96)
+
+ST_9: ci_1 (104)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:550
+.preheader12:4  %ci_1 = add i7 %ci, 1
+
+ST_9: StgValue_123 (105)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:550
+.preheader12:5  br i1 %exitcond3, label %4, label %3
+
+ST_9: tmp_85_cast (107)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:0  %tmp_85_cast = zext i7 %ci to i15
+
+ST_9: tmp_165 (108)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:551
+:1  %tmp_165 = add i15 %tmp_85_cast, %tmp_145
+
+ST_9: tmp_166 (111)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:550
+:4  %tmp_166 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %ci, i3 0)
+
+ST_9: p_shl12_cast (112)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:550
+:5  %p_shl12_cast = zext i10 %tmp_166 to i11
+
+ST_9: tmp_167 (113)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:550
+:6  %tmp_167 = call i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7 %ci, i1 false)
+
+ST_9: p_shl13_cast (114)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:7  %p_shl13_cast = zext i8 %tmp_167 to i11
+
+ST_9: tmp_168 (115)  [1/1] 1.88ns  loc: accelerator_newone/components.cpp:551
+:8  %tmp_168 = add i11 %p_shl12_cast, %p_shl13_cast
+
+ST_9: tmp_169 (116)  [1/1] 1.88ns  loc: accelerator_newone/components.cpp:551
+:9  %tmp_169 = add i11 %tmp_79_cast, %tmp_168
+
+ST_9: tmp_170 (117)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:10  %tmp_170 = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_169, i3 0)
+
+ST_9: p_shl10_cast (118)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:11  %p_shl10_cast = zext i14 %tmp_170 to i15
+
+ST_9: tmp_171 (119)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:12  %tmp_171 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %tmp_169, i1 false)
+
+ST_9: p_shl11_cast (120)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:13  %p_shl11_cast = zext i12 %tmp_171 to i15
+
+ST_9: tmp_172 (121)  [1/1] 1.94ns  loc: accelerator_newone/components.cpp:551
+:14  %tmp_172 = add i15 %p_shl10_cast, %p_shl11_cast
+
+ST_9: tmp_173 (122)  [1/1] 1.94ns  loc: accelerator_newone/components.cpp:551
+:15  %tmp_173 = add i15 %tmp_82_cast, %tmp_172
+
+ST_9: ShuffleConvs_2_Downs_3 (131)  [2/2] 3.25ns  loc: accelerator_newone/components.cpp:553
+:0  %ShuffleConvs_2_Downs_3 = load float* %ShuffleConvs_2_Downs_2, align 4
+
+ST_9: w_14 (134)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:548
+:3  %w_14 = add i4 %w3, 1
+
+
+ <State 10>: 3.25ns
+ST_10: tmp_213_cast (109)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:2  %tmp_213_cast = sext i15 %tmp_165 to i64
+
+ST_10: weight_addr (110)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:3  %weight_addr = getelementptr [9216 x float]* %weight, i64 0, i64 %tmp_213_cast
+
+ST_10: tmp_221_cast (123)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:16  %tmp_221_cast = zext i15 %tmp_173 to i64
+
+ST_10: shuffleunit1_7_outpu (124)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:551
+:17  %shuffleunit1_7_outpu = getelementptr [9600 x float]* @shuffleunit1_7_outpu, i64 0, i64 %tmp_221_cast
+
+ST_10: weight_load (125)  [2/2] 3.25ns  loc: accelerator_newone/components.cpp:551
+:18  %weight_load = load float* %weight_addr, align 4
+
+ST_10: shuffleunit1_7_outpu_1 (126)  [2/2] 3.25ns  loc: accelerator_newone/components.cpp:551
+:19  %shuffleunit1_7_outpu_1 = load float* %shuffleunit1_7_outpu, align 4
+
+
+ <State 11>: 3.25ns
+ST_11: weight_load (125)  [1/2] 3.25ns  loc: accelerator_newone/components.cpp:551
+:18  %weight_load = load float* %weight_addr, align 4
+
+ST_11: shuffleunit1_7_outpu_1 (126)  [1/2] 3.25ns  loc: accelerator_newone/components.cpp:551
+:19  %shuffleunit1_7_outpu_1 = load float* %shuffleunit1_7_outpu, align 4
+
+
+ <State 12>: 5.70ns
+ST_12: tmp_86 (127)  [4/4] 5.70ns  loc: accelerator_newone/components.cpp:551
+:20  %tmp_86 = fmul float %weight_load, %shuffleunit1_7_outpu_1
+
+
+ <State 13>: 5.70ns
+ST_13: tmp_86 (127)  [3/4] 5.70ns  loc: accelerator_newone/components.cpp:551
+:20  %tmp_86 = fmul float %weight_load, %shuffleunit1_7_outpu_1
+
+
+ <State 14>: 5.70ns
+ST_14: tmp_86 (127)  [2/4] 5.70ns  loc: accelerator_newone/components.cpp:551
+:20  %tmp_86 = fmul float %weight_load, %shuffleunit1_7_outpu_1
+
+
+ <State 15>: 5.70ns
+ST_15: tmp_86 (127)  [1/4] 5.70ns  loc: accelerator_newone/components.cpp:551
+:20  %tmp_86 = fmul float %weight_load, %shuffleunit1_7_outpu_1
+
+
+ <State 16>: 7.26ns
+ST_16: sum_8 (128)  [5/5] 7.26ns  loc: accelerator_newone/components.cpp:551
+:21  %sum_8 = fadd float %sum, %tmp_86
+
+
+ <State 17>: 7.26ns
+ST_17: sum_8 (128)  [4/5] 7.26ns  loc: accelerator_newone/components.cpp:551
+:21  %sum_8 = fadd float %sum, %tmp_86
+
+
+ <State 18>: 7.26ns
+ST_18: sum_8 (128)  [3/5] 7.26ns  loc: accelerator_newone/components.cpp:551
+:21  %sum_8 = fadd float %sum, %tmp_86
+
+
+ <State 19>: 7.26ns
+ST_19: sum_8 (128)  [2/5] 7.26ns  loc: accelerator_newone/components.cpp:551
+:21  %sum_8 = fadd float %sum, %tmp_86
+
+
+ <State 20>: 7.26ns
+ST_20: sum_8 (128)  [1/5] 7.26ns  loc: accelerator_newone/components.cpp:551
+:21  %sum_8 = fadd float %sum, %tmp_86
+
+ST_20: StgValue_157 (129)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:550
+:22  br label %.preheader12
+
+
+ <State 21>: 3.25ns
+ST_21: ShuffleConvs_2_Downs_3 (131)  [1/2] 3.25ns  loc: accelerator_newone/components.cpp:553
+:0  %ShuffleConvs_2_Downs_3 = load float* %ShuffleConvs_2_Downs_2, align 4
+
+
+ <State 22>: 7.26ns
+ST_22: tmp_84 (132)  [5/5] 7.26ns  loc: accelerator_newone/components.cpp:553
+:1  %tmp_84 = fadd float %ShuffleConvs_2_Downs_3, %sum
+
+
+ <State 23>: 7.26ns
+ST_23: tmp_84 (132)  [4/5] 7.26ns  loc: accelerator_newone/components.cpp:553
+:1  %tmp_84 = fadd float %ShuffleConvs_2_Downs_3, %sum
+
+
+ <State 24>: 7.26ns
+ST_24: tmp_84 (132)  [3/5] 7.26ns  loc: accelerator_newone/components.cpp:553
+:1  %tmp_84 = fadd float %ShuffleConvs_2_Downs_3, %sum
+
+
+ <State 25>: 7.26ns
+ST_25: tmp_84 (132)  [2/5] 7.26ns  loc: accelerator_newone/components.cpp:553
+:1  %tmp_84 = fadd float %ShuffleConvs_2_Downs_3, %sum
+
+
+ <State 26>: 7.26ns
+ST_26: tmp_84 (132)  [1/5] 7.26ns  loc: accelerator_newone/components.cpp:553
+:1  %tmp_84 = fadd float %ShuffleConvs_2_Downs_3, %sum
+
+
+ <State 27>: 3.25ns
+ST_27: StgValue_164 (133)  [1/1] 3.25ns  loc: accelerator_newone/components.cpp:553
+:2  store float %tmp_84, float* %ShuffleConvs_2_Downs_2, align 4
+
+ST_27: StgValue_165 (135)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:548
+:4  br label %.preheader13
+
+
+ <State 28>: 2.91ns
+ST_28: co4 (144)  [1/1] 0.00ns
+.preheader11:0  %co4 = phi i7 [ %co_15, %.preheader11.loopexit ], [ 0, %.preheader11.preheader ]
+
+ST_28: exitcond2 (145)  [1/1] 2.91ns  loc: accelerator_newone/components.cpp:558
+.preheader11:1  %exitcond2 = icmp eq i7 %co4, -32
+
+ST_28: empty_60 (146)  [1/1] 0.00ns
+.preheader11:2  %empty_60 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 96, i64 96, i64 96)
+
+ST_28: co_15 (147)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:558
+.preheader11:3  %co_15 = add i7 %co4, 1
+
+ST_28: StgValue_170 (148)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:558
+.preheader11:4  br i1 %exitcond2, label %9, label %.preheader10.preheader
+
+ST_28: tmp_151 (150)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:558
+.preheader10.preheader:0  %tmp_151 = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %co4, i3 0)
+
+ST_28: p_shl14_cast (151)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:558
+.preheader10.preheader:1  %p_shl14_cast = zext i10 %tmp_151 to i11
+
+ST_28: tmp_152 (152)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:558
+.preheader10.preheader:2  %tmp_152 = call i8 @_ssdm_op_BitConcatenate.i8.i7.i1(i7 %co4, i1 false)
+
+ST_28: p_shl15_cast (153)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+.preheader10.preheader:3  %p_shl15_cast = zext i8 %tmp_152 to i11
+
+ST_28: tmp_153 (154)  [1/1] 2.32ns  loc: accelerator_newone/components.cpp:561
+.preheader10.preheader:4  %tmp_153 = add i11 %p_shl15_cast, %p_shl14_cast
+
+ST_28: StgValue_176 (155)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:559
+.preheader10.preheader:5  br label %.preheader10
+
+ST_28: StgValue_177 (202)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:567
+:0  ret void
+
+
+ <State 29>: 4.67ns
+ST_29: h5 (157)  [1/1] 0.00ns
+.preheader10:0  %h5 = phi i4 [ %h_15, %8 ], [ 1, %.preheader10.preheader ]
+
+ST_29: exitcond1 (158)  [1/1] 3.10ns  loc: accelerator_newone/components.cpp:559
+.preheader10:1  %exitcond1 = icmp eq i4 %h5, -7
+
+ST_29: empty_61 (159)  [1/1] 0.00ns
+.preheader10:2  %empty_61 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_29: StgValue_181 (160)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:559
+.preheader10:3  br i1 %exitcond1, label %.preheader11.loopexit, label %.preheader.preheader
+
+ST_29: tmp_81_cast (162)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:0  %tmp_81_cast = zext i4 %h5 to i11
+
+ST_29: tmp_158 (163)  [1/1] 2.33ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:1  %tmp_158 = add i11 %tmp_81_cast, %tmp_153
+
+ST_29: tmp_159 (164)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:2  %tmp_159 = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_158, i3 0)
+
+ST_29: p_shl16_cast (165)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:3  %p_shl16_cast = zext i14 %tmp_159 to i15
+
+ST_29: tmp_160 (166)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:4  %tmp_160 = call i12 @_ssdm_op_BitConcatenate.i12.i11.i1(i11 %tmp_158, i1 false)
+
+ST_29: p_shl17_cast (167)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:5  %p_shl17_cast = zext i12 %tmp_160 to i15
+
+ST_29: tmp_161 (168)  [1/1] 2.34ns  loc: accelerator_newone/components.cpp:561
+.preheader.preheader:6  %tmp_161 = add i15 %p_shl16_cast, %p_shl17_cast
+
+ST_29: StgValue_189 (169)  [1/1] 1.59ns  loc: accelerator_newone/components.cpp:560
+.preheader.preheader:7  br label %.preheader
+
+ST_29: StgValue_190 (200)  [1/1] 0.00ns
+.preheader11.loopexit:0  br label %.preheader11
+
+
+ <State 30>: 5.61ns
+ST_30: w6 (171)  [1/1] 0.00ns
+.preheader:0  %w6 = phi i4 [ %w_15, %._crit_edge ], [ 1, %.preheader.preheader ]
+
+ST_30: exitcond (172)  [1/1] 3.10ns  loc: accelerator_newone/components.cpp:560
+.preheader:1  %exitcond = icmp eq i4 %w6, -7
+
+ST_30: empty_62 (173)  [1/1] 0.00ns
+.preheader:2  %empty_62 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)
+
+ST_30: StgValue_194 (174)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:560
+.preheader:3  br i1 %exitcond, label %8, label %6
+
+ST_30: tmp_83_cast (176)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:0  %tmp_83_cast = zext i4 %w6 to i15
+
+ST_30: tmp_163 (177)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:561
+:1  %tmp_163 = add i15 %tmp_161, %tmp_83_cast
+
+ST_30: tmp_212_cast (178)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:2  %tmp_212_cast = zext i15 %tmp_163 to i64
+
+ST_30: ShuffleConvs_2_Downs_4 (179)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:3  %ShuffleConvs_2_Downs_4 = getelementptr [9600 x float]* @ShuffleConvs_2_Downs, i64 0, i64 %tmp_212_cast
+
+ST_30: ShuffleConvs_2_Downs_5 (180)  [2/2] 3.25ns  loc: accelerator_newone/components.cpp:561
+:4  %ShuffleConvs_2_Downs_5 = load float* %ShuffleConvs_2_Downs_4, align 4
+
+ST_30: h_15 (197)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:559
+:0  %h_15 = add i4 %h5, 1
+
+ST_30: StgValue_201 (198)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:559
+:1  br label %.preheader10
+
+
+ <State 31>: 3.25ns
+ST_31: ShuffleConvs_2_Downs_5 (180)  [1/2] 3.25ns  loc: accelerator_newone/components.cpp:561
+:4  %ShuffleConvs_2_Downs_5 = load float* %ShuffleConvs_2_Downs_4, align 4
+
+
+ <State 32>: 6.79ns
+ST_32: ShuffleConvs_2_Downs_7 (181)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:5  %ShuffleConvs_2_Downs_7 = bitcast float %ShuffleConvs_2_Downs_5 to i32
+
+ST_32: tmp_1 (182)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:6  %tmp_1 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %ShuffleConvs_2_Downs_7, i32 23, i32 30)
+
+ST_32: tmp_164 (183)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:7  %tmp_164 = trunc i32 %ShuffleConvs_2_Downs_7 to i23
+
+ST_32: notlhs (184)  [1/1] 2.91ns  loc: accelerator_newone/components.cpp:561
+:8  %notlhs = icmp ne i8 %tmp_1, -1
+
+ST_32: notrhs (185)  [1/1] 3.20ns  loc: accelerator_newone/components.cpp:561
+:9  %notrhs = icmp eq i23 %tmp_164, 0
+
+ST_32: tmp_4 (187)  [1/1] 6.79ns  loc: accelerator_newone/components.cpp:561
+:11  %tmp_4 = fcmp olt float %ShuffleConvs_2_Downs_5, 0.000000e+00
+
+
+ <State 33>: 3.25ns
+ST_33: tmp_3 (186)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561 (grouped into LUT with out node tmp_5)
+:10  %tmp_3 = or i1 %notrhs, %notlhs
+
+ST_33: tmp_5 (188)  [1/1] 2.07ns  loc: accelerator_newone/components.cpp:561 (out node of the LUT)
+:12  %tmp_5 = and i1 %tmp_3, %tmp_4
+
+ST_33: StgValue_211 (189)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:561
+:13  br i1 %tmp_5, label %7, label %._crit_edge
+
+ST_33: StgValue_212 (191)  [1/1] 3.25ns  loc: accelerator_newone/components.cpp:562
+:0  store float 0.000000e+00, float* %ShuffleConvs_2_Downs_4, align 4
+
+ST_33: StgValue_213 (192)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:563
+:1  br label %._crit_edge
+
+ST_33: w_15 (194)  [1/1] 2.35ns  loc: accelerator_newone/components.cpp:560
+._crit_edge:0  %w_15 = add i4 %w6, 1
+
+ST_33: StgValue_215 (195)  [1/1] 0.00ns  loc: accelerator_newone/components.cpp:560
+._crit_edge:1  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('co') with incoming values : ('co', accelerator_newone/components.cpp:538) [7]  (1.59 ns)
+
+ <State 2>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('co') with incoming values : ('co', accelerator_newone/components.cpp:538) [7]  (0 ns)
+	'icmp' operation ('exitcond9', accelerator_newone/components.cpp:538) [8]  (2.91 ns)
+
+ <State 3>: 4.67ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', accelerator_newone/components.cpp:539) [22]  (0 ns)
+	'add' operation ('tmp_149', accelerator_newone/components.cpp:541) [28]  (2.33 ns)
+	'add' operation ('tmp_150', accelerator_newone/components.cpp:541) [33]  (2.34 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('bias_load', accelerator_newone/components.cpp:541) on array 'bias' [41]  (3.25 ns)
+
+ <State 5>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('bias_load', accelerator_newone/components.cpp:541) on array 'bias' [41]  (3.25 ns)
+	'store' operation (accelerator_newone/components.cpp:541) of variable 'bias_load', accelerator_newone/components.cpp:541 on array 'ShuffleConvs_2_Downs' [46]  (3.25 ns)
+
+ <State 6>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('co') with incoming values : ('co', accelerator_newone/components.cpp:546) [57]  (0 ns)
+	'icmp' operation ('exitcond6', accelerator_newone/components.cpp:546) [58]  (2.91 ns)
+
+ <State 7>: 4.67ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', accelerator_newone/components.cpp:547) [75]  (0 ns)
+	'add' operation ('tmp_154', accelerator_newone/components.cpp:553) [81]  (2.33 ns)
+	'add' operation ('tmp_156', accelerator_newone/components.cpp:553) [86]  (2.34 ns)
+
+ <State 8>: 3.1ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', accelerator_newone/components.cpp:548) [89]  (0 ns)
+	'icmp' operation ('exitcond4', accelerator_newone/components.cpp:548) [90]  (3.1 ns)
+
+ <State 9>: 7.63ns
+The critical path consists of the following:
+	'phi' operation ('ci') with incoming values : ('ci', accelerator_newone/components.cpp:550) [101]  (0 ns)
+	'add' operation ('tmp_168', accelerator_newone/components.cpp:551) [115]  (1.88 ns)
+	'add' operation ('tmp_169', accelerator_newone/components.cpp:551) [116]  (1.88 ns)
+	'add' operation ('tmp_172', accelerator_newone/components.cpp:551) [121]  (1.94 ns)
+	'add' operation ('tmp_173', accelerator_newone/components.cpp:551) [122]  (1.94 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('weight_addr', accelerator_newone/components.cpp:551) [110]  (0 ns)
+	'load' operation ('weight_load', accelerator_newone/components.cpp:551) on array 'weight' [125]  (3.25 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('weight_load', accelerator_newone/components.cpp:551) on array 'weight' [125]  (3.25 ns)
+
+ <State 12>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_86', accelerator_newone/components.cpp:551) [127]  (5.7 ns)
+
+ <State 13>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_86', accelerator_newone/components.cpp:551) [127]  (5.7 ns)
+
+ <State 14>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_86', accelerator_newone/components.cpp:551) [127]  (5.7 ns)
+
+ <State 15>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_86', accelerator_newone/components.cpp:551) [127]  (5.7 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', accelerator_newone/components.cpp:551) [128]  (7.26 ns)
+
+ <State 17>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', accelerator_newone/components.cpp:551) [128]  (7.26 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', accelerator_newone/components.cpp:551) [128]  (7.26 ns)
+
+ <State 19>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', accelerator_newone/components.cpp:551) [128]  (7.26 ns)
+
+ <State 20>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', accelerator_newone/components.cpp:551) [128]  (7.26 ns)
+
+ <State 21>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('ShuffleConvs_2_Downs_3', accelerator_newone/components.cpp:553) on array 'ShuffleConvs_2_Downs' [131]  (3.25 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_84', accelerator_newone/components.cpp:553) [132]  (7.26 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_84', accelerator_newone/components.cpp:553) [132]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_84', accelerator_newone/components.cpp:553) [132]  (7.26 ns)
+
+ <State 25>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_84', accelerator_newone/components.cpp:553) [132]  (7.26 ns)
+
+ <State 26>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_84', accelerator_newone/components.cpp:553) [132]  (7.26 ns)
+
+ <State 27>: 3.25ns
+The critical path consists of the following:
+	'store' operation (accelerator_newone/components.cpp:553) of variable 'tmp_84', accelerator_newone/components.cpp:553 on array 'ShuffleConvs_2_Downs' [133]  (3.25 ns)
+
+ <State 28>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('co') with incoming values : ('co', accelerator_newone/components.cpp:558) [144]  (0 ns)
+	'icmp' operation ('exitcond2', accelerator_newone/components.cpp:558) [145]  (2.91 ns)
+
+ <State 29>: 4.67ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', accelerator_newone/components.cpp:559) [157]  (0 ns)
+	'add' operation ('tmp_158', accelerator_newone/components.cpp:561) [163]  (2.33 ns)
+	'add' operation ('tmp_161', accelerator_newone/components.cpp:561) [168]  (2.34 ns)
+
+ <State 30>: 5.61ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', accelerator_newone/components.cpp:560) [171]  (0 ns)
+	'add' operation ('tmp_163', accelerator_newone/components.cpp:561) [177]  (2.35 ns)
+	'getelementptr' operation ('ShuffleConvs_2_Downs_4', accelerator_newone/components.cpp:561) [179]  (0 ns)
+	'load' operation ('ShuffleConvs_2_Downs_5', accelerator_newone/components.cpp:561) on array 'ShuffleConvs_2_Downs' [180]  (3.25 ns)
+
+ <State 31>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('ShuffleConvs_2_Downs_5', accelerator_newone/components.cpp:561) on array 'ShuffleConvs_2_Downs' [180]  (3.25 ns)
+
+ <State 32>: 6.79ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_4', accelerator_newone/components.cpp:561) [187]  (6.79 ns)
+
+ <State 33>: 3.25ns
+The critical path consists of the following:
+	'store' operation (accelerator_newone/components.cpp:562) of constant 0 on array 'ShuffleConvs_2_Downs' [191]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

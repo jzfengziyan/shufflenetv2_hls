@@ -1,12 +1,11 @@
-21:33:00 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+03:17:37 **** Clean-only build of configuration Release for project lenet_cnn_demo ****
+make clean 
+rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  lenet_cnn_demo.elf.size  lenet_cnn_demo.elf
  
-make: 对“main-build”无需做任何事。
 
-21:33:00 Build Finished (took 262ms)
+03:17:38 Build Finished (took 313ms)
 
-21:33:01 **** Incremental Build of configuration Release for project lenet_cnn_demo ****
+03:17:38 **** Incremental Build of configuration Release for project lenet_cnn_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -14,31 +13,39 @@ Building file: ../src/main.cc
 Invoking: ARM v7 g++ compiler
 arm-none-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main(int, char**)':
-../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+../src/main.cc:443:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
   TCHAR *Path = "0:/";
                 ^~~~~
-../src/main.cc:1701:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:528:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_pic_parameters("plane.bin");
                                   ^
-../src/main.cc:1706:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:533:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_1x1_parameters("shuffle1.bin");
                                                   ^
-../src/main.cc:1709:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:536:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_3x3_parameters("shuffle3.bin");
                                                   ^
-../src/main.cc:1712:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:539:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv1_weight_parameters("conv1.bin");
                                            ^
-../src/main.cc:1715:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:542:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_bias_parameters("bias.bin");
                                   ^
-../src/main.cc:1718:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:545:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_last_weight_parameters("convlast.bin");
                                                   ^
-../src/main.cc:1721:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:548:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_fc_weight_parameters("fc.bin");
                                           ^
+../src/main.cc:560:7: warning: unused variable 'kkkk' [-Wunused-variable]
+   int kkkk = 0;
+       ^~~~
 Finished building: ../src/main.cc
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O2 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
  
 Building target: lenet_cnn_demo.elf
 Invoking: ARM v7 g++ linker
@@ -48,74 +55,43 @@ Finished building target: lenet_cnn_demo.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 816871	   2892	67125600	67945363	40cc393	lenet_cnn_demo.elf
+ 807707	   2900	68134624	68945231	41c054f	lenet_cnn_demo.elf
 Finished building: lenet_cnn_demo.elf.size
  
-21:33:11 **** Incremental Build of configuration Debug for project sd_card_demo ****
+03:17:39 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: 对“main-build”无需做任何事。
-21:33:12 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+03:17:49 **** Incremental Build of configuration Debug for project sd_card_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: 对“main-build”无需做任何事。
-21:33:13 **** Incremental Build of configuration Debug for project hello_world ****
+03:17:50 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: 对“main-build”无需做任何事。
-21:33:14 **** Incremental Build of configuration Debug for project accelerator_demo ****
+03:17:51 **** Incremental Build of configuration Debug for project hello_world ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: 对“main-build”无需做任何事。
-21:33:33 **** Incremental Build of configuration Debug for project sd_card_demo ****
+03:17:52 **** Incremental Build of configuration Debug for project accelerator_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-make: 对“main-build”无需做任何事。
-21:33:34 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:33:35 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:33:36 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:33:44 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:33:45 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:33:45 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:33:46 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:34:07 **** Clean-only build of configuration Debug for project lenet_cnn_demo ****
-make clean 
-rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  lenet_cnn_demo.elf.size  lenet_cnn_demo.elf
- 
-21:34:07 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:32: fatal error: xvector_multiplier.h: No such file or directory
+ #include "xvector_multiplier.h"
+                                ^
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+03:19:42 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -123,36 +99,34 @@ Building file: ../src/main.cc
 Invoking: ARM v7 g++ compiler
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main(int, char**)':
-../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+../src/main.cc:443:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
   TCHAR *Path = "0:/";
                 ^~~~~
-../src/main.cc:1701:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:521:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_pic_parameters("plane.bin");
                                   ^
-../src/main.cc:1706:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:526:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_1x1_parameters("shuffle1.bin");
                                                   ^
-../src/main.cc:1709:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:529:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_3x3_parameters("shuffle3.bin");
                                                   ^
-../src/main.cc:1712:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:532:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv1_weight_parameters("conv1.bin");
                                            ^
-../src/main.cc:1715:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:535:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_bias_parameters("bias.bin");
                                   ^
-../src/main.cc:1718:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:538:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_last_weight_parameters("convlast.bin");
                                                   ^
-../src/main.cc:1721:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:541:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_fc_weight_parameters("fc.bin");
                                           ^
+../src/main.cc:562:7: warning: unused variable 'kkkk' [-Wunused-variable]
+   int kkkk = 0;
+       ^~~~
 Finished building: ../src/main.cc
- 
-Building file: ../src/platform.c
-Invoking: ARM v7 g++ compiler
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
  
 Building target: lenet_cnn_demo.elf
 Invoking: ARM v7 g++ linker
@@ -162,130 +136,10 @@ Finished building target: lenet_cnn_demo.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 840891	   2892	67125632	67969415	40d2187	lenet_cnn_demo.elf
+ 808891	   2900	68134656	68946447	41c0a0f	lenet_cnn_demo.elf
 Finished building: lenet_cnn_demo.elf.size
  
-21:34:33 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:34:33 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:34:34 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:34:35 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:03 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:04 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:05 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:06 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:35 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:36 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:37 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:38 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:45 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:46 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:47 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:35:48 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:36:52 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:36:53 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:36:54 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:36:55 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:37:45 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:37:46 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:37:47 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:37:48 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:39:47 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+03:19:45 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -293,30 +147,33 @@ Building file: ../src/main.cc
 Invoking: ARM v7 g++ compiler
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main(int, char**)':
-../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+../src/main.cc:443:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
   TCHAR *Path = "0:/";
                 ^~~~~
-../src/main.cc:1702:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:521:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_pic_parameters("plane.bin");
                                   ^
-../src/main.cc:1707:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:526:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_1x1_parameters("shuffle1.bin");
                                                   ^
-../src/main.cc:1710:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:529:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_3x3_parameters("shuffle3.bin");
                                                   ^
-../src/main.cc:1713:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:532:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv1_weight_parameters("conv1.bin");
                                            ^
-../src/main.cc:1716:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:535:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_bias_parameters("bias.bin");
                                   ^
-../src/main.cc:1719:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:538:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_last_weight_parameters("convlast.bin");
                                                   ^
-../src/main.cc:1722:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:541:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_fc_weight_parameters("fc.bin");
                                           ^
+../src/main.cc:562:7: warning: unused variable 'kkkk' [-Wunused-variable]
+   int kkkk = 0;
+       ^~~~
 Finished building: ../src/main.cc
  
 Building target: lenet_cnn_demo.elf
@@ -327,192 +184,51 @@ Finished building target: lenet_cnn_demo.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 840891	   2892	67125632	67969415	40d2187	lenet_cnn_demo.elf
+ 808891	   2900	68134656	68946447	41c0a0f	lenet_cnn_demo.elf
 Finished building: lenet_cnn_demo.elf.size
  
-21:44:46 **** Clean-only build of configuration Debug for project accelerator_demo ****
-make clean 
-rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  accelerator_demo.elf.size  accelerator_demo.elf
+03:19:54 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-21:44:46 **** Clean-only build of configuration Debug for project hello_world ****
-make clean 
-rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  hello_world.elf.size  hello_world.elf
+make: 对“main-build”无需做任何事。
+03:19:55 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-21:44:46 **** Clean-only build of configuration Debug for project lenet_cnn_demo ****
-make clean 
-rm -rf  ./src/main.d  ./src/main.o ./src/platform.o  ./src/platform.d  lenet_cnn_demo.elf.size  lenet_cnn_demo.elf
+make: 对“main-build”无需做任何事。
+03:19:56 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-21:44:46 **** Clean-only build of configuration Debug for project sd_card_demo ****
-make clean 
-rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  sd_card_demo.elf.size  sd_card_demo.elf
- 
-21:44:47 **** Clean-only build of project standalone_bsp_0 ****
-make -k clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xilffs_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_3/src -s clean 
-make -C ps7_cortexa9_0/libsrc/vector_multiplier_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-rm -f ps7_cortexa9_0/lib/libxil.a
-21:44:47 **** Build of project standalone_bsp_0 ****
-make -k all 
-Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src
-make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_3/src
-make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_7/src
-make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_3/src
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_4/src
-make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_2/src
-make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/xilffs_v3_6/src
-make -C ps7_cortexa9_0/libsrc/xilffs_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_4/src
-make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_3/src
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/vector_multiplier_v1_0/src
-make -C ps7_cortexa9_0/libsrc/vector_multiplier_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src
-make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling qspips
-arm-none-eabi-ar: 正在创建 ../../../lib/libxil.a
-Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling dmaps
-Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling ddrps
-Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling gpiops
-Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_3/src
-make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling standalone
-Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_7/src
-make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling scugic
-xscugic_g.c:53:2: warning: missing initializer for field 'HandlerTable' of 'XScuGic_Config {aka struct <anonymous>}' [-Wmissing-field-initializers]
-  }
-  ^
-In file included from xscugic_g.c:41:0:
-xscugic.h:218:27: note: 'HandlerTable' declared here
-  XScuGic_VectorTableEntry HandlerTable[XSCUGIC_MAX_NUM_INTR_INPUTS];/**<
-                           ^~~~~~~~~~~~
-Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling cpu_cortexa9
-Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_3/src
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling ttcps
-Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_4/src
-make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling emacps
-Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling xadcps
-Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling devcfg
-Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_2/src
-make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling sdps
-Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling scuwdt
-Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v3_6/src
-make -C ps7_cortexa9_0/libsrc/xilffs_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling XilFFs Library
-ff.c: In function 'find_volume':
-ff.c:2610:4: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
-    && (LD_DWORD(fs->win+FSI_LeadSig) == 0x41615252U)
-    ^~
-diskio.c:135:11: warning: 'ExtCsd' defined but not used [-Wunused-variable]
- static u8 ExtCsd[512] __attribute__ ((aligned(32)));
-           ^~~~~~
-Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_4/src
-make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling uartps
-Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling usbps
-Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling coresightps_dcc
-Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_3/src
-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling tmrctr
-Running Make libs in ps7_cortexa9_0/libsrc/vector_multiplier_v1_0/src
-make -C ps7_cortexa9_0/libsrc/vector_multiplier_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling vector_multiplier
-Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
-Compiling scutimer
-Finished building libraries
-21:44:55 **** Build of configuration Debug for project sd_card_demo ****
+make: 对“main-build”无需做任何事。
+03:19:57 **** Incremental Build of configuration Debug for project accelerator_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 Building file: ../src/main.c
 Invoking: ARM v7 gcc compiler
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+../src/main.c:12:32: fatal error: xvector_multiplier.h: No such file or directory
+ #include "xvector_multiplier.h"
+                                ^
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+03:21:27 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-Building file: ../src/platform.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
- 
-Building target: sd_card_demo.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "sd_card_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-Finished building target: sd_card_demo.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size sd_card_demo.elf  |tee "sd_card_demo.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  48084	   1220	20996640	21045944	14122b8	sd_card_demo.elf
-Finished building: sd_card_demo.elf.size
- 
-21:44:55 **** Build of configuration Debug for project lenet_cnn_demo ****
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc:19:22: fatal error: ap_fixed.h: No such file or directory
+ #include <ap_fixed.h>
+                      ^
+compilation terminated.
+src/subdir.mk:28: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+03:21:42 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -520,36 +236,34 @@ Building file: ../src/main.cc
 Invoking: ARM v7 g++ compiler
 arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
 ../src/main.cc: In function 'int main(int, char**)':
-../src/main.cc:1647:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+../src/main.cc:443:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
   TCHAR *Path = "0:/";
                 ^~~~~
-../src/main.cc:1702:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:521:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_pic_parameters("plane.bin");
                                   ^
-../src/main.cc:1707:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:526:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_1x1_parameters("shuffle1.bin");
                                                   ^
-../src/main.cc:1710:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:529:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_shuffle_conv_3x3_parameters("shuffle3.bin");
                                                   ^
-../src/main.cc:1713:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:532:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv1_weight_parameters("conv1.bin");
                                            ^
-../src/main.cc:1716:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:535:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_bias_parameters("bias.bin");
                                   ^
-../src/main.cc:1719:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:538:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_last_weight_parameters("convlast.bin");
                                                   ^
-../src/main.cc:1722:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+../src/main.cc:541:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
   parse_conv_fc_weight_parameters("fc.bin");
                                           ^
+../src/main.cc:562:7: warning: unused variable 'kkkk' [-Wunused-variable]
+   int kkkk = 0;
+       ^~~~
 Finished building: ../src/main.cc
- 
-Building file: ../src/platform.c
-Invoking: ARM v7 g++ compiler
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
  
 Building target: lenet_cnn_demo.elf
 Invoking: ARM v7 g++ linker
@@ -559,183 +273,110 @@ Finished building target: lenet_cnn_demo.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 840891	   2892	67125632	67969415	40d2187	lenet_cnn_demo.elf
+ 808891	   2900	68134656	68946447	41c0a0f	lenet_cnn_demo.elf
 Finished building: lenet_cnn_demo.elf.size
  
-21:44:56 **** Build of configuration Debug for project hello_world ****
+03:25:39 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.cc
+Invoking: ARM v7 g++ compiler
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main(int, char**)':
+../src/main.cc:443:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:521:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_pic_parameters("plane.bin");
+                                  ^
+../src/main.cc:526:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_1x1_parameters("shuffle1.bin");
+                                                  ^
+../src/main.cc:529:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_3x3_parameters("shuffle3.bin");
+                                                  ^
+../src/main.cc:532:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv1_weight_parameters("conv1.bin");
+                                           ^
+../src/main.cc:535:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_bias_parameters("bias.bin");
+                                  ^
+../src/main.cc:538:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_last_weight_parameters("convlast.bin");
+                                                  ^
+../src/main.cc:541:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_fc_weight_parameters("fc.bin");
+                                          ^
+../src/main.cc:562:7: warning: unused variable 'kkkk' [-Wunused-variable]
+   int kkkk = 0;
+       ^~~~
+Finished building: ../src/main.cc
+ 
+Building target: lenet_cnn_demo.elf
+Invoking: ARM v7 g++ linker
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "lenet_cnn_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: lenet_cnn_demo.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 808891	   2900	67377472	68189263	4107c4f	lenet_cnn_demo.elf
+Finished building: lenet_cnn_demo.elf.size
+ 
+03:28:45 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+03:28:46 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+03:28:47 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: 对“main-build”无需做任何事。
+03:28:48 **** Incremental Build of configuration Debug for project accelerator_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 Building file: ../src/main.c
 Invoking: ARM v7 gcc compiler
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+../src/main.c:12:32: fatal error: xvector_multiplier.h: No such file or directory
+ #include "xvector_multiplier.h"
+                                ^
+compilation terminated.
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+03:32:24 **** Incremental Build of configuration Debug for project sd_card_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-Building file: ../src/platform.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
+make: 对“main-build”无需做任何事。
+03:32:25 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-Building target: hello_world.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "hello_world.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-Finished building target: hello_world.elf
+make: 对“main-build”无需做任何事。
+03:32:25 **** Incremental Build of configuration Debug for project hello_world ****
+make pre-build main-build 
+a9-linaro-pre-build-step
  
-Invoking: ARM v7 Print Size
-arm-none-eabi-size hello_world.elf  |tee "hello_world.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19384	   1148	  22568	  43100	   a85c	hello_world.elf
-Finished building: hello_world.elf.size
- 
-21:44:57 **** Build of configuration Debug for project accelerator_demo ****
+make: 对“main-build”无需做任何事。
+03:32:26 **** Incremental Build of configuration Debug for project accelerator_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 Building file: ../src/main.c
 Invoking: ARM v7 gcc compiler
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:120:2: warning: implicit declaration of function 'Xil_L1DCacheFlush' [-Wimplicit-function-declaration]
-  Xil_L1DCacheFlush();
-  ^~~~~~~~~~~~~~~~~
-../src/main.c:121:2: warning: implicit declaration of function 'Xil_L2CacheFlush' [-Wimplicit-function-declaration]
-  Xil_L2CacheFlush();
-  ^~~~~~~~~~~~~~~~
-Finished building: ../src/main.c
- 
-Building file: ../src/platform.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-Finished building: ../src/platform.c
- 
-Building target: accelerator_demo.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "accelerator_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-Finished building target: accelerator_demo.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size accelerator_demo.elf  |tee "accelerator_demo.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  35012	   2220	  22648	  59880	   e9e8	accelerator_demo.elf
-Finished building: accelerator_demo.elf.size
- 
-21:45:30 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:45:31 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:45:32 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:45:33 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:05 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:06 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:07 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:08 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:32 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:33 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:34 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:46:35 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:00 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:01 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:02 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:03 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:23 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:24 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:25 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:26 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:39 **** Incremental Build of configuration Debug for project sd_card_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:40 **** Incremental Build of configuration Debug for project lenet_cnn_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:41 **** Incremental Build of configuration Debug for project hello_world ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
-21:47:42 **** Incremental Build of configuration Debug for project accelerator_demo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
- 
-make: 对“main-build”无需做任何事。
+../src/main.c:12:32: fatal error: xvector_multiplier.h: No such file or directory
+ #include "xvector_multiplier.h"
+                                ^
+compilation terminated.
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed

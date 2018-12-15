@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'shuffle_24_l_p'
 ================================================================
-* Date:           Thu Dec 13 17:50:46 2018
+* Date:           Sat Dec 15 03:40:50 2018
 
 * Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
 * Project:        acceleartor_hls_padding
@@ -89,17 +89,17 @@
     +---------------------+----------+-------+----+----+------------+------------+
     |co_21_fu_118_p2      |     +    |      0|  23|  11|           1|           6|
     |h_21_fu_200_p2       |     +    |      0|  20|  10|           5|           1|
-    |tmp_274_fu_158_p2    |     +    |      0|  35|  15|          10|          10|
-    |tmp_277_fu_188_p2    |     +    |      0|  38|  16|          11|          11|
-    |tmp_278_fu_214_p2    |     +    |      0|  35|  15|          10|          10|
-    |tmp_279_fu_239_p2    |     +    |      0|  47|  19|          14|          14|
-    |tmp_280_fu_245_p2    |     +    |      0|  38|  16|          11|          11|
-    |tmp_281_fu_270_p2    |     +    |      0|  50|  20|          15|          15|
-    |tmp_282_fu_296_p2    |     +    |      0|  47|  19|          14|          14|
-    |tmp_283_fu_306_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_326_fu_148_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_330_fu_188_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_331_fu_214_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_332_fu_239_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_333_fu_245_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_334_fu_270_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_335_fu_296_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_336_fu_306_p2    |     +    |      0|  50|  20|          15|          15|
     |w_21_fu_282_p2       |     +    |      0|  20|  10|           5|           1|
-    |exitcond1_fu_194_p2  |   icmp   |      0|   0|   2|           5|           5|
-    |exitcond2_fu_112_p2  |   icmp   |      0|   0|   3|           6|           6|
+    |exitcond2_fu_194_p2  |   icmp   |      0|   0|   2|           5|           5|
+    |exitcond3_fu_112_p2  |   icmp   |      0|   0|   3|           6|           6|
     |exitcond_fu_276_p2   |   icmp   |      0|   0|   2|           5|           5|
     +---------------------+----------+-------+----+----+------------+------------+
     |Total                |          |      0| 403| 178|         127|         124|
@@ -126,12 +126,12 @@
     |co_reg_75        |   6|   0|    6|          0|
     |h_21_reg_340     |   5|   0|    5|          0|
     |h_reg_86         |   5|   0|    5|          0|
-    |tmp_106_reg_315  |   1|   0|    1|          0|
-    |tmp_274_reg_327  |   9|   0|   10|          1|
-    |tmp_277_reg_332  |  10|   0|   11|          1|
-    |tmp_279_reg_345  |  13|   0|   14|          1|
-    |tmp_281_reg_350  |  14|   0|   15|          1|
-    |tmp_283_reg_368  |  15|   0|   15|          0|
+    |tmp_273_reg_315  |   1|   0|    1|          0|
+    |tmp_326_reg_327  |  10|   0|   11|          1|
+    |tmp_330_reg_332  |   9|   0|   10|          1|
+    |tmp_332_reg_345  |  13|   0|   14|          1|
+    |tmp_334_reg_350  |  14|   0|   15|          1|
+    |tmp_336_reg_368  |  15|   0|   15|          0|
     |w_21_reg_358     |   5|   0|    5|          0|
     |w_reg_97         |   5|   0|    5|          0|
     +-----------------+----+----+-----+-----------+
@@ -153,12 +153,12 @@
 |ap_done            | out |    1| ap_ctrl_hs | shuffle_24_l_p | return value |
 |ap_idle            | out |    1| ap_ctrl_hs | shuffle_24_l_p | return value |
 |ap_ready           | out |    1| ap_ctrl_hs | shuffle_24_l_p | return value |
-|left_r_address0    | out |   13|  ap_memory |     left_r     |     array    |
-|left_r_ce0         | out |    1|  ap_memory |     left_r     |     array    |
-|left_r_q0          |  in |   32|  ap_memory |     left_r     |     array    |
-|output_r_address0  | out |   14|  ap_memory |    output_r    |     array    |
-|output_r_ce0       | out |    1|  ap_memory |    output_r    |     array    |
-|output_r_we0       | out |    1|  ap_memory |    output_r    |     array    |
-|output_r_d0        | out |   32|  ap_memory |    output_r    |     array    |
+|left_V_address0    | out |   13|  ap_memory |     left_V     |     array    |
+|left_V_ce0         | out |    1|  ap_memory |     left_V     |     array    |
+|left_V_q0          |  in |    8|  ap_memory |     left_V     |     array    |
+|output_V_address0  | out |   14|  ap_memory |    output_V    |     array    |
+|output_V_ce0       | out |    1|  ap_memory |    output_V    |     array    |
+|output_V_we0       | out |    1|  ap_memory |    output_V    |     array    |
+|output_V_d0        | out |    8|  ap_memory |    output_V    |     array    |
 +-------------------+-----+-----+------------+----------------+--------------+
 

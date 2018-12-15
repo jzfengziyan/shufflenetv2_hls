@@ -20,7 +20,10 @@ src/main.o src/main.o: ../src/main.cc \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xil_cache.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xplatform_info.h \
  ../../standalone_bsp_0/ps7_cortexa9_0/include/xtmrctr.h \
- ../../standalone_bsp_0/ps7_cortexa9_0/include/xtmrctr_l.h
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xtmrctr_l.h \
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xshufflenetv2.h \
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xshufflenetv2_hw.h \
+ ../../standalone_bsp_0/ps7_cortexa9_0/include/xil_cache_l.h
 
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xparameters.h:
 
@@ -65,3 +68,9 @@ src/main.o src/main.o: ../src/main.cc \
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xtmrctr.h:
 
 ../../standalone_bsp_0/ps7_cortexa9_0/include/xtmrctr_l.h:
+
+../../standalone_bsp_0/ps7_cortexa9_0/include/xshufflenetv2.h:
+
+../../standalone_bsp_0/ps7_cortexa9_0/include/xshufflenetv2_hw.h:
+
+../../standalone_bsp_0/ps7_cortexa9_0/include/xil_cache_l.h:

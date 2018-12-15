@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -116,7 +116,7 @@ output wire [87 : 0] m_sc_payld;
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
     .C_SC_ROUTE_WIDTH(1),
-    .C_ID_WIDTH(2),
+    .C_ID_WIDTH(3),
     .C_ADDR_WIDTH(32),
     .C_USER_WIDTH(512),
     .C_MAX_PAYLD_BYTES(8),

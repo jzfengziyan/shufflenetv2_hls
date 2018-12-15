@@ -2,37 +2,16 @@
 #include <fstream>
 #include <math.h>
 using namespace std;
-/**conv1**/
-/*void conv1(float input[1][3][32][32],
-	float weight[24][3][3][3],
-	float bias[24],
-	float output[1][24][32][32]){
-	for(int co = 0;co<24;co++){
-		for(int h = 0;h<32;h++){
-			for(int w = 0;w<32;w++){
-				float sum = 0;
-				for(int ci = 0;ci<3;ci++){
-					for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][ci][m][n] * (( h+m-1 >= 0 && w+n-1 >= 0 && h+m-1 < 32 && w+n-1 < 32) ?input[0][ci][h+m-1][w+n-1]:0);
-						}
-					}
-				}
-				float result = sum + bias[co];
-				output[0][co][h][w] = (result > 0)? result : 0.0f;
-			}
-		}
-	}
-}*/
+#include "shufflenet.h"
 
-void conv1_p(float input[1][3][34][34],
-	float weight[24][3][3][3],
-	float bias[24],
-	float output[1][24][34][34]){
+void conv1_p(FIX_8 input[1][3][34][34],
+	FIX_8 weight[24][3][3][3],
+	FIX_8 bias[24],
+	FIX_8 output[1][24][34][34]){
 	for(int co = 0;co<24;co++){
 		for(int h = 1;h<33;h++){
 			for(int w = 1;w<33;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<3;ci++){
 					for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
@@ -40,136 +19,67 @@ void conv1_p(float input[1][3][34][34],
 						}
 					}
 				}
-				float result = sum + bias[co];
-				output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+				output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 
 			}
 		}
 	}
 }
 
-
-
-/**unit0**/
-
-/*void subconv_1x1_32(float input[1][24][32][32],
-	float weight[24][24][1][1],
-	float bias[24],
-	float output[1][24][32][32]){
-
-	for(int co = 0;co<24;co++){
-		for(int h = 0;h<32;h++){
-			for(int w = 0;w<32;w++){
-				float sum = 0;
-				for(int ci = 0;ci<24;ci++){
-					sum += weight[co][ci][0][0]*input[0][ci][h][w];
-				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
-			}
-		}
-	}
-
-}*/
-void subconv_1x1_32_p(float input[1][24][34][34],
-	float weight[24][24][1][1],
-	float bias[24],
-	float output[1][24][34][34]){
+void subconv_1x1_32_p(FIX_8 input[1][24][34][34],
+	FIX_8 weight[24][24][1][1],
+	FIX_8 bias[24],
+	FIX_8 output[1][24][34][34]){
 
 	for(int co = 0;co<24;co++){
 		for(int h = 1;h<33;h++){
 			for(int w = 1;w<33;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<24;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-
-/*void subconv_1x1_16(float input[1][24][16][16],
-	float weight[24][24][1][1],
-	float bias[24],
-	float output[1][24][16][16]){
-
-
-	for(int co = 0;co<24;co++){
-		for(int h = 0;h<16;h++){
-			for(int w = 0;w<16;w++){
-				float sum = 0;
-				for(int ci = 0;ci<24;ci++){
-					sum += weight[co][ci][0][0]*input[0][ci][h][w];
-
-
-
-
-				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
-			}
-		}
-	}
-}*/
-
-void subconv_1x1_16_p(float input[1][24][18][18],
-	float weight[24][24][1][1],
-	float bias[24],
-	float output[1][24][18][18]){
+void subconv_1x1_16_p(FIX_8 input[1][24][18][18],
+	FIX_8 weight[24][24][1][1],
+	FIX_8 bias[24],
+	FIX_8 output[1][24][18][18]){
 
 
 	for(int co = 0;co<24;co++){
 		for(int h = 1;h<17;h++){
 			for(int w = 1;w<17;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<24;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-/*void subconv_3x3_32_stride_no_relu(float input[1][24][32][32],
-	float weight[24][1][3][3],
-	float bias[24],
-	float output[1][24][16][16]){
-	for(int co = 0;co<24;co++){
-		for(int h = 0;h<16;h++){
-			for(int w = 0;w<16;w++){
-				float sum = 0;
-				for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][0][m][n] * (( h*2+m-1 >= 0 && w*2+n-1 >= 0 && h*2+m-1 < 32 && w*2+n-1 < 32) ?input[0][co][h*2+m-1][w*2+n-1]:0);
-						}
-					}
-				float result = sum + bias[co];
-				output[0][co][h][w] = result;
-
-			}
-		}
-	}
-}*/
-
-void subconv_3x3_32_stride_no_relu_p(float input[1][24][34][34],
-	float weight[24][1][3][3],
-	float bias[24],
-	float output[1][24][18][18]){
+void subconv_3x3_32_stride_no_relu_p(FIX_8 input[1][24][34][34],
+	FIX_8 weight[24][1][3][3],
+	FIX_8 bias[24],
+	FIX_8 output[1][24][18][18]){
 	for(int co = 0;co<24;co++){
 		for(int h = 1;h<17;h++){
 			for(int w = 1;w<17;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
 							sum += weight[co][0][m][n] * input[0][co][h*2+m-2][w*2+n-2];
 						}
 					}
-				float result = sum + bias[co];
+				FIX_8 result = sum + bias[co];
 				output[0][co][h][w] = result;
 
 			}
@@ -178,57 +88,27 @@ void subconv_3x3_32_stride_no_relu_p(float input[1][24][34][34],
 
 }
 
-/*void subconv_3x3_16_no_relu(float input[1][24][16][16],
-	float weight[24][1][3][3],
-	float bias[24],
-	float output[1][24][16][16]){
-	for(int co = 0;co<24;co++){
-		for(int h = 0;h<16;h++){
-			for(int w = 0;w<16;w++){
-				float sum = 0;
-				for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][0][m][n] * (( h+m-1 >= 0 && w+n-1 >= 0 && h+m-1 < 16 && w+n-1 < 16) ?input[0][co][h+m-1][w+n-1]:0);
-						}
-					}
-				float result = sum + bias[co];
-				output[0][co][h][w] = result;
-
-			}
-		}
-	}
-}*/
-void subconv_3x3_16_no_relu_p(float input[1][24][18][18],
-	float weight[24][1][3][3],
-	float bias[24],
-	float output[1][24][18][18]){
+void subconv_3x3_16_no_relu_p(FIX_8 input[1][24][18][18],
+	FIX_8 weight[24][1][3][3],
+	FIX_8 bias[24],
+	FIX_8 output[1][24][18][18]){
 	for(int co = 0;co<24;co++){
 		for(int h = 1;h<17;h++){
 			for(int w = 1;w<17;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
 							sum += weight[co][0][m][n] * input[0][co][h+m-1][w+n-1];
 						}
 					}
-				float result = sum + bias[co];
+				FIX_8 result = sum + bias[co];
 				output[0][co][h][w] = result;
 			}
 		}
 	}
 }
 
-/*void shuffle_24(float left[1][24][16][16],float right[1][24][16][16],float output[1][48][16][16]){
-	for(int co = 0;co <48;co ++){
-		for(int h=0;h<16;h++){
-			for(int w = 0;w<16;w++){
-				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				else output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-void shuffle_24_p(float left[1][24][18][18],float right[1][24][18][18],float output[1][48][18][18]){
+void shuffle_24_p(FIX_8 left[1][24][18][18],FIX_8 right[1][24][18][18],FIX_8 output[1][48][18][18]){
 	for(int co = 0;co <48;co ++){
 		for(int h=0;h<18;h++){
 			for(int w = 0;w<18;w++){
@@ -238,17 +118,8 @@ void shuffle_24_p(float left[1][24][18][18],float right[1][24][18][18],float out
 		}
 	}
 }
-/*void shuffle_24_l(float left[1][24][16][16], float output[1][48][16][16]){
-	for(int co = 0;co <48;co ++){
-		for(int h=0;h<16;h++){
-			for(int w = 0;w<16;w++){
-				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				//else output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-void shuffle_24_l_p(float left[1][24][18][18], float output[1][48][18][18]){
+
+void shuffle_24_l_p(FIX_8 left[1][24][18][18], FIX_8 output[1][48][18][18]){
 	for(int co = 0;co <48;co ++){
 		for(int h=0;h<18;h++){
 			for(int w = 0;w<18;w++){
@@ -259,18 +130,7 @@ void shuffle_24_l_p(float left[1][24][18][18], float output[1][48][18][18]){
 	}
 }
 
-/*void shuffle_24_r(float right[1][24][16][16], float output[1][48][16][16]){
-	for(int co = 0;co <48;co ++){
-		for(int h=0;h<16;h++){
-			for(int w = 0;w<16;w++){
-				//if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				if(co%2 != 0) output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-
-void shuffle_24_r_p(float right[1][24][18][18], float output[1][48][18][18]){
+void shuffle_24_r_p(FIX_8 right[1][24][18][18], FIX_8 output[1][48][18][18]){
 	for(int co = 0;co <48;co ++){
 		for(int h=0;h<18;h++){
 			for(int w = 0;w<18;w++){
@@ -282,24 +142,24 @@ void shuffle_24_r_p(float right[1][24][18][18], float output[1][48][18][18]){
 }
 
 /*-----------Original DownsampleUnit0---------------------------
-void DownsampleUnit0(float input[1][24][32][32],
-	float conv1r_weight[24][24][1][1],
-	float conv1r_bias[24],
-	float conv2r_weight[24][1][3][3],
-	float conv2r_bias[24],
-	float conv3r_weight[24][24][1][1],
-	float conv3r_bias[24],
-	float conv1l_weight[24][1][3][3],
-	float conv1l_bias[24],
-	float conv2l_weight[24][24][1][1],
-	float conv2l_bias[24],
-	float output[1][48][16][16]){
+void DownsampleUnit0(FIX_8 input[1][24][32][32],
+	FIX_8 conv1r_weight[24][24][1][1],
+	FIX_8 conv1r_bias[24],
+	FIX_8 conv2r_weight[24][1][3][3],
+	FIX_8 conv2r_bias[24],
+	FIX_8 conv3r_weight[24][24][1][1],
+	FIX_8 conv3r_bias[24],
+	FIX_8 conv1l_weight[24][1][3][3],
+	FIX_8 conv1l_bias[24],
+	FIX_8 conv2l_weight[24][24][1][1],
+	FIX_8 conv2l_bias[24],
+	FIX_8 output[1][48][16][16]){
 
-	float conv1r_output[1][24][32][32]={0};
-	float conv2r_ourput[1][24][16][16]={0};
-	float conv3r_ourput[1][24][16][16]={0};
-	float conv1l_output[1][24][16][16]={0};
-	float conv2l_output[1][24][16][16]={0};
+	FIX_8 conv1r_output[1][24][32][32]={0};
+	FIX_8 conv2r_ourput[1][24][16][16]={0};
+	FIX_8 conv3r_ourput[1][24][16][16]={0};
+	FIX_8 conv1l_output[1][24][16][16]={0};
+	FIX_8 conv2l_output[1][24][16][16]={0};
 
 
 	//conv1r
@@ -319,20 +179,20 @@ void DownsampleUnit0(float input[1][24][32][32],
 
 
 /*-----------Original ShuffleUnit0------------------------
-void ShuffleUnit0(float input[1][48][16][16],
-	float conv1_weight[24][24][1][1],
-	float conv1_bias[24],
-	float conv2_weight[24][1][3][3],
-	float conv2_bias[24],
-	float conv3_weight[24][24][1][1],
-	float conv3_bias[24],
-	float output[1][48][16][16]
+void ShuffleUnit0(FIX_8 input[1][48][16][16],
+	FIX_8 conv1_weight[24][24][1][1],
+	FIX_8 conv1_bias[24],
+	FIX_8 conv2_weight[24][1][3][3],
+	FIX_8 conv2_bias[24],
+	FIX_8 conv3_weight[24][24][1][1],
+	FIX_8 conv3_bias[24],
+	FIX_8 output[1][48][16][16]
 	){
-	float left_part[1][24][16][16] = {0};
-	float right_part[1][24][16][16] = {0};
-	float conv1_output[1][24][16][16] = {0};
-	float conv2_output[1][24][16][16] = {0};
-	float conv3_output[1][24][16][16] = {0};
+	FIX_8 left_part[1][24][16][16] = {0};
+	FIX_8 right_part[1][24][16][16] = {0};
+	FIX_8 conv1_output[1][24][16][16] = {0};
+	FIX_8 conv2_output[1][24][16][16] = {0};
+	FIX_8 conv3_output[1][24][16][16] = {0};
 	//right
 	for(int co = 0;co <24;co ++){
 		for(int h=0;h<16;h++){
@@ -354,15 +214,15 @@ void ShuffleUnit0(float input[1][48][16][16],
 
 /**unit1**/
 
-/*void subconv_1x1_16p(float input[1][48][16][16],
-	float weight[48][48][1][1],
-	float bias[48],
-	float output[1][48][16][16]){
+/*void subconv_1x1_16p(FIX_8 input[1][48][16][16],
+	FIX_8 weight[48][48][1][1],
+	FIX_8 bias[48],
+	FIX_8 output[1][48][16][16]){
 
 	for(int co = 0;co<48;co++){
 		for(int h = 0;h<16;h++){
 			for(int w = 0;w<16;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<48;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 
@@ -370,166 +230,95 @@ void ShuffleUnit0(float input[1][48][16][16],
 
 
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : 0f;
 			}
 		}
 	}
 
 }*/
 
-void subconv_1x1_16p_p(float input[1][48][18][18],
-	float weight[48][48][1][1],
-	float bias[48],
-	float output[1][48][18][18]){
+void subconv_1x1_16p_p(FIX_8 input[1][48][18][18],
+	FIX_8 weight[48][48][1][1],
+	FIX_8 bias[48],
+	FIX_8 output[1][48][18][18]){
 
 	for(int co = 0;co<48;co++){
 		for(int h = 1;h<17;h++){
 			for(int w = 1;w<17;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<48;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-/*void subconv_1x1_8(float input[1][48][8][8],
-	float weight[48][48][1][1],
-	float bias[48],
-	float output[1][48][8][8]){
-
-
-	for(int co = 0;co<48;co++){
-		for(int h = 0;h<8;h++){
-			for(int w = 0;w<8;w++){
-				float sum = 0;
-				for(int ci = 0;ci<48;ci++){
-					sum += weight[co][ci][0][0]*input[0][ci][h][w];
-				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
-			}
-		}
-	}
-}*/
-void subconv_1x1_8_p(float input[1][48][10][10],
-	float weight[48][48][1][1],
-	float bias[48],
-	float output[1][48][10][10]){
+void subconv_1x1_8_p(FIX_8 input[1][48][10][10],
+	FIX_8 weight[48][48][1][1],
+	FIX_8 bias[48],
+	FIX_8 output[1][48][10][10]){
 
 
 	for(int co = 0;co<48;co++){
 		for(int h = 1;h<9;h++){
 			for(int w = 1;w<9;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<48;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-/*void subconv_3x3_16_stride_no_relu(float input[1][48][16][16],
-	float weight[48][1][3][3],
-	float bias[48],
-	float output[1][48][8][8]){
-	for(int co = 0;co<48;co++){
-		for(int h = 0;h<8;h++){
-			for(int w = 0;w<8;w++){
-				float sum = 0;
-				for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][0][m][n] * (( h*2+m-1 >= 0 && w*2+n-1 >= 0 && h*2+m-1 < 16 && w*2+n-1 < 16) ?input[0][co][h*2+m-1][w*2+n-1]:0);
-						
-						}
-					}
-
-				float result = sum + bias[co];
-				output[0][co][h][w] = result;
-			}
-		}
-	}
-}*/
-
-void subconv_3x3_16_stride_no_relu_p(float input[1][48][18][18],
-	float weight[48][1][3][3],
-	float bias[48],
-	float output[1][48][10][10]){
+void subconv_3x3_16_stride_no_relu_p(FIX_8 input[1][48][18][18],
+	FIX_8 weight[48][1][3][3],
+	FIX_8 bias[48],
+	FIX_8 output[1][48][10][10]){
 	for(int co = 0;co<48;co++){
 		for(int h = 1;h<9;h++){
 			for(int w = 1;w<9;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
 							sum += weight[co][0][m][n] * input[0][co][h*2+m-2][w*2+n-2];
 						
 						}
 					}
-				float result = sum + bias[co];
+				FIX_8 result = sum + bias[co];
 				output[0][co][h][w] = result;
 			}
 		}
 	}
 }
 
-/*void subconv_3x3_8_no_relu(float input[1][48][8][8],
-	float weight[48][1][3][3],
-	float bias[48],
-	float output[1][48][8][8]){
-	for(int co = 0;co<48;co++){
-		for(int h = 0;h<8;h++){
-			for(int w = 0;w<8;w++){
-				float sum = 0;
-				for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][0][m][n] * (( h+m-1 >= 0 && w+n-1 >= 0 && h+m-1 < 8 && w+n-1 < 8) ?input[0][co][h+m-1][w+n-1]:0);
-						}
-					}
-				float result = sum + bias[co];
-				output[0][co][h][w] = result;
-			}
-		}
-	}
-}*/
-
-void subconv_3x3_8_no_relu_p(float input[1][48][10][10],
-	float weight[48][1][3][3],
-	float bias[48],
-	float output[1][48][10][10]){
+void subconv_3x3_8_no_relu_p(FIX_8 input[1][48][10][10],
+	FIX_8 weight[48][1][3][3],
+	FIX_8 bias[48],
+	FIX_8 output[1][48][10][10]){
 	for(int co = 0;co<48;co++){
 		for(int h = 1;h<9;h++){
 			for(int w = 1;w<9;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
 							sum += weight[co][0][m][n] * input[0][co][h+m-1][w+n-1];
 						}
 					}
-				float result = sum + bias[co];
+				FIX_8 result = sum + bias[co];
 				output[0][co][h][w] = result;
 			}
 		}
 	}
 }
 
-/*void shuffle_48(float left[1][48][8][8],float right[1][48][8][8],float output[1][96][8][8]){
-	for(int co = 0;co <96;co ++){
-		for(int h=0;h<8;h++){
-			for(int w = 0;w<8;w++){
-				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				else output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-void shuffle_48_p(float left[1][48][10][10],float right[1][48][10][10],float output[1][96][10][10]){
+void shuffle_48_p(FIX_8 left[1][48][10][10],FIX_8 right[1][48][10][10],FIX_8 output[1][96][10][10]){
 	for(int co = 0;co <96;co ++){
 		for(int h=0;h<10;h++){
 			for(int w = 0;w<10;w++){
@@ -539,17 +328,8 @@ void shuffle_48_p(float left[1][48][10][10],float right[1][48][10][10],float out
 		}
 	}
 }
-/*void shuffle_48_l(float left[1][48][8][8], float output[1][96][8][8]){
-	for(int co = 0;co <96;co ++){
-		for(int h=0;h<8;h++){
-			for(int w = 0;w<8;w++){
-				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				//else output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-void shuffle_48_l_p(float left[1][48][10][10], float output[1][96][10][10]){
+
+void shuffle_48_l_p(FIX_8 left[1][48][10][10], FIX_8 output[1][96][10][10]){
 	for(int co = 0;co <96;co ++){
 		for(int h=0;h<10;h++){
 			for(int w = 0;w<10;w++){
@@ -560,18 +340,9 @@ void shuffle_48_l_p(float left[1][48][10][10], float output[1][96][10][10]){
 	}
 }
 
-/*void shuffle_48_r(float right[1][48][8][8], float output[1][96][8][8]){
-	for(int co = 0;co <96;co ++){
-		for(int h=0;h<8;h++){
-			for(int w = 0;w<8;w++){
-				//if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				if(co%2 != 0) output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
 
-void shuffle_48_r_p(float right[1][48][10][10], float output[1][96][10][10]){
+
+void shuffle_48_r_p(FIX_8 right[1][48][10][10], FIX_8 output[1][96][10][10]){
 	for(int co = 0;co <96;co ++){
 		for(int h=0;h<10;h++){
 			for(int w = 0;w<10;w++){
@@ -583,24 +354,24 @@ void shuffle_48_r_p(float right[1][48][10][10], float output[1][96][10][10]){
 }
 
 /*-----Original DownsampleUnit1--------------------
-void DownsampleUnit1(float input[1][48][16][16],
-	float conv1r_weight[48][48][1][1],
-	float conv1r_bias[48],
-	float conv2r_weight[48][1][3][3],
-	float conv2r_bias[48],
-	float conv3r_weight[48][48][1][1],
-	float conv3r_bias[48],
-	float conv1l_weight[48][1][3][3],
-	float conv1l_bias[48],
-	float conv2l_weight[48][48][1][1],
-	float conv2l_bias[48],
-	float output[1][96][8][8]){
+void DownsampleUnit1(FIX_8 input[1][48][16][16],
+	FIX_8 conv1r_weight[48][48][1][1],
+	FIX_8 conv1r_bias[48],
+	FIX_8 conv2r_weight[48][1][3][3],
+	FIX_8 conv2r_bias[48],
+	FIX_8 conv3r_weight[48][48][1][1],
+	FIX_8 conv3r_bias[48],
+	FIX_8 conv1l_weight[48][1][3][3],
+	FIX_8 conv1l_bias[48],
+	FIX_8 conv2l_weight[48][48][1][1],
+	FIX_8 conv2l_bias[48],
+	FIX_8 output[1][96][8][8]){
 
-	float conv1r_output[1][48][16][16]={0};
-	float conv2r_ourput[1][48][8][8]={0};
-	float conv3r_ourput[1][48][8][8]={0};
-	float conv1l_output[1][48][8][8]={0};
-	float conv2l_output[1][48][8][8]={0};
+	FIX_8 conv1r_output[1][48][16][16]={0};
+	FIX_8 conv2r_ourput[1][48][8][8]={0};
+	FIX_8 conv3r_ourput[1][48][8][8]={0};
+	FIX_8 conv1l_output[1][48][8][8]={0};
+	FIX_8 conv2l_output[1][48][8][8]={0};
 
 
 	//conv1r
@@ -621,20 +392,20 @@ void DownsampleUnit1(float input[1][48][16][16],
 }*/
 
 /*------------Original ShuffleUnit1-------------
-void ShuffleUnit1(float input[1][96][8][8],
-	float conv1_weight[48][48][1][1],
-	float conv1_bias[48],
-	float conv2_weight[48][1][3][3],
-	float conv2_bias[48],
-	float conv3_weight[48][48][1][1],
-	float conv3_bias[48],
-	float output[1][96][8][8]
+void ShuffleUnit1(FIX_8 input[1][96][8][8],
+	FIX_8 conv1_weight[48][48][1][1],
+	FIX_8 conv1_bias[48],
+	FIX_8 conv2_weight[48][1][3][3],
+	FIX_8 conv2_bias[48],
+	FIX_8 conv3_weight[48][48][1][1],
+	FIX_8 conv3_bias[48],
+	FIX_8 output[1][96][8][8]
 	){
-	float left_part[1][48][8][8] = {0};
-	float right_part[1][48][8][8] = {0};
-	float conv1_output[1][48][8][8] = {0};
-	float conv2_output[1][48][8][8] = {0};
-	float conv3_output[1][48][8][8] = {0};
+	FIX_8 left_part[1][48][8][8] = {0};
+	FIX_8 right_part[1][48][8][8] = {0};
+	FIX_8 conv1_output[1][48][8][8] = {0};
+	FIX_8 conv2_output[1][48][8][8] = {0};
+	FIX_8 conv3_output[1][48][8][8] = {0};
 
 	//right
 	for(int co = 0;co <48;co ++){
@@ -659,118 +430,78 @@ void ShuffleUnit1(float input[1][96][8][8],
 
 
 /**unit2**/
-/*void subconv_1x1_8p(float input[1][96][8][8],
-	float weight[96][96][1][1],
-	float bias[96],
-	float output[1][96][8][8]){
+/*void subconv_1x1_8p(FIX_8 input[1][96][8][8],
+	FIX_8 weight[96][96][1][1],
+	FIX_8 bias[96],
+	FIX_8 output[1][96][8][8]){
 
 	for(int co = 0;co<96;co++){
 		for(int h = 0;h<8;h++){
 			for(int w = 0;w<8;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<96;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : 0f;
 			}
 		}
 	}
 }*/
 
-void subconv_1x1_8p_p(float input[1][96][10][10],
-	float weight[96][96][1][1],
-	float bias[96],
-	float output[1][96][10][10]){
+void subconv_1x1_8p_p(FIX_8 input[1][96][10][10],
+	FIX_8 weight[96][96][1][1],
+	FIX_8 bias[96],
+	FIX_8 output[1][96][10][10]){
 
 	for(int co = 0;co<96;co++){
 		for(int h = 1;h<9;h++){
 			for(int w = 1;w<9;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<96;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-/*void subconv_1x1_4(float input[1][96][4][4],
-	float weight[96][96][1][1],
-	float bias[96],
-	float output[1][96][4][4]){
-
-
-	for(int co = 0;co<96;co++){
-		for(int h = 0;h<4;h++){
-			for(int w = 0;w<4;w++){
-				float sum = 0;
-				for(int ci = 0;ci<96;ci++){
-					sum += weight[co][ci][0][0]*input[0][ci][h][w];
-				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
-			}
-		}
-	}
-}*/
-
-void subconv_1x1_4_p(float input[1][96][6][6],
-	float weight[96][96][1][1],
-	float bias[96],
-	float output[1][96][6][6]){
+void subconv_1x1_4_p(FIX_8 input[1][96][6][6],
+	FIX_8 weight[96][96][1][1],
+	FIX_8 bias[96],
+	FIX_8 output[1][96][6][6]){
 
 
 	for(int co = 0;co<96;co++){
 		for(int h = 1;h<5;h++){
 			for(int w = 1;w<5;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<96;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-/*void subconv_3x3_8_stride_no_relu(float input[1][96][8][8],
-	float weight[96][1][3][3],
-	float bias[96],
-	float output[1][96][4][4]){
-	for(int co = 0;co<96;co++){
-		for(int h = 0;h<4;h++){
-			for(int w = 0;w<4;w++){
-				float sum = 0;
-				for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][0][m][n] * (( h*2+m-1 >= 0 && w*2+n-1 >= 0 && h*2+m-1 < 8 && w*2+n-1 < 8) ?input[0][co][h*2+m-1][w*2+n-1]:0);
-						}
-					}
-				float result = sum + bias[co];
-				output[0][co][h][w] = result;
-
-			}
-		}
-	}
-}*/
-void subconv_3x3_8_stride_no_relu_p(float input[1][96][10][10],
-	float weight[96][1][3][3],
-	float bias[96],
-	float output[1][96][6][6]){
+void subconv_3x3_8_stride_no_relu_p(FIX_8 input[1][96][10][10],
+	FIX_8 weight[96][1][3][3],
+	FIX_8 bias[96],
+	FIX_8 output[1][96][6][6]){
 	for(int co = 0;co<96;co++){
 		for(int h = 1;h<5;h++){
 			for(int w = 1;w<5;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
 							sum += weight[co][0][m][n] * input[0][co][h*2+m-2][w*2+n-2];
 						}
 					}
-				float result = sum + bias[co];
+				FIX_8 result = sum + bias[co];
 				output[0][co][h][w] = result;
 
 			}
@@ -778,58 +509,27 @@ void subconv_3x3_8_stride_no_relu_p(float input[1][96][10][10],
 	}
 }
 
-
-/*void subconv_3x3_4_no_relu(float input[1][96][4][4],
-	float weight[96][1][3][3],
-	float bias[96],
-	float output[1][96][4][4]){
-	for(int co = 0;co<96;co++){
-		for(int h = 0;h<4;h++){
-			for(int w = 0;w<4;w++){
-				float sum = 0;
-				for(int m = 0;m<3;m++){
-						for(int n = 0;n<3;n++){
-							sum += weight[co][0][m][n] * (( h+m-1 >= 0 && w+n-1 >= 0 && h+m-1 < 4 && w+n-1 < 4) ?input[0][co][h+m-1][w+n-1]:0);
-						}
-					}
-				float result = sum + bias[co];
-				output[0][co][h][w] = result;
-			}
-		}
-	}
-}*/
-void subconv_3x3_4_no_relu_p(float input[1][96][6][6],
-	float weight[96][1][3][3],
-	float bias[96],
-	float output[1][96][6][6]){
+void subconv_3x3_4_no_relu_p(FIX_8 input[1][96][6][6],
+	FIX_8 weight[96][1][3][3],
+	FIX_8 bias[96],
+	FIX_8 output[1][96][6][6]){
 	for(int co = 0;co<96;co++){
 		for(int h = 1;h<5;h++){
 			for(int w = 1;w<5;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int m = 0;m<3;m++){
 						for(int n = 0;n<3;n++){
 							sum += weight[co][0][m][n] * input[0][co][h+m-1][w+n-1];
 						}
 					}
-				float result = sum + bias[co];
+				FIX_8 result = sum + bias[co];
 				output[0][co][h][w] = result;
 			}
 		}
 	}
 }
 
-/*void shuffle_96(float left[1][96][4][4],float right[1][96][4][4],float output[1][192][4][4]){
-	for(int co = 0;co <192;co ++){
-		for(int h=0;h<4;h++){
-			for(int w = 0;w<4;w++){
-				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				else output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-
-void shuffle_96_p(float left[1][96][6][6],float right[1][96][6][6],float output[1][192][6][6]){
+void shuffle_96_p(FIX_8 left[1][96][6][6],FIX_8 right[1][96][6][6],FIX_8 output[1][192][6][6]){
 	for(int co = 0;co <192;co ++){
 		for(int h=0;h<6;h++){
 			for(int w = 0;w<6;w++){
@@ -840,29 +540,7 @@ void shuffle_96_p(float left[1][96][6][6],float right[1][96][6][6],float output[
 	}
 }
 
-/*void shuffle_96_l(float left[1][96][4][4], float output[1][192][4][4]){
-	for(int co = 0;co <192;co ++){
-		for(int h=0;h<4;h++){
-			for(int w = 0;w<4;w++){
-				if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				//else output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-
-/*void shuffle_96_r(float right[1][96][4][4], float output[1][192][4][4]){
-	for(int co = 0;co <192;co ++){
-		for(int h=0;h<4;h++){
-			for(int w = 0;w<4;w++){
-				//if (co%2 == 0)output[0][co][h][w] = left[0][co/2][h][w];
-				if(co%2 != 0) output[0][co][h][w] = right[0][co/2][h][w];
-			}
-		}
-	}
-}*/
-
-void shuffle_96_l_p(float left[1][96][6][6], float output[1][192][6][6]){
+void shuffle_96_l_p(FIX_8 left[1][96][6][6], FIX_8 output[1][192][6][6]){
 	for(int co = 0;co <192;co ++){
 		for(int h=0;h<6;h++){
 			for(int w = 0;w<6;w++){
@@ -873,7 +551,7 @@ void shuffle_96_l_p(float left[1][96][6][6], float output[1][192][6][6]){
 	}
 }
 
-void shuffle_96_r_p(float right[1][96][6][6], float output[1][192][6][6]){
+void shuffle_96_r_p(FIX_8 right[1][96][6][6], FIX_8 output[1][192][6][6]){
 	for(int co = 0;co <192;co ++){
 		for(int h=0;h<6;h++){
 			for(int w = 0;w<6;w++){
@@ -885,24 +563,24 @@ void shuffle_96_r_p(float right[1][96][6][6], float output[1][192][6][6]){
 }
 
 /*---------------Original DownsampleUnit2------------------
-void DownsampleUnit2(float input[1][96][8][8],
-	float conv1r_weight[96][96][1][1],
-	float conv1r_bias[96],
-	float conv2r_weight[96][1][3][3],
-	float conv2r_bias[96],
-	float conv3r_weight[96][96][1][1],
-	float conv3r_bias[96],
-	float conv1l_weight[96][1][3][3],
-	float conv1l_bias[96],
-	float conv2l_weight[96][96][1][1],
-	float conv2l_bias[96],
-	float output[1][192][4][4]){
+void DownsampleUnit2(FIX_8 input[1][96][8][8],
+	FIX_8 conv1r_weight[96][96][1][1],
+	FIX_8 conv1r_bias[96],
+	FIX_8 conv2r_weight[96][1][3][3],
+	FIX_8 conv2r_bias[96],
+	FIX_8 conv3r_weight[96][96][1][1],
+	FIX_8 conv3r_bias[96],
+	FIX_8 conv1l_weight[96][1][3][3],
+	FIX_8 conv1l_bias[96],
+	FIX_8 conv2l_weight[96][96][1][1],
+	FIX_8 conv2l_bias[96],
+	FIX_8 output[1][192][4][4]){
 
-	float conv1r_output[1][96][8][8]={0};
-	float conv2r_ourput[1][96][4][4]={0};
-	float conv3r_ourput[1][96][4][4]={0};
-	float conv1l_output[1][96][4][4]={0};
-	float conv2l_output[1][96][4][4]={0};
+	FIX_8 conv1r_output[1][96][8][8]={0};
+	FIX_8 conv2r_ourput[1][96][4][4]={0};
+	FIX_8 conv3r_ourput[1][96][4][4]={0};
+	FIX_8 conv1l_output[1][96][4][4]={0};
+	FIX_8 conv2l_output[1][96][4][4]={0};
 
 
 	//conv1r
@@ -922,20 +600,20 @@ void DownsampleUnit2(float input[1][96][8][8],
 
 }*/
 /*------------Original ShuffleUnit2-----------------
-void ShuffleUnit2(float input[1][192][4][4],
-	float conv1_weight[96][96][1][1],
-	float conv1_bias[96],
-	float conv2_weight[96][1][3][3],
-	float conv2_bias[96],
-	float conv3_weight[96][96][1][1],
-	float conv3_bias[96],
-	float output[1][192][4][4]
+void ShuffleUnit2(FIX_8 input[1][192][4][4],
+	FIX_8 conv1_weight[96][96][1][1],
+	FIX_8 conv1_bias[96],
+	FIX_8 conv2_weight[96][1][3][3],
+	FIX_8 conv2_bias[96],
+	FIX_8 conv3_weight[96][96][1][1],
+	FIX_8 conv3_bias[96],
+	FIX_8 output[1][192][4][4]
 	){
-	float left_part[1][96][4][4] = {0};
-	float right_part[1][96][4][4] = {0};
-	float conv1_output[1][96][4][4] = {0};
-	float conv2_output[1][96][4][4] = {0};
-	float conv3_output[1][96][4][4] = {0};
+	FIX_8 left_part[1][96][4][4] = {0};
+	FIX_8 right_part[1][96][4][4] = {0};
+	FIX_8 conv1_output[1][96][4][4] = {0};
+	FIX_8 conv2_output[1][96][4][4] = {0};
+	FIX_8 conv3_output[1][96][4][4] = {0};
 
 	//right
 	for(int co = 0;co <96;co ++){
@@ -959,30 +637,30 @@ void ShuffleUnit2(float input[1][192][4][4],
 }*/
 
 
-void conv_last(float input[1][192][4][4],
-	float weight[512][192][1][1],
-	float bias[512],
-	float output[1][512][4][4]){
+void conv_last(FIX_8 input[1][192][4][4],
+	FIX_8 weight[512][192][1][1],
+	FIX_8 bias[512],
+	FIX_8 output[1][512][4][4]){
 
 	for(int co = 0;co<512;co++){
 		for(int h = 0;h<4;h++){
 			for(int w = 0;w<4;w++){
-				float sum = 0;
+				FIX_8 sum = 0;
 				for(int ci = 0;ci<192;ci++){
 					sum += weight[co][ci][0][0]*input[0][ci][h][w];
 				}
-				float result = sum + bias[co];
-                output[0][co][h][w] = (result > 0)? result : 0.0f;
+				FIX_8 result = sum + bias[co];
+                output[0][co][h][w] = (result > 0)? result : FIX_8(0);
 			}
 		}
 	}
 }
 
-void avgpool(float input[1][512][4][4],
-	float output[512]){
+void avgpool(FIX_8 input[1][512][4][4],
+	FIX_8 output[512]){
 
 	for(int co = 0;co<512;co++){
-		float sum = 0;
+		FIX_8 sum = 0;
 		for(int h = 0;h<4;h++){
 			for(int w=0;w<4;w++){
 				sum += input[0][co][h][w];
@@ -992,18 +670,18 @@ void avgpool(float input[1][512][4][4],
 	}
 }
 
-void fc(float input[512],
-	float weight[10][512],
-	float bias[10],
-	float output[10]){
+void fc(FIX_8 input[512],
+	FIX_8 weight[10][512],
+	FIX_8 bias[10],
+	FIX_8 output[10]){
 
 	for(int co = 0;co<10;co++){
-		float sum = 0;
+		FIX_8 sum = 0;
 		for(int ci = 0;ci<512;ci++){
 			sum += weight[co][ci] * input[ci];
 
 		}
-		float result = sum + bias[co];
+		FIX_8 result = sum + bias[co];
 		output[co] = result;
 	}
 }

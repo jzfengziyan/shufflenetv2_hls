@@ -1,15 +1,15 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-//Date        : Tue Oct 17 00:07:25 2017
-//Host        : RhoG_Squadron running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
+//Date        : Sat Dec 15 02:34:03 2018
+//Host        : ziyan-ThinkPad-X1-Carbon-6th running 64-bit Ubuntu 18.04.1 LTS
 //Command     : generate_target accelerator_bd.bd
 //Design      : accelerator_bd
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "accelerator_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=accelerator_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "accelerator_bd.hwdef" *) 
+(* CORE_GENERATION_INFO = "accelerator_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=accelerator_bd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_clkrst_cnt=2,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "accelerator_bd.hwdef" *) 
 module accelerator_bd
    (DDR_addr,
     DDR_ba,
@@ -54,6 +54,138 @@ module accelerator_bd
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
 
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARQOS;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_ARREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_BIAS_ARSIZE;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_ARVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWQOS;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_AWREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_BIAS_AWSIZE;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_AWVALID;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_BREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_BIAS_BRESP;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_BVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_BIAS_RDATA;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_RLAST;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_RREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_BIAS_RRESP;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_RVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_BIAS_WDATA;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_WLAST;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_WREADY;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_BIAS_WSTRB;
+  wire ShuffleNetV2_0_m_axi_DATA_BIAS_WVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARQOS;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARSIZE;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWQOS;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWSIZE;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWVALID;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BRESP;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RDATA;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RLAST;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RRESP;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WDATA;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WLAST;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WREADY;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WSTRB;
+  wire ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARQOS;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARSIZE;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWQOS;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWSIZE;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWVALID;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BRESP;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RDATA;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RLAST;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RRESP;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WDATA;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WLAST;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WREADY;
+  wire [3:0]ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WSTRB;
+  wire ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARQOS;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARSIZE;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWADDR;
+  wire [1:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWBURST;
+  wire [3:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWCACHE;
+  wire [7:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLEN;
+  wire [1:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK;
+  wire [2:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWPROT;
+  wire [3:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWQOS;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWREADY;
+  wire [2:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWSIZE;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWVALID;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BRESP;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RDATA;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RLAST;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RREADY;
+  wire [1:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RRESP;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RVALID;
+  wire [31:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WDATA;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WLAST;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WREADY;
+  wire [3:0]ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WSTRB;
+  wire ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WVALID;
   wire [31:0]axi_smc_1_M00_AXI_ARADDR;
   wire [1:0]axi_smc_1_M00_AXI_ARBURST;
   wire [3:0]axi_smc_1_M00_AXI_ARCACHE;
@@ -120,6 +252,39 @@ module accelerator_bd
   wire axi_smc_2_M00_AXI_WREADY;
   wire [7:0]axi_smc_2_M00_AXI_WSTRB;
   wire axi_smc_2_M00_AXI_WVALID;
+  wire [31:0]axi_smc_3_M00_AXI_ARADDR;
+  wire [1:0]axi_smc_3_M00_AXI_ARBURST;
+  wire [3:0]axi_smc_3_M00_AXI_ARCACHE;
+  wire [3:0]axi_smc_3_M00_AXI_ARLEN;
+  wire [1:0]axi_smc_3_M00_AXI_ARLOCK;
+  wire [2:0]axi_smc_3_M00_AXI_ARPROT;
+  wire [3:0]axi_smc_3_M00_AXI_ARQOS;
+  wire axi_smc_3_M00_AXI_ARREADY;
+  wire [2:0]axi_smc_3_M00_AXI_ARSIZE;
+  wire axi_smc_3_M00_AXI_ARVALID;
+  wire [31:0]axi_smc_3_M00_AXI_AWADDR;
+  wire [1:0]axi_smc_3_M00_AXI_AWBURST;
+  wire [3:0]axi_smc_3_M00_AXI_AWCACHE;
+  wire [3:0]axi_smc_3_M00_AXI_AWLEN;
+  wire [1:0]axi_smc_3_M00_AXI_AWLOCK;
+  wire [2:0]axi_smc_3_M00_AXI_AWPROT;
+  wire [3:0]axi_smc_3_M00_AXI_AWQOS;
+  wire axi_smc_3_M00_AXI_AWREADY;
+  wire [2:0]axi_smc_3_M00_AXI_AWSIZE;
+  wire axi_smc_3_M00_AXI_AWVALID;
+  wire axi_smc_3_M00_AXI_BREADY;
+  wire [1:0]axi_smc_3_M00_AXI_BRESP;
+  wire axi_smc_3_M00_AXI_BVALID;
+  wire [63:0]axi_smc_3_M00_AXI_RDATA;
+  wire axi_smc_3_M00_AXI_RLAST;
+  wire axi_smc_3_M00_AXI_RREADY;
+  wire [1:0]axi_smc_3_M00_AXI_RRESP;
+  wire axi_smc_3_M00_AXI_RVALID;
+  wire [63:0]axi_smc_3_M00_AXI_WDATA;
+  wire axi_smc_3_M00_AXI_WLAST;
+  wire axi_smc_3_M00_AXI_WREADY;
+  wire [7:0]axi_smc_3_M00_AXI_WSTRB;
+  wire axi_smc_3_M00_AXI_WVALID;
   wire [31:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
@@ -216,21 +381,21 @@ module accelerator_bd
   wire processing_system7_0_M_AXI_GP0_WVALID;
   wire [31:0]ps7_0_axi_periph_M00_AXI_ARADDR;
   wire ps7_0_axi_periph_M00_AXI_ARREADY;
-  wire [0:0]ps7_0_axi_periph_M00_AXI_ARVALID;
+  wire ps7_0_axi_periph_M00_AXI_ARVALID;
   wire [31:0]ps7_0_axi_periph_M00_AXI_AWADDR;
   wire ps7_0_axi_periph_M00_AXI_AWREADY;
-  wire [0:0]ps7_0_axi_periph_M00_AXI_AWVALID;
-  wire [0:0]ps7_0_axi_periph_M00_AXI_BREADY;
+  wire ps7_0_axi_periph_M00_AXI_AWVALID;
+  wire ps7_0_axi_periph_M00_AXI_BREADY;
   wire [1:0]ps7_0_axi_periph_M00_AXI_BRESP;
   wire ps7_0_axi_periph_M00_AXI_BVALID;
   wire [31:0]ps7_0_axi_periph_M00_AXI_RDATA;
-  wire [0:0]ps7_0_axi_periph_M00_AXI_RREADY;
+  wire ps7_0_axi_periph_M00_AXI_RREADY;
   wire [1:0]ps7_0_axi_periph_M00_AXI_RRESP;
   wire ps7_0_axi_periph_M00_AXI_RVALID;
   wire [31:0]ps7_0_axi_periph_M00_AXI_WDATA;
   wire ps7_0_axi_periph_M00_AXI_WREADY;
   wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
-  wire [0:0]ps7_0_axi_periph_M00_AXI_WVALID;
+  wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [31:0]ps7_0_axi_periph_M01_AXI_ARADDR;
   wire ps7_0_axi_periph_M01_AXI_ARREADY;
   wire ps7_0_axi_periph_M01_AXI_ARVALID;
@@ -250,106 +415,159 @@ module accelerator_bd
   wire ps7_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_A_ARADDR;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_A_ARBURST;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_A_ARCACHE;
-  wire [7:0]vector_multiplier_0_m_axi_DATA_A_ARLEN;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_A_ARLOCK;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_A_ARPROT;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_A_ARQOS;
-  wire vector_multiplier_0_m_axi_DATA_A_ARREADY;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_A_ARSIZE;
-  wire vector_multiplier_0_m_axi_DATA_A_ARVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_A_AWADDR;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_A_AWBURST;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_A_AWCACHE;
-  wire [7:0]vector_multiplier_0_m_axi_DATA_A_AWLEN;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_A_AWLOCK;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_A_AWPROT;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_A_AWQOS;
-  wire vector_multiplier_0_m_axi_DATA_A_AWREADY;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_A_AWSIZE;
-  wire vector_multiplier_0_m_axi_DATA_A_AWVALID;
-  wire vector_multiplier_0_m_axi_DATA_A_BREADY;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_A_BRESP;
-  wire vector_multiplier_0_m_axi_DATA_A_BVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_A_RDATA;
-  wire vector_multiplier_0_m_axi_DATA_A_RLAST;
-  wire vector_multiplier_0_m_axi_DATA_A_RREADY;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_A_RRESP;
-  wire vector_multiplier_0_m_axi_DATA_A_RVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_A_WDATA;
-  wire vector_multiplier_0_m_axi_DATA_A_WLAST;
-  wire vector_multiplier_0_m_axi_DATA_A_WREADY;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_A_WSTRB;
-  wire vector_multiplier_0_m_axi_DATA_A_WVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_B_ARADDR;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_B_ARBURST;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_B_ARCACHE;
-  wire [7:0]vector_multiplier_0_m_axi_DATA_B_ARLEN;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_B_ARLOCK;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_B_ARPROT;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_B_ARQOS;
-  wire vector_multiplier_0_m_axi_DATA_B_ARREADY;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_B_ARSIZE;
-  wire vector_multiplier_0_m_axi_DATA_B_ARVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_B_AWADDR;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_B_AWBURST;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_B_AWCACHE;
-  wire [7:0]vector_multiplier_0_m_axi_DATA_B_AWLEN;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_B_AWLOCK;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_B_AWPROT;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_B_AWQOS;
-  wire vector_multiplier_0_m_axi_DATA_B_AWREADY;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_B_AWSIZE;
-  wire vector_multiplier_0_m_axi_DATA_B_AWVALID;
-  wire vector_multiplier_0_m_axi_DATA_B_BREADY;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_B_BRESP;
-  wire vector_multiplier_0_m_axi_DATA_B_BVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_B_RDATA;
-  wire vector_multiplier_0_m_axi_DATA_B_RLAST;
-  wire vector_multiplier_0_m_axi_DATA_B_RREADY;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_B_RRESP;
-  wire vector_multiplier_0_m_axi_DATA_B_RVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_B_WDATA;
-  wire vector_multiplier_0_m_axi_DATA_B_WLAST;
-  wire vector_multiplier_0_m_axi_DATA_B_WREADY;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_B_WSTRB;
-  wire vector_multiplier_0_m_axi_DATA_B_WVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_C_ARADDR;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_C_ARBURST;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_C_ARCACHE;
-  wire [7:0]vector_multiplier_0_m_axi_DATA_C_ARLEN;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_C_ARLOCK;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_C_ARPROT;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_C_ARQOS;
-  wire vector_multiplier_0_m_axi_DATA_C_ARREADY;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_C_ARSIZE;
-  wire vector_multiplier_0_m_axi_DATA_C_ARVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_C_AWADDR;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_C_AWBURST;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_C_AWCACHE;
-  wire [7:0]vector_multiplier_0_m_axi_DATA_C_AWLEN;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_C_AWLOCK;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_C_AWPROT;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_C_AWQOS;
-  wire vector_multiplier_0_m_axi_DATA_C_AWREADY;
-  wire [2:0]vector_multiplier_0_m_axi_DATA_C_AWSIZE;
-  wire vector_multiplier_0_m_axi_DATA_C_AWVALID;
-  wire vector_multiplier_0_m_axi_DATA_C_BREADY;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_C_BRESP;
-  wire vector_multiplier_0_m_axi_DATA_C_BVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_C_RDATA;
-  wire vector_multiplier_0_m_axi_DATA_C_RLAST;
-  wire vector_multiplier_0_m_axi_DATA_C_RREADY;
-  wire [1:0]vector_multiplier_0_m_axi_DATA_C_RRESP;
-  wire vector_multiplier_0_m_axi_DATA_C_RVALID;
-  wire [31:0]vector_multiplier_0_m_axi_DATA_C_WDATA;
-  wire vector_multiplier_0_m_axi_DATA_C_WLAST;
-  wire vector_multiplier_0_m_axi_DATA_C_WREADY;
-  wire [3:0]vector_multiplier_0_m_axi_DATA_C_WSTRB;
-  wire vector_multiplier_0_m_axi_DATA_C_WVALID;
 
+  accelerator_bd_ShuffleNetV2_0_1 ShuffleNetV2_0
+       (.ap_clk(processing_system7_0_FCLK_CLK0),
+        .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
+        .m_axi_DATA_BIAS_ARADDR(ShuffleNetV2_0_m_axi_DATA_BIAS_ARADDR),
+        .m_axi_DATA_BIAS_ARBURST(ShuffleNetV2_0_m_axi_DATA_BIAS_ARBURST),
+        .m_axi_DATA_BIAS_ARCACHE(ShuffleNetV2_0_m_axi_DATA_BIAS_ARCACHE),
+        .m_axi_DATA_BIAS_ARLEN(ShuffleNetV2_0_m_axi_DATA_BIAS_ARLEN),
+        .m_axi_DATA_BIAS_ARLOCK(ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK),
+        .m_axi_DATA_BIAS_ARPROT(ShuffleNetV2_0_m_axi_DATA_BIAS_ARPROT),
+        .m_axi_DATA_BIAS_ARQOS(ShuffleNetV2_0_m_axi_DATA_BIAS_ARQOS),
+        .m_axi_DATA_BIAS_ARREADY(ShuffleNetV2_0_m_axi_DATA_BIAS_ARREADY),
+        .m_axi_DATA_BIAS_ARSIZE(ShuffleNetV2_0_m_axi_DATA_BIAS_ARSIZE),
+        .m_axi_DATA_BIAS_ARVALID(ShuffleNetV2_0_m_axi_DATA_BIAS_ARVALID),
+        .m_axi_DATA_BIAS_AWADDR(ShuffleNetV2_0_m_axi_DATA_BIAS_AWADDR),
+        .m_axi_DATA_BIAS_AWBURST(ShuffleNetV2_0_m_axi_DATA_BIAS_AWBURST),
+        .m_axi_DATA_BIAS_AWCACHE(ShuffleNetV2_0_m_axi_DATA_BIAS_AWCACHE),
+        .m_axi_DATA_BIAS_AWLEN(ShuffleNetV2_0_m_axi_DATA_BIAS_AWLEN),
+        .m_axi_DATA_BIAS_AWLOCK(ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK),
+        .m_axi_DATA_BIAS_AWPROT(ShuffleNetV2_0_m_axi_DATA_BIAS_AWPROT),
+        .m_axi_DATA_BIAS_AWQOS(ShuffleNetV2_0_m_axi_DATA_BIAS_AWQOS),
+        .m_axi_DATA_BIAS_AWREADY(ShuffleNetV2_0_m_axi_DATA_BIAS_AWREADY),
+        .m_axi_DATA_BIAS_AWSIZE(ShuffleNetV2_0_m_axi_DATA_BIAS_AWSIZE),
+        .m_axi_DATA_BIAS_AWVALID(ShuffleNetV2_0_m_axi_DATA_BIAS_AWVALID),
+        .m_axi_DATA_BIAS_BREADY(ShuffleNetV2_0_m_axi_DATA_BIAS_BREADY),
+        .m_axi_DATA_BIAS_BRESP(ShuffleNetV2_0_m_axi_DATA_BIAS_BRESP),
+        .m_axi_DATA_BIAS_BVALID(ShuffleNetV2_0_m_axi_DATA_BIAS_BVALID),
+        .m_axi_DATA_BIAS_RDATA(ShuffleNetV2_0_m_axi_DATA_BIAS_RDATA),
+        .m_axi_DATA_BIAS_RLAST(ShuffleNetV2_0_m_axi_DATA_BIAS_RLAST),
+        .m_axi_DATA_BIAS_RREADY(ShuffleNetV2_0_m_axi_DATA_BIAS_RREADY),
+        .m_axi_DATA_BIAS_RRESP(ShuffleNetV2_0_m_axi_DATA_BIAS_RRESP),
+        .m_axi_DATA_BIAS_RVALID(ShuffleNetV2_0_m_axi_DATA_BIAS_RVALID),
+        .m_axi_DATA_BIAS_WDATA(ShuffleNetV2_0_m_axi_DATA_BIAS_WDATA),
+        .m_axi_DATA_BIAS_WLAST(ShuffleNetV2_0_m_axi_DATA_BIAS_WLAST),
+        .m_axi_DATA_BIAS_WREADY(ShuffleNetV2_0_m_axi_DATA_BIAS_WREADY),
+        .m_axi_DATA_BIAS_WSTRB(ShuffleNetV2_0_m_axi_DATA_BIAS_WSTRB),
+        .m_axi_DATA_BIAS_WVALID(ShuffleNetV2_0_m_axi_DATA_BIAS_WVALID),
+        .m_axi_DATA_INPUT_OUTPUT_ARADDR(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARADDR),
+        .m_axi_DATA_INPUT_OUTPUT_ARBURST(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARBURST),
+        .m_axi_DATA_INPUT_OUTPUT_ARCACHE(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARCACHE),
+        .m_axi_DATA_INPUT_OUTPUT_ARLEN(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLEN),
+        .m_axi_DATA_INPUT_OUTPUT_ARLOCK(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK),
+        .m_axi_DATA_INPUT_OUTPUT_ARPROT(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARPROT),
+        .m_axi_DATA_INPUT_OUTPUT_ARQOS(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARQOS),
+        .m_axi_DATA_INPUT_OUTPUT_ARREADY(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARREADY),
+        .m_axi_DATA_INPUT_OUTPUT_ARSIZE(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARSIZE),
+        .m_axi_DATA_INPUT_OUTPUT_ARVALID(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARVALID),
+        .m_axi_DATA_INPUT_OUTPUT_AWADDR(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWADDR),
+        .m_axi_DATA_INPUT_OUTPUT_AWBURST(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWBURST),
+        .m_axi_DATA_INPUT_OUTPUT_AWCACHE(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWCACHE),
+        .m_axi_DATA_INPUT_OUTPUT_AWLEN(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLEN),
+        .m_axi_DATA_INPUT_OUTPUT_AWLOCK(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK),
+        .m_axi_DATA_INPUT_OUTPUT_AWPROT(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWPROT),
+        .m_axi_DATA_INPUT_OUTPUT_AWQOS(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWQOS),
+        .m_axi_DATA_INPUT_OUTPUT_AWREADY(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWREADY),
+        .m_axi_DATA_INPUT_OUTPUT_AWSIZE(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWSIZE),
+        .m_axi_DATA_INPUT_OUTPUT_AWVALID(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWVALID),
+        .m_axi_DATA_INPUT_OUTPUT_BREADY(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BREADY),
+        .m_axi_DATA_INPUT_OUTPUT_BRESP(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BRESP),
+        .m_axi_DATA_INPUT_OUTPUT_BVALID(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BVALID),
+        .m_axi_DATA_INPUT_OUTPUT_RDATA(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RDATA),
+        .m_axi_DATA_INPUT_OUTPUT_RLAST(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RLAST),
+        .m_axi_DATA_INPUT_OUTPUT_RREADY(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RREADY),
+        .m_axi_DATA_INPUT_OUTPUT_RRESP(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RRESP),
+        .m_axi_DATA_INPUT_OUTPUT_RVALID(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RVALID),
+        .m_axi_DATA_INPUT_OUTPUT_WDATA(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WDATA),
+        .m_axi_DATA_INPUT_OUTPUT_WLAST(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WLAST),
+        .m_axi_DATA_INPUT_OUTPUT_WREADY(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WREADY),
+        .m_axi_DATA_INPUT_OUTPUT_WSTRB(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WSTRB),
+        .m_axi_DATA_INPUT_OUTPUT_WVALID(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WVALID),
+        .m_axi_DATA_OTHER_WEIGHTS_ARADDR(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARADDR),
+        .m_axi_DATA_OTHER_WEIGHTS_ARBURST(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARBURST),
+        .m_axi_DATA_OTHER_WEIGHTS_ARCACHE(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARCACHE),
+        .m_axi_DATA_OTHER_WEIGHTS_ARLEN(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLEN),
+        .m_axi_DATA_OTHER_WEIGHTS_ARLOCK(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK),
+        .m_axi_DATA_OTHER_WEIGHTS_ARPROT(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARPROT),
+        .m_axi_DATA_OTHER_WEIGHTS_ARQOS(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARQOS),
+        .m_axi_DATA_OTHER_WEIGHTS_ARREADY(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARREADY),
+        .m_axi_DATA_OTHER_WEIGHTS_ARSIZE(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARSIZE),
+        .m_axi_DATA_OTHER_WEIGHTS_ARVALID(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARVALID),
+        .m_axi_DATA_OTHER_WEIGHTS_AWADDR(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWADDR),
+        .m_axi_DATA_OTHER_WEIGHTS_AWBURST(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWBURST),
+        .m_axi_DATA_OTHER_WEIGHTS_AWCACHE(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWCACHE),
+        .m_axi_DATA_OTHER_WEIGHTS_AWLEN(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLEN),
+        .m_axi_DATA_OTHER_WEIGHTS_AWLOCK(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK),
+        .m_axi_DATA_OTHER_WEIGHTS_AWPROT(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWPROT),
+        .m_axi_DATA_OTHER_WEIGHTS_AWQOS(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWQOS),
+        .m_axi_DATA_OTHER_WEIGHTS_AWREADY(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWREADY),
+        .m_axi_DATA_OTHER_WEIGHTS_AWSIZE(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWSIZE),
+        .m_axi_DATA_OTHER_WEIGHTS_AWVALID(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWVALID),
+        .m_axi_DATA_OTHER_WEIGHTS_BREADY(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BREADY),
+        .m_axi_DATA_OTHER_WEIGHTS_BRESP(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BRESP),
+        .m_axi_DATA_OTHER_WEIGHTS_BVALID(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BVALID),
+        .m_axi_DATA_OTHER_WEIGHTS_RDATA(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RDATA),
+        .m_axi_DATA_OTHER_WEIGHTS_RLAST(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RLAST),
+        .m_axi_DATA_OTHER_WEIGHTS_RREADY(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RREADY),
+        .m_axi_DATA_OTHER_WEIGHTS_RRESP(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RRESP),
+        .m_axi_DATA_OTHER_WEIGHTS_RVALID(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RVALID),
+        .m_axi_DATA_OTHER_WEIGHTS_WDATA(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WDATA),
+        .m_axi_DATA_OTHER_WEIGHTS_WLAST(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WLAST),
+        .m_axi_DATA_OTHER_WEIGHTS_WREADY(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WREADY),
+        .m_axi_DATA_OTHER_WEIGHTS_WSTRB(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WSTRB),
+        .m_axi_DATA_OTHER_WEIGHTS_WVALID(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WVALID),
+        .m_axi_p3X3_1X1_WEIGHTS_ARADDR(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARADDR),
+        .m_axi_p3X3_1X1_WEIGHTS_ARBURST(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARBURST),
+        .m_axi_p3X3_1X1_WEIGHTS_ARCACHE(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARCACHE),
+        .m_axi_p3X3_1X1_WEIGHTS_ARLEN(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLEN),
+        .m_axi_p3X3_1X1_WEIGHTS_ARLOCK(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK),
+        .m_axi_p3X3_1X1_WEIGHTS_ARPROT(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARPROT),
+        .m_axi_p3X3_1X1_WEIGHTS_ARQOS(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARQOS),
+        .m_axi_p3X3_1X1_WEIGHTS_ARREADY(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARREADY),
+        .m_axi_p3X3_1X1_WEIGHTS_ARSIZE(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARSIZE),
+        .m_axi_p3X3_1X1_WEIGHTS_ARVALID(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARVALID),
+        .m_axi_p3X3_1X1_WEIGHTS_AWADDR(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWADDR),
+        .m_axi_p3X3_1X1_WEIGHTS_AWBURST(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWBURST),
+        .m_axi_p3X3_1X1_WEIGHTS_AWCACHE(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWCACHE),
+        .m_axi_p3X3_1X1_WEIGHTS_AWLEN(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLEN),
+        .m_axi_p3X3_1X1_WEIGHTS_AWLOCK(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK),
+        .m_axi_p3X3_1X1_WEIGHTS_AWPROT(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWPROT),
+        .m_axi_p3X3_1X1_WEIGHTS_AWQOS(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWQOS),
+        .m_axi_p3X3_1X1_WEIGHTS_AWREADY(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWREADY),
+        .m_axi_p3X3_1X1_WEIGHTS_AWSIZE(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWSIZE),
+        .m_axi_p3X3_1X1_WEIGHTS_AWVALID(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWVALID),
+        .m_axi_p3X3_1X1_WEIGHTS_BREADY(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BREADY),
+        .m_axi_p3X3_1X1_WEIGHTS_BRESP(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BRESP),
+        .m_axi_p3X3_1X1_WEIGHTS_BVALID(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BVALID),
+        .m_axi_p3X3_1X1_WEIGHTS_RDATA(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RDATA),
+        .m_axi_p3X3_1X1_WEIGHTS_RLAST(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RLAST),
+        .m_axi_p3X3_1X1_WEIGHTS_RREADY(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RREADY),
+        .m_axi_p3X3_1X1_WEIGHTS_RRESP(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RRESP),
+        .m_axi_p3X3_1X1_WEIGHTS_RVALID(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RVALID),
+        .m_axi_p3X3_1X1_WEIGHTS_WDATA(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WDATA),
+        .m_axi_p3X3_1X1_WEIGHTS_WLAST(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WLAST),
+        .m_axi_p3X3_1X1_WEIGHTS_WREADY(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WREADY),
+        .m_axi_p3X3_1X1_WEIGHTS_WSTRB(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WSTRB),
+        .m_axi_p3X3_1X1_WEIGHTS_WVALID(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WVALID),
+        .s_axi_CTL_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[6:0]),
+        .s_axi_CTL_ARREADY(ps7_0_axi_periph_M00_AXI_ARREADY),
+        .s_axi_CTL_ARVALID(ps7_0_axi_periph_M00_AXI_ARVALID),
+        .s_axi_CTL_AWADDR(ps7_0_axi_periph_M00_AXI_AWADDR[6:0]),
+        .s_axi_CTL_AWREADY(ps7_0_axi_periph_M00_AXI_AWREADY),
+        .s_axi_CTL_AWVALID(ps7_0_axi_periph_M00_AXI_AWVALID),
+        .s_axi_CTL_BREADY(ps7_0_axi_periph_M00_AXI_BREADY),
+        .s_axi_CTL_BRESP(ps7_0_axi_periph_M00_AXI_BRESP),
+        .s_axi_CTL_BVALID(ps7_0_axi_periph_M00_AXI_BVALID),
+        .s_axi_CTL_RDATA(ps7_0_axi_periph_M00_AXI_RDATA),
+        .s_axi_CTL_RREADY(ps7_0_axi_periph_M00_AXI_RREADY),
+        .s_axi_CTL_RRESP(ps7_0_axi_periph_M00_AXI_RRESP),
+        .s_axi_CTL_RVALID(ps7_0_axi_periph_M00_AXI_RVALID),
+        .s_axi_CTL_WDATA(ps7_0_axi_periph_M00_AXI_WDATA),
+        .s_axi_CTL_WREADY(ps7_0_axi_periph_M00_AXI_WREADY),
+        .s_axi_CTL_WSTRB(ps7_0_axi_periph_M00_AXI_WSTRB),
+        .s_axi_CTL_WVALID(ps7_0_axi_periph_M00_AXI_WVALID));
   accelerator_bd_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arburst(axi_smc_M00_AXI_ARBURST),
@@ -384,39 +602,39 @@ module accelerator_bd
         .M00_AXI_wready(axi_smc_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_smc_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_smc_M00_AXI_WVALID),
-        .S00_AXI_araddr(vector_multiplier_0_m_axi_DATA_A_ARADDR),
-        .S00_AXI_arburst(vector_multiplier_0_m_axi_DATA_A_ARBURST),
-        .S00_AXI_arcache(vector_multiplier_0_m_axi_DATA_A_ARCACHE),
-        .S00_AXI_arlen(vector_multiplier_0_m_axi_DATA_A_ARLEN),
-        .S00_AXI_arlock(vector_multiplier_0_m_axi_DATA_A_ARLOCK[0]),
-        .S00_AXI_arprot(vector_multiplier_0_m_axi_DATA_A_ARPROT),
-        .S00_AXI_arqos(vector_multiplier_0_m_axi_DATA_A_ARQOS),
-        .S00_AXI_arready(vector_multiplier_0_m_axi_DATA_A_ARREADY),
-        .S00_AXI_arsize(vector_multiplier_0_m_axi_DATA_A_ARSIZE),
-        .S00_AXI_arvalid(vector_multiplier_0_m_axi_DATA_A_ARVALID),
-        .S00_AXI_awaddr(vector_multiplier_0_m_axi_DATA_A_AWADDR),
-        .S00_AXI_awburst(vector_multiplier_0_m_axi_DATA_A_AWBURST),
-        .S00_AXI_awcache(vector_multiplier_0_m_axi_DATA_A_AWCACHE),
-        .S00_AXI_awlen(vector_multiplier_0_m_axi_DATA_A_AWLEN),
-        .S00_AXI_awlock(vector_multiplier_0_m_axi_DATA_A_AWLOCK[0]),
-        .S00_AXI_awprot(vector_multiplier_0_m_axi_DATA_A_AWPROT),
-        .S00_AXI_awqos(vector_multiplier_0_m_axi_DATA_A_AWQOS),
-        .S00_AXI_awready(vector_multiplier_0_m_axi_DATA_A_AWREADY),
-        .S00_AXI_awsize(vector_multiplier_0_m_axi_DATA_A_AWSIZE),
-        .S00_AXI_awvalid(vector_multiplier_0_m_axi_DATA_A_AWVALID),
-        .S00_AXI_bready(vector_multiplier_0_m_axi_DATA_A_BREADY),
-        .S00_AXI_bresp(vector_multiplier_0_m_axi_DATA_A_BRESP),
-        .S00_AXI_bvalid(vector_multiplier_0_m_axi_DATA_A_BVALID),
-        .S00_AXI_rdata(vector_multiplier_0_m_axi_DATA_A_RDATA),
-        .S00_AXI_rlast(vector_multiplier_0_m_axi_DATA_A_RLAST),
-        .S00_AXI_rready(vector_multiplier_0_m_axi_DATA_A_RREADY),
-        .S00_AXI_rresp(vector_multiplier_0_m_axi_DATA_A_RRESP),
-        .S00_AXI_rvalid(vector_multiplier_0_m_axi_DATA_A_RVALID),
-        .S00_AXI_wdata(vector_multiplier_0_m_axi_DATA_A_WDATA),
-        .S00_AXI_wlast(vector_multiplier_0_m_axi_DATA_A_WLAST),
-        .S00_AXI_wready(vector_multiplier_0_m_axi_DATA_A_WREADY),
-        .S00_AXI_wstrb(vector_multiplier_0_m_axi_DATA_A_WSTRB),
-        .S00_AXI_wvalid(vector_multiplier_0_m_axi_DATA_A_WVALID),
+        .S00_AXI_araddr(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARADDR),
+        .S00_AXI_arburst(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARBURST),
+        .S00_AXI_arcache(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARCACHE),
+        .S00_AXI_arlen(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLEN),
+        .S00_AXI_arlock(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK[0]),
+        .S00_AXI_arprot(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARPROT),
+        .S00_AXI_arqos(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARQOS),
+        .S00_AXI_arready(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARREADY),
+        .S00_AXI_arsize(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARSIZE),
+        .S00_AXI_arvalid(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARVALID),
+        .S00_AXI_awaddr(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWADDR),
+        .S00_AXI_awburst(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWBURST),
+        .S00_AXI_awcache(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWCACHE),
+        .S00_AXI_awlen(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLEN),
+        .S00_AXI_awlock(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK[0]),
+        .S00_AXI_awprot(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWPROT),
+        .S00_AXI_awqos(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWQOS),
+        .S00_AXI_awready(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWREADY),
+        .S00_AXI_awsize(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWSIZE),
+        .S00_AXI_awvalid(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWVALID),
+        .S00_AXI_bready(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BREADY),
+        .S00_AXI_bresp(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BRESP),
+        .S00_AXI_bvalid(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_BVALID),
+        .S00_AXI_rdata(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RDATA),
+        .S00_AXI_rlast(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RLAST),
+        .S00_AXI_rready(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RREADY),
+        .S00_AXI_rresp(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RRESP),
+        .S00_AXI_rvalid(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_RVALID),
+        .S00_AXI_wdata(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WDATA),
+        .S00_AXI_wlast(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WLAST),
+        .S00_AXI_wready(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WREADY),
+        .S00_AXI_wstrb(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WSTRB),
+        .S00_AXI_wvalid(ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   accelerator_bd_axi_smc_1_0 axi_smc_1
@@ -453,39 +671,39 @@ module accelerator_bd
         .M00_AXI_wready(axi_smc_1_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_smc_1_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_smc_1_M00_AXI_WVALID),
-        .S00_AXI_araddr(vector_multiplier_0_m_axi_DATA_B_ARADDR),
-        .S00_AXI_arburst(vector_multiplier_0_m_axi_DATA_B_ARBURST),
-        .S00_AXI_arcache(vector_multiplier_0_m_axi_DATA_B_ARCACHE),
-        .S00_AXI_arlen(vector_multiplier_0_m_axi_DATA_B_ARLEN),
-        .S00_AXI_arlock(vector_multiplier_0_m_axi_DATA_B_ARLOCK[0]),
-        .S00_AXI_arprot(vector_multiplier_0_m_axi_DATA_B_ARPROT),
-        .S00_AXI_arqos(vector_multiplier_0_m_axi_DATA_B_ARQOS),
-        .S00_AXI_arready(vector_multiplier_0_m_axi_DATA_B_ARREADY),
-        .S00_AXI_arsize(vector_multiplier_0_m_axi_DATA_B_ARSIZE),
-        .S00_AXI_arvalid(vector_multiplier_0_m_axi_DATA_B_ARVALID),
-        .S00_AXI_awaddr(vector_multiplier_0_m_axi_DATA_B_AWADDR),
-        .S00_AXI_awburst(vector_multiplier_0_m_axi_DATA_B_AWBURST),
-        .S00_AXI_awcache(vector_multiplier_0_m_axi_DATA_B_AWCACHE),
-        .S00_AXI_awlen(vector_multiplier_0_m_axi_DATA_B_AWLEN),
-        .S00_AXI_awlock(vector_multiplier_0_m_axi_DATA_B_AWLOCK[0]),
-        .S00_AXI_awprot(vector_multiplier_0_m_axi_DATA_B_AWPROT),
-        .S00_AXI_awqos(vector_multiplier_0_m_axi_DATA_B_AWQOS),
-        .S00_AXI_awready(vector_multiplier_0_m_axi_DATA_B_AWREADY),
-        .S00_AXI_awsize(vector_multiplier_0_m_axi_DATA_B_AWSIZE),
-        .S00_AXI_awvalid(vector_multiplier_0_m_axi_DATA_B_AWVALID),
-        .S00_AXI_bready(vector_multiplier_0_m_axi_DATA_B_BREADY),
-        .S00_AXI_bresp(vector_multiplier_0_m_axi_DATA_B_BRESP),
-        .S00_AXI_bvalid(vector_multiplier_0_m_axi_DATA_B_BVALID),
-        .S00_AXI_rdata(vector_multiplier_0_m_axi_DATA_B_RDATA),
-        .S00_AXI_rlast(vector_multiplier_0_m_axi_DATA_B_RLAST),
-        .S00_AXI_rready(vector_multiplier_0_m_axi_DATA_B_RREADY),
-        .S00_AXI_rresp(vector_multiplier_0_m_axi_DATA_B_RRESP),
-        .S00_AXI_rvalid(vector_multiplier_0_m_axi_DATA_B_RVALID),
-        .S00_AXI_wdata(vector_multiplier_0_m_axi_DATA_B_WDATA),
-        .S00_AXI_wlast(vector_multiplier_0_m_axi_DATA_B_WLAST),
-        .S00_AXI_wready(vector_multiplier_0_m_axi_DATA_B_WREADY),
-        .S00_AXI_wstrb(vector_multiplier_0_m_axi_DATA_B_WSTRB),
-        .S00_AXI_wvalid(vector_multiplier_0_m_axi_DATA_B_WVALID),
+        .S00_AXI_araddr(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARADDR),
+        .S00_AXI_arburst(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARBURST),
+        .S00_AXI_arcache(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARCACHE),
+        .S00_AXI_arlen(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLEN),
+        .S00_AXI_arlock(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK[0]),
+        .S00_AXI_arprot(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARPROT),
+        .S00_AXI_arqos(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARQOS),
+        .S00_AXI_arready(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARREADY),
+        .S00_AXI_arsize(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARSIZE),
+        .S00_AXI_arvalid(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARVALID),
+        .S00_AXI_awaddr(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWADDR),
+        .S00_AXI_awburst(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWBURST),
+        .S00_AXI_awcache(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWCACHE),
+        .S00_AXI_awlen(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLEN),
+        .S00_AXI_awlock(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK[0]),
+        .S00_AXI_awprot(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWPROT),
+        .S00_AXI_awqos(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWQOS),
+        .S00_AXI_awready(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWREADY),
+        .S00_AXI_awsize(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWSIZE),
+        .S00_AXI_awvalid(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWVALID),
+        .S00_AXI_bready(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BREADY),
+        .S00_AXI_bresp(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BRESP),
+        .S00_AXI_bvalid(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_BVALID),
+        .S00_AXI_rdata(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RDATA),
+        .S00_AXI_rlast(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RLAST),
+        .S00_AXI_rready(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RREADY),
+        .S00_AXI_rresp(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RRESP),
+        .S00_AXI_rvalid(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_RVALID),
+        .S00_AXI_wdata(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WDATA),
+        .S00_AXI_wlast(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WLAST),
+        .S00_AXI_wready(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WREADY),
+        .S00_AXI_wstrb(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WSTRB),
+        .S00_AXI_wvalid(ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   accelerator_bd_axi_smc_2_0 axi_smc_2
@@ -522,41 +740,110 @@ module accelerator_bd
         .M00_AXI_wready(axi_smc_2_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_smc_2_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_smc_2_M00_AXI_WVALID),
-        .S00_AXI_araddr(vector_multiplier_0_m_axi_DATA_C_ARADDR),
-        .S00_AXI_arburst(vector_multiplier_0_m_axi_DATA_C_ARBURST),
-        .S00_AXI_arcache(vector_multiplier_0_m_axi_DATA_C_ARCACHE),
-        .S00_AXI_arlen(vector_multiplier_0_m_axi_DATA_C_ARLEN),
-        .S00_AXI_arlock(vector_multiplier_0_m_axi_DATA_C_ARLOCK[0]),
-        .S00_AXI_arprot(vector_multiplier_0_m_axi_DATA_C_ARPROT),
-        .S00_AXI_arqos(vector_multiplier_0_m_axi_DATA_C_ARQOS),
-        .S00_AXI_arready(vector_multiplier_0_m_axi_DATA_C_ARREADY),
-        .S00_AXI_arsize(vector_multiplier_0_m_axi_DATA_C_ARSIZE),
-        .S00_AXI_arvalid(vector_multiplier_0_m_axi_DATA_C_ARVALID),
-        .S00_AXI_awaddr(vector_multiplier_0_m_axi_DATA_C_AWADDR),
-        .S00_AXI_awburst(vector_multiplier_0_m_axi_DATA_C_AWBURST),
-        .S00_AXI_awcache(vector_multiplier_0_m_axi_DATA_C_AWCACHE),
-        .S00_AXI_awlen(vector_multiplier_0_m_axi_DATA_C_AWLEN),
-        .S00_AXI_awlock(vector_multiplier_0_m_axi_DATA_C_AWLOCK[0]),
-        .S00_AXI_awprot(vector_multiplier_0_m_axi_DATA_C_AWPROT),
-        .S00_AXI_awqos(vector_multiplier_0_m_axi_DATA_C_AWQOS),
-        .S00_AXI_awready(vector_multiplier_0_m_axi_DATA_C_AWREADY),
-        .S00_AXI_awsize(vector_multiplier_0_m_axi_DATA_C_AWSIZE),
-        .S00_AXI_awvalid(vector_multiplier_0_m_axi_DATA_C_AWVALID),
-        .S00_AXI_bready(vector_multiplier_0_m_axi_DATA_C_BREADY),
-        .S00_AXI_bresp(vector_multiplier_0_m_axi_DATA_C_BRESP),
-        .S00_AXI_bvalid(vector_multiplier_0_m_axi_DATA_C_BVALID),
-        .S00_AXI_rdata(vector_multiplier_0_m_axi_DATA_C_RDATA),
-        .S00_AXI_rlast(vector_multiplier_0_m_axi_DATA_C_RLAST),
-        .S00_AXI_rready(vector_multiplier_0_m_axi_DATA_C_RREADY),
-        .S00_AXI_rresp(vector_multiplier_0_m_axi_DATA_C_RRESP),
-        .S00_AXI_rvalid(vector_multiplier_0_m_axi_DATA_C_RVALID),
-        .S00_AXI_wdata(vector_multiplier_0_m_axi_DATA_C_WDATA),
-        .S00_AXI_wlast(vector_multiplier_0_m_axi_DATA_C_WLAST),
-        .S00_AXI_wready(vector_multiplier_0_m_axi_DATA_C_WREADY),
-        .S00_AXI_wstrb(vector_multiplier_0_m_axi_DATA_C_WSTRB),
-        .S00_AXI_wvalid(vector_multiplier_0_m_axi_DATA_C_WVALID),
+        .S00_AXI_araddr(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARADDR),
+        .S00_AXI_arburst(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARBURST),
+        .S00_AXI_arcache(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARCACHE),
+        .S00_AXI_arlen(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLEN),
+        .S00_AXI_arlock(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK[0]),
+        .S00_AXI_arprot(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARPROT),
+        .S00_AXI_arqos(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARQOS),
+        .S00_AXI_arready(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARREADY),
+        .S00_AXI_arsize(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARSIZE),
+        .S00_AXI_arvalid(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARVALID),
+        .S00_AXI_awaddr(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWADDR),
+        .S00_AXI_awburst(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWBURST),
+        .S00_AXI_awcache(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWCACHE),
+        .S00_AXI_awlen(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLEN),
+        .S00_AXI_awlock(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK[0]),
+        .S00_AXI_awprot(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWPROT),
+        .S00_AXI_awqos(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWQOS),
+        .S00_AXI_awready(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWREADY),
+        .S00_AXI_awsize(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWSIZE),
+        .S00_AXI_awvalid(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWVALID),
+        .S00_AXI_bready(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BREADY),
+        .S00_AXI_bresp(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BRESP),
+        .S00_AXI_bvalid(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_BVALID),
+        .S00_AXI_rdata(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RDATA),
+        .S00_AXI_rlast(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RLAST),
+        .S00_AXI_rready(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RREADY),
+        .S00_AXI_rresp(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RRESP),
+        .S00_AXI_rvalid(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_RVALID),
+        .S00_AXI_wdata(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WDATA),
+        .S00_AXI_wlast(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WLAST),
+        .S00_AXI_wready(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WREADY),
+        .S00_AXI_wstrb(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WSTRB),
+        .S00_AXI_wvalid(ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
+  accelerator_bd_axi_smc_2_1 axi_smc_3
+       (.M00_AXI_araddr(axi_smc_3_M00_AXI_ARADDR),
+        .M00_AXI_arburst(axi_smc_3_M00_AXI_ARBURST),
+        .M00_AXI_arcache(axi_smc_3_M00_AXI_ARCACHE),
+        .M00_AXI_arlen(axi_smc_3_M00_AXI_ARLEN),
+        .M00_AXI_arlock(axi_smc_3_M00_AXI_ARLOCK),
+        .M00_AXI_arprot(axi_smc_3_M00_AXI_ARPROT),
+        .M00_AXI_arqos(axi_smc_3_M00_AXI_ARQOS),
+        .M00_AXI_arready(axi_smc_3_M00_AXI_ARREADY),
+        .M00_AXI_arsize(axi_smc_3_M00_AXI_ARSIZE),
+        .M00_AXI_arvalid(axi_smc_3_M00_AXI_ARVALID),
+        .M00_AXI_awaddr(axi_smc_3_M00_AXI_AWADDR),
+        .M00_AXI_awburst(axi_smc_3_M00_AXI_AWBURST),
+        .M00_AXI_awcache(axi_smc_3_M00_AXI_AWCACHE),
+        .M00_AXI_awlen(axi_smc_3_M00_AXI_AWLEN),
+        .M00_AXI_awlock(axi_smc_3_M00_AXI_AWLOCK),
+        .M00_AXI_awprot(axi_smc_3_M00_AXI_AWPROT),
+        .M00_AXI_awqos(axi_smc_3_M00_AXI_AWQOS),
+        .M00_AXI_awready(axi_smc_3_M00_AXI_AWREADY),
+        .M00_AXI_awsize(axi_smc_3_M00_AXI_AWSIZE),
+        .M00_AXI_awvalid(axi_smc_3_M00_AXI_AWVALID),
+        .M00_AXI_bready(axi_smc_3_M00_AXI_BREADY),
+        .M00_AXI_bresp(axi_smc_3_M00_AXI_BRESP),
+        .M00_AXI_bvalid(axi_smc_3_M00_AXI_BVALID),
+        .M00_AXI_rdata(axi_smc_3_M00_AXI_RDATA),
+        .M00_AXI_rlast(axi_smc_3_M00_AXI_RLAST),
+        .M00_AXI_rready(axi_smc_3_M00_AXI_RREADY),
+        .M00_AXI_rresp(axi_smc_3_M00_AXI_RRESP),
+        .M00_AXI_rvalid(axi_smc_3_M00_AXI_RVALID),
+        .M00_AXI_wdata(axi_smc_3_M00_AXI_WDATA),
+        .M00_AXI_wlast(axi_smc_3_M00_AXI_WLAST),
+        .M00_AXI_wready(axi_smc_3_M00_AXI_WREADY),
+        .M00_AXI_wstrb(axi_smc_3_M00_AXI_WSTRB),
+        .M00_AXI_wvalid(axi_smc_3_M00_AXI_WVALID),
+        .S00_AXI_araddr(ShuffleNetV2_0_m_axi_DATA_BIAS_ARADDR),
+        .S00_AXI_arburst(ShuffleNetV2_0_m_axi_DATA_BIAS_ARBURST),
+        .S00_AXI_arcache(ShuffleNetV2_0_m_axi_DATA_BIAS_ARCACHE),
+        .S00_AXI_arlen(ShuffleNetV2_0_m_axi_DATA_BIAS_ARLEN),
+        .S00_AXI_arlock(ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK[0]),
+        .S00_AXI_arprot(ShuffleNetV2_0_m_axi_DATA_BIAS_ARPROT),
+        .S00_AXI_arqos(ShuffleNetV2_0_m_axi_DATA_BIAS_ARQOS),
+        .S00_AXI_arready(ShuffleNetV2_0_m_axi_DATA_BIAS_ARREADY),
+        .S00_AXI_arsize(ShuffleNetV2_0_m_axi_DATA_BIAS_ARSIZE),
+        .S00_AXI_arvalid(ShuffleNetV2_0_m_axi_DATA_BIAS_ARVALID),
+        .S00_AXI_awaddr(ShuffleNetV2_0_m_axi_DATA_BIAS_AWADDR),
+        .S00_AXI_awburst(ShuffleNetV2_0_m_axi_DATA_BIAS_AWBURST),
+        .S00_AXI_awcache(ShuffleNetV2_0_m_axi_DATA_BIAS_AWCACHE),
+        .S00_AXI_awlen(ShuffleNetV2_0_m_axi_DATA_BIAS_AWLEN),
+        .S00_AXI_awlock(ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK[0]),
+        .S00_AXI_awprot(ShuffleNetV2_0_m_axi_DATA_BIAS_AWPROT),
+        .S00_AXI_awqos(ShuffleNetV2_0_m_axi_DATA_BIAS_AWQOS),
+        .S00_AXI_awready(ShuffleNetV2_0_m_axi_DATA_BIAS_AWREADY),
+        .S00_AXI_awsize(ShuffleNetV2_0_m_axi_DATA_BIAS_AWSIZE),
+        .S00_AXI_awvalid(ShuffleNetV2_0_m_axi_DATA_BIAS_AWVALID),
+        .S00_AXI_bready(ShuffleNetV2_0_m_axi_DATA_BIAS_BREADY),
+        .S00_AXI_bresp(ShuffleNetV2_0_m_axi_DATA_BIAS_BRESP),
+        .S00_AXI_bvalid(ShuffleNetV2_0_m_axi_DATA_BIAS_BVALID),
+        .S00_AXI_rdata(ShuffleNetV2_0_m_axi_DATA_BIAS_RDATA),
+        .S00_AXI_rlast(ShuffleNetV2_0_m_axi_DATA_BIAS_RLAST),
+        .S00_AXI_rready(ShuffleNetV2_0_m_axi_DATA_BIAS_RREADY),
+        .S00_AXI_rresp(ShuffleNetV2_0_m_axi_DATA_BIAS_RRESP),
+        .S00_AXI_rvalid(ShuffleNetV2_0_m_axi_DATA_BIAS_RVALID),
+        .S00_AXI_wdata(ShuffleNetV2_0_m_axi_DATA_BIAS_WDATA),
+        .S00_AXI_wlast(ShuffleNetV2_0_m_axi_DATA_BIAS_WLAST),
+        .S00_AXI_wready(ShuffleNetV2_0_m_axi_DATA_BIAS_WREADY),
+        .S00_AXI_wstrb(ShuffleNetV2_0_m_axi_DATA_BIAS_WSTRB),
+        .S00_AXI_wvalid(ShuffleNetV2_0_m_axi_DATA_BIAS_WVALID),
+        .aclk(processing_system7_0_FCLK_CLK0),
+        .aresetn(1'b1));
   accelerator_bd_axi_timer_0_1 axi_timer_0
        (.capturetrig0(1'b0),
         .capturetrig1(1'b0),
@@ -760,6 +1047,45 @@ module accelerator_bd
         .S_AXI_HP2_WRISSUECAP1_EN(1'b0),
         .S_AXI_HP2_WSTRB(axi_smc_2_M00_AXI_WSTRB),
         .S_AXI_HP2_WVALID(axi_smc_2_M00_AXI_WVALID),
+        .S_AXI_HP3_ACLK(processing_system7_0_FCLK_CLK0),
+        .S_AXI_HP3_ARADDR(axi_smc_3_M00_AXI_ARADDR),
+        .S_AXI_HP3_ARBURST(axi_smc_3_M00_AXI_ARBURST),
+        .S_AXI_HP3_ARCACHE(axi_smc_3_M00_AXI_ARCACHE),
+        .S_AXI_HP3_ARID({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S_AXI_HP3_ARLEN(axi_smc_3_M00_AXI_ARLEN),
+        .S_AXI_HP3_ARLOCK(axi_smc_3_M00_AXI_ARLOCK),
+        .S_AXI_HP3_ARPROT(axi_smc_3_M00_AXI_ARPROT),
+        .S_AXI_HP3_ARQOS(axi_smc_3_M00_AXI_ARQOS),
+        .S_AXI_HP3_ARREADY(axi_smc_3_M00_AXI_ARREADY),
+        .S_AXI_HP3_ARSIZE(axi_smc_3_M00_AXI_ARSIZE),
+        .S_AXI_HP3_ARVALID(axi_smc_3_M00_AXI_ARVALID),
+        .S_AXI_HP3_AWADDR(axi_smc_3_M00_AXI_AWADDR),
+        .S_AXI_HP3_AWBURST(axi_smc_3_M00_AXI_AWBURST),
+        .S_AXI_HP3_AWCACHE(axi_smc_3_M00_AXI_AWCACHE),
+        .S_AXI_HP3_AWID({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S_AXI_HP3_AWLEN(axi_smc_3_M00_AXI_AWLEN),
+        .S_AXI_HP3_AWLOCK(axi_smc_3_M00_AXI_AWLOCK),
+        .S_AXI_HP3_AWPROT(axi_smc_3_M00_AXI_AWPROT),
+        .S_AXI_HP3_AWQOS(axi_smc_3_M00_AXI_AWQOS),
+        .S_AXI_HP3_AWREADY(axi_smc_3_M00_AXI_AWREADY),
+        .S_AXI_HP3_AWSIZE(axi_smc_3_M00_AXI_AWSIZE),
+        .S_AXI_HP3_AWVALID(axi_smc_3_M00_AXI_AWVALID),
+        .S_AXI_HP3_BREADY(axi_smc_3_M00_AXI_BREADY),
+        .S_AXI_HP3_BRESP(axi_smc_3_M00_AXI_BRESP),
+        .S_AXI_HP3_BVALID(axi_smc_3_M00_AXI_BVALID),
+        .S_AXI_HP3_RDATA(axi_smc_3_M00_AXI_RDATA),
+        .S_AXI_HP3_RDISSUECAP1_EN(1'b0),
+        .S_AXI_HP3_RLAST(axi_smc_3_M00_AXI_RLAST),
+        .S_AXI_HP3_RREADY(axi_smc_3_M00_AXI_RREADY),
+        .S_AXI_HP3_RRESP(axi_smc_3_M00_AXI_RRESP),
+        .S_AXI_HP3_RVALID(axi_smc_3_M00_AXI_RVALID),
+        .S_AXI_HP3_WDATA(axi_smc_3_M00_AXI_WDATA),
+        .S_AXI_HP3_WID({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S_AXI_HP3_WLAST(axi_smc_3_M00_AXI_WLAST),
+        .S_AXI_HP3_WREADY(axi_smc_3_M00_AXI_WREADY),
+        .S_AXI_HP3_WRISSUECAP1_EN(1'b0),
+        .S_AXI_HP3_WSTRB(axi_smc_3_M00_AXI_WSTRB),
+        .S_AXI_HP3_WVALID(axi_smc_3_M00_AXI_WVALID),
         .USB0_VBUS_PWRFAULT(1'b0));
   accelerator_bd_ps7_0_axi_periph_1 ps7_0_axi_periph
        (.ACLK(processing_system7_0_FCLK_CLK0),
@@ -850,125 +1176,6 @@ module accelerator_bd
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  accelerator_bd_vector_multiplier_0_0 vector_multiplier_0
-       (.ap_clk(processing_system7_0_FCLK_CLK0),
-        .ap_rst_n(rst_ps7_0_100M_peripheral_aresetn),
-        .m_axi_DATA_A_ARADDR(vector_multiplier_0_m_axi_DATA_A_ARADDR),
-        .m_axi_DATA_A_ARBURST(vector_multiplier_0_m_axi_DATA_A_ARBURST),
-        .m_axi_DATA_A_ARCACHE(vector_multiplier_0_m_axi_DATA_A_ARCACHE),
-        .m_axi_DATA_A_ARLEN(vector_multiplier_0_m_axi_DATA_A_ARLEN),
-        .m_axi_DATA_A_ARLOCK(vector_multiplier_0_m_axi_DATA_A_ARLOCK),
-        .m_axi_DATA_A_ARPROT(vector_multiplier_0_m_axi_DATA_A_ARPROT),
-        .m_axi_DATA_A_ARQOS(vector_multiplier_0_m_axi_DATA_A_ARQOS),
-        .m_axi_DATA_A_ARREADY(vector_multiplier_0_m_axi_DATA_A_ARREADY),
-        .m_axi_DATA_A_ARSIZE(vector_multiplier_0_m_axi_DATA_A_ARSIZE),
-        .m_axi_DATA_A_ARVALID(vector_multiplier_0_m_axi_DATA_A_ARVALID),
-        .m_axi_DATA_A_AWADDR(vector_multiplier_0_m_axi_DATA_A_AWADDR),
-        .m_axi_DATA_A_AWBURST(vector_multiplier_0_m_axi_DATA_A_AWBURST),
-        .m_axi_DATA_A_AWCACHE(vector_multiplier_0_m_axi_DATA_A_AWCACHE),
-        .m_axi_DATA_A_AWLEN(vector_multiplier_0_m_axi_DATA_A_AWLEN),
-        .m_axi_DATA_A_AWLOCK(vector_multiplier_0_m_axi_DATA_A_AWLOCK),
-        .m_axi_DATA_A_AWPROT(vector_multiplier_0_m_axi_DATA_A_AWPROT),
-        .m_axi_DATA_A_AWQOS(vector_multiplier_0_m_axi_DATA_A_AWQOS),
-        .m_axi_DATA_A_AWREADY(vector_multiplier_0_m_axi_DATA_A_AWREADY),
-        .m_axi_DATA_A_AWSIZE(vector_multiplier_0_m_axi_DATA_A_AWSIZE),
-        .m_axi_DATA_A_AWVALID(vector_multiplier_0_m_axi_DATA_A_AWVALID),
-        .m_axi_DATA_A_BREADY(vector_multiplier_0_m_axi_DATA_A_BREADY),
-        .m_axi_DATA_A_BRESP(vector_multiplier_0_m_axi_DATA_A_BRESP),
-        .m_axi_DATA_A_BVALID(vector_multiplier_0_m_axi_DATA_A_BVALID),
-        .m_axi_DATA_A_RDATA(vector_multiplier_0_m_axi_DATA_A_RDATA),
-        .m_axi_DATA_A_RLAST(vector_multiplier_0_m_axi_DATA_A_RLAST),
-        .m_axi_DATA_A_RREADY(vector_multiplier_0_m_axi_DATA_A_RREADY),
-        .m_axi_DATA_A_RRESP(vector_multiplier_0_m_axi_DATA_A_RRESP),
-        .m_axi_DATA_A_RVALID(vector_multiplier_0_m_axi_DATA_A_RVALID),
-        .m_axi_DATA_A_WDATA(vector_multiplier_0_m_axi_DATA_A_WDATA),
-        .m_axi_DATA_A_WLAST(vector_multiplier_0_m_axi_DATA_A_WLAST),
-        .m_axi_DATA_A_WREADY(vector_multiplier_0_m_axi_DATA_A_WREADY),
-        .m_axi_DATA_A_WSTRB(vector_multiplier_0_m_axi_DATA_A_WSTRB),
-        .m_axi_DATA_A_WVALID(vector_multiplier_0_m_axi_DATA_A_WVALID),
-        .m_axi_DATA_B_ARADDR(vector_multiplier_0_m_axi_DATA_B_ARADDR),
-        .m_axi_DATA_B_ARBURST(vector_multiplier_0_m_axi_DATA_B_ARBURST),
-        .m_axi_DATA_B_ARCACHE(vector_multiplier_0_m_axi_DATA_B_ARCACHE),
-        .m_axi_DATA_B_ARLEN(vector_multiplier_0_m_axi_DATA_B_ARLEN),
-        .m_axi_DATA_B_ARLOCK(vector_multiplier_0_m_axi_DATA_B_ARLOCK),
-        .m_axi_DATA_B_ARPROT(vector_multiplier_0_m_axi_DATA_B_ARPROT),
-        .m_axi_DATA_B_ARQOS(vector_multiplier_0_m_axi_DATA_B_ARQOS),
-        .m_axi_DATA_B_ARREADY(vector_multiplier_0_m_axi_DATA_B_ARREADY),
-        .m_axi_DATA_B_ARSIZE(vector_multiplier_0_m_axi_DATA_B_ARSIZE),
-        .m_axi_DATA_B_ARVALID(vector_multiplier_0_m_axi_DATA_B_ARVALID),
-        .m_axi_DATA_B_AWADDR(vector_multiplier_0_m_axi_DATA_B_AWADDR),
-        .m_axi_DATA_B_AWBURST(vector_multiplier_0_m_axi_DATA_B_AWBURST),
-        .m_axi_DATA_B_AWCACHE(vector_multiplier_0_m_axi_DATA_B_AWCACHE),
-        .m_axi_DATA_B_AWLEN(vector_multiplier_0_m_axi_DATA_B_AWLEN),
-        .m_axi_DATA_B_AWLOCK(vector_multiplier_0_m_axi_DATA_B_AWLOCK),
-        .m_axi_DATA_B_AWPROT(vector_multiplier_0_m_axi_DATA_B_AWPROT),
-        .m_axi_DATA_B_AWQOS(vector_multiplier_0_m_axi_DATA_B_AWQOS),
-        .m_axi_DATA_B_AWREADY(vector_multiplier_0_m_axi_DATA_B_AWREADY),
-        .m_axi_DATA_B_AWSIZE(vector_multiplier_0_m_axi_DATA_B_AWSIZE),
-        .m_axi_DATA_B_AWVALID(vector_multiplier_0_m_axi_DATA_B_AWVALID),
-        .m_axi_DATA_B_BREADY(vector_multiplier_0_m_axi_DATA_B_BREADY),
-        .m_axi_DATA_B_BRESP(vector_multiplier_0_m_axi_DATA_B_BRESP),
-        .m_axi_DATA_B_BVALID(vector_multiplier_0_m_axi_DATA_B_BVALID),
-        .m_axi_DATA_B_RDATA(vector_multiplier_0_m_axi_DATA_B_RDATA),
-        .m_axi_DATA_B_RLAST(vector_multiplier_0_m_axi_DATA_B_RLAST),
-        .m_axi_DATA_B_RREADY(vector_multiplier_0_m_axi_DATA_B_RREADY),
-        .m_axi_DATA_B_RRESP(vector_multiplier_0_m_axi_DATA_B_RRESP),
-        .m_axi_DATA_B_RVALID(vector_multiplier_0_m_axi_DATA_B_RVALID),
-        .m_axi_DATA_B_WDATA(vector_multiplier_0_m_axi_DATA_B_WDATA),
-        .m_axi_DATA_B_WLAST(vector_multiplier_0_m_axi_DATA_B_WLAST),
-        .m_axi_DATA_B_WREADY(vector_multiplier_0_m_axi_DATA_B_WREADY),
-        .m_axi_DATA_B_WSTRB(vector_multiplier_0_m_axi_DATA_B_WSTRB),
-        .m_axi_DATA_B_WVALID(vector_multiplier_0_m_axi_DATA_B_WVALID),
-        .m_axi_DATA_C_ARADDR(vector_multiplier_0_m_axi_DATA_C_ARADDR),
-        .m_axi_DATA_C_ARBURST(vector_multiplier_0_m_axi_DATA_C_ARBURST),
-        .m_axi_DATA_C_ARCACHE(vector_multiplier_0_m_axi_DATA_C_ARCACHE),
-        .m_axi_DATA_C_ARLEN(vector_multiplier_0_m_axi_DATA_C_ARLEN),
-        .m_axi_DATA_C_ARLOCK(vector_multiplier_0_m_axi_DATA_C_ARLOCK),
-        .m_axi_DATA_C_ARPROT(vector_multiplier_0_m_axi_DATA_C_ARPROT),
-        .m_axi_DATA_C_ARQOS(vector_multiplier_0_m_axi_DATA_C_ARQOS),
-        .m_axi_DATA_C_ARREADY(vector_multiplier_0_m_axi_DATA_C_ARREADY),
-        .m_axi_DATA_C_ARSIZE(vector_multiplier_0_m_axi_DATA_C_ARSIZE),
-        .m_axi_DATA_C_ARVALID(vector_multiplier_0_m_axi_DATA_C_ARVALID),
-        .m_axi_DATA_C_AWADDR(vector_multiplier_0_m_axi_DATA_C_AWADDR),
-        .m_axi_DATA_C_AWBURST(vector_multiplier_0_m_axi_DATA_C_AWBURST),
-        .m_axi_DATA_C_AWCACHE(vector_multiplier_0_m_axi_DATA_C_AWCACHE),
-        .m_axi_DATA_C_AWLEN(vector_multiplier_0_m_axi_DATA_C_AWLEN),
-        .m_axi_DATA_C_AWLOCK(vector_multiplier_0_m_axi_DATA_C_AWLOCK),
-        .m_axi_DATA_C_AWPROT(vector_multiplier_0_m_axi_DATA_C_AWPROT),
-        .m_axi_DATA_C_AWQOS(vector_multiplier_0_m_axi_DATA_C_AWQOS),
-        .m_axi_DATA_C_AWREADY(vector_multiplier_0_m_axi_DATA_C_AWREADY),
-        .m_axi_DATA_C_AWSIZE(vector_multiplier_0_m_axi_DATA_C_AWSIZE),
-        .m_axi_DATA_C_AWVALID(vector_multiplier_0_m_axi_DATA_C_AWVALID),
-        .m_axi_DATA_C_BREADY(vector_multiplier_0_m_axi_DATA_C_BREADY),
-        .m_axi_DATA_C_BRESP(vector_multiplier_0_m_axi_DATA_C_BRESP),
-        .m_axi_DATA_C_BVALID(vector_multiplier_0_m_axi_DATA_C_BVALID),
-        .m_axi_DATA_C_RDATA(vector_multiplier_0_m_axi_DATA_C_RDATA),
-        .m_axi_DATA_C_RLAST(vector_multiplier_0_m_axi_DATA_C_RLAST),
-        .m_axi_DATA_C_RREADY(vector_multiplier_0_m_axi_DATA_C_RREADY),
-        .m_axi_DATA_C_RRESP(vector_multiplier_0_m_axi_DATA_C_RRESP),
-        .m_axi_DATA_C_RVALID(vector_multiplier_0_m_axi_DATA_C_RVALID),
-        .m_axi_DATA_C_WDATA(vector_multiplier_0_m_axi_DATA_C_WDATA),
-        .m_axi_DATA_C_WLAST(vector_multiplier_0_m_axi_DATA_C_WLAST),
-        .m_axi_DATA_C_WREADY(vector_multiplier_0_m_axi_DATA_C_WREADY),
-        .m_axi_DATA_C_WSTRB(vector_multiplier_0_m_axi_DATA_C_WSTRB),
-        .m_axi_DATA_C_WVALID(vector_multiplier_0_m_axi_DATA_C_WVALID),
-        .s_axi_CTL_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[5:0]),
-        .s_axi_CTL_ARREADY(ps7_0_axi_periph_M00_AXI_ARREADY),
-        .s_axi_CTL_ARVALID(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .s_axi_CTL_AWADDR(ps7_0_axi_periph_M00_AXI_AWADDR[5:0]),
-        .s_axi_CTL_AWREADY(ps7_0_axi_periph_M00_AXI_AWREADY),
-        .s_axi_CTL_AWVALID(ps7_0_axi_periph_M00_AXI_AWVALID),
-        .s_axi_CTL_BREADY(ps7_0_axi_periph_M00_AXI_BREADY),
-        .s_axi_CTL_BRESP(ps7_0_axi_periph_M00_AXI_BRESP),
-        .s_axi_CTL_BVALID(ps7_0_axi_periph_M00_AXI_BVALID),
-        .s_axi_CTL_RDATA(ps7_0_axi_periph_M00_AXI_RDATA),
-        .s_axi_CTL_RREADY(ps7_0_axi_periph_M00_AXI_RREADY),
-        .s_axi_CTL_RRESP(ps7_0_axi_periph_M00_AXI_RRESP),
-        .s_axi_CTL_RVALID(ps7_0_axi_periph_M00_AXI_RVALID),
-        .s_axi_CTL_WDATA(ps7_0_axi_periph_M00_AXI_WDATA),
-        .s_axi_CTL_WREADY(ps7_0_axi_periph_M00_AXI_WREADY),
-        .s_axi_CTL_WSTRB(ps7_0_axi_periph_M00_AXI_WSTRB),
-        .s_axi_CTL_WVALID(ps7_0_axi_periph_M00_AXI_WVALID));
 endmodule
 
 module accelerator_bd_ps7_0_axi_periph_1
@@ -1057,22 +1264,22 @@ module accelerator_bd_ps7_0_axi_periph_1
   input M00_ACLK;
   input M00_ARESETN;
   output [31:0]M00_AXI_araddr;
-  input [0:0]M00_AXI_arready;
-  output [0:0]M00_AXI_arvalid;
+  input M00_AXI_arready;
+  output M00_AXI_arvalid;
   output [31:0]M00_AXI_awaddr;
-  input [0:0]M00_AXI_awready;
-  output [0:0]M00_AXI_awvalid;
-  output [0:0]M00_AXI_bready;
+  input M00_AXI_awready;
+  output M00_AXI_awvalid;
+  output M00_AXI_bready;
   input [1:0]M00_AXI_bresp;
-  input [0:0]M00_AXI_bvalid;
+  input M00_AXI_bvalid;
   input [31:0]M00_AXI_rdata;
-  output [0:0]M00_AXI_rready;
+  output M00_AXI_rready;
   input [1:0]M00_AXI_rresp;
-  input [0:0]M00_AXI_rvalid;
+  input M00_AXI_rvalid;
   output [31:0]M00_AXI_wdata;
-  input [0:0]M00_AXI_wready;
+  input M00_AXI_wready;
   output [3:0]M00_AXI_wstrb;
-  output [0:0]M00_AXI_wvalid;
+  output M00_AXI_wvalid;
   input M01_ACLK;
   input M01_ARESETN;
   output [31:0]M01_AXI_araddr;
@@ -1140,22 +1347,22 @@ module accelerator_bd_ps7_0_axi_periph_1
   wire S00_ACLK_1;
   wire S00_ARESETN_1;
   wire [31:0]m00_couplers_to_ps7_0_axi_periph_ARADDR;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_ARREADY;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_ARVALID;
+  wire m00_couplers_to_ps7_0_axi_periph_ARREADY;
+  wire m00_couplers_to_ps7_0_axi_periph_ARVALID;
   wire [31:0]m00_couplers_to_ps7_0_axi_periph_AWADDR;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_AWREADY;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_AWVALID;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_BREADY;
+  wire m00_couplers_to_ps7_0_axi_periph_AWREADY;
+  wire m00_couplers_to_ps7_0_axi_periph_AWVALID;
+  wire m00_couplers_to_ps7_0_axi_periph_BREADY;
   wire [1:0]m00_couplers_to_ps7_0_axi_periph_BRESP;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_BVALID;
+  wire m00_couplers_to_ps7_0_axi_periph_BVALID;
   wire [31:0]m00_couplers_to_ps7_0_axi_periph_RDATA;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_RREADY;
+  wire m00_couplers_to_ps7_0_axi_periph_RREADY;
   wire [1:0]m00_couplers_to_ps7_0_axi_periph_RRESP;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_RVALID;
+  wire m00_couplers_to_ps7_0_axi_periph_RVALID;
   wire [31:0]m00_couplers_to_ps7_0_axi_periph_WDATA;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_WREADY;
+  wire m00_couplers_to_ps7_0_axi_periph_WREADY;
   wire [3:0]m00_couplers_to_ps7_0_axi_periph_WSTRB;
-  wire [0:0]m00_couplers_to_ps7_0_axi_periph_WVALID;
+  wire m00_couplers_to_ps7_0_axi_periph_WVALID;
   wire [31:0]m01_couplers_to_ps7_0_axi_periph_ARADDR;
   wire m01_couplers_to_ps7_0_axi_periph_ARREADY;
   wire m01_couplers_to_ps7_0_axi_periph_ARVALID;
@@ -1233,20 +1440,20 @@ module accelerator_bd_ps7_0_axi_periph_1
   wire [3:0]s00_couplers_to_xbar_WSTRB;
   wire s00_couplers_to_xbar_WVALID;
   wire [31:0]xbar_to_m00_couplers_ARADDR;
-  wire [0:0]xbar_to_m00_couplers_ARREADY;
+  wire xbar_to_m00_couplers_ARREADY;
   wire [0:0]xbar_to_m00_couplers_ARVALID;
   wire [31:0]xbar_to_m00_couplers_AWADDR;
-  wire [0:0]xbar_to_m00_couplers_AWREADY;
+  wire xbar_to_m00_couplers_AWREADY;
   wire [0:0]xbar_to_m00_couplers_AWVALID;
   wire [0:0]xbar_to_m00_couplers_BREADY;
   wire [1:0]xbar_to_m00_couplers_BRESP;
-  wire [0:0]xbar_to_m00_couplers_BVALID;
+  wire xbar_to_m00_couplers_BVALID;
   wire [31:0]xbar_to_m00_couplers_RDATA;
   wire [0:0]xbar_to_m00_couplers_RREADY;
   wire [1:0]xbar_to_m00_couplers_RRESP;
-  wire [0:0]xbar_to_m00_couplers_RVALID;
+  wire xbar_to_m00_couplers_RVALID;
   wire [31:0]xbar_to_m00_couplers_WDATA;
-  wire [0:0]xbar_to_m00_couplers_WREADY;
+  wire xbar_to_m00_couplers_WREADY;
   wire [3:0]xbar_to_m00_couplers_WSTRB;
   wire [0:0]xbar_to_m00_couplers_WVALID;
   wire [63:32]xbar_to_m01_couplers_ARADDR;
@@ -1270,14 +1477,14 @@ module accelerator_bd_ps7_0_axi_periph_1
   assign M00_ACLK_1 = M00_ACLK;
   assign M00_ARESETN_1 = M00_ARESETN;
   assign M00_AXI_araddr[31:0] = m00_couplers_to_ps7_0_axi_periph_ARADDR;
-  assign M00_AXI_arvalid[0] = m00_couplers_to_ps7_0_axi_periph_ARVALID;
+  assign M00_AXI_arvalid = m00_couplers_to_ps7_0_axi_periph_ARVALID;
   assign M00_AXI_awaddr[31:0] = m00_couplers_to_ps7_0_axi_periph_AWADDR;
-  assign M00_AXI_awvalid[0] = m00_couplers_to_ps7_0_axi_periph_AWVALID;
-  assign M00_AXI_bready[0] = m00_couplers_to_ps7_0_axi_periph_BREADY;
-  assign M00_AXI_rready[0] = m00_couplers_to_ps7_0_axi_periph_RREADY;
+  assign M00_AXI_awvalid = m00_couplers_to_ps7_0_axi_periph_AWVALID;
+  assign M00_AXI_bready = m00_couplers_to_ps7_0_axi_periph_BREADY;
+  assign M00_AXI_rready = m00_couplers_to_ps7_0_axi_periph_RREADY;
   assign M00_AXI_wdata[31:0] = m00_couplers_to_ps7_0_axi_periph_WDATA;
   assign M00_AXI_wstrb[3:0] = m00_couplers_to_ps7_0_axi_periph_WSTRB;
-  assign M00_AXI_wvalid[0] = m00_couplers_to_ps7_0_axi_periph_WVALID;
+  assign M00_AXI_wvalid = m00_couplers_to_ps7_0_axi_periph_WVALID;
   assign M01_ACLK_1 = M01_ACLK;
   assign M01_ARESETN_1 = M01_ARESETN;
   assign M01_AXI_araddr[31:0] = m01_couplers_to_ps7_0_axi_periph_ARADDR;
@@ -1302,14 +1509,14 @@ module accelerator_bd_ps7_0_axi_periph_1
   assign S00_AXI_rresp[1:0] = ps7_0_axi_periph_to_s00_couplers_RRESP;
   assign S00_AXI_rvalid = ps7_0_axi_periph_to_s00_couplers_RVALID;
   assign S00_AXI_wready = ps7_0_axi_periph_to_s00_couplers_WREADY;
-  assign m00_couplers_to_ps7_0_axi_periph_ARREADY = M00_AXI_arready[0];
-  assign m00_couplers_to_ps7_0_axi_periph_AWREADY = M00_AXI_awready[0];
+  assign m00_couplers_to_ps7_0_axi_periph_ARREADY = M00_AXI_arready;
+  assign m00_couplers_to_ps7_0_axi_periph_AWREADY = M00_AXI_awready;
   assign m00_couplers_to_ps7_0_axi_periph_BRESP = M00_AXI_bresp[1:0];
-  assign m00_couplers_to_ps7_0_axi_periph_BVALID = M00_AXI_bvalid[0];
+  assign m00_couplers_to_ps7_0_axi_periph_BVALID = M00_AXI_bvalid;
   assign m00_couplers_to_ps7_0_axi_periph_RDATA = M00_AXI_rdata[31:0];
   assign m00_couplers_to_ps7_0_axi_periph_RRESP = M00_AXI_rresp[1:0];
-  assign m00_couplers_to_ps7_0_axi_periph_RVALID = M00_AXI_rvalid[0];
-  assign m00_couplers_to_ps7_0_axi_periph_WREADY = M00_AXI_wready[0];
+  assign m00_couplers_to_ps7_0_axi_periph_RVALID = M00_AXI_rvalid;
+  assign m00_couplers_to_ps7_0_axi_periph_WREADY = M00_AXI_wready;
   assign m01_couplers_to_ps7_0_axi_periph_ARREADY = M01_AXI_arready;
   assign m01_couplers_to_ps7_0_axi_periph_AWREADY = M01_AXI_awready;
   assign m01_couplers_to_ps7_0_axi_periph_BRESP = M01_AXI_bresp[1:0];
@@ -1570,94 +1777,94 @@ module m00_couplers_imp_8ENUIN
   input M_ACLK;
   input M_ARESETN;
   output [31:0]M_AXI_araddr;
-  input [0:0]M_AXI_arready;
-  output [0:0]M_AXI_arvalid;
+  input M_AXI_arready;
+  output M_AXI_arvalid;
   output [31:0]M_AXI_awaddr;
-  input [0:0]M_AXI_awready;
-  output [0:0]M_AXI_awvalid;
-  output [0:0]M_AXI_bready;
+  input M_AXI_awready;
+  output M_AXI_awvalid;
+  output M_AXI_bready;
   input [1:0]M_AXI_bresp;
-  input [0:0]M_AXI_bvalid;
+  input M_AXI_bvalid;
   input [31:0]M_AXI_rdata;
-  output [0:0]M_AXI_rready;
+  output M_AXI_rready;
   input [1:0]M_AXI_rresp;
-  input [0:0]M_AXI_rvalid;
+  input M_AXI_rvalid;
   output [31:0]M_AXI_wdata;
-  input [0:0]M_AXI_wready;
+  input M_AXI_wready;
   output [3:0]M_AXI_wstrb;
-  output [0:0]M_AXI_wvalid;
+  output M_AXI_wvalid;
   input S_ACLK;
   input S_ARESETN;
   input [31:0]S_AXI_araddr;
-  output [0:0]S_AXI_arready;
-  input [0:0]S_AXI_arvalid;
+  output S_AXI_arready;
+  input S_AXI_arvalid;
   input [31:0]S_AXI_awaddr;
-  output [0:0]S_AXI_awready;
-  input [0:0]S_AXI_awvalid;
-  input [0:0]S_AXI_bready;
+  output S_AXI_awready;
+  input S_AXI_awvalid;
+  input S_AXI_bready;
   output [1:0]S_AXI_bresp;
-  output [0:0]S_AXI_bvalid;
+  output S_AXI_bvalid;
   output [31:0]S_AXI_rdata;
-  input [0:0]S_AXI_rready;
+  input S_AXI_rready;
   output [1:0]S_AXI_rresp;
-  output [0:0]S_AXI_rvalid;
+  output S_AXI_rvalid;
   input [31:0]S_AXI_wdata;
-  output [0:0]S_AXI_wready;
+  output S_AXI_wready;
   input [3:0]S_AXI_wstrb;
-  input [0:0]S_AXI_wvalid;
+  input S_AXI_wvalid;
 
   wire [31:0]m00_couplers_to_m00_couplers_ARADDR;
-  wire [0:0]m00_couplers_to_m00_couplers_ARREADY;
-  wire [0:0]m00_couplers_to_m00_couplers_ARVALID;
+  wire m00_couplers_to_m00_couplers_ARREADY;
+  wire m00_couplers_to_m00_couplers_ARVALID;
   wire [31:0]m00_couplers_to_m00_couplers_AWADDR;
-  wire [0:0]m00_couplers_to_m00_couplers_AWREADY;
-  wire [0:0]m00_couplers_to_m00_couplers_AWVALID;
-  wire [0:0]m00_couplers_to_m00_couplers_BREADY;
+  wire m00_couplers_to_m00_couplers_AWREADY;
+  wire m00_couplers_to_m00_couplers_AWVALID;
+  wire m00_couplers_to_m00_couplers_BREADY;
   wire [1:0]m00_couplers_to_m00_couplers_BRESP;
-  wire [0:0]m00_couplers_to_m00_couplers_BVALID;
+  wire m00_couplers_to_m00_couplers_BVALID;
   wire [31:0]m00_couplers_to_m00_couplers_RDATA;
-  wire [0:0]m00_couplers_to_m00_couplers_RREADY;
+  wire m00_couplers_to_m00_couplers_RREADY;
   wire [1:0]m00_couplers_to_m00_couplers_RRESP;
-  wire [0:0]m00_couplers_to_m00_couplers_RVALID;
+  wire m00_couplers_to_m00_couplers_RVALID;
   wire [31:0]m00_couplers_to_m00_couplers_WDATA;
-  wire [0:0]m00_couplers_to_m00_couplers_WREADY;
+  wire m00_couplers_to_m00_couplers_WREADY;
   wire [3:0]m00_couplers_to_m00_couplers_WSTRB;
-  wire [0:0]m00_couplers_to_m00_couplers_WVALID;
+  wire m00_couplers_to_m00_couplers_WVALID;
 
   assign M_AXI_araddr[31:0] = m00_couplers_to_m00_couplers_ARADDR;
-  assign M_AXI_arvalid[0] = m00_couplers_to_m00_couplers_ARVALID;
+  assign M_AXI_arvalid = m00_couplers_to_m00_couplers_ARVALID;
   assign M_AXI_awaddr[31:0] = m00_couplers_to_m00_couplers_AWADDR;
-  assign M_AXI_awvalid[0] = m00_couplers_to_m00_couplers_AWVALID;
-  assign M_AXI_bready[0] = m00_couplers_to_m00_couplers_BREADY;
-  assign M_AXI_rready[0] = m00_couplers_to_m00_couplers_RREADY;
+  assign M_AXI_awvalid = m00_couplers_to_m00_couplers_AWVALID;
+  assign M_AXI_bready = m00_couplers_to_m00_couplers_BREADY;
+  assign M_AXI_rready = m00_couplers_to_m00_couplers_RREADY;
   assign M_AXI_wdata[31:0] = m00_couplers_to_m00_couplers_WDATA;
   assign M_AXI_wstrb[3:0] = m00_couplers_to_m00_couplers_WSTRB;
-  assign M_AXI_wvalid[0] = m00_couplers_to_m00_couplers_WVALID;
-  assign S_AXI_arready[0] = m00_couplers_to_m00_couplers_ARREADY;
-  assign S_AXI_awready[0] = m00_couplers_to_m00_couplers_AWREADY;
+  assign M_AXI_wvalid = m00_couplers_to_m00_couplers_WVALID;
+  assign S_AXI_arready = m00_couplers_to_m00_couplers_ARREADY;
+  assign S_AXI_awready = m00_couplers_to_m00_couplers_AWREADY;
   assign S_AXI_bresp[1:0] = m00_couplers_to_m00_couplers_BRESP;
-  assign S_AXI_bvalid[0] = m00_couplers_to_m00_couplers_BVALID;
+  assign S_AXI_bvalid = m00_couplers_to_m00_couplers_BVALID;
   assign S_AXI_rdata[31:0] = m00_couplers_to_m00_couplers_RDATA;
   assign S_AXI_rresp[1:0] = m00_couplers_to_m00_couplers_RRESP;
-  assign S_AXI_rvalid[0] = m00_couplers_to_m00_couplers_RVALID;
-  assign S_AXI_wready[0] = m00_couplers_to_m00_couplers_WREADY;
+  assign S_AXI_rvalid = m00_couplers_to_m00_couplers_RVALID;
+  assign S_AXI_wready = m00_couplers_to_m00_couplers_WREADY;
   assign m00_couplers_to_m00_couplers_ARADDR = S_AXI_araddr[31:0];
-  assign m00_couplers_to_m00_couplers_ARREADY = M_AXI_arready[0];
-  assign m00_couplers_to_m00_couplers_ARVALID = S_AXI_arvalid[0];
+  assign m00_couplers_to_m00_couplers_ARREADY = M_AXI_arready;
+  assign m00_couplers_to_m00_couplers_ARVALID = S_AXI_arvalid;
   assign m00_couplers_to_m00_couplers_AWADDR = S_AXI_awaddr[31:0];
-  assign m00_couplers_to_m00_couplers_AWREADY = M_AXI_awready[0];
-  assign m00_couplers_to_m00_couplers_AWVALID = S_AXI_awvalid[0];
-  assign m00_couplers_to_m00_couplers_BREADY = S_AXI_bready[0];
+  assign m00_couplers_to_m00_couplers_AWREADY = M_AXI_awready;
+  assign m00_couplers_to_m00_couplers_AWVALID = S_AXI_awvalid;
+  assign m00_couplers_to_m00_couplers_BREADY = S_AXI_bready;
   assign m00_couplers_to_m00_couplers_BRESP = M_AXI_bresp[1:0];
-  assign m00_couplers_to_m00_couplers_BVALID = M_AXI_bvalid[0];
+  assign m00_couplers_to_m00_couplers_BVALID = M_AXI_bvalid;
   assign m00_couplers_to_m00_couplers_RDATA = M_AXI_rdata[31:0];
-  assign m00_couplers_to_m00_couplers_RREADY = S_AXI_rready[0];
+  assign m00_couplers_to_m00_couplers_RREADY = S_AXI_rready;
   assign m00_couplers_to_m00_couplers_RRESP = M_AXI_rresp[1:0];
-  assign m00_couplers_to_m00_couplers_RVALID = M_AXI_rvalid[0];
+  assign m00_couplers_to_m00_couplers_RVALID = M_AXI_rvalid;
   assign m00_couplers_to_m00_couplers_WDATA = S_AXI_wdata[31:0];
-  assign m00_couplers_to_m00_couplers_WREADY = M_AXI_wready[0];
+  assign m00_couplers_to_m00_couplers_WREADY = M_AXI_wready;
   assign m00_couplers_to_m00_couplers_WSTRB = S_AXI_wstrb[3:0];
-  assign m00_couplers_to_m00_couplers_WVALID = S_AXI_wvalid[0];
+  assign m00_couplers_to_m00_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
 module m01_couplers_imp_188BPCO
@@ -2035,7 +2242,7 @@ module s00_couplers_imp_1PULIKQ
   assign s00_couplers_to_auto_pc_WLAST = S_AXI_wlast;
   assign s00_couplers_to_auto_pc_WSTRB = S_AXI_wstrb[3:0];
   assign s00_couplers_to_auto_pc_WVALID = S_AXI_wvalid;
-  accelerator_bd_auto_pc_1 auto_pc
+  accelerator_bd_auto_pc_0 auto_pc
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(auto_pc_to_s00_couplers_ARADDR),

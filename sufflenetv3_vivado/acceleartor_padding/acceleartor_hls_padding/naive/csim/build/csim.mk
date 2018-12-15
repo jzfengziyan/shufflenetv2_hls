@@ -21,7 +21,7 @@ __USE_CLANG__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../test.cpp ../../../components.cpp ../../../shufflenet.cpp
+HLS_SOURCES = ../../../test.cpp ../../../shufflenet.cpp ../../../components.cpp
 
 TARGET := csim.exe
 
@@ -83,14 +83,14 @@ $(ObjDir)/test.o: ../../../test.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/test.d
 
-$(ObjDir)/components.o: ../../../components.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../components.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CXX) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/components.d
-
 $(ObjDir)/shufflenet.o: ../../../shufflenet.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../shufflenet.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CXX) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/shufflenet.d
+
+$(ObjDir)/components.o: ../../../components.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../components.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CXX) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/components.d

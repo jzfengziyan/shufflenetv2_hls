@@ -21,9 +21,9 @@ using namespace sc_dt;
 
 struct ShuffleNetV2_weigtde_ram : public sc_core::sc_module {
 
-  static const unsigned DataWidth = 32;
-  static const unsigned AddressRange = 2304;
-  static const unsigned AddressWidth = 12;
+  static const unsigned DataWidth = 8;
+  static const unsigned AddressRange = 432;
+  static const unsigned AddressWidth = 9;
 
 //latency = 1
 //input_reg = 1
@@ -41,7 +41,7 @@ sc_lv<DataWidth> ram[AddressRange];
 
 
    SC_CTOR(ShuffleNetV2_weigtde_ram) {
-        for (unsigned i = 0; i < 2304; i = i + 1) {
+        for (unsigned i = 0; i < 432; i = i + 1) {
             ram[i] = 0;
         }
 
@@ -81,9 +81,9 @@ void prc_write_0()
 SC_MODULE(ShuffleNetV2_weigtde) {
 
 
-static const unsigned DataWidth = 32;
-static const unsigned AddressRange = 2304;
-static const unsigned AddressWidth = 12;
+static const unsigned DataWidth = 8;
+static const unsigned AddressRange = 432;
+static const unsigned AddressWidth = 9;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

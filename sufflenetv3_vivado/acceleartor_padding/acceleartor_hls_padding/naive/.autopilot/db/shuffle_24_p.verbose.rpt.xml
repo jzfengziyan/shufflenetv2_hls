@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'shuffle_24_p'" level="0">
-<item name = "Date">Thu Dec 13 17:50:47 2018
+<item name = "Date">Sat Dec 15 03:40:51 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">acceleartor_hls_padding</item>
@@ -82,17 +82,17 @@
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="co_20_fu_142_p2">+, 0, 23, 11, 1, 6</column>
 <column name="h_20_fu_224_p2">+, 0, 20, 10, 5, 1</column>
-<column name="tmp_263_fu_182_p2">+, 0, 35, 15, 10, 10</column>
-<column name="tmp_266_fu_212_p2">+, 0, 38, 16, 11, 11</column>
-<column name="tmp_267_fu_238_p2">+, 0, 35, 15, 10, 10</column>
-<column name="tmp_268_fu_263_p2">+, 0, 47, 19, 14, 14</column>
-<column name="tmp_269_fu_269_p2">+, 0, 38, 16, 11, 11</column>
-<column name="tmp_270_fu_294_p2">+, 0, 50, 20, 15, 15</column>
-<column name="tmp_271_fu_320_p2">+, 0, 47, 19, 14, 14</column>
-<column name="tmp_272_fu_331_p2">+, 0, 50, 20, 15, 15</column>
+<column name="tmp_315_fu_172_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_319_fu_212_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_320_fu_238_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_321_fu_263_p2">+, 0, 47, 19, 14, 14</column>
+<column name="tmp_322_fu_269_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_323_fu_294_p2">+, 0, 50, 20, 15, 15</column>
+<column name="tmp_324_fu_320_p2">+, 0, 47, 19, 14, 14</column>
+<column name="tmp_325_fu_331_p2">+, 0, 50, 20, 15, 15</column>
 <column name="w_20_fu_306_p2">+, 0, 20, 10, 5, 1</column>
-<column name="exitcond1_fu_218_p2">icmp, 0, 0, 2, 5, 5</column>
-<column name="exitcond2_fu_136_p2">icmp, 0, 0, 3, 6, 6</column>
+<column name="exitcond4_fu_218_p2">icmp, 0, 0, 2, 5, 5</column>
+<column name="exitcond5_fu_136_p2">icmp, 0, 0, 3, 6, 6</column>
 <column name="exitcond_fu_300_p2">icmp, 0, 0, 2, 5, 5</column>
 </table>
 </item>
@@ -101,7 +101,7 @@
 <column name="ap_NS_fsm">33, 6, 1, 6</column>
 <column name="co_reg_87">9, 2, 6, 12</column>
 <column name="h_reg_98">9, 2, 5, 10</column>
-<column name="storemerge_phi_fu_123_p4">15, 3, 32, 96</column>
+<column name="storemerge_phi_fu_123_p4">15, 3, 8, 24</column>
 <column name="w_reg_109">9, 2, 5, 10</column>
 </table>
 </item>
@@ -112,12 +112,12 @@
 <column name="co_reg_87">6, 0, 6, 0</column>
 <column name="h_20_reg_366">5, 0, 5, 0</column>
 <column name="h_reg_98">5, 0, 5, 0</column>
-<column name="output_addr_reg_394">14, 0, 14, 0</column>
-<column name="tmp_103_reg_341">1, 0, 1, 0</column>
-<column name="tmp_263_reg_353">9, 0, 10, 1</column>
-<column name="tmp_266_reg_358">10, 0, 11, 1</column>
-<column name="tmp_268_reg_371">13, 0, 14, 1</column>
-<column name="tmp_270_reg_376">14, 0, 15, 1</column>
+<column name="output_V_addr_reg_394">14, 0, 14, 0</column>
+<column name="tmp_270_reg_341">1, 0, 1, 0</column>
+<column name="tmp_315_reg_353">10, 0, 11, 1</column>
+<column name="tmp_319_reg_358">9, 0, 10, 1</column>
+<column name="tmp_321_reg_371">13, 0, 14, 1</column>
+<column name="tmp_323_reg_376">14, 0, 15, 1</column>
 <column name="w_20_reg_384">5, 0, 5, 0</column>
 <column name="w_reg_109">5, 0, 5, 0</column>
 </table>
@@ -135,16 +135,16 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, shuffle_24_p, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, shuffle_24_p, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, shuffle_24_p, return value</column>
-<column name="left_r_address0">out, 13, ap_memory, left_r, array</column>
-<column name="left_r_ce0">out, 1, ap_memory, left_r, array</column>
-<column name="left_r_q0">in, 32, ap_memory, left_r, array</column>
-<column name="output_r_address0">out, 14, ap_memory, output_r, array</column>
-<column name="output_r_ce0">out, 1, ap_memory, output_r, array</column>
-<column name="output_r_we0">out, 1, ap_memory, output_r, array</column>
-<column name="output_r_d0">out, 32, ap_memory, output_r, array</column>
+<column name="left_V_address0">out, 13, ap_memory, left_V, array</column>
+<column name="left_V_ce0">out, 1, ap_memory, left_V, array</column>
+<column name="left_V_q0">in, 8, ap_memory, left_V, array</column>
+<column name="output_V_address0">out, 14, ap_memory, output_V, array</column>
+<column name="output_V_ce0">out, 1, ap_memory, output_V, array</column>
+<column name="output_V_we0">out, 1, ap_memory, output_V, array</column>
+<column name="output_V_d0">out, 8, ap_memory, output_V, array</column>
 <column name="buffer1_1_24_16x16_p_address0">out, 13, ap_memory, buffer1_1_24_16x16_p, array</column>
 <column name="buffer1_1_24_16x16_p_ce0">out, 1, ap_memory, buffer1_1_24_16x16_p, array</column>
-<column name="buffer1_1_24_16x16_p_q0">in, 32, ap_memory, buffer1_1_24_16x16_p, array</column>
+<column name="buffer1_1_24_16x16_p_q0">in, 8, ap_memory, buffer1_1_24_16x16_p, array</column>
 </table>
 </item>
 </section>

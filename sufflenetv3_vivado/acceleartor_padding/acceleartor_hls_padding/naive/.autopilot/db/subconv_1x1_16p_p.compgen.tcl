@@ -11,17 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 44 \
-    name weight \
+    id 29 \
+    name weight_V \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename weight \
+    corename weight_V \
     op interface \
-    ports { weight_address0 { O 12 vector } weight_ce0 { O 1 bit } weight_q0 { I 32 vector } } \
+    ports { weight_V_address0 { O 12 vector } weight_V_ce0 { O 1 bit } weight_V_q0 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'weight'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'weight_V'"
 }
 }
 
@@ -30,17 +30,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 45 \
-    name bias \
+    id 30 \
+    name bias_V \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename bias \
+    corename bias_V \
     op interface \
-    ports { bias_address0 { O 6 vector } bias_ce0 { O 1 bit } bias_q0 { I 32 vector } } \
+    ports { bias_V_address0 { O 6 vector } bias_V_ce0 { O 1 bit } bias_V_q0 { I 8 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'bias'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'bias_V'"
 }
 }
 
@@ -49,14 +49,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 46 \
+    id 31 \
     name shuffleunit0_2_outpu \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename shuffleunit0_2_outpu \
     op interface \
-    ports { shuffleunit0_2_outpu_address0 { O 14 vector } shuffleunit0_2_outpu_ce0 { O 1 bit } shuffleunit0_2_outpu_q0 { I 32 vector } } \
+    ports { shuffleunit0_2_outpu_address0 { O 14 vector } shuffleunit0_2_outpu_ce0 { O 1 bit } shuffleunit0_2_outpu_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'shuffleunit0_2_outpu'"
@@ -68,14 +68,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 47 \
+    id 32 \
     name ShuffleConvs_1_Downs \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename ShuffleConvs_1_Downs \
     op interface \
-    ports { ShuffleConvs_1_Downs_address0 { O 14 vector } ShuffleConvs_1_Downs_ce0 { O 1 bit } ShuffleConvs_1_Downs_we0 { O 1 bit } ShuffleConvs_1_Downs_d0 { O 32 vector } } \
+    ports { ShuffleConvs_1_Downs_address0 { O 14 vector } ShuffleConvs_1_Downs_ce0 { O 1 bit } ShuffleConvs_1_Downs_we0 { O 1 bit } ShuffleConvs_1_Downs_d0 { O 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'ShuffleConvs_1_Downs'"

@@ -1,11 +1,13 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
+    <downStreamTool>
+        <DownStreamTool name=""/>
+    </downStreamTool>
     <config>
         <schedule model="ShuffleNetV2"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf boardInfo="Zynq ZC702 Evaluation Board (xc7z020clg484-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf boardInfo="ZedBoard Zynq Evaluation and Development Kit (xc7z020clg484-1) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynq/zynq</Platform>
-            <Platform>xilinx/zynq/zynq_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -34,7 +36,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="false" rtlCombo="verilog">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
         <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
@@ -42,7 +44,7 @@
         <Format formatName="pcore" use_netlist="none"/>
     </ExportDesign>
     <Simulation>
-        <SimFlow askAgain="true" dumpTrace="none" name="cosim" optimizeCompile="false" reduce_diskspace="false" setup="false" toolName="Auto">
+        <SimFlow askAgain="true" dumpTrace="none" name="cosim" optimizeCompile="true" reduce_diskspace="false" setup="false" toolName="Auto">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -59,13 +61,10 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/zynq/zynq"/>
-        <library name="DefaultPlatform" value="xilinx/zynq/zynq_fpv6"/>
+        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
     </libraryList>
-    <downStreamTool>
-        <DownStreamTool name="vivado"/>
-    </downStreamTool>
     <clockList>
-        <clock default="false" name="default" period="10"/>
+        <clock name="default" default="false" period="10"/>
     </clockList>
 </solution>
 

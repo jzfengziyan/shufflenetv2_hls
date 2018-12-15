@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'shuffle_48_r_p'" level="0">
-<item name = "Date">Thu Dec 13 17:50:21 2018
+<item name = "Date">Sat Dec 15 03:40:12 2018
 </item>
 <item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
 <item name = "Project">acceleartor_hls_padding</item>

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="Local" key="accelerator_bd_wrapper_hw_platform_3-target"/>
 	<item value="Auto Detect" key="accelerator_bd_wrapper_hw_platform_0-device"/>
+	<item value="accelerator_bd_wrapper.bit" key="accelerator_bd_wrapper_hw_platform_3-bitFile"/>
 	<item value="" key="accelerator_bd_wrapper_hw_platform_0-bmmFile"/>
 	<item value="Local" key="accelerator_bd_wrapper_hw_platform_0-target"/>
 	<item value="accelerator_bd_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="false" key="accelerator_bd_wrapper_hw_platform_3-partial_bit"/>
 	<item value="false" key="accelerator_bd_wrapper_hw_platform_0-partial_bit"/>
+	<item value="Auto Detect" key="accelerator_bd_wrapper_hw_platform_3-device"/>
 	<item value="accelerator_bd_wrapper.bit" key="accelerator_bd_wrapper_hw_platform_0-bitFile"/>
+	<item value="" key="accelerator_bd_wrapper_hw_platform_3-bmmFile"/>
 </section>

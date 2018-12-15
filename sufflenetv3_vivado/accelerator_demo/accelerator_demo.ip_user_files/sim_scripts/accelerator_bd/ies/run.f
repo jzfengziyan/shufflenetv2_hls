@@ -1,10 +1,10 @@
 -makelib ies/xil_defaultlib -sv \
-  "F:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "F:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
-  "F:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "/home/ziyan/opt/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "/home/ziyan/opt/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
+  "/home/ziyan/opt/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib ies/xpm \
-  "F:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_VCOMP.vhd" \
+  "/home/ziyan/opt/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/accelerator_bd/hdl/accelerator_bd.v" \
@@ -29,13 +29,6 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/sim/accelerator_bd_processing_system7_0_1.v" \
-  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier.v" \
-  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplierbkb.v" \
-  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_CTL_s_axi.v" \
-  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_A_m_axi.v" \
-  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_B_m_axi.v" \
-  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/238d/hdl/verilog/vector_multiplier_DATA_C_m_axi.v" \
-  "../../../bd/accelerator_bd/ip/accelerator_bd_vector_multiplier_0_0/sim/accelerator_bd_vector_multiplier_0_0.v" \
 -endlib
 -makelib ies/lib_cdc_v1_0_2 \
   "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -45,6 +38,9 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/sim/accelerator_bd_rst_ps7_0_100M_1.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hdl/bd_67a5.v" \
 -endlib
 -makelib ies/smartconnect_v1_0 -sv \
   "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/e870/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
@@ -102,8 +98,8 @@
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/sim/bd_67a5_psr_aclk_0.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hdl/bd_67a5.v" \
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/sim/accelerator_bd_axi_smc_0.v" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hdl/bd_9e52.v" \
 -endlib
 -makelib ies/xil_defaultlib -sv \
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_5/sim/bd_9e52_s00a2s_0.sv" \
@@ -125,8 +121,8 @@
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/sim/bd_9e52_psr_aclk_0.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hdl/bd_9e52.v" \
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/sim/accelerator_bd_axi_smc_1_0.v" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hdl/bd_9ea2.v" \
 -endlib
 -makelib ies/xil_defaultlib -sv \
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_5/sim/bd_9ea2_s00a2s_0.sv" \
@@ -148,7 +144,6 @@
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/sim/bd_9ea2_psr_aclk_0.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hdl/bd_9ea2.v" \
   "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/sim/accelerator_bd_axi_smc_2_0.v" \
 -endlib
 -makelib ies/axi_lite_ipif_v3_0_4 \
@@ -186,12 +181,88 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/accelerator_bd/ip/accelerator_bd_xbar_0/sim/accelerator_bd_xbar_0.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_3x3_16_strid.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/avgpool.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_weigg8j.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_1x1_8_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_24_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_1x1_16p_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_48_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_fc_bdEe.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/conv_last.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_weigjbC.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_24_r_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_convQgW.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_3x3_8_no_rel.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_weigIfE.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/fc.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_3x3_32_strid.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_DATA_BIAS_m_axi.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_buffJfO.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_buffudo.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_weigFfa.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_48_l_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_p3X3_1X1_WEIGHTS_m_axi.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_48_r_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_96_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_convbkb.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_1x1_8p_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_24_l_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_1x1_32_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_convcud.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_weigqcK.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_CTL_s_axi.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_downwdI.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_biasGfk.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_96_l_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/conv1_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/shuffle_96_r_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_convfYi.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_biasrcU.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_downmb6.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_DATA_INPUT_OUTPUT_m_axi.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_buffkbM.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_3x3_8_stride.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_shufPgM.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_weigtde.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_3x3_4_no_rel.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_imageOg.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_1x1_4_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_3x3_16_no_re.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/subconv_1x1_16_p.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_DATA_OTHER_WEIGHTS_m_axi.v" \
+  "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/55b1/hdl/verilog/ShuffleNetV2_downLf8.v" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_ShuffleNetV2_0_1/sim/accelerator_bd_ShuffleNetV2_0_1.v" \
+-endlib
+-makelib ies/xil_defaultlib -sv \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_5/sim/bd_5e63_s00a2s_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_11/sim/bd_5e63_m00s2a_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_12/sim/bd_5e63_m00e_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_6/sim/bd_5e63_sarn_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_7/sim/bd_5e63_srn_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_8/sim/bd_5e63_sawn_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_9/sim/bd_5e63_swn_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_10/sim/bd_5e63_sbn_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_2/sim/bd_5e63_s00mmu_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_3/sim/bd_5e63_s00tr_0.sv" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_4/sim/bd_5e63_s00sic_0.sv" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_0/sim/bd_5e63_one_0.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/sim/bd_5e63_psr_aclk_0.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hdl/bd_5e63.v" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/sim/accelerator_bd_axi_smc_2_1.v" \
 -endlib
 -makelib ies/axi_protocol_converter_v2_1_13 \
   "../../../../accelerator_demo.srcs/sources_1/bd/accelerator_bd/ipshared/f0ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/accelerator_bd/ip/accelerator_bd_auto_pc_1/sim/accelerator_bd_auto_pc_1.v" \
+  "../../../bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/sim/accelerator_bd_auto_pc_0.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

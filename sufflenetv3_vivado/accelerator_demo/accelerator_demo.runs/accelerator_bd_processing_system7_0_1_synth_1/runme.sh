@@ -6,25 +6,21 @@
 # Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 # 
 
-echo "This script was generated under a different operating system."
-echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
-exit
-
 if [ -z "$PATH" ]; then
-  PATH=F:/Xilinx/SDK/2017.2/bin;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64:F:/Xilinx/Vivado/2017.2/bin
+  PATH=/home/ziyan/opt/Xilinx/SDK/2017.2/bin:/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/lin64:/home/ziyan/opt/Xilinx/Vivado/2017.2/bin
 else
-  PATH=F:/Xilinx/SDK/2017.2/bin;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;F:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64:F:/Xilinx/Vivado/2017.2/bin:$PATH
+  PATH=/home/ziyan/opt/Xilinx/SDK/2017.2/bin:/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/lin64:/home/ziyan/opt/Xilinx/Vivado/2017.2/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=
+  LD_LIBRARY_PATH=/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/home/ziyan/opt/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/ECE527/MP4/Tutorial_Files/accelerator_demo/accelerator_demo.runs/accelerator_bd_processing_system7_0_1_synth_1'
+HD_PWD='/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_demo/accelerator_demo.runs/accelerator_bd_processing_system7_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

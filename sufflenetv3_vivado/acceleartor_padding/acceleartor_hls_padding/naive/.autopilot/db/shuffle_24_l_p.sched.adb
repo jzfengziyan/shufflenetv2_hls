@@ -15,7 +15,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>left_r</name>
+						<name>left_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -24,11 +24,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>left</originalName>
+						<originalName>left.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
@@ -43,7 +43,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>output_r</name>
+						<name>output_V</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -52,11 +52,11 @@
 							<count>0</count>
 							<item_version>0</item_version>
 						</inlineStackInfo>
-						<originalName>output</originalName>
+						<originalName>output.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
@@ -78,7 +78,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -93,7 +93,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -148,10 +148,10 @@
 					<Obj>
 						<type>0</type>
 						<id>6</id>
-						<name>tmp_106</name>
+						<name>tmp_273</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -166,7 +166,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -190,10 +190,10 @@
 					<Obj>
 						<type>0</type>
 						<id>7</id>
-						<name>exitcond2</name>
+						<name>exitcond3</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -208,7 +208,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -236,7 +236,7 @@
 						<name>co_21</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -251,7 +251,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -279,7 +279,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -294,7 +294,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -323,7 +323,7 @@
 						<name>tmp</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -338,7 +338,222 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>10</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>91</item>
+					<item>92</item>
+					<item>94</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_10">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>13</id>
+						<name>p_shl2_cast</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>123</lineNumber>
+						<contextFuncName>shuffle_24_l_p</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>shuffle_24_l_p</second>
+										</first>
+										<second>123</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>95</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_11">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>14</id>
+						<name>tmp_s</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>123</lineNumber>
+						<contextFuncName>shuffle_24_l_p</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>shuffle_24_l_p</second>
+										</first>
+										<second>123</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>7</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>97</item>
+					<item>98</item>
+					<item>100</item>
+				</oprand_edges>
+				<opcode>bitconcatenate</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_12">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>15</id>
+						<name>p_shl3_cast</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>126</lineNumber>
+						<contextFuncName>shuffle_24_l_p</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>shuffle_24_l_p</second>
+										</first>
+										<second>126</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>101</item>
+				</oprand_edges>
+				<opcode>zext</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_13">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>16</id>
+						<name>tmp_326</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>126</lineNumber>
+						<contextFuncName>shuffle_24_l_p</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>shuffle_24_l_p</second>
+										</first>
+										<second>126</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>11</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>102</item>
+					<item>103</item>
+				</oprand_edges>
+				<opcode>add</opcode>
+				<m_Display>0</m_Display>
+			</item>
+			<item class_id_reference="9" object_id="_14">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>17</id>
+						<name>tmp_327</name>
+						<fileName>acceleartor_hls_padding/components.cpp</fileName>
+						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
+						<lineNumber>123</lineNumber>
+						<contextFuncName>shuffle_24_l_p</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>acceleartor_hls_padding/components.cpp</first>
+											<second>shuffle_24_l_p</second>
+										</first>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -352,23 +567,23 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>91</item>
-					<item>92</item>
-					<item>94</item>
-					<item>96</item>
+					<item>105</item>
+					<item>106</item>
+					<item>108</item>
+					<item>110</item>
 				</oprand_edges>
 				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
 			</item>
-			<item class_id_reference="9" object_id="_10">
+			<item class_id_reference="9" object_id="_15">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>13</id>
-						<name>tmp_s</name>
+						<id>18</id>
+						<name>tmp_328</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -383,7 +598,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -393,221 +608,6 @@
 						<coreName></coreName>
 					</Obj>
 					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>98</item>
-					<item>99</item>
-					<item>101</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="9" object_id="_11">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>14</id>
-						<name>p_shl2_cast</name>
-						<fileName>acceleartor_hls_padding/components.cpp</fileName>
-						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
-						<contextFuncName>shuffle_24_l_p</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>acceleartor_hls_padding/components.cpp</first>
-											<second>shuffle_24_l_p</second>
-										</first>
-										<second>253</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>102</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="9" object_id="_12">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>15</id>
-						<name>tmp_273</name>
-						<fileName>acceleartor_hls_padding/components.cpp</fileName>
-						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
-						<contextFuncName>shuffle_24_l_p</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>acceleartor_hls_padding/components.cpp</first>
-											<second>shuffle_24_l_p</second>
-										</first>
-										<second>253</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>6</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>104</item>
-					<item>105</item>
-					<item>107</item>
-				</oprand_edges>
-				<opcode>bitconcatenate</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="9" object_id="_13">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>16</id>
-						<name>p_shl3_cast</name>
-						<fileName>acceleartor_hls_padding/components.cpp</fileName>
-						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
-						<contextFuncName>shuffle_24_l_p</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>acceleartor_hls_padding/components.cpp</first>
-											<second>shuffle_24_l_p</second>
-										</first>
-										<second>256</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>108</item>
-				</oprand_edges>
-				<opcode>zext</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="9" object_id="_14">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>17</id>
-						<name>tmp_274</name>
-						<fileName>acceleartor_hls_padding/components.cpp</fileName>
-						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
-						<contextFuncName>shuffle_24_l_p</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>acceleartor_hls_padding/components.cpp</first>
-											<second>shuffle_24_l_p</second>
-										</first>
-										<second>256</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>10</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>109</item>
-					<item>110</item>
-				</oprand_edges>
-				<opcode>add</opcode>
-				<m_Display>0</m_Display>
-			</item>
-			<item class_id_reference="9" object_id="_15">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>18</id>
-						<name>tmp_275</name>
-						<fileName>acceleartor_hls_padding/components.cpp</fileName>
-						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
-						<contextFuncName>shuffle_24_l_p</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>acceleartor_hls_padding/components.cpp</first>
-											<second>shuffle_24_l_p</second>
-										</first>
-										<second>253</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -627,7 +627,7 @@
 						<name>p_shl_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -642,7 +642,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -651,7 +651,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -666,10 +666,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>tmp_276</name>
+						<name>tmp_329</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>253</lineNumber>
+						<lineNumber>123</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -684,7 +684,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>253</second>
+										<second>123</second>
 									</item>
 								</second>
 							</item>
@@ -693,7 +693,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>7</bitwidth>
+					<bitwidth>6</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -713,7 +713,7 @@
 						<name>p_shl1_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -728,7 +728,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -737,7 +737,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -752,10 +752,10 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>tmp_277</name>
+						<name>tmp_330</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -770,7 +770,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -779,7 +779,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>10</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -798,7 +798,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>254</lineNumber>
+						<lineNumber>124</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -813,7 +813,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>254</second>
+										<second>124</second>
 									</item>
 								</second>
 							</item>
@@ -868,10 +868,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>exitcond1</name>
+						<name>exitcond2</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>254</lineNumber>
+						<lineNumber>124</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -886,7 +886,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>254</second>
+										<second>124</second>
 									</item>
 								</second>
 							</item>
@@ -914,7 +914,7 @@
 						<name>h_21</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>254</lineNumber>
+						<lineNumber>124</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -929,7 +929,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>254</second>
+										<second>124</second>
 									</item>
 								</second>
 							</item>
@@ -957,7 +957,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>254</lineNumber>
+						<lineNumber>124</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -972,7 +972,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>254</second>
+										<second>124</second>
 									</item>
 								</second>
 							</item>
@@ -1001,7 +1001,7 @@
 						<name>tmp_cast9</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1016,7 +1016,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1043,7 +1043,7 @@
 						<name>tmp_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1058,7 +1058,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1082,10 +1082,10 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>tmp_278</name>
+						<name>tmp_331</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1100,7 +1100,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1128,7 +1128,7 @@
 						<name>p_shl6_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1143,7 +1143,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1169,10 +1169,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>tmp_107</name>
+						<name>tmp_274</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1187,7 +1187,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1216,7 +1216,7 @@
 						<name>p_shl7_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1231,7 +1231,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1255,10 +1255,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_279</name>
+						<name>tmp_332</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1273,7 +1273,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1298,10 +1298,10 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>tmp_280</name>
+						<name>tmp_333</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1316,7 +1316,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1344,7 +1344,7 @@
 						<name>p_shl4_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1359,7 +1359,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1385,10 +1385,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>tmp_108</name>
+						<name>tmp_275</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1403,7 +1403,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1432,7 +1432,7 @@
 						<name>p_shl5_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1447,7 +1447,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1471,10 +1471,10 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp_281</name>
+						<name>tmp_334</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1489,7 +1489,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1517,7 +1517,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>125</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1532,7 +1532,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>255</second>
+										<second>125</second>
 									</item>
 								</second>
 							</item>
@@ -1590,7 +1590,7 @@
 						<name>exitcond</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>125</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1605,7 +1605,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>255</second>
+										<second>125</second>
 									</item>
 								</second>
 							</item>
@@ -1633,7 +1633,7 @@
 						<name>w_21</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>125</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1648,7 +1648,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>255</second>
+										<second>125</second>
 									</item>
 								</second>
 							</item>
@@ -1676,7 +1676,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>125</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1691,7 +1691,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>255</second>
+										<second>125</second>
 									</item>
 								</second>
 							</item>
@@ -1720,7 +1720,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1735,7 +1735,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1761,10 +1761,10 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>tmp_81_cast8</name>
+						<name>tmp_184_cast8</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1779,7 +1779,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1803,10 +1803,10 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>tmp_81_cast</name>
+						<name>tmp_184_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1821,7 +1821,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1845,10 +1845,10 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>tmp_282</name>
+						<name>tmp_335</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1863,7 +1863,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1888,10 +1888,10 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>tmp_405_cast</name>
+						<name>tmp_413_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1906,7 +1906,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1930,10 +1930,10 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>left_addr</name>
+						<name>left_V_addr</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1948,7 +1948,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -1974,10 +1974,10 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>tmp_283</name>
+						<name>tmp_336</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1992,7 +1992,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -2017,10 +2017,10 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>tmp_406_cast</name>
+						<name>tmp_414_cast</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2035,7 +2035,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -2059,10 +2059,10 @@
 					<Obj>
 						<type>0</type>
 						<id>60</id>
-						<name>output_addr</name>
+						<name>output_V_addr</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2077,7 +2077,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -2103,10 +2103,10 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>left_load</name>
+						<name>left_V_load</name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2121,7 +2121,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -2130,7 +2130,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
+					<bitwidth>8</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -2148,7 +2148,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2163,7 +2163,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -2191,7 +2191,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>256</lineNumber>
+						<lineNumber>126</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2206,7 +2206,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>256</second>
+										<second>126</second>
 									</item>
 								</second>
 							</item>
@@ -2233,7 +2233,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>255</lineNumber>
+						<lineNumber>125</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2248,7 +2248,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>255</second>
+										<second>125</second>
 									</item>
 								</second>
 							</item>
@@ -2331,7 +2331,7 @@
 						<name></name>
 						<fileName>acceleartor_hls_padding/components.cpp</fileName>
 						<fileDirectory>/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding</fileDirectory>
-						<lineNumber>261</lineNumber>
+						<lineNumber>131</lineNumber>
 						<contextFuncName>shuffle_24_l_p</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2346,7 +2346,7 @@
 											<first>acceleartor_hls_padding/components.cpp</first>
 											<second>shuffle_24_l_p</second>
 										</first>
-										<second>261</second>
+										<second>131</second>
 									</item>
 								</second>
 							</item>
@@ -2455,62 +2455,16 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<const_type>0</const_type>
-				<content>1</content>
-			</item>
-			<item class_id_reference="16" object_id="_62">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>95</id>
-						<name>empty</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<const_type>0</const_type>
-				<content>5</content>
-			</item>
-			<item class_id_reference="16" object_id="_63">
-				<Value>
-					<Obj>
-						<type>2</type>
-						<id>100</id>
-						<name>empty</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
 					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
 			</item>
-			<item class_id_reference="16" object_id="_64">
+			<item class_id_reference="16" object_id="_62">
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>106</id>
+						<id>99</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2528,6 +2482,52 @@
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
+			</item>
+			<item class_id_reference="16" object_id="_63">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>107</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>1</content>
+			</item>
+			<item class_id_reference="16" object_id="_64">
+				<Value>
+					<Obj>
+						<type>2</type>
+						<id>109</id>
+						<name>empty</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<const_type>0</const_type>
+				<content>5</content>
 			</item>
 			<item class_id_reference="16" object_id="_65">
 				<Value>
@@ -2679,7 +2679,7 @@
 				<Obj>
 					<type>3</type>
 					<id>24</id>
-					<name>.preheader3.preheader</name>
+					<name>.preheader4.preheader</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -2713,7 +2713,7 @@
 				<Obj>
 					<type>3</type>
 					<id>30</id>
-					<name>.preheader3</name>
+					<name>.preheader4</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -2879,7 +2879,7 @@
 				<Obj>
 					<type>3</type>
 					<id>68</id>
-					<name>.preheader3.loopexit</name>
+					<name>.preheader4.loopexit</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -3045,69 +3045,69 @@
 				<sink_obj>12</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_97">
-				<id>96</id>
+				<id>95</id>
 				<edge_type>1</edge_type>
-				<source_obj>95</source_obj>
-				<sink_obj>12</sink_obj>
+				<source_obj>12</source_obj>
+				<sink_obj>13</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_98">
-				<id>99</id>
+				<id>98</id>
 				<edge_type>1</edge_type>
-				<source_obj>12</source_obj>
-				<sink_obj>13</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_99">
-				<id>101</id>
-				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
-				<sink_obj>13</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_100">
-				<id>102</id>
-				<edge_type>1</edge_type>
-				<source_obj>13</source_obj>
+				<source_obj>5</source_obj>
 				<sink_obj>14</sink_obj>
 			</item>
+			<item class_id_reference="20" object_id="_99">
+				<id>100</id>
+				<edge_type>1</edge_type>
+				<source_obj>99</source_obj>
+				<sink_obj>14</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_100">
+				<id>101</id>
+				<edge_type>1</edge_type>
+				<source_obj>14</source_obj>
+				<sink_obj>15</sink_obj>
+			</item>
 			<item class_id_reference="20" object_id="_101">
-				<id>105</id>
-				<edge_type>1</edge_type>
-				<source_obj>12</source_obj>
-				<sink_obj>15</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_102">
-				<id>107</id>
-				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
-				<sink_obj>15</sink_obj>
-			</item>
-			<item class_id_reference="20" object_id="_103">
-				<id>108</id>
+				<id>102</id>
 				<edge_type>1</edge_type>
 				<source_obj>15</source_obj>
 				<sink_obj>16</sink_obj>
 			</item>
-			<item class_id_reference="20" object_id="_104">
-				<id>109</id>
+			<item class_id_reference="20" object_id="_102">
+				<id>103</id>
 				<edge_type>1</edge_type>
-				<source_obj>16</source_obj>
+				<source_obj>13</source_obj>
+				<sink_obj>16</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_103">
+				<id>106</id>
+				<edge_type>1</edge_type>
+				<source_obj>5</source_obj>
+				<sink_obj>17</sink_obj>
+			</item>
+			<item class_id_reference="20" object_id="_104">
+				<id>108</id>
+				<edge_type>1</edge_type>
+				<source_obj>107</source_obj>
 				<sink_obj>17</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_105">
 				<id>110</id>
 				<edge_type>1</edge_type>
-				<source_obj>14</source_obj>
+				<source_obj>109</source_obj>
 				<sink_obj>17</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_106">
 				<id>113</id>
 				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
+				<source_obj>17</source_obj>
 				<sink_obj>18</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_107">
 				<id>114</id>
 				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
+				<source_obj>93</source_obj>
 				<sink_obj>18</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_108">
@@ -3119,13 +3119,13 @@
 			<item class_id_reference="20" object_id="_109">
 				<id>118</id>
 				<edge_type>1</edge_type>
-				<source_obj>5</source_obj>
+				<source_obj>17</source_obj>
 				<sink_obj>20</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_110">
 				<id>119</id>
 				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
+				<source_obj>99</source_obj>
 				<sink_obj>20</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_111">
@@ -3245,7 +3245,7 @@
 			<item class_id_reference="20" object_id="_130">
 				<id>142</id>
 				<edge_type>1</edge_type>
-				<source_obj>17</source_obj>
+				<source_obj>22</source_obj>
 				<sink_obj>33</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_131">
@@ -3257,7 +3257,7 @@
 			<item class_id_reference="20" object_id="_132">
 				<id>146</id>
 				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
+				<source_obj>93</source_obj>
 				<sink_obj>34</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_133">
@@ -3269,7 +3269,7 @@
 			<item class_id_reference="20" object_id="_134">
 				<id>150</id>
 				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
+				<source_obj>99</source_obj>
 				<sink_obj>35</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_135">
@@ -3299,7 +3299,7 @@
 			<item class_id_reference="20" object_id="_139">
 				<id>155</id>
 				<edge_type>1</edge_type>
-				<source_obj>22</source_obj>
+				<source_obj>16</source_obj>
 				<sink_obj>38</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_140">
@@ -3311,7 +3311,7 @@
 			<item class_id_reference="20" object_id="_141">
 				<id>159</id>
 				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
+				<source_obj>93</source_obj>
 				<sink_obj>39</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_142">
@@ -3323,7 +3323,7 @@
 			<item class_id_reference="20" object_id="_143">
 				<id>163</id>
 				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
+				<source_obj>99</source_obj>
 				<sink_obj>40</sink_obj>
 			</item>
 			<item class_id_reference="20" object_id="_144">

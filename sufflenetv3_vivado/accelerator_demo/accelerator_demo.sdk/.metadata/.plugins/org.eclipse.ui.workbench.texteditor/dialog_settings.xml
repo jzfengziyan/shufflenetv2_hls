@@ -2,19 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Ma" key="selection"/>
+		<item value="Xuint8" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Xuint8"/>
+			<item value="u8"/>
+			<item value="shuffle"/>
 			<item value="ma"/>
 			<item value="tchar"/>
 			<item value="Path"/>
 			<item value="TCHAR"/>
 			<item value="sd"/>
-			<item value="float"/>
-			<item value="XReduction"/>
 		</list>
 		<list key="replacehistory">
 			<item value="int"/>
@@ -25,7 +26,7 @@
 		<item value="312" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="446" key="DIALOG_HEIGHT"/>
-		<item value="1433" key="DIALOG_X_ORIGIN"/>
+		<item value="935" key="DIALOG_X_ORIGIN"/>
 		<item value="274" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

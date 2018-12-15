@@ -23,6 +23,25 @@
 
 /******************************************************************/
 
+/* Definitions for driver SHUFFLENETV2 */
+#define XPAR_XSHUFFLENETV2_NUM_INSTANCES 1
+
+/* Definitions for peripheral SHUFFLENETV2_0 */
+#define XPAR_SHUFFLENETV2_0_DEVICE_ID 0
+#define XPAR_SHUFFLENETV2_0_S_AXI_CTL_BASEADDR 0x43C00000
+#define XPAR_SHUFFLENETV2_0_S_AXI_CTL_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral SHUFFLENETV2_0 */
+#define XPAR_XSHUFFLENETV2_0_DEVICE_ID XPAR_SHUFFLENETV2_0_DEVICE_ID
+#define XPAR_XSHUFFLENETV2_0_S_AXI_CTL_BASEADDR 0x43C00000
+#define XPAR_XSHUFFLENETV2_0_S_AXI_CTL_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000
@@ -437,25 +456,6 @@
 #define XPAR_XUSBPS_0_DEVICE_ID XPAR_PS7_USB_0_DEVICE_ID
 #define XPAR_XUSBPS_0_BASEADDR 0xE0002000
 #define XPAR_XUSBPS_0_HIGHADDR 0xE0002FFF
-
-
-/******************************************************************/
-
-/* Definitions for driver VECTOR_MULTIPLIER */
-#define XPAR_XVECTOR_MULTIPLIER_NUM_INSTANCES 1
-
-/* Definitions for peripheral VECTOR_MULTIPLIER_0 */
-#define XPAR_VECTOR_MULTIPLIER_0_DEVICE_ID 0
-#define XPAR_VECTOR_MULTIPLIER_0_S_AXI_CTL_BASEADDR 0x43C00000
-#define XPAR_VECTOR_MULTIPLIER_0_S_AXI_CTL_HIGHADDR 0x43C0FFFF
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral VECTOR_MULTIPLIER_0 */
-#define XPAR_XVECTOR_MULTIPLIER_0_DEVICE_ID XPAR_VECTOR_MULTIPLIER_0_DEVICE_ID
-#define XPAR_XVECTOR_MULTIPLIER_0_S_AXI_CTL_BASEADDR 0x43C00000
-#define XPAR_XVECTOR_MULTIPLIER_0_S_AXI_CTL_HIGHADDR 0x43C0FFFF
 
 
 /******************************************************************/
