@@ -1,0 +1,51 @@
+05:11:03 **** Auto Build of configuration Debug for project lenet_cnn_demo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main(int, char**)':
+../src/main.cc:451:16: warning: ISO C++ forbids converting a string constant to 'TCHAR* {aka char*}' [-Wwrite-strings]
+  TCHAR *Path = "0:/";
+                ^~~~~
+../src/main.cc:529:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_pic_parameters("plane.bin");
+                                  ^
+../src/main.cc:534:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_1x1_parameters("shuffle1.bin");
+                                                  ^
+../src/main.cc:537:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_shuffle_conv_3x3_parameters("shuffle3.bin");
+                                                  ^
+../src/main.cc:540:43: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv1_weight_parameters("conv1.bin");
+                                           ^
+../src/main.cc:543:34: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_bias_parameters("bias.bin");
+                                  ^
+../src/main.cc:546:50: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_last_weight_parameters("convlast.bin");
+                                                  ^
+../src/main.cc:549:42: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+  parse_conv_fc_weight_parameters("fc.bin");
+                                          ^
+../src/main.cc:617:7: warning: unused variable 'kkkk' [-Wunused-variable]
+   int kkkk = 0;
+       ^~~~
+'Finished building: ../src/main.cc'
+' '
+'Building target: lenet_cnn_demo.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "lenet_cnn_demo.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lenet_cnn_demo.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lenet_cnn_demo.elf  |tee "lenet_cnn_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 812219	   2900	68527872	69342991	422170f	lenet_cnn_demo.elf
+'Finished building: lenet_cnn_demo.elf.size'
+' '
+
+05:11:04 Build Finished (took 1s.56ms)
+

@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vivado HLS Report for 'shuffle_24_p'
+================================================================
+* Date:           Sun Dec 16 05:17:19 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       add_adding_engine
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.32|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  48481|  48481|  48481|  48481|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                 |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |  48480|  48480|      1010|          -|          -|    48|    no    |
+        | + Loop 1.1      |   1008|   1008|        56|          -|          -|    18|    no    |
+        |  ++ Loop 1.1.1  |     54|     54|         3|          -|          -|    18|    no    |
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|     531|    234|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|     150|     45|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     81|
+|Register         |        -|      -|     127|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     808|    360|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |           Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |ShuffleNetV2_mux_jbC_x_U151  |ShuffleNetV2_mux_jbC  |        0|      0|  150|  45|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |Total                        |                      |        0|      0|  150|  45|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+----+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+----+----+------------+------------+
+    |co_32_fu_256_p2      |     +    |      0|  23|  11|           1|           6|
+    |h_28_fu_388_p2       |     +    |      0|  20|  10|           5|           1|
+    |tmp_497_fu_286_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_501_fu_326_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_505_fu_376_p2    |     +    |      0|  26|  12|           7|           7|
+    |tmp_506_fu_406_p2    |     +    |      0|  35|  15|          10|          10|
+    |tmp_507_fu_431_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_508_fu_437_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_509_fu_462_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_510_fu_468_p2    |     +    |      0|  26|  12|           7|           7|
+    |tmp_511_fu_493_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_512_fu_523_p2    |     +    |      0|  47|  19|          14|          14|
+    |tmp_513_fu_533_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_514_fu_543_p2    |     +    |      0|  38|  16|          11|          11|
+    |w_32_fu_505_p2       |     +    |      0|  20|  10|           5|           1|
+    |exitcond4_fu_382_p2  |   icmp   |      0|   0|   2|           5|           5|
+    |exitcond5_fu_250_p2  |   icmp   |      0|   0|   3|           6|           6|
+    |exitcond_fu_499_p2   |   icmp   |      0|   0|   2|           5|           5|
+    +---------------------+----------+-------+----+----+------------+------------+
+    |Total                |          |      0| 531| 234|         163|         160|
+    +---------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  45|          8|    1|          8|
+    |co_reg_203          |   9|          2|    6|         12|
+    |h_reg_214           |   9|          2|    5|         10|
+    |storemerge_reg_236  |   9|          2|    8|         16|
+    |w_reg_225           |   9|          2|    5|         10|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  81|         16|   25|         56|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |   7|   0|    7|          0|
+    |arrayNo_reg_603        |   3|   0|    3|          0|
+    |co_32_reg_588          |   6|   0|    6|          0|
+    |co_reg_203             |   6|   0|    6|          0|
+    |h_28_reg_616           |   5|   0|    5|          0|
+    |h_reg_214              |   5|   0|    5|          0|
+    |output_V_addr_reg_649  |  14|   0|   14|          0|
+    |storemerge_reg_236     |   8|   0|    8|          0|
+    |tmp_497_reg_593        |  10|   0|   11|          1|
+    |tmp_501_reg_598        |   9|   0|   10|          1|
+    |tmp_505_reg_608        |   6|   0|    7|          1|
+    |tmp_507_reg_621        |  13|   0|   14|          1|
+    |tmp_509_reg_626        |  14|   0|   15|          1|
+    |tmp_511_reg_631        |  10|   0|   11|          1|
+    |tmp_538_reg_581        |   1|   0|    1|          0|
+    |w_32_reg_639           |   5|   0|    5|          0|
+    |w_reg_225              |   5|   0|    5|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 127|   0|  133|          6|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++---------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                           |  in |    1| ap_ctrl_hs |      shuffle_24_p      | return value |
+|ap_rst                           |  in |    1| ap_ctrl_hs |      shuffle_24_p      | return value |
+|ap_start                         |  in |    1| ap_ctrl_hs |      shuffle_24_p      | return value |
+|ap_done                          | out |    1| ap_ctrl_hs |      shuffle_24_p      | return value |
+|ap_idle                          | out |    1| ap_ctrl_hs |      shuffle_24_p      | return value |
+|ap_ready                         | out |    1| ap_ctrl_hs |      shuffle_24_p      | return value |
+|left_V_address0                  | out |   13|  ap_memory |         left_V         |     array    |
+|left_V_ce0                       | out |    1|  ap_memory |         left_V         |     array    |
+|left_V_q0                        |  in |    8|  ap_memory |         left_V         |     array    |
+|output_V_address0                | out |   14|  ap_memory |        output_V        |     array    |
+|output_V_ce0                     | out |    1|  ap_memory |        output_V        |     array    |
+|output_V_we0                     | out |    1|  ap_memory |        output_V        |     array    |
+|output_V_d0                      | out |    8|  ap_memory |        output_V        |     array    |
+|buffer1_1_24_16x16_p_7_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_7 |     array    |
+|buffer1_1_24_16x16_p_7_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_7 |     array    |
+|buffer1_1_24_16x16_p_7_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_7 |     array    |
+|buffer1_1_24_16x16_p_6_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_6 |     array    |
+|buffer1_1_24_16x16_p_6_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_6 |     array    |
+|buffer1_1_24_16x16_p_6_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_6 |     array    |
+|buffer1_1_24_16x16_p_5_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_5 |     array    |
+|buffer1_1_24_16x16_p_5_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_5 |     array    |
+|buffer1_1_24_16x16_p_5_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_5 |     array    |
+|buffer1_1_24_16x16_p_4_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_4 |     array    |
+|buffer1_1_24_16x16_p_4_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_4 |     array    |
+|buffer1_1_24_16x16_p_4_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_4 |     array    |
+|buffer1_1_24_16x16_p_3_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_3 |     array    |
+|buffer1_1_24_16x16_p_3_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_3 |     array    |
+|buffer1_1_24_16x16_p_3_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_3 |     array    |
+|buffer1_1_24_16x16_p_2_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_2 |     array    |
+|buffer1_1_24_16x16_p_2_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_2 |     array    |
+|buffer1_1_24_16x16_p_2_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_2 |     array    |
+|buffer1_1_24_16x16_p_1_address0  | out |   10|  ap_memory | buffer1_1_24_16x16_p_1 |     array    |
+|buffer1_1_24_16x16_p_1_ce0       | out |    1|  ap_memory | buffer1_1_24_16x16_p_1 |     array    |
+|buffer1_1_24_16x16_p_1_q0        |  in |    8|  ap_memory | buffer1_1_24_16x16_p_1 |     array    |
+|buffer1_1_24_16x16_p_address0    | out |   10|  ap_memory |  buffer1_1_24_16x16_p  |     array    |
+|buffer1_1_24_16x16_p_ce0         | out |    1|  ap_memory |  buffer1_1_24_16x16_p  |     array    |
+|buffer1_1_24_16x16_p_q0          |  in |    8|  ap_memory |  buffer1_1_24_16x16_p  |     array    |
++---------------------------------+-----+-----+------------+------------------------+--------------+
+

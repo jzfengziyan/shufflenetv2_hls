@@ -1,0 +1,2158 @@
+
+
+================================================================
+== Vivado HLS Report for 'subconv_1x1_32_p'
+================================================================
+* Date:           Sun Dec 16 04:34:25 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       optimize_conv1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.74|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  542792|  542792|  542792|  542792|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+--------+--------+----------+-----------+-----------+-------+----------+
+        |                     |     Latency     | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name      |   min  |   max  |  Latency |  achieved |   target  | Count | Pipelined|
+        +---------------------+--------+--------+----------+-----------+-----------+-------+----------+
+        |- Loop 1             |   24577|   24577|         3|          1|          1|  24576|    yes   |
+        |- Loop 2             |  493632|  493632|     15426|          -|          -|     32|    no    |
+        | + Loop 2.1          |   15424|   15424|       482|          -|          -|     32|    no    |
+        |  ++ Loop 2.1.1      |     480|     480|        20|          -|          -|     24|    no    |
+        |   +++ Loop 2.1.1.1  |      18|      18|         6|          -|          -|      3|    no    |
+        |- Loop 3             |   24578|   24578|         4|          1|          1|  24576|    yes   |
+        +---------------------+--------+--------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+  * Pipeline-1: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 19
+* Pipeline: 2
+  Pipeline-0: II = 1, D = 3, States = { 2 3 4 }
+  Pipeline-1: II = 1, D = 4, States = { 15 16 17 18 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	5  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / (!exitcond7)
+	15  / (exitcond7)
+7 --> 
+	8  / (!exitcond8)
+	6  / (exitcond8)
+8 --> 
+	9  / (!exitcond9)
+	7  / (exitcond9)
+9 --> 
+	10  / (!exitcond10)
+	8  / (exitcond10)
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	9  / true
+15 --> 
+	19  / (exitcond_flatten6)
+	16  / (!exitcond_flatten6)
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	15  / true
+19 --> 
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_20 (26)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:93
+:0  br label %.preheader55
+
+
+ <State 2>: 8.02ns
+ST_2: indvar_flatten1 (28)  [1/1] 0.00ns
+.preheader55:0  %indvar_flatten1 = phi i15 [ 0, %0 ], [ %indvar_flatten_next1, %1 ]
+
+ST_2: co (29)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader55:1  %co = phi i5 [ 0, %0 ], [ %tmp_mid2_v, %1 ]
+
+ST_2: indvar_flatten (30)  [1/1] 0.00ns
+.preheader55:2  %indvar_flatten = phi i12 [ 0, %0 ], [ %indvar_flatten_next, %1 ]
+
+ST_2: h (31)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader55:3  %h = phi i6 [ 1, %0 ], [ %tmp_172_mid2, %1 ]
+
+ST_2: w (32)  [1/1] 0.00ns
+.preheader55:4  %w = phi i6 [ 1, %0 ], [ %w_16, %1 ]
+
+ST_2: exitcond_flatten (33)  [1/1] 3.02ns
+.preheader55:5  %exitcond_flatten = icmp eq i15 %indvar_flatten1, -8192
+
+ST_2: indvar_flatten_next1 (34)  [1/1] 2.35ns
+.preheader55:6  %indvar_flatten_next1 = add i15 %indvar_flatten1, 1
+
+ST_2: StgValue_28 (35)  [1/1] 0.00ns
+.preheader55:7  br i1 %exitcond_flatten, label %.preheader54.preheader, label %.preheader56.preheader
+
+ST_2: exitcond_flatten5 (39)  [1/1] 2.94ns
+.preheader56.preheader:2  %exitcond_flatten5 = icmp eq i12 %indvar_flatten, 1024
+
+ST_2: not_exitcond_flatten (50)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:95 (grouped into LUT with out node exitcond23_mid)
+.preheader56.preheader:13  %not_exitcond_flatten = xor i1 %exitcond_flatten5, true
+
+ST_2: exitcond (51)  [1/1] 3.88ns  loc: acceleartor_hls_padding/components.cpp:95
+.preheader56.preheader:14  %exitcond = icmp eq i6 %w, -31
+
+ST_2: exitcond23_mid (52)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:95 (out node of the LUT)
+.preheader56.preheader:15  %exitcond23_mid = and i1 %exitcond, %not_exitcond_flatten
+
+ST_2: tmp_275 (54)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:95 (grouped into LUT with out node w_mid2)
+.preheader56.preheader:17  %tmp_275 = or i1 %exitcond23_mid, %exitcond_flatten5
+
+ST_2: w_mid2 (55)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:95 (out node of the LUT)
+.preheader56.preheader:18  %w_mid2 = select i1 %tmp_275, i6 1, i6 %w
+
+ST_2: indvar_flatten_op (106)  [1/1] 2.33ns
+:2  %indvar_flatten_op = add i12 %indvar_flatten, 1
+
+ST_2: indvar_flatten_next (107)  [1/1] 2.07ns
+:3  %indvar_flatten_next = select i1 %exitcond_flatten5, i12 1, i12 %indvar_flatten_op
+
+
+ <State 3>: 8.29ns
+ST_3: co_17 (37)  [1/1] 2.33ns  loc: acceleartor_hls_padding/components.cpp:93
+.preheader56.preheader:0  %co_17 = add i5 1, %co
+
+ST_3: h_mid (40)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:3  %h_mid = select i1 %exitcond_flatten5, i6 1, i6 %h
+
+ST_3: tmp_mid2_v (41)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:4  %tmp_mid2_v = select i1 %exitcond_flatten5, i5 %co_17, i5 %co
+
+ST_3: tmp_mid2 (42)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:5  %tmp_mid2 = zext i5 %tmp_mid2_v to i64
+
+ST_3: tmp_366 (43)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:6  %tmp_366 = trunc i5 %tmp_mid2_v to i3
+
+ST_3: newIndex8_mid2_v (44)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:7  %newIndex8_mid2_v = call i2 @_ssdm_op_PartSelect.i2.i5.i32.i32(i5 %tmp_mid2_v, i32 3, i32 4)
+
+ST_3: tmp (45)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:8  %tmp = call i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2 %newIndex8_mid2_v, i5 0)
+
+ST_3: p_shl2_cast (46)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:9  %p_shl2_cast = zext i7 %tmp to i8
+
+ST_3: tmp_s (47)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:10  %tmp_s = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %newIndex8_mid2_v, i1 false)
+
+ST_3: p_shl3_cast (48)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:11  %p_shl3_cast = zext i3 %tmp_s to i8
+
+ST_3: tmp_274 (49)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:12  %tmp_274 = add i8 %p_shl3_cast, %p_shl2_cast
+
+ST_3: h_15 (53)  [1/1] 2.31ns  loc: acceleartor_hls_padding/components.cpp:94
+.preheader56.preheader:16  %h_15 = add i6 1, %h_mid
+
+ST_3: tmp_172_mid2 (56)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:19  %tmp_172_mid2 = select i1 %exitcond23_mid, i6 %h_15, i6 %h_mid
+
+ST_3: tmp_172_mid2_cast (57)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:20  %tmp_172_mid2_cast = zext i6 %tmp_172_mid2 to i8
+
+ST_3: tmp_276 (58)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:21  %tmp_276 = add i8 %tmp_274, %tmp_172_mid2_cast
+
+ST_3: tmp_30 (63)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:95
+.preheader56.preheader:26  %tmp_30 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5)
+
+ST_3: bias_V_addr (76)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:39  %bias_V_addr = getelementptr [24 x i8]* %bias_V, i64 0, i64 %tmp_mid2
+
+ST_3: bias_V_load (77)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:40  %bias_V_load = load i8* %bias_V_addr, align 1
+
+ST_3: StgValue_55 (78)  [1/1] 3.31ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:41  switch i3 %tmp_366, label %branch15 [
+    i3 0, label %branch8
+    i3 1, label %branch9
+    i3 2, label %branch10
+    i3 3, label %branch11
+    i3 -4, label %branch12
+    i3 -3, label %branch13
+    i3 -2, label %branch14
+  ]
+
+ST_3: empty (104)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:98
+:0  %empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_30)
+
+ST_3: w_16 (105)  [1/1] 2.31ns  loc: acceleartor_hls_padding/components.cpp:95
+:1  %w_16 = add i6 %w_mid2, 1
+
+ST_3: StgValue_58 (108)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:95
+:4  br label %.preheader55
+
+
+ <State 4>: 7.07ns
+ST_4: empty_107 (38)  [1/1] 0.00ns
+.preheader56.preheader:1  %empty_107 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 24576, i64 24576, i64 24576)
+
+ST_4: p_shl_cast (59)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:22  %p_shl_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_276, i5 0)
+
+ST_4: tmp_367 (60)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:23  %tmp_367 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %tmp_276, i1 false)
+
+ST_4: p_shl1_cast (61)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:24  %p_shl1_cast = zext i9 %tmp_367 to i13
+
+ST_4: tmp_277 (62)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:25  %tmp_277 = add i13 %p_shl1_cast, %p_shl_cast
+
+ST_4: StgValue_64 (64)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:96
+.preheader56.preheader:27  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_4: tmp_174_cast (65)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:28  %tmp_174_cast = zext i6 %w_mid2 to i13
+
+ST_4: tmp_278 (66)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:29  %tmp_278 = add i13 %tmp_277, %tmp_174_cast
+
+ST_4: tmp_314_cast (67)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:30  %tmp_314_cast = zext i13 %tmp_278 to i64
+
+ST_4: ShuffleConvs_0_Downs (68)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:31  %ShuffleConvs_0_Downs = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_6, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_9 (69)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:32  %ShuffleConvs_0_Downs_9 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_1, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_10 (70)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:33  %ShuffleConvs_0_Downs_10 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_5, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_11 (71)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:34  %ShuffleConvs_0_Downs_11 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_12 (72)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:35  %ShuffleConvs_0_Downs_12 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_2, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_13 (73)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:36  %ShuffleConvs_0_Downs_13 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_4, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_14 (74)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:37  %ShuffleConvs_0_Downs_14 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_7, i64 0, i64 %tmp_314_cast
+
+ST_4: ShuffleConvs_0_Downs_15 (75)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:38  %ShuffleConvs_0_Downs_15 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_3, i64 0, i64 %tmp_314_cast
+
+ST_4: bias_V_load (77)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:97
+.preheader56.preheader:40  %bias_V_load = load i8* %bias_V_addr, align 1
+
+ST_4: StgValue_77 (80)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch14:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_9, align 1
+
+ST_4: StgValue_78 (81)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch14:1  br label %1
+
+ST_4: StgValue_79 (83)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch13:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_12, align 1
+
+ST_4: StgValue_80 (84)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch13:1  br label %1
+
+ST_4: StgValue_81 (86)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch12:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_15, align 1
+
+ST_4: StgValue_82 (87)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch12:1  br label %1
+
+ST_4: StgValue_83 (89)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch11:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_13, align 1
+
+ST_4: StgValue_84 (90)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch11:1  br label %1
+
+ST_4: StgValue_85 (92)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch10:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_10, align 1
+
+ST_4: StgValue_86 (93)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch10:1  br label %1
+
+ST_4: StgValue_87 (95)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch9:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs, align 1
+
+ST_4: StgValue_88 (96)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch9:1  br label %1
+
+ST_4: StgValue_89 (98)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch8:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_14, align 1
+
+ST_4: StgValue_90 (99)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch8:1  br label %1
+
+ST_4: StgValue_91 (101)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:97
+branch15:0  store i8 %bias_V_load, i8* %ShuffleConvs_0_Downs_11, align 1
+
+ST_4: StgValue_92 (102)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:97
+branch15:1  br label %1
+
+
+ <State 5>: 1.59ns
+ST_5: StgValue_93 (110)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:103
+.preheader54.preheader:0  br label %.preheader54
+
+
+ <State 6>: 3.88ns
+ST_6: h1 (112)  [1/1] 0.00ns
+.preheader54:0  %h1 = phi i6 [ %h_6, %3 ], [ 1, %.preheader54.preheader ]
+
+ST_6: exitcond7 (113)  [1/1] 3.88ns  loc: acceleartor_hls_padding/components.cpp:103
+.preheader54:1  %exitcond7 = icmp eq i6 %h1, -31
+
+ST_6: empty_108 (114)  [1/1] 0.00ns
+.preheader54:2  %empty_108 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)
+
+ST_6: StgValue_97 (115)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:103
+.preheader54:3  br i1 %exitcond7, label %.preheader.preheader, label %.preheader53.preheader
+
+ST_6: tmp_cast (117)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:104
+.preheader53.preheader:0  %tmp_cast = zext i6 %h1 to i8
+
+ST_6: StgValue_99 (118)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:104
+.preheader53.preheader:1  br label %.preheader53
+
+ST_6: StgValue_100 (539)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:115
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 7>: 3.88ns
+ST_7: w2 (120)  [1/1] 0.00ns
+.preheader53:0  %w2 = phi i6 [ %w_17, %2 ], [ 1, %.preheader53.preheader ]
+
+ST_7: exitcond8 (121)  [1/1] 3.88ns  loc: acceleartor_hls_padding/components.cpp:104
+.preheader53:1  %exitcond8 = icmp eq i6 %w2, -31
+
+ST_7: empty_109 (122)  [1/1] 0.00ns
+.preheader53:2  %empty_109 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)
+
+ST_7: StgValue_104 (123)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:104
+.preheader53:3  br i1 %exitcond8, label %3, label %.preheader52.preheader
+
+ST_7: tmp_173_cast (125)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader52.preheader:0  %tmp_173_cast = zext i6 %w2 to i13
+
+ST_7: StgValue_106 (126)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader52.preheader:1  br label %.preheader52
+
+ST_7: h_6 (536)  [1/1] 2.31ns  loc: acceleartor_hls_padding/components.cpp:103
+:0  %h_6 = add i6 %h1, 1
+
+ST_7: StgValue_108 (537)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:103
+:1  br label %.preheader54
+
+
+ <State 8>: 7.48ns
+ST_8: ci (128)  [1/1] 0.00ns
+.preheader52:0  %ci = phi i5 [ 0, %.preheader52.preheader ], [ %ci_4, %.preheader52.loopexit ]
+
+ST_8: exitcond9 (129)  [1/1] 3.31ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader52:1  %exitcond9 = icmp eq i5 %ci, -8
+
+ST_8: empty_110 (130)  [1/1] 0.00ns
+.preheader52:2  %empty_110 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 24, i64 24, i64 24)
+
+ST_8: ci_4 (131)  [1/1] 2.33ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader52:3  %ci_4 = add i5 %ci, 1
+
+ST_8: StgValue_113 (132)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader52:4  br i1 %exitcond9, label %2, label %.preheader51.preheader
+
+ST_8: tmp_176_cast (134)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:0  %tmp_176_cast = zext i5 %ci to i8
+
+ST_8: tmp_371 (135)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:1  %tmp_371 = trunc i5 %ci to i3
+
+ST_8: newIndex (136)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:2  %newIndex = call i2 @_ssdm_op_PartSelect.i2.i5.i32.i32(i5 %ci, i32 3, i32 4)
+
+ST_8: tmp_286 (137)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:3  %tmp_286 = call i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2 %newIndex, i5 0)
+
+ST_8: p_shl6_cast (138)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:4  %p_shl6_cast = zext i7 %tmp_286 to i8
+
+ST_8: tmp_287 (139)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:5  %tmp_287 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %newIndex, i1 false)
+
+ST_8: p_shl7_cast (140)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:6  %p_shl7_cast = zext i3 %tmp_287 to i8
+
+ST_8: tmp_288 (141)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:7  %tmp_288 = add i8 %p_shl7_cast, %p_shl6_cast
+
+ST_8: tmp_289 (142)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:8  %tmp_289 = add i8 %tmp_288, %tmp_cast
+
+ST_8: p_shl4_cast (143)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:9  %p_shl4_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_289, i5 0)
+
+ST_8: tmp_372 (144)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:10  %tmp_372 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %tmp_289, i1 false)
+
+ST_8: p_shl5_cast (145)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:11  %p_shl5_cast = zext i9 %tmp_372 to i13
+
+ST_8: tmp_290 (146)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:12  %tmp_290 = add i13 %p_shl5_cast, %p_shl4_cast
+
+ST_8: tmp_291 (147)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:13  %tmp_291 = add i13 %tmp_290, %tmp_173_cast
+
+ST_8: tmp_331_cast (148)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:14  %tmp_331_cast = zext i13 %tmp_291 to i64
+
+ST_8: conv1_output_p_V_0_a (149)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:15  %conv1_output_p_V_0_a = getelementptr [3468 x i8]* @conv1_output_p_V_0, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_4_a (150)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:16  %conv1_output_p_V_4_a = getelementptr [3468 x i8]* @conv1_output_p_V_4, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_7_a (151)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:17  %conv1_output_p_V_7_a = getelementptr [3468 x i8]* @conv1_output_p_V_7, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_6_a (152)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:18  %conv1_output_p_V_6_a = getelementptr [3468 x i8]* @conv1_output_p_V_6, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_2_a (153)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:19  %conv1_output_p_V_2_a = getelementptr [3468 x i8]* @conv1_output_p_V_2, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_1_a (154)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:20  %conv1_output_p_V_1_a = getelementptr [3468 x i8]* @conv1_output_p_V_1, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_3_a (155)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:21  %conv1_output_p_V_3_a = getelementptr [3468 x i8]* @conv1_output_p_V_3, i64 0, i64 %tmp_331_cast
+
+ST_8: conv1_output_p_V_5_a (156)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+.preheader51.preheader:22  %conv1_output_p_V_5_a = getelementptr [3468 x i8]* @conv1_output_p_V_5, i64 0, i64 %tmp_331_cast
+
+ST_8: StgValue_137 (157)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:106
+.preheader51.preheader:23  br label %.preheader51.0
+
+ST_8: w_17 (533)  [1/1] 2.31ns  loc: acceleartor_hls_padding/components.cpp:104
+:0  %w_17 = add i6 %w2, 1
+
+ST_8: StgValue_139 (534)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:104
+:1  br label %.preheader53
+
+
+ <State 9>: 7.48ns
+ST_9: co3 (159)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+.preheader51.0:0  %co3 = phi i5 [ %co_18_7, %_ifconv ], [ 0, %.preheader51.preheader ]
+
+ST_9: empty_111 (160)  [1/1] 0.00ns
+.preheader51.0:1  %empty_111 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)
+
+ST_9: exitcond10 (161)  [1/1] 3.31ns  loc: acceleartor_hls_padding/components.cpp:106
+.preheader51.0:2  %exitcond10 = icmp eq i5 %co3, -8
+
+ST_9: StgValue_143 (162)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+.preheader51.0:3  br i1 %exitcond10, label %.preheader52.loopexit, label %_ifconv
+
+ST_9: newIndex3 (164)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:0  %newIndex3 = call i2 @_ssdm_op_PartSelect.i2.i5.i32.i32(i5 %co3, i32 3, i32 4)
+
+ST_9: tmp_292 (165)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:1  %tmp_292 = call i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2 %newIndex3, i5 0)
+
+ST_9: p_shl12_cast (166)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:2  %p_shl12_cast = zext i7 %tmp_292 to i8
+
+ST_9: tmp_293 (167)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:3  %tmp_293 = call i5 @_ssdm_op_BitConcatenate.i5.i2.i3(i2 %newIndex3, i3 0)
+
+ST_9: p_shl13_cast (168)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:4  %p_shl13_cast = zext i5 %tmp_293 to i8
+
+ST_9: tmp_294 (169)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:5  %tmp_294 = sub i8 %p_shl12_cast, %p_shl13_cast
+
+ST_9: tmp_295 (170)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:6  %tmp_295 = add i8 %tmp_176_cast, %tmp_294
+
+ST_9: tmp_296 (180)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:16  %tmp_296 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %newIndex3, i1 false)
+
+ST_9: p_shl11_cast (181)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:17  %p_shl11_cast = zext i3 %tmp_296 to i8
+
+ST_9: tmp_297 (182)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:18  %tmp_297 = add i8 %p_shl12_cast, %p_shl11_cast
+
+ST_9: tmp_298 (183)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:104
+_ifconv:19  %tmp_298 = add i8 %tmp_cast, %tmp_297
+
+ST_9: p_shl8_cast (184)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:104
+_ifconv:20  %p_shl8_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_298, i5 0)
+
+ST_9: tmp_373 (185)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:104
+_ifconv:21  %tmp_373 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %tmp_298, i1 false)
+
+ST_9: p_shl9_cast (186)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:104
+_ifconv:22  %p_shl9_cast = zext i9 %tmp_373 to i13
+
+ST_9: tmp_299 (187)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:104
+_ifconv:23  %tmp_299 = add i13 %p_shl8_cast, %p_shl9_cast
+
+ST_9: tmp_300 (188)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:24  %tmp_300 = add i13 %tmp_173_cast, %tmp_299
+
+ST_9: conv1_output_p_V_0_l (200)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:36  %conv1_output_p_V_0_l = load i8* %conv1_output_p_V_0_a, align 1
+
+ST_9: conv1_output_p_V_1_l (201)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:37  %conv1_output_p_V_1_l = load i8* %conv1_output_p_V_1_a, align 1
+
+ST_9: conv1_output_p_V_2_l (202)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:38  %conv1_output_p_V_2_l = load i8* %conv1_output_p_V_2_a, align 1
+
+ST_9: conv1_output_p_V_3_l (203)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:39  %conv1_output_p_V_3_l = load i8* %conv1_output_p_V_3_a, align 1
+
+ST_9: conv1_output_p_V_4_l (204)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:40  %conv1_output_p_V_4_l = load i8* %conv1_output_p_V_4_a, align 1
+
+ST_9: conv1_output_p_V_5_l (205)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:41  %conv1_output_p_V_5_l = load i8* %conv1_output_p_V_5_a, align 1
+
+ST_9: conv1_output_p_V_6_l (206)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:42  %conv1_output_p_V_6_l = load i8* %conv1_output_p_V_6_a, align 1
+
+ST_9: conv1_output_p_V_7_l (207)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:43  %conv1_output_p_V_7_l = load i8* %conv1_output_p_V_7_a, align 1
+
+ST_9: co_18_7 (528)  [1/1] 2.33ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:364  %co_18_7 = add i5 %co3, 8
+
+ST_9: StgValue_169 (531)  [1/1] 0.00ns
+.preheader52.loopexit:0  br label %.preheader52
+
+
+ <State 10>: 5.73ns
+ST_10: tmp_335_cast (171)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:7  %tmp_335_cast = sext i8 %tmp_295 to i64
+
+ST_10: weight_0_V_addr (172)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:8  %weight_0_V_addr = getelementptr [72 x i8]* %weight_0_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_1_V_addr (173)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:9  %weight_1_V_addr = getelementptr [72 x i8]* %weight_1_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_2_V_addr (174)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:10  %weight_2_V_addr = getelementptr [72 x i8]* %weight_2_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_3_V_addr (175)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:11  %weight_3_V_addr = getelementptr [72 x i8]* %weight_3_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_4_V_addr (176)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:12  %weight_4_V_addr = getelementptr [72 x i8]* %weight_4_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_5_V_addr (177)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:13  %weight_5_V_addr = getelementptr [72 x i8]* %weight_5_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_6_V_addr (178)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:14  %weight_6_V_addr = getelementptr [72 x i8]* %weight_6_V, i64 0, i64 %tmp_335_cast
+
+ST_10: weight_7_V_addr (179)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:15  %weight_7_V_addr = getelementptr [72 x i8]* %weight_7_V, i64 0, i64 %tmp_335_cast
+
+ST_10: tmp_343_cast (189)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:25  %tmp_343_cast = zext i13 %tmp_300 to i64
+
+ST_10: ShuffleConvs_0_Downs_16 (190)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:26  %ShuffleConvs_0_Downs_16 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_6, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_17 (191)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:27  %ShuffleConvs_0_Downs_17 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_1, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_18 (192)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:28  %ShuffleConvs_0_Downs_18 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_5, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_19 (193)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:29  %ShuffleConvs_0_Downs_19 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_20 (194)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:30  %ShuffleConvs_0_Downs_20 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_2, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_21 (195)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:31  %ShuffleConvs_0_Downs_21 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_4, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_22 (196)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:32  %ShuffleConvs_0_Downs_22 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_7, i64 0, i64 %tmp_343_cast
+
+ST_10: ShuffleConvs_0_Downs_23 (197)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:33  %ShuffleConvs_0_Downs_23 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_3, i64 0, i64 %tmp_343_cast
+
+ST_10: weight_0_V_load (198)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:34  %weight_0_V_load = load i8* %weight_0_V_addr, align 1
+
+ST_10: conv1_output_p_V_0_l (200)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:36  %conv1_output_p_V_0_l = load i8* %conv1_output_p_V_0_a, align 1
+
+ST_10: conv1_output_p_V_1_l (201)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:37  %conv1_output_p_V_1_l = load i8* %conv1_output_p_V_1_a, align 1
+
+ST_10: conv1_output_p_V_2_l (202)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:38  %conv1_output_p_V_2_l = load i8* %conv1_output_p_V_2_a, align 1
+
+ST_10: conv1_output_p_V_3_l (203)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:39  %conv1_output_p_V_3_l = load i8* %conv1_output_p_V_3_a, align 1
+
+ST_10: conv1_output_p_V_4_l (204)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:40  %conv1_output_p_V_4_l = load i8* %conv1_output_p_V_4_a, align 1
+
+ST_10: conv1_output_p_V_5_l (205)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:41  %conv1_output_p_V_5_l = load i8* %conv1_output_p_V_5_a, align 1
+
+ST_10: conv1_output_p_V_6_l (206)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:42  %conv1_output_p_V_6_l = load i8* %conv1_output_p_V_6_a, align 1
+
+ST_10: conv1_output_p_V_7_l (207)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:43  %conv1_output_p_V_7_l = load i8* %conv1_output_p_V_7_a, align 1
+
+ST_10: tmp_185 (208)  [1/1] 2.48ns  loc: acceleartor_hls_padding/components.cpp:105
+_ifconv:44  %tmp_185 = call i8 @_ssdm_op_Mux.ap_auto.8i8.i3(i8 %conv1_output_p_V_0_l, i8 %conv1_output_p_V_1_l, i8 %conv1_output_p_V_2_l, i8 %conv1_output_p_V_3_l, i8 %conv1_output_p_V_4_l, i8 %conv1_output_p_V_5_l, i8 %conv1_output_p_V_6_l, i8 %conv1_output_p_V_7_l, i3 %tmp_371)
+
+ST_10: ShuffleConvs_0_Downs_24 (211)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:47  %ShuffleConvs_0_Downs_24 = load i8* %ShuffleConvs_0_Downs_22, align 1
+
+ST_10: weight_1_V_load (248)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:84  %weight_1_V_load = load i8* %weight_1_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_25 (251)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:87  %ShuffleConvs_0_Downs_25 = load i8* %ShuffleConvs_0_Downs_16, align 1
+
+ST_10: weight_2_V_load (288)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:124  %weight_2_V_load = load i8* %weight_2_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_26 (291)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:127  %ShuffleConvs_0_Downs_26 = load i8* %ShuffleConvs_0_Downs_18, align 1
+
+ST_10: weight_3_V_load (328)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:164  %weight_3_V_load = load i8* %weight_3_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_27 (331)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:167  %ShuffleConvs_0_Downs_27 = load i8* %ShuffleConvs_0_Downs_21, align 1
+
+ST_10: weight_4_V_load (368)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:204  %weight_4_V_load = load i8* %weight_4_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_28 (371)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:207  %ShuffleConvs_0_Downs_28 = load i8* %ShuffleConvs_0_Downs_23, align 1
+
+ST_10: weight_5_V_load (408)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:244  %weight_5_V_load = load i8* %weight_5_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_29 (411)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:247  %ShuffleConvs_0_Downs_29 = load i8* %ShuffleConvs_0_Downs_20, align 1
+
+ST_10: weight_6_V_load (448)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:284  %weight_6_V_load = load i8* %weight_6_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_30 (451)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:287  %ShuffleConvs_0_Downs_30 = load i8* %ShuffleConvs_0_Downs_17, align 1
+
+ST_10: weight_7_V_load (488)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:324  %weight_7_V_load = load i8* %weight_7_V_addr, align 1
+
+ST_10: ShuffleConvs_0_Downs_31 (491)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:327  %ShuffleConvs_0_Downs_31 = load i8* %ShuffleConvs_0_Downs_19, align 1
+
+
+ <State 11>: 8.74ns
+ST_11: weight_0_V_load (198)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:34  %weight_0_V_load = load i8* %weight_0_V_addr, align 1
+
+ST_11: OP1_V (199)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:35  %OP1_V = sext i8 %weight_0_V_load to i16
+
+ST_11: OP2_V (209)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:45  %OP2_V = sext i8 %tmp_185 to i16
+
+ST_11: p_Val2_s (210)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:46  %p_Val2_s = mul i16 %OP1_V, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_24 (211)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:47  %ShuffleConvs_0_Downs_24 = load i8* %ShuffleConvs_0_Downs_22, align 1
+
+ST_11: tmp_375 (217)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:53  %tmp_375 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_s, i32 5)
+
+ST_11: weight_1_V_load (248)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:84  %weight_1_V_load = load i8* %weight_1_V_addr, align 1
+
+ST_11: OP1_V_1 (249)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:85  %OP1_V_1 = sext i8 %weight_1_V_load to i16
+
+ST_11: p_Val2_61_1 (250)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:86  %p_Val2_61_1 = mul i16 %OP1_V_1, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_25 (251)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:87  %ShuffleConvs_0_Downs_25 = load i8* %ShuffleConvs_0_Downs_16, align 1
+
+ST_11: tmp_380 (257)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:93  %tmp_380 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_1, i32 5)
+
+ST_11: weight_2_V_load (288)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:124  %weight_2_V_load = load i8* %weight_2_V_addr, align 1
+
+ST_11: OP1_V_2 (289)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:125  %OP1_V_2 = sext i8 %weight_2_V_load to i16
+
+ST_11: p_Val2_61_2 (290)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:126  %p_Val2_61_2 = mul i16 %OP1_V_2, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_26 (291)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:127  %ShuffleConvs_0_Downs_26 = load i8* %ShuffleConvs_0_Downs_18, align 1
+
+ST_11: tmp_385 (297)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:133  %tmp_385 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_2, i32 5)
+
+ST_11: weight_3_V_load (328)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:164  %weight_3_V_load = load i8* %weight_3_V_addr, align 1
+
+ST_11: OP1_V_3 (329)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:165  %OP1_V_3 = sext i8 %weight_3_V_load to i16
+
+ST_11: p_Val2_61_3 (330)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:166  %p_Val2_61_3 = mul i16 %OP1_V_3, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_27 (331)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:167  %ShuffleConvs_0_Downs_27 = load i8* %ShuffleConvs_0_Downs_21, align 1
+
+ST_11: tmp_390 (337)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:173  %tmp_390 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_3, i32 5)
+
+ST_11: weight_4_V_load (368)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:204  %weight_4_V_load = load i8* %weight_4_V_addr, align 1
+
+ST_11: OP1_V_4 (369)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:205  %OP1_V_4 = sext i8 %weight_4_V_load to i16
+
+ST_11: p_Val2_61_4 (370)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:206  %p_Val2_61_4 = mul i16 %OP1_V_4, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_28 (371)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:207  %ShuffleConvs_0_Downs_28 = load i8* %ShuffleConvs_0_Downs_23, align 1
+
+ST_11: tmp_395 (377)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:213  %tmp_395 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_4, i32 5)
+
+ST_11: weight_5_V_load (408)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:244  %weight_5_V_load = load i8* %weight_5_V_addr, align 1
+
+ST_11: OP1_V_5 (409)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:245  %OP1_V_5 = sext i8 %weight_5_V_load to i16
+
+ST_11: p_Val2_61_5 (410)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:246  %p_Val2_61_5 = mul i16 %OP1_V_5, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_29 (411)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:247  %ShuffleConvs_0_Downs_29 = load i8* %ShuffleConvs_0_Downs_20, align 1
+
+ST_11: tmp_400 (417)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:253  %tmp_400 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_5, i32 5)
+
+ST_11: weight_6_V_load (448)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:284  %weight_6_V_load = load i8* %weight_6_V_addr, align 1
+
+ST_11: OP1_V_6 (449)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:285  %OP1_V_6 = sext i8 %weight_6_V_load to i16
+
+ST_11: p_Val2_61_6 (450)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:286  %p_Val2_61_6 = mul i16 %OP1_V_6, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_30 (451)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:287  %ShuffleConvs_0_Downs_30 = load i8* %ShuffleConvs_0_Downs_17, align 1
+
+ST_11: tmp_405 (457)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:293  %tmp_405 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_6, i32 5)
+
+ST_11: weight_7_V_load (488)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:324  %weight_7_V_load = load i8* %weight_7_V_addr, align 1
+
+ST_11: OP1_V_7 (489)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:325  %OP1_V_7 = sext i8 %weight_7_V_load to i16
+
+ST_11: p_Val2_61_7 (490)  [1/1] 6.43ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:326  %p_Val2_61_7 = mul i16 %OP1_V_7, %OP2_V
+
+ST_11: ShuffleConvs_0_Downs_31 (491)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:327  %ShuffleConvs_0_Downs_31 = load i8* %ShuffleConvs_0_Downs_19, align 1
+
+ST_11: tmp_410 (497)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:333  %tmp_410 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_61_7, i32 5)
+
+
+ <State 12>: 6.78ns
+ST_12: tmp_179 (212)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:48  %tmp_179 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_24, i6 0)
+
+ST_12: tmp_203_cast (213)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:49  %tmp_203_cast = sext i14 %tmp_179 to i16
+
+ST_12: p_Val2_1 (214)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:50  %p_Val2_1 = add i16 %tmp_203_cast, %p_Val2_s
+
+ST_12: tmp_374 (215)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:51  %tmp_374 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_1, i32 15)
+
+ST_12: p_Val2_2 (216)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:52  %p_Val2_2 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_1, i32 6, i32 13)
+
+ST_12: tmp_180 (218)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:54  %tmp_180 = zext i1 %tmp_375 to i8
+
+ST_12: tmp_376 (219)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_s)
+_ifconv:55  %tmp_376 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_1, i32 13)
+
+ST_12: p_Val2_3 (220)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:56  %p_Val2_3 = add i8 %p_Val2_2, %tmp_180
+
+ST_12: tmp_377 (221)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:57  %tmp_377 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_3, i32 7)
+
+ST_12: tmp_181 (222)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_s)
+_ifconv:58  %tmp_181 = xor i1 %tmp_377, true
+
+ST_12: carry_s (223)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:59  %carry_s = and i1 %tmp_376, %tmp_181
+
+ST_12: tmp_186 (225)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:61  %tmp_186 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_1, i32 14, i32 15)
+
+ST_12: tmp_269_1 (252)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:88  %tmp_269_1 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_25, i6 0)
+
+ST_12: tmp_269_1_cast (253)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:89  %tmp_269_1_cast = sext i14 %tmp_269_1 to i16
+
+ST_12: p_Val2_62_1 (254)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:90  %p_Val2_62_1 = add i16 %tmp_269_1_cast, %p_Val2_61_1
+
+ST_12: tmp_379 (255)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:91  %tmp_379 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_1, i32 15)
+
+ST_12: p_Val2_63_1 (256)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:92  %p_Val2_63_1 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_1, i32 6, i32 13)
+
+ST_12: tmp_273_1 (258)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:94  %tmp_273_1 = zext i1 %tmp_380 to i8
+
+ST_12: tmp_381 (259)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_1)
+_ifconv:95  %tmp_381 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_1, i32 13)
+
+ST_12: p_Val2_64_1 (260)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:96  %p_Val2_64_1 = add i8 %p_Val2_63_1, %tmp_273_1
+
+ST_12: tmp_382 (261)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:97  %tmp_382 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_1, i32 7)
+
+ST_12: tmp_277_1 (262)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_1)
+_ifconv:98  %tmp_277_1 = xor i1 %tmp_382, true
+
+ST_12: carry_10_1 (263)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:99  %carry_10_1 = and i1 %tmp_381, %tmp_277_1
+
+ST_12: tmp_187 (265)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:101  %tmp_187 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_1, i32 14, i32 15)
+
+ST_12: tmp_269_2 (292)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:128  %tmp_269_2 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_26, i6 0)
+
+ST_12: tmp_269_2_cast (293)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:129  %tmp_269_2_cast = sext i14 %tmp_269_2 to i16
+
+ST_12: p_Val2_62_2 (294)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:130  %p_Val2_62_2 = add i16 %tmp_269_2_cast, %p_Val2_61_2
+
+ST_12: tmp_384 (295)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:131  %tmp_384 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_2, i32 15)
+
+ST_12: p_Val2_63_2 (296)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:132  %p_Val2_63_2 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_2, i32 6, i32 13)
+
+ST_12: tmp_273_2 (298)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:134  %tmp_273_2 = zext i1 %tmp_385 to i8
+
+ST_12: tmp_386 (299)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_2)
+_ifconv:135  %tmp_386 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_2, i32 13)
+
+ST_12: p_Val2_64_2 (300)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:136  %p_Val2_64_2 = add i8 %p_Val2_63_2, %tmp_273_2
+
+ST_12: tmp_387 (301)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:137  %tmp_387 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_2, i32 7)
+
+ST_12: tmp_277_2 (302)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_2)
+_ifconv:138  %tmp_277_2 = xor i1 %tmp_387, true
+
+ST_12: carry_10_2 (303)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:139  %carry_10_2 = and i1 %tmp_386, %tmp_277_2
+
+ST_12: tmp_188 (305)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:141  %tmp_188 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_2, i32 14, i32 15)
+
+ST_12: tmp_269_3 (332)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:168  %tmp_269_3 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_27, i6 0)
+
+ST_12: tmp_269_3_cast (333)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:169  %tmp_269_3_cast = sext i14 %tmp_269_3 to i16
+
+ST_12: p_Val2_62_3 (334)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:170  %p_Val2_62_3 = add i16 %tmp_269_3_cast, %p_Val2_61_3
+
+ST_12: tmp_389 (335)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:171  %tmp_389 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_3, i32 15)
+
+ST_12: p_Val2_63_3 (336)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:172  %p_Val2_63_3 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_3, i32 6, i32 13)
+
+ST_12: tmp_273_3 (338)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:174  %tmp_273_3 = zext i1 %tmp_390 to i8
+
+ST_12: tmp_391 (339)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_3)
+_ifconv:175  %tmp_391 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_3, i32 13)
+
+ST_12: p_Val2_64_3 (340)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:176  %p_Val2_64_3 = add i8 %p_Val2_63_3, %tmp_273_3
+
+ST_12: tmp_392 (341)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:177  %tmp_392 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_3, i32 7)
+
+ST_12: tmp_277_3 (342)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_3)
+_ifconv:178  %tmp_277_3 = xor i1 %tmp_392, true
+
+ST_12: carry_10_3 (343)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:179  %carry_10_3 = and i1 %tmp_391, %tmp_277_3
+
+ST_12: tmp_189 (345)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:181  %tmp_189 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_3, i32 14, i32 15)
+
+ST_12: tmp_269_4 (372)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:208  %tmp_269_4 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_28, i6 0)
+
+ST_12: tmp_269_4_cast (373)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:209  %tmp_269_4_cast = sext i14 %tmp_269_4 to i16
+
+ST_12: p_Val2_62_4 (374)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:210  %p_Val2_62_4 = add i16 %tmp_269_4_cast, %p_Val2_61_4
+
+ST_12: tmp_394 (375)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:211  %tmp_394 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_4, i32 15)
+
+ST_12: p_Val2_63_4 (376)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:212  %p_Val2_63_4 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_4, i32 6, i32 13)
+
+ST_12: tmp_273_4 (378)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:214  %tmp_273_4 = zext i1 %tmp_395 to i8
+
+ST_12: tmp_396 (379)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_4)
+_ifconv:215  %tmp_396 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_4, i32 13)
+
+ST_12: p_Val2_64_4 (380)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:216  %p_Val2_64_4 = add i8 %p_Val2_63_4, %tmp_273_4
+
+ST_12: tmp_397 (381)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:217  %tmp_397 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_4, i32 7)
+
+ST_12: tmp_277_4 (382)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_4)
+_ifconv:218  %tmp_277_4 = xor i1 %tmp_397, true
+
+ST_12: carry_10_4 (383)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:219  %carry_10_4 = and i1 %tmp_396, %tmp_277_4
+
+ST_12: tmp_190 (385)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:221  %tmp_190 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_4, i32 14, i32 15)
+
+ST_12: tmp_269_5 (412)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:248  %tmp_269_5 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_29, i6 0)
+
+ST_12: tmp_269_5_cast (413)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:249  %tmp_269_5_cast = sext i14 %tmp_269_5 to i16
+
+ST_12: p_Val2_62_5 (414)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:250  %p_Val2_62_5 = add i16 %tmp_269_5_cast, %p_Val2_61_5
+
+ST_12: tmp_399 (415)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:251  %tmp_399 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_5, i32 15)
+
+ST_12: p_Val2_63_5 (416)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:252  %p_Val2_63_5 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_5, i32 6, i32 13)
+
+ST_12: tmp_273_5 (418)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:254  %tmp_273_5 = zext i1 %tmp_400 to i8
+
+ST_12: tmp_401 (419)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_5)
+_ifconv:255  %tmp_401 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_5, i32 13)
+
+ST_12: p_Val2_64_5 (420)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:256  %p_Val2_64_5 = add i8 %p_Val2_63_5, %tmp_273_5
+
+ST_12: tmp_402 (421)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:257  %tmp_402 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_5, i32 7)
+
+ST_12: tmp_277_5 (422)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_5)
+_ifconv:258  %tmp_277_5 = xor i1 %tmp_402, true
+
+ST_12: carry_10_5 (423)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:259  %carry_10_5 = and i1 %tmp_401, %tmp_277_5
+
+ST_12: tmp_191 (425)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:261  %tmp_191 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_5, i32 14, i32 15)
+
+ST_12: tmp_269_6 (452)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:288  %tmp_269_6 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_30, i6 0)
+
+ST_12: tmp_269_6_cast (453)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:289  %tmp_269_6_cast = sext i14 %tmp_269_6 to i16
+
+ST_12: p_Val2_62_6 (454)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:290  %p_Val2_62_6 = add i16 %tmp_269_6_cast, %p_Val2_61_6
+
+ST_12: tmp_404 (455)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:291  %tmp_404 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_6, i32 15)
+
+ST_12: p_Val2_63_6 (456)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:292  %p_Val2_63_6 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_6, i32 6, i32 13)
+
+ST_12: tmp_273_6 (458)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:294  %tmp_273_6 = zext i1 %tmp_405 to i8
+
+ST_12: tmp_406 (459)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_6)
+_ifconv:295  %tmp_406 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_6, i32 13)
+
+ST_12: p_Val2_64_6 (460)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:296  %p_Val2_64_6 = add i8 %p_Val2_63_6, %tmp_273_6
+
+ST_12: tmp_407 (461)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:297  %tmp_407 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_6, i32 7)
+
+ST_12: tmp_277_6 (462)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_6)
+_ifconv:298  %tmp_277_6 = xor i1 %tmp_407, true
+
+ST_12: carry_10_6 (463)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:299  %carry_10_6 = and i1 %tmp_406, %tmp_277_6
+
+ST_12: tmp_192 (465)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:301  %tmp_192 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_6, i32 14, i32 15)
+
+ST_12: tmp_269_7 (492)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:328  %tmp_269_7 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %ShuffleConvs_0_Downs_31, i6 0)
+
+ST_12: tmp_269_7_cast (493)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:329  %tmp_269_7_cast = sext i14 %tmp_269_7 to i16
+
+ST_12: p_Val2_62_7 (494)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:330  %p_Val2_62_7 = add i16 %tmp_269_7_cast, %p_Val2_61_7
+
+ST_12: tmp_409 (495)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:331  %tmp_409 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_7, i32 15)
+
+ST_12: p_Val2_63_7 (496)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:332  %p_Val2_63_7 = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %p_Val2_62_7, i32 6, i32 13)
+
+ST_12: tmp_273_7 (498)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:334  %tmp_273_7 = zext i1 %tmp_410 to i8
+
+ST_12: tmp_411 (499)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_7)
+_ifconv:335  %tmp_411 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_7, i32 13)
+
+ST_12: p_Val2_64_7 (500)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:336  %p_Val2_64_7 = add i8 %p_Val2_63_7, %tmp_273_7
+
+ST_12: tmp_412 (501)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:337  %tmp_412 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %p_Val2_64_7, i32 7)
+
+ST_12: tmp_277_7 (502)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node carry_10_7)
+_ifconv:338  %tmp_277_7 = xor i1 %tmp_412, true
+
+ST_12: carry_10_7 (503)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:339  %carry_10_7 = and i1 %tmp_411, %tmp_277_7
+
+ST_12: tmp_193 (505)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:341  %tmp_193 = call i2 @_ssdm_op_PartSelect.i2.i16.i32.i32(i16 %p_Val2_62_7, i32 14, i32 15)
+
+
+ <State 13>: 8.28ns
+ST_13: tmp_378 (224)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i)
+_ifconv:60  %tmp_378 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_1, i32 14)
+
+ST_13: Range1_all_ones (226)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:62  %Range1_all_ones = icmp eq i2 %tmp_186, -1
+
+ST_13: Range1_all_zeros (227)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:63  %Range1_all_zeros = icmp eq i2 %tmp_186, 0
+
+ST_13: deleted_zeros (228)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i)
+_ifconv:64  %deleted_zeros = select i1 %carry_s, i1 %Range1_all_ones, i1 %Range1_all_zeros
+
+ST_13: tmp_182 (229)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i)
+_ifconv:65  %tmp_182 = xor i1 %tmp_378, true
+
+ST_13: p_41_i_i (230)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i)
+_ifconv:66  %p_41_i_i = and i1 %tmp_374, %tmp_182
+
+ST_13: deleted_ones (231)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i)
+_ifconv:67  %deleted_ones = select i1 %carry_s, i1 %p_41_i_i, i1 %Range1_all_ones
+
+ST_13: p_38_i_i (232)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:68  %p_38_i_i = and i1 %carry_s, %Range1_all_ones
+
+ST_13: p_not_i_i (233)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i)
+_ifconv:69  %p_not_i_i = xor i1 %deleted_zeros, true
+
+ST_13: brmerge_i_i (234)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i)
+_ifconv:70  %brmerge_i_i = or i1 %tmp_377, %p_not_i_i
+
+ST_13: tmp_183 (235)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:71  %tmp_183 = xor i1 %tmp_374, true
+
+ST_13: overflow (236)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i)
+_ifconv:72  %overflow = and i1 %brmerge_i_i, %tmp_183
+
+ST_13: brmerge40_demorgan_i (237)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:73  %brmerge40_demorgan_i = and i1 %tmp_377, %deleted_ones
+
+ST_13: tmp1_demorgan (238)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow)
+_ifconv:74  %tmp1_demorgan = or i1 %p_38_i_i, %brmerge40_demorgan_i
+
+ST_13: tmp1 (239)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow)
+_ifconv:75  %tmp1 = xor i1 %tmp1_demorgan, true
+
+ST_13: underflow (240)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:76  %underflow = and i1 %tmp_374, %tmp1
+
+ST_13: brmerge_i_i_i (241)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:77  %brmerge_i_i_i = or i1 %underflow, %overflow
+
+ST_13: tmp_383 (264)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_17)
+_ifconv:100  %tmp_383 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_1, i32 14)
+
+ST_13: Range1_all_ones_1 (266)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:102  %Range1_all_ones_1 = icmp eq i2 %tmp_187, -1
+
+ST_13: Range1_all_zeros_1 (267)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:103  %Range1_all_zeros_1 = icmp eq i2 %tmp_187, 0
+
+ST_13: deleted_zeros_1 (268)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_1)
+_ifconv:104  %deleted_zeros_1 = select i1 %carry_10_1, i1 %Range1_all_ones_1, i1 %Range1_all_zeros_1
+
+ST_13: tmp_280_1 (269)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_17)
+_ifconv:105  %tmp_280_1 = xor i1 %tmp_383, true
+
+ST_13: p_41_i_i_1 (270)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_17)
+_ifconv:106  %p_41_i_i_1 = and i1 %tmp_379, %tmp_280_1
+
+ST_13: deleted_ones_1 (271)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_17)
+_ifconv:107  %deleted_ones_1 = select i1 %carry_10_1, i1 %p_41_i_i_1, i1 %Range1_all_ones_1
+
+ST_13: p_38_i_i_1 (272)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:108  %p_38_i_i_1 = and i1 %carry_10_1, %Range1_all_ones_1
+
+ST_13: p_not_i_i_1 (273)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_1)
+_ifconv:109  %p_not_i_i_1 = xor i1 %deleted_zeros_1, true
+
+ST_13: brmerge_i_i_1 (274)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_1)
+_ifconv:110  %brmerge_i_i_1 = or i1 %tmp_382, %p_not_i_i_1
+
+ST_13: tmp_282_1 (275)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:111  %tmp_282_1 = xor i1 %tmp_379, true
+
+ST_13: overflow_1 (276)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_1)
+_ifconv:112  %overflow_1 = and i1 %brmerge_i_i_1, %tmp_282_1
+
+ST_13: brmerge40_demorgan_i_17 (277)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:113  %brmerge40_demorgan_i_17 = and i1 %tmp_382, %deleted_ones_1
+
+ST_13: tmp3_demorgan (278)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_1)
+_ifconv:114  %tmp3_demorgan = or i1 %p_38_i_i_1, %brmerge40_demorgan_i_17
+
+ST_13: tmp3 (279)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_1)
+_ifconv:115  %tmp3 = xor i1 %tmp3_demorgan, true
+
+ST_13: underflow_1 (280)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:116  %underflow_1 = and i1 %tmp_379, %tmp3
+
+ST_13: brmerge_i_i_i_1 (281)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:117  %brmerge_i_i_i_1 = or i1 %underflow_1, %overflow_1
+
+ST_13: tmp_388 (304)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_11)
+_ifconv:140  %tmp_388 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_2, i32 14)
+
+ST_13: Range1_all_ones_2 (306)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:142  %Range1_all_ones_2 = icmp eq i2 %tmp_188, -1
+
+ST_13: Range1_all_zeros_2 (307)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:143  %Range1_all_zeros_2 = icmp eq i2 %tmp_188, 0
+
+ST_13: deleted_zeros_2 (308)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_2)
+_ifconv:144  %deleted_zeros_2 = select i1 %carry_10_2, i1 %Range1_all_ones_2, i1 %Range1_all_zeros_2
+
+ST_13: tmp_280_2 (309)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_11)
+_ifconv:145  %tmp_280_2 = xor i1 %tmp_388, true
+
+ST_13: p_41_i_i_2 (310)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_11)
+_ifconv:146  %p_41_i_i_2 = and i1 %tmp_384, %tmp_280_2
+
+ST_13: deleted_ones_2 (311)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_11)
+_ifconv:147  %deleted_ones_2 = select i1 %carry_10_2, i1 %p_41_i_i_2, i1 %Range1_all_ones_2
+
+ST_13: p_38_i_i_2 (312)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:148  %p_38_i_i_2 = and i1 %carry_10_2, %Range1_all_ones_2
+
+ST_13: p_not_i_i_2 (313)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_2)
+_ifconv:149  %p_not_i_i_2 = xor i1 %deleted_zeros_2, true
+
+ST_13: brmerge_i_i_2 (314)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_2)
+_ifconv:150  %brmerge_i_i_2 = or i1 %tmp_387, %p_not_i_i_2
+
+ST_13: tmp_282_2 (315)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:151  %tmp_282_2 = xor i1 %tmp_384, true
+
+ST_13: overflow_2 (316)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_2)
+_ifconv:152  %overflow_2 = and i1 %brmerge_i_i_2, %tmp_282_2
+
+ST_13: brmerge40_demorgan_i_11 (317)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:153  %brmerge40_demorgan_i_11 = and i1 %tmp_387, %deleted_ones_2
+
+ST_13: tmp5_demorgan (318)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_2)
+_ifconv:154  %tmp5_demorgan = or i1 %p_38_i_i_2, %brmerge40_demorgan_i_11
+
+ST_13: tmp5 (319)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_2)
+_ifconv:155  %tmp5 = xor i1 %tmp5_demorgan, true
+
+ST_13: underflow_2 (320)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:156  %underflow_2 = and i1 %tmp_384, %tmp5
+
+ST_13: brmerge_i_i_i_2 (321)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:157  %brmerge_i_i_i_2 = or i1 %underflow_2, %overflow_2
+
+ST_13: tmp_393 (344)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_12)
+_ifconv:180  %tmp_393 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_3, i32 14)
+
+ST_13: Range1_all_ones_3 (346)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:182  %Range1_all_ones_3 = icmp eq i2 %tmp_189, -1
+
+ST_13: Range1_all_zeros_3 (347)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:183  %Range1_all_zeros_3 = icmp eq i2 %tmp_189, 0
+
+ST_13: deleted_zeros_3 (348)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_3)
+_ifconv:184  %deleted_zeros_3 = select i1 %carry_10_3, i1 %Range1_all_ones_3, i1 %Range1_all_zeros_3
+
+ST_13: tmp_280_3 (349)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_12)
+_ifconv:185  %tmp_280_3 = xor i1 %tmp_393, true
+
+ST_13: p_41_i_i_3 (350)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_12)
+_ifconv:186  %p_41_i_i_3 = and i1 %tmp_389, %tmp_280_3
+
+ST_13: deleted_ones_3 (351)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_12)
+_ifconv:187  %deleted_ones_3 = select i1 %carry_10_3, i1 %p_41_i_i_3, i1 %Range1_all_ones_3
+
+ST_13: p_38_i_i_3 (352)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:188  %p_38_i_i_3 = and i1 %carry_10_3, %Range1_all_ones_3
+
+ST_13: p_not_i_i_3 (353)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_3)
+_ifconv:189  %p_not_i_i_3 = xor i1 %deleted_zeros_3, true
+
+ST_13: brmerge_i_i_3 (354)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_3)
+_ifconv:190  %brmerge_i_i_3 = or i1 %tmp_392, %p_not_i_i_3
+
+ST_13: tmp_282_3 (355)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:191  %tmp_282_3 = xor i1 %tmp_389, true
+
+ST_13: overflow_3 (356)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_3)
+_ifconv:192  %overflow_3 = and i1 %brmerge_i_i_3, %tmp_282_3
+
+ST_13: brmerge40_demorgan_i_12 (357)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:193  %brmerge40_demorgan_i_12 = and i1 %tmp_392, %deleted_ones_3
+
+ST_13: tmp7_demorgan (358)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_3)
+_ifconv:194  %tmp7_demorgan = or i1 %p_38_i_i_3, %brmerge40_demorgan_i_12
+
+ST_13: tmp7 (359)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_3)
+_ifconv:195  %tmp7 = xor i1 %tmp7_demorgan, true
+
+ST_13: underflow_3 (360)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:196  %underflow_3 = and i1 %tmp_389, %tmp7
+
+ST_13: brmerge_i_i_i_3 (361)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:197  %brmerge_i_i_i_3 = or i1 %underflow_3, %overflow_3
+
+ST_13: tmp_398 (384)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_13)
+_ifconv:220  %tmp_398 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_4, i32 14)
+
+ST_13: Range1_all_ones_4 (386)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:222  %Range1_all_ones_4 = icmp eq i2 %tmp_190, -1
+
+ST_13: Range1_all_zeros_4 (387)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:223  %Range1_all_zeros_4 = icmp eq i2 %tmp_190, 0
+
+ST_13: deleted_zeros_4 (388)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_4)
+_ifconv:224  %deleted_zeros_4 = select i1 %carry_10_4, i1 %Range1_all_ones_4, i1 %Range1_all_zeros_4
+
+ST_13: tmp_280_4 (389)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_13)
+_ifconv:225  %tmp_280_4 = xor i1 %tmp_398, true
+
+ST_13: p_41_i_i_4 (390)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_13)
+_ifconv:226  %p_41_i_i_4 = and i1 %tmp_394, %tmp_280_4
+
+ST_13: deleted_ones_4 (391)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_13)
+_ifconv:227  %deleted_ones_4 = select i1 %carry_10_4, i1 %p_41_i_i_4, i1 %Range1_all_ones_4
+
+ST_13: p_38_i_i_4 (392)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:228  %p_38_i_i_4 = and i1 %carry_10_4, %Range1_all_ones_4
+
+ST_13: p_not_i_i_4 (393)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_4)
+_ifconv:229  %p_not_i_i_4 = xor i1 %deleted_zeros_4, true
+
+ST_13: brmerge_i_i_4 (394)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_4)
+_ifconv:230  %brmerge_i_i_4 = or i1 %tmp_397, %p_not_i_i_4
+
+ST_13: tmp_282_4 (395)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:231  %tmp_282_4 = xor i1 %tmp_394, true
+
+ST_13: overflow_4 (396)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_4)
+_ifconv:232  %overflow_4 = and i1 %brmerge_i_i_4, %tmp_282_4
+
+ST_13: brmerge40_demorgan_i_13 (397)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:233  %brmerge40_demorgan_i_13 = and i1 %tmp_397, %deleted_ones_4
+
+ST_13: tmp9_demorgan (398)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_4)
+_ifconv:234  %tmp9_demorgan = or i1 %p_38_i_i_4, %brmerge40_demorgan_i_13
+
+ST_13: tmp9 (399)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_4)
+_ifconv:235  %tmp9 = xor i1 %tmp9_demorgan, true
+
+ST_13: underflow_4 (400)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:236  %underflow_4 = and i1 %tmp_394, %tmp9
+
+ST_13: brmerge_i_i_i_4 (401)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:237  %brmerge_i_i_i_4 = or i1 %underflow_4, %overflow_4
+
+ST_13: tmp_403 (424)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_14)
+_ifconv:260  %tmp_403 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_5, i32 14)
+
+ST_13: Range1_all_ones_5 (426)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:262  %Range1_all_ones_5 = icmp eq i2 %tmp_191, -1
+
+ST_13: Range1_all_zeros_5 (427)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:263  %Range1_all_zeros_5 = icmp eq i2 %tmp_191, 0
+
+ST_13: deleted_zeros_5 (428)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_5)
+_ifconv:264  %deleted_zeros_5 = select i1 %carry_10_5, i1 %Range1_all_ones_5, i1 %Range1_all_zeros_5
+
+ST_13: tmp_280_5 (429)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_14)
+_ifconv:265  %tmp_280_5 = xor i1 %tmp_403, true
+
+ST_13: p_41_i_i_5 (430)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_14)
+_ifconv:266  %p_41_i_i_5 = and i1 %tmp_399, %tmp_280_5
+
+ST_13: deleted_ones_5 (431)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_14)
+_ifconv:267  %deleted_ones_5 = select i1 %carry_10_5, i1 %p_41_i_i_5, i1 %Range1_all_ones_5
+
+ST_13: p_38_i_i_5 (432)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:268  %p_38_i_i_5 = and i1 %carry_10_5, %Range1_all_ones_5
+
+ST_13: p_not_i_i_5 (433)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_5)
+_ifconv:269  %p_not_i_i_5 = xor i1 %deleted_zeros_5, true
+
+ST_13: brmerge_i_i_5 (434)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_5)
+_ifconv:270  %brmerge_i_i_5 = or i1 %tmp_402, %p_not_i_i_5
+
+ST_13: tmp_282_5 (435)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:271  %tmp_282_5 = xor i1 %tmp_399, true
+
+ST_13: overflow_5 (436)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_5)
+_ifconv:272  %overflow_5 = and i1 %brmerge_i_i_5, %tmp_282_5
+
+ST_13: brmerge40_demorgan_i_14 (437)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:273  %brmerge40_demorgan_i_14 = and i1 %tmp_402, %deleted_ones_5
+
+ST_13: tmp11_demorgan (438)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_5)
+_ifconv:274  %tmp11_demorgan = or i1 %p_38_i_i_5, %brmerge40_demorgan_i_14
+
+ST_13: tmp11 (439)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_5)
+_ifconv:275  %tmp11 = xor i1 %tmp11_demorgan, true
+
+ST_13: underflow_5 (440)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:276  %underflow_5 = and i1 %tmp_399, %tmp11
+
+ST_13: brmerge_i_i_i_5 (441)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:277  %brmerge_i_i_i_5 = or i1 %underflow_5, %overflow_5
+
+ST_13: tmp_408 (464)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_15)
+_ifconv:300  %tmp_408 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_6, i32 14)
+
+ST_13: Range1_all_ones_6 (466)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:302  %Range1_all_ones_6 = icmp eq i2 %tmp_192, -1
+
+ST_13: Range1_all_zeros_6 (467)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:303  %Range1_all_zeros_6 = icmp eq i2 %tmp_192, 0
+
+ST_13: deleted_zeros_6 (468)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_6)
+_ifconv:304  %deleted_zeros_6 = select i1 %carry_10_6, i1 %Range1_all_ones_6, i1 %Range1_all_zeros_6
+
+ST_13: tmp_280_6 (469)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_15)
+_ifconv:305  %tmp_280_6 = xor i1 %tmp_408, true
+
+ST_13: p_41_i_i_6 (470)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_15)
+_ifconv:306  %p_41_i_i_6 = and i1 %tmp_404, %tmp_280_6
+
+ST_13: deleted_ones_6 (471)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_15)
+_ifconv:307  %deleted_ones_6 = select i1 %carry_10_6, i1 %p_41_i_i_6, i1 %Range1_all_ones_6
+
+ST_13: p_38_i_i_6 (472)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:308  %p_38_i_i_6 = and i1 %carry_10_6, %Range1_all_ones_6
+
+ST_13: p_not_i_i_6 (473)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_6)
+_ifconv:309  %p_not_i_i_6 = xor i1 %deleted_zeros_6, true
+
+ST_13: brmerge_i_i_6 (474)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_6)
+_ifconv:310  %brmerge_i_i_6 = or i1 %tmp_407, %p_not_i_i_6
+
+ST_13: tmp_282_6 (475)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:311  %tmp_282_6 = xor i1 %tmp_404, true
+
+ST_13: overflow_6 (476)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_6)
+_ifconv:312  %overflow_6 = and i1 %brmerge_i_i_6, %tmp_282_6
+
+ST_13: brmerge40_demorgan_i_15 (477)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:313  %brmerge40_demorgan_i_15 = and i1 %tmp_407, %deleted_ones_6
+
+ST_13: tmp13_demorgan (478)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_6)
+_ifconv:314  %tmp13_demorgan = or i1 %p_38_i_i_6, %brmerge40_demorgan_i_15
+
+ST_13: tmp13 (479)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_6)
+_ifconv:315  %tmp13 = xor i1 %tmp13_demorgan, true
+
+ST_13: underflow_6 (480)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:316  %underflow_6 = and i1 %tmp_404, %tmp13
+
+ST_13: brmerge_i_i_i_6 (481)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:317  %brmerge_i_i_i_6 = or i1 %underflow_6, %overflow_6
+
+ST_13: tmp_413 (504)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_16)
+_ifconv:340  %tmp_413 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %p_Val2_62_7, i32 14)
+
+ST_13: Range1_all_ones_7 (506)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:342  %Range1_all_ones_7 = icmp eq i2 %tmp_193, -1
+
+ST_13: Range1_all_zeros_7 (507)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:343  %Range1_all_zeros_7 = icmp eq i2 %tmp_193, 0
+
+ST_13: deleted_zeros_7 (508)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_7)
+_ifconv:344  %deleted_zeros_7 = select i1 %carry_10_7, i1 %Range1_all_ones_7, i1 %Range1_all_zeros_7
+
+ST_13: tmp_280_7 (509)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_16)
+_ifconv:345  %tmp_280_7 = xor i1 %tmp_413, true
+
+ST_13: p_41_i_i_7 (510)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_16)
+_ifconv:346  %p_41_i_i_7 = and i1 %tmp_409, %tmp_280_7
+
+ST_13: deleted_ones_7 (511)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge40_demorgan_i_16)
+_ifconv:347  %deleted_ones_7 = select i1 %carry_10_7, i1 %p_41_i_i_7, i1 %Range1_all_ones_7
+
+ST_13: p_38_i_i_7 (512)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:348  %p_38_i_i_7 = and i1 %carry_10_7, %Range1_all_ones_7
+
+ST_13: p_not_i_i_7 (513)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_7)
+_ifconv:349  %p_not_i_i_7 = xor i1 %deleted_zeros_7, true
+
+ST_13: brmerge_i_i_7 (514)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_7)
+_ifconv:350  %brmerge_i_i_7 = or i1 %tmp_412, %p_not_i_i_7
+
+ST_13: tmp_282_7 (515)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:351  %tmp_282_7 = xor i1 %tmp_409, true
+
+ST_13: overflow_7 (516)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node brmerge_i_i_i_7)
+_ifconv:352  %overflow_7 = and i1 %brmerge_i_i_7, %tmp_282_7
+
+ST_13: brmerge40_demorgan_i_16 (517)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:353  %brmerge40_demorgan_i_16 = and i1 %tmp_412, %deleted_ones_7
+
+ST_13: tmp15_demorgan (518)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_7)
+_ifconv:354  %tmp15_demorgan = or i1 %p_38_i_i_7, %brmerge40_demorgan_i_16
+
+ST_13: tmp15 (519)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node underflow_7)
+_ifconv:355  %tmp15 = xor i1 %tmp15_demorgan, true
+
+ST_13: underflow_7 (520)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:356  %underflow_7 = and i1 %tmp_409, %tmp15
+
+ST_13: brmerge_i_i_i_7 (521)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:357  %brmerge_i_i_i_7 = or i1 %underflow_7, %overflow_7
+
+
+ <State 14>: 7.39ns
+ST_14: tmp2 (242)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1)
+_ifconv:78  %tmp2 = or i1 %brmerge40_demorgan_i, %tmp_183
+
+ST_14: underflow_not (243)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1)
+_ifconv:79  %underflow_not = or i1 %tmp2, %p_38_i_i
+
+ST_14: p_Val2_64_mux (244)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:80  %p_Val2_64_mux = select i1 %brmerge_i_i_i, i8 127, i8 %p_Val2_3
+
+ST_14: p_Val2_s_112 (245)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1)
+_ifconv:81  %p_Val2_s_112 = select i1 %underflow, i8 -128, i8 %p_Val2_3
+
+ST_14: this_assign_1 (246)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:82  %this_assign_1 = select i1 %underflow_not, i8 %p_Val2_64_mux, i8 %p_Val2_s_112
+
+ST_14: StgValue_491 (247)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:83  store i8 %this_assign_1, i8* %ShuffleConvs_0_Downs_22, align 1
+
+ST_14: tmp4 (282)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_1)
+_ifconv:118  %tmp4 = or i1 %brmerge40_demorgan_i_17, %tmp_282_1
+
+ST_14: underflow_not_1 (283)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_1)
+_ifconv:119  %underflow_not_1 = or i1 %tmp4, %p_38_i_i_1
+
+ST_14: p_Val2_64_mux_1 (284)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:120  %p_Val2_64_mux_1 = select i1 %brmerge_i_i_i_1, i8 127, i8 %p_Val2_64_1
+
+ST_14: p_Val2_64_1_113 (285)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_1)
+_ifconv:121  %p_Val2_64_1_113 = select i1 %underflow_1, i8 -128, i8 %p_Val2_64_1
+
+ST_14: this_assign_1_1 (286)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:122  %this_assign_1_1 = select i1 %underflow_not_1, i8 %p_Val2_64_mux_1, i8 %p_Val2_64_1_113
+
+ST_14: StgValue_497 (287)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:123  store i8 %this_assign_1_1, i8* %ShuffleConvs_0_Downs_16, align 1
+
+ST_14: tmp6 (322)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_2)
+_ifconv:158  %tmp6 = or i1 %brmerge40_demorgan_i_11, %tmp_282_2
+
+ST_14: underflow_not_2 (323)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_2)
+_ifconv:159  %underflow_not_2 = or i1 %tmp6, %p_38_i_i_2
+
+ST_14: p_Val2_64_mux_2 (324)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:160  %p_Val2_64_mux_2 = select i1 %brmerge_i_i_i_2, i8 127, i8 %p_Val2_64_2
+
+ST_14: p_Val2_64_2_114 (325)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_2)
+_ifconv:161  %p_Val2_64_2_114 = select i1 %underflow_2, i8 -128, i8 %p_Val2_64_2
+
+ST_14: this_assign_1_2 (326)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:162  %this_assign_1_2 = select i1 %underflow_not_2, i8 %p_Val2_64_mux_2, i8 %p_Val2_64_2_114
+
+ST_14: StgValue_503 (327)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:163  store i8 %this_assign_1_2, i8* %ShuffleConvs_0_Downs_18, align 1
+
+ST_14: tmp8 (362)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_3)
+_ifconv:198  %tmp8 = or i1 %brmerge40_demorgan_i_12, %tmp_282_3
+
+ST_14: underflow_not_3 (363)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_3)
+_ifconv:199  %underflow_not_3 = or i1 %tmp8, %p_38_i_i_3
+
+ST_14: p_Val2_64_mux_3 (364)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:200  %p_Val2_64_mux_3 = select i1 %brmerge_i_i_i_3, i8 127, i8 %p_Val2_64_3
+
+ST_14: p_Val2_64_3_115 (365)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_3)
+_ifconv:201  %p_Val2_64_3_115 = select i1 %underflow_3, i8 -128, i8 %p_Val2_64_3
+
+ST_14: this_assign_1_3 (366)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:202  %this_assign_1_3 = select i1 %underflow_not_3, i8 %p_Val2_64_mux_3, i8 %p_Val2_64_3_115
+
+ST_14: StgValue_509 (367)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:203  store i8 %this_assign_1_3, i8* %ShuffleConvs_0_Downs_21, align 1
+
+ST_14: tmp10 (402)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_4)
+_ifconv:238  %tmp10 = or i1 %brmerge40_demorgan_i_13, %tmp_282_4
+
+ST_14: underflow_not_4 (403)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_4)
+_ifconv:239  %underflow_not_4 = or i1 %tmp10, %p_38_i_i_4
+
+ST_14: p_Val2_64_mux_4 (404)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:240  %p_Val2_64_mux_4 = select i1 %brmerge_i_i_i_4, i8 127, i8 %p_Val2_64_4
+
+ST_14: p_Val2_64_4_116 (405)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_4)
+_ifconv:241  %p_Val2_64_4_116 = select i1 %underflow_4, i8 -128, i8 %p_Val2_64_4
+
+ST_14: this_assign_1_4 (406)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:242  %this_assign_1_4 = select i1 %underflow_not_4, i8 %p_Val2_64_mux_4, i8 %p_Val2_64_4_116
+
+ST_14: StgValue_515 (407)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:243  store i8 %this_assign_1_4, i8* %ShuffleConvs_0_Downs_23, align 1
+
+ST_14: tmp12 (442)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_5)
+_ifconv:278  %tmp12 = or i1 %brmerge40_demorgan_i_14, %tmp_282_5
+
+ST_14: underflow_not_5 (443)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_5)
+_ifconv:279  %underflow_not_5 = or i1 %tmp12, %p_38_i_i_5
+
+ST_14: p_Val2_64_mux_5 (444)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:280  %p_Val2_64_mux_5 = select i1 %brmerge_i_i_i_5, i8 127, i8 %p_Val2_64_5
+
+ST_14: p_Val2_64_5_117 (445)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_5)
+_ifconv:281  %p_Val2_64_5_117 = select i1 %underflow_5, i8 -128, i8 %p_Val2_64_5
+
+ST_14: this_assign_1_5 (446)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:282  %this_assign_1_5 = select i1 %underflow_not_5, i8 %p_Val2_64_mux_5, i8 %p_Val2_64_5_117
+
+ST_14: StgValue_521 (447)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:283  store i8 %this_assign_1_5, i8* %ShuffleConvs_0_Downs_20, align 1
+
+ST_14: tmp14 (482)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_6)
+_ifconv:318  %tmp14 = or i1 %brmerge40_demorgan_i_15, %tmp_282_6
+
+ST_14: underflow_not_6 (483)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_6)
+_ifconv:319  %underflow_not_6 = or i1 %tmp14, %p_38_i_i_6
+
+ST_14: p_Val2_64_mux_6 (484)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:320  %p_Val2_64_mux_6 = select i1 %brmerge_i_i_i_6, i8 127, i8 %p_Val2_64_6
+
+ST_14: p_Val2_64_6_118 (485)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_6)
+_ifconv:321  %p_Val2_64_6_118 = select i1 %underflow_6, i8 -128, i8 %p_Val2_64_6
+
+ST_14: this_assign_1_6 (486)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:322  %this_assign_1_6 = select i1 %underflow_not_6, i8 %p_Val2_64_mux_6, i8 %p_Val2_64_6_118
+
+ST_14: StgValue_527 (487)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:323  store i8 %this_assign_1_6, i8* %ShuffleConvs_0_Downs_17, align 1
+
+ST_14: tmp16 (522)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_7)
+_ifconv:358  %tmp16 = or i1 %brmerge40_demorgan_i_16, %tmp_282_7
+
+ST_14: underflow_not_7 (523)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_7)
+_ifconv:359  %underflow_not_7 = or i1 %tmp16, %p_38_i_i_7
+
+ST_14: p_Val2_64_mux_7 (524)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:360  %p_Val2_64_mux_7 = select i1 %brmerge_i_i_i_7, i8 127, i8 %p_Val2_64_7
+
+ST_14: p_Val2_64_7_119 (525)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:108 (grouped into LUT with out node this_assign_1_7)
+_ifconv:361  %p_Val2_64_7_119 = select i1 %underflow_7, i8 -128, i8 %p_Val2_64_7
+
+ST_14: this_assign_1_7 (526)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:108 (out node of the LUT)
+_ifconv:362  %this_assign_1_7 = select i1 %underflow_not_7, i8 %p_Val2_64_mux_7, i8 %p_Val2_64_7_119
+
+ST_14: StgValue_533 (527)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:108
+_ifconv:363  store i8 %this_assign_1_7, i8* %ShuffleConvs_0_Downs_19, align 1
+
+ST_14: StgValue_534 (529)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:106
+_ifconv:365  br label %.preheader51.0
+
+
+ <State 15>: 8.02ns
+ST_15: indvar_flatten2 (541)  [1/1] 0.00ns
+.preheader:0  %indvar_flatten2 = phi i15 [ %indvar_flatten_next1_2, %._crit_edge ], [ 0, %.preheader.preheader ]
+
+ST_15: co4 (542)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader:1  %co4 = phi i5 [ %arrayNo5_mid2_v, %._crit_edge ], [ 0, %.preheader.preheader ]
+
+ST_15: indvar_flatten3 (543)  [1/1] 0.00ns
+.preheader:2  %indvar_flatten3 = phi i12 [ %indvar_flatten_next1_1, %._crit_edge ], [ 0, %.preheader.preheader ]
+
+ST_15: h5 (544)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader:3  %h5 = phi i6 [ %tmp_175_mid2, %._crit_edge ], [ 1, %.preheader.preheader ]
+
+ST_15: w6 (545)  [1/1] 0.00ns
+.preheader:4  %w6 = phi i6 [ %w_18, %._crit_edge ], [ 1, %.preheader.preheader ]
+
+ST_15: exitcond_flatten6 (546)  [1/1] 3.02ns
+.preheader:5  %exitcond_flatten6 = icmp eq i15 %indvar_flatten2, -8192
+
+ST_15: indvar_flatten_next1_2 (547)  [1/1] 2.35ns
+.preheader:6  %indvar_flatten_next1_2 = add i15 %indvar_flatten2, 1
+
+ST_15: StgValue_542 (548)  [1/1] 0.00ns
+.preheader:7  br i1 %exitcond_flatten6, label %4, label %.preheader50
+
+ST_15: exitcond_flatten7 (552)  [1/1] 2.94ns
+.preheader50:2  %exitcond_flatten7 = icmp eq i12 %indvar_flatten3, 1024
+
+ST_15: not_exitcond_flatten_8 (562)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:116 (grouped into LUT with out node exitcond_mid)
+.preheader50:12  %not_exitcond_flatten_8 = xor i1 %exitcond_flatten7, true
+
+ST_15: exitcond11 (563)  [1/1] 3.88ns  loc: acceleartor_hls_padding/components.cpp:116
+.preheader50:13  %exitcond11 = icmp eq i6 %w6, -31
+
+ST_15: exitcond_mid (564)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:116 (out node of the LUT)
+.preheader50:14  %exitcond_mid = and i1 %exitcond11, %not_exitcond_flatten_8
+
+ST_15: tmp_282 (566)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:116 (grouped into LUT with out node w6_mid2)
+.preheader50:16  %tmp_282 = or i1 %exitcond_mid, %exitcond_flatten7
+
+ST_15: w6_mid2 (567)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:116 (out node of the LUT)
+.preheader50:17  %w6_mid2 = select i1 %tmp_282, i6 1, i6 %w6
+
+ST_15: indvar_flatten21_op (630)  [1/1] 2.33ns
+._crit_edge:2  %indvar_flatten21_op = add i12 %indvar_flatten3, 1
+
+ST_15: indvar_flatten_next1_1 (631)  [1/1] 2.07ns
+._crit_edge:3  %indvar_flatten_next1_1 = select i1 %exitcond_flatten7, i12 1, i12 %indvar_flatten21_op
+
+
+ <State 16>: 8.29ns
+ST_16: co_18 (550)  [1/1] 2.33ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:0  %co_18 = add i5 1, %co4
+
+ST_16: h5_mid (553)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:3  %h5_mid = select i1 %exitcond_flatten7, i6 1, i6 %h5
+
+ST_16: arrayNo5_mid2_v (554)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:4  %arrayNo5_mid2_v = select i1 %exitcond_flatten7, i5 %co_18, i5 %co4
+
+ST_16: tmp_368 (555)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:5  %tmp_368 = trunc i5 %arrayNo5_mid2_v to i3
+
+ST_16: newIndex1_mid2_v (556)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:6  %newIndex1_mid2_v = call i2 @_ssdm_op_PartSelect.i2.i5.i32.i32(i5 %arrayNo5_mid2_v, i32 3, i32 4)
+
+ST_16: tmp_279 (557)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:7  %tmp_279 = call i7 @_ssdm_op_BitConcatenate.i7.i2.i5(i2 %newIndex1_mid2_v, i5 0)
+
+ST_16: p_shl16_cast (558)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:8  %p_shl16_cast = zext i7 %tmp_279 to i8
+
+ST_16: tmp_280 (559)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:114
+.preheader50:9  %tmp_280 = call i3 @_ssdm_op_BitConcatenate.i3.i2.i1(i2 %newIndex1_mid2_v, i1 false)
+
+ST_16: p_shl17_cast (560)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:10  %p_shl17_cast = zext i3 %tmp_280 to i8
+
+ST_16: tmp_281 (561)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:11  %tmp_281 = add i8 %p_shl17_cast, %p_shl16_cast
+
+ST_16: h_5 (565)  [1/1] 2.31ns  loc: acceleartor_hls_padding/components.cpp:115
+.preheader50:15  %h_5 = add i6 1, %h5_mid
+
+ST_16: tmp_175_mid2 (568)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:18  %tmp_175_mid2 = select i1 %exitcond_mid, i6 %h_5, i6 %h5_mid
+
+ST_16: tmp_175_mid2_cast (569)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:19  %tmp_175_mid2_cast = zext i6 %tmp_175_mid2 to i8
+
+ST_16: tmp_283 (570)  [1/1] 1.83ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:20  %tmp_283 = add i8 %tmp_281, %tmp_175_mid2_cast
+
+ST_16: tmp_31 (575)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:116
+.preheader50:25  %tmp_31 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)
+
+ST_16: empty_120 (628)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:121
+._crit_edge:0  %empty_120 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_31)
+
+ST_16: w_18 (629)  [1/1] 2.31ns  loc: acceleartor_hls_padding/components.cpp:116
+._crit_edge:1  %w_18 = add i6 %w6_mid2, 1
+
+ST_16: StgValue_568 (632)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:116
+._crit_edge:4  br label %.preheader
+
+
+ <State 17>: 7.07ns
+ST_17: p_shl14_cast (571)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:21  %p_shl14_cast = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %tmp_283, i5 0)
+
+ST_17: tmp_369 (572)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:22  %tmp_369 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %tmp_283, i1 false)
+
+ST_17: p_shl15_cast (573)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:23  %p_shl15_cast = zext i9 %tmp_369 to i13
+
+ST_17: tmp_284 (574)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:24  %tmp_284 = add i13 %p_shl15_cast, %p_shl14_cast
+
+ST_17: tmp_177_cast (577)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:27  %tmp_177_cast = zext i6 %w6_mid2 to i13
+
+ST_17: tmp_285 (578)  [1/1] 1.91ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:28  %tmp_285 = add i13 %tmp_284, %tmp_177_cast
+
+ST_17: tmp_323_cast (579)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:29  %tmp_323_cast = zext i13 %tmp_285 to i64
+
+ST_17: ShuffleConvs_0_Downs_32 (580)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:30  %ShuffleConvs_0_Downs_32 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_6, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_33 (581)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:31  %ShuffleConvs_0_Downs_33 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_1, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_34 (582)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:32  %ShuffleConvs_0_Downs_34 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_5, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_35 (583)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:33  %ShuffleConvs_0_Downs_35 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_36 (584)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:34  %ShuffleConvs_0_Downs_36 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_2, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_37 (585)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:35  %ShuffleConvs_0_Downs_37 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_4, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_38 (586)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:36  %ShuffleConvs_0_Downs_38 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_7, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_39 (587)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:37  %ShuffleConvs_0_Downs_39 = getelementptr [3468 x i8]* @ShuffleConvs_0_Downs_3, i64 0, i64 %tmp_323_cast
+
+ST_17: ShuffleConvs_0_Downs_40 (588)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:38  %ShuffleConvs_0_Downs_40 = load i8* %ShuffleConvs_0_Downs_38, align 1
+
+ST_17: ShuffleConvs_0_Downs_41 (589)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:39  %ShuffleConvs_0_Downs_41 = load i8* %ShuffleConvs_0_Downs_32, align 1
+
+ST_17: ShuffleConvs_0_Downs_42 (590)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:40  %ShuffleConvs_0_Downs_42 = load i8* %ShuffleConvs_0_Downs_34, align 1
+
+ST_17: ShuffleConvs_0_Downs_43 (591)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:41  %ShuffleConvs_0_Downs_43 = load i8* %ShuffleConvs_0_Downs_37, align 1
+
+ST_17: ShuffleConvs_0_Downs_44 (592)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:42  %ShuffleConvs_0_Downs_44 = load i8* %ShuffleConvs_0_Downs_39, align 1
+
+ST_17: ShuffleConvs_0_Downs_45 (593)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:43  %ShuffleConvs_0_Downs_45 = load i8* %ShuffleConvs_0_Downs_36, align 1
+
+ST_17: ShuffleConvs_0_Downs_46 (594)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:44  %ShuffleConvs_0_Downs_46 = load i8* %ShuffleConvs_0_Downs_33, align 1
+
+ST_17: ShuffleConvs_0_Downs_47 (595)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:45  %ShuffleConvs_0_Downs_47 = load i8* %ShuffleConvs_0_Downs_35, align 1
+
+
+ <State 18>: 5.73ns
+ST_18: empty_121 (551)  [1/1] 0.00ns
+.preheader50:1  %empty_121 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 24576, i64 24576, i64 24576)
+
+ST_18: StgValue_593 (576)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:117
+.preheader50:26  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind
+
+ST_18: ShuffleConvs_0_Downs_40 (588)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:38  %ShuffleConvs_0_Downs_40 = load i8* %ShuffleConvs_0_Downs_38, align 1
+
+ST_18: ShuffleConvs_0_Downs_41 (589)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:39  %ShuffleConvs_0_Downs_41 = load i8* %ShuffleConvs_0_Downs_32, align 1
+
+ST_18: ShuffleConvs_0_Downs_42 (590)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:40  %ShuffleConvs_0_Downs_42 = load i8* %ShuffleConvs_0_Downs_34, align 1
+
+ST_18: ShuffleConvs_0_Downs_43 (591)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:41  %ShuffleConvs_0_Downs_43 = load i8* %ShuffleConvs_0_Downs_37, align 1
+
+ST_18: ShuffleConvs_0_Downs_44 (592)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:42  %ShuffleConvs_0_Downs_44 = load i8* %ShuffleConvs_0_Downs_39, align 1
+
+ST_18: ShuffleConvs_0_Downs_45 (593)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:43  %ShuffleConvs_0_Downs_45 = load i8* %ShuffleConvs_0_Downs_36, align 1
+
+ST_18: ShuffleConvs_0_Downs_46 (594)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:44  %ShuffleConvs_0_Downs_46 = load i8* %ShuffleConvs_0_Downs_33, align 1
+
+ST_18: ShuffleConvs_0_Downs_47 (595)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:45  %ShuffleConvs_0_Downs_47 = load i8* %ShuffleConvs_0_Downs_35, align 1
+
+ST_18: tmp_184 (596)  [1/1] 2.48ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:46  %tmp_184 = call i8 @_ssdm_op_Mux.ap_auto.8i8.i3(i8 %ShuffleConvs_0_Downs_40, i8 %ShuffleConvs_0_Downs_41, i8 %ShuffleConvs_0_Downs_42, i8 %ShuffleConvs_0_Downs_43, i8 %ShuffleConvs_0_Downs_44, i8 %ShuffleConvs_0_Downs_45, i8 %ShuffleConvs_0_Downs_46, i8 %ShuffleConvs_0_Downs_47, i3 %tmp_368)
+
+ST_18: tmp_370 (597)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:47  %tmp_370 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %tmp_184, i32 7)
+
+ST_18: StgValue_604 (598)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:118
+.preheader50:48  br i1 %tmp_370, label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i, label %._crit_edge
+
+ST_18: StgValue_605 (600)  [1/1] 3.31ns  loc: acceleartor_hls_padding/components.cpp:119
+_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i:0  switch i3 %tmp_368, label %branch7 [
+    i3 0, label %branch0
+    i3 1, label %branch1
+    i3 2, label %branch2
+    i3 3, label %branch3
+    i3 -4, label %branch4
+    i3 -3, label %branch5
+    i3 -2, label %branch6
+  ]
+
+ST_18: StgValue_606 (602)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch6:0  store i8 0, i8* %ShuffleConvs_0_Downs_33, align 1
+
+ST_18: StgValue_607 (603)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch6:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_608 (605)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch5:0  store i8 0, i8* %ShuffleConvs_0_Downs_36, align 1
+
+ST_18: StgValue_609 (606)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch5:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_610 (608)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch4:0  store i8 0, i8* %ShuffleConvs_0_Downs_39, align 1
+
+ST_18: StgValue_611 (609)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch4:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_612 (611)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch3:0  store i8 0, i8* %ShuffleConvs_0_Downs_37, align 1
+
+ST_18: StgValue_613 (612)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch3:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_614 (614)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch2:0  store i8 0, i8* %ShuffleConvs_0_Downs_34, align 1
+
+ST_18: StgValue_615 (615)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch2:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_616 (617)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch1:0  store i8 0, i8* %ShuffleConvs_0_Downs_32, align 1
+
+ST_18: StgValue_617 (618)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch1:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_618 (620)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch0:0  store i8 0, i8* %ShuffleConvs_0_Downs_38, align 1
+
+ST_18: StgValue_619 (621)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch0:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_620 (623)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:119
+branch7:0  store i8 0, i8* %ShuffleConvs_0_Downs_35, align 1
+
+ST_18: StgValue_621 (624)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:119
+branch7:1  br label %_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129
+
+ST_18: StgValue_622 (626)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:120
+_ZrsILi32ELb0EE11ap_int_baseIXT_EXT0_EXleT_Li64EEERKS1_i.exit1._crit_edge.i.i129:0  br label %._crit_edge
+
+
+ <State 19>: 0.00ns
+ST_19: StgValue_623 (634)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:124
+:0  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten1') with incoming values : ('indvar_flatten_next1') [28]  (1.59 ns)
+
+ <State 2>: 8.02ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', acceleartor_hls_padding/components.cpp:95) [32]  (0 ns)
+	'icmp' operation ('exitcond', acceleartor_hls_padding/components.cpp:95) [51]  (3.88 ns)
+	'and' operation ('exitcond23_mid', acceleartor_hls_padding/components.cpp:95) [52]  (2.07 ns)
+	'or' operation ('tmp_275', acceleartor_hls_padding/components.cpp:95) [54]  (0 ns)
+	'select' operation ('w_mid2', acceleartor_hls_padding/components.cpp:95) [55]  (2.07 ns)
+
+ <State 3>: 8.29ns
+The critical path consists of the following:
+	'select' operation ('h_mid', acceleartor_hls_padding/components.cpp:97) [40]  (2.07 ns)
+	'add' operation ('h_15', acceleartor_hls_padding/components.cpp:94) [53]  (2.31 ns)
+	'select' operation ('tmp_172_mid2', acceleartor_hls_padding/components.cpp:97) [56]  (2.07 ns)
+	'add' operation ('tmp_276', acceleartor_hls_padding/components.cpp:97) [58]  (1.83 ns)
+
+ <State 4>: 7.07ns
+The critical path consists of the following:
+	'add' operation ('tmp_277', acceleartor_hls_padding/components.cpp:97) [62]  (1.91 ns)
+	'add' operation ('tmp_278', acceleartor_hls_padding/components.cpp:97) [66]  (1.91 ns)
+	'getelementptr' operation ('ShuffleConvs_0_Downs_14', acceleartor_hls_padding/components.cpp:97) [74]  (0 ns)
+	'store' operation (acceleartor_hls_padding/components.cpp:97) of variable 'bias_V_load', acceleartor_hls_padding/components.cpp:97 on array 'ShuffleConvs_0_Downs_7' [98]  (3.25 ns)
+
+ <State 5>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('h') with incoming values : ('h', acceleartor_hls_padding/components.cpp:103) [112]  (1.59 ns)
+
+ <State 6>: 3.88ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', acceleartor_hls_padding/components.cpp:103) [112]  (0 ns)
+	'icmp' operation ('exitcond7', acceleartor_hls_padding/components.cpp:103) [113]  (3.88 ns)
+
+ <State 7>: 3.88ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', acceleartor_hls_padding/components.cpp:104) [120]  (0 ns)
+	'icmp' operation ('exitcond8', acceleartor_hls_padding/components.cpp:104) [121]  (3.88 ns)
+
+ <State 8>: 7.48ns
+The critical path consists of the following:
+	'phi' operation ('ci') with incoming values : ('ci', acceleartor_hls_padding/components.cpp:105) [128]  (0 ns)
+	'add' operation ('tmp_288', acceleartor_hls_padding/components.cpp:105) [141]  (1.83 ns)
+	'add' operation ('tmp_289', acceleartor_hls_padding/components.cpp:105) [142]  (1.83 ns)
+	'add' operation ('tmp_290', acceleartor_hls_padding/components.cpp:105) [146]  (1.91 ns)
+	'add' operation ('tmp_291', acceleartor_hls_padding/components.cpp:105) [147]  (1.91 ns)
+	'getelementptr' operation ('conv1_output_p_V_1_a', acceleartor_hls_padding/components.cpp:105) [154]  (0 ns)
+
+ <State 9>: 7.48ns
+The critical path consists of the following:
+	'phi' operation ('co3', acceleartor_hls_padding/components.cpp:106) with incoming values : ('co_18_7', acceleartor_hls_padding/components.cpp:106) [159]  (0 ns)
+	'add' operation ('tmp_297', acceleartor_hls_padding/components.cpp:106) [182]  (1.83 ns)
+	'add' operation ('tmp_298', acceleartor_hls_padding/components.cpp:104) [183]  (1.83 ns)
+	'add' operation ('tmp_299', acceleartor_hls_padding/components.cpp:104) [187]  (1.91 ns)
+	'add' operation ('tmp_300', acceleartor_hls_padding/components.cpp:105) [188]  (1.91 ns)
+
+ <State 10>: 5.73ns
+The critical path consists of the following:
+	'load' operation ('conv1_output_p_V_0_l', acceleartor_hls_padding/components.cpp:105) on array 'conv1_output_p_V_0' [200]  (3.25 ns)
+	'mux' operation ('tmp_185', acceleartor_hls_padding/components.cpp:105) [208]  (2.48 ns)
+
+ <State 11>: 8.74ns
+The critical path consists of the following:
+	'load' operation ('weight_0_V_load', acceleartor_hls_padding/components.cpp:108) on array 'weight_0_V' [198]  (2.32 ns)
+	'mul' operation ('p_Val2_s', acceleartor_hls_padding/components.cpp:108) [210]  (6.43 ns)
+
+ <State 12>: 6.78ns
+The critical path consists of the following:
+	'add' operation ('p_Val2_1', acceleartor_hls_padding/components.cpp:108) [214]  (2.39 ns)
+	'add' operation ('p_Val2_3', acceleartor_hls_padding/components.cpp:108) [220]  (2.32 ns)
+	'xor' operation ('tmp_181', acceleartor_hls_padding/components.cpp:108) [222]  (0 ns)
+	'and' operation ('carry_s', acceleartor_hls_padding/components.cpp:108) [223]  (2.07 ns)
+
+ <State 13>: 8.28ns
+The critical path consists of the following:
+	'icmp' operation ('Range1_all_ones', acceleartor_hls_padding/components.cpp:108) [226]  (2.07 ns)
+	'and' operation ('p_38_i_i', acceleartor_hls_padding/components.cpp:108) [232]  (2.07 ns)
+	'or' operation ('tmp1_demorgan', acceleartor_hls_padding/components.cpp:108) [238]  (0 ns)
+	'xor' operation ('tmp1', acceleartor_hls_padding/components.cpp:108) [239]  (0 ns)
+	'and' operation ('underflow', acceleartor_hls_padding/components.cpp:108) [240]  (2.07 ns)
+	'or' operation ('brmerge_i_i_i', acceleartor_hls_padding/components.cpp:108) [241]  (2.07 ns)
+
+ <State 14>: 7.39ns
+The critical path consists of the following:
+	'select' operation ('p_Val2_64_mux', acceleartor_hls_padding/components.cpp:108) [244]  (2.07 ns)
+	'select' operation ('this_assign_1', acceleartor_hls_padding/components.cpp:108) [246]  (2.07 ns)
+	'store' operation (acceleartor_hls_padding/components.cpp:108) of variable 'this_assign_1', acceleartor_hls_padding/components.cpp:108 on array 'ShuffleConvs_0_Downs_7' [247]  (3.25 ns)
+
+ <State 15>: 8.02ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', acceleartor_hls_padding/components.cpp:116) [545]  (0 ns)
+	'icmp' operation ('exitcond11', acceleartor_hls_padding/components.cpp:116) [563]  (3.88 ns)
+	'and' operation ('exitcond_mid', acceleartor_hls_padding/components.cpp:116) [564]  (2.07 ns)
+	'or' operation ('tmp_282', acceleartor_hls_padding/components.cpp:116) [566]  (0 ns)
+	'select' operation ('w6_mid2', acceleartor_hls_padding/components.cpp:116) [567]  (2.07 ns)
+
+ <State 16>: 8.29ns
+The critical path consists of the following:
+	'select' operation ('h5_mid', acceleartor_hls_padding/components.cpp:118) [553]  (2.07 ns)
+	'add' operation ('h_5', acceleartor_hls_padding/components.cpp:115) [565]  (2.31 ns)
+	'select' operation ('tmp_175_mid2', acceleartor_hls_padding/components.cpp:118) [568]  (2.07 ns)
+	'add' operation ('tmp_283', acceleartor_hls_padding/components.cpp:118) [570]  (1.83 ns)
+
+ <State 17>: 7.07ns
+The critical path consists of the following:
+	'add' operation ('tmp_284', acceleartor_hls_padding/components.cpp:118) [574]  (1.91 ns)
+	'add' operation ('tmp_285', acceleartor_hls_padding/components.cpp:118) [578]  (1.91 ns)
+	'getelementptr' operation ('ShuffleConvs_0_Downs_38', acceleartor_hls_padding/components.cpp:118) [586]  (0 ns)
+	'load' operation ('ShuffleConvs_0_Downs_40', acceleartor_hls_padding/components.cpp:118) on array 'ShuffleConvs_0_Downs_7' [588]  (3.25 ns)
+
+ <State 18>: 5.73ns
+The critical path consists of the following:
+	'load' operation ('ShuffleConvs_0_Downs_40', acceleartor_hls_padding/components.cpp:118) on array 'ShuffleConvs_0_Downs_7' [588]  (3.25 ns)
+	'mux' operation ('tmp_184', acceleartor_hls_padding/components.cpp:118) [596]  (2.48 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

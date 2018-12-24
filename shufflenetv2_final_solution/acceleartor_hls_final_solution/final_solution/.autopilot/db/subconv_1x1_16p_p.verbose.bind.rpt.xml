@@ -1,0 +1,74 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'subconv_1x1_16p_p'" level="0">
+<item name = "Date">Sat Dec 22 04:10:47 2018
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">acceleartor_hls_final_solution</item>
+<item name = "Solution">final_solution</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.75, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">209463, 209463, 209463, 209463, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_MUL_DP_fu_1885">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1894">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1903">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1912">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1921">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1930">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1939">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1948">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1957">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1966">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1975">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1984">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_1993">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2002">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2011">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2020">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2029">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2038">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2047">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2056">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2065">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2074">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2083">MUL_DP, 3, 3, 1, 1, function</column>
+<column name="grp_MUL_DP_fu_2092">MUL_DP, 3, 3, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">12297, 12297, 11, 1, 1, 12288, yes</column>
+<column name="- Loop 2">184864, 184864, 11554, -, -, 16, no</column>
+<column name=" + Loop 2.1">11552, 11552, 722, -, -, 16, no</column>
+<column name="  ++ Loop 2.1.1">720, 720, 15, -, -, 48, no</column>
+<column name="- Loop 3">12297, 12297, 11, 1, 1, 12288, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

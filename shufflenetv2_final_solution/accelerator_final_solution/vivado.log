@@ -1,0 +1,602 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Dec 21 22:53:09 2018
+# Process ID: 14284
+# Current directory: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent62452 C:\Users\lyh67\Downloads\shufflenetv2_final_solution\accelerator_final_solution\accelerator_demo.xpr
+# Log file: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/vivado.log
+# Journal file: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.xpr
+INFO: [Project 1-313] Project file moved from '/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/accelerator_demo' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_padding/acceleartor_hls_padding/naive', nor could it be found using path 'C:/home/ziyan/ziyan/ece527/shufflenetv2_master/sufflenetv3_vivado/acceleartor_padding/acceleartor_hls_padding/naive'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_padding/acceleartor_hls_padding/naive'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'accelerator_bd_auto_pc_0' generated file not found 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/stats.txt'. Please regenerate to continue.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'accelerator_bd.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+accelerator_bd_ShuffleNetV2_0_1
+
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 945.324 ; gain = 166.164
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution'.
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_1
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_2
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:hls:ShuffleNetV2:1.0 - ShuffleNetV2_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc_3
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <accelerator_bd> from BD file <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd>
+open_bd_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1178.301 ; gain = 0.000
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {2.5 856 366} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_INPUT_OUTPUT> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_OTHER_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_p3X3_1X1_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_BIAS> at <0x00000000 [ 512M ]>
+</ShuffleNetV2_0/s_axi_CTL/Reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+validate_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1281.789 ; gain = 72.809
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk -hwspec C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk -hwspec C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+INFO: [BD 41-1662] The design 'accelerator_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.v
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hdl/accelerator_bd_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hdl/accelerator_bd_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hdl/accelerator_bd_axi_smc_2_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hdl/accelerator_bd_axi_smc_2_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ShuffleNetV2_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd.hwh
+Generated Block Design Tcl file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd_bd.tcl
+Generated Hardware Definition File C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1502.965 ; gain = 157.109
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_0] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP accelerator_bd_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 84.476 MB.
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_0_synth_1
+[Fri Dec 21 22:58:06 2018] Launched accelerator_bd_ShuffleNetV2_0_0_synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+WARNING: [Vivado 12-3482] The generated wrapper file has already been imported into the project, the imported file is:
+'C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/imports/hdl/accelerator_bd_wrapper.v'
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+save_bd_design
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ui/bd_af3ca616.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Fri Dec 21 22:59:20 2018] Launched accelerator_bd_ShuffleNetV2_0_0_synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_0_synth_1/runme.log
+[Fri Dec 21 22:59:20 2018] Launched synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Fri Dec 21 23:14:56 2018] Launched impl_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution/impl/ip/component.xml. It will be created.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution'.
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {3.5 1065 383} [get_bd_cells ShuffleNetV2_0]
+set_property location {3 1232 341} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_INPUT_OUTPUT> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_OTHER_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_p3X3_1X1_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_BIAS> at <0x00000000 [ 512M ]>
+</ShuffleNetV2_0/s_axi_CTL/Reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1621.027 ; gain = 0.000
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+INFO: [BD 41-1662] The design 'accelerator_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.v
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hdl/accelerator_bd_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hdl/accelerator_bd_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hdl/accelerator_bd_axi_smc_2_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hdl/accelerator_bd_axi_smc_2_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ShuffleNetV2_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd.hwh
+Generated Block Design Tcl file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd_bd.tcl
+Generated Hardware Definition File C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.hwdef
+generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1761.590 ; gain = 140.563
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_1] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP accelerator_bd_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 199.199 MB.
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_1_synth_1
+[Fri Dec 21 23:50:16 2018] Launched accelerator_bd_ShuffleNetV2_0_1_synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+WARNING: [Vivado 12-3482] The generated wrapper file has already been imported into the project, the imported file is:
+'C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/imports/hdl/accelerator_bd_wrapper.v'
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1
+
+save_bd_design
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ui/bd_af3ca616.ui> 
+launch_runs impl_1 -jobs 8
+[Fri Dec 21 23:51:01 2018] Launched accelerator_bd_ShuffleNetV2_0_1_synth_1, synth_1...
+Run output will be captured here:
+accelerator_bd_ShuffleNetV2_0_1_synth_1: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_1_synth_1/runme.log
+synth_1: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1/runme.log
+[Fri Dec 21 23:51:01 2018] Launched impl_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution/impl/ip/component.xml. It will be created.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution'.
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {3.5 1097 363} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_INPUT_OUTPUT> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_OTHER_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_p3X3_1X1_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_BIAS> at <0x00000000 [ 512M ]>
+</ShuffleNetV2_0/s_axi_CTL/Reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1862.156 ; gain = 0.000
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+INFO: [BD 41-1662] The design 'accelerator_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.v
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hdl/accelerator_bd_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hdl/accelerator_bd_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hdl/accelerator_bd_axi_smc_2_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hdl/accelerator_bd_axi_smc_2_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ShuffleNetV2_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd.hwh
+Generated Block Design Tcl file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd_bd.tcl
+Generated Hardware Definition File C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.hwdef
+generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2017.164 ; gain = 155.008
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_0] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP accelerator_bd_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 307.577 MB.
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_0_synth_1
+[Sat Dec 22 01:02:11 2018] Launched accelerator_bd_ShuffleNetV2_0_0_synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+WARNING: [Vivado 12-3482] The generated wrapper file has already been imported into the project, the imported file is:
+'C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/imports/hdl/accelerator_bd_wrapper.v'
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1
+
+save_bd_design
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ui/bd_af3ca616.ui> 
+launch_runs impl_1 -jobs 8
+[Sat Dec 22 01:02:55 2018] Launched accelerator_bd_ShuffleNetV2_0_0_synth_1, synth_1...
+Run output will be captured here:
+accelerator_bd_ShuffleNetV2_0_0_synth_1: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_0_synth_1/runme.log
+synth_1: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1/runme.log
+[Sat Dec 22 01:02:55 2018] Launched impl_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_ShuffleNetV2_0_0/accelerator_bd_ShuffleNetV2_0_0.dcp' for cell 'accelerator_bd_i/ShuffleNetV2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/accelerator_bd_axi_smc_0.dcp' for cell 'accelerator_bd_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/accelerator_bd_axi_smc_1_0.dcp' for cell 'accelerator_bd_i/axi_smc_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/accelerator_bd_axi_smc_2_0.dcp' for cell 'accelerator_bd_i/axi_smc_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/accelerator_bd_axi_smc_2_1.dcp' for cell 'accelerator_bd_i/axi_smc_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_timer_0_1/accelerator_bd_axi_timer_0_1.dcp' for cell 'accelerator_bd_i/axi_timer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.dcp' for cell 'accelerator_bd_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1.dcp' for cell 'accelerator_bd_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_xbar_0/accelerator_bd_xbar_0.dcp' for cell 'accelerator_bd_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0.dcp' for cell 'accelerator_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 7373 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc] for cell 'accelerator_bd_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc] for cell 'accelerator_bd_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1_board.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1_board.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_timer_0_1/accelerator_bd_axi_timer_0_1.xdc] for cell 'accelerator_bd_i/axi_timer_0/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_timer_0_1/accelerator_bd_axi_timer_0_1.xdc] for cell 'accelerator_bd_i/axi_timer_0/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1598 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 816 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 374 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 192 instances
+  RAM32X1S => RAM32X1S (RAMS32): 16 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 192 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 8 instances
+
+open_run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 2648.457 ; gain = 585.926
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 3089.883 ; gain = 434.449
+report_utilization: Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 3089.883 ; gain = 434.449
+reset_run impl_1
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution/impl/ip/component.xml. It will be created.
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution/impl/ip/component.xml. It will be created.
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution'.
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {3.5 1166 376} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+</processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_INPUT_OUTPUT> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_OTHER_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP2/HP2_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_p3X3_1X1_WEIGHTS> at <0x00000000 [ 512M ]>
+</processing_system7_0/S_AXI_HP3/HP3_DDR_LOWOCM> is being mapped into </ShuffleNetV2_0/Data_m_axi_DATA_BIAS> at <0x00000000 [ 512M ]>
+</ShuffleNetV2_0/s_axi_CTL/Reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+validate_bd_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 3152.648 ; gain = 0.000
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+INFO: [BD 41-1662] The design 'accelerator_bd.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_1/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_2/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_arlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_smc_3/S00_AXI_awlock'(1) to net 'ShuffleNetV2_0_m_axi_DATA_BIAS_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.v
+Verilog Output written to : C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hw_handoff/accelerator_bd_axi_smc_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/hdl/accelerator_bd_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hw_handoff/accelerator_bd_axi_smc_1_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/hdl/accelerator_bd_axi_smc_1_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hw_handoff/accelerator_bd_axi_smc_2_0_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/hdl/accelerator_bd_axi_smc_2_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+Exporting to file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1.hwh
+Generated Block Design Tcl file c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hw_handoff/accelerator_bd_axi_smc_2_1_bd.tcl
+Generated Hardware Definition File c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/hdl/accelerator_bd_axi_smc_2_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ShuffleNetV2_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd.hwh
+Generated Block Design Tcl file C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hw_handoff/accelerator_bd_bd.tcl
+Generated Hardware Definition File C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 3270.539 ; gain = 93.887
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_1] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP accelerator_bd_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 412.144 MB.
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_1_synth_1
+[Sat Dec 22 04:29:26 2018] Launched accelerator_bd_ShuffleNetV2_0_1_synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+WARNING: [Vivado 12-3482] The generated wrapper file has already been imported into the project, the imported file is:
+'C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/imports/hdl/accelerator_bd_wrapper.v'
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+save_bd_design
+Wrote  : <C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ui/bd_af3ca616.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Sat Dec 22 04:30:06 2018] Launched accelerator_bd_ShuffleNetV2_0_1_synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/accelerator_bd_ShuffleNetV2_0_1_synth_1/runme.log
+[Sat Dec 22 04:30:06 2018] Launched synth_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/synth_1/runme.log
+report_utilization -name utilization_2
+report_utilization: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3473.133 ; gain = 53.555
+report_utilization: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 3473.133 ; gain = 53.555
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_ShuffleNetV2_0_1/accelerator_bd_ShuffleNetV2_0_1.dcp' for cell 'accelerator_bd_i/ShuffleNetV2_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/accelerator_bd_axi_smc_0.dcp' for cell 'accelerator_bd_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/accelerator_bd_axi_smc_1_0.dcp' for cell 'accelerator_bd_i/axi_smc_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/accelerator_bd_axi_smc_2_0.dcp' for cell 'accelerator_bd_i/axi_smc_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/accelerator_bd_axi_smc_2_1.dcp' for cell 'accelerator_bd_i/axi_smc_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_timer_0_1/accelerator_bd_axi_timer_0_1.dcp' for cell 'accelerator_bd_i/axi_timer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.dcp' for cell 'accelerator_bd_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1.dcp' for cell 'accelerator_bd_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_xbar_0/accelerator_bd_xbar_0.dcp' for cell 'accelerator_bd_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_auto_pc_0/accelerator_bd_auto_pc_0.dcp' for cell 'accelerator_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 7222 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc] for cell 'accelerator_bd_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_processing_system7_0_1/accelerator_bd_processing_system7_0_1.xdc] for cell 'accelerator_bd_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1_board.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1_board.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_rst_ps7_0_100M_1/accelerator_bd_rst_ps7_0_100M_1.xdc] for cell 'accelerator_bd_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_0/bd_0/ip/ip_1/bd_67a5_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_9e52_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_0/bd_0/ip/ip_1/bd_9ea2_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_2/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_timer_0_1/accelerator_bd_axi_timer_0_1.xdc] for cell 'accelerator_bd_i/axi_timer_0/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_timer_0_1/accelerator_bd_axi_timer_0_1.xdc] for cell 'accelerator_bd_i/axi_timer_0/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0_board.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/ip/accelerator_bd_axi_smc_2_1/bd_0/ip/ip_1/bd_5e63_psr_aclk_0.xdc] for cell 'accelerator_bd_i/axi_smc_3/inst/clk_map/psr_aclk/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 3628.816 ; gain = 155.684
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3628.816 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 3628.816 ; gain = 0.000
+launch_runs impl_1 -jobs 8
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.180 . Memory (MB): peak = 3628.816 ; gain = 0.000
+[Sat Dec 22 04:41:18 2018] Launched impl_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 3628.816 ; gain = 0.000
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 6998 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/.Xil/Vivado-14284-DESKTOP-2C3UA9R/dcp130/accelerator_bd_wrapper_board.xdc]
+Finished Parsing XDC File [C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/.Xil/Vivado-14284-DESKTOP-2C3UA9R/dcp130/accelerator_bd_wrapper_board.xdc]
+Parsing XDC File [C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/.Xil/Vivado-14284-DESKTOP-2C3UA9R/dcp130/accelerator_bd_wrapper_early.xdc]
+Finished Parsing XDC File [C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/.Xil/Vivado-14284-DESKTOP-2C3UA9R/dcp130/accelerator_bd_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3871.469 ; gain = 109.027
+Restored from archive | CPU: 7.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3871.469 ; gain = 109.027
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1318 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 192 instances
+  RAM16X1S => RAM32X1S (RAMS32): 432 instances
+  RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 190 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 288 instances
+  RAM32X1S => RAM32X1S (RAMS32): 16 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 192 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 8 instances
+
+open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 3906.262 ; gain = 277.445
+open_report: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 4063.234 ; gain = 122.406
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 4231.188 ; gain = 47.930
+report_utilization: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 4231.188 ; gain = 47.930
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Dec 22 04:50:02 2018] Launched impl_1...
+Run output will be captured here: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/runme.log
+file copy -force C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/accelerator_bd_wrapper.sysdef C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+
+launch_sdk -workspace C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk -hwspec C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk -hwspec C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 22 05:19:30 2018...

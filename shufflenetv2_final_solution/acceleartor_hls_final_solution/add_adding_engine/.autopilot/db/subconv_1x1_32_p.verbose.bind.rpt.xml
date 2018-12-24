@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'subconv_1x1_32_p'" level="0">
+<item name = "Date">Sun Dec 16 05:15:42 2018
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">acceleartor_hls_padding</item>
+<item name = "Solution">add_adding_engine</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.74, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">668835, 668835, 668835, 668835, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_COMPUTE_ENGINE_fu_2110">COMPUTE_ENGINE, 6, 6, 6, 6, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">50736, 50736, 2114, -, -, 24, no</column>
+<column name=" + Loop 1.1">2112, 2112, 66, -, -, 32, no</column>
+<column name="  ++ Loop 1.1.1">64, 64, 2, -, -, 32, no</column>
+<column name="- Loop 2">567360, 567360, 17730, -, -, 32, no</column>
+<column name=" + Loop 2.1">17728, 17728, 554, -, -, 32, no</column>
+<column name="  ++ Loop 2.1.1">552, 552, 23, -, -, 24, no</column>
+<column name="- Loop 3">50736, 50736, 2114, -, -, 24, no</column>
+<column name=" + Loop 3.1">2112, 2112, 66, -, -, 32, no</column>
+<column name="  ++ Loop 3.1.1">64, 64, 2, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

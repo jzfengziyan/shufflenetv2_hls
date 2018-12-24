@@ -1,0 +1,80 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Sat Dec 22 04:26:39 2018
+| Host         : DESKTOP-2C3UA9R running 64-bit major release  (build 9200)
+| Command      : report_timing -file ./report/ShuffleNetV2_timing_synth.rpt
+| Design       : ShuffleNetV2
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.476ns  (required time - arrival time)
+  Source:                 ap_CS_fsm_reg[604]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/q0_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.391ns  (logic 1.649ns (22.311%)  route 5.742ns (77.689%))
+  Logic Levels:           9  (LUT4=2 LUT5=1 LUT6=5 RAMD64E=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=42520, unset)        0.973     0.973    ap_clk
+                         FDRE                                         r  ap_CS_fsm_reg[604]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.362     1.335 r  ap_CS_fsm_reg[604]/Q
+                         net (fo=4, unplaced)         0.765     2.100    weights_48_48_1x1_V_23_U/ShuffleNetV2_weigctx_ram_U/Q[3]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.395 r  weights_48_48_1x1_V_23_U/ShuffleNetV2_weigctx_ram_U/ram_reg_0_63_0_0_i_124/O
+                         net (fo=1, unplaced)         0.449     2.844    weights_48_48_1x1_V_23_U/ShuffleNetV2_weigctx_ram_U/ram_reg_0_63_0_0_i_124_n_189
+                         LUT5 (Prop_lut5_I4_O)        0.124     2.968 r  weights_48_48_1x1_V_23_U/ShuffleNetV2_weigctx_ram_U/ram_reg_0_63_0_0_i_99/O
+                         net (fo=3, unplaced)         0.467     3.435    weights_48_48_1x1_V_15_U/ShuffleNetV2_weigctx_ram_U/ap_CS_fsm_reg[1117]
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.559 r  weights_48_48_1x1_V_15_U/ShuffleNetV2_weigctx_ram_U/q1[7]_i_3/O
+                         net (fo=108, unplaced)       0.550     4.109    grp_subconv_1x1_16p_p_fu_12744/ap_CS_fsm_reg[642]
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.233 r  grp_subconv_1x1_16p_p_fu_12744/ram_reg_0_63_0_0_i_76/O
+                         net (fo=1, unplaced)         0.449     4.682    grp_subconv_1x1_16p_p_fu_12744/ram_reg_0_63_0_0_i_76_n_189
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.806 r  grp_subconv_1x1_16p_p_fu_12744/ram_reg_0_63_0_0_i_28__2/O
+                         net (fo=3, unplaced)         0.467     5.273    grp_subconv_1x1_16p_p_fu_12744/ram_reg_0_63_0_0_i_28__2_n_189
+                         LUT6 (Prop_lut6_I4_O)        0.124     5.397 r  grp_subconv_1x1_16p_p_fu_12744/ram_reg_0_63_0_0_i_3__21/O
+                         net (fo=384, unplaced)       1.244     6.641    weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/ram_reg_0_63_0_0/A1
+                         RAMD64E (Prop_ramd64e_RADR1_O)
+                                                      0.124     6.765 r  weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/ram_reg_0_63_0_0/SP/O
+                         net (fo=1, unplaced)         0.902     7.667    weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/ram_reg_0_63_0_0_n_190
+                         LUT4 (Prop_lut4_I3_O)        0.124     7.791 r  weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/q0[0]_i_2__8/O
+                         net (fo=1, unplaced)         0.449     8.240    ShuffleNetV2_uremd6N_U724/ShuffleNetV2_uremd6N_div_U/reg_14187_reg[0]_rep
+                         LUT6 (Prop_lut6_I5_O)        0.124     8.364 r  ShuffleNetV2_uremd6N_U724/ShuffleNetV2_uremd6N_div_U/q0[0]_i_1__36/O
+                         net (fo=1, unplaced)         0.000     8.364    weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/D[0]
+                         FDRE                                         r  weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/q0_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=42520, unset)        0.924    10.924    weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/ap_clk
+                         FDRE                                         r  weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/q0_reg[0]/C
+                         clock pessimism              0.000    10.924    
+                         clock uncertainty           -0.035    10.889    
+                         FDRE (Setup_fdre_C_D)       -0.049    10.840    weights_48_48_1x1_V_10_U/ShuffleNetV2_weigctx_ram_U/q0_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.840    
+                         arrival time                          -8.364    
+  -------------------------------------------------------------------
+                         slack                                  2.476    
+
+
+
+

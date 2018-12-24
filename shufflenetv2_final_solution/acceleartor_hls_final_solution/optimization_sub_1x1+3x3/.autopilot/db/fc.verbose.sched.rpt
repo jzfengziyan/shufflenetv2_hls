@@ -1,0 +1,423 @@
+
+
+================================================================
+== Vivado HLS Report for 'fc'
+================================================================
+* Date:           Fri Dec 21 00:09:57 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       optimization_sub_1x1+3x3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  15475|  15475|  15475|  15475|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |             |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  15470|  15470|      1547|          -|          -|    10|    no    |
+        | + Loop 1.1  |   1536|   1536|         3|          -|          -|   512|    no    |
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 18
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond42)
+	15  / (exitcond42)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / (!exitcond)
+	13  / (exitcond)
+11 --> 
+	12  / true
+12 --> 
+	10  / true
+13 --> 
+	14  / true
+14 --> 
+	2  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+* FSM state operations: 
+
+ <State 1>: 8.75ns
+ST_1: fc_output_V15_read (7)  [1/1] 0.00ns
+:0  %fc_output_V15_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %fc_output_V15)
+
+ST_1: fc_weight_V11_read (8)  [1/1] 0.00ns
+:1  %fc_weight_V11_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %fc_weight_V11)
+
+ST_1: output_V_addr (9)  [1/1] 0.00ns
+:2  %output_V_addr = getelementptr i8* %output_V, i32 %fc_output_V15_read
+
+ST_1: StgValue_22 (10)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecInterface(i8* %output_V, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str44, i32 0, i32 1000, [18 x i8]* @p_str45, [6 x i8]* @p_str46, [1 x i8]* @p_str44, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str44, [1 x i8]* @p_str44)
+
+ST_1: StgValue_23 (11)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecInterface(i8* %weight_V, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str44, i32 0, i32 5120, [19 x i8]* @p_str47, [6 x i8]* @p_str46, [1 x i8]* @p_str44, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str44, [1 x i8]* @p_str44)
+
+ST_1: output_V_addr_wr_req (12)  [1/1] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:5  %output_V_addr_wr_req = call i1 @_ssdm_op_WriteReq.m_axi.i8P(i8* %output_V_addr, i32 10)
+
+ST_1: StgValue_25 (13)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:1429
+:6  br label %1
+
+
+ <State 2>: 8.75ns
+ST_2: co (15)  [1/1] 0.00ns
+:0  %co = phi i4 [ 0, %0 ], [ %co_33, %3 ]
+
+ST_2: co_cast2 (16)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1429
+:1  %co_cast2 = zext i4 %co to i32
+
+ST_2: tmp_s (17)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1429
+:2  %tmp_s = call i13 @_ssdm_op_BitConcatenate.i13.i4.i9(i4 %co, i9 0)
+
+ST_2: exitcond42 (18)  [1/1] 3.10ns  loc: acceleartor_hls_padding/components.cpp:1429
+:3  %exitcond42 = icmp eq i4 %co, -6
+
+ST_2: empty (19)  [1/1] 0.00ns
+:4  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)
+
+ST_2: co_33 (20)  [1/1] 2.35ns  loc: acceleartor_hls_padding/components.cpp:1429
+:5  %co_33 = add i4 %co, 1
+
+ST_2: StgValue_32 (21)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1429
+:6  br i1 %exitcond42, label %4, label %.preheader.preheader
+
+ST_2: tmp_519 (23)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:0  %tmp_519 = zext i13 %tmp_s to i32
+
+ST_2: tmp_520 (24)  [1/1] 2.90ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:1  %tmp_520 = add i32 %tmp_519, %fc_weight_V11_read
+
+ST_2: weight_V_addr (25)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:2  %weight_V_addr = getelementptr i8* %weight_V, i32 %tmp_520
+
+ST_2: output_V_addr_wr_res (50)  [5/5] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:0  %output_V_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %output_V_addr)
+
+
+ <State 3>: 8.75ns
+ST_3: p_rd_req (26)  [7/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+
+ <State 4>: 8.75ns
+ST_4: p_rd_req (26)  [6/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+
+ <State 5>: 8.75ns
+ST_5: p_rd_req (26)  [5/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+
+ <State 6>: 8.75ns
+ST_6: p_rd_req (26)  [4/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+
+ <State 7>: 8.75ns
+ST_7: p_rd_req (26)  [3/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+
+ <State 8>: 8.75ns
+ST_8: p_rd_req (26)  [2/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+
+ <State 9>: 8.75ns
+ST_9: p_rd_req (26)  [1/7] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+.preheader.preheader:3  %p_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i8P(i8* %weight_V_addr, i32 512)
+
+ST_9: StgValue_44 (27)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:1431
+.preheader.preheader:4  br label %.preheader
+
+
+ <State 10>: 3.25ns
+ST_10: p_s (29)  [1/1] 0.00ns
+.preheader:0  %p_s = phi i8 [ %sum_V, %2 ], [ 0, %.preheader.preheader ]
+
+ST_10: ci (30)  [1/1] 0.00ns
+.preheader:1  %ci = phi i10 [ %ci_15, %2 ], [ 0, %.preheader.preheader ]
+
+ST_10: ci_cast1 (31)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1431
+.preheader:2  %ci_cast1 = zext i10 %ci to i32
+
+ST_10: exitcond (32)  [1/1] 3.02ns  loc: acceleartor_hls_padding/components.cpp:1431
+.preheader:3  %exitcond = icmp eq i10 %ci, -512
+
+ST_10: empty_128 (33)  [1/1] 0.00ns
+.preheader:4  %empty_128 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)
+
+ST_10: ci_15 (34)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:1431
+.preheader:5  %ci_15 = add i10 %ci, 1
+
+ST_10: StgValue_51 (35)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1431
+.preheader:6  br i1 %exitcond, label %3, label %2
+
+ST_10: avgpool_output_V_add (38)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1432
+:1  %avgpool_output_V_add = getelementptr [512 x i8]* @avgpool_output_V, i32 0, i32 %ci_cast1
+
+ST_10: avgpool_output_V_loa (39)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:1432
+:2  %avgpool_output_V_loa = load i8* %avgpool_output_V_add, align 1
+
+ST_10: bias_V_addr (44)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1435
+:0  %bias_V_addr = getelementptr [10 x i8]* %bias_V, i32 0, i32 %co_cast2
+
+ST_10: bias_V_load (45)  [2/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:1435
+:1  %bias_V_load = load i8* %bias_V_addr, align 1
+
+
+ <State 11>: 8.75ns
+ST_11: weight_V_addr_read (37)  [1/1] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1432
+:0  %weight_V_addr_read = call i8 @_ssdm_op_Read.m_axi.i8P(i8* %weight_V_addr)
+
+ST_11: avgpool_output_V_loa (39)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:1432
+:2  %avgpool_output_V_loa = load i8* %avgpool_output_V_add, align 1
+
+
+ <State 12>: 6.38ns
+ST_12: tmp (40)  [1/1] 3.36ns  loc: acceleartor_hls_padding/components.cpp:1432
+:3  %tmp = mul i8 %avgpool_output_V_loa, %weight_V_addr_read
+
+ST_12: sum_V (41)  [1/1] 3.02ns  loc: acceleartor_hls_padding/components.cpp:1432
+:4  %sum_V = add i8 %tmp, %p_s
+
+ST_12: StgValue_60 (42)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1431
+:5  br label %.preheader
+
+
+ <State 13>: 4.64ns
+ST_13: bias_V_load (45)  [1/2] 2.32ns  loc: acceleartor_hls_padding/components.cpp:1435
+:1  %bias_V_load = load i8* %bias_V_addr, align 1
+
+ST_13: result_V (46)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:1435
+:2  %result_V = add i8 %bias_V_load, %p_s
+
+
+ <State 14>: 8.75ns
+ST_14: StgValue_63 (47)  [1/1] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:3  call void @_ssdm_op_Write.m_axi.i8P(i8* %output_V_addr, i8 %result_V, i1 true)
+
+ST_14: StgValue_64 (48)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1429
+:4  br label %1
+
+
+ <State 15>: 8.75ns
+ST_15: output_V_addr_wr_res (50)  [4/5] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:0  %output_V_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %output_V_addr)
+
+
+ <State 16>: 8.75ns
+ST_16: output_V_addr_wr_res (50)  [3/5] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:0  %output_V_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %output_V_addr)
+
+
+ <State 17>: 8.75ns
+ST_17: output_V_addr_wr_res (50)  [2/5] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:0  %output_V_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %output_V_addr)
+
+
+ <State 18>: 8.75ns
+ST_18: output_V_addr_wr_res (50)  [1/5] 8.75ns  loc: acceleartor_hls_padding/components.cpp:1436
+:0  %output_V_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %output_V_addr)
+
+ST_18: StgValue_69 (51)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:1438
+:1  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.75ns
+The critical path consists of the following:
+	wire read on port 'fc_output_V15' [7]  (0 ns)
+	'getelementptr' operation ('output_V_addr') [9]  (0 ns)
+	bus request on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [12]  (8.75 ns)
+
+ <State 2>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [50]  (8.75 ns)
+
+ <State 3>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [26]  (8.75 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('ci') with incoming values : ('ci', acceleartor_hls_padding/components.cpp:1431) [30]  (0 ns)
+	'getelementptr' operation ('avgpool_output_V_add', acceleartor_hls_padding/components.cpp:1432) [38]  (0 ns)
+	'load' operation ('avgpool_output_V_loa', acceleartor_hls_padding/components.cpp:1432) on array 'avgpool_output_V' [39]  (3.25 ns)
+
+ <State 11>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'weight_V' (acceleartor_hls_padding/components.cpp:1432) [37]  (8.75 ns)
+
+ <State 12>: 6.38ns
+The critical path consists of the following:
+	'mul' operation ('tmp', acceleartor_hls_padding/components.cpp:1432) [40]  (3.36 ns)
+	'add' operation ('sum.V', acceleartor_hls_padding/components.cpp:1432) [41]  (3.02 ns)
+
+ <State 13>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('bias_V_load', acceleartor_hls_padding/components.cpp:1435) on array 'bias_V' [45]  (2.32 ns)
+	'add' operation ('result.V', acceleartor_hls_padding/components.cpp:1435) [46]  (2.32 ns)
+
+ <State 14>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [47]  (8.75 ns)
+
+ <State 15>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [50]  (8.75 ns)
+
+ <State 16>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [50]  (8.75 ns)
+
+ <State 17>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [50]  (8.75 ns)
+
+ <State 18>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output_V' (acceleartor_hls_padding/components.cpp:1436) [50]  (8.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

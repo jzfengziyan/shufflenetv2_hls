@@ -1,0 +1,419 @@
+
+
+================================================================
+== Vivado HLS Report for 'shuffle_96_l_p'
+================================================================
+* Date:           Sun Dec 16 18:15:12 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       optimization_sub1x1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      5.73|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  16513|  23425|  16513|  23425|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                 |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |  16512|  23424| 86 ~ 122 |          -|          -|   192|    no    |
+        | + Loop 1.1      |     84|    120|  14 ~ 20 |          -|          -|     6|    no    |
+        |  ++ Loop 1.1.1  |     12|     18|   2 ~ 3  |          -|          -|     6|    no    |
+        +-----------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond3)
+3 --> 
+	4  / (!exitcond2)
+	2  / (exitcond2)
+4 --> 
+	5  / (!exitcond & !tmp_514)
+	6  / (!exitcond & tmp_514)
+	3  / (exitcond)
+5 --> 
+	6  / true
+6 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_7 (10)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:943
+:0  br label %.loopexit
+
+
+ <State 2>: 2.91ns
+ST_2: co (12)  [1/1] 0.00ns
+.loopexit:0  %co = phi i8 [ 0, %0 ], [ %co_25, %.loopexit.loopexit ]
+
+ST_2: tmp_514 (13)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.loopexit:1  %tmp_514 = trunc i8 %co to i1
+
+ST_2: exitcond3 (14)  [1/1] 2.91ns  loc: acceleartor_hls_padding/components.cpp:943
+.loopexit:2  %exitcond3 = icmp eq i8 %co, -64
+
+ST_2: empty (15)  [1/1] 0.00ns
+.loopexit:3  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 192, i64 192, i64 192)
+
+ST_2: co_25 (16)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:943
+.loopexit:4  %co_25 = add i8 1, %co
+
+ST_2: StgValue_13 (17)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.loopexit:5  br i1 %exitcond3, label %3, label %.preheader4.preheader
+
+ST_2: tmp_s (19)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:0  %tmp_s = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %co, i3 0)
+
+ST_2: p_shl2_cast (20)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:1  %p_shl2_cast = zext i11 %tmp_s to i12
+
+ST_2: tmp_386 (21)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:2  %tmp_386 = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %co, i1 false)
+
+ST_2: p_shl3_cast (22)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader4.preheader:3  %p_shl3_cast = zext i9 %tmp_386 to i12
+
+ST_2: tmp_387 (23)  [1/1] 2.33ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader4.preheader:4  %tmp_387 = sub i12 %p_shl2_cast, %p_shl3_cast
+
+ST_2: tmp_465_cast (24)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader4.preheader:5  %tmp_465_cast = sext i12 %tmp_387 to i13
+
+ST_2: arrayNo (25)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:6  %arrayNo = call i3 @_ssdm_op_PartSelect.i3.i8.i32.i32(i8 %co, i32 1, i32 3)
+
+ST_2: tmp_388 (26)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:7  %tmp_388 = call i4 @_ssdm_op_PartSelect.i4.i8.i32.i32(i8 %co, i32 4, i32 7)
+
+ST_2: tmp_389 (27)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:8  %tmp_389 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %tmp_388, i3 0)
+
+ST_2: p_shl_cast (28)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:9  %p_shl_cast = zext i7 %tmp_389 to i8
+
+ST_2: tmp_390 (29)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:10  %tmp_390 = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %tmp_388, i1 false)
+
+ST_2: p_shl1_cast (30)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:11  %p_shl1_cast = zext i5 %tmp_390 to i8
+
+ST_2: tmp_391 (31)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:12  %tmp_391 = sub i8 %p_shl_cast, %p_shl1_cast
+
+ST_2: tmp_470_cast (32)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:943
+.preheader4.preheader:13  %tmp_470_cast = sext i8 %tmp_391 to i9
+
+ST_2: StgValue_28 (33)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:944
+.preheader4.preheader:14  br label %.preheader4
+
+ST_2: StgValue_29 (96)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:951
+:0  ret void
+
+
+ <State 3>: 4.67ns
+ST_3: h (35)  [1/1] 0.00ns
+.preheader4:0  %h = phi i3 [ 0, %.preheader4.preheader ], [ %h_22, %.preheader4.loopexit ]
+
+ST_3: exitcond2 (36)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:944
+.preheader4:1  %exitcond2 = icmp eq i3 %h, -2
+
+ST_3: empty_156 (37)  [1/1] 0.00ns
+.preheader4:2  %empty_156 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)
+
+ST_3: h_22 (38)  [1/1] 2.26ns  loc: acceleartor_hls_padding/components.cpp:944
+.preheader4:3  %h_22 = add i3 %h, 1
+
+ST_3: StgValue_34 (39)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:944
+.preheader4:4  br i1 %exitcond2, label %.loopexit.loopexit, label %.preheader.preheader
+
+ST_3: tmp_213_cast9 (41)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:0  %tmp_213_cast9 = zext i3 %h to i9
+
+ST_3: tmp_213_cast (42)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:1  %tmp_213_cast = zext i3 %h to i13
+
+ST_3: tmp_392 (43)  [1/1] 2.33ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:2  %tmp_392 = add i13 %tmp_213_cast, %tmp_465_cast
+
+ST_3: tmp_515 (44)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:3  %tmp_515 = trunc i13 %tmp_392 to i11
+
+ST_3: p_shl6_cast (45)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:4  %p_shl6_cast = call i14 @_ssdm_op_BitConcatenate.i14.i11.i3(i11 %tmp_515, i3 0)
+
+ST_3: p_shl7_cast (46)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:5  %p_shl7_cast = call i14 @_ssdm_op_BitConcatenate.i14.i13.i1(i13 %tmp_392, i1 false)
+
+ST_3: tmp_393 (47)  [1/1] 2.34ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:6  %tmp_393 = sub i14 %p_shl6_cast, %p_shl7_cast
+
+ST_3: tmp_394 (48)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:7  %tmp_394 = add i9 %tmp_213_cast9, %tmp_470_cast
+
+ST_3: tmp_516 (49)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:8  %tmp_516 = trunc i9 %tmp_394 to i7
+
+ST_3: p_shl4_cast (50)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:9  %p_shl4_cast = call i10 @_ssdm_op_BitConcatenate.i10.i7.i3(i7 %tmp_516, i3 0)
+
+ST_3: p_shl5_cast (51)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:10  %p_shl5_cast = call i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9 %tmp_394, i1 false)
+
+ST_3: tmp_395 (52)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:946
+.preheader.preheader:11  %tmp_395 = sub i10 %p_shl4_cast, %p_shl5_cast
+
+ST_3: StgValue_47 (53)  [1/1] 1.59ns  loc: acceleartor_hls_padding/components.cpp:945
+.preheader.preheader:12  br label %.preheader
+
+ST_3: StgValue_48 (94)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 4>: 5.58ns
+ST_4: w (55)  [1/1] 0.00ns
+.preheader:0  %w = phi i3 [ %w_27, %._crit_edge ], [ 0, %.preheader.preheader ]
+
+ST_4: exitcond (56)  [1/1] 2.07ns  loc: acceleartor_hls_padding/components.cpp:945
+.preheader:1  %exitcond = icmp eq i3 %w, -2
+
+ST_4: empty_157 (57)  [1/1] 0.00ns
+.preheader:2  %empty_157 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)
+
+ST_4: w_27 (58)  [1/1] 2.26ns  loc: acceleartor_hls_padding/components.cpp:945
+.preheader:3  %w_27 = add i3 %w, 1
+
+ST_4: StgValue_53 (59)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:945
+.preheader:4  br i1 %exitcond, label %.preheader4.loopexit, label %1
+
+ST_4: StgValue_54 (61)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:0  br i1 %tmp_514, label %._crit_edge, label %2
+
+ST_4: tmp_214_cast8 (63)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:0  %tmp_214_cast8 = zext i3 %w to i10
+
+ST_4: tmp_214_cast (64)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:1  %tmp_214_cast = zext i3 %w to i14
+
+ST_4: tmp_396 (65)  [1/1] 2.34ns  loc: acceleartor_hls_padding/components.cpp:946
+:2  %tmp_396 = add i14 %tmp_393, %tmp_214_cast
+
+ST_4: tmp_397 (68)  [1/1] 2.32ns  loc: acceleartor_hls_padding/components.cpp:946
+:5  %tmp_397 = add i10 %tmp_395, %tmp_214_cast8
+
+ST_4: tmp_480_cast (69)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:6  %tmp_480_cast = zext i10 %tmp_397 to i64
+
+ST_4: buffer1_1_96_4x4_p_V (70)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:7  %buffer1_1_96_4x4_p_V = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_2, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_85 (71)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:8  %buffer1_1_96_4x4_p_V_85 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_3, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_86 (72)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:9  %buffer1_1_96_4x4_p_V_86 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_8, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_87 (73)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:10  %buffer1_1_96_4x4_p_V_87 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_5, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_88 (74)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:11  %buffer1_1_96_4x4_p_V_88 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_1, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_89 (75)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:12  %buffer1_1_96_4x4_p_V_89 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_4, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_90 (76)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:13  %buffer1_1_96_4x4_p_V_90 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_7, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_91 (77)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:14  %buffer1_1_96_4x4_p_V_91 = getelementptr [432 x i8]* @buffer1_1_96_4x4_p_V_6, i64 0, i64 %tmp_480_cast
+
+ST_4: buffer1_1_96_4x4_p_V_92 (78)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:15  %buffer1_1_96_4x4_p_V_92 = load i8* %buffer1_1_96_4x4_p_V_86, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_93 (79)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:16  %buffer1_1_96_4x4_p_V_93 = load i8* %buffer1_1_96_4x4_p_V_88, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_94 (80)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:17  %buffer1_1_96_4x4_p_V_94 = load i8* %buffer1_1_96_4x4_p_V, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_95 (81)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:18  %buffer1_1_96_4x4_p_V_95 = load i8* %buffer1_1_96_4x4_p_V_85, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_96 (82)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:19  %buffer1_1_96_4x4_p_V_96 = load i8* %buffer1_1_96_4x4_p_V_89, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_97 (83)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:20  %buffer1_1_96_4x4_p_V_97 = load i8* %buffer1_1_96_4x4_p_V_87, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_98 (84)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:21  %buffer1_1_96_4x4_p_V_98 = load i8* %buffer1_1_96_4x4_p_V_91, align 1
+
+ST_4: buffer1_1_96_4x4_p_V_99 (85)  [2/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:22  %buffer1_1_96_4x4_p_V_99 = load i8* %buffer1_1_96_4x4_p_V_90, align 1
+
+ST_4: StgValue_76 (92)  [1/1] 0.00ns
+.preheader4.loopexit:0  br label %.preheader4
+
+
+ <State 5>: 5.73ns
+ST_5: buffer1_1_96_4x4_p_V_92 (78)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:15  %buffer1_1_96_4x4_p_V_92 = load i8* %buffer1_1_96_4x4_p_V_86, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_93 (79)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:16  %buffer1_1_96_4x4_p_V_93 = load i8* %buffer1_1_96_4x4_p_V_88, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_94 (80)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:17  %buffer1_1_96_4x4_p_V_94 = load i8* %buffer1_1_96_4x4_p_V, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_95 (81)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:18  %buffer1_1_96_4x4_p_V_95 = load i8* %buffer1_1_96_4x4_p_V_85, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_96 (82)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:19  %buffer1_1_96_4x4_p_V_96 = load i8* %buffer1_1_96_4x4_p_V_89, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_97 (83)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:20  %buffer1_1_96_4x4_p_V_97 = load i8* %buffer1_1_96_4x4_p_V_87, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_98 (84)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:21  %buffer1_1_96_4x4_p_V_98 = load i8* %buffer1_1_96_4x4_p_V_91, align 1
+
+ST_5: buffer1_1_96_4x4_p_V_99 (85)  [1/2] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:22  %buffer1_1_96_4x4_p_V_99 = load i8* %buffer1_1_96_4x4_p_V_90, align 1
+
+ST_5: tmp (86)  [1/1] 2.48ns  loc: acceleartor_hls_padding/components.cpp:946
+:23  %tmp = call i8 @_ssdm_op_Mux.ap_auto.8i8.i3(i8 %buffer1_1_96_4x4_p_V_92, i8 %buffer1_1_96_4x4_p_V_93, i8 %buffer1_1_96_4x4_p_V_94, i8 %buffer1_1_96_4x4_p_V_95, i8 %buffer1_1_96_4x4_p_V_96, i8 %buffer1_1_96_4x4_p_V_97, i8 %buffer1_1_96_4x4_p_V_98, i8 %buffer1_1_96_4x4_p_V_99, i3 %arrayNo)
+
+
+ <State 6>: 3.25ns
+ST_6: tmp_479_cast (66)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:3  %tmp_479_cast = zext i14 %tmp_396 to i64
+
+ST_6: output_V_addr (67)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:4  %output_V_addr = getelementptr [6912 x i8]* %output_V, i64 0, i64 %tmp_479_cast
+
+ST_6: StgValue_88 (87)  [1/1] 3.25ns  loc: acceleartor_hls_padding/components.cpp:946
+:24  store i8 %tmp, i8* %output_V_addr, align 1
+
+ST_6: StgValue_89 (88)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:946
+:25  br label %._crit_edge
+
+ST_6: StgValue_90 (90)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:945
+._crit_edge:0  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('co') with incoming values : ('co', acceleartor_hls_padding/components.cpp:943) [12]  (1.59 ns)
+
+ <State 2>: 2.91ns
+The critical path consists of the following:
+	'phi' operation ('co') with incoming values : ('co', acceleartor_hls_padding/components.cpp:943) [12]  (0 ns)
+	'icmp' operation ('exitcond3', acceleartor_hls_padding/components.cpp:943) [14]  (2.91 ns)
+
+ <State 3>: 4.67ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', acceleartor_hls_padding/components.cpp:944) [35]  (0 ns)
+	'add' operation ('tmp_392', acceleartor_hls_padding/components.cpp:946) [43]  (2.33 ns)
+	'sub' operation ('tmp_393', acceleartor_hls_padding/components.cpp:946) [47]  (2.34 ns)
+
+ <State 4>: 5.58ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', acceleartor_hls_padding/components.cpp:945) [55]  (0 ns)
+	'add' operation ('tmp_397', acceleartor_hls_padding/components.cpp:946) [68]  (2.32 ns)
+	'getelementptr' operation ('buffer1_1_96_4x4_p_V_86', acceleartor_hls_padding/components.cpp:946) [72]  (0 ns)
+	'load' operation ('buffer1_1_96_4x4_p_V_92', acceleartor_hls_padding/components.cpp:946) on array 'buffer1_1_96_4x4_p_V_8' [78]  (3.25 ns)
+
+ <State 5>: 5.73ns
+The critical path consists of the following:
+	'load' operation ('buffer1_1_96_4x4_p_V_92', acceleartor_hls_padding/components.cpp:946) on array 'buffer1_1_96_4x4_p_V_8' [78]  (3.25 ns)
+	'mux' operation ('tmp', acceleartor_hls_padding/components.cpp:946) [86]  (2.48 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('output_V_addr', acceleartor_hls_padding/components.cpp:946) [67]  (0 ns)
+	'store' operation (acceleartor_hls_padding/components.cpp:946) of variable 'tmp', acceleartor_hls_padding/components.cpp:946 on array 'output_V' [87]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

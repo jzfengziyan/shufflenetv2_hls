@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vivado HLS Report for 'shuffle_48_r_p'
+================================================================
+* Date:           Sun Dec 16 05:17:24 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       add_adding_engine
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      5.73|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  21313|  30913|  21313|  30913|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-------+-------+-----------+-----------+-----------+------+----------+
+        |                 |    Latency    | Iteration |  Initiation Interval  | Trip |          |
+        |    Loop Name    |  min  |  max  |  Latency  |  achieved |   target  | Count| Pipelined|
+        +-----------------+-------+-------+-----------+-----------+-----------+------+----------+
+        |- Loop 1         |  21312|  30912| 222 ~ 322 |          -|          -|    96|    no    |
+        | + Loop 1.1      |    220|    320|  22 ~ 32  |          -|          -|    10|    no    |
+        |  ++ Loop 1.1.1  |     20|     30|   2 ~ 3   |          -|          -|    10|    no    |
+        +-----------------+-------+-------+-----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|     364|    166|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|     150|     45|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     67|
+|Register         |        -|      -|     103|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     617|    278|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |           Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |ShuffleNetV2_mux_jbC_x_U226  |ShuffleNetV2_mux_jbC  |        0|      0|  150|  45|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |Total                        |                      |        0|      0|  150|  45|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+----+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+----+----+------------+------------+
+    |co_28_fu_217_p2      |     +    |      0|  26|  12|           1|           7|
+    |h_24_fu_309_p2       |     +    |      0|  17|   9|           4|           1|
+    |tmp_442_fu_247_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_446_fu_297_p2    |     +    |      0|  26|  12|           7|           7|
+    |tmp_447_fu_323_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_448_fu_352_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_449_fu_358_p2    |     +    |      0|  26|  12|           7|           7|
+    |tmp_450_fu_387_p2    |     +    |      0|  38|  16|          11|          11|
+    |tmp_451_fu_413_p2    |     +    |      0|  50|  20|          15|          15|
+    |tmp_452_fu_418_p2    |     +    |      0|  38|  16|          11|          11|
+    |w_28_fu_399_p2       |     +    |      0|  17|   9|           4|           1|
+    |exitcond2_fu_303_p2  |   icmp   |      0|   0|   2|           4|           4|
+    |exitcond3_fu_211_p2  |   icmp   |      0|   0|   4|           7|           7|
+    |exitcond_fu_393_p2   |   icmp   |      0|   0|   2|           4|           4|
+    +---------------------+----------+-------+----+----+------------+------------+
+    |Total                |          |      0| 364| 166|         112|         112|
+    +---------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |ap_NS_fsm   |  40|          7|    1|          7|
+    |co_reg_174  |   9|          2|    7|         14|
+    |h_reg_185   |   9|          2|    4|          8|
+    |w_reg_196   |   9|          2|    4|          8|
+    +------------+----+-----------+-----+-----------+
+    |Total       |  67|         13|   16|         37|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------+----+----+-----+-----------+
+    |       Name      | FF | LUT| Bits| Const Bits|
+    +-----------------+----+----+-----+-----------+
+    |ap_CS_fsm        |   6|   0|    6|          0|
+    |arrayNo_reg_477  |   3|   0|    3|          0|
+    |co_28_reg_467    |   7|   0|    7|          0|
+    |co_reg_174       |   7|   0|    7|          0|
+    |h_24_reg_490     |   4|   0|    4|          0|
+    |h_reg_185        |   4|   0|    4|          0|
+    |tmp_442_reg_472  |  10|   0|   11|          1|
+    |tmp_446_reg_482  |   6|   0|    7|          1|
+    |tmp_448_reg_495  |  14|   0|   15|          1|
+    |tmp_450_reg_500  |  10|   0|   11|          1|
+    |tmp_451_reg_513  |  15|   0|   15|          0|
+    |tmp_518_reg_460  |   1|   0|    1|          0|
+    |tmp_reg_558      |   8|   0|    8|          0|
+    |w_28_reg_508     |   4|   0|    4|          0|
+    |w_reg_196        |   4|   0|    4|          0|
+    +-----------------+----+----+-----+-----------+
+    |Total            | 103|   0|  107|          4|
+    +-----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------+-----+-----+------------+------------------------+--------------+
+|            RTL Ports            | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++---------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                           |  in |    1| ap_ctrl_hs |     shuffle_48_r_p     | return value |
+|ap_rst                           |  in |    1| ap_ctrl_hs |     shuffle_48_r_p     | return value |
+|ap_start                         |  in |    1| ap_ctrl_hs |     shuffle_48_r_p     | return value |
+|ap_done                          | out |    1| ap_ctrl_hs |     shuffle_48_r_p     | return value |
+|ap_idle                          | out |    1| ap_ctrl_hs |     shuffle_48_r_p     | return value |
+|ap_ready                         | out |    1| ap_ctrl_hs |     shuffle_48_r_p     | return value |
+|output_V_address0                | out |   14|  ap_memory |        output_V        |     array    |
+|output_V_ce0                     | out |    1|  ap_memory |        output_V        |     array    |
+|output_V_we0                     | out |    1|  ap_memory |        output_V        |     array    |
+|output_V_d0                      | out |    8|  ap_memory |        output_V        |     array    |
+|buffer1_1_48_8x8_p_V_8_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_8 |     array    |
+|buffer1_1_48_8x8_p_V_8_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_8 |     array    |
+|buffer1_1_48_8x8_p_V_8_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_8 |     array    |
+|buffer1_1_48_8x8_p_V_1_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_1 |     array    |
+|buffer1_1_48_8x8_p_V_1_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_1 |     array    |
+|buffer1_1_48_8x8_p_V_1_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_1 |     array    |
+|buffer1_1_48_8x8_p_V_2_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_2 |     array    |
+|buffer1_1_48_8x8_p_V_2_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_2 |     array    |
+|buffer1_1_48_8x8_p_V_2_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_2 |     array    |
+|buffer1_1_48_8x8_p_V_3_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_3 |     array    |
+|buffer1_1_48_8x8_p_V_3_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_3 |     array    |
+|buffer1_1_48_8x8_p_V_3_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_3 |     array    |
+|buffer1_1_48_8x8_p_V_4_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_4 |     array    |
+|buffer1_1_48_8x8_p_V_4_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_4 |     array    |
+|buffer1_1_48_8x8_p_V_4_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_4 |     array    |
+|buffer1_1_48_8x8_p_V_5_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_5 |     array    |
+|buffer1_1_48_8x8_p_V_5_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_5 |     array    |
+|buffer1_1_48_8x8_p_V_5_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_5 |     array    |
+|buffer1_1_48_8x8_p_V_6_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_6 |     array    |
+|buffer1_1_48_8x8_p_V_6_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_6 |     array    |
+|buffer1_1_48_8x8_p_V_6_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_6 |     array    |
+|buffer1_1_48_8x8_p_V_7_address0  | out |   10|  ap_memory | buffer1_1_48_8x8_p_V_7 |     array    |
+|buffer1_1_48_8x8_p_V_7_ce0       | out |    1|  ap_memory | buffer1_1_48_8x8_p_V_7 |     array    |
+|buffer1_1_48_8x8_p_V_7_q0        |  in |    8|  ap_memory | buffer1_1_48_8x8_p_V_7 |     array    |
++---------------------------------+-----+-----+------------+------------------------+--------------+
+

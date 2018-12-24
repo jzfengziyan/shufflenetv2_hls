@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ShuffleNetV2" xd:componentRef="ShuffleNetV2" xd:initiationInterval="10974366" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:returnValue xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x10" xd:statusOffset="0x14"/>
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="image[][][][]" xd:originalName="image" xd:direction="inout" xd:interfaceRef="m_axi_DATA_INPUT_OUTPUT" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="3072" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="fc_output[]" xd:originalName="fc_output" xd:direction="inout" xd:interfaceRef="m_axi_DATA_INPUT_OUTPUT" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="1000" xd:dataWidth="8" xd:bufferDirection="out"/>
+  <xd:arg xd:name="conv1_weight[][][][]" xd:originalName="conv1_weight" xd:direction="inout" xd:interfaceRef="m_axi_DATA_OTHER_WEIGHTS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="648" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="conv_last_weight[][][][]" xd:originalName="conv_last_weight" xd:direction="inout" xd:interfaceRef="m_axi_DATA_OTHER_WEIGHTS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="98304" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="fc_weight[][]" xd:originalName="fc_weight" xd:direction="inout" xd:interfaceRef="m_axi_DATA_OTHER_WEIGHTS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="5120" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="shuffle_conv_3x3[][][][]" xd:originalName="shuffle_conv_3x3" xd:direction="inout" xd:interfaceRef="m_axi_p3X3_1X1_WEIGHTS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="9720" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="shuffle_conv_1x1[][][][]" xd:originalName="shuffle_conv_1x1" xd:direction="inout" xd:interfaceRef="m_axi_p3X3_1X1_WEIGHTS" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="7:0" xd:arraySize="131904" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="bias[]" xd:originalName="bias" xd:direction="inout" xd:interfaceRef="m_axi_DATA_BIAS" xd:busTypeRef="aximm" xd:arraySize="3618" xd:dataWidth="8" xd:bufferDirection="in"/>
+  <xd:arg xd:name="image_V" xd:originalName="image_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_INPUT_OUTPUT" xd:dataWidth="32" xd:offset="0x18" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="conv1_weight_V" xd:originalName="conv1_weight_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_OTHER_WEIGHTS" xd:dataWidth="32" xd:offset="0x20" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="shuffle_conv_3x3_V" xd:originalName="shuffle_conv_3x3_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_p3X3_1X1_WEIGHTS" xd:dataWidth="32" xd:offset="0x28" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="shuffle_conv_1x1_V" xd:originalName="shuffle_conv_1x1_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_p3X3_1X1_WEIGHTS" xd:dataWidth="32" xd:offset="0x30" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="conv_last_weight_V" xd:originalName="conv_last_weight_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_OTHER_WEIGHTS" xd:dataWidth="32" xd:offset="0x38" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="fc_weight_V" xd:originalName="fc_weight_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_OTHER_WEIGHTS" xd:dataWidth="32" xd:offset="0x40" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="bias_V" xd:originalName="bias_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_BIAS" xd:dataWidth="32" xd:offset="0x48" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="fc_output_V" xd:originalName="fc_output_V" xd:direction="in" xd:interfaceRef="s_axi_CTL" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_DATA_INPUT_OUTPUT" xd:dataWidth="32" xd:offset="0x50" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="10929437" xd:worst-case="10974365" xd:average-case="10974365"/>
+  <xd:resourceEstimates xd:LUT="124353" xd:FF="141694" xd:BRAM="572" xd:DSP="289"/>
+</xd:acceleratorMap>

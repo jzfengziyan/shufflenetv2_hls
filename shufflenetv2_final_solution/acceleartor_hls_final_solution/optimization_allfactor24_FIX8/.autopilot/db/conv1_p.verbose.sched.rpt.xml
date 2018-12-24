@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'conv1_p'" level="0">
+<item name = "Date">Fri Dec 21 18:29:59 2018
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">acceleartor_hls_padding</item>
+<item name = "Solution">try_single_function</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.75, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">4828892, 4828892, 4828892, 4828892, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">659, 659, 13, 1, 1, 648, yes</column>
+<column name="- Loop 2">24577, 24577, 3, 1, 1, 24576, yes</column>
+<column name="- Loop 3">4754496, 4754496, 148578, -, -, 32, no</column>
+<column name=" + Loop 3.1">148576, 148576, 4643, -, -, 32, no</column>
+<column name="  ++ Loop 3.1.1">4641, 4641, 1547, -, -, 3, no</column>
+<column name="   +++ Loop 3.1.1.1">1545, 1545, 515, -, -, 3, no</column>
+<column name="    ++++ Loop 3.1.1.1.1">513, 513, 171, -, -, 3, no</column>
+<column name="     +++++ Loop 3.1.1.1.1.1">169, 169, 7, -, -, 24, no</column>
+<column name="- Loop 4">49153, 49153, 4, 2, 1, 24576, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

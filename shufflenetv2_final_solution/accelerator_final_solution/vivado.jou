@@ -1,0 +1,160 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Dec 21 22:53:09 2018
+# Process ID: 14284
+# Current directory: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent62452 C:\Users\lyh67\Downloads\shufflenetv2_final_solution\accelerator_final_solution\accelerator_demo.xpr
+# Log file: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/vivado.log
+# Journal file: C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.xpr
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+update_ip_catalog -rebuild
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {2.5 856 366} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+validate_bd_design
+launch_sdk -workspace C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk -hwspec C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_0] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+update_ip_catalog -rebuild
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {3.5 1065 383} [get_bd_cells ShuffleNetV2_0]
+set_property location {3 1232 341} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+validate_bd_design
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_1] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_1_synth_1
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {3.5 1097 363} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+validate_bd_design
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_0] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+reset_run impl_1
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_nets ShuffleNetV2_0_m_axi_DATA_BIAS] [get_bd_cells ShuffleNetV2_0]
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/acceleartor_hls_final_solution/final_solution [current_project]
+update_ip_catalog
+open_bd_design {C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ShuffleNetV2:1.0 ShuffleNetV2_0
+endgroup
+set_property location {3.5 1166 376} [get_bd_cells ShuffleNetV2_0]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_INPUT_OUTPUT] [get_bd_intf_pins axi_smc/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_OTHER_WEIGHTS] [get_bd_intf_pins axi_smc_1/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_p3X3_1X1_WEIGHTS] [get_bd_intf_pins axi_smc_2/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/m_axi_DATA_BIAS] [get_bd_intf_pins axi_smc_3/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins ShuffleNetV2_0/s_axi_CTL] -boundary_type upper [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/processing_system7_0/FCLK_CLK0 (100 MHz)" }  [get_bd_pins ShuffleNetV2_0/ap_clk]
+assign_bd_address
+validate_bd_design
+generate_target all [get_files  C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+catch { config_ip_cache -export [get_ips -all accelerator_bd_ShuffleNetV2_0_1] }
+catch { config_ip_cache -export [get_ips -all accelerator_bd_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+launch_runs -jobs 8 accelerator_bd_ShuffleNetV2_0_1_synth_1
+export_simulation -of_objects [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -directory C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files -ipstatic_source_dir C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/modelsim} {questa=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/questa} {riviera=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/riviera} {activehdl=C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd] -top
+import_files -force -norecurse C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/hdl/accelerator_bd_wrapper.v
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+report_utilization -name utilization_2
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.srcs/sources_1/bd/accelerator_bd/accelerator_bd.bd]
+refresh_design
+report_utilization -name utilization_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+report_utilization -name utilization_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file copy -force C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.runs/impl_1/accelerator_bd_wrapper.sysdef C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf
+
+launch_sdk -workspace C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk -hwspec C:/Users/lyh67/Downloads/shufflenetv2_final_solution/accelerator_final_solution/accelerator_demo.sdk/accelerator_bd_wrapper.hdf

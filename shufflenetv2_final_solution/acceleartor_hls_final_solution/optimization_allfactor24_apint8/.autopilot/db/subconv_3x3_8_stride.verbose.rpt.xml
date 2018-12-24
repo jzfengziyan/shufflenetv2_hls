@@ -1,0 +1,264 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'subconv_3x3_8_stride'" level="0">
+<item name = "Date">Fri Dec 21 17:12:56 2018
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">acceleartor_hls_padding</item>
+<item name = "Solution">try_single_function</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.93, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">56257, 56257, 56257, 56257, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">56256, 56256, 586, -, -, 96, no</column>
+<column name=" + Loop 1.1">584, 584, 146, -, -, 4, no</column>
+<column name="  ++ Loop 1.1.1">144, 144, 36, -, -, 4, no</column>
+<column name="   +++ Loop 1.1.1.1">33, 33, 11, -, -, 3, no</column>
+<column name="    ++++ Loop 1.1.1.1.1">9, 9, 3, -, -, 3, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, 1, -, -</column>
+<column name="Expression">-, -, 677, 328</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 150, 45</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 136</column>
+<column name="Register">-, -, 205, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="ShuffleNetV2_mux_g8j_x_U559">ShuffleNetV2_mux_g8j, 0, 0, 150, 45</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="ShuffleNetV2_mac_cud_x_U560">ShuffleNetV2_mac_cud, i0 + i1 * i2</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="co_1_fu_623_p2">+, 0, 26, 12, 7, 1</column>
+<column name="h_1_fu_770_p2">+, 0, 14, 9, 3, 1</column>
+<column name="m_1_fu_803_p2">+, 0, 11, 8, 1, 2</column>
+<column name="n_1_fu_889_p2">+, 0, 11, 8, 2, 1</column>
+<column name="next_mul_fu_546_p2">+, 0, 50, 20, 15, 8</column>
+<column name="next_urem_fu_722_p2">+, 0, 26, 12, 7, 1</column>
+<column name="output_V_d0">+, 0, 29, 13, 8, 8</column>
+<column name="tmp_27_fu_667_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_28_fu_677_p2">+, 0, 41, 17, 12, 12</column>
+<column name="tmp_32_fu_746_p2">+, 0, 44, 18, 13, 13</column>
+<column name="tmp_33_fu_780_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_36_fu_828_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_39_fu_857_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_40_fu_873_p2">+, 0, 38, 16, 11, 11</column>
+<column name="tmp_41_fu_914_p2">+, 0, 35, 15, 10, 10</column>
+<column name="tmp_5_fu_819_p2">+, 0, 17, 9, 4, 4</column>
+<column name="tmp_8_fu_905_p2">+, 0, 17, 9, 4, 4</column>
+<column name="w_1_fu_863_p2">+, 0, 14, 9, 3, 1</column>
+<column name="tmp_23_fu_573_p2">-, 0, 35, 15, 10, 10</column>
+<column name="tmp_26_fu_607_p2">-, 0, 38, 16, 11, 11</column>
+<column name="tmp_30_fu_702_p2">-, 0, 44, 18, 13, 13</column>
+<column name="tmp_35_fu_791_p2">-, 0, 38, 16, 11, 11</column>
+<column name="exitcond1_fu_617_p2">icmp, 0, 0, 4, 7, 7</column>
+<column name="exitcond2_fu_708_p2">icmp, 0, 0, 1, 3, 3</column>
+<column name="exitcond3_fu_756_p2">icmp, 0, 0, 1, 3, 3</column>
+<column name="exitcond4_fu_797_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="exitcond_fu_883_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="tmp_31_fu_728_p2">icmp, 0, 0, 4, 7, 5</column>
+<column name="idx_urem_fu_734_p3">select, 0, 0, 7, 1, 7</column>
+<column name="tmp1_fu_809_p2">xor, 0, 0, 3, 2, 3</column>
+<column name="tmp2_fu_895_p2">xor, 0, 0, 3, 2, 3</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">55, 10, 1, 10</column>
+<column name="co_reg_442">9, 2, 7, 14</column>
+<column name="h_reg_476">9, 2, 3, 6</column>
+<column name="m_reg_512">9, 2, 2, 4</column>
+<column name="n_reg_535">9, 2, 2, 4</column>
+<column name="p_09_1_reg_523">9, 2, 8, 16</column>
+<column name="p_s_reg_500">9, 2, 8, 16</column>
+<column name="phi_mul_reg_453">9, 2, 15, 30</column>
+<column name="phi_urem_reg_464">9, 2, 7, 14</column>
+<column name="w_reg_488">9, 2, 3, 6</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">9, 0, 9, 0</column>
+<column name="arrayNo_cast_reg_1041">7, 0, 32, 25</column>
+<column name="bias_V_addr_reg_1036">7, 0, 7, 0</column>
+<column name="co_1_reg_1031">7, 0, 7, 0</column>
+<column name="co_reg_442">7, 0, 7, 0</column>
+<column name="h_reg_476">3, 0, 3, 0</column>
+<column name="m_1_reg_1095">2, 0, 2, 0</column>
+<column name="m_reg_512">2, 0, 2, 0</column>
+<column name="n_1_reg_1118">2, 0, 2, 0</column>
+<column name="n_reg_535">2, 0, 2, 0</column>
+<column name="next_mul_reg_1013">15, 0, 15, 0</column>
+<column name="output_V_addr_reg_1069">12, 0, 12, 0</column>
+<column name="p_09_1_reg_523">8, 0, 8, 0</column>
+<column name="p_s_reg_500">8, 0, 8, 0</column>
+<column name="phi_mul_reg_453">15, 0, 15, 0</column>
+<column name="phi_urem_reg_464">7, 0, 7, 0</column>
+<column name="tmp_1_reg_1248">8, 0, 8, 0</column>
+<column name="tmp_27_reg_1046">10, 0, 11, 1</column>
+<column name="tmp_28_cast_reg_1018">11, 0, 11, 0</column>
+<column name="tmp_2_reg_1077">3, 0, 4, 1</column>
+<column name="tmp_30_reg_1051">12, 0, 13, 1</column>
+<column name="tmp_31_cast_reg_1023">11, 0, 12, 1</column>
+<column name="tmp_35_reg_1087">11, 0, 11, 0</column>
+<column name="tmp_39_reg_1100">9, 0, 10, 1</column>
+<column name="tmp_reg_1059">3, 0, 4, 1</column>
+<column name="w_1_reg_1105">3, 0, 3, 0</column>
+<column name="w_reg_488">3, 0, 3, 0</column>
+<column name="weight_V_load_reg_1243">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, subconv_3x3_8_stride, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, subconv_3x3_8_stride, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, subconv_3x3_8_stride, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, subconv_3x3_8_stride, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, subconv_3x3_8_stride, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, subconv_3x3_8_stride, return value</column>
+<column name="weight_V_address0">out, 10, ap_memory, weight_V, array</column>
+<column name="weight_V_ce0">out, 1, ap_memory, weight_V, array</column>
+<column name="weight_V_q0">in, 8, ap_memory, weight_V, array</column>
+<column name="bias_V_address0">out, 7, ap_memory, bias_V, array</column>
+<column name="bias_V_ce0">out, 1, ap_memory, bias_V, array</column>
+<column name="bias_V_q0">in, 8, ap_memory, bias_V, array</column>
+<column name="output_V_address0">out, 12, ap_memory, output_V, array</column>
+<column name="output_V_ce0">out, 1, ap_memory, output_V, array</column>
+<column name="output_V_we0">out, 1, ap_memory, output_V, array</column>
+<column name="output_V_d0">out, 8, ap_memory, output_V, array</column>
+<column name="ShuffleConvs_2_Downs_23_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_23, array</column>
+<column name="ShuffleConvs_2_Downs_23_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_23, array</column>
+<column name="ShuffleConvs_2_Downs_23_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_23, array</column>
+<column name="ShuffleConvs_2_Downs_22_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_22, array</column>
+<column name="ShuffleConvs_2_Downs_22_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_22, array</column>
+<column name="ShuffleConvs_2_Downs_22_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_22, array</column>
+<column name="ShuffleConvs_2_Downs_11_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_11, array</column>
+<column name="ShuffleConvs_2_Downs_11_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_11, array</column>
+<column name="ShuffleConvs_2_Downs_11_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_11, array</column>
+<column name="ShuffleConvs_2_Downs_6_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_6, array</column>
+<column name="ShuffleConvs_2_Downs_6_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_6, array</column>
+<column name="ShuffleConvs_2_Downs_6_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_6, array</column>
+<column name="ShuffleConvs_2_Downs_5_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_5, array</column>
+<column name="ShuffleConvs_2_Downs_5_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_5, array</column>
+<column name="ShuffleConvs_2_Downs_5_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_5, array</column>
+<column name="ShuffleConvs_2_Downs_4_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_4, array</column>
+<column name="ShuffleConvs_2_Downs_4_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_4, array</column>
+<column name="ShuffleConvs_2_Downs_4_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_4, array</column>
+<column name="ShuffleConvs_2_Downs_3_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_3, array</column>
+<column name="ShuffleConvs_2_Downs_3_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_3, array</column>
+<column name="ShuffleConvs_2_Downs_3_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_3, array</column>
+<column name="ShuffleConvs_2_Downs_2_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_2, array</column>
+<column name="ShuffleConvs_2_Downs_2_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_2, array</column>
+<column name="ShuffleConvs_2_Downs_2_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_2, array</column>
+<column name="ShuffleConvs_2_Downs_1_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_1, array</column>
+<column name="ShuffleConvs_2_Downs_1_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_1, array</column>
+<column name="ShuffleConvs_2_Downs_1_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_1, array</column>
+<column name="ShuffleConvs_2_Downs_address0">out, 9, ap_memory, ShuffleConvs_2_Downs, array</column>
+<column name="ShuffleConvs_2_Downs_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs, array</column>
+<column name="ShuffleConvs_2_Downs_q0">in, 8, ap_memory, ShuffleConvs_2_Downs, array</column>
+<column name="ShuffleConvs_2_Downs_21_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_21, array</column>
+<column name="ShuffleConvs_2_Downs_21_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_21, array</column>
+<column name="ShuffleConvs_2_Downs_21_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_21, array</column>
+<column name="ShuffleConvs_2_Downs_20_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_20, array</column>
+<column name="ShuffleConvs_2_Downs_20_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_20, array</column>
+<column name="ShuffleConvs_2_Downs_20_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_20, array</column>
+<column name="ShuffleConvs_2_Downs_19_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_19, array</column>
+<column name="ShuffleConvs_2_Downs_19_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_19, array</column>
+<column name="ShuffleConvs_2_Downs_19_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_19, array</column>
+<column name="ShuffleConvs_2_Downs_18_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_18, array</column>
+<column name="ShuffleConvs_2_Downs_18_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_18, array</column>
+<column name="ShuffleConvs_2_Downs_18_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_18, array</column>
+<column name="ShuffleConvs_2_Downs_17_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_17, array</column>
+<column name="ShuffleConvs_2_Downs_17_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_17, array</column>
+<column name="ShuffleConvs_2_Downs_17_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_17, array</column>
+<column name="ShuffleConvs_2_Downs_16_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_16, array</column>
+<column name="ShuffleConvs_2_Downs_16_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_16, array</column>
+<column name="ShuffleConvs_2_Downs_16_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_16, array</column>
+<column name="ShuffleConvs_2_Downs_15_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_15, array</column>
+<column name="ShuffleConvs_2_Downs_15_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_15, array</column>
+<column name="ShuffleConvs_2_Downs_15_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_15, array</column>
+<column name="ShuffleConvs_2_Downs_14_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_14, array</column>
+<column name="ShuffleConvs_2_Downs_14_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_14, array</column>
+<column name="ShuffleConvs_2_Downs_14_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_14, array</column>
+<column name="ShuffleConvs_2_Downs_13_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_13, array</column>
+<column name="ShuffleConvs_2_Downs_13_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_13, array</column>
+<column name="ShuffleConvs_2_Downs_13_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_13, array</column>
+<column name="ShuffleConvs_2_Downs_12_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_12, array</column>
+<column name="ShuffleConvs_2_Downs_12_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_12, array</column>
+<column name="ShuffleConvs_2_Downs_12_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_12, array</column>
+<column name="ShuffleConvs_2_Downs_10_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_10, array</column>
+<column name="ShuffleConvs_2_Downs_10_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_10, array</column>
+<column name="ShuffleConvs_2_Downs_10_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_10, array</column>
+<column name="ShuffleConvs_2_Downs_9_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_9, array</column>
+<column name="ShuffleConvs_2_Downs_9_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_9, array</column>
+<column name="ShuffleConvs_2_Downs_9_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_9, array</column>
+<column name="ShuffleConvs_2_Downs_8_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_8, array</column>
+<column name="ShuffleConvs_2_Downs_8_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_8, array</column>
+<column name="ShuffleConvs_2_Downs_8_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_8, array</column>
+<column name="ShuffleConvs_2_Downs_7_address0">out, 9, ap_memory, ShuffleConvs_2_Downs_7, array</column>
+<column name="ShuffleConvs_2_Downs_7_ce0">out, 1, ap_memory, ShuffleConvs_2_Downs_7, array</column>
+<column name="ShuffleConvs_2_Downs_7_q0">in, 8, ap_memory, ShuffleConvs_2_Downs_7, array</column>
+</table>
+</item>
+</section>
+</profile>

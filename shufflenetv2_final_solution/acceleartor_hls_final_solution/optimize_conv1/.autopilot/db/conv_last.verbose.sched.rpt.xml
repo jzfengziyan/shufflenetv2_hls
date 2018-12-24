@@ -1,0 +1,54 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'conv_last'" level="0">
+<item name = "Date">Sun Dec 16 04:34:46 2018
+</item>
+<item name = "Version">2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)</item>
+<item name = "Project">acceleartor_hls_padding</item>
+<item name = "Solution">optimize_conv1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.75, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1338424, 1338424, 1338424, 1338424, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">98313, 98313, 11, 1, 1, 98304, yes</column>
+<column name="- Loop 2">1185832, 1185832, 296458, -, -, 4, no</column>
+<column name=" + Loop 2.1">296456, 296456, 74114, -, -, 4, no</column>
+<column name="  ++ Loop 2.1.1">74112, 74112, 386, -, -, 192, no</column>
+<column name="   +++ Loop 2.1.1.1">384, 384, 6, -, -, 64, no</column>
+<column name="- Loop 3">37888, 37888, 74, -, -, 512, no</column>
+<column name=" + Loop 3.1">72, 72, 18, -, -, 4, no</column>
+<column name="  ++ Loop 3.1.1">16, 16, 4, -, -, 4, no</column>
+<column name="- Loop 4">16385, 16385, 4, 2, 1, 8192, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

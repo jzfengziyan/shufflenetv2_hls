@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vivado HLS Report for 'MUL_DP'
+================================================================
+* Date:           Fri Dec 21 17:11:04 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       try_single_function
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.66|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    3|    3|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 2.63ns
+ST_1: w_V_read (5)  [1/1] 0.00ns
+:1  %w_V_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %w_V)
+
+ST_1: b_V_read (6)  [1/1] 0.00ns
+:2  %b_V_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %b_V)
+
+ST_1: a_V_read (7)  [1/1] 0.00ns
+:3  %a_V_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %a_V)
+
+ST_1: p_Result_2 (8)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:16
+:4  %p_Result_2 = call i25 @_ssdm_op_BitConcatenate.i25.i8.i17(i8 %a_V_read, i17 0)
+
+ST_1: lhs_V (9)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:21
+:5  %lhs_V = sext i25 %p_Result_2 to i26
+
+ST_1: rhs_V (10)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:21
+:6  %rhs_V = sext i8 %b_V_read to i26
+
+ST_1: r_V (11)  [1/1] 2.63ns  loc: acceleartor_hls_padding/components.cpp:21
+:7  %r_V = add nsw i26 %rhs_V, %lhs_V
+
+
+ <State 2>: 7.66ns
+ST_2: tmp (12)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:21
+:8  %tmp = sext i26 %r_V to i33
+
+ST_2: tmp_s (13)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:21
+:9  %tmp_s = sext i8 %w_V_read to i33
+
+ST_2: rst_V (14)  [2/2] 7.66ns  loc: acceleartor_hls_padding/components.cpp:21
+:10  %rst_V = mul i33 %tmp_s, %tmp
+
+
+ <State 3>: 7.66ns
+ST_3: rst_V (14)  [1/2] 7.66ns  loc: acceleartor_hls_padding/components.cpp:21
+:10  %rst_V = mul i33 %tmp_s, %tmp
+
+ST_3: tmp_1710 (15)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:23
+:11  %tmp_1710 = call i1 @_ssdm_op_BitSelect.i1.i33.i32(i33 %rst_V, i32 15)
+
+ST_3: p_Result_s (17)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:23
+:13  %p_Result_s = call i16 @_ssdm_op_PartSelect.i16.i33.i32.i32(i33 %rst_V, i32 17, i32 32)
+
+ST_3: loc_V_1 (19)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:24
+:15  %loc_V_1 = trunc i33 %rst_V to i16
+
+
+ <State 4>: 2.39ns
+ST_4: StgValue_19 (4)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:9
+:0  call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind
+
+ST_4: tmp_309 (16)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:23
+:12  %tmp_309 = zext i1 %tmp_1710 to i16
+
+ST_4: loc_V (18)  [1/1] 2.39ns  loc: acceleartor_hls_padding/components.cpp:23
+:14  %loc_V = add i16 %tmp_309, %p_Result_s
+
+ST_4: mrv (20)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:25
+:16  %mrv = insertvalue { i16, i16 } undef, i16 %loc_V, 0
+
+ST_4: mrv_1 (21)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:25
+:17  %mrv_1 = insertvalue { i16, i16 } %mrv, i16 %loc_V_1, 1
+
+ST_4: StgValue_24 (22)  [1/1] 0.00ns  loc: acceleartor_hls_padding/components.cpp:25
+:18  ret { i16, i16 } %mrv_1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.63ns
+The critical path consists of the following:
+	wire read on port 'b_V' [6]  (0 ns)
+	'add' operation ('r.V', acceleartor_hls_padding/components.cpp:21) [11]  (2.63 ns)
+
+ <State 2>: 7.66ns
+The critical path consists of the following:
+	'mul' operation ('rst.V', acceleartor_hls_padding/components.cpp:21) [14]  (7.66 ns)
+
+ <State 3>: 7.66ns
+The critical path consists of the following:
+	'mul' operation ('rst.V', acceleartor_hls_padding/components.cpp:21) [14]  (7.66 ns)
+
+ <State 4>: 2.39ns
+The critical path consists of the following:
+	'add' operation ('loc.V', acceleartor_hls_padding/components.cpp:23) [18]  (2.39 ns)
+	'insertvalue' operation ('mrv', acceleartor_hls_padding/components.cpp:25) [20]  (0 ns)
+	'insertvalue' operation ('mrv_1', acceleartor_hls_padding/components.cpp:25) [21]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

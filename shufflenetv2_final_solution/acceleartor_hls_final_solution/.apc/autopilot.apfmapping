@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="vivado_hls.app" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\vivado_hls.app"/>
+    <originFiles name="test.cpp" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\test.cpp"/>
+    <originFiles name="shufflenet.h" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\shufflenet.h"/>
+    <originFiles name="shufflenet.cpp" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\shufflenet.cpp"/>
+    <originFiles name="shuffle_conv_3x3.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\shuffle_conv_3x3.bin"/>
+    <originFiles name="shuffle_conv_1x1.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\shuffle_conv_1x1.bin"/>
+    <originFiles name="plane.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\plane.bin"/>
+    <originFiles name="fc_weight.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\fc_weight.bin"/>
+    <originFiles name="conv_last_weight.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\conv_last_weight.bin"/>
+    <originFiles name="conv1_weight.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\conv1_weight.bin"/>
+    <originFiles name="components.cpp" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\components.cpp"/>
+    <originFiles name="bias.bin" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\bias.bin"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\Users\lyh67\Downloads\shufflenetv2_final_solution\acceleartor_hls_final_solution\test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

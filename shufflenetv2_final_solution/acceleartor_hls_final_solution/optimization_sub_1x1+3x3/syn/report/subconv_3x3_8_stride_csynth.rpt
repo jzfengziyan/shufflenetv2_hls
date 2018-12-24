@@ -1,0 +1,492 @@
+
+
+================================================================
+== Vivado HLS Report for 'subconv_3x3_8_stride'
+================================================================
+* Date:           Fri Dec 21 00:12:16 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        acceleartor_hls_padding
+* Solution:       optimization_sub_1x1+3x3
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.88|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  56257|  56257|  56257|  56257|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |                         |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1                 |  56256|  56256|       586|          -|          -|    96|    no    |
+        | + Loop 1.1              |    584|    584|       146|          -|          -|     4|    no    |
+        |  ++ Loop 1.1.1          |    144|    144|        36|          -|          -|     4|    no    |
+        |   +++ Loop 1.1.1.1      |     33|     33|        11|          -|          -|     3|    no    |
+        |    ++++ Loop 1.1.1.1.1  |      9|      9|         3|          -|          -|     3|    no    |
+        +-------------------------+-------+-------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      1|       -|      -|
+|Expression       |        -|      -|     513|    249|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|     150|     45|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    118|
+|Register         |        -|      -|     149|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      1|     812|    412|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |           Instance          |        Module        | BRAM_18K| DSP48E|  FF | LUT|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |ShuffleNetV2_mux_g8j_x_U910  |ShuffleNetV2_mux_g8j  |        0|      0|  150|  45|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+    |Total                        |                      |        0|      0|  150|  45|
+    +-----------------------------+----------------------+---------+-------+-----+----+
+
+    * DSP48: 
+    +-----------------------------+----------------------+--------------+
+    |           Instance          |        Module        |  Expression  |
+    +-----------------------------+----------------------+--------------+
+    |ShuffleNetV2_mac_cud_x_U911  |ShuffleNetV2_mac_cud  | i0 + i1 * i2 |
+    +-----------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+----+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+----+----+------------+------------+
+    |co_1_fu_1591_p2       |     +    |      0|  26|  12|           7|           1|
+    |h_1_fu_1674_p2        |     +    |      0|  14|   9|           3|           1|
+    |m_1_fu_1707_p2        |     +    |      0|  11|   8|           1|           2|
+    |n_1_fu_1784_p2        |     +    |      0|  11|   8|           2|           1|
+    |output_V_d0           |     +    |      0|  29|  13|           8|           8|
+    |tmp_27_fu_1601_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_29_fu_1650_p2     |     +    |      0|  44|  18|          13|          13|
+    |tmp_30_fu_1684_p2     |     +    |      0|  38|  16|          11|          11|
+    |tmp_34_fu_1752_p2     |     +    |      0|  29|  13|           8|           8|
+    |tmp_35_fu_1768_p2     |     +    |      0|  38|  16|          11|          11|
+    |tmp_36_fu_1809_p2     |     +    |      0|  29|  13|           8|           8|
+    |tmp_5_fu_1723_p2      |     +    |      0|  17|   9|           4|           4|
+    |tmp_8_fu_1800_p2      |     +    |      0|  17|   9|           4|           4|
+    |w_1_fu_1758_p2        |     +    |      0|  14|   9|           3|           1|
+    |tmp_23_fu_1541_p2     |     -    |      0|  35|  15|          10|          10|
+    |tmp_26_fu_1575_p2     |     -    |      0|  38|  16|          11|          11|
+    |tmp_28_fu_1626_p2     |     -    |      0|  44|  18|          13|          13|
+    |tmp_31_fu_1695_p2     |     -    |      0|  38|  16|          11|          11|
+    |exitcond1_fu_1585_p2  |   icmp   |      0|   0|   4|           7|           7|
+    |exitcond2_fu_1632_p2  |   icmp   |      0|   0|   1|           3|           3|
+    |exitcond3_fu_1660_p2  |   icmp   |      0|   0|   1|           3|           3|
+    |exitcond4_fu_1701_p2  |   icmp   |      0|   0|   1|           2|           2|
+    |exitcond_fu_1778_p2   |   icmp   |      0|   0|   1|           2|           2|
+    |tmp1_fu_1713_p2       |    xor   |      0|   0|   3|           2|           3|
+    |tmp2_fu_1790_p2       |    xor   |      0|   0|   3|           2|           3|
+    +----------------------+----------+-------+----+----+------------+------------+
+    |Total                 |          |      0| 513| 249|         161|         153|
+    +----------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------+----+-----------+-----+-----------+
+    |       Name      | LUT| Input Size| Bits| Total Bits|
+    +-----------------+----+-----------+-----+-----------+
+    |ap_NS_fsm        |  55|         10|    1|         10|
+    |co_reg_1438      |   9|          2|    7|         14|
+    |h_reg_1450       |   9|          2|    3|          6|
+    |m_reg_1486       |   9|          2|    2|          4|
+    |n_reg_1509       |   9|          2|    2|          4|
+    |p_09_1_reg_1497  |   9|          2|    8|         16|
+    |p_s_reg_1474     |   9|          2|    8|         16|
+    |w_reg_1462       |   9|          2|    3|          6|
+    +-----------------+----+-----------+-----+-----------+
+    |Total            | 118|         24|   34|         76|
+    +-----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+----+----+-----+-----------+
+    |          Name          | FF | LUT| Bits| Const Bits|
+    +------------------------+----+----+-----+-----------+
+    |ap_CS_fsm               |   9|   0|    9|          0|
+    |bias_V_addr_reg_2143    |   7|   0|    7|          0|
+    |co_1_reg_2138           |   7|   0|    7|          0|
+    |co_reg_1438             |   7|   0|    7|          0|
+    |h_reg_1450              |   3|   0|    3|          0|
+    |m_1_reg_2187            |   2|   0|    2|          0|
+    |m_reg_1486              |   2|   0|    2|          0|
+    |n_1_reg_2210            |   2|   0|    2|          0|
+    |n_reg_1509              |   2|   0|    2|          0|
+    |output_V_addr_reg_2161  |  12|   0|   12|          0|
+    |p_09_1_reg_1497         |   8|   0|    8|          0|
+    |p_s_reg_1474            |   8|   0|    8|          0|
+    |tmp_1_reg_2700          |   8|   0|    8|          0|
+    |tmp_28_cast_reg_2125    |  11|   0|   11|          0|
+    |tmp_28_reg_2148         |  12|   0|   13|          1|
+    |tmp_2_reg_2169          |   3|   0|    4|          1|
+    |tmp_31_cast_reg_2130    |  11|   0|   12|          1|
+    |tmp_31_reg_2179         |  11|   0|   11|          0|
+    |tmp_34_reg_2192         |   7|   0|    8|          1|
+    |tmp_reg_2156            |   3|   0|    4|          1|
+    |w_1_reg_2197            |   3|   0|    3|          0|
+    |w_reg_1462              |   3|   0|    3|          0|
+    |weight_V_load_reg_2695  |   8|   0|    8|          0|
+    +------------------------+----+----+-----+-----------+
+    |Total                   | 149|   0|  154|          5|
+    +------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                            |  in |    1| ap_ctrl_hs |   subconv_3x3_8_stride  | return value |
+|ap_rst                            |  in |    1| ap_ctrl_hs |   subconv_3x3_8_stride  | return value |
+|ap_start                          |  in |    1| ap_ctrl_hs |   subconv_3x3_8_stride  | return value |
+|ap_done                           | out |    1| ap_ctrl_hs |   subconv_3x3_8_stride  | return value |
+|ap_idle                           | out |    1| ap_ctrl_hs |   subconv_3x3_8_stride  | return value |
+|ap_ready                          | out |    1| ap_ctrl_hs |   subconv_3x3_8_stride  | return value |
+|weight_V_address0                 | out |   10|  ap_memory |         weight_V        |     array    |
+|weight_V_ce0                      | out |    1|  ap_memory |         weight_V        |     array    |
+|weight_V_q0                       |  in |    8|  ap_memory |         weight_V        |     array    |
+|bias_V_address0                   | out |    7|  ap_memory |          bias_V         |     array    |
+|bias_V_ce0                        | out |    1|  ap_memory |          bias_V         |     array    |
+|bias_V_q0                         |  in |    8|  ap_memory |          bias_V         |     array    |
+|output_V_address0                 | out |   12|  ap_memory |         output_V        |     array    |
+|output_V_ce0                      | out |    1|  ap_memory |         output_V        |     array    |
+|output_V_we0                      | out |    1|  ap_memory |         output_V        |     array    |
+|output_V_d0                       | out |    8|  ap_memory |         output_V        |     array    |
+|ShuffleConvs_2_Downs_95_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_95 |     array    |
+|ShuffleConvs_2_Downs_95_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_95 |     array    |
+|ShuffleConvs_2_Downs_95_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_95 |     array    |
+|ShuffleConvs_2_Downs_94_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_94 |     array    |
+|ShuffleConvs_2_Downs_94_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_94 |     array    |
+|ShuffleConvs_2_Downs_94_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_94 |     array    |
+|ShuffleConvs_2_Downs_83_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_83 |     array    |
+|ShuffleConvs_2_Downs_83_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_83 |     array    |
+|ShuffleConvs_2_Downs_83_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_83 |     array    |
+|ShuffleConvs_2_Downs_72_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_72 |     array    |
+|ShuffleConvs_2_Downs_72_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_72 |     array    |
+|ShuffleConvs_2_Downs_72_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_72 |     array    |
+|ShuffleConvs_2_Downs_61_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_61 |     array    |
+|ShuffleConvs_2_Downs_61_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_61 |     array    |
+|ShuffleConvs_2_Downs_61_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_61 |     array    |
+|ShuffleConvs_2_Downs_50_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_50 |     array    |
+|ShuffleConvs_2_Downs_50_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_50 |     array    |
+|ShuffleConvs_2_Downs_50_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_50 |     array    |
+|ShuffleConvs_2_Downs_39_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_39 |     array    |
+|ShuffleConvs_2_Downs_39_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_39 |     array    |
+|ShuffleConvs_2_Downs_39_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_39 |     array    |
+|ShuffleConvs_2_Downs_28_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_28 |     array    |
+|ShuffleConvs_2_Downs_28_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_28 |     array    |
+|ShuffleConvs_2_Downs_28_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_28 |     array    |
+|ShuffleConvs_2_Downs_17_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_17 |     array    |
+|ShuffleConvs_2_Downs_17_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_17 |     array    |
+|ShuffleConvs_2_Downs_17_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_17 |     array    |
+|ShuffleConvs_2_Downs_6_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_6 |     array    |
+|ShuffleConvs_2_Downs_6_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_6 |     array    |
+|ShuffleConvs_2_Downs_6_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_6 |     array    |
+|ShuffleConvs_2_Downs_93_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_93 |     array    |
+|ShuffleConvs_2_Downs_93_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_93 |     array    |
+|ShuffleConvs_2_Downs_93_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_93 |     array    |
+|ShuffleConvs_2_Downs_92_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_92 |     array    |
+|ShuffleConvs_2_Downs_92_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_92 |     array    |
+|ShuffleConvs_2_Downs_92_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_92 |     array    |
+|ShuffleConvs_2_Downs_91_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_91 |     array    |
+|ShuffleConvs_2_Downs_91_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_91 |     array    |
+|ShuffleConvs_2_Downs_91_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_91 |     array    |
+|ShuffleConvs_2_Downs_90_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_90 |     array    |
+|ShuffleConvs_2_Downs_90_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_90 |     array    |
+|ShuffleConvs_2_Downs_90_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_90 |     array    |
+|ShuffleConvs_2_Downs_89_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_89 |     array    |
+|ShuffleConvs_2_Downs_89_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_89 |     array    |
+|ShuffleConvs_2_Downs_89_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_89 |     array    |
+|ShuffleConvs_2_Downs_88_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_88 |     array    |
+|ShuffleConvs_2_Downs_88_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_88 |     array    |
+|ShuffleConvs_2_Downs_88_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_88 |     array    |
+|ShuffleConvs_2_Downs_87_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_87 |     array    |
+|ShuffleConvs_2_Downs_87_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_87 |     array    |
+|ShuffleConvs_2_Downs_87_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_87 |     array    |
+|ShuffleConvs_2_Downs_86_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_86 |     array    |
+|ShuffleConvs_2_Downs_86_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_86 |     array    |
+|ShuffleConvs_2_Downs_86_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_86 |     array    |
+|ShuffleConvs_2_Downs_85_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_85 |     array    |
+|ShuffleConvs_2_Downs_85_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_85 |     array    |
+|ShuffleConvs_2_Downs_85_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_85 |     array    |
+|ShuffleConvs_2_Downs_84_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_84 |     array    |
+|ShuffleConvs_2_Downs_84_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_84 |     array    |
+|ShuffleConvs_2_Downs_84_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_84 |     array    |
+|ShuffleConvs_2_Downs_82_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_82 |     array    |
+|ShuffleConvs_2_Downs_82_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_82 |     array    |
+|ShuffleConvs_2_Downs_82_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_82 |     array    |
+|ShuffleConvs_2_Downs_81_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_81 |     array    |
+|ShuffleConvs_2_Downs_81_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_81 |     array    |
+|ShuffleConvs_2_Downs_81_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_81 |     array    |
+|ShuffleConvs_2_Downs_80_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_80 |     array    |
+|ShuffleConvs_2_Downs_80_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_80 |     array    |
+|ShuffleConvs_2_Downs_80_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_80 |     array    |
+|ShuffleConvs_2_Downs_79_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_79 |     array    |
+|ShuffleConvs_2_Downs_79_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_79 |     array    |
+|ShuffleConvs_2_Downs_79_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_79 |     array    |
+|ShuffleConvs_2_Downs_78_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_78 |     array    |
+|ShuffleConvs_2_Downs_78_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_78 |     array    |
+|ShuffleConvs_2_Downs_78_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_78 |     array    |
+|ShuffleConvs_2_Downs_77_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_77 |     array    |
+|ShuffleConvs_2_Downs_77_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_77 |     array    |
+|ShuffleConvs_2_Downs_77_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_77 |     array    |
+|ShuffleConvs_2_Downs_76_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_76 |     array    |
+|ShuffleConvs_2_Downs_76_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_76 |     array    |
+|ShuffleConvs_2_Downs_76_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_76 |     array    |
+|ShuffleConvs_2_Downs_75_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_75 |     array    |
+|ShuffleConvs_2_Downs_75_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_75 |     array    |
+|ShuffleConvs_2_Downs_75_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_75 |     array    |
+|ShuffleConvs_2_Downs_74_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_74 |     array    |
+|ShuffleConvs_2_Downs_74_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_74 |     array    |
+|ShuffleConvs_2_Downs_74_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_74 |     array    |
+|ShuffleConvs_2_Downs_73_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_73 |     array    |
+|ShuffleConvs_2_Downs_73_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_73 |     array    |
+|ShuffleConvs_2_Downs_73_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_73 |     array    |
+|ShuffleConvs_2_Downs_71_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_71 |     array    |
+|ShuffleConvs_2_Downs_71_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_71 |     array    |
+|ShuffleConvs_2_Downs_71_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_71 |     array    |
+|ShuffleConvs_2_Downs_70_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_70 |     array    |
+|ShuffleConvs_2_Downs_70_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_70 |     array    |
+|ShuffleConvs_2_Downs_70_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_70 |     array    |
+|ShuffleConvs_2_Downs_69_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_69 |     array    |
+|ShuffleConvs_2_Downs_69_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_69 |     array    |
+|ShuffleConvs_2_Downs_69_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_69 |     array    |
+|ShuffleConvs_2_Downs_68_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_68 |     array    |
+|ShuffleConvs_2_Downs_68_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_68 |     array    |
+|ShuffleConvs_2_Downs_68_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_68 |     array    |
+|ShuffleConvs_2_Downs_67_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_67 |     array    |
+|ShuffleConvs_2_Downs_67_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_67 |     array    |
+|ShuffleConvs_2_Downs_67_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_67 |     array    |
+|ShuffleConvs_2_Downs_66_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_66 |     array    |
+|ShuffleConvs_2_Downs_66_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_66 |     array    |
+|ShuffleConvs_2_Downs_66_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_66 |     array    |
+|ShuffleConvs_2_Downs_65_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_65 |     array    |
+|ShuffleConvs_2_Downs_65_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_65 |     array    |
+|ShuffleConvs_2_Downs_65_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_65 |     array    |
+|ShuffleConvs_2_Downs_64_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_64 |     array    |
+|ShuffleConvs_2_Downs_64_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_64 |     array    |
+|ShuffleConvs_2_Downs_64_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_64 |     array    |
+|ShuffleConvs_2_Downs_63_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_63 |     array    |
+|ShuffleConvs_2_Downs_63_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_63 |     array    |
+|ShuffleConvs_2_Downs_63_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_63 |     array    |
+|ShuffleConvs_2_Downs_62_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_62 |     array    |
+|ShuffleConvs_2_Downs_62_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_62 |     array    |
+|ShuffleConvs_2_Downs_62_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_62 |     array    |
+|ShuffleConvs_2_Downs_60_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_60 |     array    |
+|ShuffleConvs_2_Downs_60_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_60 |     array    |
+|ShuffleConvs_2_Downs_60_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_60 |     array    |
+|ShuffleConvs_2_Downs_59_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_59 |     array    |
+|ShuffleConvs_2_Downs_59_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_59 |     array    |
+|ShuffleConvs_2_Downs_59_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_59 |     array    |
+|ShuffleConvs_2_Downs_58_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_58 |     array    |
+|ShuffleConvs_2_Downs_58_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_58 |     array    |
+|ShuffleConvs_2_Downs_58_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_58 |     array    |
+|ShuffleConvs_2_Downs_57_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_57 |     array    |
+|ShuffleConvs_2_Downs_57_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_57 |     array    |
+|ShuffleConvs_2_Downs_57_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_57 |     array    |
+|ShuffleConvs_2_Downs_56_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_56 |     array    |
+|ShuffleConvs_2_Downs_56_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_56 |     array    |
+|ShuffleConvs_2_Downs_56_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_56 |     array    |
+|ShuffleConvs_2_Downs_55_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_55 |     array    |
+|ShuffleConvs_2_Downs_55_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_55 |     array    |
+|ShuffleConvs_2_Downs_55_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_55 |     array    |
+|ShuffleConvs_2_Downs_54_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_54 |     array    |
+|ShuffleConvs_2_Downs_54_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_54 |     array    |
+|ShuffleConvs_2_Downs_54_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_54 |     array    |
+|ShuffleConvs_2_Downs_53_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_53 |     array    |
+|ShuffleConvs_2_Downs_53_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_53 |     array    |
+|ShuffleConvs_2_Downs_53_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_53 |     array    |
+|ShuffleConvs_2_Downs_52_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_52 |     array    |
+|ShuffleConvs_2_Downs_52_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_52 |     array    |
+|ShuffleConvs_2_Downs_52_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_52 |     array    |
+|ShuffleConvs_2_Downs_51_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_51 |     array    |
+|ShuffleConvs_2_Downs_51_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_51 |     array    |
+|ShuffleConvs_2_Downs_51_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_51 |     array    |
+|ShuffleConvs_2_Downs_49_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_49 |     array    |
+|ShuffleConvs_2_Downs_49_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_49 |     array    |
+|ShuffleConvs_2_Downs_49_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_49 |     array    |
+|ShuffleConvs_2_Downs_48_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_48 |     array    |
+|ShuffleConvs_2_Downs_48_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_48 |     array    |
+|ShuffleConvs_2_Downs_48_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_48 |     array    |
+|ShuffleConvs_2_Downs_47_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_47 |     array    |
+|ShuffleConvs_2_Downs_47_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_47 |     array    |
+|ShuffleConvs_2_Downs_47_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_47 |     array    |
+|ShuffleConvs_2_Downs_46_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_46 |     array    |
+|ShuffleConvs_2_Downs_46_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_46 |     array    |
+|ShuffleConvs_2_Downs_46_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_46 |     array    |
+|ShuffleConvs_2_Downs_45_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_45 |     array    |
+|ShuffleConvs_2_Downs_45_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_45 |     array    |
+|ShuffleConvs_2_Downs_45_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_45 |     array    |
+|ShuffleConvs_2_Downs_44_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_44 |     array    |
+|ShuffleConvs_2_Downs_44_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_44 |     array    |
+|ShuffleConvs_2_Downs_44_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_44 |     array    |
+|ShuffleConvs_2_Downs_43_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_43 |     array    |
+|ShuffleConvs_2_Downs_43_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_43 |     array    |
+|ShuffleConvs_2_Downs_43_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_43 |     array    |
+|ShuffleConvs_2_Downs_42_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_42 |     array    |
+|ShuffleConvs_2_Downs_42_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_42 |     array    |
+|ShuffleConvs_2_Downs_42_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_42 |     array    |
+|ShuffleConvs_2_Downs_41_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_41 |     array    |
+|ShuffleConvs_2_Downs_41_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_41 |     array    |
+|ShuffleConvs_2_Downs_41_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_41 |     array    |
+|ShuffleConvs_2_Downs_40_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_40 |     array    |
+|ShuffleConvs_2_Downs_40_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_40 |     array    |
+|ShuffleConvs_2_Downs_40_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_40 |     array    |
+|ShuffleConvs_2_Downs_38_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_38 |     array    |
+|ShuffleConvs_2_Downs_38_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_38 |     array    |
+|ShuffleConvs_2_Downs_38_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_38 |     array    |
+|ShuffleConvs_2_Downs_37_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_37 |     array    |
+|ShuffleConvs_2_Downs_37_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_37 |     array    |
+|ShuffleConvs_2_Downs_37_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_37 |     array    |
+|ShuffleConvs_2_Downs_36_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_36 |     array    |
+|ShuffleConvs_2_Downs_36_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_36 |     array    |
+|ShuffleConvs_2_Downs_36_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_36 |     array    |
+|ShuffleConvs_2_Downs_35_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_35 |     array    |
+|ShuffleConvs_2_Downs_35_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_35 |     array    |
+|ShuffleConvs_2_Downs_35_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_35 |     array    |
+|ShuffleConvs_2_Downs_34_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_34 |     array    |
+|ShuffleConvs_2_Downs_34_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_34 |     array    |
+|ShuffleConvs_2_Downs_34_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_34 |     array    |
+|ShuffleConvs_2_Downs_33_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_33 |     array    |
+|ShuffleConvs_2_Downs_33_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_33 |     array    |
+|ShuffleConvs_2_Downs_33_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_33 |     array    |
+|ShuffleConvs_2_Downs_32_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_32 |     array    |
+|ShuffleConvs_2_Downs_32_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_32 |     array    |
+|ShuffleConvs_2_Downs_32_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_32 |     array    |
+|ShuffleConvs_2_Downs_31_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_31 |     array    |
+|ShuffleConvs_2_Downs_31_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_31 |     array    |
+|ShuffleConvs_2_Downs_31_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_31 |     array    |
+|ShuffleConvs_2_Downs_30_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_30 |     array    |
+|ShuffleConvs_2_Downs_30_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_30 |     array    |
+|ShuffleConvs_2_Downs_30_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_30 |     array    |
+|ShuffleConvs_2_Downs_29_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_29 |     array    |
+|ShuffleConvs_2_Downs_29_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_29 |     array    |
+|ShuffleConvs_2_Downs_29_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_29 |     array    |
+|ShuffleConvs_2_Downs_27_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_27 |     array    |
+|ShuffleConvs_2_Downs_27_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_27 |     array    |
+|ShuffleConvs_2_Downs_27_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_27 |     array    |
+|ShuffleConvs_2_Downs_26_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_26 |     array    |
+|ShuffleConvs_2_Downs_26_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_26 |     array    |
+|ShuffleConvs_2_Downs_26_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_26 |     array    |
+|ShuffleConvs_2_Downs_25_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_25 |     array    |
+|ShuffleConvs_2_Downs_25_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_25 |     array    |
+|ShuffleConvs_2_Downs_25_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_25 |     array    |
+|ShuffleConvs_2_Downs_24_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_24 |     array    |
+|ShuffleConvs_2_Downs_24_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_24 |     array    |
+|ShuffleConvs_2_Downs_24_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_24 |     array    |
+|ShuffleConvs_2_Downs_23_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_23 |     array    |
+|ShuffleConvs_2_Downs_23_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_23 |     array    |
+|ShuffleConvs_2_Downs_23_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_23 |     array    |
+|ShuffleConvs_2_Downs_22_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_22 |     array    |
+|ShuffleConvs_2_Downs_22_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_22 |     array    |
+|ShuffleConvs_2_Downs_22_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_22 |     array    |
+|ShuffleConvs_2_Downs_21_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_21 |     array    |
+|ShuffleConvs_2_Downs_21_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_21 |     array    |
+|ShuffleConvs_2_Downs_21_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_21 |     array    |
+|ShuffleConvs_2_Downs_20_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_20 |     array    |
+|ShuffleConvs_2_Downs_20_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_20 |     array    |
+|ShuffleConvs_2_Downs_20_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_20 |     array    |
+|ShuffleConvs_2_Downs_19_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_19 |     array    |
+|ShuffleConvs_2_Downs_19_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_19 |     array    |
+|ShuffleConvs_2_Downs_19_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_19 |     array    |
+|ShuffleConvs_2_Downs_18_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_18 |     array    |
+|ShuffleConvs_2_Downs_18_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_18 |     array    |
+|ShuffleConvs_2_Downs_18_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_18 |     array    |
+|ShuffleConvs_2_Downs_16_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_16 |     array    |
+|ShuffleConvs_2_Downs_16_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_16 |     array    |
+|ShuffleConvs_2_Downs_16_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_16 |     array    |
+|ShuffleConvs_2_Downs_15_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_15 |     array    |
+|ShuffleConvs_2_Downs_15_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_15 |     array    |
+|ShuffleConvs_2_Downs_15_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_15 |     array    |
+|ShuffleConvs_2_Downs_14_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_14 |     array    |
+|ShuffleConvs_2_Downs_14_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_14 |     array    |
+|ShuffleConvs_2_Downs_14_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_14 |     array    |
+|ShuffleConvs_2_Downs_13_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_13 |     array    |
+|ShuffleConvs_2_Downs_13_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_13 |     array    |
+|ShuffleConvs_2_Downs_13_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_13 |     array    |
+|ShuffleConvs_2_Downs_12_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_12 |     array    |
+|ShuffleConvs_2_Downs_12_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_12 |     array    |
+|ShuffleConvs_2_Downs_12_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_12 |     array    |
+|ShuffleConvs_2_Downs_11_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_11 |     array    |
+|ShuffleConvs_2_Downs_11_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_11 |     array    |
+|ShuffleConvs_2_Downs_11_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_11 |     array    |
+|ShuffleConvs_2_Downs_10_address0  | out |    7|  ap_memory | ShuffleConvs_2_Downs_10 |     array    |
+|ShuffleConvs_2_Downs_10_ce0       | out |    1|  ap_memory | ShuffleConvs_2_Downs_10 |     array    |
+|ShuffleConvs_2_Downs_10_q0        |  in |    8|  ap_memory | ShuffleConvs_2_Downs_10 |     array    |
+|ShuffleConvs_2_Downs_9_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_9 |     array    |
+|ShuffleConvs_2_Downs_9_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_9 |     array    |
+|ShuffleConvs_2_Downs_9_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_9 |     array    |
+|ShuffleConvs_2_Downs_8_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_8 |     array    |
+|ShuffleConvs_2_Downs_8_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_8 |     array    |
+|ShuffleConvs_2_Downs_8_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_8 |     array    |
+|ShuffleConvs_2_Downs_7_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_7 |     array    |
+|ShuffleConvs_2_Downs_7_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_7 |     array    |
+|ShuffleConvs_2_Downs_7_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_7 |     array    |
+|ShuffleConvs_2_Downs_5_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_5 |     array    |
+|ShuffleConvs_2_Downs_5_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_5 |     array    |
+|ShuffleConvs_2_Downs_5_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_5 |     array    |
+|ShuffleConvs_2_Downs_4_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_4 |     array    |
+|ShuffleConvs_2_Downs_4_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_4 |     array    |
+|ShuffleConvs_2_Downs_4_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_4 |     array    |
+|ShuffleConvs_2_Downs_3_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_3 |     array    |
+|ShuffleConvs_2_Downs_3_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_3 |     array    |
+|ShuffleConvs_2_Downs_3_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_3 |     array    |
+|ShuffleConvs_2_Downs_2_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_2 |     array    |
+|ShuffleConvs_2_Downs_2_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_2 |     array    |
+|ShuffleConvs_2_Downs_2_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_2 |     array    |
+|ShuffleConvs_2_Downs_1_address0   | out |    7|  ap_memory |  ShuffleConvs_2_Downs_1 |     array    |
+|ShuffleConvs_2_Downs_1_ce0        | out |    1|  ap_memory |  ShuffleConvs_2_Downs_1 |     array    |
+|ShuffleConvs_2_Downs_1_q0         |  in |    8|  ap_memory |  ShuffleConvs_2_Downs_1 |     array    |
+|ShuffleConvs_2_Downs_address0     | out |    7|  ap_memory |   ShuffleConvs_2_Downs  |     array    |
+|ShuffleConvs_2_Downs_ce0          | out |    1|  ap_memory |   ShuffleConvs_2_Downs  |     array    |
+|ShuffleConvs_2_Downs_q0           |  in |    8|  ap_memory |   ShuffleConvs_2_Downs  |     array    |
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+
